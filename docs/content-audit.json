@@ -1,0 +1,308 @@
+{
+  "animation_sets": 108,
+  "animations_sha256": "8a89509aca9cb5a937dab885a525aa618f888ef43be073669a386344ea27a225",
+  "assets": 1958,
+  "campaign_issues": [
+    {
+      "config": "8",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 7
+    },
+    {
+      "config": "8",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 9
+    },
+    {
+      "config": "8",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 9
+    },
+    {
+      "config": "74",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 5,
+      "source_index": 5,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 1
+    },
+    {
+      "config": "74",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 5,
+      "source_index": 5,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 5
+    },
+    {
+      "config": "103",
+      "creep_slots": 17,
+      "evidence": "CRoom::ProcessWaves 0xd3f78-0xd3f96",
+      "source_slots": 18,
+      "status": "code-traced-extra-source-entry-unused",
+      "wave": 8
+    },
+    {
+      "config": "105",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 5,
+      "source_index": 5,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 5
+    },
+    {
+      "config": "201",
+      "evidence": "CCreepManager::AddCreep 0xfb8a8-0xfb8ac",
+      "status": "code-traced-null-resource-slot-skipped",
+      "undefined_enemy": 21,
+      "wave": 10
+    },
+    {
+      "config": "227",
+      "evidence": "CCreepManager::AddCreep 0xfb8a8-0xfb8ac",
+      "status": "code-traced-null-resource-slot-skipped",
+      "undefined_enemy": 21,
+      "wave": 10
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 7
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 2,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 7
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 12
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 2,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 12
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 2,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 12
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 12
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 1,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 18
+    },
+    {
+      "config": "236",
+      "evidence": "CRoom::ProcessWaves 0xd3fa4-0xd3fac",
+      "source_count": 1,
+      "source_index": 2,
+      "status": "code-traced-absent-source-slot-skipped",
+      "wave": 18
+    }
+  ],
+  "catalog_sha256": "1b1ad0d9a3d58c2531a33fc6f4e620419383f2271639d1db254d969ebf1821f8",
+  "conflicts": [
+    {
+      "candidates": [
+        {
+          "path": "original/game-files/ipa-1.14/Payload/Tower.app/maps/forest/600/level9_exit.png",
+          "sha256": "a607f5a2bf8d439a4d726f7af95352d3de3a9ee10d31e007f6dfb3a3cd5c4278"
+        },
+        {
+          "path": "original/game-files/downloaded-packs/609/maps/forest/600/level9_exit.png",
+          "sha256": "081c4d06abd886d582d9967f63f8b67d3fc6a85d46d0b25577562daae8c1d7a2"
+        }
+      ],
+      "path": "maps/forest/600/level9_exit.png",
+      "resolution": "bundled-1.14-first-then-lowest-pack-id"
+    },
+    {
+      "candidates": [
+        {
+          "path": "original/game-files/ipa-1.14/Payload/Tower.app/maps/map_722.xml",
+          "sha256": "60ce325a153475b8bc41ad62e321c549a3588488e524b97c317fe784e34a8022"
+        },
+        {
+          "path": "original/game-files/downloaded-packs/722/maps/map_722.xml",
+          "sha256": "65903392899569c041f637ed813a118f26fc4d4c39315d108bd941a66e67ccbc"
+        }
+      ],
+      "path": "maps/map_722.xml",
+      "resolution": "bundled-1.14-first-then-lowest-pack-id"
+    },
+    {
+      "candidates": [
+        {
+          "path": "original/game-files/ipa-1.14/Payload/Tower.app/maps/map_901.xml",
+          "sha256": "bb4d4068bbb06844a8dc71a7e0f6eda5e4c7f9d612b328b39e0f6a68519ac942"
+        },
+        {
+          "path": "original/game-files/downloaded-packs/901/maps/map_901.xml",
+          "sha256": "a66f5154d070303d6b6df32cb41c1318d45a8736a79cb16ee49b79cbb3511b7d"
+        }
+      ],
+      "path": "maps/map_901.xml",
+      "resolution": "bundled-1.14-first-then-lowest-pack-id"
+    }
+  ],
+  "filename_edge_count": 1376,
+  "format_collisions": [
+    {
+      "alternate": "assets/maps/forest/600/level9.jpg.png",
+      "default": "maps/forest/600/level9.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/forest/600/level9"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level34_1.jpg.png",
+      "default": "maps/jungle/900/level34_1.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level34_1"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level34_2.jpg.png",
+      "default": "maps/jungle/900/level34_2.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level34_2"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level35_1.jpg.png",
+      "default": "maps/jungle/900/level35_1.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level35_1"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level35_2.jpg.png",
+      "default": "maps/jungle/900/level35_2.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level35_2"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level39_1.jpg.png",
+      "default": "maps/jungle/900/level39_1.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level39_1"
+    },
+    {
+      "alternate": "assets/maps/jungle/900/level39_2.jpg.png",
+      "default": "maps/jungle/900/level39_2.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/jungle/900/level39_2"
+    },
+    {
+      "alternate": "assets/maps/mexico/300/level1_1.jpg.png",
+      "default": "maps/mexico/300/level1_1.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/mexico/300/level1_1"
+    },
+    {
+      "alternate": "assets/maps/mexico/300/level1_2.jpg.png",
+      "default": "maps/mexico/300/level1_2.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/mexico/300/level1_2"
+    },
+    {
+      "alternate": "assets/maps/mexico/300/level1_3.jpg.png",
+      "default": "maps/mexico/300/level1_3.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/mexico/300/level1_3"
+    },
+    {
+      "alternate": "assets/maps/urban/700/level20.jpg.png",
+      "default": "maps/urban/700/level20.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/urban/700/level20"
+    },
+    {
+      "alternate": "assets/maps/urban/700/level22.jpg.png",
+      "default": "maps/urban/700/level22.png",
+      "resolution": "explicit-PNG-default-with-separate-JPEG-output",
+      "stem": "maps/urban/700/level22"
+    }
+  ],
+  "maps": 67,
+  "maps_sha256": "73a148119d5cedada769f1967e4e846ec72552613cc43b85e3962b9cede8cadf",
+  "missing_references": [],
+  "repairs": [
+    {
+      "derived_xml_sha256": "f294f2535e593b0580445616388d4a41146ce6ae90a0f86f5d715cd6f9336509",
+      "rule": "lobby_map.xml",
+      "source": "original/game-files/ipa-1.14/Payload/Tower.app/maps/lobby_map.xml",
+      "source_sha256": "fe204f2fb32f90e93bc7bebde09ba1659b250da5392f92b6b529f56f24d7b41f"
+    },
+    {
+      "derived_xml_sha256": "a31e08f37cec4cb2375451e92e94d35935f31d53047da45e88a2ad98ade24416",
+      "rule": "map_100.xml",
+      "source": "original/game-files/downloaded-packs/100/maps/map_100.xml",
+      "source_sha256": "44dd351046967a4f2f1b06ee6477a6a480f0c66b992e1163952cc74e4610528c"
+    },
+    {
+      "derived_xml_sha256": "f66b898d2f1b1656e0ee6e58cdcca20b567e6eccc875234a42d935b6c7dee824",
+      "rule": "map_1004.xml",
+      "source": "original/game-files/downloaded-packs/1004/maps/map_1004.xml",
+      "source_sha256": "ed52ee2735a4762ec24673d783e05010ccdb6e893a733c1ee209135a1ccc5c28"
+    },
+    {
+      "derived_xml_sha256": "913ee11c849381224faed632749d4fcc4cc37301216b1333a7483ae92b598fef",
+      "rule": "tower16_3.xml",
+      "source": "original/game-files/ipa-1.14/Payload/Tower.app/towers/tower16_3.xml",
+      "source_sha256": "de92b2eeb4812267e901aa5239f885ba7ec62a02b25fa50e7d2608d24963bf2d"
+    }
+  ],
+  "schema": 1,
+  "unresolved_filename_edges": [
+    {
+      "filename": "../creeps/creeps",
+      "resolved": false,
+      "source": "sfx/Creep7ExplosionParts.xml"
+    },
+    {
+      "filename": "../creeps/creeps",
+      "resolved": false,
+      "source": "sfx/Creep7ExplosionParts2.xml"
+    },
+    {
+      "filename": "tower2_icon",
+      "resolved": false,
+      "source": "towers/tower1_2.xml"
+    }
+  ]
+}

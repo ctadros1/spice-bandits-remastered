@@ -1,0 +1,17 @@
+# Preserve the original archive locally; review any intentional publication separately.
+/original/
+/work/
+/.godot/
+/builds/
+/dist/
+/research/videos/*
+!/research/videos/README.md
+.DS_Store
+*.dSYM/
+/game/.godot/
+/game/assets/
+/game/data/
+__pycache__/
+*.pyc
+/docs/mechanics/traces/
+/docs/mechanics/decompiled/
