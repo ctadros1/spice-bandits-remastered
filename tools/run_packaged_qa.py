@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (137 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (145 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -256,6 +256,20 @@ def main():
             fresh = fresh and all(mine_overlap.get(key, 0) >= 10 for key in ('overlapping_pixels', 'covered_pixels'))
             portals = magic_poses.get('magic-depth-portal-preview', {}).get('portal_before', [])
             fresh = fresh and len(portals) == 1 and portals[0]['preview']
+            lifecycle_expected = {'portal-lifecycle-pending': (1, 0, .3), 'portal-lifecycle-connected-000': (2, 2, .3), 'portal-lifecycle-open-250': (2, 2, .75), 'portal-lifecycle-open-500': (2, 2, 1), 'portal-lifecycle-closing-250': (2, 4, .75), 'portal-lifecycle-closing-750': (2, 4, .25), 'portal-lifecycle-hidden-1000': (2, 3, 0), 'portal-lifecycle-removed': (0, None, None)}
+            required.update(lifecycle_expected)
+            lifecycle_poses = {c['name']: c for c in manifest['captures'] if c['name'].startswith('portal-lifecycle-')}
+            for pose, (count, state, scale) in lifecycle_expected.items():
+                entry = lifecycle_poses.get(pose, {})
+                fresh = fresh and entry.get('registered_gates') == count
+                gates = entry.get('lifecycle', {}).get('gates', [])
+                rendered = entry.get('rendered_gates', [])
+                if state is not None:
+                    fresh = fresh and len(gates) == 2 and all(g['state'] == state and abs(g['scale']-scale) < 1e-6 for g in gates)
+                if state == 3 or count == 0:
+                    fresh = fresh and not rendered
+                else:
+                    fresh = fresh and len(rendered) == 2 and all(abs(g['scale']-scale) < 1e-6 for g in rendered)
             required.update({'result-room-%03d' % age for age in [50,72,90,150,240,300,360,420,480,540,600]})
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)

@@ -103,6 +103,11 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.body_order=app.battle_objects().filter(func(o):return o.has("mine") or o.has("tower")).map(func(o):return {"kind":"mine" if o.has("mine") else "tower","depth":o.y,"preview":o.get("preview",false)})
 		record.portal_before=app.battle_portal_objects().map(func(p):return {"position":[p.pos.x,p.pos.y],"depth":p.depth,"preview":p.preview})
 		record.limit="Supplied registered-mine depth/portal-before poses. Original constructor/position/vtable routing is independently probed; whole registry ties, portal growth/expiry and GPU equivalence remain open."
+	if name.begins_with("portal-lifecycle"):
+		record.lifecycle=app.sim.portals[0].presentation.duplicate(true) if not app.sim.portals.is_empty() else {}
+		record.registered_gates=app.sim.portals.size()
+		record.rendered_gates=app.battle_portal_objects().map(func(p):return {"state":p.gate_state,"scale":p.scale,"frame":p.frame,"preview":p.preview})
+		record.limit="Real isolated portal placement/pause/expiry bridge with original float32 scale/state/timer fixture. Complete creep transfer, animator clock/raster, registry ties and GPU equivalence remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -325,6 +330,30 @@ func run() -> void:
 	await snapshot("portal-preview-exit")
 	check(app.sim.portals.size()==1 and app.sim.abilities.m_portal==5 and app.magic_placement=="m_portal","entry preview changes to red without consuming portal stock")
 	check(app.notice_until<=app.ui_time_ms(),"portal exit preview has no invented status banner")
+	await snapshot("portal-lifecycle-pending")
+	app.sim.mines.clear()
+	mouse(mine_point,true);mouse(mine_point,false)
+	check(app.sim.portals.size()==2 and app.sim.abilities.m_portal==4 and app.magic_placement.is_empty(),"native second gate connects and consumes portal stock once")
+	await snapshot("portal-lifecycle-connected-000")
+	app.sim.advance_frame(250)
+	check(app.battle_portal_objects().all(func(p):return p.scale==0.75 and p.gate_state==2),"native portal bodies use original half-open scale")
+	await snapshot("portal-lifecycle-open-250")
+	app.sim.advance_frame(250)
+	check(app.battle_portal_objects().all(func(p):return p.scale==1 and p.gate_state==2),"native portal bodies complete original growth")
+	await snapshot("portal-lifecycle-open-500")
+	var portal_state=app.sim.portals[0].presentation
+	portal_state.remaining=250
+	app.sim.advance_frame(250)
+	check(portal_state.gates[0].state==4 and portal_state.gates[0].scale==0.75,"native portal expiry starts original closing clock")
+	await snapshot("portal-lifecycle-closing-250")
+	app.sim.advance_frame(500)
+	await snapshot("portal-lifecycle-closing-750")
+	app.sim.advance_frame(250)
+	check(portal_state.deleted and app.sim.portals.size()==2 and app.battle_portal_objects().is_empty(),"native zero-sized deleted gates hide before manager removal")
+	await snapshot("portal-lifecycle-hidden-1000")
+	app.sim.advance_frame(30)
+	check(app.sim.portals.is_empty(),"native deleted pair leaves manager on following update")
+	await snapshot("portal-lifecycle-removed")
 	Profile.data=preview_profile
 	app.magic_placement="";app.sim=preview_sim;app.tutorial=preview_tutorial;app.tutorial_step=preview_step
 	app.build_hex_view.reset();app.refresh_controls()

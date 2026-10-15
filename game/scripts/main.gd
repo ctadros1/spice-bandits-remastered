@@ -2995,11 +2995,19 @@ func battle_objects() -> Array:
 
 func battle_portal_objects() -> Array:
 	var objects=[]
-	for portal in sim.portals:
-		objects.append({"pos":portal.pos,"state":"Blue" if portal==sim.portals[0] else "Red","frame":int(maxi(0,sim.clock_ms-int(portal.get("born_ms",0)))/1000),"preview":false})
+	for index in range(sim.portals.size()):
+		var portal=sim.portals[index]
+		var presentation=sim.portals[0].get("presentation",{})
+		var gate=presentation.gates[index] if not presentation.is_empty() else {"state":0,"scale":1.0}
+		if gate.state==3:continue
+		var age=maxi(0,sim.clock_ms-int(sim.portals[0].get("connected_ms",portal.get("born_ms",0)))) if sim.portals.size()==2 else 0
+		objects.append({"pos":portal.pos,"state":"Blue" if index==0 else "Red","frame":int(age/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state})
 	for pair in sim.static_portals:
-		for kind in ["in","out"]:objects.append({"pos":sim.center(pair[kind].x,pair[kind].y),"state":"Blue" if kind=="in" else "Red","frame":int(sim.clock_ms/1000),"preview":false})
-	if magic_placement=="m_portal":objects.append({"pos":mouse_world(magic_preview_position),"state":"Blue" if sim.portals.is_empty() else "Red","frame":0,"preview":true})
+		for index in range(2):
+			var kind="in" if index==0 else "out"
+			var gate=pair.presentation.gates[index]
+			if gate.state!=3:objects.append({"pos":sim.center(pair[kind].x,pair[kind].y),"state":"Blue" if index==0 else "Red","frame":int(sim.clock_ms/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state})
+	if magic_placement=="m_portal":objects.append({"pos":mouse_world(magic_preview_position),"state":"Blue" if sim.portals.is_empty() else "Red","frame":0,"preview":true,"scale":0.3,"gate_state":0})
 	for portal in objects:portal.depth=MapDepth.effect(portal.pos.y,Content.animations.get("sfx/portals",{}),"Blue")
 	objects.sort_custom(func(a,b):return a.depth<b.depth)
 	return objects
@@ -3021,7 +3029,7 @@ func draw_game() -> void:
 		draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
 	# Portal art belongs to registered RenderBefore; its body is empty.
 	for portal in battle_portal_objects():
-		sprite("sfx/portals",portal.state,portal.pos,portal.frame,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*(0.3 if portal.preview else 1.0))
+		sprite("sfx/portals",portal.state,portal.pos,portal.frame,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*float(portal.scale))
 	var objects=battle_objects()
 	var enemy_projectiles=enemy_missile_passes()
 	var depth_bases=[]

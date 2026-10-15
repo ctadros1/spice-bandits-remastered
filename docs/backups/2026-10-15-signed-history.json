@@ -1,0 +1,75 @@
+{
+  "signed_commits": [
+    {
+      "checkpoint": 100,
+      "commit": "c672c200068f7e30c37373239ff947c533832818",
+      "parent": "36edc37bec5b53f9b9b5070e14025075a1155468",
+      "tree": "33f77e4c7517f540031d2ef15dad5e23e1792349",
+      "patch_sha256": "f00c8c1ff7251ef9933f90046addfa224f53b46bbef312cecb019399bb81ec21",
+      "verified_source_files": 25
+    },
+    {
+      "checkpoint": 103,
+      "commit": "8b6c2e5c28180732bbde14c6bd7c18abd6efe36e",
+      "parent": "c672c200068f7e30c37373239ff947c533832818",
+      "tree": "6c77a82fcec8ee19f1725a6135b8dae664eb0536",
+      "patch_sha256": "e8704751f647a57cc88ad08ee2ded1bb89182bfeeca12d95ae3dcbd9e16e4434",
+      "verified_source_files": 36
+    },
+    {
+      "checkpoint": 106,
+      "commit": "35db8ea80fd89928ce7c6cf34719a3ba2994f83a",
+      "parent": "8b6c2e5c28180732bbde14c6bd7c18abd6efe36e",
+      "tree": "6b07701f1516bbafe1af7e3a86ec5a77f061cfcb",
+      "patch_sha256": "4f31e18edea356ccd3cd8831aaf16f09484751a9b362d74bdaca9964c10ace6f",
+      "verified_source_files": 43
+    },
+    {
+      "checkpoint": 108,
+      "commit": "50000ef22e98b47f6b9ae08ffa205ee2d8f2d293",
+      "parent": "35db8ea80fd89928ce7c6cf34719a3ba2994f83a",
+      "tree": "a4e545915c89dcdf486bcdadda1124a9bf404909",
+      "patch_sha256": "291778a8cd13cd05b41cfef72360297227ca15b74b9c4b1ccb6c2cd8581d036a",
+      "verified_source_files": 56
+    },
+    {
+      "checkpoint": 109,
+      "commit": "89dbb204237bd7862a65ee43f3cc64c02b1525c3",
+      "parent": "50000ef22e98b47f6b9ae08ffa205ee2d8f2d293",
+      "tree": "324ec781f5352a730b9190c112647f4830c8fb13",
+      "patch_sha256": "ca03f68c25f5090a3d16b7d5ac10353be8399f64a199aa728f6c312cf8c64981",
+      "verified_source_files": 60
+    },
+    {
+      "checkpoint": 110,
+      "commit": "98d4983fc7b5e9074df92db881e4a63425c33898",
+      "parent": "89dbb204237bd7862a65ee43f3cc64c02b1525c3",
+      "tree": "ec709dd0ddaf4f1404fe9eb2243193d3ce83e7a6",
+      "patch_sha256": "91563d73c0735f66adb60de2c558ec779331649125d844bc744df15623ae0d56",
+      "verified_source_files": 62
+    },
+    {
+      "checkpoint": 111,
+      "commit": "993fdb3a9dfaff57e524bd3b116d5a3245f2c81f",
+      "parent": "98d4983fc7b5e9074df92db881e4a63425c33898",
+      "tree": "343a1cc876735d5a4db2bd96b5fbf71bbfedbaf8",
+      "patch_sha256": "8d46e023fc3d254a42d693f3b85dd6ac8aaa36a76dee9f06bca29c95d34fa1e5",
+      "verified_source_files": 68
+    },
+    {
+      "checkpoint": 112,
+      "commit": "abaf650b4b8b5e2e71a51393110103acb6c43ae2",
+      "parent": "993fdb3a9dfaff57e524bd3b116d5a3245f2c81f",
+      "tree": "e0d78b38fba74b3add974c55ae66b9544c96a595",
+      "patch_sha256": "3e69e147ca88dc65bab8077f828124358edb693e424c01cb2d0d78f20f6393e9",
+      "verified_source_files": 70
+    }
+  ],
+  "previous_head": "36edc37bec5b53f9b9b5070e14025075a1155468",
+  "head": "abaf650b4b8b5e2e71a51393110103acb6c43ae2",
+  "working_files_preserved": true,
+  "working_files_checked": 422,
+  "index_matches_head": true,
+  "pushed": true,
+  "remote_main": "abaf650b4b8b5e2e71a51393110103acb6c43ae2"
+}

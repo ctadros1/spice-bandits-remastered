@@ -1,5 +1,7 @@
 class_name BanditSimulation
 extends RefCounted
+
+const PortalView=preload("res://scripts/portal_view.gd")
 var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
@@ -129,7 +131,9 @@ func setup(data: Dictionary, map_data: Dictionary, mission: Dictionary, profile:
 	for point in config.settings.get("mines", []):
 		mines.append({"pos": center(int(point.x), int(point.y)), "cell": Vector2i(int(point.x), int(point.y)), "ready": int(catalog.tower_magic.mine_sleep), "static": true})
 	for pair in config.settings.get("teleports", []):
-		static_portals.append({"in": Vector2i(int(pair["in"].x), int(pair["in"].y)), "out": Vector2i(int(pair.out.x), int(pair.out.y))})
+		var presentation=PortalView.create(float(catalog.tower_magic.portal_reload),float(catalog.tower_magic.portal_duration),true)
+		PortalView.connect_gates(presentation)
+		static_portals.append({"in": Vector2i(int(pair["in"].x), int(pair["in"].y)), "out": Vector2i(int(pair.out.x), int(pair.out.y)),"presentation":presentation})
 	if int(config.settings.get("tutorial", 0)):
 		next_wave_ms = 1000000
 		tutorial_finished = false
@@ -1141,9 +1145,12 @@ func use_ability(key: String, pos: Vector2 = Vector2.ZERO) -> String:
 		"m_portal":
 			portals.append({"pos": pos, "until": clock_ms+duration("portal_duration"),"born_ms":clock_ms})
 			if portals.size() == 1:
+				portals[0].presentation=PortalView.create(float(catalog.tower_magic.portal_reload),duration("portal_duration"))
 				emit("portal_pending", {"pos": pos})
 				return "Choose the portal exit."
 			portals[0].until = clock_ms+duration("portal_duration")
+			portals[0].connected_ms=clock_ms
+			PortalView.connect_gates(portals[0].presentation)
 		_: return "Unknown magic."
 	abilities[key] = int(abilities[key])-1
 	record("magic", {"key": key, "x": pos.x, "y": pos.y})
@@ -1381,16 +1388,21 @@ func step() -> void:
 				mines.erase(mine)
 				break
 	if portals.size() == 2:
-		if clock_ms >= portals[0].until: portals.clear()
+		var presentation:Dictionary=portals[0].presentation
+		# Original manager removes an already-deleted pair on the next update.
+		if presentation.deleted:portals.clear()
 		else:
-			for e in enemies:
-				if e.hp <= 0 or e.air or clock_ms < e.float_until or clock_ms < e.portal_ms: continue
-				if e.cell == nearest(portals[0].pos):
-					e.pos = portals[1].pos
-					e.cell = nearest(e.pos)
-					e.portal_ms = clock_ms+int(catalog.tower_magic.portal_reload)
-					set_enemy_path(e)
+			PortalView.advance(presentation,tick_ms)
+			if presentation.gates[0].state==2:
+				for e in enemies:
+					if e.hp <= 0 or e.air or clock_ms < e.float_until or clock_ms < e.portal_ms: continue
+					if e.cell == nearest(portals[0].pos):
+						e.pos = portals[1].pos
+						e.cell = nearest(e.pos)
+						e.portal_ms = clock_ms+int(catalog.tower_magic.portal_reload)
+						set_enemy_path(e)
 	for pair in static_portals:
+		PortalView.advance(pair.presentation,tick_ms)
 		for e in enemies:
 			if e.hp > 0 and not e.air and clock_ms >= e.portal_ms and e.cell == pair["in"]:
 				e.cell = pair.out
