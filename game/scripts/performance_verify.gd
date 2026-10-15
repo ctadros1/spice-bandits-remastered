@@ -8,6 +8,9 @@ var captures: Array=[]
 var failures: Array=[]
 var last_frame_us=0
 var rendering_comparisons=[]
+var last_sim_ms=0
+var advancing_frames=0
+var stalled_frames=0
 
 func bolt_metrics() -> Dictionary:
 	var renderer=app.bolt_renderer
@@ -21,7 +24,12 @@ func bolt_metrics() -> Dictionary:
 
 func _process(delta: float) -> void:
 	var now=Time.get_ticks_usec()
-	if measuring and last_frame_us>0:samples.append(float(now-last_frame_us)/1000.0)
+	if measuring and last_frame_us>0:
+		samples.append(float(now-last_frame_us)/1000.0)
+		if app.screen=="game":
+			if app.sim.clock_ms>last_sim_ms:advancing_frames+=1
+			else:stalled_frames+=1
+			last_sim_ms=app.sim.clock_ms
 	last_frame_us=now
 
 func run() -> void:
@@ -29,6 +37,11 @@ func run() -> void:
 		if arg.begins_with("--qa-performance-root="):output=arg.trim_prefix("--qa-performance-root=")
 	if output.is_empty():push_error("Performance QA requires an output directory.");get_tree().quit(1);return
 	DirAccess.make_dir_recursive_absolute(output)
+	# Shared-Mac input must not pause or change an automated stress scene.
+	# This affects only this QA driver; ordinary and interactive QA input stays on.
+	app.set_process_input(false)
+	app.set_process_unhandled_input(false)
+	app.get_viewport().gui_disable_input=true
 	app.start_mission("13",true,false)
 	app.sim.profile_hotpaths=true
 	app.sim.next_wave_ms=1000000
@@ -61,12 +74,17 @@ func run() -> void:
 		app.refresh_controls()
 		var deadline=Time.get_ticks_msec()+1000
 		while Time.get_ticks_msec()<deadline:await get_tree().process_frame
+		var sample_start_ms=app.sim.clock_ms
+		last_sim_ms=sample_start_ms;advancing_frames=0;stalled_frames=0
 		samples.clear();last_frame_us=Time.get_ticks_usec();measuring=true
 		app.qa_timings.clear()
 		app.sim.hotpath_timings.clear()
 		deadline=Time.get_ticks_msec()+3000
 		while Time.get_ticks_msec()<deadline:await get_tree().process_frame
 		measuring=false
+		var sample_end_ms=app.sim.clock_ms
+		var live_advanced=sample_end_ms-sample_start_ms>=2000*rate and advancing_frames>=samples.size()-2 and not app.sim.paused and app.sim.outcome=="playing"
+		if not live_advanced:failures.append("Dense%dx fixture did not advance its live simulation throughout measurement." % rate)
 		samples.sort()
 		var median=samples[int(samples.size()/2)] if not samples.is_empty() else 0.0
 		var p95=samples[mini(samples.size()-1,int(samples.size()*0.95))] if not samples.is_empty() else 0.0
@@ -97,7 +115,7 @@ func run() -> void:
 		rendering_comparisons.append({"speed":rate,"reference":"reference-%dx.png" % rate,"batch":"batch-%dx.png" % rate,"reference_error":reference_error,"batch_error":batch_error,"reference_draws":reference_draws,"batch_draws":batch_draws,"sim_ms":app.sim.clock_ms})
 		if reference_draws<2 or batch_draws<2 or reference_error!=OK or batch_error!=OK:failures.append("Particle comparison did not render both layers in both modes.")
 		app.set_process(true)
-		stages.append({"speed":rate,"frames":samples.size(),"median_frame_ms":median,"p95_frame_ms":p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"reported_fps":Engine.get_frames_per_second(),"static_memory_bytes":Performance.get_monitor(Performance.MEMORY_STATIC),"enemies":app.sim.enemies.size(),"towers":app.sim.towers.size(),"particle_systems":app.particle_fx.systems.size(),"sim_ms":app.sim.clock_ms,"bolts":bolt_metrics(),"timings":app.qa_timings.duplicate(true),"simulation_sections":app.sim.hotpath_timings.duplicate(true)})
+		stages.append({"speed":rate,"frames":samples.size(),"median_frame_ms":median,"p95_frame_ms":p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"reported_fps":Engine.get_frames_per_second(),"static_memory_bytes":Performance.get_monitor(Performance.MEMORY_STATIC),"enemies":app.sim.enemies.size(),"towers":app.sim.towers.size(),"particle_systems":app.particle_fx.systems.size(),"sim_ms":app.sim.clock_ms,"sample_start_sim_ms":sample_start_ms,"sample_end_sim_ms":sample_end_ms,"advancing_frames":advancing_frames,"stalled_frames":stalled_frames,"live_advanced":live_advanced,"input_isolated":not app.is_processing_input() and not app.is_processing_unhandled_input() and app.get_viewport().gui_disable_input,"bolts":bolt_metrics(),"timings":app.qa_timings.duplicate(true),"simulation_sections":app.sim.hotpath_timings.duplicate(true)})
 		if samples.size()<45 or median>33.34 or error!=OK:failures.append("Dense%dx fixture did not sustain30 median frames/second or capture successfully." % rate)
 	app.screen="world";app.selected_location="";app.world_camera=Vector2(2048,1536);app.world_zoom=0.2
 	app.world_clouds.reset();app.refresh_controls()

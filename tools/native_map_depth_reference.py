@@ -7,6 +7,11 @@ runs fully with supplied cell center/light. Map comparator executes directly.
 UpdateParams0xe3c9e..0xe3cbe executes the real animator Init with supplied
 animation-group lookup; its cleared current-animation pointer retains the
 old tower height. No original map sorting, GPU, services or whole game.
+
+CBase constructor suffix0x7595e..0x759b4 captures the initial Idle-100
+height and optional depth_pos. Full SetInitPosition0x75fe0 uses supplied
+cell-center/light stubs; its animator and additional animator positions are
+captured. These probes do not execute a complete CBase constructor.
 """
 from native_creep_reference import *
 
@@ -68,6 +73,29 @@ class DepthProbe(Probe):
   for address,value in [(E,a),(E+0x100,b)]:
    self.u.mem_write(address+0xc,struct.pack('<i',value[0]));self.u.mem_write(address+0x14,F(value[1]))
   self.invoke(0x103650,[E,E+0x100]);return bool(self.u.reg_read(UC_ARM_REG_R0))
+ def base_declaration(self,height,override=None,resource=True,animation=True):
+  self.reset(0x759b4 if resource else 0x75ab4);self.override=override
+  sp=self.u.reg_read(UC_ARM_REG_SP)
+  self.u.mem_write(sp+0x48,I(E));self.u.mem_write(sp+0x8,I(E))
+  self.u.reg_write(UC_ARM_REG_R7,E+0x6000)
+  self.u.mem_write(E+0x6024,I(E+0x3000));self.u.mem_write(E+0x300c,I(E+0x1000 if resource else 0))
+  self.u.mem_write(E+0xb8,I(E+0x4000 if animation else 0));self.u.mem_write(E+0x4048,F(height))
+  self.invoke(0x7595e,[])
+  return {'height':struct.unpack('<f',self.u.mem_read(E+0x14,4))[0],
+          'half_art_height':struct.unpack('<f',self.u.mem_read(E+0x16c,4))[0]}
+ def base_position(self,center,height,light=None,extra=False):
+  self.reset();self.center=center;self.cell_light=light
+  self.u.mem_write(E+0x14,F(height));self.u.mem_write(E+0x1c,I(E+0x1000))
+  self.u.mem_write(E+0x1074,I(E+0x2000));self.u.mem_write(E+0x174,F(1))
+  if extra:
+   self.u.mem_write(E+0x104,I(E+0x6000));self.u.mem_write(E+0x108,I(E+0x6008))
+   self.u.mem_write(E+0x6000,struct.pack('<2I',E+0x6100,E+0x6200))
+  self.invoke(0x75fe0,[E,6,7])
+  pair=lambda off:list(struct.unpack('<2f',self.u.mem_read(E+off,8)))
+  return {'center':pair(0x64),'animator':pair(0x90),'depth_top':struct.unpack('<i',self.u.mem_read(E+0xc,4))[0],
+          'height':struct.unpack('<f',self.u.mem_read(E+0x14,4))[0],
+          'light':struct.unpack('<f',self.u.mem_read(E+0x174,4))[0],
+          'extra_animators':[pair(0x6100),pair(0x6200)] if extra else []}
  def upgrade_height(self,old_height,new_height):
   self.reset(0xe3cbe)
   self.u.mem_write(E+0x14,F(old_height));self.u.mem_write(E+0x98,I(E+0x4000));self.u.mem_write(E+0x4048,F(new_height))
@@ -77,7 +105,7 @@ class DepthProbe(Probe):
 
 
 def main():
- p=DepthProbe();dimensions=[];declarations=[];positions=[];comparisons=[];upgrades=[]
+ p=DepthProbe();dimensions=[];declarations=[];positions=[];comparisons=[];upgrades=[];base_declarations=[];base_positions=[]
  for width,height in [(100,100),(36,40),(25,25),(58,72),(0,0),(63.5,87.25)]:
   dimensions.append({'width':width,'height':height,'output':p.animation_dimensions(width,height)})
  for height in [0,25,40,60,72,100,87.25]:
@@ -92,9 +120,17 @@ def main():
   for b in values:comparisons.append({'a':a,'b':b,'output':p.compare(a,b)})
  for old in [0,25,40,60,72,100,87.25]:
   for new in [25,40,100,87.25]:upgrades.append({'old_height':old,'new_height':new,'output':p.upgrade_height(old,new)})
- result={'method':__doc__,'original_sha256':EXPECTED_SHA,'dimensions':dimensions,'declarations':declarations,'positions':positions,'comparisons':comparisons,'upgrades':upgrades,'original_unchanged':hashlib.sha256(EXE.read_bytes()).hexdigest()==EXPECTED_SHA}
+ for height in [0,20,71,94,140,234,87.25]:
+  for override,resource,animation in [(None,False,True),(None,True,True),(17,True,True),(-3,True,True),(None,False,False)]:
+   base_declarations.append({'height':height,'override':override,'resource':resource,'animation':animation,'output':p.base_declaration(height,override,resource,animation)})
+ for y in [-100.75,-7,-.125,0,7,49.5,150,150.875,16777218]:
+  for height in [0,10,20,30,62,73,86,94,87.25]:
+   for light in [None,.625]:
+    for extra in [False,True]:
+     center=[231.25,y];base_positions.append({'center':center,'height':height,'light':light,'extra':extra,'output':p.base_position(center,height,light,extra)})
+ result={'method':__doc__,'original_sha256':EXPECTED_SHA,'dimensions':dimensions,'declarations':declarations,'positions':positions,'comparisons':comparisons,'upgrades':upgrades,'base_declarations':base_declarations,'base_positions':base_positions,'original_unchanged':hashlib.sha256(EXE.read_bytes()).hexdigest()==EXPECTED_SHA}
  Path('tests/fixtures/native-map-depth-reference.json').write_text(json.dumps(result,indent=2)+'\n')
- print(json.dumps({key:len(result[key]) for key in ['dimensions','declarations','positions','comparisons']}))
+ print(json.dumps({key:len(result[key]) for key in ['dimensions','declarations','positions','comparisons','base_declarations','base_positions']}))
 
 
 if __name__=='__main__':main()

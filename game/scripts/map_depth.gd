@@ -21,3 +21,14 @@ static func key(depth_top:int,height:float) -> float:
 static func tower(center_y:float,resource:Dictionary) -> float:
 	var height=tower_height(resource)
 	return key(top(center_y,height),height)
+
+static func base_height(resource:Dictionary) -> float:
+	# CBase0x7595e retains Idle-100's untrimmed height before depth_pos.
+	var state=resource.get("states",{}).get("Idle-100",{})
+	var source=resource.get("resources",{}).get(str(int(state.get("res_id",1))),{})
+	return f32(int(resource.params.depth_pos)) if resource.get("params",{}).has("depth_pos") else f32(float(source.get("frame_height",0)))
+
+static func base(center_y:float,resource:Dictionary) -> float:
+	var height=base_height(resource)
+	# SetInitPosition0x75fe0 leaves the visible animator at the cell center.
+	return key(top(center_y,height,0),height)

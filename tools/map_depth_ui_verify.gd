@@ -23,6 +23,18 @@ func run() -> void:
 		check((Depth.key(int(case.a[0]),case.a[1])<Depth.key(int(case.b[0]),case.b[1]))==case.output,"original strict float32 comparator including ties")
 	for case in reference.upgrades:
 		check(case.output.height==case.old_height and case.output.current_animation==0,"original upgrade Init clears animation before height-copy guard and retains construction height")
+	for case in reference.base_declarations:
+		var resource={"states":{"Idle-100":{"res_id":1}},"resources":{"1":{"frame_height":case.height}},"params":{}}
+		if not case.animation:resource.resources.clear()
+		if case.override!=null and case.resource:resource.params.depth_pos=case.override
+		check(Depth.base_height(resource)==case.output.height,"original base construction uses Idle-100 height or integer depth override")
+		check(case.output.half_art_height==(Depth.f32(case.height*0.5) if case.animation else 0.0),"base HP-bar art half-height remains independent of depth_pos")
+	for case in reference.base_positions:
+		check(Depth.top(case.center[1],case.height,0)==int(case.output.depth_top),"original base depth truncates center minus half depth height")
+		var center=[Depth.f32(case.center[0]),Depth.f32(case.center[1])]
+		check(case.output.center==center and case.output.animator==center,"base logical and visible positions remain at original cell center")
+		check(case.output.light==(1.0 if case.light==null else case.light),"original base retains supplied cell lighting or initialized default")
+		for extra in case.output.extra_animators:check(extra==center,"additional base animators use the same original cell center")
 	var content=root.get_node("Content")
 	var forms=0
 	for type in range(1,19):
@@ -35,6 +47,15 @@ func run() -> void:
 			check(Depth.tower_height(resource)==resource_heights[0],"all54 tower forms use the untrimmed authored height")
 			forms+=1
 	check(forms==54,"all54 tower forms covered")
+	var base_forms=0
+	for name in content.animations:
+		if not name.begins_with("bases/"):continue
+		var resource=content.animations[name]
+		var state=resource.states["Idle-100"]
+		check(resource.resources.has(str(int(state.res_id))),"every base has the source for its initial Idle-100 state")
+		check(Depth.base_height(resource)==int(resource.params.depth_pos),"all20 actual base depth overrides are preserved independently of artwork height")
+		base_forms+=1
+	check(base_forms==20,"all20 base resources covered")
 	var app=load("res://scripts/main.gd").new()
 	app.sim=load("res://scripts/simulation.gd").new()
 	app.sim.map={"foreground":[]}
@@ -47,6 +68,17 @@ func run() -> void:
 	check(app.tower_depth(app.sim.towers[0])==293,"cached tower depth invalidates when the position changes")
 	app.sim.towers[0].def=content.tower(5,1)
 	check(app.tower_depth(app.sim.towers[0])==255,"cached fixture depth invalidates when its construction resource changes")
+	app.sim.bases.assign([{"type":9,"pos":Vector2(200,203)},{"type":0,"pos":Vector2(205,200)}])
+	objects=app.battle_objects()
+	check(objects.size()==5 and objects[1].get("base",{}).get("type")==9 and objects[3].get("base",{}).get("type")==0,"actual base bodies enter the sorted map list around towers and enemies")
+	check(objects[1].y==208 and objects[3].y==247,"actual map list uses base depth overrides10 and94 with independent centers")
+	app.sim.bases.reverse()
+	var reversed=app.battle_objects()
+	check(reversed.map(func(o):return o.y)==objects.map(func(o):return o.y),"distinct base depths retain map order when base input order reverses")
+	app.sim.bases[0].pos.y=240
+	check(app.base_depth(app.sim.bases[0])==287,"cached base depth invalidates when its position changes")
+	app.sim.bases[0].type=9
+	check(app.base_depth(app.sim.bases[0])==245,"cached base depth invalidates when its type changes")
 	app.sim=load("res://scripts/simulation.gd").new()
 	var mission=content.mission("1")
 	var unlocked=[]
@@ -65,6 +97,6 @@ func run() -> void:
 			check(built.depth_filename=="tower7_1","upgrading retains the construction depth resource despite changed art heights")
 			check(app.battle_objects().filter(func(o):return o.has("tower"))[0].y==initial_depth,"actual upgraded tower keeps original62px construction height")
 	app.free()
-	var report={"checks":checks,"failures":failures,"forms":forms,"method":reference.method}
+	var report={"checks":checks,"failures":failures,"forms":forms,"base_forms":base_forms,"method":reference.method}
 	var file=FileAccess.open(ProjectSettings.globalize_path("res://../builds/map-depth-verification.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"\t"));file.close()
 	print("MAP_DEPTH_VERIFICATION ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)

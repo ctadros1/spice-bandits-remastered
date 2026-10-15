@@ -1,6 +1,6 @@
 # Spice Bandits macOS Reconstruction Plan
 
-Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; all ten current native suites pass, but these checks did not establish visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
+Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; nine current native suites pass while live4x stress fails its frame-rate gate; these checks do not establish original visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
 
 ## Objective and completion boundaries
 
@@ -24,6 +24,13 @@ These are completion requirements, not optional polish. Compare each against den
 - [ ] Verify matched screen states and physical drag-and-drop in the newly packaged app; existing functional audits do not close these requirements.
 
 ## Current implementation progress
+
+R91–r93 puts base bodies into the sorted map-object pass using their original Idle-100 height/depth_pos declaration and SetInitPosition float32/truncation. Health bars follow the body pass; art stays centered and retains its proportions.35 bounded original constructor branches and324 full position cases bring depth checks to2,063 across20 bases/54 tower forms. Three native overlap/damage poses were inspected; six cached/uncached battle rectangles retain exact decoded RGB. Static review confirms211 current scenery layers use integer depth sums below1,279; whole-loader execution, original map registration/ties, creep depth, owner/air interleaving and complete base extras remain open.
+
+Nine r93 native suites pass: presentation305/91 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. The separate performance suite fails at4x41.446ms median/81.887ms p95;1x28.245/32.337 and2x32.149/57.895 pass the existing median gate. All three simulations advance throughout with zero stalled frames and isolated automated input. Normal/retained-campaign saves, package resources, sole-process/isolation and signature checks pass.329 counted PNGs include the failed performance captures; this is not an all-ten pass. Evidence: builds/base-depth-cache-r93-native-suites.json and builds/base-depth-remaining-r93-native-suites.json.
+
+A later audit invalidates r89's live stress interpretation: its three endpoints stay at1,027ms,2x/4x have no tower-update calls, and the retained dense2x image visibly says Paused. Its earlier timing passes support frozen rendering only. Initiating input was not recorded. R92 isolates performance-only input and requires clock/frame advancement; it fails4x33.372ms against33.34ms. R91/r92/r93 failures remain preserved; no performance gate was relaxed. Other historical suite outcomes retain their own scope.
+
 
 R90 adds the separate read-only atlas/map inspector described in [build instructions](docs/BUILD.md). Browser DOM checks exercise rotated and flipped frames, natural-sized extra images, Training hex selection and Desert foreground bounds; exported PNGs were inspected. The packaged game remains the verified r89 build. A chat goal now tracks the full original offline reconstruction. The user-authorized private GitHub backup now has pushed signed source checkpoints and a private release containing a9.40GB seven-part workspace archive, manifests and complete Git bundle. All49,235 local archive entries and all11 remote asset digests/byte counts pass verification; see [backup instructions](docs/BACKUP.md).
 

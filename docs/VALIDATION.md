@@ -4,17 +4,25 @@ October 13, 2026. Local reconstruction in progress; offline fidelity and full re
 
 ## Latest presentation package, October15
 
-PCK `87fc196ad0d733baf87d62aacfaf7bcc3152a29cb6ba61b7272abc7feb2ffd5b`, executable `02190164091e474639a5ca2d47406ea80076c3e15afeb4e88f429b37eb0e8f6c`, native helper `dca7e2a1bec26575dab0d636ac3e8f957a46befc5a5baacec66def21d66a1af8`. All ten native r89 suites pass for this Universal2 package. Logs are `builds/package-<mode>-tower-depth-cache-r89.log`; each audit binds its sole process, isolated profile, unchanged normal saves/resources and deep strict ad hoc signature.
+PCK `7f7354d4022242285a4ce1662057e917dab6c4b7a58b494481c0782b46774650`, executable `c65d98f0b101d2e7aeb5adf38109ebedc9bfe21d8f569dffa27a1df19168d368`, native helper `88fa76f1d12cde8b470075be6e80d32543839a31c7b4719207149f08bccac970`. Nine native r93 suites pass; performance remains failed. Normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Logs use the base-depth-cache-r93 label. See the scope and invalidated r89 live-performance claim below.
 
 | Suite | Executed checks / captures |
 | --- | --- |
-| Presentation | 300 checks / 88 PNGs |
+| Presentation | 305 checks / 91 PNGs |
 | Tutorial | 88 checks / 20 PNGs; fixture battle16 kills,$168,98% health |
 | Menus | 184 checks / 55 PNGs; eleven distinct main-menu poses |
 | Audio | 50 checks / 23 WAVs |
-| Performance | Four PNGs: dense1x/2x/4x and diagnostic wide world |
+| Performance | Failed4x median gate; four captures retained, live advancement/input isolation pass |
 | Campaign | 148 PNGs |
 | Projectiles / turns / towers / Desert | 4 / 5 / 1 / 1 PNGs |
+
+
+R91–r93 puts base bodies into the sorted map-object pass using their original Idle-100 height/depth_pos declaration and SetInitPosition float32/truncation. Health bars follow the body pass; art stays centered and retains its proportions.35 bounded original constructor branches and324 full position cases bring depth checks to2,063 across20 bases/54 tower forms. Three native overlap/damage poses were inspected; six cached/uncached battle rectangles retain exact decoded RGB. Static review confirms211 current scenery layers use integer depth sums below1,279; whole-loader execution, original map registration/ties, creep depth, owner/air interleaving and complete base extras remain open.
+
+Nine r93 native suites pass: presentation305/91 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. The separate performance suite fails at4x41.446ms median/81.887ms p95;1x28.245/32.337 and2x32.149/57.895 pass the existing median gate. All three simulations advance throughout with zero stalled frames and isolated automated input. Normal/retained-campaign saves, package resources, sole-process/isolation and signature checks pass.329 counted PNGs include the failed performance captures; this is not an all-ten pass. Evidence: builds/base-depth-cache-r93-native-suites.json and builds/base-depth-remaining-r93-native-suites.json.
+
+A later audit invalidates r89's live stress interpretation: its three endpoints stay at1,027ms,2x/4x have no tower-update calls, and the retained dense2x image visibly says Paused. Its earlier timing passes support frozen rendering only. Initiating input was not recorded. R92 isolates performance-only input and requires clock/frame advancement; it fails4x33.372ms against33.34ms. R91/r92/r93 failures remain preserved; no performance gate was relaxed. Other historical suite outcomes retain their own scope.
+
 
 R87–r89 restores tower draw depth from the original untrimmed animation height, centerY−7, float32 half-height/truncation and strict map comparator. Original upgrade Init clears the animation before its height-copy guard, so placed towers retain construction depth while their artwork changes.651 bounded ARM/source/control checks cover all54 forms, legal upgrades and cache invalidation. Two native overlap poses pass and were inspected; six cached/uncached reconstructed captures retain exact decoded RGB. All ten r89 suites pass, including300 presentation checks/88 PNGs. The r88 performance failure remains preserved; the fresh4x evolving fixture passes15.801ms median/19.021ms p95, without a fixed-density speedup claim. Original whole-map registration/ties, creep/base depth, air/owner passes and global RNG remain open. See [tower depth](mechanics/TOWER_PRESENTATION.md).
 

@@ -25,6 +25,7 @@ const TowerPreview = preload("res://scripts/tower_preview_view.gd")
 const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
 var tower_depth_cache:Dictionary={}
+var base_depth_cache:Dictionary={}
 const TUTORIAL_CELLS = [Vector2i(7, 4), Vector2i(8, 6), Vector2i(6, 7), Vector2i(11, 3)]
 var main_menu_view=MainMenuView.new()
 var menu_bubbles=MenuBubbleView.new()
@@ -1466,6 +1467,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 		transition.close()
 		return
 	sim = Simulation.new()
+	base_depth_cache.clear()
 	sim.setup(Content.catalog, Content.maps[c.map], c, Profile.data, 114, Content.animations)
 	sim.live_updates=not test_session or "--qa-performance" in OS.get_cmdline_user_args() or "--qa-live-runtime" in OS.get_cmdline_user_args()
 	screen = "game"
@@ -2897,9 +2899,19 @@ func tower_depth(tower:Dictionary) -> float:
 	tower_depth_cache[tower.id]={"filename":filename,"position":tower.pos,"depth":value}
 	return value
 
+func base_depth(base:Dictionary) -> float:
+	# Base type/position and imported resources are static during a battle.
+	var identity=Vector3(base.pos.x,base.pos.y,int(base.type))
+	if base_depth_cache.has(identity):return base_depth_cache[identity]
+	var value=MapDepth.base(base.pos.y,Content.animations.get("bases/base"+str(base.type),{}))
+	base_depth_cache[identity]=value
+	return value
+
 func battle_objects() -> Array:
 	var objects=[]
 	for layer in sim.map.get("foreground",[]):objects.append({"y":float(layer.y)+float(layer.tile.get("depth_pos",layer.tile.get("h",0))),"layer":layer})
+	for base in sim.bases:
+		objects.append({"y":base_depth(base),"base":base})
 	for t in sim.towers:
 		objects.append({"y":tower_depth(t),"tower":t})
 	for e in sim.enemies:objects.append({"y":e.get("visual_pos",e.pos).y,"enemy":e})
@@ -2931,26 +2943,11 @@ func draw_game() -> void:
 	for pair in sim.static_portals:
 		sprite("sfx/portals", "Blue", sim.center(pair["in"].x, pair["in"].y), int(sim.clock_ms/1000))
 		sprite("sfx/portals", "Red", sim.center(pair.out.x, pair.out.y), int(sim.clock_ms/1000))
-	for b in sim.bases:
-		var pct = int(b.hp/b.hpmax*100)
-		var state = "Idle-%d" % (int(ceil(pct/20.0))*20)
-		# CBase::SetInitPosition0x75fe0 passes the cell center unchanged to
-		# its animator. depth_pos changes draw order, not its visible height.
-		sprite("bases/base"+str(b.type), state, b.pos)
-		if b.hp<b.hpmax:
-			var resource=Content.animations["bases/base"+str(b.type)]
-			var params=resource.get("params",{})
-			if b.hp>0 or not bool(params.get("hide_hp_bar_on_dead",false)):
-				var frame=Content.frame("bases/base"+str(b.type),"Idle-100")
-				var offset=params.get("hp_bar_offset",[0,0])
-				var origin=b.pos+Vector2(-5,-frame.canvas_size.y/2.0-15)+Vector2(offset[0],offset[1])
-				ClassicUI.region(self,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
-				var width=32*maxf(0,b.hp)/b.hpmax
-				if width>0:ClassicUI.region(self,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))
 	if selected_tower >= 0:
 		var selected = sim.find_tower(selected_tower)
 		if not selected.is_empty(): paint_ellipse(selected.pos, sim.range_axes(float(selected.def.get("range", 0))/1000.0), Color(0.2, 0.8, 0.1, 0.22*tower_panel_alpha()))
 	var objects=battle_objects()
+	var depth_bases=[]
 	for object in objects:
 		if object.has("layer"):
 			var layer = object.layer
@@ -2958,6 +2955,14 @@ func draw_game() -> void:
 			var texture = Content.tex(layer.texture)
 			if texture != null:
 				draw_texture_rect_region(texture, Rect2(float(layer.x)+float(tile.get("offset_x", 0)), float(layer.y)+float(tile.get("offset_y", 0)), float(tile.w), float(tile.h)), Rect2(float(tile.get("sx", 0)), float(tile.get("sy", 0)), float(tile.w), float(tile.h)))
+		elif object.has("base"):
+			var b=object.base
+			depth_bases.append(b)
+			var pct=int(b.hp/b.hpmax*100)
+			var state="Idle-%d" % (int(ceil(pct/20.0))*20)
+			# Original map registration places the base body in this depth
+			# pass. Its visible center is independent of its depth override.
+			sprite("bases/base"+str(b.type),state,b.pos)
 		elif object.has("tower"):
 			var t = object.tower
 			var set_name = "towers/"+str(t.def.filename)
@@ -3005,6 +3010,18 @@ func draw_game() -> void:
 			if e.hp < e.max_hp:
 				draw_rect(Rect2(position.x-12, position.y-27, 24, 3), Color("#52211b"))
 				draw_rect(Rect2(position.x-12, position.y-27, 24*e.hp/e.max_hp, 3), Color("#a4d944"))
+	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
+	# Full map/owner/air interleaving remains separately unresolved.
+	for b in depth_bases:
+		if b.hp>=b.hpmax:continue
+		var params=Content.animations["bases/base"+str(b.type)].get("params",{})
+		if b.hp<=0 and bool(params.get("hide_hp_bar_on_dead",false)):continue
+		var frame=Content.frame("bases/base"+str(b.type),"Idle-100")
+		var offset=params.get("hp_bar_offset",[0,0])
+		var origin=b.pos+Vector2(-5,-frame.canvas_size.y/2.0-15)+Vector2(offset[0],offset[1])
+		ClassicUI.region(self,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
+		var width=32*maxf(0,b.hp)/b.hpmax
+		if width>0:ClassicUI.region(self,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))
 	for bubble in sim.bubbles:
 		if not bubble.active: continue
 		var texture = Content.tex("assets/sfx/goo_bubble.png" if int(bubble.type) == 8 else "assets/sfx/poison_bubble.png")
