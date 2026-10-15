@@ -1,0 +1,9223 @@
+{
+  "method": "Full original CAnimFrames.AddFrame with supplied atlas/group records.\nAllocation returns reserved zeroed storage; vector push records its pointer.\nNo XML loader, texture loader, RenderFrameQuad/GPU or whole game executes.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          0.5,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          0.0,
+          0.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          2.75,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          0,
+          0
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          2.25,
+          -3.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          1.0,
+          14.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          1.5,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          1.0,
+          14.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          3.25,
+          10.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          3.75,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          1,
+          14
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          3.25,
+          11.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -4.0,
+          -4.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -3.5,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -4.0,
+          -3.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          1,
+          1
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01318359375,
+          0.068359375,
+          0.0693359375
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          1.0,
+          1.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.015625,
+          0.068359375,
+          0.076171875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          6,
+          8
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.0166015625,
+          0.068359375,
+          0.07421875
+        ],
+        "offset": [
+          -1.75,
+          -7.5
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          6.0,
+          8.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01513671875,
+          0.068359375,
+          0.0751953125
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          5,
+          7
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.01611328125,
+          0.068359375,
+          0.0732421875
+        ],
+        "offset": [
+          -1.25,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          5.0,
+          7.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": false,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.046875,
+          0.068359375,
+          0.1572265625
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 0
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          false
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 0,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          false,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 0,
+        "flipv": 1,
+        "rotated": 1
+      }
+    },
+    {
+      "input": {
+        "group": [
+          -4,
+          -4
+        ],
+        "offset": [
+          2.25,
+          -3.5
+        ],
+        "size": [
+          70,
+          91
+        ],
+        "rotation": true,
+        "flip": [
+          true,
+          true
+        ]
+      },
+      "output": {
+        "uv": [
+          0.0126953125,
+          0.05712890625,
+          0.068359375,
+          0.13671875
+        ],
+        "offset": [
+          -1.75,
+          -7.0
+        ],
+        "center": [
+          7.0,
+          -3.0
+        ],
+        "atlas_xy": [
+          26,
+          70
+        ],
+        "size": [
+          70.0,
+          91.0
+        ],
+        "fliph": 1,
+        "flipv": 1,
+        "rotated": 1
+      }
+    }
+  ],
+  "original_unchanged": true
+}

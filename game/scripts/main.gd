@@ -24,6 +24,9 @@ const RewardView = preload("res://scripts/reward_view.gd")
 const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
 const CreepLight = preload("res://scripts/creep_light_view.gd")
 const CreepStatus = preload("res://scripts/creep_status_view.gd")
+const Animator=preload("res://scripts/animator_view.gd")
+var animation_epoch=0
+var animation_delta_ms=0.0
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
 const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
@@ -2359,6 +2362,8 @@ func request_wave_launch() -> void:
 	ClassicUI.Wave.battle_rows(sim,wave_collapse)
 
 func _process(delta: float) -> void:
+	animation_epoch+=1
+	animation_delta_ms=delta*1000.0*speed if screen=="game" and sim!=null and not sim.paused and sim.outcome=="playing" else 0.0
 	world_decor_dt_ms=delta*1000.0 if screen=="world" else 0.0
 	if screen=="world":world_blades.advance(delta*1000.0)
 	world_clouds.advance(delta*1000.0 if screen=="world" else 0.0)
@@ -2731,11 +2736,52 @@ func text(pos: Vector2, value: String, size: int = 18, color: Color = Color.WHIT
 	draw_string(bold, pos+Vector2.ONE, value, HORIZONTAL_ALIGNMENT_LEFT, -1, size, Color(0, 0, 0, 0.8))
 	draw_string(bold, pos, value, HORIZONTAL_ALIGNMENT_LEFT, -1, size, color)
 
-func sprite(set_name: String, state: String, pos: Vector2, index: int = 0, color_name: String = "", tint: Color = Color.WHITE, lift: float = 0.0, native_scale: Vector2 = Vector2.ONE) -> void:
-	var f = Content.frame(set_name, state, index, color_name)
-	if not f.is_empty():
-		var t: Texture2D = f.texture
-		draw_texture_rect(t, Rect2(pos+(-t.get_size()/2.0+f.offset)*native_scale+Vector2(0, lift), t.get_size()*native_scale), false, tint)
+func owned_animation(owner:Dictionary,key:String,set_name:String,state_name:String,playing:bool=true) -> Dictionary:
+	var definition=Content.animations.get(set_name,{}).get("states",{}).get(state_name,{})
+	if definition.is_empty():return {}
+	if not owner.has("render_animators"):owner.render_animators={}
+	var state=owner.render_animators.get(key,{})
+	if state.is_empty():
+		var frames=definition.get("resolved_frames",definition.get("added_frames",[]))
+		state=Animator.initial(maxi(1,frames.size() if not frames.is_empty() else int(definition.get("frames",1))),float(definition.get("speed",1)),bool(definition.get("loop",false)))
+		state.last_epoch=-1;state.owner_playing=playing;owner.render_animators[key]=state
+		Animator.play(state,state_name,definition)
+		state.stopped=not playing
+	if state.name!=state_name or (playing and not state.owner_playing):
+		Animator.play(state,state_name,definition);state.last_epoch=-1
+	state.owner_playing=playing
+	if state.last_epoch!=animation_epoch:
+		Animator.advance(state,animation_delta_ms,int(elapsed_ui*1000.0),bool(definition.get("alpha_anim",false)),not playing or (sim!=null and sim.paused))
+		state.last_epoch=animation_epoch
+	return state
+
+func sprite(set_name: String, state: String, pos: Vector2, index: float = 0, color_name: String = "", tint: Color = Color.WHITE, lift: float = 0.0, native_scale: Vector2 = Vector2.ONE, animator:Dictionary={}) -> void:
+	var owned=not animator.is_empty()
+	var frame_index=int(animator.frame) if owned else int(index)
+	var first=Content.frame(set_name,state,frame_index,color_name)
+	if first.is_empty():return
+	var flags=int(first.blend_flags)
+	if flags==0:
+		# The ordinary path stays one lookup/quad. Most battle sprites have
+		# neither source interpolation flag; do not resolve their state again.
+		var texture:Texture2D=first.texture
+		draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+first.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
+		return
+	if flags&2 and owned:tint=Animator.straight(animator.alpha_color)
+	if not flags&1:draw_sprite_frame(first,pos,tint,lift,native_scale);return
+	var phase=float(animator.phase) if owned else index
+	var second=Content.frame(set_name,state,frame_index+1,color_name)
+	if second.is_empty():return
+	var images=[first,second]
+	var recipe=Animator.render_frames(0,Animator.f32(phase-frame_index),[first.native_key,second.native_key],true)
+	for draw in recipe:
+		# Keep the complete source plan, but zero RGBA contributes no pixels.
+		if draw.color.a<=0:continue
+		draw_sprite_frame(images[draw.frame],pos,Animator.straight(draw.color),lift,native_scale)
+
+func draw_sprite_frame(frame:Dictionary,pos:Vector2,tint:Color,lift:float,native_scale:Vector2) -> void:
+	var texture:Texture2D=frame.texture
+	draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
 
 func extra_sprite(set_name: String, name: String, pos: Vector2, variation: String = "", native_scale: Vector2 = Vector2.ONE, tint: Color = Color.WHITE) -> bool:
 	var frame = Content.extra_frame(set_name, name, variation)
@@ -3002,13 +3048,13 @@ func battle_portal_objects() -> Array:
 		var gate=presentation.gates[index] if not presentation.is_empty() else {"state":0,"scale":1.0}
 		if gate.state==3:continue
 		var age=maxi(0,sim.clock_ms-int(sim.portals[0].get("connected_ms",portal.get("born_ms",0)))) if sim.portals.size()==2 else 0
-		objects.append({"pos":portal.pos,"state":"Blue" if index==0 else "Red","frame":int(age/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state})
+		objects.append({"pos":portal.pos,"state":"Blue" if index==0 else "Red","frame":int(age/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state,"gate":gate})
 	for pair in sim.static_portals:
 		for index in range(2):
 			var kind="in" if index==0 else "out"
 			var gate=pair.presentation.gates[index]
-			if gate.state!=3:objects.append({"pos":sim.center(pair[kind].x,pair[kind].y),"state":"Blue" if index==0 else "Red","frame":int(sim.clock_ms/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state})
-	if magic_placement=="m_portal":objects.append({"pos":mouse_world(magic_preview_position),"state":"Blue" if sim.portals.is_empty() else "Red","frame":0,"preview":true,"scale":0.3,"gate_state":0})
+			if gate.state!=3:objects.append({"pos":sim.center(pair[kind].x,pair[kind].y),"state":"Blue" if index==0 else "Red","frame":int(sim.clock_ms/1000),"preview":false,"scale":gate.scale,"gate_state":gate.state,"gate":gate})
+	if magic_placement=="m_portal":objects.append({"pos":mouse_world(magic_preview_position),"state":"Blue" if sim.portals.is_empty() else "Red","frame":0,"preview":true,"scale":0.3,"gate_state":0,"gate":{}})
 	for portal in objects:portal.depth=MapDepth.effect(portal.pos.y,Content.animations.get("sfx/portals",{}),"Blue")
 	objects.sort_custom(func(a,b):return a.depth<b.depth)
 	return objects
@@ -3018,7 +3064,9 @@ func draw_mine_object(mine:Dictionary,preview:bool) -> void:
 	var light=float(sim.map.cells[sim.cell_index(mine.cell)].get("l",1)) if sim.within(mine.cell) else 1.0
 	var pose=MagicView.mine(mine.pos,not preview,0 if remaining>0 or preview else 2,remaining,int(Content.catalog.tower_magic.mine_sleep),light)
 	for actor in pose.sprites:
-		sprite("sfx/mine" if actor.key=="body" else "sfx/mine_lights","Idle" if actor.key=="body" else "Builded",mine.pos,0 if actor.key=="body" else int(maxi(0,sim.clock_ms-int(mine.get("born_ms",0)))*5/1000),"",MagicView.straight(actor.color))
+		var lights=actor.key=="lights"
+		var animation=owned_animation(mine,"lights","sfx/mine_lights","Builded") if lights else {}
+		sprite("sfx/mine_lights" if lights else "sfx/mine","Builded" if lights else "Idle",mine.pos,0,"",MagicView.straight(actor.color),0,Vector2.ONE,animation)
 	for bar in pose.bars:draw_rect(bar.rect,bar.color)
 
 func draw_game() -> void:
@@ -3030,7 +3078,8 @@ func draw_game() -> void:
 		draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
 	# Portal art belongs to registered RenderBefore; its body is empty.
 	for portal in battle_portal_objects():
-		sprite("sfx/portals",portal.state,portal.pos,portal.frame,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*float(portal.scale))
+		var animation=owned_animation(portal.gate,"portal","sfx/portals",portal.state,bool(portal.gate.get("animation_played",false)))
+		sprite("sfx/portals",portal.state,portal.pos,0,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*float(portal.scale),animation)
 	var objects=battle_objects()
 	var enemy_projectiles=enemy_missile_passes()
 	var depth_bases=[]
@@ -3063,8 +3112,9 @@ func draw_game() -> void:
 			for foundation in Content.tower_foundation(str(sim.map.theme), t.cell, sim.clock_ms-int(t.get("foundation_ms", 0))):
 				sprite(foundation.name, "Building", position, foundation.frame, "", Color(1, 1, 1, foundation.alpha))
 			extra_sprite(set_name, "pad1", position)
-			sprite(set_name, presentation.state, position, presentation.frame)
-			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
+			var animation=owned_animation(t,"body",set_name,presentation.state) if bool(Content.animations[set_name].states.get(presentation.state,{}).get("alpha_between_frame",false)) else {}
+			sprite(set_name,presentation.state,position,presentation.frame,"",Color.WHITE,0,Vector2.ONE,animation)
+			if int(t.type)==5 and t.get("animation","")=="Open":sprite("towers/nuke_lights","Blinking",position,0,"",Color.WHITE,0,Vector2.ONE,owned_animation(t,"nuke-lights","towers/nuke_lights","Blinking"))
 		elif object.has("mine"):
 			draw_mine_object(object.mine,object.preview)
 		else:

@@ -79,6 +79,15 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.initial_delay=app.result_initial_delay
 		record.result_clock=app.result_clock.duplicate(true)
 		record.limit="Forced8XP/3sp renderer sequence, original unscaled room delay preserved. No earned rewards, original RNG or device-pixel equivalence."
+	if name.begins_with("animator-"):
+		record.animators=[]
+		var owners=app.sim.mines+app.sim.towers
+		for portal in app.battle_portal_objects():owners.append(portal.gate)
+		for owner in owners:
+			for key in owner.get("render_animators",{}):
+				var state=owner.render_animators[key]
+				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
+		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
 	if name.begins_with("creep-status"):
 		record.status=app.sim.enemies.map(func(e):return {"id":e.id,"state":e.state,"light":e.draw_light,"freeze_remaining":app.sim.freeze_until-app.sim.clock_ms,"slow_pending":e.slow_pending,"coefficient":app.CreepStatus.coefficient(e.draw_light),"active":app.CreepStatus.active(e.state,app.sim.freeze_until-app.sim.clock_ms,e.slow_pending),"layers":app.CreepStatus.layers(e.visual_layers).size()})
 		record.limit="Supplied status states and original direct-frame screen pass. Full lifecycle/additive hit/GPU equivalence remain open."
@@ -965,6 +974,54 @@ func run() -> void:
 	damaged_air.pos=damaged.pos;damaged_air.visual_pos=damaged_air.pos;damaged_air.max_hp=100;damaged_air.hp=50
 	check(app.creep_health_layout(damaged_air).fill.size==Vector2(16,16),"aircraft uses same authored health crop")
 	await snapshot("creep-health-air-050")
+	var retained_animation_delta=app.animation_delta_ms
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	app.sim.enemies.clear();app.animation_delta_ms=0;app.animation_epoch+=1
+	var animated_mine={"pos":app.sim.center(7,4),"cell":Vector2i(7,4),"ready":0,"born_ms":0,"static":false}
+	app.sim.mines.append(animated_mine)
+	await snapshot("animator-mine-000")
+	var mine_initial=get_viewport().get_texture().get_image()
+	for animator_phase in [25,50,75,100]:
+		app.animation_epoch+=1;app.animation_delta_ms=50
+		await snapshot("animator-mine-%03d"%animator_phase)
+		check(animated_mine.render_animators.lights.phase==animator_phase/100.0,"native mine retains exact quarter-frame source phase")
+		if animator_phase==25:check(mine_initial.get_data()==get_viewport().get_texture().get_image().get_data(),"original overlapping-frame curve retains opaque first frame through quarter phase")
+		if animator_phase==75:check(mine_initial.get_data()!=get_viewport().get_texture().get_image().get_data(),"native mine light fades during source second half of frame")
+	app.animation_epoch+=1;app.animation_delta_ms=1700
+	await snapshot("animator-mine-loop")
+	check(animated_mine.render_animators.lights.phase==0,"native looping mine discards overflow rather than carrying a fractional remainder")
+	app.sim.mines.clear()
+	app.sim.abilities.m_portal=5
+	check(app.sim.use_ability("m_portal",app.sim.center(7,4))=="Choose the portal exit.","native animator gallery places the real portal entrance")
+	var animated_portal=app.sim.portals[0].presentation
+	app.animation_epoch+=1;app.animation_delta_ms=250
+	await snapshot("animator-portal-stopped")
+	check(animated_portal.gates[0].render_animators.portal.stopped and animated_portal.gates[0].render_animators.portal.phase==0,"native pending portal animator stays stopped")
+	check(app.sim.use_ability("m_portal",app.sim.center(9,4)).is_empty(),"native animator gallery connects the real portal exit")
+	app.sim.advance_frame(250)
+	app.animation_epoch+=1;app.animation_delta_ms=250
+	await snapshot("animator-portal-025")
+	check(animated_portal.gates.all(func(g):return g.render_animators.portal.phase==.25 and not g.render_animators.portal.stopped),"both native connected portal animators resume after original growth-stage Play")
+	app.sim.advance_frame(5000)
+	app.animation_epoch+=1;app.animation_delta_ms=5000
+	await snapshot("animator-portal-loop")
+	check(animated_portal.gates.all(func(g):return g.render_animators.portal.phase==0),"both native portal clocks discard loop overflow")
+	app.sim.portals.clear()
+	check(app.sim.build(Vector2i(7,4),1).is_empty(),"synthetic animator gallery starts from a real legal tower record")
+	var animated_nuke=app.sim.towers[0]
+	animated_nuke.type=5;animated_nuke.level=1;animated_nuke.def=app.sim.tower_data(5,1);animated_nuke.depth_filename=animated_nuke.def.filename;animated_nuke.born_ms=-2000;animated_nuke.foundation_ms=-2000;animated_nuke.animation="Open";animated_nuke.animation_ms=app.sim.clock_ms
+	app.animation_epoch+=1;app.animation_delta_ms=0
+	await snapshot("animator-nuke-000")
+	var nuke_initial=get_viewport().get_texture().get_image()
+	app.animation_epoch+=1;app.animation_delta_ms=31.25
+	await snapshot("animator-nuke-025")
+	check(animated_nuke.render_animators["nuke-lights"].phase==.25,"native nuke lights retain authored8FPS fractional phase")
+	check(nuke_initial.get_data()==get_viewport().get_texture().get_image().get_data(),"native nuke lights retain their opaque first frame through quarter phase")
+	app.animation_epoch+=1;app.animation_delta_ms=62.5
+	await snapshot("animator-nuke-075")
+	check(animated_nuke.render_animators["nuke-lights"].phase==.75,"native nuke lights reach source three-quarter phase")
+	check(nuke_initial.get_data()!=get_viewport().get_texture().get_image().get_data(),"native nuke light fades during original second half of frame")
+	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")

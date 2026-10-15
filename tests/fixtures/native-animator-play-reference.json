@@ -1,0 +1,919 @@
+{
+  "method": "Full original Animator constructor and PlayAnimation on supplied groups.\nName matching is an exact-string stub; resource/group records and zeroed\nstorage are supplied. No original Init/loader/owner/GPU executes.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "A",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "B",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "A",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "B",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "B",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 0,
+        "alpha_now": 0,
+        "alpha_from": 1.0,
+        "alpha_to": 0.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 0,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 0,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 0,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 0,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 0.0,
+        "frame": 0,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": false,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": false
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": false,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    },
+    {
+      "input": {
+        "current": "A",
+        "request": "missing",
+        "phase": 1.75,
+        "reset": true,
+        "stopped": true
+      },
+      "output": {
+        "name": "A",
+        "phase": 1.75,
+        "frame": 1,
+        "stopped": true,
+        "alpha_start": 33,
+        "alpha_now": 44,
+        "alpha_from": 0.0,
+        "alpha_to": 1.0
+      }
+    }
+  ],
+  "original_unchanged": true
+}

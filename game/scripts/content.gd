@@ -200,6 +200,7 @@ func frame_reference(set_name: String, state_name: String, index: int = 0, varia
 	var fh = int(resource.get("frame_height", texture.get_height()))
 	var rect: Rect2i
 	var offset = Vector2(float(state.get("offset_x", 0)), float(state.get("offset_y", 0)))
+	var native_size=Vector2(fw,fh)
 	var image_data: Image
 	if not added.is_empty():
 		var f = added[posmod(index, added.size())]
@@ -218,6 +219,8 @@ func frame_reference(set_name: String, state_name: String, index: int = 0, varia
 		image_data = source_image(path).get_region(rect)
 		if rotated: image_data.rotate_90(COUNTERCLOCKWISE)
 		offset = Vector2(float(f.get("offset_x", 0)), float(f.get("offset_y", 0)))
+		if int(f.get("native_added",0))==1:offset+=Vector2(float(state.get("offset_x",0)),float(state.get("offset_y",0)))
+		native_size=Vector2(w,h)
 		# RenderFrame0x10f1c4 ORs the animation's flip with the frame flip.
 		if int(f.get("fliph", 0)) or int(state.get("fliph", 0)): image_data.flip_x()
 		if int(f.get("flipv", 0)): image_data.flip_y()
@@ -227,7 +230,8 @@ func frame_reference(set_name: String, state_name: String, index: int = 0, varia
 		rect = Rect2i((n % columns) * fw, int(n / columns) * fh, fw, fh)
 		image_data = source_image(path).get_region(rect)
 		if int(state.get("fliph", 0)): image_data.flip_x()
-	var value = {"texture": ImageTexture.create_from_image(image_data), "offset": offset,
+	offset=preload("res://scripts/animator_view.gd").offset(Vector2.ZERO,offset,native_size)
+	var value = {"texture": ImageTexture.create_from_image(image_data), "offset": offset,"native_key":Vector4(rect.position.x,rect.position.y,offset.x,offset.y),"blend_flags":(1 if bool(state.get("alpha_between_frame",false)) else 0)|(2 if bool(state.get("alpha_anim",false)) else 0),
 		"speed": float(state.get("speed", 1)), "canvas_size": Vector2(fw, fh)}
 	frame_cache[cache_key] = value
 	return value

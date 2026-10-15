@@ -354,7 +354,8 @@ def resolve_frames(anim, state, resources):
     LoadAnimations 0x11a530 appends stacks before individual added frames.
     AddFrameStack 0x10e8d0 wraps before a frame whose right edge reaches
     the texture width. Stack offsets inherit the animation; explicit added
-    frames have their own offsets. Do not add both offsets at rendering time.
+    frames add their own offsets to the animation offsets in AddFrame.
+    AddFrameStack offsets are already absolute relative to the animator.
     """
     result = []
     resource_id = str(int(state.get('res_id', 1)))
@@ -383,7 +384,7 @@ def resolve_frames(anim, state, resources):
                            'offset_y': stack.get('offset_y', state.get('offset_y', 0))})
             x += sw
         result.extend(reversed(frames) if stack.get('reverse_frames', 0) else frames)
-    result.extend(flat(f) for f in anim.findall('add_frames/f'))
+    result.extend({**flat(f), "native_added": 1} for f in anim.findall('add_frames/f'))
     return result
 
 

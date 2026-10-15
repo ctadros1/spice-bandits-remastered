@@ -1,0 +1,9337 @@
+{
+  "method": "Full original Animator.Render with supplied two-frame metadata.\nAnimator.Update and final RenderFrame/GPU are recording stubs. No loader,\nwhole actor/room clock or complete game executes.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.10499999672174454,
+            0.10499999672174454,
+            0.10499999672174454,
+            0.3499999940395355
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": false,
+      "calls": [
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.3,
+            0.3,
+            0.3,
+            1
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "same",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "offset",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 0.35,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.1,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224,
+            0.20000000298023224
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.25,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.5,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.75,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 0.999,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457,
+            0.001999974250793457
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.25,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.75,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 1.999,
+      "alpha": 1,
+      "geometry": "atlas_x",
+      "interpolation": true,
+      "calls": [
+        {
+          "method": "blend",
+          "src": 1,
+          "dst": 771
+        },
+        {
+          "method": "color",
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69888,
+          "rgba": [
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008,
+            0.002000093460083008
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "method": "frame",
+          "frame": 69632,
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "method": "color",
+          "rgba": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

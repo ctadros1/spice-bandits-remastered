@@ -29,9 +29,13 @@ func run() -> void:
 		for g in pair.gates:g.active=settings.get("active",true)
 		if settings.get("connect",true):Portal.connect_gates(pair,settings.get("active",true))
 		same(pair,c.connected,"full original connection")
+		var played=[false,false]
 		for frame in c.frames:
 			Portal.advance(pair,frame.dt);frames+=1
 			same(pair,frame.output,"full original float32 update "+str(frames))
+			for index in range(2):
+				played[index]=played[index] or frame.output.plays.any(func(call):return int(call.animator)==(0x3000 if index==0 else 0x4000))
+				check(pair.gates[index].animation_played==played[index],"original stopped portal animator resumes only on a growth-stage PlayAnimation")
 	var content=root.get_node("Content");var profile=root.get_node("Profile").fresh();profile.abilities.m_portal=5
 	var mission=content.mission("8");var sim=Sim.new();sim.setup(content.catalog,content.maps[mission.map],mission,profile,114,content.animations);sim.spawn_hold=true
 	var start=sim.center(8,9);var finish=sim.center(12,9)

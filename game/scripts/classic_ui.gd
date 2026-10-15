@@ -152,7 +152,7 @@ static func draw_tower_info(app) -> void:
 	region(app,Rect2(0,376,377,110),Rect2(0,height-110,377,110),white)
 	var center=Vector2(49,height-70)
 	app.extra_sprite("towers/"+str(definition.filename),"pad1",center,"",Vector2.ONE,white)
-	app.sprite("towers/"+str(definition.filename),"Idle",center,0,"",white)
+	app.draw_sprite_frame(Content.frame("towers/"+str(definition.filename),"Idle",0),center,white,0,Vector2.ONE)
 	info_text(app,Vector2(98,height-98),str(definition.name),20,white)
 	info_text(app,Vector2(98,height-78),str(definition.get("description","")),13,white)
 	var form=int(definition.type)

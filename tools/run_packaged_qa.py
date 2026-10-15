@@ -148,7 +148,7 @@ def main():
     record['runtime_isolation_verified'] = bool(contexts) and all(c['test_session'] and c['verification_context'] and c['profile_path'] != 'user://profile.json' for c in record['runtime_qa_contexts'])
     record['signature_verified'] = subprocess.run(['codesign', '--verify', '--deep', '--strict', str(APP)], capture_output=True).returncode == 0
     fresh = False
-    if directory and (directory / 'manifest.json').exists():
+    if directory and (directory / 'manifest.json').exists() and (directory / 'manifest.json').stat().st_mtime_ns >= started_ns:
         manifest_path = directory / 'manifest.json'
         fresh = manifest_path.stat().st_mtime_ns >= started_ns
         manifest = json.loads(manifest_path.read_text())
@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (162 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (174 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -207,6 +207,13 @@ def main():
             required.update({'air-depth-overlap','air-depth-reversed-input','air-depth-lifted-ground'})
             required.update({'selection-range-ground','selection-range-fading'})
             required.update({'creep-depth-overlap','creep-depth-reversed-input'})
+            animator_expected = {'animator-mine-000': 0, 'animator-mine-025': .25, 'animator-mine-050': .5, 'animator-mine-075': .75, 'animator-mine-100': 1, 'animator-mine-loop': 0, 'animator-portal-stopped': 0, 'animator-portal-025': .25, 'animator-portal-loop': 0, 'animator-nuke-000': 0, 'animator-nuke-025': .25, 'animator-nuke-075': .75}
+            required.update(animator_expected)
+            animator_poses = {c['name']: c for c in manifest['captures'] if c['name'] in animator_expected}
+            for pose, phase in animator_expected.items():
+                states = animator_poses.get(pose, {}).get('animators', [])
+                relevant = [a for a in states if a['key'] == ('nuke-lights' if 'nuke' in pose else 'portal' if 'portal' in pose else 'lights')]
+                fresh = fresh and len(relevant) == (2 if pose in ('animator-portal-025', 'animator-portal-loop') else 1) and all(a['phase'] == phase and a['stopped'] == (pose == 'animator-portal-stopped') for a in relevant)
             status_expected = {'creep-status-background', 'creep-status-tower-only', 'creep-status-blend-plate', 'creep-status-normal-030', 'creep-status-freeze-030', 'creep-status-freeze-100', 'creep-status-slow-030', 'creep-status-zero-primary', 'creep-status-secondary', 'creep-status-tower-cover'}
             required.update(status_expected)
             status_poses = {c['name']: c for c in manifest['captures'] if c['name'] in status_expected}
@@ -304,6 +311,9 @@ def main():
             required.update({'desert-modes-completed','mode-pulse-071','hud-wide-wallet','hud-money-flash-red','hud-money-flash-expired'})
             required.update({'result-spice-entering','result-spice-growing'})
             fresh = fresh and required.issubset({c['name'] for c in manifest['captures']})
+    elif directory and (directory / 'manifest.json').exists():
+        record['captures'] = 0
+        record['ignored_stale_manifest'] = True
     elif not directory:
         capture = BUILD / (name + '.png')
         fresh = capture.exists() and capture.stat().st_mtime_ns >= started_ns
