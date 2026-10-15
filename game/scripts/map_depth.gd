@@ -32,3 +32,9 @@ static func base(center_y:float,resource:Dictionary) -> float:
 	var height=base_height(resource)
 	# SetInitPosition0x75fe0 leaves the visible animator at the cell center.
 	return key(top(center_y,height,0),height)
+
+static func creep_height(resource:Dictionary) -> float:
+	# CCreep ctor plays RunDownRight before retaining its untrimmed height.
+	var state=resource.get("states",{}).get("RunDownRight",{})
+	var source=resource.get("resources",{}).get(str(int(state.get("res_id",1))),{})
+	return f32(int(resource.params.depth_pos)) if resource.get("params",{}).has("depth_pos") else f32(float(source.get("frame_height",0)))

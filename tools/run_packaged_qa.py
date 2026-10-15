@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (96 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (98 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.menus:
             posed=[c for c in manifest['captures'] if c['name'].startswith('main-menu-')]
             record['main_menu_distinct_pose_images']=len({c['sha256'] for c in posed})
@@ -183,6 +183,7 @@ def main():
             required.update({'base-depth-overlap','base-depth-reversed-input','base-depth-damaged'})
             required.update({'air-depth-overlap','air-depth-reversed-input','air-depth-lifted-ground'})
             required.update({'selection-range-ground','selection-range-fading'})
+            required.update({'creep-depth-overlap','creep-depth-reversed-input'})
             required.update({'mine-preview','mine-arming-000','mine-arming-250','mine-armed','portal-preview-entry','portal-preview-exit'})
             required.update({'world-scenery-000','world-scenery-moving'})
             required.update({'world-windmills-000','world-windmills-025'})

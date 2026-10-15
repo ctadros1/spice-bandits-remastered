@@ -102,6 +102,7 @@ void integrate_particles(Array particles,const ParticleCoefficients &coefficient
 
 }
 void SpiceNative::_bind_methods() {
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_depth","center_y","height"),&SpiceNative::creep_depth);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("bolt_ribbon","path","pass_id","opacity"),&SpiceNative::bolt_ribbon);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("in_range","a","b","radius","hex_height"),&SpiceNative::in_range);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("range_candidates","entries","position","radius","hex_height","aim"),&SpiceNative::range_candidates);
@@ -288,6 +289,13 @@ Dictionary SpiceNative::movement_tick(Vector2 start,Vector2 target,Vector2 futur
 }
 void SpiceNative::update_particle(Dictionary p,Dictionary d,double dt,double age) {
     ParticleCoefficients(d).integrate(p,dt,f32(age));
+}
+double SpiceNative::creep_depth(double center_y,double height) {
+    // CCreep UpdatePosition0x7d108 then CMap comparator0x103650.
+    // Current map positions/heights stay within the original signed-int range.
+    const float h=f32(height);
+    const int32_t top=static_cast<int32_t>(f32(double(f32(center_y))+f32(double(h)*-0.5)));
+    return f32(double(f32(top))+h);
 }
 void SpiceNative::update_particles(Array particles,Dictionary d,double dt,double clock_ms) {
     integrate_particles(particles,ParticleCoefficients(d),dt,clock_ms);

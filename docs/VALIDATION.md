@@ -4,17 +4,23 @@ October 13, 2026. Local reconstruction in progress; offline fidelity and full re
 
 ## Latest presentation package, October15
 
-PCK `9e6279139ced7ef2a1b4473a21b105f87ec92493a3224da918e333ceb9a73c8b`, executable `95e7a27ece6db7e254e9fac42e73ea64da18432835f95fbffdc0ab4f1ec49327`, native helper `cdd19e817522f4fc68bc743f202d3bf51503bf1747b3da6d9cd5cb431b6ad259`. Nine native r98 suites pass; live4x performance remains failed. Protected normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Capture/check counts below include failed performance captures.
+PCK `7aebaa83a0e746babe1be8ce6ea0cbe4d39871f9ab577f26f207c2c0f7e329d9`, executable `7a74ca949304474a72ca4117051d2f753d08736f860bd12d3cc71a25d1f24119`, native helper `ba89a47c6edabd27a7c2b5449979fc7dabd2c5079e47c0f2f1c9d2b4f0c8eece`. Nine native r99 suites pass; live4x performance remains failed. Protected normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Capture/check counts below include failed performance captures.
 
 | Suite | Executed checks / captures |
 | --- | --- |
-| Presentation | 318 checks / 96 PNGs |
+| Presentation | 323 checks / 98 PNGs |
 | Tutorial | 88 checks / 20 PNGs; fixture battle16 kills,$168,98% health |
 | Menus | 184 checks / 55 PNGs; eleven distinct main-menu poses |
 | Audio | 50 checks / 23 WAVs |
 | Performance | Failed4x median gate; four captures retained, live advancement/input isolation pass |
 | Campaign | 148 PNGs |
 | Projectiles / turns / towers / Desert | 4 / 5 / 1 / 1 PNGs |
+
+
+
+R99 restores ground-creep depth from the initial RunDownRight untrimmed height, optional integer depth_pos and original float32 drawn-position truncation/map key.35 original constructor suffix branches,1,134 full supplied-position updates and126 attack-copy cases support3,880 source checks across all29 populated resources. A native helper computes the moving key while Main caches only immutable heights. Two Marine/tank overlap poses were inspected and retain exact battle pixels when enemy input reverses. Artwork positions/scales are unchanged; the older tower-depth fixture intentionally moves its Marine center from+30 to+11px to keep its original between-towers test with the now-retained38px height. This is a fixture change, not an unchanged-pixel comparison.
+
+Nine r99 native suites pass: presentation323/98 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live4x performance still fails at42.759ms median/57.748ms p95 against33.34;1x26.969/32.292 and2x30.089/40.297 pass. All live/input-isolation guards pass with zero stalled frames; three frozen mesh/direct comparisons retain exact RGBA. Normal/retained-campaign saves, package resources, strict signature, isolation and cleanup pass.336 counted PNGs include failed performance captures. Changing live workloads/shared-host measurements do not establish an inter-build speedup. Evidence: builds/creep-depth-r99-native-suites.json, builds/creep-depth-remaining-r99-native-suites.json and builds/creep-depth-r99-evidence/.
 
 
 

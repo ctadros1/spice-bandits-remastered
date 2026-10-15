@@ -56,6 +56,10 @@ func snapshot(name:String,settle_portrait:bool=true) -> void:
 		record.panel_alpha=app.tower_panel_alpha()
 		record.range_draws=pose.get("draws",[]).map(func(d):return {"filled":d.filled,"axes":[d.axes.x,d.axes.y],"color":[d.color.r,d.color.g,d.color.b,d.color.a]})
 		record.limit="Synthetic selected range after ground/before air bodies. Original routing and oval submissions execute with explicit GL stubs; Godot raster, supply bonus and full panel clock/owner behavior remain open."
+	if name.begins_with("creep-depth"):
+		record.draw_order=app.battle_objects().filter(func(o):return o.has("tower") or o.has("enemy")).map(func(o):return {"kind":"tower" if o.has("tower") else "enemy","id":o.get("tower",o.get("enemy",{})).id,"depth":o.y})
+		record.enemies=app.sim.enemies.map(func(e):return {"id":e.id,"type":e.type,"position":[e.pos.x,e.pos.y],"drawn":[e.visual_pos.x,e.visual_pos.y],"depth":app.creep_depth(e)})
+		record.limit="Synthetic Marine/tank overlap. Original initial animation height and supplied position truncation/key are bounded ARM comparisons; full birth/corner/jitter/owner lifetime and original pixels remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -570,7 +574,9 @@ func run() -> void:
 	short_tower.depth_filename=short_tower.def.filename
 	short_tower.pos=tall.pos+Vector2(12,0);app.sim.towers.append(short_tower)
 	var crossing=app.sim.spawn_enemy(1,0,"",903,false)
-	crossing.pos=tall.pos+Vector2(6,30);crossing.visual_pos=crossing.pos
+	# Marine's38px source height adds19px to its positive integer center.
+	# Keep this tower-depth fixture between the25px and100px tower forms.
+	crossing.pos=tall.pos+Vector2(6,11);crossing.visual_pos=crossing.pos
 	var ordered=app.battle_objects().filter(func(o):return o.has("tower") or o.has("enemy"))
 	check(ordered.size()==3 and ordered[0].get("tower",{}).get("id")==902 and ordered[1].has("enemy") and ordered[2].get("tower",{}).get("id")==tall.id,"native render list uses authored25px and100px tower depths around crossing enemy")
 	await snapshot("tower-depth-overlap")
@@ -620,6 +626,21 @@ func run() -> void:
 	app.tower_panel_close_at=app.elapsed_ui;app.elapsed_ui+=0.2;app.refresh_controls()
 	check(absf(app.selected_range_pose().draws[0].color.a-0.125)<0.000001,"selected range fill follows half-opacity tower panel")
 	await snapshot("selection-range-fading")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	check(app.sim.build(Vector2i(7,4),1).is_empty(),"creep-depth fixture builds on a legal Training hex")
+	var depth_tower=app.sim.towers[0]
+	var marine=app.sim.spawn_enemy(1,0,"",910,false)
+	marine.pos=depth_tower.pos+Vector2(-5,0);marine.visual_pos=marine.pos
+	var tank=app.sim.spawn_enemy(5,0,"",911,false)
+	tank.pos=depth_tower.pos+Vector2(12,0);tank.visual_pos=tank.pos
+	var creep_order=app.battle_objects().filter(func(o):return o.has("tower") or o.has("enemy"))
+	check(creep_order.size()==3 and creep_order[0].get("enemy",{}).get("id")==910 and creep_order[1].has("tower") and creep_order[2].get("enemy",{}).get("id")==911,"native38px Marine and100px tank depths straddle the original Minigun at the same Y")
+	await snapshot("creep-depth-overlap")
+	var creep_before=get_viewport().get_texture().get_image()
+	app.sim.enemies.reverse()
+	await snapshot("creep-depth-reversed-input")
+	var creep_after=get_viewport().get_texture().get_image()
+	check(creep_before.get_region(depth_rect).get_data()==creep_after.get_region(depth_rect).get_data(),"distinct original creep depths retain exact battle pixels when enemy input reverses")
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")

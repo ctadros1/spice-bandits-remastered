@@ -23,3 +23,35 @@ Kamikaze state changes after progress exceeds0.5 on the base link (0x7ca50 onwar
 UpdateShortestPath0x7ace0 now retains a moving segment and searches from its next endpoint. If that endpoint becomes blocked before progress0.7 (0.5 for a horizontal shortcut), it swaps current/next and uses `1−progress` to reverse without teleporting. Past that threshold, or when the current cell is already unwalkable, it plans from the next cell with the start-walkable exception. Focused reconstruction tests cover continuing and reversal; escort-source cache reuse and complete invalidation-frame parity remain open.
 
 CCreepShadow::Render0xfc7b8 uses a black tint with alpha `1−animator.scale_x*0.5`, an animator-sized quad, authored shadow_scale_factor, linear400ms growth and a0.8 height factor for static shadows. Static shadows rotate with native direction angle minus90 degrees plus physical rotation; animated creep10 shadows retain the current animation/frame without that rotation. These rules replace the former unrotated source-texture-size shadows. Packaged five-pose rendering passes; original-device shadow pixels and terrain-layer ordering remain unverified.
+
+## R99 ground depth
+
+The preserved decrypted1.14 executable, SHA-256`e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`, is the behavioral reference. These are bounded original compiled functions with supplied records and explicit stubs, not authentic source or a whole original-game execution.
+
+### Constructor and position fields
+
+CCreep constructor0x78374 plays RunDownRight on its main/blending animators before retaining the initial untrimmed frame height at CMapObject+0x14. Suffix0x7878c..0x78804 reads the current animation pointer at+0x74 and its height at+0x48; an integer depth_pos overrides that value. A missing resource branches to0x7887c. Texture crop size, per-instance growth, current facing and drawn scale do not replace the construction height in these instructions.
+
+Full UpdatePosition0x7d108 writes the main/blending drawn positions at+0x4c/+0x50 and+0xc0/+0xc4, including supplied corner/jitter coordinates. It then writes int(float32(drawnY+float32(height*−0.5))) at+0xc, truncating toward zero. CMap comparator0x103650 strictly compares float32(float32(int_top)+height). Attack-copy suffix0x7cc52..0x7cca2 assigns logical positions to the animators before the same depth calculation. Authored aim offsets affect+0x190/+0x194 independently of depth.
+
+The original constructor's native resource class governs map/air registration. Temporary levitation does not move a ground body into the separate aircraft pass. Complete ProcessFly/jitter/birth/update chronology remains open; this change uses the reconstruction's already-exposed drawn position and retains its existing lift/animation/scale behavior.
+
+### Original/source checks
+
+tools/native_creep_depth_reference.py executes35 constructor suffix branches,1,134 full supplied-position updates and126 attack-copy cases. Inputs include absent animation/resource, integer overrides, negative/fractional/large positions, normal/corner routes, supplied jitter and independent aim offsets. Narrow animator name/direction callbacks are recording stubs inherited from the earlier position probe. Constructor lifetime, global RNG, real animation loading, GPU and services are not executed.
+
+The initial prototype omitted noncorner start/target endpoints, so its supplied logical point alone correctly produced the initialized zero endpoint position. That incomplete prototype/log remain retained; the committed fixture supplies explicit endpoints. No game implementation was changed to accommodate those incomplete records.
+
+tools/creep_depth_ui_verify.gd passes3,880 comparisons: source declaration/position/top/key fields, all29 populated resource declarations, actual Main ordering, fractional/moving depth, resource replacement and levitation independence. Every populated resource contains RunDownRight. Main caches only its immutable source height by filename, clears the cache on a new mission and computes the key from the current drawn Y. SpiceNative.creep_depth avoids allocating float32 script arrays per moving enemy; it preserves separate float32 operations and signed truncation within the current maps' valid integer domain. Fused/fast floating arithmetic remains disabled.
+
+The older tower-depth pose intentionally moves its Marine center from30px to11px below the tower center: the retained38px height then contributes19px, preserving that pose's requested30px intermediate depth. Its changed pixels are not an unchanged-renderer regression comparison. New Marine/tank poses use the same Y and different38/100px heights around a Minigun, then reverse enemy input. Both were inspected and the full battle rectangle below the HUD remains exactly equal in decoded RGB. Manifests record positions, depth and body submission IDs.
+
+### Current package and remaining work
+
+PCK `7aebaa83a0e746babe1be8ce6ea0cbe4d39871f9ab577f26f207c2c0f7e329d9`, executable `7a74ca949304474a72ca4117051d2f753d08736f860bd12d3cc71a25d1f24119`, native helper `ba89a47c6edabd27a7c2b5449979fc7dabd2c5079e47c0f2f1c9d2b4f0c8eece`.
+
+R99 restores ground-creep depth from the initial RunDownRight untrimmed height, optional integer depth_pos and original float32 drawn-position truncation/map key.35 original constructor suffix branches,1,134 full supplied-position updates and126 attack-copy cases support3,880 source checks across all29 populated resources. A native helper computes the moving key while Main caches only immutable heights. Two Marine/tank overlap poses were inspected and retain exact battle pixels when enemy input reverses. Artwork positions/scales are unchanged; the older tower-depth fixture intentionally moves its Marine center from+30 to+11px to keep its original between-towers test with the now-retained38px height. This is a fixture change, not an unchanged-pixel comparison.
+
+Nine r99 native suites pass: presentation323/98 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live4x performance still fails at42.759ms median/57.748ms p95 against33.34;1x26.969/32.292 and2x30.089/40.297 pass. All live/input-isolation guards pass with zero stalled frames; three frozen mesh/direct comparisons retain exact RGBA. Normal/retained-campaign saves, package resources, strict signature, isolation and cleanup pass.336 counted PNGs include failed performance captures. Changing live workloads/shared-host measurements do not establish an inter-build speedup. Evidence: builds/creep-depth-r99-native-suites.json, builds/creep-depth-remaining-r99-native-suites.json and builds/creep-depth-r99-evidence/.
+
+Mutable ground registration/ties, complete initial birth/render chronology, global jitter/RNG, full animator/shadow/owner behavior, old GPU sampling and original-device pixels remain open. This does not establish complete gameplay, animation, sound or offline fidelity.

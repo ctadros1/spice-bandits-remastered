@@ -26,6 +26,7 @@ const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
 var tower_depth_cache:Dictionary={}
 var base_depth_cache:Dictionary={}
+var creep_depth_cache:Dictionary={}
 const TUTORIAL_CELLS = [Vector2i(7, 4), Vector2i(8, 6), Vector2i(6, 7), Vector2i(11, 3)]
 var main_menu_view=MainMenuView.new()
 var menu_bubbles=MenuBubbleView.new()
@@ -1468,6 +1469,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 		return
 	sim = Simulation.new()
 	base_depth_cache.clear()
+	creep_depth_cache.clear()
 	sim.setup(Content.catalog, Content.maps[c.map], c, Profile.data, 114, Content.animations)
 	sim.live_updates=not test_session or "--qa-performance" in OS.get_cmdline_user_args() or "--qa-live-runtime" in OS.get_cmdline_user_args()
 	screen = "game"
@@ -2912,6 +2914,13 @@ func uses_air_pass(enemy:Dictionary) -> bool:
 	# bodies are routed by CCreepManager::RenderAllAirCreeps0xfbe8c.
 	return bool(enemy.get("native_air",enemy.get("def",{}).get("class","ground")=="air"))
 
+func creep_depth(enemy:Dictionary) -> float:
+	var filename=str(enemy.get("def",{}).get("filename",""))
+	if not creep_depth_cache.has(filename):
+		creep_depth_cache[filename]=MapDepth.creep_height(Content.animations.get("creeps/"+filename,{}))
+	var position:Vector2=enemy.get("visual_pos",enemy.pos)
+	return SpiceNative.creep_depth(position.y,creep_depth_cache[filename])
+
 func battle_air_objects() -> Array:
 	return sim.enemies.filter(func(e):return uses_air_pass(e))
 
@@ -2932,9 +2941,9 @@ func battle_objects() -> Array:
 	for t in sim.towers:
 		objects.append({"y":tower_depth(t),"tower":t})
 	for e in sim.enemies:
-		if not uses_air_pass(e):objects.append({"y":e.get("visual_pos",e.pos).y,"enemy":e})
-	# Original whole-map registration, equal-depth introsort order, creep
-	# depth and other owner passes remain separately unresolved.
+		if not uses_air_pass(e):objects.append({"y":creep_depth(e),"enemy":e})
+	# Original whole-map registration, equal-depth introsort order, global
+	# jitter and complete animator/owner lifetimes remain unresolved.
 	objects.sort_custom(func(a,b):return a.y<b.y)
 	return objects
 
