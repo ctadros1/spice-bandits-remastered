@@ -1,6 +1,6 @@
 # Spice Bandits macOS Reconstruction Plan
 
-Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; nine current native suites pass while live4x stress fails its frame-rate gate; these checks do not establish original visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
+Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; nine current native suites pass while live2x/4x stress fails its frame-rate gate; these checks do not establish original visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
 
 ## Objective and completion boundaries
 
@@ -24,6 +24,13 @@ These are completion requirements, not optional polish. Compare each against den
 - [ ] Verify matched screen states and physical drag-and-drop in the newly packaged app; existing functional audits do not close these requirements.
 
 ## Current implementation progress
+
+R94 replaces per-frame particle ArrayMesh allocation with direct canvas triangles. It retains texture/triangle order, coordinates, blending and the existing mesh upload's RGBA8 clamp/truncation; out-of-bounds rectangle fallbacks keep their raw tint.100 source-engine checks/40 PNGs cover20 exact frozen RGBA pairs, including real native particle batches, alpha boundaries, HDR clamps, rotation, overlap and clipping. All three full-frame mesh/direct comparisons in the packaged stress fixture are exact RGBA. These compare reconstructed renderers, not original-device pixels.
+
+Nine r94 native suites pass: presentation305/91 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live performance remains failed at2x37.830ms median/57.438ms p95 and4x52.133/96.734;1x31.637/41.472 passes the existing median gate. All three live/input-isolation guards pass with zero stalled frames. Normal/retained-campaign saves, package resources, signature and process cleanup remain protected. This is not an all-ten pass. See builds/particle-direct-r94-native-suites.json and builds/particle-direct-remaining-r94-native-suites.json.
+
+A separate fixed512-particle/64-group A/B/B/A comparison in the source engine retains exact RGBA in all four phases and60 samples per layer/phase. Straight-layer draw CPU medians are350–385µs for mesh versus139–142µs direct; premultiplied321–376 versus123–125µs. Geometry preparation is measured separately. Wall time includes scheduling/vsync; this does not establish live FPS or original-device performance. R91–r94 live failures remain retained, and r89's invalidated Paused stress interpretation remains explicit.
+
 
 R91–r93 puts base bodies into the sorted map-object pass using their original Idle-100 height/depth_pos declaration and SetInitPosition float32/truncation. Health bars follow the body pass; art stays centered and retains its proportions.35 bounded original constructor branches and324 full position cases bring depth checks to2,063 across20 bases/54 tower forms. Three native overlap/damage poses were inspected; six cached/uncached battle rectangles retain exact decoded RGB. Static review confirms211 current scenery layers use integer depth sums below1,279; whole-loader execution, original map registration/ties, creep depth, owner/air interleaving and complete base extras remain open.
 

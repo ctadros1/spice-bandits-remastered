@@ -4,7 +4,7 @@ October 13, 2026. Local reconstruction in progress; offline fidelity and full re
 
 ## Latest presentation package, October15
 
-PCK `7f7354d4022242285a4ce1662057e917dab6c4b7a58b494481c0782b46774650`, executable `c65d98f0b101d2e7aeb5adf38109ebedc9bfe21d8f569dffa27a1df19168d368`, native helper `88fa76f1d12cde8b470075be6e80d32543839a31c7b4719207149f08bccac970`. Nine native r93 suites pass; performance remains failed. Normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Logs use the base-depth-cache-r93 label. See the scope and invalidated r89 live-performance claim below.
+PCK `dbf3425472408ad485f283ade125fa4df92a20d4d6ac41b5cb5a0b9060f01564`, executable `57cc2cd4133cfef70dd58ebb879baa39990baf7e7d0f395813a3b4d5fb9deaaf`, native helper `3d9370a01c27c7dd276e67200698f764771034f7ff51394fcde9aeea1686c873`. Nine native r94 suites pass; live2x/4x performance remains failed. Protected normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Capture/check counts below include the failed performance captures.
 
 | Suite | Executed checks / captures |
 | --- | --- |
@@ -12,9 +12,17 @@ PCK `7f7354d4022242285a4ce1662057e917dab6c4b7a58b494481c0782b46774650`, executab
 | Tutorial | 88 checks / 20 PNGs; fixture battle16 kills,$168,98% health |
 | Menus | 184 checks / 55 PNGs; eleven distinct main-menu poses |
 | Audio | 50 checks / 23 WAVs |
-| Performance | Failed4x median gate; four captures retained, live advancement/input isolation pass |
+| Performance | Failed2x/4x median gate; four captures retained, live advancement/input isolation pass |
 | Campaign | 148 PNGs |
 | Projectiles / turns / towers / Desert | 4 / 5 / 1 / 1 PNGs |
+
+
+
+R94 replaces per-frame particle ArrayMesh allocation with direct canvas triangles. It retains texture/triangle order, coordinates, blending and the existing mesh upload's RGBA8 clamp/truncation; out-of-bounds rectangle fallbacks keep their raw tint.100 source-engine checks/40 PNGs cover20 exact frozen RGBA pairs, including real native particle batches, alpha boundaries, HDR clamps, rotation, overlap and clipping. All three full-frame mesh/direct comparisons in the packaged stress fixture are exact RGBA. These compare reconstructed renderers, not original-device pixels.
+
+Nine r94 native suites pass: presentation305/91 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live performance remains failed at2x37.830ms median/57.438ms p95 and4x52.133/96.734;1x31.637/41.472 passes the existing median gate. All three live/input-isolation guards pass with zero stalled frames. Normal/retained-campaign saves, package resources, signature and process cleanup remain protected. This is not an all-ten pass. See builds/particle-direct-r94-native-suites.json and builds/particle-direct-remaining-r94-native-suites.json.
+
+A separate fixed512-particle/64-group A/B/B/A comparison in the source engine retains exact RGBA in all four phases and60 samples per layer/phase. Straight-layer draw CPU medians are350–385µs for mesh versus139–142µs direct; premultiplied321–376 versus123–125µs. Geometry preparation is measured separately. Wall time includes scheduling/vsync; this does not establish live FPS or original-device performance. R91–r94 live failures remain retained, and r89's invalidated Paused stress interpretation remains explicit.
 
 
 R91–r93 puts base bodies into the sorted map-object pass using their original Idle-100 height/depth_pos declaration and SetInitPosition float32/truncation. Health bars follow the body pass; art stays centered and retains its proportions.35 bounded original constructor branches and324 full position cases bring depth checks to2,063 across20 bases/54 tower forms. Three native overlap/damage poses were inspected; six cached/uncached battle rectangles retain exact decoded RGB. Static review confirms211 current scenery layers use integer depth sums below1,279; whole-loader execution, original map registration/ties, creep depth, owner/air interleaving and complete base extras remain open.

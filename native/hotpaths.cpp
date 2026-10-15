@@ -112,7 +112,7 @@ void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_systems","systems","clock_ms","emit_child","emit_batch","random","dt"),&SpiceNative::advance_systems,DEFVAL(Variant()),DEFVAL(0.03));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("emit_batch","system","clock_ms","random"),&SpiceNative::emit_batch);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("compile_particle","definition"),&SpiceNative::compile_particle);
-    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom"),&SpiceNative::particle_batches);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization"),&SpiceNative::particle_batches,DEFVAL(false));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("format_xp","value","compact"),&SpiceNative::format_xp,DEFVAL(true));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("projected_random_vector","latitude_rand","angle_rand"),&SpiceNative::projected_random_vector);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("water_table","seed"),&SpiceNative::water_table);
@@ -392,7 +392,7 @@ void SpiceNative::emit_batch(Dictionary sys,double clock_ms,RandomNumberGenerato
     }
     sys[k.released]=clock_ms;
 }
-Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom) {
+Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization) {
     const Keys &k=keys();Array result;Texture2D *previous=nullptr;Variant current_texture;
     std::vector<Vector2> vertex_data,uv_data;std::vector<Color> color_data;std::vector<int32_t> index_data;
     auto flush=[&]() {
@@ -434,6 +434,13 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
             const Vector2 center=origin+Vector2(p[k.pos])*z;
             if(region.position.x<0 || region.position.y<0 || region.get_end().x>tw || region.get_end().y>th || region.size.x<=0 || region.size.y<=0) {
                 flush();Dictionary fallback;fallback["fallback"]=true;fallback["texture"]=sys[k.texture];fallback["region"]=region;fallback["center"]=center;fallback["shape"]=shape;fallback["rotation"]=raw_rotation;fallback["tint"]=tint;result.append(fallback);previous=nullptr;continue;
+            }
+            if(mesh_color_quantization) {
+                // ArrayMesh upload clamps/truncates to RGBA8. Preserve that
+                // contract for direct canvas triangles, once per particle.
+                // The rect-region fallback above keeps its original raw tint.
+                auto channel=[](float value) {return f32(double(uint8_t(std::clamp(double(value)*255.0,0.0,255.0)))/255.0);};
+                tint=Color(channel(tint.r),channel(tint.g),channel(tint.b),channel(tint.a));
             }
             if(previous!=texture) {
                 flush();current_texture=sys[k.texture];previous=texture;

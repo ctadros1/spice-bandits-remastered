@@ -17,6 +17,7 @@ var serial=0
 var timers: Dictionary={}
 var reference_emission=false
 var reference_rendering=false
+var direct_triangles=true
 var reference_draws=0
 var batch_draws=0
 var screen_space=false
@@ -196,16 +197,20 @@ func draw_layer(layer: Layer, premultiplied: bool) -> void:
 	batch_draws+=1
 	if not is_instance_valid(app) or app.screen!="game":return
 	var zoom=1.0 if screen_space else app.map_scale()
-	var groups=SpiceNative.particle_batches(systems,premultiplied,clock_ms,Vector2.ZERO if screen_space else app.map_origin()-position,zoom)
-	layer.set_meta("particle_meshes",draw_groups(layer,groups,zoom))
+	var groups=SpiceNative.particle_batches(systems,premultiplied,clock_ms,Vector2.ZERO if screen_space else app.map_origin()-position,zoom,direct_triangles)
+	layer.set_meta("particle_meshes",draw_groups(layer,groups,zoom,direct_triangles))
 
-static func draw_groups(layer:CanvasItem,groups:Array,zoom:float) -> Array:
+static func draw_groups(layer:CanvasItem,groups:Array,zoom:float,direct_triangles:bool=false) -> Array:
 	var meshes=[]
 	for group in groups:
 		if group.get("fallback",false):
 			layer.draw_set_transform(group.center,group.rotation,Vector2.ONE*zoom)
 			layer.draw_texture_rect_region(group.texture,Rect2(-group.shape/2,group.shape),group.region,group.tint)
 			layer.draw_set_transform(Vector2.ZERO)
+			continue
+		if direct_triangles:
+			# Caller supplies the mesh-equivalent RGBA8 color conversion.
+			RenderingServer.canvas_item_add_triangle_array(layer.get_canvas_item(),group.indices,group.vertices,group.colors,group.uvs,PackedInt32Array(),PackedFloat32Array(),group.texture.get_rid())
 			continue
 		var arrays=[];arrays.resize(Mesh.ARRAY_MAX)
 		arrays[Mesh.ARRAY_VERTEX]=group.vertices;arrays[Mesh.ARRAY_TEX_UV]=group.uvs;arrays[Mesh.ARRAY_COLOR]=group.colors;arrays[Mesh.ARRAY_INDEX]=group.indices

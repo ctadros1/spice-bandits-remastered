@@ -23,7 +23,7 @@ public:
     static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);
     static void emit_batch(Dictionary system, double clock_ms, RandomNumberGenerator *random);
     static int64_t compile_particle(Dictionary definition);
-    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom);
+    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom, bool mesh_color_quantization = false);
     static String format_xp(double value, bool compact = true);
     static Vector2 projected_random_vector(int64_t latitude_rand, int64_t angle_rand);
     static Dictionary bolt_ribbon(PackedVector2Array path, int64_t pass_id, double opacity);
