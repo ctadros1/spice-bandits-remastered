@@ -3,6 +3,7 @@ extends RefCounted
 var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
+const CreepLight = preload("res://scripts/creep_light_view.gd")
 const Targeting = preload("res://scripts/targeting.gd")
 const STEP_MS = 30
 const ROOT_TYPES = [1, 4, 7, 10, 13, 16]
@@ -746,7 +747,7 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 		"dir": Vector2.RIGHT, "source": source_index, "air": def.get("class", "ground") == "air", "native_air": def.get("class", "ground") == "air",
 		"base": -1, "path": [], "path_at": 1, "attacking": false, "attack_reload_ms": 0, "attack_point": Vector2.ZERO, "slow": 1.0, "slow_until": 0,
 		"float_until": 0, "disco_until": disco_until, "portal_ms": 0, "born_ms": clock_ms, "slow_pending": -1.0,
-		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400}
+		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400,"draw_light":1.0}
 	next_id += 1
 	enemies.append(e)
 	set_enemy_path(e)
@@ -1242,6 +1243,7 @@ func step() -> void:
 				e.hp = 0.0
 				emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
 				continue
+		e.draw_light=CreepLight.from_map(map,e.cell,e.next_cell,CreepView.progress(self,e),float(e.get("draw_light",1)))
 		if not movement_point_allowed(e) and e.disco_until == 0:
 			var b = bases[e.base]
 			if int(e.def.traits.get("shoot_bomb", 0)) == 1:

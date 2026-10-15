@@ -1,6 +1,6 @@
 # Spice Bandits macOS Reconstruction Plan
 
-Current package r106: all ten native suites pass, including364 presentation checks/113 PNGs,73 audio checks/23 WAVs and the unchanged live performance gate. XP emission now follows the original update/render order. The prior audio failure and diagnostic evidence are retained. Offline fidelity remains incomplete.
+Current package r108 passes all ten native suites:381 presentation checks/123 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting and textured enemy health bars are restored within the recovered-code bounds. Offline fidelity remains incomplete.
 
 Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; all ten current native suites pass including the live performance gate; these checks do not establish original visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
 
@@ -26,6 +26,10 @@ These are completion requirements, not optional polish. Compare each against den
 - [ ] Verify matched screen states and physical drag-and-drop in the newly packaged app; existing functional audits do not close these requirements.
 
 ## Current implementation progress
+
+R107 normal ground lighting is supported by28,633 source comparisons:192 original movement-prefix cases,288 full body-render cases and28,049 map cells (2,350 authored light values,25,699 default1). Native ground .3/1 captures differ and aircraft .3/1 battle captures match exact RGBA. All ten suites pass on frozen PCK`eeb7567187d4cf0ace81f6d0f338e20666e3eb51f12c9c608319c4c1b262842e`. Live1×24.182/26.615,2×31.513/42.830,4×31.892/37.305,world6.680/13.785 median/p95ms; the33.34ms median gate remains unchanged, zero stalled frames, six frozen renderer pairs exact.355 counted PNGs plus15 supplemental PNGs; protected saves/package/signature/cleanup pass.45 paired states/90 frozen copies/12 sheets were reviewed for r107; r106 comparison is separately retained. Complete status compositing, owner routing and original GPU equivalence remain open.
+
+R108 health bars are being restored from full original Render calls, the preserved32×16 red/green textures and animator position+(-16,+16).576 original supplied-state cases support3,104 checks of visibility, float32 crop/UV/RGBA and the existing growth/lift bridge. All ten frozen native r108 suites pass,381 presentation checks/123 PNGs; all six health poses were inspected.361 counted PNGs plus15 supplemental,23 WAVs. Live1×25.887/36.066,2×26.915/30.117,4×32.798/36.106,world7.344/14.301 median/p95ms meet the unchanged33.34ms median gate, zero stalled frames, six exact frozen RGBA pairs. Protected normal/earned saves, package/signature/isolation/cleanup pass. Evidence builds/creep-health-r108-native-suites.json. Complete portal/state lifetime remains unresolved.
 
 R106 restores XP emitter chronology: an idle zero-count system is created without premature births, particles update at the previous rendered tip, and the actual bar render sets the next release count from float32 X changes. The emitter survives empty quiet gaps for later medal XP. Five original constructor/update/Emit/render-block cases covering710 frames support4,971 source comparisons. Resource fields/bar tips are supplied and rand0/GPU are stubs; complete loader/Open, original global RNG and device pixels remain open. R103's inherited closed result timer and R102's clear-flag aircraft missile pass remain integrated; initial owner-body missile routing is still unresolved.
 

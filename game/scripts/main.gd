@@ -22,6 +22,7 @@ const MagicPanelView = preload("res://scripts/magic_panel_view.gd")
 const RewardClockView = preload("res://scripts/reward_clock_view.gd")
 const RewardView = preload("res://scripts/reward_view.gd")
 const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
+const CreepLight = preload("res://scripts/creep_light_view.gd")
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
 const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
@@ -3130,17 +3131,29 @@ func creep_layers(e:Dictionary,states:Dictionary) -> Array:
 	if not states.has(state):state="Idle" if states.has("Idle") else str(states.keys()[0])
 	return e.get("visual_layers",[{"state":state,"rotation":0.0,"alpha":1.0,"born":e.born_ms}])
 
+func creep_body_tint(e:Dictionary,alpha:float=1) -> Color:
+	# Preserve the existing freeze approximation until its complete original
+	# status overlay is reconstructed; normal body RGB follows source light.
+	if sim.clock_ms<sim.freeze_until:return Color(0.55,0.9,1.0,alpha)
+	return CreepLight.body_color(uses_air_pass(e),float(e.get("draw_light",1)),alpha)
+
+func creep_animator_position(e:Dictionary) -> Vector2:
+	var position:Vector2=e.get("visual_pos",e.pos)
+	var offset=e.def.traits.get("offset",[0,0])
+	return position+Vector2(offset[0],offset[1])+Vector2(0,-30 if sim.clock_ms<e.float_until else 0)
+
+func creep_health_layout(e:Dictionary) -> Dictionary:
+	return preload("res://scripts/creep_health_view.gd").layout(creep_animator_position(e),float(e.hp),int(e.max_hp),float(sim.spawn_presentation(e).alpha),int(e.get("state",0)))
+
 func draw_creep_body(e:Dictionary,scale:float) -> void:
 	var position: Vector2 = e.get("visual_pos", e.pos)
 	var set_name = "creeps/"+str(e.def.filename)
 	var states = Content.animations.get(set_name, {}).get("states", {})
 	var growth = sim.spawn_presentation(e)
-	var tint = Color(0.55, 0.9, 1.0) if sim.clock_ms < sim.freeze_until else Color.WHITE
-	tint.a = growth.alpha
+	var tint=creep_body_tint(e,growth.alpha)
 	var scale_values = e.def.traits.get("scale", [1, 1])
-	var offset_values = e.def.traits.get("offset", [0, 0])
 	var native_scale = Vector2(scale_values[0], scale_values[1])*growth.scale
-	var native_offset = Vector2(offset_values[0], offset_values[1])
+	var animator_position=creep_animator_position(e)
 	var layers=creep_layers(e,states)
 	creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
 	for layer in layers:
@@ -3149,13 +3162,13 @@ func draw_creep_body(e:Dictionary,scale:float) -> void:
 		var layer_frame = 0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*layer_rate/1000.0)
 		var color = tint
 		color.a *= float(layer.alpha)
-		var lift = Vector2(0, -30 if sim.clock_ms < e.float_until else 0)
-		draw_set_transform(map_origin()+(position+native_offset+lift)*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
+		draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
 		sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
 		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	if e.hp < e.max_hp:
-		draw_rect(Rect2(position.x-12, position.y-27, 24, 3), Color("#52211b"))
-		draw_rect(Rect2(position.x-12, position.y-27, 24*e.hp/e.max_hp, 3), Color("#a4d944"))
+	var health=creep_health_layout(e) if float(e.hp)<int(e.max_hp) else {}
+	if not health.is_empty():
+		draw_texture(Content.tex("assets/creeps/life_bar_red.png"),health.origin,health.color)
+		if health.fill.size.x>0:draw_texture_rect_region(Content.tex("assets/creeps/life_bar_green.png"),health.fill,health.source,health.color)
 
 func draw_battle_overlays(canvas: CanvasItem) -> void:
 	if screen != "game" or sim == null:return

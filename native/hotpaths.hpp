@@ -19,6 +19,7 @@ public:
     static Dictionary select_target(Array entries, Dictionary query, Callable grid);
     static Dictionary movement_tick(Vector2 start, Vector2 target, Vector2 future, double progress, double carry, double speed, double dt, double hex_height);
     static double creep_depth(double center_y, double height);
+    static double creep_light(double current, double target, double progress);
     static void update_particle(Dictionary particle, Dictionary definition, double dt, double age);
     static void update_particles(Array particles, Dictionary definition, double dt, double clock_ms);
     static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);

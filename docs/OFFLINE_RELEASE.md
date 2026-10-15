@@ -1,6 +1,6 @@
 # Offline prototype verification, October 14, 2026
 
-Current package r106: all ten native suites pass, including364 presentation checks/113 PNGs,73 audio checks/23 WAVs and the unchanged live performance gate. XP emission now follows the original update/render order. The prior audio failure and diagnostic evidence are retained. Offline fidelity remains incomplete.
+Current package r108 passes all ten native suites:381 presentation checks/123 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting and textured enemy health bars are restored within the recovered-code bounds. Offline fidelity remains incomplete.
 
 ## R106 XP emission and native audio capture
 
@@ -14,7 +14,7 @@ The r104 audio exit capture failed with nonzero samples only in its first25ms ch
 
 The fresh r106 comparison binds45 paired states/12 inspected sheets to its PCK, executable and helper, with90 hashed full-resolution copies. Six result pairs approximately align8XP/3sp phases using original source presentation timestamps. The first XP frame has no premature cloud; exact first emission/global RNG, earlier-version art/raster, other tutorial input/portrait/camera states and full owner/lighting remain open. All required fidelity checklist items remain open. builds/presentation-comparison-r106-review.json records the review; prior r103/r100 comparisons remain separately frozen.
 
-Evidence: builds/audio-wall-settle-r106-native-suites.json. Universal2 compiled; Apple Silicon execution verified. Intel, notarization/Finder/Gatekeeper, physical input/speaker listening and original-device equivalence remain unverified. Source signing remains pending1Password; the r103 private recovery/package backup is verified and the r106 supplement is being prepared.
+Evidence: builds/audio-wall-settle-r106-native-suites.json. Universal2 compiled; Apple Silicon execution verified. Intel, notarization/Finder/Gatekeeper, physical input/speaker listening and original-device equivalence remain unverified. Source signing remains pending1Password; the r106 private recovery/package backup is published with all eight remote hashes/sizes verified.
 
 
 ## Retained r103 result lifecycle and package

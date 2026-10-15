@@ -2,7 +2,7 @@ extends RefCounted
 
 # CCreep::RenderBefore0x7f518 draws type2 missiles before the air bodies.
 # RenderAfter0x7f55c draws type1 missiles later. Inputs here are the current
-# simulation's visible missiles; original missile suppression/lifetime and
+# simulation's missiles; original body/before-after routing, lifetime and
 # the two ground-owner after calls remain separate reconstruction work.
 static func missile_passes(enemies:Array, missiles:Array, definitions:Array) -> Dictionary:
 	var result={"before_air":[],"ground_after":[]}

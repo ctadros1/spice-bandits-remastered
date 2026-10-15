@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (113 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (123 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             comparisons=manifest.get('creep_layer_comparisons',[])
             record['creep_layer_comparisons']=comparisons
@@ -196,6 +196,22 @@ def main():
             required.update({'air-depth-overlap','air-depth-reversed-input','air-depth-lifted-ground'})
             required.update({'selection-range-ground','selection-range-fading'})
             required.update({'creep-depth-overlap','creep-depth-reversed-input'})
+            required.update({'creep-light-ground-030','creep-light-ground-100','creep-light-air-030','creep-light-air-100'})
+            light_poses = {c['name']:c.get('creep_lights', []) for c in manifest['captures'] if c['name'].startswith('creep-light-')}
+            for pose, value in [('creep-light-ground-030', 0.3),('creep-light-ground-100', 1),('creep-light-air-030', 1),('creep-light-air-100', 1)]:
+                entries = light_poses.get(pose, [])
+                fresh = fresh and len(entries) == 1 and all(abs(channel-value) < 0.000001 for channel in entries[0]['tint'][:3])
+            health_expected = {'creep-health-ground-025': (8, 1), 'creep-health-empty': (0, 1), 'creep-health-full': (None, 0), 'creep-health-lifted-025': (8, 1), 'creep-health-growing-025': (8, .5), 'creep-health-air-050': (16, 1)}
+            required.update(health_expected)
+            health_poses = {c['name']: c.get('creep_health', []) for c in manifest['captures'] if c['name'].startswith('creep-health-')}
+            for pose, (width, alpha) in health_expected.items():
+                entries = health_poses.get(pose, [])
+                fresh = fresh and len(entries) == 1
+                if entries:
+                    health = entries[0]
+                    fresh = fresh and health['visible'] == (width is not None) and health['alpha'] == alpha
+                    if width is not None:
+                        fresh = fresh and health['fill_size'] == [width, 16]
             required.update({'air-missile-background','air-missile-body-only','air-missile-projectiles-only','air-missile-under-body'})
             overlap = next((c.get('overlap_probe', {}) for c in manifest['captures'] if c['name'] == 'air-missile-under-body'), {})
             fresh = fresh and all(overlap.get(key, 0) >= 10 for key in ('overlapping_pixels','covered_pixels','visible_pixels'))

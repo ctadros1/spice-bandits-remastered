@@ -79,6 +79,16 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.initial_delay=app.result_initial_delay
 		record.result_clock=app.result_clock.duplicate(true)
 		record.limit="Forced8XP/3sp renderer sequence, original unscaled room delay preserved. No earned rewards, original RNG or device-pixel equivalence."
+	if name.begins_with("creep-light"):
+		record.creep_lights=app.sim.enemies.map(func(e):
+			var tint=app.creep_body_tint(e)
+			return {"id":e.id,"type":e.type,"native_air":e.native_air,"draw_light":e.draw_light,"tint":[tint.r,tint.g,tint.b,tint.a]})
+		record.limit="Supplied normal-body brightness from original GL caller. Frozen actor pose; original GPU, birth/status overlays and full owner ordering remain open."
+	if name.begins_with("creep-health"):
+		record.creep_health=app.sim.enemies.map(func(e):
+			var health=app.creep_health_layout(e)
+			return {"id":e.id,"hp":e.hp,"max_hp":e.max_hp,"visible":not health.is_empty(),"origin":[health.origin.x,health.origin.y] if not health.is_empty() else [],"fill_size":[health.fill.size.x,health.fill.size.y] if not health.is_empty() else [],"alpha":health.color.a if not health.is_empty() else 0})
+		record.limit="Supplied normal/air/lift/growth health poses; preserved32x16 textures at original animator anchor and float32 crop. Complete portal/state lifetime and original GPU remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -707,6 +717,45 @@ func run() -> void:
 	check(overlapping_pixels>=10 and covered_pixels>=10,"native opaque aircraft pixels cover overlapping aircraft missiles")
 	check(visible_pixels>=10,"native aircraft missile remains visible outside the aircraft")
 	captures[-1].overlap_probe={"overlapping_pixels":overlapping_pixels,"covered_pixels":covered_pixels,"visible_pixels":visible_pixels,"limit":"Synthetic native compositing test, not original-device pixels or missile lifetime."}
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	var lit_ground=app.sim.spawn_enemy(1,0,"",930,false)
+	lit_ground.pos=app.sim.center(7,4);lit_ground.visual_pos=lit_ground.pos;lit_ground.grow_ms=400;lit_ground.draw_light=0.3
+	await snapshot("creep-light-ground-030")
+	var dark_ground=get_viewport().get_texture().get_image()
+	lit_ground.draw_light=1
+	await snapshot("creep-light-ground-100")
+	var bright_ground=get_viewport().get_texture().get_image()
+	check(dark_ground.get_region(depth_rect).get_data()!=bright_ground.get_region(depth_rect).get_data(),"native ground artwork responds to original scalar light")
+	app.sim.enemies.clear()
+	var lit_air=app.sim.spawn_enemy(2,0,"",931,false)
+	lit_air.pos=lit_ground.pos;lit_air.visual_pos=lit_air.pos;lit_air.draw_light=0.3
+	await snapshot("creep-light-air-030")
+	var dark_air=get_viewport().get_texture().get_image()
+	lit_air.draw_light=1
+	await snapshot("creep-light-air-100")
+	var bright_air=get_viewport().get_texture().get_image()
+	check(dark_air.get_region(depth_rect).get_data()==bright_air.get_region(depth_rect).get_data(),"native aircraft retain exact battle pixels when only source ground-light value changes")
+	app.sim.enemies.clear()
+	var damaged=app.sim.spawn_enemy(1,0,"",932,false)
+	damaged.pos=app.sim.center(7,4);damaged.visual_pos=damaged.pos;damaged.max_hp=100;damaged.hp=25
+	check(app.creep_health_layout(damaged).fill.size==Vector2(8,16),"health bar uses original eight-pixel crop at25percent")
+	await snapshot("creep-health-ground-025")
+	damaged.hp=0
+	await snapshot("creep-health-empty")
+	damaged.hp=100
+	check(app.creep_health_layout(damaged).is_empty(),"full-health actor draws no life bar")
+	await snapshot("creep-health-full")
+	damaged.hp=25;damaged.float_until=app.sim.clock_ms+1000
+	check(app.creep_health_layout(damaged).origin.y==damaged.visual_pos.y-14,"health bar follows lifted animator")
+	await snapshot("creep-health-lifted-025")
+	damaged.float_until=0;damaged.grow_ms=200
+	check(app.creep_health_layout(damaged).color.a==0.5,"health bar uses original halfway growth opacity")
+	await snapshot("creep-health-growing-025")
+	app.sim.enemies.clear()
+	var damaged_air=app.sim.spawn_enemy(2,0,"",933,false)
+	damaged_air.pos=damaged.pos;damaged_air.visual_pos=damaged_air.pos;damaged_air.max_hp=100;damaged_air.hp=50
+	check(app.creep_health_layout(damaged_air).fill.size==Vector2(16,16),"aircraft uses same authored health crop")
+	await snapshot("creep-health-air-050")
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")
