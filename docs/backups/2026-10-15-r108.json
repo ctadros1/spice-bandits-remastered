@@ -1,0 +1,81 @@
+{
+  "pck_sha256": "e92a0ceb6d4cf97f6a7560fff98b801580d7ea6d139ba483e9fb17d94fd857ab",
+  "executable_sha256": "8b7e2e7104fa01726a6f09834f1a23baed5d09ff4643922b5da9b431787a1dff",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "4d437e1f7484857e49911fcd1f60005ac4ab470fc900e46b28320a54cba41eae"
+  },
+  "source_base": "6d067b0b5d807d4cf1b24499a6ad20c8b61853c7",
+  "source_commit_created": false,
+  "signing_pending": true,
+  "all_ten_native_passed": true,
+  "counted_png": 361,
+  "supplemental_comparison_png": 15,
+  "wav": 23,
+  "evidence_files_verified": 808,
+  "presentation_checks": 381,
+  "audio_checks": 73,
+  "xp_chronology_source_checks": 4971,
+  "creep_light_source_checks": 28633,
+  "creep_health_source_checks": 3104,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_sheets_inspected": 2,
+  "unchanged_sheets_matching_reviewed_r107": 10,
+  "health_poses_inspected": 6,
+  "new_original_pts_frames": 180,
+  "offline_complete": false,
+  "scope": "Supplement to earlier full workspace. Original assets/proportions/saves preserved. Universal2 compiled; native execution Apple Silicon. Intel/Finder/Gatekeeper/notarization/physical-input/speaker/original-device equivalence not claimed. New source after this capture is excluded.",
+  "evidence_archive_files_verified": 808,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 413739123,
+  "release_tag": "backup-2026-10-15-r108",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r108",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r108-macOS.zip",
+      "bytes": 324965866,
+      "sha256": "8683bc18defc0b58b115cdd7ab2b6ce13a69be0aa05193095d5d273c612aea6d"
+    },
+    {
+      "name": "r108-verification-evidence.tar.gz",
+      "bytes": 611521714,
+      "sha256": "2ac48f0b3cb0ea0a989386fa9f01f8caf0da1748b7b1f6cb9f7f9d7d2102c17e"
+    },
+    {
+      "name": "r108-package-restoration.zip",
+      "bytes": 1519189,
+      "sha256": "9e51cfec28aad0a3326028b0279b25834c436f779ef81bc48609521b48554789"
+    },
+    {
+      "name": "r108-source.patch",
+      "bytes": 3029013,
+      "sha256": "291778a8cd13cd05b41cfef72360297227ca15b74b9c4b1ccb6c2cd8581d036a"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 11567,
+      "sha256": "6dcb5ca850116f0e5a1b797e70fa50b46826270618821e7336982c66fd384e7b"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 813,
+      "sha256": "e44a1785635c4775bf86bd982c627c118f15aeec864be4db922af2f22d5204e5"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 142974,
+      "sha256": "b110be08d0b4f8ce98f31a4fdb0fdbde7ab5592aea99846e9e12d3ca3d78b046"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1486,
+      "sha256": "8308c2c3b45083a48505aed6f1977c5a67d3ce19738091f83d10c580225ec3a6"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-15T11:42:39.744739+00:00"
+}

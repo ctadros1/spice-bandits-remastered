@@ -3010,6 +3010,7 @@ func draw_game() -> void:
 		sprite("sfx/portals", "Blue", sim.center(pair["in"].x, pair["in"].y), int(sim.clock_ms/1000))
 		sprite("sfx/portals", "Red", sim.center(pair.out.x, pair.out.y), int(sim.clock_ms/1000))
 	var objects=battle_objects()
+	var enemy_projectiles=enemy_missile_passes()
 	var depth_bases=[]
 	for object in objects:
 		if object.has("layer"):
@@ -3043,14 +3044,13 @@ func draw_game() -> void:
 			sprite(set_name, presentation.state, position, presentation.frame)
 			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
 		else:
-			draw_creep_body(object.enemy,scale)
+			draw_creep_body(object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
 	# CMap::DrawTowerOvalSelection0x10406c follows all ground bodies.
 	var selection=selected_range_pose()
 	if not selection.is_empty():BuildHexView.draw_oval(self,selection.position,selection.draws,1.0/scale)
-	var enemy_projectiles=enemy_missile_passes()
 	for missile in enemy_projectiles.before_air:draw_enemy_missile(missile,scale)
 	# Native air bodies follow every ground/map body, independent of Y.
-	for air in battle_air_objects():draw_creep_body(air,scale)
+	for air in battle_air_objects():draw_creep_body(air,scale,enemy_projectiles.body.get(int(air.id),[]))
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
 	# Full map/owner/air interleaving remains separately unresolved.
 	for b in depth_bases:
@@ -3145,7 +3145,7 @@ func creep_animator_position(e:Dictionary) -> Vector2:
 func creep_health_layout(e:Dictionary) -> Dictionary:
 	return preload("res://scripts/creep_health_view.gd").layout(creep_animator_position(e),float(e.hp),int(e.max_hp),float(sim.spawn_presentation(e).alpha),int(e.get("state",0)))
 
-func draw_creep_body(e:Dictionary,scale:float) -> void:
+func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 	var position: Vector2 = e.get("visual_pos", e.pos)
 	var set_name = "creeps/"+str(e.def.filename)
 	var states = Content.animations.get(set_name, {}).get("states", {})
@@ -3165,6 +3165,8 @@ func draw_creep_body(e:Dictionary,scale:float) -> void:
 		draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
 		sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
 		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	# Original full Render routes flag+a0 after this owner's body, before HP.
+	for missile in owner_missiles:draw_enemy_missile(missile,scale)
 	var health=creep_health_layout(e) if float(e.hp)<int(e.max_hp) else {}
 	if not health.is_empty():
 		draw_texture(Content.tex("assets/creeps/life_bar_red.png"),health.origin,health.color)

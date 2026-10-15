@@ -1,6 +1,6 @@
 # Spice Bandits macOS Reconstruction Plan
 
-Current package r108 passes all ten native suites:381 presentation checks/123 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting and textured enemy health bars are restored within the recovered-code bounds. Offline fidelity remains incomplete.
+Current package r109 passes all ten native suites:386 presentation checks/125 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting, textured health bars and live-owner missile drawing phases are restored within the recovered-code bounds. Offline fidelity remains incomplete.
 
 Updated October 15, 2026. Status: offline reconstruction is incomplete. The saved simulation campaign reaches Madagascar; all ten current native suites pass including the live performance gate; these checks do not establish original visual or interaction fidelity. The user review identified substantial missing original interface and animation behavior. Multiplayer and expansion remain deferred.
 
@@ -26,6 +26,8 @@ These are completion requirements, not optional polish. Compare each against den
 - [ ] Verify matched screen states and physical drag-and-drop in the newly packaged app; existing functional audits do not close these requirements.
 
 ## Current implementation progress
+
+R109 missile-body routing is under reconstruction.40 full original constructor/nonimpact update sequences/1,000 frames plus nine distance boundaries support9,341 checks of launch origin, exact float32 motion and body flag routing. Live-owner initial missiles draw after their own body, then change phase strictly beyond30px. Complete collision/explosion/owner-death lifetime, original RNG and global effect order remain open. All ten frozen native r109 suites pass (386 presentation checks/125 PNGs,73 audio checks/23 WAVs); two new owner-layer poses were inspected with315 overlapping pixels changing and exact cleared-flag restoration.363 counted PNGs plus15 supplemental. The33.34ms live median gate passes at1×25.689/27.504ms p95,2×26.518/31.008,4×32.738/38.356,world6.403/14.323; zero stalled frames and six frozen renderer pairs exact. All protected saves/package/signature/isolation/cleanup pass. Private backup through r108 is verified; later edits are separate.
 
 R107 normal ground lighting is supported by28,633 source comparisons:192 original movement-prefix cases,288 full body-render cases and28,049 map cells (2,350 authored light values,25,699 default1). Native ground .3/1 captures differ and aircraft .3/1 battle captures match exact RGBA. All ten suites pass on frozen PCK`eeb7567187d4cf0ace81f6d0f338e20666e3eb51f12c9c608319c4c1b262842e`. Live1×24.182/26.615,2×31.513/42.830,4×31.892/37.305,world6.680/13.785 median/p95ms; the33.34ms median gate remains unchanged, zero stalled frames, six frozen renderer pairs exact.355 counted PNGs plus15 supplemental PNGs; protected saves/package/signature/cleanup pass.45 paired states/90 frozen copies/12 sheets were reviewed for r107; r106 comparison is separately retained. Complete status compositing, owner routing and original GPU equivalence remain open.
 

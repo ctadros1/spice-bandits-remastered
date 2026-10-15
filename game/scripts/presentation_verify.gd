@@ -89,6 +89,11 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 			var health=app.creep_health_layout(e)
 			return {"id":e.id,"hp":e.hp,"max_hp":e.max_hp,"visible":not health.is_empty(),"origin":[health.origin.x,health.origin.y] if not health.is_empty() else [],"fill_size":[health.fill.size.x,health.fill.size.y] if not health.is_empty() else [],"alpha":health.color.a if not health.is_empty() else 0})
 		record.limit="Supplied normal/air/lift/growth health poses; preserved32x16 textures at original animator anchor and float32 crop. Complete portal/state lifetime and original GPU remain open."
+	if name.begins_with("air-missile-owner"):
+		var phases=app.enemy_missile_passes()
+		record.owner_body_count=phases.body.get(920,[]).size()
+		record.before_air_count=phases.before_air.size()
+		record.limit="Supplied live owner and original body flag; body pass versus cleared-flag before-air submission. No original GPU/collision/death-lifetime equivalence."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -717,6 +722,19 @@ func run() -> void:
 	check(overlapping_pixels>=10 and covered_pixels>=10,"native opaque aircraft pixels cover overlapping aircraft missiles")
 	check(visible_pixels>=10,"native aircraft missile remains visible outside the aircraft")
 	captures[-1].overlap_probe={"overlapping_pixels":overlapping_pixels,"covered_pixels":covered_pixels,"visible_pixels":visible_pixels,"limit":"Synthetic native compositing test, not original-device pixels or missile lifetime."}
+	for missile in app.sim.enemy_missiles:missile.body_flag=true
+	check(app.enemy_missile_passes().body[920].size()==2 and app.enemy_missile_passes().before_air.is_empty(),"native new-owner missile flag selects body pass")
+	await snapshot("air-missile-owner-body")
+	var owner_front=get_viewport().get_texture().get_image()
+	var changed_overlap=0
+	for y in range(depth_rect.position.y,missile_body.get_height()):
+		for x in range(missile_body.get_width()):
+			if missile_body.get_pixel(x,y)!=missile_background.get_pixel(x,y) and missile_only.get_pixel(x,y)!=missile_background.get_pixel(x,y) and owner_front.get_pixel(x,y)!=missile_combined.get_pixel(x,y):changed_overlap+=1
+	check(changed_overlap>=10,"native body-pass missiles visibly cover overlapping owner artwork")
+	captures[-1].owner_overlap_pixels=changed_overlap
+	for missile in app.sim.enemy_missiles:missile.body_flag=false
+	await snapshot("air-missile-owner-cleared")
+	check(get_viewport().get_texture().get_image().get_region(depth_rect).get_data()==missile_combined.get_region(depth_rect).get_data(),"cleared owner flags restore exact original before-air battle pixels")
 	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
 	var lit_ground=app.sim.spawn_enemy(1,0,"",930,false)
 	lit_ground.pos=app.sim.center(7,4);lit_ground.visual_pos=lit_ground.pos;lit_ground.grow_ms=400;lit_ground.draw_light=0.3

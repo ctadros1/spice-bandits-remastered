@@ -104,6 +104,8 @@ void integrate_particles(Array particles,const ParticleCoefficients &coefficient
 void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_depth","center_y","height"),&SpiceNative::creep_depth);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_light","current","target","progress"),&SpiceNative::creep_light);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_missile_origin","input","target"),&SpiceNative::creep_missile_origin);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_missile_tick","missile","dt","raw_velocity"),&SpiceNative::creep_missile_tick,DEFVAL(3000));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("bolt_ribbon","path","pass_id","opacity"),&SpiceNative::bolt_ribbon);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("in_range","a","b","radius","hex_height"),&SpiceNative::in_range);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("range_candidates","entries","position","radius","hex_height","aim"),&SpiceNative::range_candidates);
@@ -296,6 +298,51 @@ double SpiceNative::creep_light(double current,double target,double progress) {
     if(a==b)return a;
     const float value=f32(double(a)+f32(double(f32(double(b)-a))*f32(progress)));
     return a<b?std::min(value,b):std::max(value,b);
+}
+
+Vector2 SpiceNative::creep_missile_origin(Vector2 input,Vector2 target) {
+    // Original Vector2Normalize uses reciprocal then multiplication.
+    float x=f32(double(input.x)-target.x),y=f32(double(input.y)-target.y);
+    const float length=std::sqrt(f32(double(f32(double(x)*x))+f32(double(y)*y)));
+    if(length!=0) {
+        const float inverse=f32(1.0/length);
+        x=f32(double(x)*inverse);y=f32(double(y)*inverse);
+    }
+    return Vector2(f32(double(input.x)+f32(double(x)*-10)),f32(double(input.y)+f32(double(y)*-10)));
+}
+
+void SpiceNative::creep_missile_tick(Dictionary p,double dt,double raw_velocity) {
+    // Nonimpact CCreepMissile::Update0x8120c: every operation rounds to
+    // float32. Keep original zero-dt=>one-second quirk isolated here.
+    Vector2 pos=p["pos"],target=p["destination"],velocity=p["velocity"],acceleration=p["acceleration"];
+    p["previous"]=pos;
+    float seconds=f32(double(std::min(f32(dt),100.0f))/1000);
+    if(seconds==0)seconds=1;
+    const float gamma=f32(double(f32(double(seconds)*3.75))/0.30000001192092896);
+    const float speed=f32(double(f32(raw_velocity))*std::max(seconds,0.03999999910593033f));
+    float dx=f32(double(target.x)-pos.x),dy=f32(double(target.y)-pos.y);
+    const float length=std::sqrt(f32(double(f32(double(dx)*dx))+f32(double(dy)*dy)));
+    if(length!=0) {
+        const float inverse=f32(1.0/length);
+        dx=f32(double(dx)*inverse);dy=f32(double(dy)*inverse);
+    }
+    const Vector2 goal(f32(double(dx)*speed),f32(double(dy)*speed));
+    if(gamma>=1) {velocity=goal;acceleration=Vector2();}
+    Vector2 next_velocity,next_acceleration;
+    for(int axis=0;axis<2;++axis) {
+        next_velocity[axis]=f32(double(velocity[axis])+f32(double(acceleration[axis])*gamma));
+        const float delta=f32(double(goal[axis])-velocity[axis]);
+        const float damping=axis==0?f32(double(acceleration[axis])*-2):f32(double(acceleration[axis])+acceleration[axis]);
+        const float change=axis==0?f32(double(delta)+damping):f32(double(delta)-damping);
+        next_acceleration[axis]=f32(double(acceleration[axis])+f32(double(change)*gamma));
+        pos[axis]=f32(double(pos[axis])+f32(double(next_velocity[axis])*seconds));
+    }
+    p["velocity"]=next_velocity;p["acceleration"]=next_acceleration;p["pos"]=pos;
+    if(bool(p.get("body_flag",false))) {
+        const Vector2 start=p.get("start",p["previous"]);
+        const float x=f32(double(start.x)-pos.x),y=f32(double(start.y)-pos.y);
+        if(std::sqrt(f32(double(f32(double(x)*x))+f32(double(y)*y)))>30)p["body_flag"]=false;
+    }
 }
 
 double SpiceNative::creep_depth(double center_y,double height) {

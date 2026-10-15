@@ -1,6 +1,6 @@
 # Offline prototype verification, October 14, 2026
 
-Current package r108 passes all ten native suites:381 presentation checks/123 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting and textured enemy health bars are restored within the recovered-code bounds. Offline fidelity remains incomplete.
+Current package r109 passes all ten native suites:386 presentation checks/125 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting, textured enemy health bars and live-owner missile phase routing are restored within recovered-code bounds. Offline fidelity remains incomplete.
 
 ## R106 XP emission and native audio capture
 

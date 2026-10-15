@@ -20,6 +20,8 @@ public:
     static Dictionary movement_tick(Vector2 start, Vector2 target, Vector2 future, double progress, double carry, double speed, double dt, double hex_height);
     static double creep_depth(double center_y, double height);
     static double creep_light(double current, double target, double progress);
+    static Vector2 creep_missile_origin(Vector2 input, Vector2 target);
+    static void creep_missile_tick(Dictionary missile, double dt, double raw_velocity = 3000);
     static void update_particle(Dictionary particle, Dictionary definition, double dt, double age);
     static void update_particles(Array particles, Dictionary definition, double dt, double clock_ms);
     static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);

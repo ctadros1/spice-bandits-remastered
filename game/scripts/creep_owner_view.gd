@@ -2,15 +2,21 @@ extends RefCounted
 
 # CCreep::RenderBefore0x7f518 draws type2 missiles before the air bodies.
 # RenderAfter0x7f55c draws type1 missiles later. Inputs here are the current
-# simulation's missiles; original body/before-after routing, lifetime and
+# simulation's missiles. Body flag+a0 routes after its own body; lifetime and
 # the two ground-owner after calls remain separate reconstruction work.
 static func missile_passes(enemies:Array, missiles:Array, definitions:Array) -> Dictionary:
-	var result={"before_air":[],"ground_after":[]}
+	var result={"before_air":[],"ground_after":[],"body":{}}
 	var owners={}
+	var living_owners={}
+	for enemy in enemies:living_owners[int(enemy.id)]=true
 	for missile in missiles:
+		var owner=int(missile.owner)
+		if bool(missile.get("body_flag",false)) and living_owners.has(owner):
+			if not result.body.has(owner):result.body[owner]=[]
+			result.body[owner].append(missile)
+			continue
 		var kind=str(definitions[int(missile.type)].get("class",""))
 		if kind=="air":
-			var owner=int(missile.owner)
 			if not owners.has(owner):owners[owner]=[]
 			owners[owner].append(missile)
 		elif kind=="ground":result.ground_after.append(missile)

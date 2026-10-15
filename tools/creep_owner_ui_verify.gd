@@ -15,7 +15,7 @@ func run() -> void:
 		for i in range(case.missile_flags_a0.size()):
 			# The original owner guard is executed by the ARM probe. Feed
 			# only that recorded visible set into the phase reconstruction.
-			# Current simulation suppression/lifetime is not verified here.
+			# This before/after fixture excludes flagged body-pass missiles.
 			if not case.missile_flags_a0[i]:visible.append({"type":int(case.resource_type),"owner":10,"label":i})
 		var passes=Owner.missile_passes([{"id":10}],visible,definitions)
 		for pair in [["before","before_air"],["after","ground_after"]]:
@@ -43,6 +43,6 @@ func run() -> void:
 		check(result.before_air.size()==int(definition.get("class","")=="air") and result.ground_after.size()==int(definition.get("class","")=="ground"),"authored resource phase "+str(type))
 		populated+=1
 	check(populated==29,"all29 populated resource classes covered")
-	var report={"checks":checks,"failures":failures,"original_cases":reference.cases.size(),"callbacks":callbacks,"populated_resources":populated,"limit":"Visible owner phase only. Suppression/lifetime, ground double-after/effect interleaving, original GPU and whole-game pixels remain open."}
+	var report={"checks":checks,"failures":failures,"original_cases":reference.cases.size(),"callbacks":callbacks,"populated_resources":populated,"limit":"Clear-flag owner phase only; flagged body routing has a separate full Render fixture. Lifetime, ground double-after/effect interleaving, original GPU and whole-game pixels remain open."}
 	var file=FileAccess.open(ProjectSettings.globalize_path("res://../builds/creep-owner-verification.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"\t"));file.close()
 	print("CREEP_OWNER_VERIFICATION ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)

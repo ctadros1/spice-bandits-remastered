@@ -656,13 +656,12 @@ func bomber_circle(current: Vector2i, base_index: int) -> Array[Vector2i]:
 	return result
 
 func launch_enemy_missiles(e: Dictionary, bomb: bool = false) -> void:
-	var offset = e.def.traits.get("offset", [0, 0])
-	var start = e.pos+Vector2(float(offset[0]), float(offset[1]))
+	var start=enemy_visual_aim_point(e)
 	var count = 1 if bomb else 2
 	for i in range(count):
 		var destination: Vector2 = bases[e.base].pos
-		var origin = start+(destination-start).normalized()*10.0
-		enemy_missiles.append({"pos": origin, "previous": origin, "destination": destination,
+		var origin=SpiceNative.creep_missile_origin(start,destination)
+		enemy_missiles.append({"pos": origin, "start":origin,"previous": start, "destination": destination,"body_flag":true,
 			"velocity": Vector2.ZERO, "acceleration": Vector2.ZERO, "angle": f32(native_angpos(-e.dir)*57.295780181884766),
 			"base": int(e.base), "owner": e.id, "damage": float(e.def.damage)*0.5, "type": e.type, "bomb": bomb})
 	emit("enemy_shot", {"from": start, "to": bases[e.base].pos, "type": e.type, "filename": e.def.filename})
@@ -1287,8 +1286,9 @@ func step() -> void:
 			enemy_missiles.erase(projectile)
 		else:
 			var angle = projectile.angle
-			steer_projectile(projectile, 3000.0)
-			if projectile.bomb: projectile.angle = angle
+			SpiceNative.creep_missile_tick(projectile,tick_ms,3000)
+			if not projectile.bomb:projectile.angle=f32(native_angpos(projectile.previous-projectile.destination)*57.295780181884766)
+			else:projectile.angle = angle
 	step_support.clear();step_enemies.clear()
 	for support in towers:
 		if int(support.type)>=16 and clock_ms>=support.ready_ms: step_support.append(support)
