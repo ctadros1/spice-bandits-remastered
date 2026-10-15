@@ -1,0 +1,648 @@
+{
+  "method": "Original running-room/map/air routing with supplied records and draw stubs.\n\nExecutes full CRoom::Render0xd4f04, CMap::Render0x104088, RenderObjects,\nRenderAfter and CCreepManager::RenderAllAirCreeps. Source sorting/vector\ncopy loops execute. Supplied ready/enabled/map and optional preview/effect\nrecords replace constructors. Drawing, GUI, preview updates, OpenGL and\nvirtual object callbacks are recording stubs; no pixels, timers, services,\nconcurrency, complete object lifetimes or whole game are executed.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "name": "empty",
+      "types": [],
+      "flags": {},
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "ground",
+      "types": [
+        1,
+        1
+      ],
+      "flags": {},
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "decals"
+          },
+          {
+            "method": "footsteps"
+          },
+          {
+            "pass": "before",
+            "label": 0
+          },
+          {
+            "pass": "before",
+            "label": 1
+          },
+          {
+            "pass": "body",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 1
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "air",
+      "types": [
+        2,
+        2
+      ],
+      "flags": {},
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "pass": "before",
+            "label": 0
+          },
+          {
+            "pass": "before",
+            "label": 1
+          },
+          {
+            "pass": "body",
+            "label": 0
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "mixed",
+      "types": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "flags": {},
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "decals"
+          },
+          {
+            "method": "footsteps"
+          },
+          {
+            "pass": "before",
+            "label": 0
+          },
+          {
+            "pass": "before",
+            "label": 2
+          },
+          {
+            "pass": "body",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 2
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "pass": "before",
+            "label": 1
+          },
+          {
+            "pass": "before",
+            "label": 3
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 2
+          },
+          {
+            "pass": "body",
+            "label": 3
+          },
+          {
+            "pass": "after",
+            "label": 3
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "after",
+            "label": 2
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "not-ready",
+      "types": [
+        1,
+        2
+      ],
+      "flags": {
+        "not_ready": true
+      },
+      "output": {
+        "calls": [],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "disabled",
+      "types": [
+        1,
+        2
+      ],
+      "flags": {
+        "disabled": true
+      },
+      "output": {
+        "calls": [
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "no-map",
+      "types": [
+        1,
+        2
+      ],
+      "flags": {
+        "no_map": true
+      },
+      "output": {
+        "calls": [
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "preview",
+      "types": [
+        1,
+        2
+      ],
+      "flags": {
+        "tower": true,
+        "mine": true,
+        "portal": true,
+        "grid": true
+      },
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "decals"
+          },
+          {
+            "method": "footsteps"
+          },
+          {
+            "pass": "before",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 0
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "preview-hexes"
+          },
+          {
+            "method": "preview-hexes"
+          },
+          {
+            "method": "preview-hexes"
+          },
+          {
+            "method": "grid"
+          },
+          {
+            "method": "tower-preview"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "pass": "before",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    },
+    {
+      "name": "effects",
+      "types": [
+        1,
+        2
+      ],
+      "flags": {
+        "water": true,
+        "tutorial": true,
+        "animated": true,
+        "global_anim": true,
+        "global_particles": true,
+        "environment": true,
+        "tower_panel": true
+      },
+      "output": {
+        "calls": [
+          {
+            "method": "update-tower-preview"
+          },
+          {
+            "method": "update-mine-preview"
+          },
+          {
+            "method": "update-portal-preview"
+          },
+          {
+            "method": "map-render"
+          },
+          {
+            "method": "segments"
+          },
+          {
+            "method": "water"
+          },
+          {
+            "method": "animated-object"
+          },
+          {
+            "method": "animated-object"
+          },
+          {
+            "method": "tutorial-marks"
+          },
+          {
+            "method": "decals"
+          },
+          {
+            "method": "footsteps"
+          },
+          {
+            "pass": "before",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 0
+          },
+          {
+            "method": "selection"
+          },
+          {
+            "method": "air-manager"
+          },
+          {
+            "pass": "before",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "pass": "body",
+            "label": 1
+          },
+          {
+            "pass": "after",
+            "label": 1
+          },
+          {
+            "method": "global-animation-update"
+          },
+          {
+            "method": "global-animation-render"
+          },
+          {
+            "method": "global-animation-update"
+          },
+          {
+            "method": "global-animation-render"
+          },
+          {
+            "method": "global-particle"
+          },
+          {
+            "method": "global-particle"
+          },
+          {
+            "method": "environment"
+          },
+          {
+            "method": "map-after"
+          },
+          {
+            "pass": "after",
+            "label": 0
+          },
+          {
+            "method": "tower-panel-after"
+          },
+          {
+            "method": "tower-info"
+          },
+          {
+            "method": "floating-indicators"
+          },
+          {
+            "method": "bubbles"
+          },
+          {
+            "method": "backgrounds"
+          },
+          {
+            "method": "gui"
+          },
+          {
+            "method": "shop-fade"
+          }
+        ],
+        "map_lock": 0
+      }
+    }
+  ],
+  "original_unchanged": true
+}

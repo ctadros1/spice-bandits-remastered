@@ -2907,6 +2907,14 @@ func base_depth(base:Dictionary) -> float:
 	base_depth_cache[identity]=value
 	return value
 
+func uses_air_pass(enemy:Dictionary) -> bool:
+	# CCreep construction registers only resource type1 with CMap. Type2
+	# bodies are routed by CCreepManager::RenderAllAirCreeps0xfbe8c.
+	return bool(enemy.get("native_air",enemy.get("def",{}).get("class","ground")=="air"))
+
+func battle_air_objects() -> Array:
+	return sim.enemies.filter(func(e):return uses_air_pass(e))
+
 func battle_objects() -> Array:
 	var objects=[]
 	for layer in sim.map.get("foreground",[]):objects.append({"y":float(layer.y)+float(layer.tile.get("depth_pos",layer.tile.get("h",0))),"layer":layer})
@@ -2914,7 +2922,8 @@ func battle_objects() -> Array:
 		objects.append({"y":base_depth(base),"base":base})
 	for t in sim.towers:
 		objects.append({"y":tower_depth(t),"tower":t})
-	for e in sim.enemies:objects.append({"y":e.get("visual_pos",e.pos).y,"enemy":e})
+	for e in sim.enemies:
+		if not uses_air_pass(e):objects.append({"y":e.get("visual_pos",e.pos).y,"enemy":e})
 	# Original whole-map registration, equal-depth introsort order, creep
 	# depth and other owner passes remain separately unresolved.
 	objects.sort_custom(func(a,b):return a.y<b.y)
@@ -2980,36 +2989,9 @@ func draw_game() -> void:
 			sprite(set_name, presentation.state, position, presentation.frame)
 			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
 		else:
-			var e = object.enemy
-			var position: Vector2 = e.get("visual_pos", e.pos)
-			var state = sim.creep_animation(e)
-			var set_name = "creeps/"+str(e.def.filename)
-			var states = Content.animations.get(set_name, {}).get("states", {})
-			if not states.has(state): state = "Idle" if states.has("Idle") else str(states.keys()[0])
-			var rate = float(states[state].get("speed", 17))
-			var frame = int(float(sim.clock_ms-e.born_ms)/1000.0*rate)
-			var growth = sim.spawn_presentation(e)
-			var tint = Color(0.55, 0.9, 1.0) if sim.clock_ms < sim.freeze_until else Color.WHITE
-			tint.a = growth.alpha
-			var scale_values = e.def.traits.get("scale", [1, 1])
-			var offset_values = e.def.traits.get("offset", [0, 0])
-			var native_scale = Vector2(scale_values[0], scale_values[1])*growth.scale
-			var native_offset = Vector2(offset_values[0], offset_values[1])
-			var layers = e.get("visual_layers", [{"state": state, "rotation": 0.0, "alpha": 1.0, "born": e.born_ms}])
-			creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
-			for layer in layers:
-				if float(layer.alpha) <= 0: continue
-				var layer_rate = float(states.get(layer.state, {}).get("speed", 8))
-				var layer_frame = 0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*layer_rate/1000.0)
-				var color = tint
-				color.a *= float(layer.alpha)
-				var lift = Vector2(0, -30 if sim.clock_ms < e.float_until else 0)
-				draw_set_transform(map_origin()+(position+native_offset+lift)*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
-				sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
-				draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-			if e.hp < e.max_hp:
-				draw_rect(Rect2(position.x-12, position.y-27, 24, 3), Color("#52211b"))
-				draw_rect(Rect2(position.x-12, position.y-27, 24*e.hp/e.max_hp, 3), Color("#a4d944"))
+			draw_creep_body(object.enemy,scale)
+	# Native air bodies follow every ground/map body, independent of Y.
+	for air in battle_air_objects():draw_creep_body(air,scale)
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
 	# Full map/owner/air interleaving remains separately unresolved.
 	for b in depth_bases:
@@ -3084,6 +3066,37 @@ func draw_game() -> void:
 			sprite("sfx/portals","Blue" if sim.portals.is_empty() else "Red",position,0,"",MagicView.straight(MagicView.portal(false,0)[0].color),0,Vector2.ONE*0.3)
 	draw_set_transform(Vector2.ZERO)
 	ClassicUI.draw_tower_info(self)
+
+func draw_creep_body(e:Dictionary,scale:float) -> void:
+	var position: Vector2 = e.get("visual_pos", e.pos)
+	var state = sim.creep_animation(e)
+	var set_name = "creeps/"+str(e.def.filename)
+	var states = Content.animations.get(set_name, {}).get("states", {})
+	if not states.has(state): state = "Idle" if states.has("Idle") else str(states.keys()[0])
+	var rate = float(states[state].get("speed", 17))
+	var frame = int(float(sim.clock_ms-e.born_ms)/1000.0*rate)
+	var growth = sim.spawn_presentation(e)
+	var tint = Color(0.55, 0.9, 1.0) if sim.clock_ms < sim.freeze_until else Color.WHITE
+	tint.a = growth.alpha
+	var scale_values = e.def.traits.get("scale", [1, 1])
+	var offset_values = e.def.traits.get("offset", [0, 0])
+	var native_scale = Vector2(scale_values[0], scale_values[1])*growth.scale
+	var native_offset = Vector2(offset_values[0], offset_values[1])
+	var layers = e.get("visual_layers", [{"state": state, "rotation": 0.0, "alpha": 1.0, "born": e.born_ms}])
+	creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
+	for layer in layers:
+		if float(layer.alpha) <= 0: continue
+		var layer_rate = float(states.get(layer.state, {}).get("speed", 8))
+		var layer_frame = 0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*layer_rate/1000.0)
+		var color = tint
+		color.a *= float(layer.alpha)
+		var lift = Vector2(0, -30 if sim.clock_ms < e.float_until else 0)
+		draw_set_transform(map_origin()+(position+native_offset+lift)*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
+		sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
+		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	if e.hp < e.max_hp:
+		draw_rect(Rect2(position.x-12, position.y-27, 24, 3), Color("#52211b"))
+		draw_rect(Rect2(position.x-12, position.y-27, 24*e.hp/e.max_hp, 3), Color("#a4d944"))
 
 func draw_battle_overlays(canvas: CanvasItem) -> void:
 	if screen != "game" or sim == null:return

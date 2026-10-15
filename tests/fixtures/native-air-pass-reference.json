@@ -1,0 +1,220 @@
+{
+  "method": "Original CCreepManager air-pass routing over supplied creep vectors.\n\nRuns full0xfbe8c with supplied vector/object/resource/vtable records. OpenGL\ncolor/blend calls and virtual before/body/after methods are recording stubs.\nNo actual creep drawing, GPU, lifespan, concurrency or whole room runs.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "types": [],
+      "output": []
+    },
+    {
+      "types": [
+        1
+      ],
+      "output": [
+        {
+          "pass": "after",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "types": [
+        2
+      ],
+      "output": [
+        {
+          "pass": "before",
+          "label": 0
+        },
+        {
+          "pass": "body",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "types": [
+        1,
+        2,
+        1,
+        2
+      ],
+      "output": [
+        {
+          "pass": "before",
+          "label": 1
+        },
+        {
+          "pass": "before",
+          "label": 3
+        },
+        {
+          "pass": "after",
+          "label": 0
+        },
+        {
+          "pass": "body",
+          "label": 1
+        },
+        {
+          "pass": "after",
+          "label": 1
+        },
+        {
+          "pass": "after",
+          "label": 2
+        },
+        {
+          "pass": "body",
+          "label": 3
+        },
+        {
+          "pass": "after",
+          "label": 3
+        }
+      ]
+    },
+    {
+      "types": [
+        2,
+        1,
+        2
+      ],
+      "output": [
+        {
+          "pass": "before",
+          "label": 0
+        },
+        {
+          "pass": "before",
+          "label": 2
+        },
+        {
+          "pass": "body",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 1
+        },
+        {
+          "pass": "body",
+          "label": 2
+        },
+        {
+          "pass": "after",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "types": [
+        2,
+        2,
+        2
+      ],
+      "output": [
+        {
+          "pass": "before",
+          "label": 0
+        },
+        {
+          "pass": "before",
+          "label": 1
+        },
+        {
+          "pass": "before",
+          "label": 2
+        },
+        {
+          "pass": "body",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 0
+        },
+        {
+          "pass": "body",
+          "label": 1
+        },
+        {
+          "pass": "after",
+          "label": 1
+        },
+        {
+          "pass": "body",
+          "label": 2
+        },
+        {
+          "pass": "after",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "types": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "output": [
+        {
+          "pass": "before",
+          "label": 2
+        },
+        {
+          "pass": "after",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 1
+        },
+        {
+          "pass": "body",
+          "label": 2
+        },
+        {
+          "pass": "after",
+          "label": 2
+        },
+        {
+          "pass": "after",
+          "label": 3
+        }
+      ]
+    },
+    {
+      "types": [
+        1,
+        1,
+        1
+      ],
+      "output": [
+        {
+          "pass": "after",
+          "label": 0
+        },
+        {
+          "pass": "after",
+          "label": 1
+        },
+        {
+          "pass": "after",
+          "label": 2
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

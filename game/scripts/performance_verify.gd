@@ -83,6 +83,9 @@ func run() -> void:
 		while Time.get_ticks_msec()<deadline:await get_tree().process_frame
 		measuring=false
 		var sample_end_ms=app.sim.clock_ms
+		# Keep live CPU totals separate from supplemental frozen redraws.
+		var live_timings=app.qa_timings.duplicate(true)
+		var live_sections=app.sim.hotpath_timings.duplicate(true)
 		var live_advanced=sample_end_ms-sample_start_ms>=2000*rate and advancing_frames>=samples.size()-2 and not app.sim.paused and app.sim.outcome=="playing"
 		if not live_advanced:failures.append("Dense%dx fixture did not advance its live simulation throughout measurement." % rate)
 		var input_isolated=not app.is_processing_input() and not app.is_processing_unhandled_input() and app.get_viewport().gui_disable_input
@@ -127,7 +130,7 @@ func run() -> void:
 		rendering_comparisons.append({"speed":rate,"reference":"reference-%dx.png" % rate,"mesh_reference":"mesh-reference-%dx.png" % rate,"batch":"batch-%dx.png" % rate,"reference_error":reference_error,"mesh_error":mesh_error,"batch_error":batch_error,"exact_mesh_rgba":exact_mesh,"reference_draws":reference_draws,"batch_draws":batch_draws,"sim_ms":app.sim.clock_ms})
 		if reference_draws<2 or batch_draws<2 or reference_error!=OK or batch_error!=OK:failures.append("Particle comparison did not render both layers in both modes.")
 		app.set_process(true)
-		stages.append({"speed":rate,"frames":samples.size(),"median_frame_ms":median,"p95_frame_ms":p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"reported_fps":Engine.get_frames_per_second(),"static_memory_bytes":Performance.get_monitor(Performance.MEMORY_STATIC),"enemies":app.sim.enemies.size(),"towers":app.sim.towers.size(),"particle_systems":app.particle_fx.systems.size(),"sim_ms":app.sim.clock_ms,"sample_start_sim_ms":sample_start_ms,"sample_end_sim_ms":sample_end_ms,"advancing_frames":advancing_frames,"stalled_frames":stalled_frames,"live_advanced":live_advanced,"input_isolated":input_isolated,"bolts":bolt_metrics(),"timings":app.qa_timings.duplicate(true),"simulation_sections":app.sim.hotpath_timings.duplicate(true)})
+		stages.append({"speed":rate,"frames":samples.size(),"median_frame_ms":median,"p95_frame_ms":p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"reported_fps":Engine.get_frames_per_second(),"static_memory_bytes":Performance.get_monitor(Performance.MEMORY_STATIC),"enemies":app.sim.enemies.size(),"towers":app.sim.towers.size(),"particle_systems":app.particle_fx.systems.size(),"sim_ms":app.sim.clock_ms,"sample_start_sim_ms":sample_start_ms,"sample_end_sim_ms":sample_end_ms,"advancing_frames":advancing_frames,"stalled_frames":stalled_frames,"live_advanced":live_advanced,"input_isolated":input_isolated,"bolts":bolt_metrics(),"timings":live_timings,"simulation_sections":live_sections,"timing_scope":"Live sampling only; frozen comparison redraws excluded."})
 		if samples.size()<45 or median>33.34 or error!=OK:failures.append("Dense%dx fixture did not sustain30 median frames/second or capture successfully." % rate)
 	app.screen="world";app.selected_location="";app.world_camera=Vector2(2048,1536);app.world_zoom=0.2
 	app.world_clouds.reset();app.refresh_controls()

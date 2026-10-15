@@ -2,6 +2,12 @@
 
 These are earlier, package-specific records. Current status is in PLAN.md and VALIDATION.md. References to current packages inside these preserved records refer to their original checkpoint.
 
+## R97 air body routing, October15
+
+R97 restores a separate native-air body pass after sorted ground bodies, retaining the creep manager vector order. Resource class stays independent of temporary levitation/targeting. Eight original air-routing cases/37 callbacks and nine full original room/map routing cases establish the order with supplied records and explicit drawing/framework stubs;110 source checks cover all29 populated enemies. Three packaged overlap/reversed/lifted poses pass and were inspected. Full mutable map registration, creep depth, preview/selection and owner/effect interleaving remain open.
+
+Nine r97 native suites pass: presentation313/94 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live performance remains failed:1x28.356ms median/32.886ms p95,2x35.182/84.967 and4x42.189/61.444; only1x meets the unchanged33.34ms median gate. All live/input-isolation guards pass with zero stalled frames, and all three frozen mesh/direct comparisons retain exact RGBA. CPU totals now exclude supplemental frozen redraws. Normal/retained-campaign saves, package resources, strict signature, isolated sole process and cleanup pass.332 counted PNGs include failed performance captures; this is not an all-ten pass or original-device equivalence. Evidence: builds/air-pass-r97-native-suites.json, builds/air-pass-remaining-r97-native-suites.json and builds/air-pass-r97-evidence/.
+
 ## PLAN.md progress before r45
 
 ## Current implementation progress

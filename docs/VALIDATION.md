@@ -4,17 +4,23 @@ October 13, 2026. Local reconstruction in progress; offline fidelity and full re
 
 ## Latest presentation package, October15
 
-PCK `dbf3425472408ad485f283ade125fa4df92a20d4d6ac41b5cb5a0b9060f01564`, executable `57cc2cd4133cfef70dd58ebb879baa39990baf7e7d0f395813a3b4d5fb9deaaf`, native helper `3d9370a01c27c7dd276e67200698f764771034f7ff51394fcde9aeea1686c873`. Nine native r94 suites pass; live2x/4x performance remains failed. Protected normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Capture/check counts below include the failed performance captures.
+PCK `30107427246b9a19624ea4cba6bfa03e527d94f6efc5b86781c7e8b1692b7044`, executable `41ec54d22ac8753562613707a3f30169111c49e7df793cc156ed308ac067ca38`, native helper `248ede79f36c81b13a8cfe034dcea1d3cac3bba2f7de6f3c6ec4c19ea9cbd726`. Nine native r97 suites pass; live2x/4x performance remains failed. Protected normal/retained-campaign saves, package resources, runtime isolation and strict ad hoc signing pass. Capture/check counts below include the failed performance captures.
 
 | Suite | Executed checks / captures |
 | --- | --- |
-| Presentation | 305 checks / 91 PNGs |
+| Presentation | 313 checks / 94 PNGs |
 | Tutorial | 88 checks / 20 PNGs; fixture battle16 kills,$168,98% health |
 | Menus | 184 checks / 55 PNGs; eleven distinct main-menu poses |
 | Audio | 50 checks / 23 WAVs |
 | Performance | Failed2x/4x median gate; four captures retained, live advancement/input isolation pass |
 | Campaign | 148 PNGs |
 | Projectiles / turns / towers / Desert | 4 / 5 / 1 / 1 PNGs |
+
+
+
+R97 restores a separate native-air body pass after sorted ground bodies, retaining the creep manager vector order. Resource class stays independent of temporary levitation/targeting. Eight original air-routing cases/37 callbacks and nine full original room/map routing cases establish the order with supplied records and explicit drawing/framework stubs;110 source checks cover all29 populated enemies. Three packaged overlap/reversed/lifted poses pass and were inspected. Full mutable map registration, creep depth, preview/selection and owner/effect interleaving remain open.
+
+Nine r97 native suites pass: presentation313/94 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live performance remains failed:1x28.356ms median/32.886ms p95,2x35.182/84.967 and4x42.189/61.444; only1x meets the unchanged33.34ms median gate. All live/input-isolation guards pass with zero stalled frames, and all three frozen mesh/direct comparisons retain exact RGBA. CPU totals now exclude supplemental frozen redraws. Normal/retained-campaign saves, package resources, strict signature, isolated sole process and cleanup pass.332 counted PNGs include failed performance captures; this is not an all-ten pass or original-device equivalence. Evidence: builds/air-pass-r97-native-suites.json, builds/air-pass-remaining-r97-native-suites.json and builds/air-pass-r97-evidence/.
 
 
 

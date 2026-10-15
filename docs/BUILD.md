@@ -1,5 +1,7 @@
 # Local build
 
+The latest local r97 package restores separate aircraft bodies and passes nine native suites; live2x/4x performance still fails. [Validation](VALIDATION.md) binds its package hashes and remaining limits. Source build gates now include110 air-body routing comparisons.
+
 The project is pinned to Godot **4.7.2.stable.official.ed1daf0bf**, with the matching macOS export template. The local importer requires Python 3.9+, Pillow 12.3.0, and Apple's `afconvert`. Original inputs remain local beneath `original/`; the importer writes only derived assets, JSON, and its audit.
 
 The measured range/target/movement and particle hot paths build as a Universal2 GDExtension using Xcode Command Line Tools, pinned godot-cpp commit`b8530af7546a3fcae80cef2477526569fd42ffc2` and SCons4.10.1. `tools/build_native.sh` prepares those isolated build dependencies under`work/toolchain` and writes the derived library under`game/native/bin`. The package build calls it before importing/testing/exporting. See [the native helper](../native/README.md) for rounding and reference checks.

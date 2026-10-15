@@ -45,6 +45,11 @@ func snapshot(name:String,settle_portrait:bool=true) -> void:
 	if name.begins_with("base-depth"):
 		record.draw_order=app.battle_objects().filter(func(o):return o.has("tower") or o.has("enemy") or o.has("base")).map(func(o):return {"kind":"base" if o.has("base") else "tower" if o.has("tower") else "enemy","type":o.get("base",o.get("tower",o.get("enemy",{}))).type,"depth":o.y})
 		record.limit="Synthetic overlapping base positions. Base/tower depth follows bounded original ARM fields; creep depth, whole-map registration/ties and complete post-pass owner/air interleaving remain open."
+	if name.begins_with("air-depth"):
+		record.ground_enemy_ids=app.battle_objects().filter(func(o):return o.has("enemy")).map(func(o):return o.enemy.id)
+		record.air_enemy_ids=app.battle_air_objects().map(func(e):return e.id)
+		record.enemies=app.sim.enemies.map(func(e):return {"id":e.id,"type":e.type,"native_air":e.native_air,"air":e.air,"position":[e.pos.x,e.pos.y]})
+		record.limit="Synthetic body overlap. Separate resource-class air pass and manager vector order follow original ARM routing; exact creep depth, shadows, preview/selection/owner interleaving and original pixels remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -584,6 +589,23 @@ func run() -> void:
 	check(base_before.get_region(depth_rect).get_data()==base_after.get_region(depth_rect).get_data(),"distinct original base depths retain exact battle pixels when base input order reverses")
 	base.hp=50;small_base.hp=50
 	await snapshot("base-depth-damaged")
+	base.hp=base.hpmax;small_base.hp=small_base.hpmax
+	var plane=app.sim.spawn_enemy(4,0,"",904,false)
+	plane.pos=tall.pos+Vector2(0,-12);plane.visual_pos=plane.pos
+	var bomber=app.sim.spawn_enemy(2,0,"",905,false)
+	bomber.pos=plane.pos+Vector2(6,4);bomber.visual_pos=bomber.pos
+	check(app.battle_air_objects().map(func(e):return e.id)==[904,905],"native air pass retains manager insertion order above every ground body")
+	check(app.battle_objects().filter(func(o):return o.has("enemy")).map(func(o):return o.enemy.id)==[903],"native air resources leave the sorted map-body pass")
+	await snapshot("air-depth-overlap")
+	var air_before=get_viewport().get_texture().get_image()
+	app.sim.enemies.reverse()
+	await snapshot("air-depth-reversed-input")
+	var air_after=get_viewport().get_texture().get_image()
+	check(app.battle_air_objects().map(func(e):return e.id)==[905,904],"reversing manager input reverses aircraft body submission despite distinct Y")
+	check(air_before.get_region(depth_rect).get_data()!=air_after.get_region(depth_rect).get_data(),"overlapping authored aircraft change battle pixels when manager body order reverses")
+	crossing.air=true;crossing.float_until=app.sim.clock_ms+1000
+	await snapshot("air-depth-lifted-ground")
+	check(app.battle_objects().any(func(o):return o.has("enemy") and o.enemy.id==903) and not app.battle_air_objects().any(func(e):return e.id==903),"lifted ground resource stays in ground drawing pass")
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")
