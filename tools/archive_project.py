@@ -6,6 +6,7 @@ Finder .DS_Store files and the output directory. Does not follow symlinks.
 Run from a quiet project; changing files make the snapshot fail.
 """
 import argparse
+import gzip
 import hashlib
 import io
 import json
@@ -87,7 +88,8 @@ def snapshot(output):
     manifest = {'format': 1, 'scope': 'All project files except .git, output directory and Finder .DS_Store; symlink targets are not followed.',
                 'skipped_finder_files': skipped, 'files': []}
     parts = Parts(output)
-    with tarfile.open(fileobj=parts, mode='w|gz', compresslevel=1, format=tarfile.PAX_FORMAT) as tar:
+    with gzip.GzipFile(fileobj=parts, mode='wb', filename='', compresslevel=1, mtime=0) as compressed, \
+            tarfile.open(fileobj=compressed, mode='w|', format=tarfile.PAX_FORMAT) as tar:
         for index, p in enumerate(sorted(paths)):
             before = p.lstat()
             name = p.relative_to(ROOT).as_posix()
