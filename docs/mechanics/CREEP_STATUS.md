@@ -1,0 +1,25 @@
+# Creep freeze and pending-slow screen pass
+
+R115 reconstructs a bounded status overlay. Full offline fidelity remains incomplete.
+
+The preserved 1.14 `CCreep::Render` at `0x7f5c8` draws both normal animation layers, then optional additive hit frames, then the status frames. A status pass is active outside states2/3 when `+0x208 > 0` or `+0x230 > 0`. These fields are the freeze countdown and pending slowdown multiplier. The latter is consumed/reset by `ProcessSpeed0x7a924`; it is not the already-consumed movement multiplier. The reconstruction bridges the existing freeze timer and `slow_pending` field. Complete freeze/slow lifecycle equivalence remains separate.
+
+The status blend is `ONE, ONE_MINUS_SRC_COLOR`. Its RGBA coefficient is `float32(0.5 + float32(light * 0.5))`, including aircraft. It directly calls `RenderFrame` for the primary animator and, when the corner fields and nonzero secondary alpha permit it, the secondary animator. Those direct calls do not apply animator opacity. Both normal frames precede either status frame. Existing frame positions, rotations, scales and original asset proportions remain unchanged.
+
+`native_creep_status_reference.py` executes the full original creep renderer and non-interpolating animator renderer against576 supplied records. Animator update/frame emission, shadow, particles and GPU are explicit recording stubs. The original executable hash is checked. The source unit consumes160 actual status frame calls and checks1,587 normal/screen frame pairs, for6,107 checks. No whole-app or original-GPU execution is implied.
+
+## Per-command compositing
+
+Godot's Compatibility canvas renderer implements its LCD rectangle command with a constant-color source factor and `ONE_MINUS_SRC_COLOR`. Its LCD shader takes texture RGB times modulation alpha when stored texture alpha is1. With white modulation RGB, this implements `T + D*(1-T)` per drawing command. It leaves status submission between the owner's body and later missiles/health/actors, without moving overlays to a global top layer. This is verified against the pinned Godot4.7.2 renderer; other renderers are not covered. [Godot GLES canvas implementation](https://github.com/godotengine/godot/blob/master/drivers/gles3/rasterizer_canvas_gles3.cpp), [canvas shader](https://github.com/godotengine/godot/blob/master/drivers/gles3/shaders/canvas.glsl).
+
+The importer decodes original CgBI atlases without unpremultiplying, retains their RGB bytes and sets derived storage alpha to255. Standard PNG sources are premultiplied before this conversion.35 derived atlases contain6,848,768 pixels, including701,537 source pixels with partial alpha. `verify_status_assets.py` checks every RGB byte and opaque storage alpha. It shares the preserved-file decoder with the importer; this is an asset-integrity check, not an independent decoder or GPU proof. Normal textures are unchanged. Both normal and screen frames use the same crop/rotation/flip/offset resolver, with separate immutable caches.
+
+The first standalone native color probe covers sixteen coefficient/background combinations. Its maximum observed deviation from the continuous RGB formula is below one8-bit step. The packaged fixture also checks zero, partial and full RGB terms, and exact later-actor coverage. A one-byte formula bound describes fixed-function RGBA8 rounding; it is not a relaxed original-device pixel-equivalence threshold.
+
+## Remaining differences
+
+Additive hit flashes (`+0x334`, `ONE,ONE`, coefficient0.2) are still unresolved. Full animator interpolation, status lifecycle, owner/global/death ordering, registry ties and original-device/version/raster parity remain open. The source fixture supplies animation/resource records and does not execute the original room or texture loader. The native frozen poses are controlled reconstruction checks, not equivalent-input acceptance against the iPad video.
+
+All ten final r115 packaged suites pass, with444 presentation checks/162 PNGs. All ten new full-resolution status poses were inspected; the final files are byte-identical to the inspected intermediate status poses. The192-channel formula maximum is0.762745800599746 byte. The actual later tower covers2,687 of2,763 overlapping pixels exactly; same freeze/slow body states produce exact full-frame RGBA. All protected saves and4,035 original hashes remain unchanged.
+
+The first source-unit attempt compared JSON float arrays to integer arrays and failed; numeric fields are now explicitly consumed as integers. The first native overlap fixture omitted prepared animation records and reversed build arguments; it failed the unchanged overlap gate. An intermediate all-ten run passed, but comparison with earlier captures exposed a20-credit test-budget leak. The final fixture restores its synthetic build budget and148 earlier nontransition PNGs are byte-identical. The four randomized transition frames retain their separate inspection scope. All failures and intermediate app/evidence are retained under builds/freeze-r115-first-failure, freeze-r115-intermediate and freeze-r115-probe.

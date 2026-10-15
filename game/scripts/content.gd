@@ -13,6 +13,7 @@ var interface_tutorials: Dictionary
 var particles: Dictionary
 var texture_cache: Dictionary = {}
 var source_image_cache: Dictionary = {}
+var screen_textures:Dictionary
 var frame_cache: Dictionary = {}
 var frame_lookup_tables:Dictionary={}
 var reference_frame_lookup=false
@@ -34,6 +35,7 @@ func _ready() -> void:
 	catalog = read_json("res://data/catalog.json")
 	maps = read_json("res://data/maps.json")
 	animations = read_json("res://data/animations.json")
+	screen_textures = read_json("res://data/screen_textures.json")
 	static_resources = read_json("res://data/static_resources.json")
 	menu_layout = read_json("res://data/menu_layout.json")
 	tutorial_layout = read_json("res://data/tutorial_layout.json")
@@ -147,15 +149,16 @@ func extra_frame(set_name: String, name: String, variation: String = "") -> Dict
 	frame_cache[key] = value
 	return value
 
-func frame(set_name: String, state_name: String, index: int = 0, variation: String = "") -> Dictionary:
+func frame(set_name: String, state_name: String, index: int = 0, variation: String = "", screen_pass:bool=false) -> Dictionary:
 	if reference_frame_lookup:
 		if probe_frame_lookup:frame_lookup_usage.reference+=1
-		return frame_reference(set_name,state_name,index,variation)
+		return frame_reference(set_name,state_name,index,variation,screen_pass)
 	# Imported animation declarations are immutable during a running game.
 	# Retain their normalized-index lookup once; textures remain lazily loaded
 	# by the original resolver and the returned frame Dictionary is unchanged.
-	var group=frame_lookup_tables.get(set_name)
-	if group==null:group={};frame_lookup_tables[set_name]=group
+	var lookup_key=set_name+"@screen" if screen_pass else set_name
+	var group=frame_lookup_tables.get(lookup_key)
+	if group==null:group={};frame_lookup_tables[lookup_key]=group
 	var states=group.get(state_name)
 	if states==null:states={};group[state_name]=states
 	var descriptor=states.get(variation)
@@ -171,12 +174,12 @@ func frame(set_name: String, state_name: String, index: int = 0, variation: Stri
 	var wrapped=posmod(index,int(descriptor.count))
 	var value=descriptor.frames[wrapped]
 	if value==null:
-		value=frame_reference(set_name,state_name,index,variation)
+		value=frame_reference(set_name,state_name,index,variation,screen_pass)
 		descriptor.frames[wrapped]=value
 	if probe_frame_lookup:frame_lookup_usage.cached+=1
 	return value
 
-func frame_reference(set_name: String, state_name: String, index: int = 0, variation: String = "") -> Dictionary:
+func frame_reference(set_name: String, state_name: String, index: int = 0, variation: String = "", screen_pass:bool=false) -> Dictionary:
 	if not animations.has(set_name): return {}
 	var source = animations[set_name]
 	var state = source.states.get(state_name, source.states.get("Idle", {}))
@@ -186,9 +189,11 @@ func frame_reference(set_name: String, state_name: String, index: int = 0, varia
 	# A long-running loop must reuse the same texture for the same authored frame.
 	index = posmod(index, count)
 	var cache_key = "%s:%s:%d:%s" % [set_name, state.get("name", state_name), index, variation]
+	if screen_pass:cache_key+="@screen"
 	if frame_cache.has(cache_key): return frame_cache[cache_key]
 	var resource = source.resources.get(str(int(state.get("res_id", 1))), {})
 	var path = resource.get("variations", {}).get(variation, resource.get("texture", ""))
+	if screen_pass:path=screen_textures.get(path,"")
 	var texture = tex(path)
 	if texture == null: return {}
 	var fw = int(resource.get("frame_width", texture.get_width()))
@@ -201,6 +206,7 @@ func frame_reference(set_name: String, state_name: String, index: int = 0, varia
 		if f.has("res_id"):
 			resource = source.resources.get(str(int(f.res_id)), resource)
 			path = resource.get("variations", {}).get(variation, resource.get("texture", ""))
+			if screen_pass:path=screen_textures.get(path,"")
 			texture = tex(path)
 			if texture == null: return {}
 			fw = int(resource.get("frame_width", texture.get_width()))

@@ -470,6 +470,22 @@ def run():
     particles = {'systems': {}, 'bindings': {}}
     runtime_sizes = {path: size for path, size in images.values()}
     gray_images = {}
+    screen_textures = {}
+    def screen_texture(texture):
+        if not texture or texture in screen_textures: return
+        source = next(Path(a["selected"]) for a in manifest if a.get("runtime") == texture)
+        data = source.read_bytes()
+        if b"CgBI" in data[:40]: image = cgbi_image(data, unpremultiply=False)
+        else:
+            straight = decode(source)
+            image = Image.frombytes("RGBA", straight.size, bytes(v for pixel in straight.getdata() for v in tuple((n*pixel[3]+127)//255 for n in pixel[:3])+(pixel[3],)))
+        # Keep exact source premultiplied RGB. LCD requires opaque storage;
+        # the per-draw coefficient is carried separately in modulation alpha.
+        image.putalpha(255)
+        derived = OUT / "derived/screen" / Path(texture).relative_to("assets")
+        derived.parent.mkdir(parents=True,exist_ok=True)
+        image.save(derived,compress_level=6)
+        screen_textures[texture] = derived.relative_to(GAME).as_posix()
     def gray_texture(texture, percentage=1.0):
         key=(texture,percentage)
         if key not in gray_images:
@@ -509,6 +525,8 @@ def run():
             item["texture"] = image_ref(parent, str(item.get("filename", "")))
             item['texture_width'], item['texture_height'] = runtime_sizes.get(item['texture'], (0, 0))
             item["variations"] = {v.findtext("name"): image_ref(parent, v.findtext("filename", "")) for v in r.findall("variations/v")}
+            if key.startswith("creeps/"):
+                for texture in [item["texture"], *item["variations"].values()]: screen_texture(texture)
             resources[str(item.get("id", 1))] = item
         states = {}
         for anim in xml.findall("animations/anim"):
@@ -700,6 +718,7 @@ def run():
         'credits': interface_layout('CreditsViewController.nib', 18, ('creditsLabelsView',)),
     })
     save_json(DATA / "maps.json", maps)
+    save_json(DATA / "screen_textures.json", screen_textures)
     save_json(DATA / "animations.json", animations)
     save_json(DATA / "particles.json", particles)
     save_json(DATA / "static_resources.json", static_resources)

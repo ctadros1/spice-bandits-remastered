@@ -79,6 +79,9 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.initial_delay=app.result_initial_delay
 		record.result_clock=app.result_clock.duplicate(true)
 		record.limit="Forced8XP/3sp renderer sequence, original unscaled room delay preserved. No earned rewards, original RNG or device-pixel equivalence."
+	if name.begins_with("creep-status"):
+		record.status=app.sim.enemies.map(func(e):return {"id":e.id,"state":e.state,"light":e.draw_light,"freeze_remaining":app.sim.freeze_until-app.sim.clock_ms,"slow_pending":e.slow_pending,"coefficient":app.CreepStatus.coefficient(e.draw_light),"active":app.CreepStatus.active(e.state,app.sim.freeze_until-app.sim.clock_ms,e.slow_pending),"layers":app.CreepStatus.layers(e.visual_layers).size()})
+		record.limit="Supplied status states and original direct-frame screen pass. Full lifecycle/additive hit/GPU equivalence remain open."
 	if name.begins_with("creep-light"):
 		record.creep_lights=app.sim.enemies.map(func(e):
 			var tint=app.creep_body_tint(e)
@@ -871,8 +874,67 @@ func run() -> void:
 	var dark_ground=get_viewport().get_texture().get_image()
 	lit_ground.draw_light=1
 	await snapshot("creep-light-ground-100")
+	preload("res://scripts/creep_view.gd").update(app.sim,lit_ground)
+	check(lit_ground.visual_layers.size()==2,"controlled status actor has both original animation records")
+	# Screen compositing is checked before later actors, with true source
+	# premultiplied RGB and zero/partial/full opacity edges.
 	var bright_ground=get_viewport().get_texture().get_image()
 	check(dark_ground.get_region(depth_rect).get_data()!=bright_ground.get_region(depth_rect).get_data(),"native ground artwork responds to original scalar light")
+	var status_plate=preload("res://scripts/creep_status_fixture.gd").new();app.add_child(status_plate)
+	await snapshot("creep-status-blend-plate")
+	var status_formula=status_plate.audit(get_viewport().get_texture().get_image(),app.get_viewport().get_stretch_transform())
+	check(status_formula.sampled_rgb_channels==192 and status_formula.maximum_formula_byte_error<=1.0,"native status screen matches independent RGB equation within one8bit rounding step")
+	check(status_formula.later_actor_exact_cover,"later actor exactly covers every status swatch")
+	captures[-1].screen_formula=status_formula
+	app.remove_child(status_plate);status_plate.free()
+	app.sim.enemies.clear()
+	await snapshot("creep-status-background")
+	var status_background=get_viewport().get_texture().get_image()
+	app.sim.enemies.append(lit_ground)
+	lit_ground.draw_light=0.3
+	await snapshot("creep-status-normal-030")
+	app.sim.freeze_until=app.sim.clock_ms+1000
+	await snapshot("creep-status-freeze-030")
+	var status_frozen=get_viewport().get_texture().get_image()
+	lit_ground.draw_light=1
+	await snapshot("creep-status-freeze-100")
+	app.sim.freeze_until=0;lit_ground.draw_light=.3;lit_ground.slow_pending=.5
+	await snapshot("creep-status-slow-030")
+	check(status_frozen.get_data()==get_viewport().get_texture().get_image().get_data(),"same source freeze and pending-slow predicates produce exact complete-frame RGBA")
+	lit_ground.slow_pending=-1
+	var initial_layers=lit_ground.visual_layers.duplicate(true)
+	lit_ground.visual_layers[0].alpha=0
+	app.sim.freeze_until=app.sim.clock_ms+1000
+	await snapshot("creep-status-zero-primary")
+	lit_ground.visual_layers=initial_layers.duplicate(true)
+	lit_ground.visual_layers[0].alpha=.4;lit_ground.visual_layers[1].alpha=.6
+	await snapshot("creep-status-secondary")
+	lit_ground.visual_layers=initial_layers
+	# Put a later ground actor across the frozen creep; the normal sorted
+	# traversal, screen overlay and health all remain in the same CanvasItem.
+	var status_budget=app.sim.money
+	var cover_position=lit_ground.pos+Vector2(0,12)
+	app.sim.build(app.sim.nearest(cover_position),1)
+	check(app.sim.towers.size()==1,"controlled overlap legally builds its one covering tower")
+	var cover_tower=app.sim.towers[-1];cover_tower.pos=cover_position;cover_tower.born_ms=app.sim.clock_ms-1000;cover_tower.foundation_ms=app.sim.clock_ms-1000
+	await snapshot("creep-status-tower-cover")
+	var status_cover=get_viewport().get_texture().get_image()
+	app.sim.enemies.clear()
+	await snapshot("creep-status-tower-only")
+	var status_tower=get_viewport().get_texture().get_image()
+	var status_overlap=0;var status_covered=0
+	for y in range(depth_rect.position.y,status_cover.get_height()):
+		for x in range(status_cover.get_width()):
+			var bg=status_background.get_pixel(x,y);var creep=status_frozen.get_pixel(x,y);var tower=status_tower.get_pixel(x,y)
+			if creep==bg or tower==bg or creep==tower:continue
+			status_overlap+=1
+			if status_cover.get_pixel(x,y)==tower:status_covered+=1
+	check(status_overlap>=10 and status_covered>=10,"later ground tower exactly covers overlapping frozen creep pixels")
+	captures[-1].status_overlap={"overlapping_pixels":status_overlap,"covered_pixels":status_covered}
+	app.sim.freeze_until=0
+	app.sim.money=status_budget
+	check(app.sim.money==status_budget,"status overlap fixture restores its battle budget before subsequent poses")
+	app.sim.towers.clear()
 	app.sim.enemies.clear()
 	var lit_air=app.sim.spawn_enemy(2,0,"",931,false)
 	lit_air.pos=lit_ground.pos;lit_air.visual_pos=lit_air.pos;lit_air.draw_light=0.3

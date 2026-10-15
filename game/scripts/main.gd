@@ -23,6 +23,7 @@ const RewardClockView = preload("res://scripts/reward_clock_view.gd")
 const RewardView = preload("res://scripts/reward_view.gd")
 const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
 const CreepLight = preload("res://scripts/creep_light_view.gd")
+const CreepStatus = preload("res://scripts/creep_status_view.gd")
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
 const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
@@ -3169,9 +3170,6 @@ func creep_layers(e:Dictionary,states:Dictionary) -> Array:
 	return e.get("visual_layers",[{"state":state,"rotation":0.0,"alpha":1.0,"born":e.born_ms}])
 
 func creep_body_tint(e:Dictionary,alpha:float=1) -> Color:
-	# Preserve the existing freeze approximation until its complete original
-	# status overlay is reconstructed; normal body RGB follows source light.
-	if sim.clock_ms<sim.freeze_until:return Color(0.55,0.9,1.0,alpha)
 	return CreepLight.body_color(uses_air_pass(e),float(e.get("draw_light",1)),alpha)
 
 func creep_animator_position(e:Dictionary) -> Vector2:
@@ -3203,6 +3201,19 @@ func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 		draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
 		sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
 		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	if CreepStatus.active(int(e.get("state",0)),sim.freeze_until-sim.clock_ms,float(e.get("slow_pending",-1))):
+		var coefficient=CreepStatus.coefficient(float(e.get("draw_light",1)))
+		for layer in CreepStatus.layers(layers):
+			var rate=float(states.get(layer.state,{}).get("speed",8))
+			var frame=0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*rate/1000.0)
+			var image=Content.frame(set_name,layer.state,frame,str(e.def.get("color","")),true)
+			if image.is_empty():continue
+			var texture:Texture2D=image.texture
+			draw_set_transform(map_origin()+animator_position*scale,deg_to_rad(float(layer.rotation)),Vector2.ONE*scale)
+			# LCD's white CONSTANT_COLOR and ONE_MINUS_SRC_COLOR implement
+			# the source screen blend per command, between this body and HP.
+			CreepStatus.draw(self,texture,Rect2((-texture.get_size()/2+image.offset)*native_scale,texture.get_size()*native_scale),coefficient)
+			draw_set_transform(map_origin(),0,Vector2.ONE*scale)
 	# Original full Render routes flag+a0 after this owner's body, before HP.
 	for missile in owner_missiles:draw_enemy_missile(missile,scale)
 	var health=creep_health_layout(e) if float(e.hp)<int(e.max_hp) else {}

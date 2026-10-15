@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (152 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (162 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -207,6 +207,17 @@ def main():
             required.update({'air-depth-overlap','air-depth-reversed-input','air-depth-lifted-ground'})
             required.update({'selection-range-ground','selection-range-fading'})
             required.update({'creep-depth-overlap','creep-depth-reversed-input'})
+            status_expected = {'creep-status-background', 'creep-status-tower-only', 'creep-status-blend-plate', 'creep-status-normal-030', 'creep-status-freeze-030', 'creep-status-freeze-100', 'creep-status-slow-030', 'creep-status-zero-primary', 'creep-status-secondary', 'creep-status-tower-cover'}
+            required.update(status_expected)
+            status_poses = {c['name']: c for c in manifest['captures'] if c['name'] in status_expected}
+            formula = status_poses.get('creep-status-blend-plate', {}).get('screen_formula', {})
+            fresh = fresh and formula.get('sampled_rgb_channels') == 192 and formula.get('maximum_formula_byte_error', 999) <= 1.0 and formula.get('later_actor_exact_cover') is True
+            overlap = status_poses.get('creep-status-tower-only', {}).get('status_overlap', {})
+            fresh = fresh and all(overlap.get(k, 0) >= 10 for k in ('overlapping_pixels', 'covered_pixels'))
+            for status_name in status_expected - {'creep-status-background', 'creep-status-tower-only', 'creep-status-blend-plate'}:
+                states = status_poses.get(status_name, {}).get('status', [])
+                fresh = fresh and len(states) == 1 and states[0]['active'] == (status_name != 'creep-status-normal-030')
+                fresh = fresh and states[0]['layers'] == (2 if status_name == 'creep-status-secondary' else 1)
             required.update({'creep-light-ground-030','creep-light-ground-100','creep-light-air-030','creep-light-air-100'})
             light_poses = {c['name']:c.get('creep_lights', []) for c in manifest['captures'] if c['name'].startswith('creep-light-')}
             for pose, value in [('creep-light-ground-030', 0.3),('creep-light-ground-100', 1),('creep-light-air-030', 1),('creep-light-air-100', 1)]:
