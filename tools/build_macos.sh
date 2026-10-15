@@ -45,6 +45,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_owner_ui_verify.gd" -- --qa > builds/creep-owner-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_missile_ui_verify.gd" -- --qa > builds/creep-missile-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/magic_depth_ui_verify.gd" -- --qa > builds/magic-depth-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/frame_lookup_ui_verify.gd" -- --qa > builds/frame-lookup-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/selection_ui_verify.gd" -- --qa > builds/selection-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/bolt_clock_ui_verify.gd" -- --qa > builds/bolt-clock-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/magic_view_ui_verify.gd" -- --qa > builds/magic-view-verification.log 2>&1

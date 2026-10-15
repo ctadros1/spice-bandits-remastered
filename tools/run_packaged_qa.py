@@ -167,6 +167,17 @@ def main():
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
         fresh = fresh and record['captures'] == (137 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
+            frame_comparisons=manifest.get('frame_lookup_comparisons',[])
+            record['frame_lookup_comparisons']=frame_comparisons
+            fresh=fresh and len(frame_comparisons)==3
+            for comparison in frame_comparisons:
+                usage=comparison.get('usage',{})
+                fresh=fresh and comparison.get('exact_rgba',False) and comparison.get('reference_error')==0 and comparison.get('prepared_error')==0
+                fresh=fresh and min(usage.get('cached',0),usage.get('reference',0))>0
+                for key in ['reference','prepared']:
+                    path=directory/comparison[key]
+                    fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns
+                    if path.exists():comparison[key+'_sha256']=digest(path)
             comparisons=manifest.get('creep_layer_comparisons',[])
             record['creep_layer_comparisons']=comparisons
             fresh=fresh and len(comparisons)==3

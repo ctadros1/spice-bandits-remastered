@@ -1,6 +1,9 @@
 # Verification record
 
-Latest fully verified package r110 passes all ten native suites:392 presentation checks/130 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting, textured enemy health bars and live-owner missile phase routing and placement phase are restored within recovered-code bounds. Offline fidelity remains incomplete.
+Latest fully verified package r112 passes all ten native suites: 404 presentation checks/137 PNGs, 73 audio checks/23 WAVs and the unchanged live performance gate. Registered mine depth and portal drawing phases are restored within recovered-code bounds. Offline fidelity remains incomplete.
+
+R112 prepares immutable animation-frame lookup tables and retains the original resolver and lazy texture creation. All 3,921 source comparisons pass across 108 animation sets and 345 state requests. A warmed ABBA lookup-only CPU check measures reference1.646/1.760µs versus prepared0.716/0.691µs. Native live medians/p95: 1×25.417/27.615, 2×26.648/30.514, 4×32.054/36.279, world6.644/13.640ms. The33.34ms median gate is unchanged; zero stalled frames and nine frozen full-RGBA pairs pass with actual draws on both paths.375 counted PNGs plus21 supplemental,23 WAVs; protected saves/resources/package/signature/isolation/cleanup pass. The45-pair/90-frame comparison retains12 sheets byte-identical to reviewed r110;133 presentation PNGs match r111, with four separately reviewed transition poses. Earlier r111 failure/package/source remain retained. These results establish this package on Apple Silicon, not original-device equivalence, Intel, physical input, speaker listening or notarized distribution. Evidence: builds/frame-lookup-r112-native-suites.json; package PCK `fea7d262ac15a32067e0e5135ad95ce7c7f0e12f19da907ba678a28ba27bb85f`.
+
 
 ## R106 XP emission and native audio capture
 

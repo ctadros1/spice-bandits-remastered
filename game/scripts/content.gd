@@ -14,6 +14,10 @@ var particles: Dictionary
 var texture_cache: Dictionary = {}
 var source_image_cache: Dictionary = {}
 var frame_cache: Dictionary = {}
+var frame_lookup_tables:Dictionary={}
+var reference_frame_lookup=false
+var probe_frame_lookup=false
+var frame_lookup_usage={"cached":0,"reference":0}
 var interface_materials: Dictionary = {}
 
 func interface_material(variant:String) -> ShaderMaterial:
@@ -144,6 +148,35 @@ func extra_frame(set_name: String, name: String, variation: String = "") -> Dict
 	return value
 
 func frame(set_name: String, state_name: String, index: int = 0, variation: String = "") -> Dictionary:
+	if reference_frame_lookup:
+		if probe_frame_lookup:frame_lookup_usage.reference+=1
+		return frame_reference(set_name,state_name,index,variation)
+	# Imported animation declarations are immutable during a running game.
+	# Retain their normalized-index lookup once; textures remain lazily loaded
+	# by the original resolver and the returned frame Dictionary is unchanged.
+	var group=frame_lookup_tables.get(set_name)
+	if group==null:group={};frame_lookup_tables[set_name]=group
+	var states=group.get(state_name)
+	if states==null:states={};group[state_name]=states
+	var descriptor=states.get(variation)
+	if descriptor==null:
+		if not animations.has(set_name):return {}
+		var source=animations[set_name]
+		var state=source.states.get(state_name,source.states.get("Idle",{}))
+		if state.is_empty():return {}
+		var added=state.get("resolved_frames",state.get("added_frames",[]))
+		var count=maxi(1,added.size() if not added.is_empty() else int(state.get("frames",1)))
+		var frames=[];frames.resize(count)
+		descriptor={"frames":frames,"count":count};states[variation]=descriptor
+	var wrapped=posmod(index,int(descriptor.count))
+	var value=descriptor.frames[wrapped]
+	if value==null:
+		value=frame_reference(set_name,state_name,index,variation)
+		descriptor.frames[wrapped]=value
+	if probe_frame_lookup:frame_lookup_usage.cached+=1
+	return value
+
+func frame_reference(set_name: String, state_name: String, index: int = 0, variation: String = "") -> Dictionary:
 	if not animations.has(set_name): return {}
 	var source = animations[set_name]
 	var state = source.states.get(state_name, source.states.get("Idle", {}))
