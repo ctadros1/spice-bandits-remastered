@@ -1,0 +1,79 @@
+{
+  "verified_at": "2026-10-15T09:37:14.712470+00:00",
+  "private": true,
+  "release_id": 413631085,
+  "target_commitish": "6d067b0b5d807d4cf1b24499a6ad20c8b61853c7",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r100-macOS.zip",
+      "bytes": 324951592,
+      "sha256": "04b30774934836f776fa1ba2d8cbba7840fba3eb99f2aabac7939798cb8df78a"
+    },
+    {
+      "name": "r100-verification-evidence.tar.gz",
+      "bytes": 542336320,
+      "sha256": "5a5f76c69f92f139d934c95ea6ae782e9adfdcf7519c56f1384a369d51f4871e"
+    },
+    {
+      "name": "r100-package-restoration.zip",
+      "bytes": 1518978,
+      "sha256": "e767a478430765f69d9d36c64f209bcf30bbd50a64b757a717c04be36d455b49"
+    },
+    {
+      "name": "r100-source.patch",
+      "bytes": 847711,
+      "sha256": "f00c8c1ff7251ef9933f90046addfa224f53b46bbef312cecb019399bb81ec21"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 6308,
+      "sha256": "8174f418227cac0da1ffcdcb262dcf05b2384ff94a076c8c02355b3f44fa5778"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 897,
+      "sha256": "e2f07e037020f44b7369f6743093045eedc26ba46c313d8186f1994e6d1ddb4e"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 88046,
+      "sha256": "237b8b4b3ec5287e964267febb4d601e581874f538120f3bb9717359af2f9c8f"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1330,
+      "sha256": "bf566d4849f88a3bb4a48cff411469374415b3752755e9674b850c52fd71f02d"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "source_commit_created": false,
+  "signing_pending": true,
+  "checkpoint": "r100",
+  "created_utc": "2026-10-15T09:30:21.617661+00:00",
+  "private_repository": "ctadros1/spice-bandits-remastered",
+  "git_base": "6d067b0b5d807d4cf1b24499a6ad20c8b61853c7",
+  "git_signing_pending": true,
+  "source_patch_restored_exactly": true,
+  "source_files": 25,
+  "all_ten_native_suites_passed": true,
+  "pck_sha256": "df9dea1b422a7e12104e6f7cdb67f298fba27c20d69e66c7cbc285f8b1b7351b",
+  "executable_sha256": "ebd32a9334652ff83185ad7d10d7bccdfcaab10db7e0abbbde1ffd1cfba4b3d8",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "418d65538e54dc88edf74297c3fde790d6949c85f68513ed536e203a759bd9a5"
+  },
+  "evidence_files_verified": 506,
+  "zip_crc_and_empty_directory_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "comparison_pairs": 41,
+  "frozen_comparison_frames": 82,
+  "comparison_sheets_inspected": 11,
+  "offline_complete": false,
+  "scope": "Supplement to earlier full workspace snapshot. All changed working source is recoverable over the signed r98 base. Local Git signature/history awaits 1Password; no signing settings changed. Universal2 compiled; native execution is Apple Silicon. No Finder/Gatekeeper/notarization, Intel, physical input or original-device equivalence claim.",
+  "release_tag": "backup-2026-10-15-r100",
+  "published": true,
+  "prerelease": true,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r100",
+  "source_patch_base": "6d067b0b5d807d4cf1b24499a6ad20c8b61853c7",
+  "patch_scope": "Full r99+r100 working source; apply directly to signed r98. Do not apply r99 patch first. Later r101 edits excluded."
+}

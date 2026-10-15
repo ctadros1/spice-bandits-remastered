@@ -40,8 +40,12 @@ def main():
         ('Training option',105,'presentation-gallery','tutorial-modes','Single mode, glow, camera and original world chrome.'),
         ('Desert mode fan',308,'presentation-gallery','desert-modes','Fan, icons, masks, locks and original world chrome.'),
         ('Desert story',311,'presentation-gallery','desert-story','Unstretched story art and original strips/text; glows remain open.'),
-        ('Reward growth',281,'presentation-gallery','result-400','Forced XP fixture, no earned rewards; compare bar geometry/reveal.'),
-        ('Spice reveal',285,'presentation-gallery','result-spice-555','Forced result amount, different animation age; short burst and preserved sound are separately checked.'),
+        ('XP reveal at0.90s',280.280000,'presentation-gallery','result-room-090','Forced8XP/3sp, inherited room timer. Approximate alignment to first visible XP fill; different actions, earlier version and particle RNG.','builds/reference/reward-onsets-r103/frame-0039.jpg'),
+        ('XP growth at1.50s',280.880600,'presentation-gallery','result-room-150','Approximate fill-onset alignment; original pixels remain unwarped. Compare cloud/bar proportions, not a pixel score.','builds/reference/reward-onsets-r103/frame-0057.jpg'),
+        ('XP growth at2.40s',281.781500,'presentation-gallery','result-room-240','Same forced8XP target; particle RNG and exact first emission differ or remain unverified.','builds/reference/reward-onsets-r103/frame-0084.jpg'),
+        ('After XP at3.60s',282.982700,'presentation-gallery','result-room-360','Approximate phase alignment; no rewards earned by this renderer pose.','builds/reference/reward-onsets-r103/frame-0120.jpg'),
+        ('Spice reveal at4.20s',283.583300,'presentation-gallery','result-room-420','Inherited room clock; compare entering spice text and burst. Earlier recording and exact emitter onset remain separate.','builds/reference/reward-onsets-r103/frame-0138.jpg'),
+        ('Spice settled at4.80s',284.183900,'presentation-gallery','result-room-480','Forced3sp matches recorded amount; compare settled geometry. No original text raster or RNG equivalence.','builds/reference/reward-onsets-r103/frame-0156.jpg'),
         ('Electricity',236,'presentation-gallery','active-defense','Synthetic single ribbon versus actual combat; no equivalent input/RNG.'),
         ('Tech Shop',649,'menu-gallery','shop-fresh','Different progression and selection; compare original panel/grid.'),
         ('Shop selection',657,'menu-gallery','shop-selected-owned','Synthetic stock/unlocks; compare selection and description.'),
@@ -62,7 +66,7 @@ def main():
         sheet=Image.new('RGB',(1040,1408),'#16191f');draw=ImageDraw.Draw(sheet)
         for index,row in enumerate(rows[offset:offset+4]):
             name,second,gallery,capture,limit=row[:5]
-            reference=BUILD/'reference/dense'/row[5] if len(row)==6 else BUILD/'reference/dense/clip-2'/f'{second:05d}.jpg'
+            reference=(ROOT/row[5] if row[5].startswith('builds/') else BUILD/'reference/dense'/row[5]) if len(row)==6 else BUILD/'reference/dense/clip-2'/f'{second:05d}.jpg'
             reference_time=second if len(row)==6 else second-0.5
             current=BUILD/gallery/(capture+'.png')
             assert reference.exists() and current.exists()

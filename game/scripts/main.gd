@@ -185,6 +185,8 @@ var reward_bar_emitting=false
 var result_previous_xp=0.0
 var result_clock:Dictionary={}
 var result_clock_age=0.0
+var result_closed_delay=0.0
+var result_initial_delay=0.0
 var transition
 var map_underlay
 
@@ -1496,6 +1498,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	magic_shortcuts.resize(4)
 	result_started=-1.0
 	result_clock={};result_clock_age=0.0
+	result_closed_delay=0.0;result_initial_delay=0.0
 	result_previous_xp=float(Profile.data.xp)
 	battle_medals.clear()
 	battle_spice_reward=int(Content.catalog.tower_rewards.sp_other if Profile.data.completed.has(id) else Content.catalog.tower_rewards.sp_first)
@@ -2037,18 +2040,27 @@ func results_origin() -> Vector2:
 	# CWinLoseScreen constructor0xb959c and Render0xb9a60 center647x512.
 	return (view_center()-Vector2(323,256)).floor()
 
+func advance_closed_result_clock(dt_ms:float) -> void:
+	# The original room updates its closed result screen with unscaled time.
+	# Its constructor initializes this timer; Open does not reset it.
+	if screen!="game" or sim==null or sim.paused or sim.outcome!="playing":return
+	var dt=RewardClockView.f32(dt_ms)
+	result_closed_delay=RewardClockView.f32(result_closed_delay+RewardClockView.f32(dt*RewardClockView.f32(0.001)))
+
 func sync_result_clock() -> void:
-	if result_started<0:result_started=elapsed_ui
+	if result_started<0:
+		result_started=elapsed_ui;result_initial_delay=result_closed_delay
 	var age=maxf(0,elapsed_ui-result_started)
 	if result_clock.is_empty() or age<result_clock_age:
-		result_clock=RewardClockView.initial();result_clock_age=0.0
+		result_clock=RewardClockView.initial(result_initial_delay);result_clock_age=0.0
 	var dt=maxf(0,age-result_clock_age)*1000.0
 	if dt>0:RewardClockView.advance(result_clock,dt,sim.outcome=="victory")
 	result_clock_age=age
 
-func pose_result(age:float) -> void:
+func pose_result(age:float,initial_delay:float=0) -> void:
 	if not test_session:return
-	result_clock=RewardClockView.initial();result_clock_age=0
+	result_initial_delay=initial_delay
+	result_clock=RewardClockView.initial(initial_delay);result_clock_age=0
 	while result_clock_age<age:
 		var delta=minf(0.03,age-result_clock_age)
 		RewardClockView.advance(result_clock,delta*1000.0,sim.outcome=="victory");result_clock_age+=delta
@@ -2325,6 +2337,7 @@ func _process(delta: float) -> void:
 	if screen=="world":world_blades.advance(delta*1000.0)
 	world_clouds.advance(delta*1000.0 if screen=="world" else 0.0)
 	elapsed_ui += delta
+	advance_closed_result_clock(delta*1000.0)
 	if screen=="game" and sim!=null and not sim.paused:ClassicUI.Wallet.flash_advance(hud_money_flash,delta*1000.0*speed)
 	if screen=="menu" and not is_instance_valid(startup):advance_main_menu_presentation(delta)
 	if screen=="upgrades":advance_upgrade_presentation(delta)
@@ -2927,6 +2940,15 @@ func creep_depth(enemy:Dictionary) -> float:
 func battle_air_objects() -> Array:
 	return sim.enemies.filter(func(e):return uses_air_pass(e))
 
+func enemy_missile_passes() -> Dictionary:
+	return preload("res://scripts/creep_owner_view.gd").missile_passes(sim.enemies,sim.enemy_missiles,Content.catalog.tower_creeps)
+
+func draw_enemy_missile(missile:Dictionary,scale:float) -> void:
+	var definition=Content.catalog.tower_creeps[int(missile.type)]
+	draw_set_transform(map_origin()+missile.pos*scale,deg_to_rad(float(missile.angle)-90.0),Vector2.ONE*scale)
+	if not extra_sprite("creeps/"+str(definition.filename),"missile",Vector2.ZERO):draw_circle(Vector2.ZERO,3.0,Color("#ffe3a0"))
+	draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+
 func selected_range_pose() -> Dictionary:
 	if sim==null or selected_tower<0:return {}
 	var tower=sim.find_tower(selected_tower)
@@ -3011,6 +3033,8 @@ func draw_game() -> void:
 	# CMap::DrawTowerOvalSelection0x10406c follows all ground bodies.
 	var selection=selected_range_pose()
 	if not selection.is_empty():BuildHexView.draw_oval(self,selection.position,selection.draws,1.0/scale)
+	var enemy_projectiles=enemy_missile_passes()
+	for missile in enemy_projectiles.before_air:draw_enemy_missile(missile,scale)
 	# Native air bodies follow every ground/map body, independent of Y.
 	for air in battle_air_objects():draw_creep_body(air,scale)
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
@@ -3038,11 +3062,7 @@ func draw_game() -> void:
 		draw_set_transform(map_origin()+missile.pos*scale, 0.0 if is_nuke else deg_to_rad(float(missile.angle)-90.0), Vector2.ONE*scale)
 		extra_sprite(set_name, "missile2" if is_nuke and missile.up >= 1.0 else "missile", Vector2.ZERO, "", Vector2.ONE*float(missile.scale), Color(1, 1, 1, missile.alpha))
 		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	for missile in sim.enemy_missiles:
-		var definition = Content.catalog.tower_creeps[int(missile.type)]
-		draw_set_transform(map_origin()+missile.pos*scale, deg_to_rad(float(missile.angle)-90.0), Vector2.ONE*scale)
-		if not extra_sprite("creeps/"+str(definition.filename), "missile", Vector2.ZERO): draw_circle(Vector2.ZERO, 3.0, Color("#ffe3a0"))
-		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	for missile in enemy_projectiles.ground_after:draw_enemy_missile(missile,scale)
 	for effect in effects:
 		var remaining = float(effect.until-sim.clock_ms)
 		if effect.kind == "shot":

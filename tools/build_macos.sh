@@ -40,6 +40,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/map_depth_ui_verify.gd" -- --qa > builds/map-depth-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_depth_ui_verify.gd" -- --qa > builds/creep-depth-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/air_pass_ui_verify.gd" -- --qa > builds/air-pass-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/creep_owner_ui_verify.gd" -- --qa > builds/creep-owner-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/selection_ui_verify.gd" -- --qa > builds/selection-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/bolt_clock_ui_verify.gd" -- --qa > builds/bolt-clock-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/magic_view_ui_verify.gd" -- --qa > builds/magic-view-verification.log 2>&1
@@ -65,6 +66,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/mode_item_ui_verify.gd" -- --qa > builds/mode-item-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/mode_effect_ui_verify.gd" -- --qa > builds/mode-effect-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_clock_ui_verify.gd" -- --qa > builds/reward-clock-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/result_lifecycle_ui_verify.gd" -- --qa > builds/result-lifecycle-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_geometry_ui_verify.gd" -- --qa > builds/reward-geometry-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_spice_ui_verify.gd" -- --qa > builds/reward-spice-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/tower_preview_ui_verify.gd" -- --qa > builds/tower-preview-verification.log 2>&1

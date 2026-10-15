@@ -1,0 +1,3927 @@
+{
+  "method": "Original complete creep before/after owner routing with supplied records.\n\nExecutes CCreep::RenderBefore0x7f518 and RenderAfter0x7f55c. Creep resource,\nstate, missile flags, shooter and sprite/laser vectors are explicit inputs.\nActual shooting-processor, missile, sprite and laser render methods are\nrecording stubs. No constructor, GPU, physics, lifetime, global owner order\nor complete game executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 0,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 1
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ]
+    },
+    {
+      "resource_type": 1,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 0,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 2,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 3,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": false,
+      "before": [],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": false,
+      "extras": true,
+      "before": [],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 1
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": false,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": false,
+      "extras": true,
+      "before": [
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": false,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": []
+    },
+    {
+      "resource_type": 2,
+      "state": 4,
+      "missile_flags_a0": [
+        false,
+        true,
+        false
+      ],
+      "shooter": true,
+      "extras": true,
+      "before": [
+        {
+          "method": "shooter-before"
+        },
+        {
+          "method": "missile",
+          "label": 0
+        },
+        {
+          "method": "missile",
+          "label": 2
+        }
+      ],
+      "after": [
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "sprite"
+        },
+        {
+          "method": "laser"
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

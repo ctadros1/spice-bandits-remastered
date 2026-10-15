@@ -1,5 +1,20 @@
 # Verification record
 
+Current package r103: all ten native suites pass, including344 presentation checks/113 PNGs and the unchanged live performance gate. Aircraft missile layering and the inherited result-screen timer are restored within the documented source-probe limits. Offline fidelity remains incomplete.
+
+## R103 result lifecycle and current package
+
+PCK `830fb5ba094dd42deac2b522f89dd456b46a514c5c10f71d4406d64298d7bdfe`, executable `27fe3a37cf95e443aec9d65c068a6ad62f22b77844e968e3bc394d8d203335e4`, native helper `f179861ff1fc5ce88a9de2b555d424c033459bef2f8f4d23ee2cbb9ce53911ca`.
+
+R103 preserves the original closed result-screen timer across victory. It advances with unscaled active-room time, stops during pause/loading and lets XP begin after the opening fade during a normal-length battle. Six original constructor/closed/open-update cases and24 full room-caller cases support11,038 source comparisons. The complete service/GUI-heavy Open is omitted by the probe; its opening flag is supplied. R102 also restores visible aircraft missiles before all aircraft bodies in manager/per-owner order, supported by192 original owner cases/464 callbacks and421 source checks. Original missile suppression/lifetime, ground double-after and full owner/preview/global effects remain open.
+
+All ten r103 native suites pass on one frozen package: presentation344/113 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live1×24.544ms median/26.312ms p95,2×25.353/31.112 and4×31.509/34.438 meet the unchanged33.34ms median gate; world6.676/13.749 passes. All live/input-isolation guards pass with zero stalled frames. Three mesh/direct particle and three old/prepared creep-layer/completed-growth frozen pairs match exact RGBA.351 counted PNGs/23 WAVs retain15 supplemental frozen-comparison PNGs separately. Normal/retained-campaign saves, package resources, strict signature, isolation and process cleanup pass. Historical r101 fixture, r102 runner-count and4× performance failures remain retained; this is not original-device equivalence.
+
+The fresh r103 comparison binds45 paired states/12 inspected sheets to its PCK, executable and helper and freezes90 hashed full-resolution frame copies.180 additional unwarped original frames retain actual presentation timestamps around the tutorial result. Six result pairs use approximate phase alignment with matching8XP/3sp amounts and the inherited room timer; precise first emission/RNG and older-version differences remain open. Other tutorial input, camera, stock and portrait ages still differ. Every original fidelity checklist item remains open. builds/presentation-comparison-r103-review.json records the review; the prior r100 comparison remains separately retained.
+
+The preserved source timer and caller evidence is described in [result lifecycle](mechanics/RESULT_LIFECYCLE.md). Native evidence: builds/result-lifecycle-r103-native-suites.json. Universal2 was compiled; native execution is Apple Silicon. Physical input/speaker listening, Intel execution, notarization/Finder/Gatekeeper and original-device fidelity remain unverified. Private signed source history still reaches r98 while1Password is unavailable; r100 source recovery/package backup is verified and the r103 supplement is being prepared.
+
+
 October 13, 2026. Local reconstruction in progress; offline fidelity and full reconstruction release gates remain open.
 
 ## Latest presentation package, October15

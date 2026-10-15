@@ -60,6 +60,11 @@ func snapshot(name:String,settle_portrait:bool=true) -> void:
 		record.draw_order=app.battle_objects().filter(func(o):return o.has("tower") or o.has("enemy")).map(func(o):return {"kind":"tower" if o.has("tower") else "enemy","id":o.get("tower",o.get("enemy",{})).id,"depth":o.y})
 		record.enemies=app.sim.enemies.map(func(e):return {"id":e.id,"type":e.type,"position":[e.pos.x,e.pos.y],"drawn":[e.visual_pos.x,e.visual_pos.y],"depth":app.creep_depth(e)})
 		record.limit="Synthetic Marine/tank overlap. Original initial animation height and supplied position truncation/key are bounded ARM comparisons; full birth/corner/jitter/owner lifetime and original pixels remain open."
+	if name.begins_with("result-room"):
+		record.result_age=app.elapsed_ui-app.result_started
+		record.initial_delay=app.result_initial_delay
+		record.result_clock=app.result_clock.duplicate(true)
+		record.limit="Forced8XP/3sp renderer sequence, original unscaled room delay preserved. No earned rewards, original RNG or device-pixel equivalence."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -315,6 +320,9 @@ func run() -> void:
 	app.reward_fx.reset();app.reward_bar_emitting=false;app.result_previous_xp=0
 	app.reset_reward_bursts()
 	Profile.data.xp=8;app.battle_initial_xp=0;app.result_started=0;app.elapsed_ui=0
+	# Explicit zero-delay arithmetic fixture retained for the historical poses.
+	# The ordinary result lifecycle inherits the active room's closed timer.
+	app.result_closed_delay=0;app.result_initial_delay=0
 	app.notice_until=0;app.refresh_controls()
 	var result_control_count=app.ui.get_child_count()
 	for time in [0.5,2.0,4.0]:
@@ -352,6 +360,19 @@ func run() -> void:
 	await snapshot("result-fractional-xp")
 	check(SpiceNative.format_xp(app.displayed_xp(),false)=="10","result XP rounds fractional totals with the original libc format")
 	Profile.data.xp=fractional_xp
+	# Separate incremental sequence after an active room has already passed
+	# the two-second delay, matching the recorded normal-length battle.
+	app.elapsed_ui=0;app.result_started=-1;app.result_clock={};app.result_clock_age=0
+	app.result_closed_delay=3;app.result_initial_delay=0;app.result_previous_xp=0
+	app.reward_fx.reset();app.reward_bar_emitting=false;app.reset_reward_bursts()
+	app.battle_medals.clear();app.battle_spice_reward=3;app.refresh_controls()
+	for time in [0.5,0.72,0.9,1.5,2.4,3.0,3.6,4.2,4.8,5.4,6.0]:
+		while app.elapsed_ui<time:app._process(minf(0.03,time-app.elapsed_ui))
+		if time==0.5:check(app.result_clock.xp_phase==0,"ordinary result XP waits for the opening fade")
+		if time==0.9:check(app.result_clock.xp_phase>0 and app.result_clock.spice_phase==0,"ordinary result XP starts after fade without a new two-second delay")
+		if time==3.0:check(app.result_clock.xp_phase>1 and app.result_clock.spice_phase==0,"ordinary result completes XP before the separate spice phase")
+		if time==4.8:check(app.result_clock.spice_phase>=1 and app.reward_spice_burst,"ordinary result spice text and once-only burst reveal at the inherited clock age")
+		await snapshot("result-room-%03d"%roundi(time*100))
 	app.screen="world";app.selected_location="";app.elapsed_ui=0
 	var decor_camera=app.world_camera;var decor_zoom=app.world_zoom
 	app.world_camera=Vector2(1290,1720);app.world_zoom=0.625;app.world_decor.reset();app.world_decor_dt_ms=0
@@ -641,6 +662,35 @@ func run() -> void:
 	await snapshot("creep-depth-reversed-input")
 	var creep_after=get_viewport().get_texture().get_image()
 	check(creep_before.get_region(depth_rect).get_data()==creep_after.get_region(depth_rect).get_data(),"distinct original creep depths retain exact battle pixels when enemy input reverses")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	await snapshot("air-missile-background")
+	var missile_background=get_viewport().get_texture().get_image()
+	var missile_owner=app.sim.spawn_enemy(2,0,"",920,false)
+	missile_owner.pos=app.sim.center(7,4);missile_owner.visual_pos=missile_owner.pos;missile_owner.grow_ms=1000
+	await snapshot("air-missile-body-only")
+	var missile_body=get_viewport().get_texture().get_image()
+	app.sim.enemies.clear()
+	# Match the authored body lift; the logical ground point overlaps only
+	# this aircraft's translucent shadow, not its opaque body.
+	var aircraft_offset=missile_owner.def.traits.get("offset",[0,0])
+	var aircraft_center=missile_owner.pos+Vector2(aircraft_offset[0],aircraft_offset[1])
+	for offset in [Vector2.ZERO,Vector2(100,0)]:app.sim.enemy_missiles.append({"type":2,"owner":920,"pos":aircraft_center+offset,"angle":90.0})
+	await snapshot("air-missile-projectiles-only")
+	var missile_only=get_viewport().get_texture().get_image()
+	app.sim.enemies.append(missile_owner)
+	await snapshot("air-missile-under-body")
+	var missile_combined=get_viewport().get_texture().get_image()
+	var overlapping_pixels=0;var covered_pixels=0;var visible_pixels=0
+	for y in range(depth_rect.position.y,missile_body.get_height()):
+		for x in range(missile_body.get_width()):
+			var background=missile_background.get_pixel(x,y);var body=missile_body.get_pixel(x,y);var projectile=missile_only.get_pixel(x,y);var combined=missile_combined.get_pixel(x,y)
+			if projectile!=background and body==background and combined!=body:visible_pixels+=1
+			if body==background or projectile==background or body==projectile:continue
+			overlapping_pixels+=1
+			if combined==body:covered_pixels+=1
+	check(overlapping_pixels>=10 and covered_pixels>=10,"native opaque aircraft pixels cover overlapping aircraft missiles")
+	check(visible_pixels>=10,"native aircraft missile remains visible outside the aircraft")
+	captures[-1].overlap_probe={"overlapping_pixels":overlapping_pixels,"covered_pixels":covered_pixels,"visible_pixels":visible_pixels,"limit":"Synthetic native compositing test, not original-device pixels or missile lifetime."}
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")
