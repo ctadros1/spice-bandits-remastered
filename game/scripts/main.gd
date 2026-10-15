@@ -21,6 +21,7 @@ const ClassicUI = preload("res://scripts/classic_ui.gd")
 const MagicPanelView = preload("res://scripts/magic_panel_view.gd")
 const RewardClockView = preload("res://scripts/reward_clock_view.gd")
 const RewardView = preload("res://scripts/reward_view.gd")
+const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
 const MenuNavigation=preload("res://scripts/menu_navigation.gd")
 const MapDepth=preload("res://scripts/map_depth.gd")
@@ -182,6 +183,10 @@ var battle_spice_reward=0
 var battle_medals:Array=[]
 var loading_kind="arrival"
 var reward_bar_emitting=false
+var reward_bar_releasing=false
+var reward_bar_previous_tip=Vector2.ZERO
+var qa_result_render_count=0
+var qa_result_render_age=-1.0
 var result_previous_xp=0.0
 var result_clock:Dictionary={}
 var result_clock_age=0.0
@@ -688,6 +693,7 @@ func navigate(value: String, show_transition:bool=true) -> void:
 		reward_fx.reset()
 		reset_reward_bursts()
 		reward_bar_emitting = false
+		reward_bar_releasing=false;reward_bar_previous_tip=Vector2.ZERO
 		ambient.stop()
 		for voice in voices: voice.stop()
 		audio_mix = AudioMix.new()
@@ -1503,6 +1509,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	battle_medals.clear()
 	battle_spice_reward=int(Content.catalog.tower_rewards.sp_other if Profile.data.completed.has(id) else Content.catalog.tower_rewards.sp_first)
 	reward_bar_emitting=false;reward_fx.reset()
+	reward_bar_releasing=false;reward_bar_previous_tip=Vector2.ZERO
 	reset_reward_bursts()
 	magic_placement = ""
 	selected_tower = -1
@@ -2260,6 +2267,21 @@ func sound_definition(name: String) -> Dictionary:
 		definition.layer=4
 	return definition
 
+func advance_xp_result_particles(dt_ms:float) -> void:
+	if result_clock.xp_phase>0 and not reward_bar_emitting:
+		var definition=Content.particles.systems.XpBarGrow
+		XPEmitterView.create(reward_fx,definition,Content.tex(definition.texture))
+		reward_bar_emitting=true
+	reward_fx.advance_ui(dt_ms)
+
+func update_xp_emission_from_render() -> void:
+	if test_session:
+		qa_result_render_count+=1;qa_result_render_age=elapsed_ui-result_started
+	var tip=ClassicUI.result_bar_tip(self)
+	reward_bar_releasing=XPEmitterView.after_render(reward_fx,reward_bar_previous_tip,tip) if reward_bar_emitting else false
+	reward_bar_previous_tip=tip
+	update_result_sound(reward_bar_releasing)
+
 func update_result_sound(growing:bool) -> void:
 	if growing and Profile.data.settings.sound:sound("xp_bar_grow")
 	else:
@@ -2345,7 +2367,7 @@ func _process(delta: float) -> void:
 	menu_transition.advance(delta)
 	portrait_view.advance(delta)
 	advance_promotion(delta*1000.0)
-	var xp_growing=false
+	var xp_growing=screen=="game" and sim!=null and sim.outcome!="playing" and reward_bar_releasing
 	if screen=="game" and sim!=null and not wave_collapse.is_empty():
 		if sim.outcome!="playing" or sim.wave_index!=wave_collapse.current:wave_collapse.clear()
 		elif not sim.paused and wave_collapse.first< -39:
@@ -2373,16 +2395,7 @@ func _process(delta: float) -> void:
 		sync_result_clock();update_result_controls()
 		reward_burst_fx.advance_ui(delta*1000.0)
 		update_reward_bursts()
-		var current=ClassicUI.result_xp(self)
-		if result_clock.xp_phase>0 and current>result_previous_xp:
-			xp_growing=true
-			if not reward_bar_emitting:
-				reward_bar_emitting=true;reward_fx.emit_system("XpBarGrow",ClassicUI.result_bar_tip(self),"","",-1)
-			for emitter in reward_fx.systems:emitter.pos=ClassicUI.result_bar_tip(self);emitter.emitting=true
-		else:
-			for emitter in reward_fx.systems:emitter.emitting=false
-		result_previous_xp=current
-		reward_fx.advance_ui(delta*1000.0)
+		advance_xp_result_particles(delta*1000.0)
 	elif screen=="loading" and loading_kind=="departure":
 		var rocket=ClassicUI.departure_positions(self,elapsed_ui-loading_started).rocket
 		for i in range(reward_fx.systems.size()):reward_fx.systems[i].pos=rocket+Vector2(-7-i*2,16-i*3)*0.7
@@ -3157,6 +3170,7 @@ func draw_battle_overlays(canvas: CanvasItem) -> void:
 				var texture=Content.tex("assets/gui/"+str(piece[0])+".png")
 				if texture!=null:canvas.draw_texture_rect(texture,Rect2(origin+piece[1],piece[2]),false,Color(1,1,1,alpha))
 			ClassicUI.result_bar(self,canvas)
+			update_xp_emission_from_render()
 		else:canvas.draw_texture_rect(Content.tex("assets/gui/pause_menu_bg.png"),Rect2(0,floor((size.y-199)/2),size.x,199),false)
 	TutorialView.draw_phase(self,canvas,"screen")
 

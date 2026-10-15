@@ -67,6 +67,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/mode_effect_ui_verify.gd" -- --qa > builds/mode-effect-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_clock_ui_verify.gd" -- --qa > builds/reward-clock-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/result_lifecycle_ui_verify.gd" -- --qa > builds/result-lifecycle-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/xp_chronology_ui_verify.gd" -- --qa > builds/xp-chronology-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_geometry_ui_verify.gd" -- --qa > builds/reward-geometry-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/reward_spice_ui_verify.gd" -- --qa > builds/reward-spice-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/tower_preview_ui_verify.gd" -- --qa > builds/tower-preview-verification.log 2>&1

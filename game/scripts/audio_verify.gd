@@ -17,9 +17,19 @@ func check(value: bool, name: String) -> void:
 func stop_voices() -> void:
 	for voice in app.voices: voice.stop()
 
+func mixer_state() -> Dictionary:
+	return {"ticks_usec":Time.get_ticks_usec(),"output_latency_seconds":AudioServer.get_output_latency(),"next_mix_seconds":AudioServer.get_time_to_next_mix(),"since_last_mix_seconds":AudioServer.get_time_since_last_mix(),"ambient_playing":app.ambient.playing,"music_playing":app.music.playing,"screen":app.screen,"voices":app.voices.filter(func(v):return v.playing).map(func(v):return str(v.get_meta("cue","")))}
+
 func record(name: String, seconds: float, cue: String = "", refresh: bool = false, action:Callable=Callable()) -> Dictionary:
-	await get_tree().create_timer(0.08).timeout
+	var before_settle=mixer_state()
+	# A scene timer can include time from the frame in which it was created.
+	# Require the intended80ms to pass on the monotonic clock before capture.
+	var settle_started=Time.get_ticks_usec()
+	while Time.get_ticks_usec()-settle_started<80000:await get_tree().process_frame
+	var settled_usec=Time.get_ticks_usec()-settle_started
+	check(settled_usec>=80000,"full80ms native mixer settle before "+name)
 	capture.clear_buffer()
+	var at_capture_start=mixer_state()
 	var samples = PackedVector2Array()
 	var start = Time.get_ticks_msec()
 	var last = -1000
@@ -33,10 +43,14 @@ func record(name: String, seconds: float, cue: String = "", refresh: bool = fals
 		if count > 0: samples.append_array(capture.get_buffer(count))
 	var total = 0.0
 	var peak = 0.0
+	var first_nonzero=-1;var last_nonzero=-1
 	var pcm = PackedByteArray()
 	pcm.resize(samples.size()*4)
 	for i in range(samples.size()):
 		var value = samples[i]
+		if maxf(absf(value.x),absf(value.y))>0.000001:
+			if first_nonzero<0:first_nonzero=i
+			last_nonzero=i
 		total += value.x*value.x+value.y*value.y
 		peak = maxf(peak, maxf(absf(value.x), absf(value.y)))
 		pcm.encode_s16(i*4, int(clampf(value.x, -1, 1)*32767))
@@ -51,7 +65,7 @@ func record(name: String, seconds: float, cue: String = "", refresh: bool = fals
 	var row = {"name": name, "path": path, "error": error, "frames": samples.size(), "mix_rate": stream.mix_rate,
 		"rms": sqrt(total/maxi(1, samples.size()*2)), "peak": peak,
 		"cue": cue, "gain": app.sound_definition(cue).gain if not cue.is_empty() else null,
-		"voices": app.voices.filter(func(v): return v.playing).size()}
+		"voices": app.voices.filter(func(v): return v.playing).size(),"settled_usec":settled_usec,"before_settle":before_settle,"capture_start":at_capture_start,"capture_end":mixer_state(),"first_nonzero_frame":first_nonzero,"last_nonzero_frame":last_nonzero}
 	rows.append(row)
 	check(error == OK and samples.size() >= int(seconds*stream.mix_rate*0.6), "native audio frames for "+name)
 	return row

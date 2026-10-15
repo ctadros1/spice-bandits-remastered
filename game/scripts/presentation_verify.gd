@@ -23,9 +23,20 @@ func check(value:bool,name:String) -> void:
 	checks+=1
 	if not value:failures.append(name);push_error(name)
 
-func snapshot(name:String,settle_portrait:bool=true) -> void:
+func advance_result_until(time:float) -> void:
+	while app.elapsed_ui<time:
+		app._process(minf(0.03,time-app.elapsed_ui))
+		await get_tree().process_frame
+		await get_tree().process_frame
+		RenderingServer.force_draw(true)
+
+func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false) -> void:
+	var prior_result_renders=app.qa_result_render_count
 	if settle_portrait:app.portrait_view.advance(0.5)
-	app.queue_redraw();app.battle_overlay.queue_redraw();app.bolt_renderer.prepare()
+	# Result ticks already executed their real bar Render. Read that frame
+	# without submitting an extra Render that would stop the source emitter.
+	if not already_rendered:app.queue_redraw();app.battle_overlay.queue_redraw()
+	app.bolt_renderer.prepare()
 	await get_tree().process_frame
 	await get_tree().process_frame
 	RenderingServer.force_draw(true)
@@ -36,6 +47,9 @@ func snapshot(name:String,settle_portrait:bool=true) -> void:
 	var error=image.save_png(path)
 	check(error==OK,"capture "+name)
 	var record={"name":name,"path":name+".png","error":error}
+	if already_rendered:
+		check(app.qa_result_render_count==prior_result_renders,"result capture reads the existing native frame without another emitter gate")
+		record.xp_render_count=app.qa_result_render_count;record.xp_render_age=app.qa_result_render_age
 	record.window_size=[app.get_window().size.x,app.get_window().size.y]
 	record.image_size=[image.get_width(),image.get_height()]
 	record.canvas_stretch=[app.get_viewport().get_stretch_transform().x.x,app.get_viewport().get_stretch_transform().y.y]
@@ -318,6 +332,7 @@ func run() -> void:
 	app.screen="game";app.sim.outcome="victory";app.sim.built_count=4;app.sim.kills=20;app.sim.upgrade_top_count=0
 	app.tutorial.pose(17);app.tutorial_step=17
 	app.reward_fx.reset();app.reward_bar_emitting=false;app.result_previous_xp=0
+	app.reward_bar_releasing=false;app.reward_bar_previous_tip=Vector2.ZERO
 	app.reset_reward_bursts()
 	Profile.data.xp=8;app.battle_initial_xp=0;app.result_started=0;app.elapsed_ui=0
 	# Explicit zero-delay arithmetic fixture retained for the historical poses.
@@ -326,35 +341,35 @@ func run() -> void:
 	app.notice_until=0;app.refresh_controls()
 	var result_control_count=app.ui.get_child_count()
 	for time in [0.5,2.0,4.0]:
-		while app.elapsed_ui<time:app._process(minf(0.03,time-app.elapsed_ui))
-		await snapshot("result-%03d"%int(time*100))
+		await advance_result_until(time)
+		await snapshot("result-%03d"%int(time*100),true,true)
 	check(app.ui.get_children().filter(func(n):return n.has_meta("result_spice")).all(func(n):return n.modulate.a==0),"spice reward waits for the original post-XP clock")
 	var spice_rows=app.ui.get_children().filter(func(n):return n.has_meta("result_spice"))
 	check(spice_rows.size()==1 and spice_rows[0].text==app.result_spice_text() and spice_rows[0].get_theme_font("font")==app.font and spice_rows[0].get_theme_font_size("font_size")==20,"spice reward uses one original regular20pt text object")
-	while app.elapsed_ui<5.025:app._process(minf(0.03,5.025-app.elapsed_ui))
-	await snapshot("result-spice-entering")
-	while app.elapsed_ui<5.25:app._process(minf(0.03,5.25-app.elapsed_ui))
+	await advance_result_until(5.025)
+	await snapshot("result-spice-entering",true,true)
+	await advance_result_until(5.25)
 	check(spice_rows[0].modulate.a>0 and spice_rows[0].modulate.a<1 and spice_rows[0].scale.x>1 and spice_rows[0].position.x<app.results_origin().x+332,"native spice reveal enters enlarged and centered before settling")
-	await snapshot("result-spice-growing")
-	while app.elapsed_ui<5.55:app._process(minf(0.03,5.55-app.elapsed_ui))
+	await snapshot("result-spice-growing",true,true)
+	await advance_result_until(5.55)
 	check(app.result_clock.spice_phase>=1 and app.ui.get_children().filter(func(n):return n.has_meta("result_spice")).all(func(n):return n.modulate.a==1),"spice reveal completes after its native500ms phase")
 	check(app.ui.get_child_count()==result_control_count,"result UI does not accumulate tutorial labels each frame")
 	check(app.reward_spice_burst and app.reward_burst_fx.systems.size()==7,"spice reveal emits seven original burst systems once")
 	check(app.reward_burst_fx.systems.all(func(s):return s.definition.release_interval==5.0) and is_equal_approx(app.reward_burst_fx.clock_multiplier,1.6),"result bursts use the native release interval and particle clock")
-	await snapshot("result-spice-555")
+	await snapshot("result-spice-555",true,true)
 	app.battle_medals=[Content.catalog.tower_medals[0],Content.catalog.tower_medals[1]];app.refresh_controls()
-	while app.elapsed_ui<7.75:app._process(minf(0.03,7.75-app.elapsed_ui))
-	await snapshot("result-medal-growing")
+	await advance_result_until(7.75)
+	await snapshot("result-medal-growing",true,true)
 	var growing=app.ui.get_children().filter(func(n):return n is TextureRect and n.has_meta("result_medal") and n.get_meta("result_medal")==0)[0]
 	check(growing.size.x>43 and growing.size.x<60 and growing.modulate.a>0 and growing.modulate.a<1,"medal reveal shrinks from its native enlarged size")
-	while app.elapsed_ui<8.0:app._process(minf(0.03,8.0-app.elapsed_ui))
+	await advance_result_until(8.0)
 	check(app.result_clock.medal_clock>0 and app.result_clock.medal_clock<1.5,"first medal's native slot opens before the second")
-	await snapshot("result-medal-first")
-	while app.elapsed_ui<10.0:app._process(minf(0.03,10.0-app.elapsed_ui))
+	await snapshot("result-medal-first",true,true)
+	await advance_result_until(10.0)
 	check(app.reward_medal_bursts.size()==2,"each revealed medal creates one original object burst")
 	check(app.reward_burst_fx.systems.filter(func(s):return s.name=="WinSpiceBump").is_empty(),"spice burst has expired before the medal sequence finishes")
 	check(app.ui.get_children().filter(func(n):return n.has_meta("result_medal")).all(func(n):return n.size==Vector2(43,43)),"completed medals use native truncated0.8 source size")
-	await snapshot("result-medals")
+	await snapshot("result-medals",true,true)
 	app.selected_medal=app.battle_medals[0].duplicate(true);app.refresh_controls();await snapshot("result-medal-description");app.selected_medal={};app.refresh_controls()
 	var fractional_xp=Profile.data.xp;Profile.data.xp=9.5
 	await snapshot("result-fractional-xp")
@@ -364,15 +379,16 @@ func run() -> void:
 	# the two-second delay, matching the recorded normal-length battle.
 	app.elapsed_ui=0;app.result_started=-1;app.result_clock={};app.result_clock_age=0
 	app.result_closed_delay=3;app.result_initial_delay=0;app.result_previous_xp=0
+	app.reward_bar_releasing=false;app.reward_bar_previous_tip=Vector2.ZERO
 	app.reward_fx.reset();app.reward_bar_emitting=false;app.reset_reward_bursts()
 	app.battle_medals.clear();app.battle_spice_reward=3;app.refresh_controls()
 	for time in [0.5,0.72,0.9,1.5,2.4,3.0,3.6,4.2,4.8,5.4,6.0]:
-		while app.elapsed_ui<time:app._process(minf(0.03,time-app.elapsed_ui))
+		await advance_result_until(time)
 		if time==0.5:check(app.result_clock.xp_phase==0,"ordinary result XP waits for the opening fade")
 		if time==0.9:check(app.result_clock.xp_phase>0 and app.result_clock.spice_phase==0,"ordinary result XP starts after fade without a new two-second delay")
 		if time==3.0:check(app.result_clock.xp_phase>1 and app.result_clock.spice_phase==0,"ordinary result completes XP before the separate spice phase")
 		if time==4.8:check(app.result_clock.spice_phase>=1 and app.reward_spice_burst,"ordinary result spice text and once-only burst reveal at the inherited clock age")
-		await snapshot("result-room-%03d"%roundi(time*100))
+		await snapshot("result-room-%03d"%roundi(time*100),true,true)
 	app.screen="world";app.selected_location="";app.elapsed_ui=0
 	var decor_camera=app.world_camera;var decor_zoom=app.world_zoom
 	app.world_camera=Vector2(1290,1720);app.world_zoom=0.625;app.world_decor.reset();app.world_decor_dt_ms=0

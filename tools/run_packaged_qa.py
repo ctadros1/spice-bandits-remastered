@@ -202,6 +202,7 @@ def main():
             required.update({'result-room-%03d' % age for age in [50,72,90,150,240,300,360,420,480,540,600]})
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)
+            fresh = fresh and all(c.get('xp_render_count', 0) > 0 and abs(c.get('xp_render_age', -1) - c.get('result_age', -2)) < 0.001 for c in result_sequence)
             required.update({'mine-preview','mine-arming-000','mine-arming-250','mine-armed','portal-preview-entry','portal-preview-exit'})
             required.update({'world-scenery-000','world-scenery-moving'})
             required.update({'world-windmills-000','world-windmills-025'})
