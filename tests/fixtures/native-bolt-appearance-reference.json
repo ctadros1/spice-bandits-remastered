@@ -1,0 +1,1453 @@
+{
+  "method": "Bounded original bolt caller arguments, ball geometry and texture UVs.\n\nThree caller suffixes execute only argument assembly before recording C1.\nSupplied heap/tower/enemy/stack records replace earlier selection and service\nwork. Render runs0xddce8..0xddd58; blend/color/quad are recording stubs.\nCalculateUV/SetFlipH/SetFlipV run their original arithmetic. Constructor runs\nwith texture/allocation/Construct/sound/framework stubs, recording the64px\nball declaration and source anchor. No original renderer/global RNG/game.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "callers": [
+    {
+      "name": "active-defense",
+      "start": "0xe497a",
+      "stop": "0xdcfbc",
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "target": [
+        512.5,
+        287.75
+      ],
+      "from": [
+        140.25,
+        -73.5
+      ],
+      "to": [
+        512.5,
+        287.75
+      ],
+      "enemy_id": 29,
+      "scatter": true,
+      "ball": false
+    },
+    {
+      "name": "tesla",
+      "start": "0xe6402",
+      "stop": "0xdcfbc",
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "target": [
+        512.5,
+        287.75
+      ],
+      "from": [
+        140.25,
+        -73.5
+      ],
+      "to": [
+        512.5,
+        287.75
+      ],
+      "enemy_id": 29,
+      "scatter": false,
+      "ball": true
+    },
+    {
+      "name": "gateway",
+      "start": "0xe6850",
+      "stop": "0xdcfbc",
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "target": [
+        512.5,
+        287.75
+      ],
+      "from": [
+        140.25,
+        -73.5
+      ],
+      "to": [
+        512.5,
+        287.75
+      ],
+      "enemy_id": 29,
+      "scatter": true,
+      "ball": true
+    }
+  ],
+  "renders": [
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            -32.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            -32.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            -32.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            -31.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            -31.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            -31.0,
+            -32.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        0,
+        0
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            108.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            108.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            108.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            109.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            109.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            109.25,
+            -105.5
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            999968.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            999968.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            999968.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            999969.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.5
+          ]
+        },
+        {
+          "quad": [
+            999969.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 0.5,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            999969.0,
+            -1000032.0
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": false,
+      "alive": true,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "source": [
+        1000000,
+        -1000000
+      ],
+      "size": [
+        63,
+        65
+      ],
+      "alpha": 1,
+      "ball": true,
+      "alive": false,
+      "calls": []
+    }
+  ],
+  "uvs": [
+    {
+      "flip_h": false,
+      "flip_v": false,
+      "uv": [
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "flip_h": false,
+      "flip_v": true,
+      "uv": [
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "flip_h": true,
+      "flip_v": false,
+      "uv": [
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "flip_h": true,
+      "flip_v": true,
+      "uv": [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "constructors": [
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "scatter": false,
+      "ball": false,
+      "calls": [],
+      "stored_source": [
+        140.25,
+        -73.5
+      ],
+      "stored_scatter": false
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "scatter": false,
+      "ball": true,
+      "calls": [
+        {
+          "texture": "sfx/bolt_ball3_small.png",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "stored_source": [
+        140.25,
+        -73.5
+      ],
+      "stored_scatter": false
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "scatter": true,
+      "ball": false,
+      "calls": [],
+      "stored_source": [
+        140.25,
+        -73.5
+      ],
+      "stored_scatter": true
+    },
+    {
+      "source": [
+        140.25,
+        -73.5
+      ],
+      "scatter": true,
+      "ball": true,
+      "calls": [
+        {
+          "texture": "sfx/bolt_ball3_small.png",
+          "width": 64,
+          "height": 64
+        }
+      ],
+      "stored_source": [
+        140.25,
+        -73.5
+      ],
+      "stored_scatter": true
+    }
+  ],
+  "original_unchanged": true
+}

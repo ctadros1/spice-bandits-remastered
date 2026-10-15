@@ -1,0 +1,2796 @@
+{
+  "method": "Original SwitchPage layout declarations with controlled framework objects.\n\nOriginal ARM page-building instructions execute. C++ allocation/string/map and\ntexture/text constructors, localization/notifications, tower lookup, hex lookup\nand camera delivery are explicit stubs. Anchor points are supplied test inputs;\nneither original constructors, rendering nor UIKit application state executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "page": 0,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 0,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 1,
+      "device": 1,
+      "objects": {
+        "protect_bomb_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            62.0,
+            -138.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "protect_bomb_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "It's your base. Don't let humans destroy it!",
+          "anchor": "base",
+          "offset": [
+            90.0,
+            -103.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "protect_bomb_zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            27.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "source",
+          "offset": [
+            85.0,
+            -137.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Enemies appear from here",
+          "anchor": "source",
+          "offset": [
+            114.0,
+            -88.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "source",
+          "offset": [
+            51.0,
+            -62.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 1,
+      "device": 2,
+      "objects": {
+        "protect_bomb_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            62.0,
+            -138.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "protect_bomb_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "It's your base. Don't let humans destroy it!",
+          "anchor": "base",
+          "offset": [
+            90.0,
+            -103.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "protect_bomb_zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            27.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "source",
+          "offset": [
+            85.0,
+            -137.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Enemies appear from here",
+          "anchor": "source",
+          "offset": [
+            114.0,
+            -88.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "enemies_zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "source",
+          "offset": [
+            51.0,
+            -62.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 2,
+      "device": 1,
+      "objects": {
+        "wave_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            3.0,
+            15.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "wave_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            90.0,
+            100.0
+          ],
+          "text": "Speed controls the upcoming waves",
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            19.0,
+            38.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "money_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "wallet",
+          "offset": [
+            -3.0,
+            17.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "money_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            90.0,
+            100.0
+          ],
+          "text": "Your money, spice and XP information",
+          "anchor": "wallet",
+          "offset": [
+            19.0,
+            35.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 2,
+      "device": 2,
+      "objects": {
+        "wave_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            3.0,
+            15.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "wave_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Speed controls the upcoming waves",
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            41.0,
+            47.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "money_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "wallet",
+          "offset": [
+            -22.0,
+            12.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "money_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Your money, spice and XP information",
+          "anchor": "wallet",
+          "offset": [
+            21.0,
+            47.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 3,
+      "device": 1,
+      "objects": {
+        "a_pirate": {
+          "kind": "image",
+          "path": "tutorial/SPCBRD1.png",
+          "size": [
+            172,
+            212
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            -313.0,
+            -145.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "a_pirate_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            -199.0,
+            -126.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "a_pirate_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            95.0,
+            100.0
+          ],
+          "text": "Now build 4 minigun towers in the designated locations.",
+          "anchor": "dock",
+          "offset": [
+            -176.0,
+            -102.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "drag_arrow_landscape": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_1.png",
+          "size": [
+            98,
+            404
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            31.0,
+            -377.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": false
+        },
+        "drag_arrow_portrait": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_0.png",
+          "size": [
+            52,
+            122
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            14.0,
+            -50.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -218.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_1": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "build here",
+          "anchor": "base",
+          "offset": [
+            -153.0,
+            -204.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -63.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_2": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "& here please",
+          "anchor": "base",
+          "offset": [
+            -223.0,
+            -51.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers3_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -110.0,
+            -125.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_3": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "here too",
+          "anchor": "base",
+          "offset": [
+            -85.0,
+            -111.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers4_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            88.0,
+            -280.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_4": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "place tower",
+          "anchor": "base",
+          "offset": [
+            108.0,
+            -266.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 3,
+      "device": 2,
+      "objects": {
+        "a_pirate": {
+          "kind": "image",
+          "path": "tutorial/SPCBRD1.png",
+          "size": [
+            172,
+            212
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            -313.0,
+            -145.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "a_pirate_bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble1.png",
+          "size": [
+            226,
+            150
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            -199.0,
+            -126.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "a_pirate_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Now build 4 minigun towers in the designated locations.",
+          "anchor": "dock",
+          "offset": [
+            -176.0,
+            -102.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "drag_arrow_landscape": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_1.png",
+          "size": [
+            98,
+            404
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            31.0,
+            -377.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "drag_arrow_portrait": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_0.png",
+          "size": [
+            52,
+            122
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            31.0,
+            -89.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": false
+        },
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -218.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_1": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "build here",
+          "anchor": "base",
+          "offset": [
+            -153.0,
+            -204.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -63.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_2": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "& here please",
+          "anchor": "base",
+          "offset": [
+            -223.0,
+            -51.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers3_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -110.0,
+            -125.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_3": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "here too",
+          "anchor": "base",
+          "offset": [
+            -85.0,
+            -111.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers4_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            88.0,
+            -280.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "build_towers_txt_4": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 20.0,
+          "bounds": [
+            52.0,
+            128.0
+          ],
+          "text": "place tower",
+          "anchor": "base",
+          "offset": [
+            108.0,
+            -266.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 4,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 4,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 5,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 5,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 6,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -28.0,
+            -192.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Tap to upgrade",
+          "anchor": "base",
+          "offset": [
+            -1.0,
+            -154.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -65.0,
+            -147.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -219.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers3_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -110.0,
+            -126.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": [
+        [
+          500.0,
+          340.0
+        ]
+      ]
+    },
+    {
+      "page": 6,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -28.0,
+            -192.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Tap to upgrade",
+          "anchor": "base",
+          "offset": [
+            -1.0,
+            -154.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -65.0,
+            -147.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -219.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers3_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -110.0,
+            -126.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 7,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            228.0,
+            42.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "And here please",
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            243.0,
+            61.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": true,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            210.0,
+            39.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 7,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            66.0,
+            -268.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "And here please",
+          "anchor": "base",
+          "offset": [
+            93.0,
+            -230.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            29.0,
+            -223.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 8,
+      "device": 1,
+      "objects": {
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -219.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 8,
+      "device": 2,
+      "objects": {
+        "towers1_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -219.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "towers2_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -242.0,
+            -64.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 9,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            166.0,
+            -348.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "You can also sell the tower. Try it!",
+          "anchor": "base",
+          "offset": [
+            193.0,
+            -324.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            129.0,
+            -303.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": [
+        [
+          777.0,
+          333.0
+        ]
+      ]
+    },
+    {
+      "page": 9,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            166.0,
+            -348.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "You can also sell the tower. Try it!",
+          "anchor": "base",
+          "offset": [
+            193.0,
+            -324.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            129.0,
+            -303.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 10,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            46.0,
+            42.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "And here please",
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            61.0,
+            61.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": true,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            28.0,
+            39.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 10,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -218.0,
+            -428.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "And here please",
+          "anchor": "base",
+          "offset": [
+            -191.0,
+            -390.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -16.0,
+            -383.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 11,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            96.0,
+            42.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Confirm it",
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            111.0,
+            61.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": false,
+          "flip_v": true,
+          "anchor": null,
+          "offset": [
+            0.0,
+            0.0
+          ],
+          "absolute": [
+            78.0,
+            39.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 11,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -284.0,
+            -428.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Confirm it",
+          "anchor": "base",
+          "offset": [
+            -257.0,
+            -390.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -82.0,
+            -383.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 12,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            221.0,
+            -42.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            90.0,
+            100.0
+          ],
+          "text": "Try out the Disco magic",
+          "anchor": "dock",
+          "offset": [
+            233.0,
+            -29.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            322.0,
+            -18.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": [
+        [
+          800.0,
+          600.0
+        ]
+      ]
+    },
+    {
+      "page": 12,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            200.0,
+            -82.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Try out the Disco magic",
+          "anchor": "dock",
+          "offset": [
+            220.0,
+            -57.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            407.0,
+            -35.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 13,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 13,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 14,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            251.0,
+            -42.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            90.0,
+            100.0
+          ],
+          "text": "Try Active Defense now",
+          "anchor": "dock",
+          "offset": [
+            263.0,
+            -29.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            352.0,
+            -18.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 14,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            268.0,
+            -82.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Try Active Defense now",
+          "anchor": "dock",
+          "offset": [
+            288.0,
+            -57.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            475.0,
+            -35.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 15,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 15,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 16,
+      "device": 1,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -414.0,
+            -164.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Place a mine here",
+          "anchor": "base",
+          "offset": [
+            -389.0,
+            -139.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -207.0,
+            -117.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "mine_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -95.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "bubble2": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            285.0,
+            -42.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble2_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 14.0,
+          "bounds": [
+            90.0,
+            100.0
+          ],
+          "text": "Now try using mines!",
+          "anchor": "dock",
+          "offset": [
+            297.0,
+            -29.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "drag_arrow_portrait": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            386.0,
+            -18.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 16,
+      "device": 2,
+      "objects": {
+        "bubble": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -414.0,
+            -164.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Place a mine here",
+          "anchor": "base",
+          "offset": [
+            -389.0,
+            -139.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "zarrow": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -207.0,
+            -117.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": false,
+          "visible": true
+        },
+        "mine_circle": {
+          "kind": "image",
+          "path": "tutorial/build_here.png",
+          "size": [
+            88,
+            62
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "base",
+          "offset": [
+            -176.0,
+            -95.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": true,
+          "below_objects": true,
+          "visible": true
+        },
+        "bubble2": {
+          "kind": "image",
+          "path": "tutorial/bubble2.png",
+          "size": [
+            226,
+            100
+          ],
+          "flip_h": false,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            322.0,
+            -82.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "bubble2_txt": {
+          "kind": "text",
+          "font": "Kautiva Pro",
+          "font_size": 27.0,
+          "bounds": [
+            180.0,
+            100.0
+          ],
+          "text": "Now try using mines!",
+          "anchor": "dock",
+          "offset": [
+            347.0,
+            -57.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        },
+        "drag_arrow_portrait": {
+          "kind": "image",
+          "path": "tutorial/line_pointer_2.png",
+          "size": [
+            64,
+            60
+          ],
+          "flip_h": true,
+          "flip_v": false,
+          "anchor": "dock",
+          "offset": [
+            529.0,
+            -35.0
+          ],
+          "absolute": [
+            0.0,
+            0.0
+          ],
+          "world": false,
+          "below_objects": false,
+          "visible": true
+        }
+      },
+      "camera_requests": []
+    },
+    {
+      "page": 17,
+      "device": 1,
+      "objects": {},
+      "camera_requests": []
+    },
+    {
+      "page": 17,
+      "device": 2,
+      "objects": {},
+      "camera_requests": []
+    }
+  ],
+  "uv_cases": [
+    {
+      "argument": 0,
+      "vertical": false,
+      "before": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "after": [
+        0.0693359375,
+        0.0068359375,
+        0.021484375,
+        0.138671875
+      ],
+      "mirrored": true
+    },
+    {
+      "argument": 0,
+      "vertical": true,
+      "before": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "after": [
+        0.0068359375,
+        0.0693359375,
+        0.138671875,
+        0.021484375
+      ],
+      "mirrored": true
+    },
+    {
+      "argument": 1,
+      "vertical": false,
+      "before": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "after": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "mirrored": false
+    },
+    {
+      "argument": 1,
+      "vertical": true,
+      "before": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "after": [
+        0.0068359375,
+        0.0693359375,
+        0.021484375,
+        0.138671875
+      ],
+      "mirrored": false
+    }
+  ],
+  "original_unchanged": true
+}

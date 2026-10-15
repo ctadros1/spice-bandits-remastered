@@ -33,13 +33,18 @@ def main():
                 subprocess.run(["afconvert", "-f", "WAVE", "-d", "LEI16", str(source), str(destination)], check=True)
                 digest = importer.sha(destination)
                 destination.unlink()
+            elif source.suffix.lower() == '.mov':
+                destination = Path(directory) / 'converted.ogv'
+                importer.convert_movie(source, destination)
+                digest = importer.sha(destination)
+                destination.unlink()
             else:
                 digest = importer.sha(source)
             if digest != asset["runtime_sha256"]:
                 failures.append(asset["logical_path"])
             if checks % 250 == 0:
                 print("Re-converted", checks, "assets", flush=True)
-    result = {"checks": checks, "failures": failures, "method": "independent full image and CAF re-conversion; no cached output reused"}
+    result = {"checks": checks, "failures": failures, "method": "independent full image, CAF and publisher movie re-conversion; no cached output reused"}
     (ROOT / "builds/import-verification.json").write_text(json.dumps(result, indent=2)+"\n")
     print(json.dumps(result))
     raise SystemExit(bool(failures))

@@ -1,0 +1,2911 @@
+{
+  "method": "Original TutorialView touch distance/removal scheduling with explicit points.\n\nNIB/UIView/touch/frame/message operations and CGRectContainsPoint are stubs;\ncontainment is an explicit boolean input, not a CoreGraphics oracle. Original\nBegan/Moved/Ended instructions execute. Record strict20px float32 distance,\nzero-delay removal request, resetting prior point and forwarding intent.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.9,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.9,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.9,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.9,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.999999,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.999999,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.999999,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49.999999,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50.000001,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50.000001,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50.000001,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        50.000001,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        20
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        20
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        20
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        30,
+        20
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        42,
+        56
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        42,
+        56
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        42,
+        56
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        42,
+        56
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        44,
+        54
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        44,
+        54
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        44,
+        54
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        44,
+        54
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49,
+        46
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49,
+        46
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49,
+        46
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        49,
+        46
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        10.010000000000002,
+        40
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        10.010000000000002,
+        40
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        10.010000000000002,
+        40
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        10.010000000000002,
+        40
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        31,
+        41
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        31,
+        41
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        31,
+        41
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        30,
+        40
+      ],
+      "end": [
+        31,
+        41
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.9,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.9,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.9,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.9,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.999999,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.999999,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.999999,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419.999999,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420.000001,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420.000001,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420.000001,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        420.000001,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        180
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        180
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        180
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        400,
+        180
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        412,
+        216
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        412,
+        216
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        412,
+        216
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        412,
+        216
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        414,
+        214
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        414,
+        214
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        414,
+        214
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        414,
+        214
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419,
+        206
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419,
+        206
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419,
+        206
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        419,
+        206
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        380.01,
+        200
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        380.01,
+        200
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        380.01,
+        200
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        380.01,
+        200
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        401,
+        201
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        401,
+        201
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        401,
+        201
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        400,
+        200
+      ],
+      "end": [
+        401,
+        201
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.9,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.9,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.9,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.9,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.999999,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.999999,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.999999,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019.999999,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020.000001,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020.000001,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020.000001,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000020.000001,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        999980
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        999980
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        999980
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000000,
+        999980
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000012,
+        1000016
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000012,
+        1000016
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000012,
+        1000016
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000012,
+        1000016
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000014,
+        1000014
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000014,
+        1000014
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000014,
+        1000014
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000014,
+        1000014
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019,
+        1000006
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019,
+        1000006
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019,
+        1000006
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000019,
+        1000006
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        999980.01,
+        1000000
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        999980.01,
+        1000000
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        999980.01,
+        1000000
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        999980.01,
+        1000000
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000001,
+        1000001
+      ],
+      "contains": false,
+      "forward": false,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000001,
+        1000001
+      ],
+      "contains": false,
+      "forward": true,
+      "result": {
+        "remove": false,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000001,
+        1000001
+      ],
+      "contains": true,
+      "forward": false,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": []
+      }
+    },
+    {
+      "start": [
+        1000000,
+        1000000
+      ],
+      "end": [
+        1000001,
+        1000001
+      ],
+      "contains": true,
+      "forward": true,
+      "result": {
+        "remove": true,
+        "previous": [
+          0.0,
+          0.0
+        ],
+        "forwarded": [
+          "touchesBegan:withEvent:",
+          "touchesMoved:withEvent:",
+          "touchesEnded:withEvent:"
+        ]
+      }
+    }
+  ],
+  "original_unchanged": true
+}

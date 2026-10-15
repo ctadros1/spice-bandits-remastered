@@ -1,0 +1,3395 @@
+{
+  "method": "Original mine/portal rendering and map placement guards with explicit records.\n\nThe original ARM branches, float colors, bar dimensions and cell/owner guards\nexecute. OpenGL, quad rendering and animator rendering are recorded stubs.\nMap pointers, flags, sleep duration and actor state are fixture inputs; this\ndoes not execute original animation updates, input, rasterization or the app.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "renders": [
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 0,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 1,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 2,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 0,
+      "state": 3,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 0,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 1,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579,
+              1.0
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 2,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "animator": 8389376,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 0,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.6000000238418579,
+              0.6000000238418579,
+              0.6000000238418579,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 0,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 2500,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 2500,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              26.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 5000,
+      "light": 0.6,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.30000001192092896,
+              0.30000001192092896,
+              0.30000001192092896,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "mine",
+      "active": 1,
+      "state": 3,
+      "sleep": 5000,
+      "light": 1,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          }
+        ],
+        "bars": [
+          {
+            "rect": [
+              94.0,
+              190.0,
+              52.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.4000000059604645
+            ]
+          },
+          {
+            "rect": [
+              94.0,
+              190.0,
+              0.0,
+              3.0
+            ],
+            "color": [
+              0.0,
+              0.0,
+              0.0,
+              0.6000000238418579
+            ]
+          }
+        ],
+        "blends": [
+          [
+            1,
+            771
+          ]
+        ]
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 0,
+      "state": 0,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 0,
+      "state": 2,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 0,
+      "state": 3,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 0,
+      "state": 4,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              0.5
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 1,
+      "state": 0,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 1,
+      "state": 2,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 1,
+      "state": 3,
+      "result": {
+        "actors": [],
+        "bars": [],
+        "blends": []
+      }
+    },
+    {
+      "kind": "portal",
+      "active": 1,
+      "state": 4,
+      "result": {
+        "actors": [
+          {
+            "animator": 8389120,
+            "color": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        ],
+        "bars": [],
+        "blends": []
+      }
+    }
+  ],
+  "placements": [
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "mine",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 0,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": false
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 0,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 0,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 1,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 1,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        -1,
+        0
+      ],
+      "result": true
+    },
+    {
+      "kind": "portal",
+      "buildable": 1,
+      "walkable": 1,
+      "owner": 2,
+      "player": 2,
+      "cell": [
+        0,
+        1
+      ],
+      "result": true
+    }
+  ],
+  "original_unchanged": true
+}

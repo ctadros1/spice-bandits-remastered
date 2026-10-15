@@ -1,0 +1,958 @@
+{
+  "method": "Original page/interface fade with explicit requests and a stub page swap.\n\nThe original Update methods execute. End-condition callback and SwitchPage\nallocation/UI initialization are stubs; this records fade arithmetic/order.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "frames": [
+        {
+          "dt_ms": 0,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 100,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 100.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 100,
+          "request": false,
+          "state": {
+            "alpha": 0.25,
+            "previous_ms": 100.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 200,
+          "request": false,
+          "state": {
+            "alpha": 0.5,
+            "previous_ms": 200.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 0,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 0.0,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 100,
+          "request": true,
+          "state": {
+            "alpha": 0.75,
+            "previous_ms": 100.0,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 150,
+          "request": false,
+          "state": {
+            "alpha": 0.375,
+            "previous_ms": 150.0,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 150,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": true
+        },
+        {
+          "dt_ms": 100,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 100.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.041667498648166656,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.08333499729633331,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.12500250339508057,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.16666999459266663,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.20833748579025269,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.25000497698783875,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.2916724681854248,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.33333995938301086,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.3750074505805969,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.416674941778183,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.45834243297576904,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.5000099539756775,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.5416774749755859,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.5833449959754944,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.6250125169754028,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.6666800379753113,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7083475589752197,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7500150799751282,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7916826009750366,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.8333501219749451,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.8750176429748535,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.916685163974762,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.9583526849746704,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": true,
+          "state": {
+            "alpha": 0.9583324790000916,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.9166649580001831,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.8749974370002747,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.8333299160003662,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7916623950004578,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7499948740005493,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.7083273530006409,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.6666598320007324,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.624992311000824,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.5833247900009155,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.5416572690010071,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.499989777803421,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.45832228660583496,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.4166547954082489,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.37498730421066284,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.3333198130130768,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.2916523218154907,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.24998483061790466,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.2083173394203186,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.16664984822273254,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.12498234957456589,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.08331485092639923,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.041647352278232574,
+            "previous_ms": 16.66699981689453,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": true
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.041667498648166656,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.08333499729633331,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.12500250339508057,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.16666999459266663,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.20833748579025269,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.25000497698783875,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.2916724681854248,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 16.667,
+          "request": false,
+          "state": {
+            "alpha": 0.33333995938301086,
+            "previous_ms": 16.66699981689453,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "dt_ms": 100,
+          "request": true,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": true
+        },
+        {
+          "dt_ms": 100,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 100.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 0,
+          "request": false,
+          "state": {
+            "alpha": 0.25,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 500,
+          "request": false,
+          "state": {
+            "alpha": 0.25,
+            "previous_ms": 500.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 50,
+          "request": true,
+          "state": {
+            "alpha": 0.875,
+            "previous_ms": 50.0,
+            "opaque": true
+          },
+          "pending": true,
+          "switched": false
+        },
+        {
+          "dt_ms": 500,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": true
+        }
+      ]
+    },
+    {
+      "frames": [
+        {
+          "dt_ms": 500,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 500.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 500,
+          "request": false,
+          "state": {
+            "alpha": 1.0,
+            "previous_ms": 500.0,
+            "opaque": true
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 500,
+          "request": true,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": true
+        },
+        {
+          "dt_ms": 0,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 0.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        },
+        {
+          "dt_ms": 500,
+          "request": false,
+          "state": {
+            "alpha": 0.0,
+            "previous_ms": 500.0,
+            "opaque": false
+          },
+          "pending": false,
+          "switched": false
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

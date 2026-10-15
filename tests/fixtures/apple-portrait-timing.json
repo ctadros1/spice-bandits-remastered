@@ -1,0 +1,22 @@
+{
+  "control_points" : [
+    [
+      0,
+      0
+    ],
+    [
+      0.41999998688697815,
+      0
+    ],
+    [
+      0.57999998331069946,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "method" : "Current macOS QuartzCore named easeInEaseOut control points; not original iOS\/UIKit compositor execution.",
+  "os" : "Version 26.5 (Build 25F71)"
+}

@@ -1,0 +1,25 @@
+# Enemy corner presentation
+
+Reference: decrypted1.14 ARMv7 executable SHA256`e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`.
+
+`UpdateMovementAndShooting`,0x7bfa8, prepares a future corner from the current logical point to a point beyond the current destination. At three quarters of a segment, the future endpoint is the destination plus the remaining fraction of the next segment. `UpdatePosition`,0x7d108, projects the drawn position onto this line during the final quarter and the following first quarter. The straight logical position at0x188/0x18c remains distinct from animator position0x4c/0x50 and drawn aim point0x190/0x194. Ordinary tower missiles follow logical position plus resource offset; chemical bubbles snapshot the drawn aim point.
+
+Aircraft enable physical turns by default. Ground resources can enable them through`dir_interpolation`, as creep5/6 do. `InterpolatePhysicalRotation`,0x7d470, blends the ordinary and semicorner animations over two125ms-fraction regions, using15/30-degree rotations and complementary alpha. These are fractions of a movement segment, not fixed wall-clock durations. `UpdateRoundedCornerSemiDirection`,0x7e72c, chooses the preserved TurnDownLeft/Right, TurnUpLeft/Right and TurnLeft/Right states. Animator Render0x10f54c confirms alpha at animator+0x34 and premultiplied RGB at+0x38; RenderFrame0x10f1c4 passes angle at+0x30. Treating the alpha fields as size fields would be incorrect.
+
+The port in`game/scripts/creep_view.gd` preserves the recovered direction tables, including the unusual first-quarter upper-left case. It keeps body positions separate from combat positions, resets animation age on state changes, draws the second animation layer, and rotates both layers. Logical movement overshoot, mid-cell rerouting and the complete native animator/shadow state remain separate comparisons.
+
+`tools/native_creep_reference.py` executes selected original ARM instructions in Unicorn2.1.4 without modifying the original file. It records576 turn field cases,64 corner preparations and5 position projections in`tests/fixtures/native-creep-reference.json`. Godot checks all four turn fields against these independently executed values, with a0.00001 tolerance. Animation-name and framework calls are stubbed; the final heading dependent on those stubs is excluded. This is isolated math evidence, not an original iOS installation or whole-game runtime parity.
+
+The original corner preparation can produce a zero-length line for an exact reverse. The reconstruction retains the finite logical position in that case instead of dividing by zero. This is a documented stability guard. It does not change health, damage, money or the route.
+
+The packaged turn gallery uses five synthetic aircraft/tank poses along a long vertical-to-diagonal path. It checks blended layers, drawn positions and animation names. Its captures must pass the fresh-package audit before being reported as rendered evidence.
+
+## Logical movement boundaries
+
+UpdateMovementAndShooting0x7bfa8 increments float32 progress by `(dt/1000)*(speed/1000)*(hex_height/segment_length)`. If progress exceeds1, it clamps to1 and stores the entire increment, capped at0.3, rather than just its excess. The following frame changes the cell/endpoint and interpolates the new segment at that carried progress, without another increment. Exactly1 carries no new increment. This differs from the former continuous-distance loop.225 isolated executions through0x7ca50 cover this math. GetFirstMovementPoint supplies the next endpoint, GetCell returns null (height interpolation excluded), and UpdatePosition is stubbed here because it has separate projection checks. The original executable hash remains unchanged.
+
+Kamikaze state changes after progress exceeds0.5 on the base link (0x7ca50 onward); it does not wait for the center. The updated tutorial wins at75,690ms,16 kills,98% base health and$168. Mid-cell rerouting and attacker displacement transitions still require complete state comparisons.
+
+UpdateShortestPath0x7ace0 now retains a moving segment and searches from its next endpoint. If that endpoint becomes blocked before progress0.7 (0.5 for a horizontal shortcut), it swaps current/next and uses `1−progress` to reverse without teleporting. Past that threshold, or when the current cell is already unwalkable, it plans from the next cell with the start-walkable exception. Focused reconstruction tests cover continuing and reversal; escort-source cache reuse and complete invalidation-frame parity remain open.
+
+CCreepShadow::Render0xfc7b8 uses a black tint with alpha `1−animator.scale_x*0.5`, an animator-sized quad, authored shadow_scale_factor, linear400ms growth and a0.8 height factor for static shadows. Static shadows rotate with native direction angle minus90 degrees plus physical rotation; animated creep10 shadows retain the current animation/frame without that rotation. These rules replace the former unrotated source-texture-size shadows. Packaged five-pose rendering passes; original-device shadow pixels and terrain-layer ordering remain unverified.

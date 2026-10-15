@@ -1,0 +1,3081 @@
+{
+  "method": "Execute original menu floating-text and lamp declarations.\n\nObjective-C objects/numbers/arrays/layers, path recording, frame height, layer\nposition, media time and controlled rand values are explicit stubs. The ARM\npath/rotation/lamp arithmetic executes; UIKit interpolation/rasterization does not.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "floats": [
+    {
+      "height": 320,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  2.0
+                ],
+                [
+                  0.0,
+                  -1.7999999523162842
+                ],
+                [
+                  0.0,
+                  1.619999885559082
+                ],
+                [
+                  0.0,
+                  -1.4579998254776
+                ],
+                [
+                  0.0,
+                  1.3121998310089111
+                ],
+                [
+                  0.0,
+                  -1.18097984790802
+                ],
+                [
+                  0.0,
+                  1.0628818273544312
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9800000190734863,
+                  2.059999942779541
+                ],
+                [
+                  -1.781999945640564,
+                  -1.8539998531341553
+                ],
+                [
+                  1.6037999391555786,
+                  1.6685998439788818
+                ],
+                [
+                  -1.4434199333190918,
+                  -1.5017398595809937
+                ],
+                [
+                  1.2990778684616089,
+                  1.3515658378601074
+                ],
+                [
+                  -1.1691700220108032,
+                  -1.2164092063903809
+                ],
+                [
+                  1.052253007888794,
+                  1.0947682857513428
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  2.7799999713897705
+                ],
+                [
+                  -0.44999998807907104,
+                  -2.501999855041504
+                ],
+                [
+                  0.4049999713897705,
+                  2.2517998218536377
+                ],
+                [
+                  -0.3644999563694,
+                  -2.0266196727752686
+                ],
+                [
+                  0.3280499577522278,
+                  1.8239576816558838
+                ],
+                [
+                  -0.295244961977005,
+                  -1.6415618658065796
+                ],
+                [
+                  0.2657204568386078,
+                  1.4774056673049927
+                ],
+                [
+                  -0.23914840817451477,
+                  -1.3296650648117065
+                ],
+                [
+                  0.21523356437683105,
+                  1.196698546409607
+                ],
+                [
+                  -0.19371020793914795,
+                  -1.0770286321640015
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.8999999761581421,
+                  3.5
+                ],
+                [
+                  -0.809999942779541,
+                  -3.1499998569488525
+                ],
+                [
+                  0.7289999127388,
+                  2.8349997997283936
+                ],
+                [
+                  -0.6560999155044556,
+                  -2.551499843597412
+                ],
+                [
+                  0.59048992395401,
+                  2.2963497638702393
+                ],
+                [
+                  -0.5314409136772156,
+                  -2.0667147636413574
+                ],
+                [
+                  0.47829681634902954,
+                  1.8600432872772217
+                ],
+                [
+                  -0.4304671287536621,
+                  -1.6740388870239258
+                ],
+                [
+                  0.3874204158782959,
+                  1.5066349506378174
+                ],
+                [
+                  -0.3486783504486084,
+                  -1.3559714555740356
+                ],
+                [
+                  0.3138104975223541,
+                  1.2203742265701294
+                ],
+                [
+                  -0.28242942690849304,
+                  -1.0983368158340454
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  100.5,
+                  202.25
+                ],
+                [
+                  100.5,
+                  198.4499969482422
+                ],
+                [
+                  100.5,
+                  201.8699951171875
+                ],
+                [
+                  100.5,
+                  198.79200744628906
+                ],
+                [
+                  100.5,
+                  201.56219482421875
+                ],
+                [
+                  100.5,
+                  199.0690155029297
+                ],
+                [
+                  100.5,
+                  201.31288146972656
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  102.4800033569336,
+                  202.30999755859375
+                ],
+                [
+                  98.71800231933594,
+                  198.39599609375
+                ],
+                [
+                  102.10379791259766,
+                  201.91859436035156
+                ],
+                [
+                  99.05657958984375,
+                  198.74826049804688
+                ],
+                [
+                  101.79907989501953,
+                  201.6015625
+                ],
+                [
+                  99.3308334350586,
+                  199.03358459472656
+                ],
+                [
+                  101.55225372314453,
+                  201.3447723388672
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.0,
+                  203.02999877929688
+                ],
+                [
+                  100.05000305175781,
+                  197.7480010986328
+                ],
+                [
+                  100.90499877929688,
+                  202.50180053710938
+                ],
+                [
+                  100.135498046875,
+                  198.22337341308594
+                ],
+                [
+                  100.82804870605469,
+                  202.07395935058594
+                ],
+                [
+                  100.20475769042969,
+                  198.6084442138672
+                ],
+                [
+                  100.7657241821289,
+                  201.72740173339844
+                ],
+                [
+                  100.26084899902344,
+                  198.9203338623047
+                ],
+                [
+                  100.7152328491211,
+                  201.4467010498047
+                ],
+                [
+                  100.30628967285156,
+                  199.1729736328125
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 320,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.4000015258789,
+                  203.75
+                ],
+                [
+                  99.69000244140625,
+                  197.10000610351562
+                ],
+                [
+                  101.22899627685547,
+                  203.0850067138672
+                ],
+                [
+                  99.84390258789062,
+                  197.69850158691406
+                ],
+                [
+                  101.09049224853516,
+                  202.54635620117188
+                ],
+                [
+                  99.96855926513672,
+                  198.18328857421875
+                ],
+                [
+                  100.9782943725586,
+                  202.11004638671875
+                ],
+                [
+                  100.06953430175781,
+                  198.57595825195312
+                ],
+                [
+                  100.88742065429688,
+                  201.7566375732422
+                ],
+                [
+                  100.15132141113281,
+                  198.89402770996094
+                ],
+                [
+                  100.81381225585938,
+                  201.47036743164062
+                ],
+                [
+                  100.21756744384766,
+                  199.1516571044922
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  2.0
+                ],
+                [
+                  0.0,
+                  -1.7999999523162842
+                ],
+                [
+                  0.0,
+                  1.619999885559082
+                ],
+                [
+                  0.0,
+                  -1.4579998254776
+                ],
+                [
+                  0.0,
+                  1.3121998310089111
+                ],
+                [
+                  0.0,
+                  -1.18097984790802
+                ],
+                [
+                  0.0,
+                  1.0628818273544312
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9800000190734863,
+                  2.059999942779541
+                ],
+                [
+                  -1.781999945640564,
+                  -1.8539998531341553
+                ],
+                [
+                  1.6037999391555786,
+                  1.6685998439788818
+                ],
+                [
+                  -1.4434199333190918,
+                  -1.5017398595809937
+                ],
+                [
+                  1.2990778684616089,
+                  1.3515658378601074
+                ],
+                [
+                  -1.1691700220108032,
+                  -1.2164092063903809
+                ],
+                [
+                  1.052253007888794,
+                  1.0947682857513428
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  2.059999942779541
+                ],
+                [
+                  -0.44999998807907104,
+                  -1.8539998531341553
+                ],
+                [
+                  0.4049999713897705,
+                  1.6685998439788818
+                ],
+                [
+                  -0.3644999563694,
+                  -1.5017398595809937
+                ],
+                [
+                  0.3280499577522278,
+                  1.3515658378601074
+                ],
+                [
+                  -0.295244961977005,
+                  -1.2164092063903809
+                ],
+                [
+                  0.2657204568386078,
+                  1.0947682857513428
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.8999999761581421,
+                  3.9800000190734863
+                ],
+                [
+                  -0.809999942779541,
+                  -3.5820000171661377
+                ],
+                [
+                  0.7289999127388,
+                  3.22379994392395
+                ],
+                [
+                  -0.6560999155044556,
+                  -2.9014198780059814
+                ],
+                [
+                  0.59048992395401,
+                  2.6112778186798096
+                ],
+                [
+                  -0.5314409136772156,
+                  -2.3501498699188232
+                ],
+                [
+                  0.47829681634902954,
+                  2.1151347160339355
+                ],
+                [
+                  -0.4304671287536621,
+                  -1.9036211967468262
+                ],
+                [
+                  0.3874204158782959,
+                  1.713258981704712
+                ],
+                [
+                  -0.3486783504486084,
+                  -1.5419330596923828
+                ],
+                [
+                  0.3138104975223541,
+                  1.387739658355713
+                ],
+                [
+                  -0.28242942690849304,
+                  -1.2489656209945679
+                ],
+                [
+                  0.2541864812374115,
+                  1.1240689754486084
+                ],
+                [
+                  -0.22876782715320587,
+                  -1.0116620063781738
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  100.5,
+                  202.25
+                ],
+                [
+                  100.5,
+                  198.4499969482422
+                ],
+                [
+                  100.5,
+                  201.8699951171875
+                ],
+                [
+                  100.5,
+                  198.79200744628906
+                ],
+                [
+                  100.5,
+                  201.56219482421875
+                ],
+                [
+                  100.5,
+                  199.0690155029297
+                ],
+                [
+                  100.5,
+                  201.31288146972656
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  102.4800033569336,
+                  202.30999755859375
+                ],
+                [
+                  98.71800231933594,
+                  198.39599609375
+                ],
+                [
+                  102.10379791259766,
+                  201.91859436035156
+                ],
+                [
+                  99.05657958984375,
+                  198.74826049804688
+                ],
+                [
+                  101.79907989501953,
+                  201.6015625
+                ],
+                [
+                  99.3308334350586,
+                  199.03358459472656
+                ],
+                [
+                  101.55225372314453,
+                  201.3447723388672
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.0,
+                  202.30999755859375
+                ],
+                [
+                  100.05000305175781,
+                  198.39599609375
+                ],
+                [
+                  100.90499877929688,
+                  201.91859436035156
+                ],
+                [
+                  100.135498046875,
+                  198.74826049804688
+                ],
+                [
+                  100.82804870605469,
+                  201.6015625
+                ],
+                [
+                  100.20475769042969,
+                  199.03358459472656
+                ],
+                [
+                  100.7657241821289,
+                  201.3447723388672
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 768,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.4000015258789,
+                  204.22999572753906
+                ],
+                [
+                  99.69000244140625,
+                  196.66799926757812
+                ],
+                [
+                  101.22899627685547,
+                  203.4738006591797
+                ],
+                [
+                  99.84390258789062,
+                  197.3485870361328
+                ],
+                [
+                  101.09049224853516,
+                  202.8612823486328
+                ],
+                [
+                  99.96855926513672,
+                  197.8998565673828
+                ],
+                [
+                  100.9782943725586,
+                  202.36512756347656
+                ],
+                [
+                  100.06953430175781,
+                  198.34637451171875
+                ],
+                [
+                  100.88742065429688,
+                  201.9632568359375
+                ],
+                [
+                  100.15132141113281,
+                  198.70806884765625
+                ],
+                [
+                  100.81381225585938,
+                  201.6377410888672
+                ],
+                [
+                  100.21756744384766,
+                  199.00103759765625
+                ],
+                [
+                  100.75418853759766,
+                  201.3740692138672
+                ],
+                [
+                  100.27123260498047,
+                  199.23834228515625
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  2.0
+                ],
+                [
+                  0.0,
+                  -1.7999999523162842
+                ],
+                [
+                  0.0,
+                  1.619999885559082
+                ],
+                [
+                  0.0,
+                  -1.4579998254776
+                ],
+                [
+                  0.0,
+                  1.3121998310089111
+                ],
+                [
+                  0.0,
+                  -1.18097984790802
+                ],
+                [
+                  0.0,
+                  1.0628818273544312
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  1.9800000190734863,
+                  2.059999942779541
+                ],
+                [
+                  -1.781999945640564,
+                  -1.8539998531341553
+                ],
+                [
+                  1.6037999391555786,
+                  1.6685998439788818
+                ],
+                [
+                  -1.4434199333190918,
+                  -1.5017398595809937
+                ],
+                [
+                  1.2990778684616089,
+                  1.3515658378601074
+                ],
+                [
+                  -1.1691700220108032,
+                  -1.2164092063903809
+                ],
+                [
+                  1.052253007888794,
+                  1.0947682857513428
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.5,
+                  6.619999885559082
+                ],
+                [
+                  -0.44999998807907104,
+                  -5.9579997062683105
+                ],
+                [
+                  0.4049999713897705,
+                  5.362199783325195
+                ],
+                [
+                  -0.3644999563694,
+                  -4.825979709625244
+                ],
+                [
+                  0.3280499577522278,
+                  4.343381404876709
+                ],
+                [
+                  -0.295244961977005,
+                  -3.909043073654175
+                ],
+                [
+                  0.2657204568386078,
+                  3.5181386470794678
+                ],
+                [
+                  -0.23914840817451477,
+                  -3.1663246154785156
+                ],
+                [
+                  0.21523356437683105,
+                  2.8496921062469482
+                ],
+                [
+                  -0.19371020793914795,
+                  -2.564722776412964
+                ],
+                [
+                  0.1743391752243042,
+                  2.3082504272460938
+                ],
+                [
+                  -0.15690524876117706,
+                  -2.077425241470337
+                ],
+                [
+                  0.14121471345424652,
+                  1.8696826696395874
+                ],
+                [
+                  -0.12709324061870575,
+                  -1.6827143430709839
+                ],
+                [
+                  0.11438391357660294,
+                  1.5144429206848145
+                ],
+                [
+                  -0.10294552147388458,
+                  -1.362998604774475
+                ],
+                [
+                  0.09265096485614777,
+                  1.2266987562179565
+                ],
+                [
+                  -0.08338586986064911,
+                  -1.1040288209915161
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        0,
+        0
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.8999999761581421,
+                  2.180000066757202
+                ],
+                [
+                  -0.809999942779541,
+                  -1.9620000123977661
+                ],
+                [
+                  0.7289999127388,
+                  1.7657999992370605
+                ],
+                [
+                  -0.6560999155044556,
+                  -1.5892199277877808
+                ],
+                [
+                  0.59048992395401,
+                  1.4302978515625
+                ],
+                [
+                  -0.5314409136772156,
+                  -1.287268042564392
+                ],
+                [
+                  0.47829681634902954,
+                  1.158541202545166
+                ],
+                [
+                  -0.4304671287536621,
+                  -1.0426870584487915
+                ],
+                [
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  100.5,
+                  202.25
+                ],
+                [
+                  100.5,
+                  198.4499969482422
+                ],
+                [
+                  100.5,
+                  201.8699951171875
+                ],
+                [
+                  100.5,
+                  198.79200744628906
+                ],
+                [
+                  100.5,
+                  201.56219482421875
+                ],
+                [
+                  100.5,
+                  199.0690155029297
+                ],
+                [
+                  100.5,
+                  201.31288146972656
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.009999999776482582,
+              0.0,
+              -0.009999999776482582
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        1,
+        99,
+        39,
+        39,
+        99
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  102.4800033569336,
+                  202.30999755859375
+                ],
+                [
+                  98.71800231933594,
+                  198.39599609375
+                ],
+                [
+                  102.10379791259766,
+                  201.91859436035156
+                ],
+                [
+                  99.05657958984375,
+                  198.74826049804688
+                ],
+                [
+                  101.79907989501953,
+                  201.6015625
+                ],
+                [
+                  99.3308334350586,
+                  199.03358459472656
+                ],
+                [
+                  101.55225372314453,
+                  201.3447723388672
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.049000002443790436,
+              0.0,
+              -0.049000002443790436
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.989999771118164,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        77,
+        25,
+        10,
+        30,
+        50
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.0,
+                  206.8699951171875
+                ],
+                [
+                  100.05000305175781,
+                  194.29200744628906
+                ],
+                [
+                  100.90499877929688,
+                  205.61219787597656
+                ],
+                [
+                  100.135498046875,
+                  195.4240264892578
+                ],
+                [
+                  100.82804870605469,
+                  204.5933837890625
+                ],
+                [
+                  100.20475769042969,
+                  196.34095764160156
+                ],
+                [
+                  100.7657241821289,
+                  203.7681427001953
+                ],
+                [
+                  100.26084899902344,
+                  197.08367919921875
+                ],
+                [
+                  100.7152328491211,
+                  203.0996856689453
+                ],
+                [
+                  100.30628967285156,
+                  197.68527221679688
+                ],
+                [
+                  100.6743392944336,
+                  202.55825805664062
+                ],
+                [
+                  100.34309387207031,
+                  198.17257690429688
+                ],
+                [
+                  100.6412124633789,
+                  202.11968994140625
+                ],
+                [
+                  100.37290954589844,
+                  198.56729125976562
+                ],
+                [
+                  100.61438751220703,
+                  201.7644500732422
+                ],
+                [
+                  100.39705657958984,
+                  198.8870086669922
+                ],
+                [
+                  100.5926513671875,
+                  201.47669982910156
+                ],
+                [
+                  100.41661071777344,
+                  199.14596557617188
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.019999999552965164,
+              0.0,
+              -0.03999999910593033
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.5,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "height": 1024,
+      "position": [
+        100.5,
+        200.25
+      ],
+      "random": [
+        12345,
+        12345,
+        12345,
+        12345,
+        12345
+      ],
+      "animations": [
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "position",
+            "RemovedOnCompletion": false,
+            "duration": 20.0,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "Path": {
+              "points": [
+                [
+                  100.5,
+                  200.25
+                ],
+                [
+                  101.4000015258789,
+                  202.42999267578125
+                ],
+                [
+                  99.69000244140625,
+                  198.28799438476562
+                ],
+                [
+                  101.22899627685547,
+                  202.0157928466797
+                ],
+                [
+                  99.84390258789062,
+                  198.66078186035156
+                ],
+                [
+                  101.09049224853516,
+                  201.6802978515625
+                ],
+                [
+                  99.96855926513672,
+                  198.96273803710938
+                ],
+                [
+                  100.9782943725586,
+                  201.40853881835938
+                ],
+                [
+                  100.06953430175781,
+                  199.20730590820312
+                ],
+                [
+                  100.5,
+                  200.25
+                ]
+              ]
+            }
+          }
+        },
+        {
+          "target": "floating-view",
+          "name": "unknown-cf-0x0",
+          "properties": {
+            "keypath": "transform.rotation.z",
+            "Values": [
+              0.0,
+              0.03500000014901161,
+              0.0,
+              -0.03500000014901161
+            ],
+            "Cumulative": true,
+            "RemovedOnCompletion": false,
+            "duration": 4.449999809265137,
+            "RepeatCount": "inf",
+            "Autoreverses": true,
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "lamps": [
+    {
+      "media_time": 0,
+      "animations": [
+        {
+          "target": "lamp-100",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.0,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-101",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.180000001490116,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-102",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.360000002980232,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-103",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.54000001192093,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-104",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.720000005960465,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-105",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 8.9,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-106",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 9.080000023841858,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-107",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 9.259999988079072,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-108",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 9.44000001192093,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "media_time": 10.5,
+      "animations": [
+        {
+          "target": "lamp-100",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 18.5,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-101",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 18.680000381469725,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-102",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 18.859999809265137,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-103",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.040000190734865,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-104",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.219999618530274,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-105",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.4,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-106",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.580000381469727,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-107",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.75999980926514,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-108",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 19.940000190734864,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "media_time": 12345.678,
+      "animations": [
+        {
+          "target": "lamp-100",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12353.677734375,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-101",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12353.85734375,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-102",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.0379296875,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-103",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.2175390625,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-104",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.398125,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-105",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.577734375,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-106",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.75734375,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-107",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12354.9379296875,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        },
+        {
+          "target": "lamp-108",
+          "name": "opacityAnimation",
+          "properties": {
+            "keypath": "opacity",
+            "RemovedOnCompletion": false,
+            "Additive": false,
+            "BeginTime": 12355.1175390625,
+            "Values": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "KeyTimes": [
+              0.0,
+              0.05000000074505806,
+              0.30000001192092896,
+              0.6000000238418579,
+              1.0
+            ],
+            "duration": 3.5,
+            "RepeatCount": "inf",
+            "TimingFunction": {
+              "timing": "easeInEaseOut"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

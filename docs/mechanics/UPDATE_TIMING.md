@@ -1,0 +1,15 @@
+# Offline live updates and replay cadence
+
+Baseline1.14: CRoom::Update0xd2768, UpdateGame0xd338c, SimulateGame0xd8f48 and ProcessWaves0xd3bf8. The preserved executable hash is recorded in `tests/fixtures/native-room-reference.json`.
+
+The outer Update multiplies elapsed milliseconds by1,2 or4 for a one-player room, selected from the original speed field. It passes that elapsed value once to UpdateGame. The one-player branch then calls wave updates/spawning, players, creeps, ambient sound, towers, kill-chain tracking, mines, portals and bases in that order. It does not split each live frame into30ms updates. The room's integer clock truncates after a32-bit float addition; its integer survival timer truncates after32-bit float subtraction. Thus1000+16.67 becomes1016 while5000-16.67 becomes4983.
+
+The bounded ARM probe executes22 one-player cases, with both live/replay flags and elapsed values from0 to533ms. All ten subsystem routines are stubs. It captures dispatch counts/order/register arguments and actual room timer arithmetic. This proves the dispatcher/timer behavior only, not complete original-game execution or every subsystem's variable-delta behavior.
+
+SimulateGame explicitly loops with30ms updates for correction/replay. The multiplayer live branch separately schedules31ms intervals, with a30-iteration bound. Multiplayer behavior is deferred.
+
+The port now retains `advance` for fixed30ms replay verification and uses `advance_frame` for ordinary offline play. Movement, acquisition, turning, reload, projectiles and continuous damage receive the frame elapsed value; missile steering keeps its native100ms cap. A live wave emits at most one slot per wave/frame and resets its delay without a forced30ms ceiling. Native ProcessWaves0xd3ed4..0xd4064 increments the slot timer, emits once, then clears it. Live particle systems now also update once per elapsed frame. Original creep/tower/missile callers convert f32 elapsed milliseconds with f32(0.001); particles retain a separate f32 seconds clock rather than inheriting the room integer truncation. Replay presentation retains its30ms driver. Global random/callback order and complete per-owner particle clocks remain comparison gaps.
+
+QA tutorial/corpus fixtures retain fixed replay cadence for reproducibility. The dense native performance fixture explicitly uses the live path at1x/2x/4x. `--qa-live-runtime` enables the same live path in an isolated interactive QA session. The unavailable working original installation, complete subsystem rounding at arbitrary fractional elapsed values, global random stream and physical-device frame cadence remain comparison limits.
+
+The original movement probe now also executes576 variable-frame cases across eight elapsed values, three speeds, boundary/carry states and three segment directions. They supplement225 fixed replay cases. These test the original one-boundary-per-update behavior and retained whole-increment carry at fractional/large elapsed times; collision/isolation and cell-height behavior remain outside the probe.

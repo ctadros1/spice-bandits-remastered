@@ -1,0 +1,533 @@
+{
+  "method": "Original CLevelItem constructor prefix through fourteen text objects.\n\nAllocation, C++ strings/streams and CTextObject construction are recording\nstubs. The original constructor declarations and three blurShadow setters\nexecute. Device type is supplied; stop0x8476a before later callback setup.\nNo font raster, real device service or UIKit compositor.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "device_type": 1,
+      "texts": [
+        {
+          "target": 4096,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 4352,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 4608,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 4864,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5120,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5376,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 5632,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5888,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6144,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6400,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 6656,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6912,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 7168,
+          "font": "KautivaPro-Bold",
+          "size": 20.0,
+          "color": [
+            0.5839999914169312,
+            0.7019000053405762,
+            0.7490000128746033,
+            0.800000011920929
+          ]
+        },
+        {
+          "target": 7424,
+          "font": "KautivaPro-Italic",
+          "size": 20.0,
+          "color": [
+            0.5839999914169312,
+            0.7019000053405762,
+            0.7490000128746033,
+            0.800000011920929
+          ]
+        }
+      ],
+      "shadows": [
+        {
+          "target": 4864,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "target": 5888,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "target": 6912,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "roles": {
+        "locked_title": 4096,
+        "shadow_title": 4864,
+        "completed_title": 4352,
+        "new_title": 4608,
+        "description": 7168,
+        "points": 7424
+      },
+      "stopped_at": "0x8476a"
+    },
+    {
+      "device_type": 2,
+      "texts": [
+        {
+          "target": 4096,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 4352,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 4608,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 4864,
+          "font": "KautivaPro-Bold",
+          "size": 28.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5120,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5376,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 5632,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 5888,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6144,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6400,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.0,
+            0.4156000018119812,
+            0.6116999983787537,
+            1.0
+          ]
+        },
+        {
+          "target": 6656,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            0.9330000281333923,
+            0.5058000087738037,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "target": 6912,
+          "font": "KautivaPro-Bold",
+          "size": 14.0,
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "target": 7168,
+          "font": "KautivaPro-Bold",
+          "size": 16.0,
+          "color": [
+            0.5839999914169312,
+            0.7019000053405762,
+            0.7490000128746033,
+            0.800000011920929
+          ]
+        },
+        {
+          "target": 7424,
+          "font": "KautivaPro-Italic",
+          "size": 16.0,
+          "color": [
+            0.5839999914169312,
+            0.7019000053405762,
+            0.7490000128746033,
+            0.800000011920929
+          ]
+        }
+      ],
+      "shadows": [
+        {
+          "target": 4864,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "target": 5888,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        {
+          "target": 6912,
+          "enabled": true,
+          "blur": 7.0,
+          "intensity": 7,
+          "colors": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "written": {
+            "enabled": true,
+            "blur": 7.0,
+            "intensity": 7,
+            "colors": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        }
+      ],
+      "roles": {
+        "locked_title": 4096,
+        "shadow_title": 4864,
+        "completed_title": 4352,
+        "new_title": 4608,
+        "description": 7168,
+        "points": 7424
+      },
+      "stopped_at": "0x8476a"
+    }
+  ],
+  "original_unchanged": true
+}

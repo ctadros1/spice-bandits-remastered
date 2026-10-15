@@ -1,0 +1,247 @@
+{
+  "method": "Execute TutorialView afterClose with explicit tutorial kind/controller stubs.\n\nOnly original afterClose instructions execute. Objective-C lookups, controller\nidentity, notifications and menu delivery are recorded stubs. No UIKit frame,\nservice session, animation scheduling or whole application is emulated.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "kind": 0,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 1,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 2,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 3,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 4,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 5,
+      "result": {
+        "events": [
+          {
+            "notification": "CloseLevelUpScreen"
+          },
+          {
+            "menu": 103,
+            "live_game": 0
+          }
+        ],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 6,
+      "result": {
+        "events": [
+          {
+            "notification": "CloseLevelUpScreen"
+          },
+          {
+            "menu": 104,
+            "live_game": 0
+          }
+        ],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 7,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 8,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 9,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 10,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 11,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 12,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 13,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 14,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 15,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 16,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 17,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 18,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 19,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 20,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 21,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 22,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 23,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 24,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 25,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 26,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 27,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 28,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 29,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 30,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    },
+    {
+      "kind": 31,
+      "result": {
+        "events": [],
+        "kind_after": 0
+      }
+    }
+  ],
+  "original_unchanged": true
+}

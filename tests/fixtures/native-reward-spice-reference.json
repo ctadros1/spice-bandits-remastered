@@ -1,0 +1,1607 @@
+{
+  "method": "Original spice-row render branch0xba9aa..0xbacb8 with explicit text metadata.\n\nThe earlier format/service/font setup is omitted. Supplied content dimensions\nand power-of-two quad dimensions are recorded at the original RenderText call;\ntext alpha is a recording stub and bursts are marked already emitted. No old\nUIKit font raster, string formatting or whole result screen is executed.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          504.0,
+          420.0
+        ],
+        "quad": [
+          307.20001220703125,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          504.0,
+          420.0
+        ],
+        "quad": [
+          307.20001220703125,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          504.1600036621094,
+          420.0199890136719
+        ],
+        "quad": [
+          306.68798828125,
+          38.33599853515625
+        ],
+        "alpha": 0.009999999776482582
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          504.1600036621094,
+          420.0199890136719
+        ],
+        "quad": [
+          306.68798828125,
+          38.33599853515625
+        ],
+        "alpha": 0.007499999832361937
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          508.0,
+          420.5
+        ],
+        "quad": [
+          294.3999938964844,
+          36.79999923706055
+        ],
+        "alpha": 0.25
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          508.0,
+          420.5
+        ],
+        "quad": [
+          294.3999938964844,
+          36.79999923706055
+        ],
+        "alpha": 0.1875
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          512.0,
+          421.0
+        ],
+        "quad": [
+          281.6000061035156,
+          35.20000076293945
+        ],
+        "alpha": 0.5
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          512.0,
+          421.0
+        ],
+        "quad": [
+          281.6000061035156,
+          35.20000076293945
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          516.0,
+          421.5
+        ],
+        "quad": [
+          268.79998779296875,
+          33.599998474121094
+        ],
+        "alpha": 0.75
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          516.0,
+          421.5
+        ],
+        "quad": [
+          268.79998779296875,
+          33.599998474121094
+        ],
+        "alpha": 0.5625
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          519.9840087890625,
+          421.99798583984375
+        ],
+        "quad": [
+          256.05120849609375,
+          32.00640106201172
+        ],
+        "alpha": 0.9990000128746033
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          519.9840087890625,
+          421.99798583984375
+        ],
+        "quad": [
+          256.05120849609375,
+          32.00640106201172
+        ],
+        "alpha": 0.7492499947547913
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        160,
+        20
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          496.6499938964844,
+          419.8999938964844
+        ],
+        "quad": [
+          307.20001220703125,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          496.6499938964844,
+          419.8999938964844
+        ],
+        "quad": [
+          307.20001220703125,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          496.8835144042969,
+          419.9209899902344
+        ],
+        "quad": [
+          306.68798828125,
+          38.33599853515625
+        ],
+        "alpha": 0.009999999776482582
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          496.8835144042969,
+          419.9209899902344
+        ],
+        "quad": [
+          306.68798828125,
+          38.33599853515625
+        ],
+        "alpha": 0.007499999832361937
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          502.48748779296875,
+          420.4250183105469
+        ],
+        "quad": [
+          294.3999938964844,
+          36.79999923706055
+        ],
+        "alpha": 0.25
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          502.48748779296875,
+          420.4250183105469
+        ],
+        "quad": [
+          294.3999938964844,
+          36.79999923706055
+        ],
+        "alpha": 0.1875
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          508.32501220703125,
+          420.9499816894531
+        ],
+        "quad": [
+          281.6000061035156,
+          35.20000076293945
+        ],
+        "alpha": 0.5
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          508.32501220703125,
+          420.9499816894531
+        ],
+        "quad": [
+          281.6000061035156,
+          35.20000076293945
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          514.1624755859375,
+          421.4750061035156
+        ],
+        "quad": [
+          268.79998779296875,
+          33.599998474121094
+        ],
+        "alpha": 0.75
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          514.1624755859375,
+          421.4750061035156
+        ],
+        "quad": [
+          268.79998779296875,
+          33.599998474121094
+        ],
+        "alpha": 0.5625
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          519.9766845703125,
+          421.9978942871094
+        ],
+        "quad": [
+          256.05120849609375,
+          32.00640106201172
+        ],
+        "alpha": 0.9990000128746033
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          519.9766845703125,
+          421.9978942871094
+        ],
+        "quad": [
+          256.05120849609375,
+          32.00640106201172
+        ],
+        "alpha": 0.7492499947547913
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        233.5,
+        21
+      ],
+      "quad": [
+        256,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          256.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          494.2749938964844,
+          418.8999938964844
+        ],
+        "quad": [
+          614.4000244140625,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          494.2749938964844,
+          418.8999938964844
+        ],
+        "quad": [
+          614.4000244140625,
+          38.400001525878906
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          494.5322570800781,
+          418.9309997558594
+        ],
+        "quad": [
+          613.3759765625,
+          38.33599853515625
+        ],
+        "alpha": 0.009999999776482582
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.01,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          494.5322570800781,
+          418.9309997558594
+        ],
+        "quad": [
+          613.3759765625,
+          38.33599853515625
+        ],
+        "alpha": 0.007499999832361937
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          500.7062683105469,
+          419.6750183105469
+        ],
+        "quad": [
+          588.7999877929688,
+          36.79999923706055
+        ],
+        "alpha": 0.25
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.25,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          500.7062683105469,
+          419.6750183105469
+        ],
+        "quad": [
+          588.7999877929688,
+          36.79999923706055
+        ],
+        "alpha": 0.1875
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          507.1374816894531,
+          420.4499816894531
+        ],
+        "quad": [
+          563.2000122070312,
+          35.20000076293945
+        ],
+        "alpha": 0.5
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          507.1374816894531,
+          420.4499816894531
+        ],
+        "quad": [
+          563.2000122070312,
+          35.20000076293945
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          513.5687866210938,
+          421.2250061035156
+        ],
+        "quad": [
+          537.5999755859375,
+          33.599998474121094
+        ],
+        "alpha": 0.75
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.75,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          513.5687866210938,
+          421.2250061035156
+        ],
+        "quad": [
+          537.5999755859375,
+          33.599998474121094
+        ],
+        "alpha": 0.5625
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          519.9742431640625,
+          421.99688720703125
+        ],
+        "quad": [
+          512.1024169921875,
+          32.00640106201172
+        ],
+        "alpha": 0.9990000128746033
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 0.999,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          519.9742431640625,
+          421.99688720703125
+        ],
+        "quad": [
+          512.1024169921875,
+          32.00640106201172
+        ],
+        "alpha": 0.7492499947547913
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 1,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 1,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          32.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        257.25,
+        31
+      ],
+      "quad": [
+        512,
+        32
+      ],
+      "phase": 1.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          32.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          468.8999938964844,
+          418.70001220703125
+        ],
+        "quad": [
+          614.4000244140625,
+          76.80000305175781
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          468.8999938964844,
+          418.70001220703125
+        ],
+        "quad": [
+          614.4000244140625,
+          76.80000305175781
+        ],
+        "alpha": 0.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.01,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          469.4110107421875,
+          418.7330017089844
+        ],
+        "quad": [
+          613.3759765625,
+          76.6719970703125
+        ],
+        "alpha": 0.009999999776482582
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.01,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          469.4110107421875,
+          418.7330017089844
+        ],
+        "quad": [
+          613.3759765625,
+          76.6719970703125
+        ],
+        "alpha": 0.007499999832361937
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.25,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          481.6750183105469,
+          419.5250244140625
+        ],
+        "quad": [
+          588.7999877929688,
+          73.5999984741211
+        ],
+        "alpha": 0.25
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.25,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          481.6750183105469,
+          419.5250244140625
+        ],
+        "quad": [
+          588.7999877929688,
+          73.5999984741211
+        ],
+        "alpha": 0.1875
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          494.4499816894531,
+          420.3499755859375
+        ],
+        "quad": [
+          563.2000122070312,
+          70.4000015258789
+        ],
+        "alpha": 0.5
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          494.4499816894531,
+          420.3499755859375
+        ],
+        "quad": [
+          563.2000122070312,
+          70.4000015258789
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.75,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          507.2250061035156,
+          421.17498779296875
+        ],
+        "quad": [
+          537.5999755859375,
+          67.19999694824219
+        ],
+        "alpha": 0.75
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.75,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          507.2250061035156,
+          421.17498779296875
+        ],
+        "quad": [
+          537.5999755859375,
+          67.19999694824219
+        ],
+        "alpha": 0.5625
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.999,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          519.9489135742188,
+          421.9967041015625
+        ],
+        "quad": [
+          512.1024169921875,
+          64.01280212402344
+        ],
+        "alpha": 0.9990000128746033
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 0.999,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          519.9489135742188,
+          421.9967041015625
+        ],
+        "quad": [
+          512.1024169921875,
+          64.01280212402344
+        ],
+        "alpha": 0.7492499947547913
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 1,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          64.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 1,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          64.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 1.5,
+      "alpha": 1,
+      "root_alpha": 1,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          64.0
+        ],
+        "alpha": 1.0
+      },
+      "quad_restored": true
+    },
+    {
+      "content": [
+        511,
+        33
+      ],
+      "quad": [
+        512,
+        64
+      ],
+      "phase": 1.5,
+      "alpha": 0.75,
+      "root_alpha": 0.5,
+      "draw": {
+        "point": [
+          520.0,
+          422.0
+        ],
+        "quad": [
+          512.0,
+          64.0
+        ],
+        "alpha": 0.375
+      },
+      "quad_restored": true
+    }
+  ],
+  "original_unchanged": true
+}

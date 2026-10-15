@@ -1,0 +1,1236 @@
+{
+  "method": "Bounded original EAGLViewController menuTopView:loadMenu: dispatch.\n\nObjective-C sends return explicit fixture identities/current menu/device type.\nUIKit, layer rendering, callbacks, sessions, controller construction, sound\nplayback and asynchronous scheduling are stubs. Record original transition\nrequests and tab sound; this is not a UIKit animation or whole-game oracle.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "old": 0,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 0,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 101,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 0,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 102,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 0,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 103,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 0,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 104,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 0,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 105,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 0,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 100,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 100,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": false
+      }
+    },
+    {
+      "old": 100,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 101,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "hideView",
+            "delay": 0.5
+          },
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 102,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "hideView",
+            "delay": 0.5
+          },
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 103,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "hideView",
+            "delay": 0.5
+          },
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 104,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "hideView",
+            "delay": 0.5
+          },
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 105,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "hideView",
+            "delay": 0.5
+          },
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 100,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 101,
+      "new": 101,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 101,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 102,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 103,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 104,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 105,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 101,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 102,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 101,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 102,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 102,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 103,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 104,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 105,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 102,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 103,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 101,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 102,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 103,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 103,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 104,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 105,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 103,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 104,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 101,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 102,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 103,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 104,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 104,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 105,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromRight",
+        "current": 105,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 104,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 100,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "fade",
+        "subtype": "",
+        "current": 100,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 105,
+      "new": 101,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 101,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 102,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 102,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 103,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 103,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 104,
+      "result": {
+        "animation": true,
+        "duration": 0.4000000059604645,
+        "type": "push",
+        "subtype": "fromLeft",
+        "current": 104,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 105,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 105,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    },
+    {
+      "old": 105,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [
+          {
+            "cue": "UI_tab_select_and_move-mono",
+            "layer": 4
+          }
+        ],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 100,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 100,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": false
+      }
+    },
+    {
+      "old": 200,
+      "new": 101,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 101,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 102,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 102,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 103,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 103,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 104,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 104,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 105,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 105,
+        "sounds": [],
+        "scheduled": [
+          {
+            "selector": "viewControllerLoaded:",
+            "delay": 0.4000000059604645
+          }
+        ],
+        "interaction": true
+      }
+    },
+    {
+      "old": 200,
+      "new": 200,
+      "result": {
+        "animation": false,
+        "duration": 0,
+        "type": "",
+        "subtype": "",
+        "current": 200,
+        "sounds": [],
+        "scheduled": [],
+        "interaction": true
+      }
+    }
+  ],
+  "original_unchanged": true
+}

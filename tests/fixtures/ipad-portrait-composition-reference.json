@@ -1,0 +1,171 @@
+{
+  "method": "Visible English line breaks from ten main iPad recording states. OCR supports the transcription; selected source frames are visually reviewed. Runtime uses preserved22pt font/art, measured21px font height plus2px leading per measured line,2px rendered interline spacing, an observed161px short-message minimum column and4px upward panel offset. These are explicit earlier-recording presentation selections, not execution of old UIKit font measurement or a source-device pixel oracle.",
+  "font_size": 22,
+  "hint_height": 227,
+  "line_spacing": 2,
+  "y_offset": -4,
+  "cases": [
+    {
+      "page": 0,
+      "reference": "builds/reference/dense/clip-2/00121.jpg",
+      "reference_sha256": "8e3d019eb170d107262c3a7cf6f78a1554918594b693daebe703e8b4bc1b5b79",
+      "time_seconds": 120.5,
+      "top": false,
+      "column": 184,
+      "lines": [
+        "Welcome to the",
+        "camp, cadet! You",
+        "build defensive",
+        "towers, and they do",
+        "the shooting.",
+        "",
+        "Tap anywhere to",
+        "continue..."
+      ]
+    },
+    {
+      "page": 4,
+      "reference": "builds/reference/dense/clip-2/00163.jpg",
+      "reference_sha256": "2e780240f5617b1110feb26c3b156b5f780ae1cf77508ef70b8ed0e934a7db56",
+      "time_seconds": 162.5,
+      "top": false,
+      "column": 207,
+      "lines": [
+        "Great job. Now you can",
+        "see the earthlings",
+        "appearing. They are",
+        "walking to face their",
+        "fate. Haha!"
+      ]
+    },
+    {
+      "page": 5,
+      "reference": "builds/reference/dense/clip-2/00175.jpg",
+      "reference_sha256": "c764d75001ed513468cd07edfff0fb25b7c47a9944e614af92594117339065cc",
+      "time_seconds": 174.5,
+      "top": false,
+      "column": 207,
+      "lines": [
+        "Every time you kill an",
+        "earthling you get some",
+        "money.",
+        "",
+        "You can spend money to",
+        "build new towers or",
+        "upgrade the existing",
+        "ones."
+      ]
+    },
+    {
+      "page": 6,
+      "reference": "builds/reference/dense/clip-2/00186.jpg",
+      "reference_sha256": "4ac9e482be611638ac1c071bf64d439dadea5baba23674e2c5624ce27f83eaaf",
+      "time_seconds": 185.5,
+      "top": false,
+      "column": 184,
+      "lines": [
+        "You can upgrade or",
+        "sell your towers.",
+        "",
+        "Let's upgrade our",
+        "towers!"
+      ]
+    },
+    {
+      "page": 8,
+      "reference": "builds/reference/dense/clip-2/00196.jpg",
+      "reference_sha256": "b56250329f2476b27d931bec7b23130962d7e4299ac50fac19e88d4e1369e236",
+      "time_seconds": 195.5,
+      "top": false,
+      "column": 161,
+      "lines": [
+        "Great. Now",
+        "upgrade the other",
+        "towers."
+      ]
+    },
+    {
+      "page": 9,
+      "reference": "builds/reference/dense/clip-2/00201.jpg",
+      "reference_sha256": "4bab1242c4fa92e0088586e5cf2baeb30bf7492dc7beee92ac46e1baa13fcd9e",
+      "time_seconds": 200.5,
+      "top": false,
+      "column": 161,
+      "lines": [
+        "That tower never",
+        "fired a round. Let's",
+        "sell it and get a",
+        "part of the money",
+        "back."
+      ]
+    },
+    {
+      "page": 12,
+      "reference": "builds/reference/dense/clip-2/00212.jpg",
+      "reference_sha256": "89db9e5be2bfe4d9de8c6c1fe5a632413664be41cfbe1c3a40a2cd4580a7aa06",
+      "time_seconds": 211.5,
+      "top": true,
+      "column": 207,
+      "lines": [
+        "You are doing really",
+        "well, rookie.",
+        "",
+        "Let's apply Disco Magic",
+        "to these humans. It will",
+        "disorient them."
+      ]
+    },
+    {
+      "page": 14,
+      "reference": "builds/reference/dense/clip-2/00231.jpg",
+      "reference_sha256": "5ebb418fbb3f68236209ca943688b1f1300811ebd783e2fc37ee0dea1c882fc5",
+      "time_seconds": 230.5,
+      "top": true,
+      "column": 207,
+      "lines": [
+        "Sweet, isn't it?",
+        "",
+        "Now let's try Active",
+        "Defense.",
+        "",
+        "All towers will be",
+        "damaging all enemies in",
+        "their range with",
+        "electricity."
+      ]
+    },
+    {
+      "page": 16,
+      "reference": "builds/reference/dense/clip-2/00252.jpg",
+      "reference_sha256": "260eb43c59fdd46d810f203aec1c83dd05e4474b3bb67b6a7516020efd37a539",
+      "time_seconds": 251.5,
+      "top": true,
+      "column": 207,
+      "lines": [
+        "There's more to magic.",
+        "If you don't want an",
+        "enemy to pass",
+        "somewhere, place a",
+        "mine.",
+        "",
+        "Let's place a mine on",
+        "the way to our base."
+      ]
+    },
+    {
+      "page": 18,
+      "reference": "builds/reference/dense/clip-2/00285.jpg",
+      "reference_sha256": "c77fc3852d8b9c84ffe654e215c7520625fee7ea642d90438a26a5026f7941b1",
+      "time_seconds": 284.5,
+      "top": true,
+      "column": 184,
+      "lines": [
+        "Great job cadet!",
+        "",
+        "Press \"To the map\"",
+        "to return to the",
+        "world map."
+      ]
+    }
+  ]
+}

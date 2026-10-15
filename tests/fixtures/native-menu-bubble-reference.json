@@ -1,0 +1,7617 @@
+{
+  "method": "Original menu bubble path/group declarations with explicit graphics stubs.\n\nARM startBubble executes against supplied coordinates/speed/distance. Paths,\nObjective-C animations/numbers/arrays/colors/layers are recorded stubs; no Core\nAnimation interpolation, UIKit conversion, original random stream or rasterizer.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "timer_interval": 0.05999999865889549,
+  "cases": [
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 30,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 60,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      0.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -25.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "speed": 120,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      0.0,
+                      0.0
+                    ],
+                    [
+                      0.0,
+                      -100.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 30,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 60,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      30.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      5.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "speed": 120,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      20.0,
+                      30.0
+                    ],
+                    [
+                      20.0,
+                      -70.0
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 30,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 3.3333332538604736,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 3.3333332538604736,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.4166666567325592,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.4166666567325592,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 60,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 1.6666666269302368,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 1.6666666269302368,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 0,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 0,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.0,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      234.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.0,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 25,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 25,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.2083333283662796,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      209.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.2083333283662796,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 100,
+      "side": 0,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "x": 333.5,
+      "y": 234.5,
+      "speed": 120,
+      "distance": 100,
+      "side": 1,
+      "group": [
+        {
+          "target": "bubble-slot",
+          "name": "bubble",
+          "properties": {
+            "keypath": "group",
+            "duration": 0.8333333134651184,
+            "TimingFunction": {
+              "timing": "easeIn"
+            },
+            "Animations": [
+              {
+                "keypath": "position",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Path": {
+                  "points": [
+                    [
+                      333.5,
+                      234.5
+                    ],
+                    [
+                      333.5,
+                      134.5
+                    ]
+                  ]
+                }
+              },
+              {
+                "keypath": "opacity",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  0.0,
+                  1.0,
+                  1.0,
+                  0.0
+                ]
+              },
+              {
+                "keypath": "backgroundColor",
+                "RemovedOnCompletion": false,
+                "duration": 0.8333333134651184,
+                "Values": [
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  },
+                  {
+                    "rgba": [
+                      1.0,
+                      1.0,
+                      1.0,
+                      1.0
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "creations": [
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": -50.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": -50.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": 150.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": 150.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": 278.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          25.0,
+          150.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 25.0,
+          "y": 278.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": -2.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": -2.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": 198.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": 198.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": 326.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 100,
+      "height": 200,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          99.0,
+          198.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 99.0,
+          "y": 326.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": -146.75,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": -146.75,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": 53.25,
+          "speed": 60.0,
+          "distance": 43.25,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": 53.25,
+          "speed": 60.0,
+          "distance": 43.25,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": 181.25,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          32.5,
+          53.25
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 32.5,
+          "y": 181.25,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": -129.70999145507812,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": -129.70999145507812,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": 70.29000091552734,
+          "speed": 60.0,
+          "distance": 60.290000915527344,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": 70.29000091552734,
+          "speed": 60.0,
+          "distance": 60.290000915527344,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": 198.29000854492188,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 130,
+      "height": 71,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          128.6999969482422,
+          70.29000091552734
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 128.6999969482422,
+          "y": 198.29000854492188,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": -200.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 0.0,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 0,
+      "random_y": 0,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 0.0,
+          "y": 128.0,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": -157.25,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": -157.25,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": 42.75,
+          "speed": 60.0,
+          "distance": 32.75,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": 42.75,
+          "speed": 60.0,
+          "distance": 32.75,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": 170.75,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 25,
+      "random_y": 75,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          53.75,
+          42.75
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 53.75,
+          "y": 170.75,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": -143.57000732421875,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": -200,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": -143.57000732421875,
+          "speed": 60.0,
+          "distance": 0.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": 56.43000030517578,
+          "speed": 60.0,
+          "distance": 46.43000030517578,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 0,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": 56.43000030517578,
+          "speed": 60.0,
+          "distance": 46.43000030517578,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 0,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": 184.42999267578125,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 1
+    },
+    {
+      "width": 215,
+      "height": 57,
+      "random_x": 99,
+      "random_y": 99,
+      "conversion_offset_y": 128,
+      "slot": 149,
+      "converted_inputs": [
+        [
+          212.85000610351562,
+          56.43000030517578
+        ]
+      ],
+      "bubble": [
+        {
+          "x": 212.85000610351562,
+          "y": 184.42999267578125,
+          "speed": 60.0,
+          "distance": 100.0,
+          "side": 0
+        }
+      ],
+      "next_slot": 0
+    }
+  ],
+  "callbacks": [
+    {
+      "chance": 0,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 0,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 9,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 10,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 10,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 49,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 49,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": []
+    },
+    {
+      "chance": 60,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 60,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 0,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 0,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 0,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 8,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 8,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 8,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 99,
+      "count_random": 0,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 99,
+      "count_random": 19,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "chance": 110,
+      "target_random": 99,
+      "count_random": 99,
+      "source_count": 9,
+      "ordinary": 4,
+      "extra": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

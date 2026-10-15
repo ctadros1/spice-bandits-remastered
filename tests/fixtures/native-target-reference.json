@@ -1,0 +1,5949 @@
+{
+  "method": "Original GetNearestCreep0xfb9b0, configured list, positions, aim/owner/status fields. Ellipse stub returns true for every candidate; vector append and exact string matcher are stubbed. Does not execute creep state changes, source ownership assignment, target retention or rendering. Selection is captured in r4 before temporary-vector cleanup at0xfbd7e/0xfbd88.",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "cases": [
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 3,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 2,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "strongest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "weakest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            1,
+            0
+          ],
+          "hp": 10,
+          "speed": 500
+        },
+        {
+          "grid": [
+            4,
+            0
+          ],
+          "hp": 100,
+          "speed": 900
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 20.2,
+          "speed": 700
+        },
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 20.7,
+          "speed": 600
+        }
+      ],
+      "mode": "",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 3
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 3
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 3
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 3
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 4
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 4
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 4
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 4
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 5
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 5
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 5
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 5
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 6
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 6
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 6
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "state": 6
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "aim": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "target_owner": 2
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 0
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 1,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 0,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": -1,
+      "collected": [
+        0,
+        1
+      ]
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": false,
+      "selected": 0,
+      "collected": []
+    },
+    {
+      "entries": [
+        {
+          "grid": [
+            3,
+            0
+          ],
+          "hp": 1
+        },
+        {
+          "grid": [
+            2,
+            0
+          ],
+          "hp": 1,
+          "speed": 500
+        }
+      ],
+      "mode": "fastest",
+      "gravity": 1,
+      "aim": 0,
+      "owner": 1,
+      "collect": true,
+      "selected": 0,
+      "collected": []
+    }
+  ]
+}

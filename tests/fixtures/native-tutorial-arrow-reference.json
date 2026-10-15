@@ -1,0 +1,7641 @@
+{
+  "method": "Original build-page arrow/marker visibility and dock-relative anchors.\n\nExecute Page01_EndCondition0xb8078 with explicit tower presence, device and\norientation. C++ strings/maps, tower lookup and Objective-C device lookup are\nstubs; texture/text records contain explicit initial visibility. No renderer,\nGUI construction, camera delivery or application session is emulated.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cells": [
+    [
+      7,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      11,
+      3
+    ]
+  ],
+  "cases": [
+    {
+      "built_mask": 0,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 0,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 0,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 0,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 1,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 1,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 1,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 1,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 2,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 2,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 2,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 2,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 3,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 3,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 3,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 3,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 4,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 4,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 4,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 4,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 5,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 5,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 5,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 5,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 6,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 6,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 6,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 6,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 7,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 7,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 7,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 7,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 8,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 8,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 8,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 8,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 9,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 9,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 9,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 9,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 10,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 10,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 10,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 10,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 11,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 11,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 11,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 11,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 12,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 12,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 12,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 12,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 13,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 13,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 13,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 13,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 14,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 14,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 14,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 14,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": false,
+        "page_after": 3
+      }
+    },
+    {
+      "built_mask": 15,
+      "device": 1,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": true,
+        "page_after": 4
+      }
+    },
+    {
+      "built_mask": 15,
+      "device": 1,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              403.0,
+              -99.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              293.0,
+              -80.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              304.0,
+              -69.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": true,
+        "page_after": 4
+      }
+    },
+    {
+      "built_mask": 15,
+      "device": 2,
+      "landscape": false,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              547.0,
+              -195.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              381.0,
+              -176.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              404.0,
+              -152.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": true,
+        "page_after": 4
+      }
+    },
+    {
+      "built_mask": 15,
+      "device": 2,
+      "landscape": true,
+      "result": {
+        "objects": {
+          "drag_arrow_landscape": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "drag_arrow_portrait": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -313.0,
+              -145.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_bubble": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              -199.0,
+              -126.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "a_pirate_txt": {
+            "image_visible": true,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              -176.0,
+              -102.0
+            ]
+          },
+          "build_towers_txt_1": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers1_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_2": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers2_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_3": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers3_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "build_towers_txt_4": {
+            "image_visible": true,
+            "text_visible": false,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          },
+          "towers4_circle": {
+            "image_visible": false,
+            "text_visible": true,
+            "image_position": [
+              0.0,
+              0.0
+            ],
+            "text_position": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "pending": true,
+        "page_after": 4
+      }
+    }
+  ],
+  "original_unchanged": true
+}

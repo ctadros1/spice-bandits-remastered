@@ -1,0 +1,30 @@
+{
+  "method": "Manual full-resolution reading of preserved, unwarped main TouchGameplay footage. Earlier Spice Invaders release; exact version unverified. The footage is the selected presentation guide, not proof of1.14 server data.",
+  "observations": [
+    {
+      "path": "builds/reference/dense/clip-2/00671.jpg",
+      "time_seconds": 670.5,
+      "sha256": "518fa8e1b0f7fc36bdf2089e64ec325daf346f2ffc11a8a95f043618c27a33e0",
+      "screen": "world",
+      "level": 2,
+      "xp_current_display": 31,
+      "xp_upper_display": 55,
+      "rank": "2nd lieutenant",
+      "spice": 8,
+      "upgrade_points": 3
+    },
+    {
+      "path": "builds/reference/dense/clip-2/00692.jpg",
+      "time_seconds": 691.5,
+      "sha256": "2f6928974c137746a783f5abbbb6dd3f8f75e06b3a6f2c0fa6df2fde0d7bdb5a",
+      "screen": "career",
+      "level": 2,
+      "xp_current_display": 31,
+      "xp_upper_display": 55,
+      "rank": "2nd lieutenant",
+      "spice": 8,
+      "upgrade_points": 3
+    }
+  ],
+  "interpretation": "MenuBottomView::updateUserInfo0x512a8 displays rounded total xppoints and xppoints+tonextlevel. Two settled states therefore support55 total XP as the next threshold at level2. They do not determine later thresholds, rank transitions, or the exact unrounded account XP."
+}

@@ -1,0 +1,2767 @@
+{
+  "method": "Bounded original wave-strip draw geometry with explicit room fields.\n\nThe original RenderWaves function executes; graphics/text calls are recorded,\nnot rendered. Counter, current-wave and particle field0xc0 values are\nexplicit inputs, not a claim that whole-game callback order is recovered.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "current": 0,
+      "elapsed": 0,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 369.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 429.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 0,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 369.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 429.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 0,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 369.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 429.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 0,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 369.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 429.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 1,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 368.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 428.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 1,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 368.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 428.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 1,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 368.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 428.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 1,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 368.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 428.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 2499,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 339.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 399.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 2499,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 339.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 399.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 2499,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 339.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 399.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 2499,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 339.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 399.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 4999,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 4999,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 4999,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 0,
+      "elapsed": 4999,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 0,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 0,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 0,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 0,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 309.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 369.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 1,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 368.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 1,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 368.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 1,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 368.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 1,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 308.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 368.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 2499,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 339.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 2499,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 339.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 2499,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 339.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 2499,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 279.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 339.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 4999,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 4999,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 4999,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 1,
+      "elapsed": 4999,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 0,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 0,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 0,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 0,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 249.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 309.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 1,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 308.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 1,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 308.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 1,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 308.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 1,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 128.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 188.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 248.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 308.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 2499,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 279.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 2499,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 279.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 2499,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 279.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 2499,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 99.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 159.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 219.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 279.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 4999,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 249.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 4999,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 249.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 4999,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 249.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 2,
+      "elapsed": 4999,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 3,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 129.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 189.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 249.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 0,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 129.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 0,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 129.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 0,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 69.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 129.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 0,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 129.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 1,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 128.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 1,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 128.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 1,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 68.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 128.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 1,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 128.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 2499,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 99.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 2499,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -200.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -140.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -80.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 99.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 2499,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -200.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -140.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -80.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 39.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 99.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 2499,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 99.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 4999,
+      "particle_field_c0": null,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 4999,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -230.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -170.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -110.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 4999,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -230.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -170.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -110.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 10.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 5,
+      "elapsed": 4999,
+      "particle_field_c0": 30,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 0,
+      "particle_field_c0": null,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 0,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -231.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 0,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -231.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 69.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 0,
+      "particle_field_c0": 30,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 1,
+      "particle_field_c0": null,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 1,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -231.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 68.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 1,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -231.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -171.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -111.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -51.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": 9.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 68.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 1,
+      "particle_field_c0": 30,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 2499,
+      "particle_field_c0": null,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 2499,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -260.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -200.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -140.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -80.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 39.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 2499,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -260.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -200.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -140.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -80.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": -20.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 39.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 2499,
+      "particle_field_c0": 30,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 4999,
+      "particle_field_c0": null,
+      "text_draws": []
+    },
+    {
+      "current": 6,
+      "elapsed": 4999,
+      "particle_field_c0": 0,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -290.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -230.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -170.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -110.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 10.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 4999,
+      "particle_field_c0": 29,
+      "text_draws": [
+        {
+          "kind": "text",
+          "object": 1,
+          "x": -290.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 2,
+          "x": -230.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 3,
+          "x": -170.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 4,
+          "x": -110.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 5,
+          "x": -50.0,
+          "y": 6.0
+        },
+        {
+          "kind": "text",
+          "object": 6,
+          "x": 10.0,
+          "y": 6.0
+        }
+      ]
+    },
+    {
+      "current": 6,
+      "elapsed": 4999,
+      "particle_field_c0": 30,
+      "text_draws": []
+    }
+  ],
+  "original_unchanged": true
+}

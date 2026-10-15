@@ -1,0 +1,552 @@
+{
+  "method": "Original CBolt full Render and CTower RenderAfter bolt-call ordering.\n\nExplicit object buffers replace game construction/ownership; all GL, texture,\nquad and subordinate effect calls are recording stubs. Original ARM branches\nand vector iteration execute. No original GPU, map sorting or game execution.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "renders": [
+    {
+      "alive": false,
+      "ball": false,
+      "alpha": 0,
+      "calls": []
+    },
+    {
+      "alive": false,
+      "ball": false,
+      "alpha": 0.35,
+      "calls": []
+    },
+    {
+      "alive": false,
+      "ball": false,
+      "alpha": 1,
+      "calls": []
+    },
+    {
+      "alive": false,
+      "ball": true,
+      "alpha": 0,
+      "calls": []
+    },
+    {
+      "alive": false,
+      "ball": true,
+      "alpha": 0.35,
+      "calls": []
+    },
+    {
+      "alive": false,
+      "ball": true,
+      "alpha": 1,
+      "calls": []
+    },
+    {
+      "alive": true,
+      "ball": false,
+      "alpha": 0,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    },
+    {
+      "alive": true,
+      "ball": false,
+      "alpha": 0.35,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    },
+    {
+      "alive": true,
+      "ball": false,
+      "alpha": 1,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    },
+    {
+      "alive": true,
+      "ball": true,
+      "alpha": 0,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.0
+          ]
+        },
+        {
+          "quad": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    },
+    {
+      "alive": true,
+      "ball": true,
+      "alpha": 0.35,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            0.3499999940395355
+          ]
+        },
+        {
+          "quad": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    },
+    {
+      "alive": true,
+      "ball": true,
+      "alpha": 1,
+      "calls": [
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "quad": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "blend": [
+            1,
+            769
+          ]
+        },
+        {
+          "color": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 26,
+            "buffer": 24576
+          }
+        },
+        {
+          "blend": [
+            770,
+            1
+          ]
+        },
+        {
+          "draw": {
+            "mode": 5,
+            "first": 0,
+            "count": 24,
+            "buffer": 20480
+          }
+        }
+      ]
+    }
+  ],
+  "owners": [
+    {
+      "visible": false,
+      "primary": false,
+      "bolts": [],
+      "calls": []
+    },
+    {
+      "visible": false,
+      "primary": false,
+      "bolts": [
+        5120
+      ],
+      "calls": []
+    },
+    {
+      "visible": false,
+      "primary": false,
+      "bolts": [
+        6144,
+        5120,
+        7168
+      ],
+      "calls": []
+    },
+    {
+      "visible": false,
+      "primary": true,
+      "bolts": [],
+      "calls": []
+    },
+    {
+      "visible": false,
+      "primary": true,
+      "bolts": [
+        5120
+      ],
+      "calls": []
+    },
+    {
+      "visible": false,
+      "primary": true,
+      "bolts": [
+        6144,
+        5120,
+        7168
+      ],
+      "calls": []
+    },
+    {
+      "visible": true,
+      "primary": false,
+      "bolts": [],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "primary": false,
+      "bolts": [
+        5120
+      ],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "bolt": 5120
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "primary": false,
+      "bolts": [
+        6144,
+        5120,
+        7168
+      ],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "bolt": 6144
+        },
+        {
+          "bolt": 5120
+        },
+        {
+          "bolt": 7168
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "primary": true,
+      "bolts": [],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "bolt": 4096
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "primary": true,
+      "bolts": [
+        5120
+      ],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "bolt": 4096
+        },
+        {
+          "bolt": 5120
+        }
+      ]
+    },
+    {
+      "visible": true,
+      "primary": true,
+      "bolts": [
+        6144,
+        5120,
+        7168
+      ],
+      "calls": [
+        {
+          "blend": [
+            1,
+            771
+          ]
+        },
+        {
+          "bolt": 4096
+        },
+        {
+          "bolt": 6144
+        },
+        {
+          "bolt": 5120
+        },
+        {
+          "bolt": 7168
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

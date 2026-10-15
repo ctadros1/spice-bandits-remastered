@@ -1,0 +1,871 @@
+{
+  "method": "Original MenuBottomView XP rounding, format requests and bar width.\n\nSession/UI/data identities, NSString formatting, CGRect access and roundf\nare explicit stubs. Original arithmetic, branches, format requests, final\nframe width and promotion visibility execute; UIKit pixels do not.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 0.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 0.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 0.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 0.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 0.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 0.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 8.1,
+      "remaining": 1.9,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 8.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 65.5999984741211,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 8.1,
+      "remaining": 1.9,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 8.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 65.5999984741211,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 8.1,
+      "remaining": 1.9,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 8.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 96.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.49,
+      "remaining": 0.51,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 9.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 73.79999542236328,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.49,
+      "remaining": 0.51,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 9.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 73.79999542236328,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.49,
+      "remaining": 0.51,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 9.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 108.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.5,
+      "remaining": 0.5,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 11.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.5,
+      "remaining": 0.5,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 11.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 9.5,
+      "remaining": 0.5,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 11.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 109.09091186523438,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 82.0,
+        "promotion_hidden": false
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 82.0,
+        "promotion_hidden": false
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 10.0
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 120.0,
+        "promotion_hidden": false
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 40.0
+          }
+        ],
+        "level_reads": [
+          2
+        ],
+        "bar_width": 4.099999904632568,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 40.0
+          }
+        ],
+        "level_reads": [
+          2
+        ],
+        "bar_width": 4.099999904632568,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 10.0
+          },
+          {
+            "format": "%@%.0f",
+            "amount": 40.0
+          }
+        ],
+        "level_reads": [
+          2
+        ],
+        "bar_width": 6.0,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 53286.7,
+      "remaining": 73,
+      "lower": 50000,
+      "level": 73,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 53.2869987487793
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 53.36000061035156
+          }
+        ],
+        "level_reads": [
+          73
+        ],
+        "bar_width": 80.21845245361328,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 53286.7,
+      "remaining": 73,
+      "lower": 50000,
+      "level": 73,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 53.2869987487793
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 53.36000061035156
+          }
+        ],
+        "level_reads": [
+          73
+        ],
+        "bar_width": 80.21845245361328,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 53286.7,
+      "remaining": 73,
+      "lower": 50000,
+      "level": 73,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 53.2869987487793
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 53.36000061035156
+          }
+        ],
+        "level_reads": [
+          73
+        ],
+        "bar_width": 117.39286041259766,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.49,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 999.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.0989999771118164
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.5386734008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.49,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 999.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.0989999771118164
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.5386734008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.49,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.0f / ",
+            "amount": 999.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.0989999771118164
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 109.08098602294922,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 109.09091186523438,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 74.54545593261719,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.1fk / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.1fk",
+            "amount": 1.100000023841858
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 109.09091186523438,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 81.9917984008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 81.9917984008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 999999.5,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 119.98799896240234,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 0,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 81.9917984008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 82,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 81.9917984008789,
+        "promotion_hidden": true
+      }
+    },
+    {
+      "xp": 1000000,
+      "remaining": 100,
+      "lower": 0,
+      "level": 1,
+      "width": 120,
+      "result": {
+        "formats": [
+          {
+            "format": "%@%.2fm / ",
+            "amount": 1.0
+          },
+          {
+            "format": "%@%.2fm",
+            "amount": 1.000100016593933
+          }
+        ],
+        "level_reads": [
+          1
+        ],
+        "bar_width": 119.98799896240234,
+        "promotion_hidden": true
+      }
+    }
+  ],
+  "original_unchanged": true
+}

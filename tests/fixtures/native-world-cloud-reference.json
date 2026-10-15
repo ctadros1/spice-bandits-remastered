@@ -1,0 +1,5952 @@
+{
+  "method": "Original lobby cloud generator setup and per-system overrides.\n\nOriginal AddClouds and ProduceCloud math/branches execute. Allocations,\nparticle creation/emission, vector insertion and random helpers are explicit\nstubs. Captures generator records, emitter coordinates, emission duration,\nsystem-clock multiplier and color overrides, not complete clouds or pixels.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "generators": [
+    {
+      "position": [
+        304.0,
+        2466.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        550.0,
+        2731.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        1783.0,
+        2803.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        2319.0,
+        2923.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        3563.0,
+        2881.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        3091.0,
+        2807.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        2358.0,
+        193.0
+      ],
+      "radius": 200.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": true,
+      "color_gain": 0.5
+    },
+    {
+      "position": [
+        400.0,
+        400.0
+      ],
+      "radius": 240.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": false,
+      "color_gain": 1.0
+    },
+    {
+      "position": [
+        3842.0,
+        236.0
+      ],
+      "radius": 240.0,
+      "lifetime_ms": 4000.0,
+      "rate": 0.5,
+      "capacity": 50,
+      "color_override": true,
+      "color_gain": 0.5
+    }
+  ],
+  "cases": [
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          354.0,
+          2466.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          354.0,
+          2466.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          304.0,
+          2266.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          304.0,
+          2266.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          242.1999969482422,
+          2548.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          242.1999969482422,
+          2548.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          600.0,
+          2731.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          600.0,
+          2731.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          550.0,
+          2531.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          550.0,
+          2531.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          488.20001220703125,
+          2813.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          488.20001220703125,
+          2813.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          1833.0,
+          2803.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          1833.0,
+          2803.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          1783.0,
+          2603.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          1783.0,
+          2603.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          1721.199951171875,
+          2885.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          1721.199951171875,
+          2885.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          2369.0,
+          2923.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          2369.0,
+          2923.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          2319.0,
+          2723.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          2319.0,
+          2723.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          2257.199951171875,
+          3005.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          2257.199951171875,
+          3005.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          3613.0,
+          2881.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          3613.0,
+          2881.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          3563.0,
+          2681.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          3563.0,
+          2681.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          3501.199951171875,
+          2963.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          3501.199951171875,
+          2963.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          3141.0,
+          2807.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          3141.0,
+          2807.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          3091.0,
+          2607.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          3091.0,
+          2607.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          3029.199951171875,
+          2889.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          3029.199951171875,
+          2889.39990234375
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          2408.0,
+          193.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          2408.0,
+          193.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          2358.0,
+          -7.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 199,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          2358.0,
+          -7.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          2296.199951171875,
+          275.3999938964844
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          2296.199951171875,
+          275.3999938964844
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          460.0,
+          400.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          460.0,
+          400.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 239,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          400.0,
+          160.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 239,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          400.0,
+          160.0
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          332.20001220703125,
+          490.3999938964844
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          332.20001220703125,
+          490.3999938964844
+        ],
+        "color": [
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 0,
+      "result": {
+        "position": [
+          3902.0,
+          236.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        1,
+        0
+      ],
+      "random_radius": 0,
+      "clock_ratio": 0.7,
+      "initial": 1,
+      "result": {
+        "position": [
+          3902.0,
+          236.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.699999988079071,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 239,
+      "clock_ratio": 1,
+      "initial": 0,
+      "result": {
+        "position": [
+          3842.0,
+          -4.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        0,
+        -1
+      ],
+      "random_radius": 239,
+      "clock_ratio": 1,
+      "initial": 1,
+      "result": {
+        "position": [
+          3842.0,
+          -4.0
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 1.0,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 0,
+      "result": {
+        "position": [
+          3774.199951171875,
+          326.3999938964844
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 0,
+        "generator_spawn_timer": 0.0
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "direction": [
+        -0.6,
+        0.8
+      ],
+      "random_radius": 53,
+      "clock_ratio": 0.85,
+      "initial": 1,
+      "result": {
+        "position": [
+          3774.199951171875,
+          326.3999938964844
+        ],
+        "color": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "emission_seconds": 4.0,
+        "clock_ratio": 0.8500000238418579,
+        "initial_emits": 1,
+        "generator_spawn_timer": 0.0
+      }
+    }
+  ],
+  "visibility": [
+    {
+      "zoom": 0.2,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.2,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": [
+        7
+      ]
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": [
+        7
+      ]
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 0.625,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": [
+        7
+      ]
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        0,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": [
+        7
+      ]
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        -300,
+        -1100
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        -5000,
+        0
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1024,
+        768
+      ],
+      "visible": []
+    },
+    {
+      "zoom": 1,
+      "origin": [
+        1000,
+        1000
+      ],
+      "size": [
+        1280,
+        960
+      ],
+      "visible": []
+    }
+  ],
+  "constructors": [
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          550.0,
+          2731.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          1783.0,
+          2803.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2319.0,
+          2923.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3563.0,
+          2881.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3091.0,
+          2807.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          2358.0,
+          193.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          400.0,
+          400.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    },
+    {
+      "generator": {
+        "position": [
+          3842.0,
+          236.0
+        ],
+        "radius": 240.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": true,
+        "color_gain": 0.5
+      },
+      "result": {
+        "initial_productions": [
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          },
+          {
+            "initial": 1,
+            "color_override": false,
+            "gain": 1.0
+          }
+        ],
+        "particle_dt_per_ms": 0.0005000000237487257
+      }
+    }
+  ],
+  "updates": [
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 0,
+      "frames": [
+        {
+          "dt_ms": 0,
+          "productions": [],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 16.67,
+          "productions": [],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 16.670000076293945
+        },
+        {
+          "dt_ms": 30,
+          "productions": [],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 46.66999816894531
+        },
+        {
+          "dt_ms": 33.33,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 80,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 500,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        }
+      ]
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 1,
+      "frames": [
+        {
+          "dt_ms": 0,
+          "productions": [],
+          "particle_steps": [
+            0.0
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 16.67,
+          "productions": [],
+          "particle_steps": [
+            0.008335000835359097
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 16.670000076293945
+        },
+        {
+          "dt_ms": 30,
+          "productions": [],
+          "particle_steps": [
+            0.015000000596046448
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 46.66999816894531
+        },
+        {
+          "dt_ms": 33.33,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.016665002331137657
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 80,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.04000000283122063
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 500,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.25
+          ],
+          "remaining_systems": 1,
+          "spawn_timer": 0.0
+        }
+      ]
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 49,
+      "frames": [
+        {
+          "dt_ms": 0,
+          "productions": [],
+          "particle_steps": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 16.67,
+          "productions": [],
+          "particle_steps": [
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 16.670000076293945
+        },
+        {
+          "dt_ms": 30,
+          "productions": [],
+          "particle_steps": [
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 46.66999816894531
+        },
+        {
+          "dt_ms": 33.33,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 80,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 500,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 0.0
+        }
+      ]
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 50,
+      "frames": [
+        {
+          "dt_ms": 0,
+          "productions": [],
+          "particle_steps": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 16.67,
+          "productions": [],
+          "particle_steps": [
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097,
+            0.008335000835359097
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 16.670000076293945
+        },
+        {
+          "dt_ms": 30,
+          "productions": [],
+          "particle_steps": [
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448,
+            0.015000000596046448
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 46.66999816894531
+        },
+        {
+          "dt_ms": 33.33,
+          "productions": [],
+          "particle_steps": [
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657,
+            0.016665002331137657
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 80.0
+        },
+        {
+          "dt_ms": 80,
+          "productions": [],
+          "particle_steps": [
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 160.0
+        },
+        {
+          "dt_ms": 500,
+          "productions": [],
+          "particle_steps": [
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25,
+            0.25
+          ],
+          "remaining_systems": 50,
+          "spawn_timer": 660.0
+        }
+      ]
+    }
+  ],
+  "expiry": [
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 1,
+      "frames": [
+        {
+          "dt_ms": 80,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        },
+        {
+          "dt_ms": 0,
+          "productions": [],
+          "particle_steps": [],
+          "remaining_systems": 0,
+          "spawn_timer": 0.0
+        }
+      ]
+    },
+    {
+      "generator": {
+        "position": [
+          304.0,
+          2466.0
+        ],
+        "radius": 200.0,
+        "lifetime_ms": 4000.0,
+        "rate": 0.5,
+        "capacity": 50,
+        "color_override": false,
+        "color_gain": 1.0
+      },
+      "count": 50,
+      "frames": [
+        {
+          "dt_ms": 80,
+          "productions": [],
+          "particle_steps": [
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063,
+            0.04000000283122063
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 80.0
+        },
+        {
+          "dt_ms": 0,
+          "productions": [
+            {
+              "initial": 0,
+              "color_override": false,
+              "gain": 0.0
+            }
+          ],
+          "particle_steps": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "remaining_systems": 49,
+          "spawn_timer": 0.0
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

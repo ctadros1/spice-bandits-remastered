@@ -1,0 +1,8 @@
+[configuration]
+entry_symbol = "spice_hotpaths_init"
+compatibility_minimum = "4.7"
+reloadable = false
+
+[libraries]
+macos.debug = "res://native/bin/libspice_hotpaths.dylib"
+macos.release = "res://native/bin/libspice_hotpaths.dylib"

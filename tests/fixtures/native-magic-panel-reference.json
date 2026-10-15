@@ -1,0 +1,2112 @@
+{
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "method": "Execute original iPad magic panel open/close/update with explicit bounds.",
+  "height": 768,
+  "cases": [
+    {
+      "panel_height": 265,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 0,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 100,
+          "state": {
+            "y": 691.6511840820312,
+            "phase": 0.20000000298023224,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 150,
+          "state": {
+            "y": 574.5,
+            "phase": 0.5,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 250,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 0,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 125,
+          "state": {
+            "y": 469.431640625,
+            "phase": 0.25,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 375,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 265,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 200,
+          "state": {
+            "y": 622.87841796875,
+            "phase": 0.4000000059604645,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 622.87841796875,
+            "phase": 0.4000000059604645,
+            "visible": true,
+            "opening": true,
+            "closing": true,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 100,
+          "state": {
+            "y": 526.12158203125,
+            "phase": 0.6000000238418579,
+            "visible": true,
+            "opening": true,
+            "closing": true,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 300,
+          "state": {
+            "y": 622.87841796875,
+            "phase": 0.6000000238418579,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": 500,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 265,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 600,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 600,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.9066772460938,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 483.333,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 265,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.9066772460938,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.2911987304688,
+            "phase": 0.06666799634695053,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 704.7314453125,
+            "phase": 0.1000019907951355,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 701.9075317382812,
+            "phase": 0.13333599269390106,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 697.5936279296875,
+            "phase": 0.16666999459266663,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 691.650390625,
+            "phase": 0.2000039964914322,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 684.0169677734375,
+            "phase": 0.23333799839019775,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 674.7031860351562,
+            "phase": 0.2666719853878021,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 663.7816772460938,
+            "phase": 0.3000059723854065,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 651.380126953125,
+            "phase": 0.33333995938301086,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 637.6731567382812,
+            "phase": 0.36667394638061523,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 622.874755859375,
+            "phase": 0.4000079333782196,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 607.2304077148438,
+            "phase": 0.433341920375824,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 591.0089111328125,
+            "phase": 0.46667590737342834,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 574.4951171875,
+            "phase": 0.5000098943710327,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 557.9812622070312,
+            "phase": 0.5333439111709595,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 541.7601318359375,
+            "phase": 0.5666779279708862,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 526.1161499023438,
+            "phase": 0.600011944770813,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 511.31829833984375,
+            "phase": 0.6333459615707397,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 497.612060546875,
+            "phase": 0.6666799783706665,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 485.2113037109375,
+            "phase": 0.7000139951705933,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 474.29071044921875,
+            "phase": 0.73334801197052,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 464.97796630859375,
+            "phase": 0.7666820287704468,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 457.34552001953125,
+            "phase": 0.8000160455703735,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 451.40325927734375,
+            "phase": 0.8333500623703003,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 447.0902404785156,
+            "phase": 0.866684079170227,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 444.2673645019531,
+            "phase": 0.9000180959701538,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.70806884765625,
+            "phase": 0.9333521127700806,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.09332275390625,
+            "phase": 0.9666861295700073,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 442.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.09332275390625,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.70880126953125,
+            "phase": 0.06666799634695053,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 444.2685241699219,
+            "phase": 0.1000019907951355,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 447.09246826171875,
+            "phase": 0.13333599269390106,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 451.4063720703125,
+            "phase": 0.16666999459266663,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 457.349609375,
+            "phase": 0.2000039964914322,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 464.9830322265625,
+            "phase": 0.23333799839019775,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 474.29681396484375,
+            "phase": 0.2666719853878021,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 485.2182922363281,
+            "phase": 0.3000059723854065,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 497.619873046875,
+            "phase": 0.33333995938301086,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 511.32684326171875,
+            "phase": 0.36667394638061523,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 526.125244140625,
+            "phase": 0.4000079333782196,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 541.7695922851562,
+            "phase": 0.433341920375824,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 557.9910888671875,
+            "phase": 0.46667590737342834,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 574.5048828125,
+            "phase": 0.5000098943710327,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 591.0187377929688,
+            "phase": 0.5333439111709595,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 607.2398681640625,
+            "phase": 0.5666779279708862,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 622.8838500976562,
+            "phase": 0.600011944770813,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 637.6817016601562,
+            "phase": 0.6333459615707397,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 651.387939453125,
+            "phase": 0.6666799783706665,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 663.7886962890625,
+            "phase": 0.7000139951705933,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 674.7092895507812,
+            "phase": 0.73334801197052,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 684.0220336914062,
+            "phase": 0.7666820287704468,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 691.6544799804688,
+            "phase": 0.8000160455703735,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 697.5967407226562,
+            "phase": 0.8333500623703003,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 701.9097900390625,
+            "phase": 0.866684079170227,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 704.732666015625,
+            "phase": 0.9000180959701538,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.2919311523438,
+            "phase": 0.9333521127700806,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.9066772460938,
+            "phase": 0.9666861295700073,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 335,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 0,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 100,
+          "state": {
+            "y": 687.5968017578125,
+            "phase": 0.20000000298023224,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 150,
+          "state": {
+            "y": 539.5,
+            "phase": 0.5,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 250,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 0,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 125,
+          "state": {
+            "y": 406.677734375,
+            "phase": 0.25,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 375,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 335,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 200,
+          "state": {
+            "y": 600.6575927734375,
+            "phase": 0.4000000059604645,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 600.6575927734375,
+            "phase": 0.4000000059604645,
+            "visible": true,
+            "opening": true,
+            "closing": true,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 100,
+          "state": {
+            "y": 478.3423767089844,
+            "phase": 0.6000000238418579,
+            "visible": true,
+            "opening": true,
+            "closing": true,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 300,
+          "state": {
+            "y": 600.6575927734375,
+            "phase": 0.6000000238418579,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": 500,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": true
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 335,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 600,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 600,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.8820190429688,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 483.333,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        }
+      ]
+    },
+    {
+      "panel_height": 335,
+      "frames": [
+        {
+          "action": "open",
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.8820190429688,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.1039428710938,
+            "phase": 0.06666799634695053,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 704.1322631835938,
+            "phase": 0.1000019907951355,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 700.5623779296875,
+            "phase": 0.13333599269390106,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 695.1089477539062,
+            "phase": 0.16666999459266663,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 687.5957641601562,
+            "phase": 0.2000039964914322,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 677.9459838867188,
+            "phase": 0.23333799839019775,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 666.1719360351562,
+            "phase": 0.2666719853878021,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 652.3655395507812,
+            "phase": 0.3000059723854065,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 636.6880493164062,
+            "phase": 0.33333995938301086,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 619.3604125976562,
+            "phase": 0.36667394638061523,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 600.6530151367188,
+            "phase": 0.4000079333782196,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 580.8761596679688,
+            "phase": 0.433341920375824,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 560.3698120117188,
+            "phase": 0.46667590737342834,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 539.4937744140625,
+            "phase": 0.5000098943710327,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 518.6178588867188,
+            "phase": 0.5333439111709595,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 498.11181640625,
+            "phase": 0.5666779279708862,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 478.3354797363281,
+            "phase": 0.600011944770813,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 459.6288146972656,
+            "phase": 0.6333459615707397,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.3020324707031,
+            "phase": 0.6666799783706665,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 426.6256103515625,
+            "phase": 0.7000139951705933,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 412.8203430175781,
+            "phase": 0.73334801197052,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 401.047607421875,
+            "phase": 0.7666820287704468,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 391.3990478515625,
+            "phase": 0.8000160455703735,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 383.8871765136719,
+            "phase": 0.8333500623703003,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 378.4348449707031,
+            "phase": 0.866684079170227,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 374.8663024902344,
+            "phase": 0.9000180959701538,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.8951110839844,
+            "phase": 0.9333521127700806,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.11798095703125,
+            "phase": 0.9666861295700073,
+            "visible": true,
+            "opening": true,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": false,
+            "opened": true,
+            "hidden": false
+          }
+        },
+        {
+          "action": "close",
+          "state": {
+            "y": 372.0,
+            "phase": 0.0,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.1179504394531,
+            "phase": 0.033333998173475266,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 372.8960266113281,
+            "phase": 0.06666799634695053,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 374.8677673339844,
+            "phase": 0.1000019907951355,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 378.4376525878906,
+            "phase": 0.13333599269390106,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 383.8910827636719,
+            "phase": 0.16666999459266663,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 391.40423583984375,
+            "phase": 0.2000039964914322,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 401.05401611328125,
+            "phase": 0.23333799839019775,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 412.8280334472656,
+            "phase": 0.2666719853878021,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 426.63446044921875,
+            "phase": 0.3000059723854065,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 442.31195068359375,
+            "phase": 0.33333995938301086,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 459.6396179199219,
+            "phase": 0.36667394638061523,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 478.34698486328125,
+            "phase": 0.4000079333782196,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 498.12384033203125,
+            "phase": 0.433341920375824,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 518.6301879882812,
+            "phase": 0.46667590737342834,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 539.5062255859375,
+            "phase": 0.5000098943710327,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 560.3821411132812,
+            "phase": 0.5333439111709595,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 580.88818359375,
+            "phase": 0.5666779279708862,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 600.66455078125,
+            "phase": 0.600011944770813,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 619.3712158203125,
+            "phase": 0.6333459615707397,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 636.697998046875,
+            "phase": 0.6666799783706665,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 652.3743896484375,
+            "phase": 0.7000139951705933,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 666.1796875,
+            "phase": 0.73334801197052,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 677.952392578125,
+            "phase": 0.7666820287704468,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 687.6009521484375,
+            "phase": 0.8000160455703735,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 695.11279296875,
+            "phase": 0.8333500623703003,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 700.565185546875,
+            "phase": 0.866684079170227,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 704.1336669921875,
+            "phase": 0.9000180959701538,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.1048583984375,
+            "phase": 0.9333521127700806,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 706.8820190429688,
+            "phase": 0.9666861295700073,
+            "visible": true,
+            "opening": false,
+            "closing": true,
+            "opened": false,
+            "hidden": false
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        },
+        {
+          "action": 16.667,
+          "state": {
+            "y": 707.0,
+            "phase": 0.0,
+            "visible": false,
+            "opening": false,
+            "closing": false,
+            "opened": false,
+            "hidden": true
+          }
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

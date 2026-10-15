@@ -1,0 +1,25 @@
+# Original sound playback
+
+The preserved game sound bank declares default volume1 and maximum10. The lobby bank declares default1 and maximum2. Each cue's authored volume is normalized by the selected bank's maximum; absent cue definitions use its default. Both banks are now imported independently, including loop, important, layer and simultaneous-play fields. The earlier implementation applied the game scale to lobby cues as well.
+
+`CMusicPlayer::Play`,0x11e61c (initialization at0x11e7f0), selects a preserved playlist track and sets gain0.2. It loops that track across screens. The reconstruction previously assigned separate menu and battle themes at a lower gain; it now retains one selected track and the recovered gain.
+
+Godot's converted CAF files contain no RIFF loop chunk. Enabling forward looping while leaving its default end at0 produced an almost silent machine-gun loop. The native mixer test caught this. Loop boundaries now span the decoded sample frames. The recovered per-cue simultaneous-play limits are retained. Continuous voices stop after the shooting refresh ceases; the current180ms refresh window is a local presentation approximation pending complete native sound-object lifetime recovery.
+
+Firing and explosion cues now come from each tower/enemy resource rather than using a marine explosion for every enemy. Anti-air guns retain their extra firing loop and tail. Nuke warning sound uses its level's resource and does not repeat as a second launch cue. Freeze and Active Defense expiry cues follow their simulation timers. Native important-sound attenuation, voice-count gain adjustment, positional distance/height attenuation and ambient scheduling still require the complete sound-manager port. Their recovered functions are saved locally; no mix parity is claimed.
+
+`--qa-audio` captures the standalone app's stereo AudioServer PCM before the muted app master volume. It uses no microphone and changes no system volume. The latest passed audit contains14 WAV stages and31 checks: music output/gain/continuity, six representative effects, a renewed machine-gun loop and expiry, the separate lobby gain, and silence when music/effects are muted. This establishes native mixer output, not listening through particular speakers or parity with original-device audio. Exact package hashes and normal-save checks are in`builds/audio-package-audit.json`.
+
+## Environment and manager factors
+
+LoadAllResources0xcb5d8 selects ice/sand/jungle/forest/urban/sports for themes1..6. CAmbientPlayer::Play0x11dd90 loops the preserved MP3 at0.2; urban overrides to0.15. The offline app stops it when leaving the battle and uses the sound preference to mute it.
+
+CRoom::Update0xd2768 selects `1−0.03*(count−15)` above15 active sources; the global factor moves−0.02 or+0.01 per update. UpdateImportantSounds0xd35e8 eases from1 to float32(0.85) over500ms; ordinary cues receive that factor, important cues retain their gain. CSound::SetGain0x11fa08 supplies the multiplication order. CheckListenerPos0xd1118 sets listener Z volume to1, so the recovered `.7*Z+.3` term is1 in normal room playback; map zoom alone does not justify an invented height-volume rule. Positional OpenAL distance/pan behavior remains to be recovered.
+
+The newer package passes36 mixer checks/16 WAV stages, including preserved sand ambience, native0.2 gain and silence after leaving the battle. Exact resources and isolation proof are in the package audit; this replaces the earlier14-stage record for the newer package.
+
+
+The results meter now renews the preserved xp_bar_grow loop only while its displayed XP advances, and stops it immediately when growth ends or the scene changes. CWinLoseScreen::Update0xbc08c independently loads that loop and sets gain0.1; Render0xb9a60 uses Play/Stop on changes. The generic0.5 bank fallback was incorrect for this non-bank cue. Native PCM QA adds forced8XP growth and stopped-meter captures,18 WAV stages/40 checks in total, before the muted app master. These are mixer fixtures, not earned progression or speaker/original-device sound-mix equivalence. PlayBoomSound0xbbf9c uses obj_boom at gain1/layer4 for spice/medal reveals; those reveal callbacks are now wired. Native PCM stages include spice and medal obj_boom, bringing the current audit to20 WAV stages/44 checks. Their forced amounts remain isolated fixtures. Native positional/mix/speaker equivalence remains open.
+
+
+Original EAGL menu navigation0x36cd8 plays UI_tab_select_and_move-mono on layer4 only when the previous menu is nonzero/non200 and actually changes. Its lobby bank volume0.5/max2 yields gain0.25. MenuTopView::loadMenu0x50aa8 and enterMenu0x50b88 add no generic UI_click. Native top buttons now suppress that extra cue; reselecting a tab preserves the current view silently. The packaged audio fixture adds actual Career-button input and same-tab silence, totaling22 PCM stages/48 checks. Historical20-stage/44-check evidence remains scoped to its earlier package. Original-service login gating is replaced by the documented local offline identity; positional/mixer parity is still open.

@@ -1,0 +1,6420 @@
+{
+  "method": "Original animated map-object render/keyframe math on explicit frame records.\n\nOriginal CAnimatedObject::Render, CKeyFrameAnimator::Update, frame selection\nand interpolation execute. RenderCenterQuad is a recorded stub; texture,\nframe vectors, loop/ease flags and elapsed render time are explicit inputs.\nThis does not execute the XML loader, original sampler/compositor or app.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "xml_sha256": "fe204f2fb32f90e93bc7bebde09ba1659b250da5392f92b6b529f56f24d7b41f",
+  "cases": [
+    {
+      "definition": {
+        "name": "water_objects/tanker",
+        "x": 1290,
+        "y": 1720,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              1.0
+            ],
+            "angle": 0.0
+          },
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": 0.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9976806640625,
+            0.0
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.99462890625,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9898681640625,
+            0.0
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.98291015625,
+            0.0
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9735107421875,
+            0.0
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9615478515625,
+            0.0
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.94677734375,
+            0.0
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.928955078125,
+            0.0
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9080810546875,
+            0.0
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.8841552734375,
+            0.0
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.3260498046875,
+            0.0
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1720.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            1290.0,
+            1719.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            1290.0,
+            1721.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1290.0,
+            1720.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/lego",
+        "x": 445,
+        "y": 1360,
+        "anim_loop": 1,
+        "anim_ease": 0,
+        "anim_speed": 0.002,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": 0.0
+          },
+          {
+            "pos": [
+              0.0,
+              1.0
+            ],
+            "angle": 0.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.066650390625,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.13330078125,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.2000732421875,
+            0.0
+          ],
+          "phase": 0.10002000629901886,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.2667236328125,
+            0.0
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.3333740234375,
+            0.0
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.4000244140625,
+            0.0
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.466796875,
+            0.0
+          ],
+          "phase": 0.2333800345659256,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.533447265625,
+            0.0
+          ],
+          "phase": 0.2667200267314911,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.60009765625,
+            0.0
+          ],
+          "phase": 0.3000600337982178,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.666748046875,
+            0.0
+          ],
+          "phase": 0.33340004086494446,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.7335205078125,
+            0.0
+          ],
+          "phase": 0.36674004793167114,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.8001708984375,
+            0.0
+          ],
+          "phase": 0.4000800549983978,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            445.0,
+            1361.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            445.0,
+            1359.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.066650390625,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            445.0,
+            1359.13330078125,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/oil_platform",
+        "x": 420,
+        "y": 1260,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              1.0
+            ],
+            "angle": 0.0
+          },
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": 0.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9976806640625,
+            0.0
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.99462890625,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9898681640625,
+            0.0
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.98291015625,
+            0.0
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9735107421875,
+            0.0
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9615478515625,
+            0.0
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.94677734375,
+            0.0
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.928955078125,
+            0.0
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9080810546875,
+            0.0
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.8841552734375,
+            0.0
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.3260498046875,
+            0.0
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1260.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            420.0,
+            1259.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            420.0,
+            1261.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            420.0,
+            1260.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/ice_cube",
+        "x": 1860,
+        "y": 790,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.0002,
+        "frames": [
+          {
+            "pos": [
+              5.0,
+              5.0
+            ],
+            "angle": -10.0
+          },
+          {
+            "pos": [
+              -5.0,
+              -5.0
+            ],
+            "angle": 10.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            1865.0,
+            795.0,
+            -10.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1865.0,
+            795.0,
+            -9.999992370605469
+          ],
+          "phase": 0.0033340000081807375,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1865.0,
+            795.0,
+            -9.999940872192383
+          ],
+          "phase": 0.006668000016361475,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.9998779296875,
+            794.9998779296875,
+            -9.999802589416504
+          ],
+          "phase": 0.010002000257372856,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.999755859375,
+            794.999755859375,
+            -9.999534606933594
+          ],
+          "phase": 0.01333600003272295,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.99951171875,
+            794.9995727539062,
+            -9.999096870422363
+          ],
+          "phase": 0.016669999808073044,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.999267578125,
+            794.9992065429688,
+            -9.998446464538574
+          ],
+          "phase": 0.020004000514745712,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.998779296875,
+            794.998779296875,
+            -9.997546195983887
+          ],
+          "phase": 0.02333800122141838,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.9981689453125,
+            794.9981689453125,
+            -9.996355056762695
+          ],
+          "phase": 0.02667200192809105,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.9974365234375,
+            794.9974365234375,
+            -9.994836807250977
+          ],
+          "phase": 0.030006002634763718,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.9964599609375,
+            794.9964599609375,
+            -9.99295425415039
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.995361328125,
+            794.995361328125,
+            -9.990669250488281
+          ],
+          "phase": 0.036674004048109055,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1864.9940185546875,
+            794.9939575195312,
+            -9.987948417663574
+          ],
+          "phase": 0.04000800475478172,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.7799072265625,
+            794.7799682617188,
+            -9.559924125671387
+          ],
+          "phase": 0.14000800251960754,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.0673828125,
+            794.0673828125,
+            -8.134817123413086
+          ],
+          "phase": 0.24000799655914307,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1862.8013916015625,
+            792.8013916015625,
+            -5.602741718292236
+          ],
+          "phase": 0.3400079905986786,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1861.1141357421875,
+            791.1140747070312,
+            -2.2282023429870605
+          ],
+          "phase": 0.4400079846382141,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1859.2530517578125,
+            789.2530517578125,
+            1.4939069747924805
+          ],
+          "phase": 0.5400079488754272,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1857.5087890625,
+            787.5088500976562,
+            4.982308387756348
+          ],
+          "phase": 0.6400079727172852,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1856.143310546875,
+            786.143310546875,
+            7.713329315185547
+          ],
+          "phase": 0.7400079965591431,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1855.3175048828125,
+            785.3175659179688,
+            9.364919662475586
+          ],
+          "phase": 0.840008020401001,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1855.0196533203125,
+            785.0197143554688,
+            9.960601806640625
+          ],
+          "phase": 0.9400080442428589,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1855.0,
+            785.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1855.0855712890625,
+            785.0855712890625,
+            9.828800201416016
+          ],
+          "phase": 0.09999999403953552,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1855.5792236328125,
+            785.5792236328125,
+            8.84160041809082
+          ],
+          "phase": 0.19999998807907104,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1856.630859375,
+            786.6307983398438,
+            6.738400459289551
+          ],
+          "phase": 0.29999998211860657,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1858.1744384765625,
+            788.1743774414062,
+            3.6512012481689453
+          ],
+          "phase": 0.3999999761581421,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1860.0,
+            790.0,
+            9.5367431640625e-07
+          ],
+          "phase": 0.4999999701976776,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1861.8255615234375,
+            791.8256225585938,
+            -3.6512012481689453
+          ],
+          "phase": 0.5999999642372131,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1863.369140625,
+            793.3692016601562,
+            -6.738399505615234
+          ],
+          "phase": 0.6999999284744263,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.4207763671875,
+            794.4207763671875,
+            -8.841596603393555
+          ],
+          "phase": 0.7999999523162842,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.9144287109375,
+            794.9143676757812,
+            -9.828792572021484
+          ],
+          "phase": 0.8999999761581421,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1865.0,
+            795.0,
+            -10.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.9144287109375,
+            794.9144287109375,
+            -9.828800201416016
+          ],
+          "phase": 0.09999999403953552,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1864.4207763671875,
+            794.4207763671875,
+            -8.84160041809082
+          ],
+          "phase": 0.19999998807907104,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1863.369140625,
+            793.3692016601562,
+            -6.738400459289551
+          ],
+          "phase": 0.29999998211860657,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            1861.8255615234375,
+            791.8256225585938,
+            -3.6512012481689453
+          ],
+          "phase": 0.3999999761581421,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            1856.630859375,
+            786.6307983398438,
+            6.738399505615234
+          ],
+          "phase": 0.6999999284744263,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            1855.0,
+            785.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            1855.0,
+            785.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1855.0,
+            785.0,
+            9.999992370605469
+          ],
+          "phase": 0.0033340000081807375,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            1855.0,
+            785.0,
+            9.999940872192383
+          ],
+          "phase": 0.006668000016361475,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/mir",
+        "x": 2744,
+        "y": 1940,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              1.0
+            ],
+            "angle": 0.0
+          },
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": 0.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9976806640625,
+            0.0
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.99462890625,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9898681640625,
+            0.0
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.98291015625,
+            0.0
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9735107421875,
+            0.0
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9615478515625,
+            0.0
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.94677734375,
+            0.0
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.928955078125,
+            0.0
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9080810546875,
+            0.0
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.8841552734375,
+            0.0
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.3260498046875,
+            0.0
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1940.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            2744.0,
+            1939.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            2744.0,
+            1941.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.9998779296875,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2744.0,
+            1940.999267578125,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/poplavok",
+        "x": 3500,
+        "y": 1720,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.0005,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              0.0
+            ],
+            "angle": 12.0
+          },
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": -9.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            3500.0,
+            1720.0,
+            12.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1720.0,
+            11.999879837036133
+          ],
+          "phase": 0.008335000835359097,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1720.0,
+            11.999051094055176
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9998779296875,
+            11.996838569641113
+          ],
+          "phase": 0.025005001574754715,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9996337890625,
+            11.99260139465332
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.999267578125,
+            11.985733985900879
+          ],
+          "phase": 0.04167500510811806,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9989013671875,
+            11.975665092468262
+          ],
+          "phase": 0.05001000687479973,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9981689453125,
+            11.9618558883667
+          ],
+          "phase": 0.0583450086414814,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.997314453125,
+            11.943801879882812
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9962158203125,
+            11.921028137207031
+          ],
+          "phase": 0.07501500844955444,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.994873046875,
+            11.893095970153809
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.9932861328125,
+            11.85959243774414
+          ],
+          "phase": 0.09168501198291779,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.991455078125,
+            11.820137977600098
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.7647705078125,
+            7.060790061950684
+          ],
+          "phase": 0.35002002120018005,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.3173828125,
+            -2.334488868713379
+          ],
+          "phase": 0.6000200510025024,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.026611328125,
+            -8.441356658935547
+          ],
+          "phase": 0.8500200510025024,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.0,
+            -9.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.25,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.5,
+            1.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.896484375,
+            9.826171875
+          ],
+          "phase": 0.75,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1720.0,
+            12.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.896484375,
+            9.826171875
+          ],
+          "phase": 0.25,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.5,
+            1.5
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.75,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.0,
+            -9.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.25,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.5,
+            1.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.896484375,
+            9.826171875
+          ],
+          "phase": 0.75,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1720.0,
+            12.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.896484375,
+            9.826171875
+          ],
+          "phase": 0.25,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.5,
+            1.5
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.75,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.0,
+            -9.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.25,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.5,
+            1.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1719.896484375,
+            9.826171875
+          ],
+          "phase": 0.75,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            3500.0,
+            1720.0,
+            12.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            3500.0,
+            1719.103515625,
+            -6.826171875
+          ],
+          "phase": 0.7500000596046448,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            3500.0,
+            1719.0,
+            -9.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            3500.0,
+            1719.0,
+            -9.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.0,
+            -8.999879837036133
+          ],
+          "phase": 0.008335000835359097,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            3500.0,
+            1719.0,
+            -8.999051094055176
+          ],
+          "phase": 0.016670001670718193,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/krug",
+        "x": 4014,
+        "y": 1246,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              -1.0
+            ],
+            "angle": 0.0
+          },
+          {
+            "pos": [
+              0.0,
+              1.0
+            ],
+            "angle": 0.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0001220703125,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.000732421875,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0023193359375,
+            0.0
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.00537109375,
+            0.0
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0101318359375,
+            0.0
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.01708984375,
+            0.0
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0264892578125,
+            0.0
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0384521484375,
+            0.0
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.05322265625,
+            0.0
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.071044921875,
+            0.0
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0919189453125,
+            0.0
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.1158447265625,
+            0.0
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.6739501953125,
+            0.0
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1246.0,
+            0.0
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            4014.0,
+            1247.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            4014.0,
+            1245.0,
+            0.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.0001220703125,
+            0.0
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            4014.0,
+            1245.000732421875,
+            0.0
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "water_objects/wc",
+        "x": 2002,
+        "y": 1980,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.0001,
+        "frames": [
+          {
+            "pos": [
+              0.0,
+              -10.0
+            ],
+            "angle": -15.0
+          },
+          {
+            "pos": [
+              20.0,
+              -20.0
+            ],
+            "angle": 15.0
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            2002.0,
+            1970.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.999999046325684
+          ],
+          "phase": 0.0016670000040903687,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.999988555908203
+          ],
+          "phase": 0.0033340000081807375,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.99996280670166
+          ],
+          "phase": 0.005001000128686428,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.99991226196289
+          ],
+          "phase": 0.006668000016361475,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0001220703125,
+            1970.0,
+            -14.999828338623047
+          ],
+          "phase": 0.008334999904036522,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.000244140625,
+            1969.9998779296875,
+            -14.999704360961914
+          ],
+          "phase": 0.010002000257372856,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0003662109375,
+            1969.9998779296875,
+            -14.999531745910645
+          ],
+          "phase": 0.01166900061070919,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.00048828125,
+            1969.999755859375,
+            -14.999302864074707
+          ],
+          "phase": 0.013336000964045525,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0006103515625,
+            1969.9996337890625,
+            -14.999009132385254
+          ],
+          "phase": 0.015003001317381859,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0008544921875,
+            1969.99951171875,
+            -14.998644828796387
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.001220703125,
+            1969.9993896484375,
+            -14.998200416564941
+          ],
+          "phase": 0.018337002024054527,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0015869140625,
+            1969.999267578125,
+            -14.99767017364502
+          ],
+          "phase": 0.02000400237739086,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2002.0616455078125,
+            1969.96923828125,
+            -14.907587051391602
+          ],
+          "phase": 0.07000400125980377,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2002.286376953125,
+            1969.8568115234375,
+            -14.570392608642578
+          ],
+          "phase": 0.12000399827957153,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2002.7491455078125,
+            1969.62548828125,
+            -13.876315116882324
+          ],
+          "phase": 0.1700039952993393,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2003.48876953125,
+            1969.255615234375,
+            -12.766880989074707
+          ],
+          "phase": 0.22000399231910706,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2004.5145263671875,
+            1968.74267578125,
+            -11.228165626525879
+          ],
+          "phase": 0.2700039744377136,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2005.8106689453125,
+            1968.0947265625,
+            -9.284042358398438
+          ],
+          "phase": 0.3200039863586426,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2007.34033203125,
+            1967.329833984375,
+            -6.989437103271484
+          ],
+          "phase": 0.37000399827957153,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2009.0509033203125,
+            1966.4744873046875,
+            -4.423575401306152
+          ],
+          "phase": 0.4200040102005005,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2010.8778076171875,
+            1965.56103515625,
+            -1.6832294464111328
+          ],
+          "phase": 0.47000402212142944,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2012.7493896484375,
+            1964.6253662109375,
+            1.1240253448486328
+          ],
+          "phase": 0.5200040340423584,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2014.591064453125,
+            1963.7044677734375,
+            3.8865718841552734
+          ],
+          "phase": 0.5700040459632874,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2016.330322265625,
+            1962.8348388671875,
+            6.495481491088867
+          ],
+          "phase": 0.6200040578842163,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2017.90087890625,
+            1962.049560546875,
+            8.851285934448242
+          ],
+          "phase": 0.6700040698051453,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2019.2471923828125,
+            1961.37646484375,
+            10.870718002319336
+          ],
+          "phase": 0.7200040817260742,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2020.3289794921875,
+            1960.8355712890625,
+            12.493448257446289
+          ],
+          "phase": 0.7700040936470032,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.1258544921875,
+            1960.43701171875,
+            13.688858032226562
+          ],
+          "phase": 0.8200041055679321,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.641845703125,
+            1960.1790771484375,
+            14.462774276733398
+          ],
+          "phase": 0.8700041174888611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.9095458984375,
+            1960.0452880859375,
+            14.864274978637695
+          ],
+          "phase": 0.92000412940979,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.994873046875,
+            1960.0025634765625,
+            14.99224853515625
+          ],
+          "phase": 0.970004141330719,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2022.0,
+            1960.0,
+            15.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.976806640625,
+            1960.0115966796875,
+            14.965256690979004
+          ],
+          "phase": 0.04999999701976776,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.828857421875,
+            1960.0855712890625,
+            14.743200302124023
+          ],
+          "phase": 0.09999999403953552,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2021.4677734375,
+            1960.26611328125,
+            14.201643943786621
+          ],
+          "phase": 0.14999999105930328,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            2020.841552734375,
+            1960.5792236328125,
+            13.26240062713623
+          ],
+          "phase": 0.19999998807907104,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            2017.296630859375,
+            1962.3516845703125,
+            7.944920539855957
+          ],
+          "phase": 0.34999996423721313,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            2002.0,
+            1970.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            2002.0,
+            1970.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.999999046325684
+          ],
+          "phase": 0.0016670000040903687,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            2002.0,
+            1970.0,
+            -14.999988555908203
+          ],
+          "phase": 0.0033340000081807375,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "explicit-three-frame-fixture",
+        "x": 120,
+        "y": 170,
+        "anim_loop": 0,
+        "anim_ease": 0,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0,
+              1
+            ],
+            "angle": -15
+          },
+          {
+            "pos": [
+              5,
+              -2
+            ],
+            "angle": 35
+          },
+          {
+            "pos": [
+              -20,
+              11
+            ],
+            "angle": 10
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0833511352539,
+            170.9499969482422,
+            -14.166500091552734
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.16670227050781,
+            170.8999786376953,
+            -13.333000183105469
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.25005340576172,
+            170.8499755859375,
+            -12.499500274658203
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.3333969116211,
+            170.79995727539062,
+            -11.665999412536621
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.416748046875,
+            170.7499542236328,
+            -10.832499504089355
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.5000991821289,
+            170.69993591308594,
+            -9.998998641967773
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.58345031738281,
+            170.64993286132812,
+            -9.165498733520508
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.66680145263672,
+            170.59991455078125,
+            -8.331998825073242
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.75015258789062,
+            170.54991149902344,
+            -7.498498916625977
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.83350372314453,
+            170.49989318847656,
+            -6.664999008178711
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.9168472290039,
+            170.44989013671875,
+            -5.831499099731445
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            121.00019836425781,
+            170.39988708496094,
+            -4.997998237609863
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            123.50019836425781,
+            168.89988708496094,
+            20.002002716064453
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "explicit-three-frame-fixture",
+        "x": 120,
+        "y": 170,
+        "anim_loop": 0,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0,
+              1
+            ],
+            "angle": -15
+          },
+          {
+            "pos": [
+              5,
+              -2
+            ],
+            "angle": 35
+          },
+          {
+            "pos": [
+              -20,
+              11
+            ],
+            "angle": 10
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00022888183594,
+            170.99986267089844,
+            -14.99774169921875
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00176239013672,
+            170.9989471435547,
+            -14.98238468170166
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00579071044922,
+            170.99652099609375,
+            -14.942059516906738
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.01338195800781,
+            170.99197387695312,
+            -14.866193771362305
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.02545166015625,
+            170.98472595214844,
+            -14.745465278625488
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0428237915039,
+            170.97430419921875,
+            -14.571756362915039
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.06619262695312,
+            170.9602813720703,
+            -14.338109016418457
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.09613037109375,
+            170.94232177734375,
+            -14.038675308227539
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.13313293457031,
+            170.9201202392578,
+            -13.66867446899414
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.17756652832031,
+            170.89346313476562,
+            -13.224343299865723
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.2297134399414,
+            170.86216735839844,
+            -12.70289421081543
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.28975677490234,
+            170.82614135742188,
+            -12.102462768554688
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            124.18486022949219,
+            168.48907470703125,
+            26.84864044189453
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0,
+            170.0,
+            0.0
+          ],
+          "phase": 1.0,
+          "index": 2,
+          "stopped": true,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "explicit-three-frame-fixture",
+        "x": 120,
+        "y": 170,
+        "anim_loop": 1,
+        "anim_ease": 0,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0,
+              1
+            ],
+            "angle": -15
+          },
+          {
+            "pos": [
+              5,
+              -2
+            ],
+            "angle": 35
+          },
+          {
+            "pos": [
+              -20,
+              11
+            ],
+            "angle": 10
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0833511352539,
+            170.9499969482422,
+            -14.166500091552734
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.16670227050781,
+            170.8999786376953,
+            -13.333000183105469
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.25005340576172,
+            170.8499755859375,
+            -12.499500274658203
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.3333969116211,
+            170.79995727539062,
+            -11.665999412536621
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.416748046875,
+            170.7499542236328,
+            -10.832499504089355
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.5000991821289,
+            170.69993591308594,
+            -9.998998641967773
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.58345031738281,
+            170.64993286132812,
+            -9.165498733520508
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.66680145263672,
+            170.59991455078125,
+            -8.331998825073242
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.75015258789062,
+            170.54991149902344,
+            -7.498498916625977
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.83350372314453,
+            170.49989318847656,
+            -6.664999008178711
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.9168472290039,
+            170.44989013671875,
+            -5.831499099731445
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            121.00019836425781,
+            170.39988708496094,
+            -4.997998237609863
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            123.50019836425781,
+            168.89988708496094,
+            20.002002716064453
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            100.33340454101562,
+            180.8332977294922,
+            9.583250045776367
+          ],
+          "phase": 0.016670001670718193,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            100.66680145263672,
+            180.66659545898438,
+            9.166500091552734
+          ],
+          "phase": 0.033340003341436386,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    },
+    {
+      "definition": {
+        "name": "explicit-three-frame-fixture",
+        "x": 120,
+        "y": 170,
+        "anim_loop": 1,
+        "anim_ease": 1,
+        "anim_speed": 0.001,
+        "frames": [
+          {
+            "pos": [
+              0,
+              1
+            ],
+            "angle": -15
+          },
+          {
+            "pos": [
+              5,
+              -2
+            ],
+            "angle": 35
+          },
+          {
+            "pos": [
+              -20,
+              11
+            ],
+            "angle": 10
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": 0,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00022888183594,
+            170.99986267089844,
+            -14.99774169921875
+          ],
+          "phase": 0.016670001670718193,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00176239013672,
+            170.9989471435547,
+            -14.98238468170166
+          ],
+          "phase": 0.033340003341436386,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.00579071044922,
+            170.99652099609375,
+            -14.942059516906738
+          ],
+          "phase": 0.05001000314950943,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.01338195800781,
+            170.99197387695312,
+            -14.866193771362305
+          ],
+          "phase": 0.06668000668287277,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.02545166015625,
+            170.98472595214844,
+            -14.745465278625488
+          ],
+          "phase": 0.08335001021623611,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.0428237915039,
+            170.97430419921875,
+            -14.571756362915039
+          ],
+          "phase": 0.10002001374959946,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.06619262695312,
+            170.9602813720703,
+            -14.338109016418457
+          ],
+          "phase": 0.1166900172829628,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.09613037109375,
+            170.94232177734375,
+            -14.038675308227539
+          ],
+          "phase": 0.13336001336574554,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.13313293457031,
+            170.9201202392578,
+            -13.66867446899414
+          ],
+          "phase": 0.1500300168991089,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.17756652832031,
+            170.89346313476562,
+            -13.224343299865723
+          ],
+          "phase": 0.16670002043247223,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.2297134399414,
+            170.86216735839844,
+            -12.70289421081543
+          ],
+          "phase": 0.18337002396583557,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            120.28975677490234,
+            170.82614135742188,
+            -12.102462768554688
+          ],
+          "phase": 0.2000400274991989,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            124.18486022949219,
+            168.48907470703125,
+            26.84864044189453
+          ],
+          "phase": 0.7000400424003601,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            122.5,
+            169.5,
+            10.0
+          ],
+          "phase": 0.5,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            112.5,
+            174.5,
+            22.5
+          ],
+          "phase": 0.5,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            110.0,
+            176.0,
+            -2.5
+          ],
+          "phase": 0.5,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 500,
+          "draw": [
+            120.0,
+            171.0,
+            -15.0
+          ],
+          "phase": 0.0,
+          "index": 1,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 1500,
+          "draw": [
+            125.0,
+            168.0,
+            35.0
+          ],
+          "phase": 0.0,
+          "index": 2,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 100000,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 0,
+          "draw": [
+            100.0,
+            181.0,
+            10.0
+          ],
+          "phase": 0.0,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            100.00090026855469,
+            180.99954223632812,
+            9.998870849609375
+          ],
+          "phase": 0.016670001670718193,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        },
+        {
+          "dt_ms": 16.67,
+          "draw": [
+            100.00704956054688,
+            180.99647521972656,
+            9.991191864013672
+          ],
+          "phase": 0.033340003341436386,
+          "index": 0,
+          "stopped": false,
+          "initialized": true
+        }
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

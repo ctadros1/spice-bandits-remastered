@@ -1,0 +1,3291 @@
+{
+  "method": "Original HUD currency positions with supplied font widths and session values.\n\nRenderInfoBarIndicators executes with draw=false. Session XP/spice, formatting,\ntext width/color and Objective-C calls are explicit stubs. No CoreText measurement,\noriginal font raster, renderer or whole application is executed.\n Selected native format strings/arguments use an explicit current-host libc snprintf stub. XP draws additionally record renderer calls against supplied66x7 fill/UV metadata; original raster is not executed.",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        314.0,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        345.0,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        293.75,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        324.75,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        254.0,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        285.0,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        258.5,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        289.5,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        238.25,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        269.25,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        198.5,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        229.5,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        194.0,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        225.0,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        173.75,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        204.75,
+        1.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        134.0,
+        3.0
+      ]
+    },
+    {
+      "width": 480,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        165.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        858.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        889.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        837.75,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        868.75,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        798.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        829.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        802.5,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        833.5,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        742.5,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        773.5,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        738.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        769.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        717.75,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        748.75,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        678.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        709.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1114.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1145.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1093.75,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1124.75,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1054.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 0,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1085.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1058.5,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1089.5,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1038.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1069.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        998.5,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 55.5,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1029.5,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        994.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 0,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1025.0,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        973.75,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        1004.75,
+        1.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        934.0,
+        3.0
+      ]
+    },
+    {
+      "width": 1280,
+      "money_width": 120,
+      "spice_width": 60,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        965.0,
+        1.0
+      ]
+    }
+  ],
+  "spice_cases": [
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 1,
+          "text": "1sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 999,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 999,
+          "text": "999sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1000,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%4.1fk sp",
+          "argument": 1.0,
+          "text": " 1.0k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1001,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%4.1fk sp",
+          "argument": 1.0010000467300415,
+          "text": " 1.0k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1499,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%4.1fk sp",
+          "argument": 1.4989999532699585,
+          "text": " 1.5k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1500,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%4.1fk sp",
+          "argument": 1.5,
+          "text": " 1.5k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 9999,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%4.1fk sp",
+          "argument": 9.99899959564209,
+          "text": "10.0k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 10000,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dk sp",
+          "argument": 10,
+          "text": "10k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 12345,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dk sp",
+          "argument": 12,
+          "text": "12k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 1000000,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 50,
+      "draws": [],
+      "spice_formats": [
+        {
+          "format": "%dk sp",
+          "argument": 1000,
+          "text": "1000k sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    }
+  ],
+  "xp_cases": [
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            0.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.294921875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            903.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            0.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.294921875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            891.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            0.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.294921875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            928.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 0,
+      "remaining": 10,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            0.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.294921875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            916.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 7.5,
+      "remaining": 2.5,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            49.5,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.34326171875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            903.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 7.5,
+      "remaining": 2.5,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            49.5,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.34326171875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            891.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 7.5,
+      "remaining": 2.5,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            49.5,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.34326171875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            928.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 7.5,
+      "remaining": 2.5,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            49.5,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.34326171875,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            916.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            66.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.359375,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            903.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            66.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.359375,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            891.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            66.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.359375,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            928.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 0,
+      "lower": 0,
+      "level": 1,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            66.0,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.359375,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            916.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            903.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            891.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            928.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 10,
+      "remaining": 30,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            916.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 11,
+      "remaining": 29,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            903.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": false,
+      "spice": 0,
+      "xp": 11,
+      "remaining": 29,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            877.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            884.0,
+            5.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            870.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            891.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            843.75,
+            2.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            841.0,
+            15.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            782.25,
+            3.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        782.25,
+        3.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 11,
+      "remaining": 29,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 30,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            928.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    },
+    {
+      "width": 1024,
+      "money_width": 55.5,
+      "spice_width": 20.25,
+      "phone": true,
+      "spice": 0,
+      "xp": 11,
+      "remaining": 29,
+      "lower": 10,
+      "level": 2,
+      "xp_width": 55.5,
+      "draws": [
+        {
+          "kind": "image",
+          "target": "0x801400",
+          "point": [
+            908.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "fill",
+          "values": [
+            913.0,
+            4.0,
+            3.299999952316284,
+            7.0,
+            0.294921875,
+            0.640625,
+            0.29814451932907104,
+            0.654296875
+          ]
+        },
+        {
+          "kind": "image",
+          "target": "0x0",
+          "point": [
+            900.0,
+            0.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801500",
+          "point": [
+            916.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801200",
+          "point": [
+            873.75,
+            1.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x0",
+          "point": [
+            872.0,
+            11.0
+          ]
+        },
+        {
+          "kind": "text",
+          "target": "0x801000",
+          "point": [
+            813.25,
+            1.0
+          ]
+        }
+      ],
+      "spice_formats": [
+        {
+          "format": "%dsp",
+          "argument": 0,
+          "text": "0sp"
+        }
+      ],
+      "money_position": [
+        813.25,
+        1.0
+      ]
+    }
+  ],
+  "original_unchanged": true
+}

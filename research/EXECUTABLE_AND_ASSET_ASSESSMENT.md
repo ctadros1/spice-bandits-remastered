@@ -1,6 +1,6 @@
 # Executable and Asset Recovery Assessment
 
-Verified October 13, 2026. This assessment combines preserved static evidence with the research catalog. No original executable has been installed or run.
+Verified October 13, 2026. This assessment combines preserved static evidence with the research catalog. No complete original app has been installed or run. Bounded ARM functions now execute in local emulation with explicit stubs; their scope is recorded in the reconstruction verification notes.
 
 ## What the decrypted 1.14 package changes
 

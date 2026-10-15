@@ -1,0 +1,34 @@
+#pragma once
+#include <godot_cpp/classes/ref_counted.hpp>
+#include <godot_cpp/classes/random_number_generator.hpp>
+#include <godot_cpp/variant/array.hpp>
+#include <godot_cpp/variant/dictionary.hpp>
+#include <godot_cpp/variant/callable.hpp>
+#include <godot_cpp/variant/packed_int32_array.hpp>
+#include <godot_cpp/variant/packed_float32_array.hpp>
+#include <godot_cpp/variant/packed_vector2_array.hpp>
+#include <godot_cpp/variant/vector2.hpp>
+namespace godot {
+class SpiceNative : public RefCounted {
+    GDCLASS(SpiceNative, RefCounted)
+protected:
+    static void _bind_methods();
+public:
+    static bool in_range(Vector2 a, Vector2 b, double radius, double hex_height);
+    static PackedInt32Array range_candidates(Array entries, Vector2 position, double radius, double hex_height, int aim);
+    static Dictionary select_target(Array entries, Dictionary query, Callable grid);
+    static Dictionary movement_tick(Vector2 start, Vector2 target, Vector2 future, double progress, double carry, double speed, double dt, double hex_height);
+    static void update_particle(Dictionary particle, Dictionary definition, double dt, double age);
+    static void update_particles(Array particles, Dictionary definition, double dt, double clock_ms);
+    static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);
+    static void emit_batch(Dictionary system, double clock_ms, RandomNumberGenerator *random);
+    static int64_t compile_particle(Dictionary definition);
+    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom);
+    static String format_xp(double value, bool compact = true);
+    static Vector2 projected_random_vector(int64_t latitude_rand, int64_t angle_rand);
+    static Dictionary bolt_ribbon(PackedVector2Array path, int64_t pass_id, double opacity);
+    static Dictionary water_table(int64_t seed);
+    static double water_noise(Dictionary table, double value);
+    static Dictionary water_vertices(Dictionary table, Dictionary settings, double phase);
+};
+}

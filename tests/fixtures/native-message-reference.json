@@ -1,0 +1,2661 @@
+{
+  "method": "Original message fade/quad/text and button/hitbox submissions.\n\nExplicit512-square background,256x128 button textures, text widths, viewport,\nalpha and timestep. GL, text metrics/color, clicks and sound are stubs. No\ntexture loader, text rasterizer, notification owner or whole app executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "messages": [
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 0.3499999940395355,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.20000000298023224,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.20000000298023224,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 0.550000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.2,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.800000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.800000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.45000001788139343,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 0.8,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.6499999761581421,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "alpha": 1,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              256.0,
+              128.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              512.0,
+              333.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              362.0,
+              368.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 0.3499999940395355,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.20000000298023224,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.20000000298023224,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 0.550000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.2,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 0.800000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 0.800000011920929,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.45000001788139343,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 0.8,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0,
+      "closing": 1,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0.1,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0.1,
+      "closing": 1,
+      "result": {
+        "alpha": 0.6499999761581421,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0.3,
+      "closing": 0,
+      "result": {
+        "alpha": 1.0,
+        "finished": false,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "alpha": 1,
+      "dt": 0.3,
+      "closing": 1,
+      "result": {
+        "alpha": 0.0,
+        "finished": true,
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              384.0,
+              224.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              640.0,
+              429.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8397056,
+            "position": [
+              490.0,
+              464.0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "buttons": [
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 0,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 0.19,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 0.2,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 0.20001,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            349,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 0.5,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            349,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 0,
+      "alpha": 1,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              299.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              412.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            349,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 0,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 0.19,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 0.2,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 0.20001,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            519,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 0.5,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            519,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "index": 1,
+      "alpha": 1,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              469.0,
+              420.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              582.0,
+              476.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            519,
+            460,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 0,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 0.19,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 0.2,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 0.20001,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            477,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 0.5,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            477,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 0,
+      "alpha": 1,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              427.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              540.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            477,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 0,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 0.19,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 0.2,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": []
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 0.20001,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            647,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 0.5,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            647,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    },
+    {
+      "size": [
+        1280,
+        960
+      ],
+      "index": 1,
+      "alpha": 1,
+      "result": {
+        "draws": [
+          {
+            "kind": "quad",
+            "id": 8392704,
+            "position": [
+              597.0,
+              516.0
+            ]
+          },
+          {
+            "kind": "text",
+            "id": 8396800,
+            "position": [
+              710.0,
+              572.0
+            ]
+          }
+        ],
+        "hits": [
+          [
+            647,
+            556,
+            156,
+            48
+          ]
+        ]
+      }
+    }
+  ],
+  "original_unchanged": true
+}

@@ -11,6 +11,10 @@
 /game/.godot/
 /game/assets/
 /game/data/
+/game/native/bin/
+/native/.sconsign*
+/native/*.os
+/native/*.o
 __pycache__/
 *.pyc
 /docs/mechanics/traces/

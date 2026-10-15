@@ -1,0 +1,21 @@
+{
+  "method": "Visually observed earlier iPad recording, raw1920x1080 pixels. The capture looks stretched. Runtime preserves22pt glyphs and135x261 portrait dimensions; an182px text column reproduces the observed Welcome breaks. It is not recovered old UIKit measurement or an exact frame-coordinate oracle. R65 replaces the Welcome-specific width with shared leading-aware sizing; this selects184px without changing visible line breaks.",
+  "file": "builds/reference/dense/clip-2/00121.jpg",
+  "sha256": "8e3d019eb170d107262c3a7cf6f78a1554918594b693daebe703e8b4bc1b5b79",
+  "time_seconds": 120.5,
+  "paragraph_lines": [
+    "Welcome to the",
+    "camp, cadet! You",
+    "build defensive",
+    "towers, and they do",
+    "the shooting."
+  ],
+  "continuation_lines": [
+    "Tap anywhere to",
+    "continue..."
+  ],
+  "chosen_unstretched_column": 184,
+  "font_size": 22,
+  "hint_height": 227,
+  "previous_r61_column": 182
+}

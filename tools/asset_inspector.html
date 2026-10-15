@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spice Bandits asset inspector</title>
+<style>
+:root{color-scheme:dark;font:14px system-ui;background:#17191d;color:#e2e5e9}*{box-sizing:border-box}body{margin:0}header{padding:16px 22px;border-bottom:1px solid #41454b;display:flex;gap:24px;align-items:baseline}h1{font-size:20px;margin:0}header span{color:#b0b8c1}nav{display:flex;gap:8px;padding:12px 22px}button,select,input{font:inherit}button,select{padding:6px;background:#30353b;color:inherit;border:1px solid #69727d;border-radius:3px}button[aria-pressed=true]{background:#dbe7ef;color:#12202b}main{display:grid;grid-template-columns:310px minmax(0,1fr);gap:20px;padding:0 22px 22px}aside{min-width:0}label{display:block;margin:12px 0 5px}select{width:100%}input[type=range]{width:100%}.row{display:flex;gap:8px;align-items:center}.row label{margin:8px 0}.row input[type=checkbox]{margin-right:6px}pre{white-space:pre-wrap;word-break:break-word;font:12px/1.5 ui-monospace,monospace;background:#101216;padding:12px;max-height:350px;overflow:auto}figure{margin:0 0 20px;min-width:0}figcaption{margin:0 0 8px;color:#c4cbd3}.stage{overflow:auto;background:repeating-conic-gradient(#272b30 0% 25%,#30353b 0% 50%) 50%/20px 20px;border:1px solid #555e68;padding:12px;min-height:250px}canvas{display:block;max-width:100%;height:auto;image-rendering:pixelated}#preview{margin:auto}#sheet{max-height:700px;width:auto;max-width:100%;object-fit:contain;cursor:crosshair}#mapCanvas{cursor:crosshair}#status{padding:0 22px 14px;min-height:30px;color:#b8c8d5}.error{color:#ffb9a9!important}.hidden{display:none!important}small{color:#aeb8c4;line-height:1.5}#mapDetail{min-height:80px}@media(max-width:800px){main{grid-template-columns:1fr}header{display:block}aside{max-width:100%}}
+</style>
+<header><h1>Original asset inspector</h1><span>Derived content · read only</span></header>
+<nav aria-label="Inspector"><button id="atlasTab" aria-pressed="true">Atlas</button><button id="mapTab" aria-pressed="false">Map</button></nav>
+<div id="status" role="status">Loading imported metadata…</div>
+<main id="atlasPane">
+<aside>
+<label for="asset">Animation resource</label><select id="asset"></select>
+<label for="state">Animation or extra image</label><select id="state"></select>
+<label for="variation">Color variation</label><select id="variation"></select>
+<label for="frame">Frame <output id="frameNumber">0</output></label><input id="frame" type="range" min="0" max="0" value="0">
+<div class="row"><button id="previous" aria-label="Previous frame">←</button><button id="play">Play</button><button id="next" aria-label="Next frame">→</button></div>
+<label for="scale">Preview zoom</label><select id="scale"><option value="1">1×</option><option value="2" selected>2×</option><option value="4">4×</option></select>
+<div class="row"><label><input id="guides" type="checkbox" checked>Origins and bounds</label></div>
+<button id="saveFrame">Save frame preview</button>
+<pre id="assetDetail"></pre>
+<small>Preview uses the imported crop, quarter turn, flips and authored offsets. Extra images include pads and shadows. This inspector does not reproduce the original renderer.</small>
+</aside>
+<section><figure><figcaption>Frame and authored origin</figcaption><div class="stage"><canvas id="preview" width="480" height="360"></canvas></div></figure><figure><figcaption id="sheetCaption">Source atlas</figcaption><div class="stage"><canvas id="sheet"></canvas></div></figure></section>
+</main>
+<main id="mapPane" class="hidden">
+<aside>
+<label for="map">Map</label><select id="map"></select>
+<label for="mission">Offline configuration</label><select id="mission"></select>
+<label for="layer">Foreground layer</label><select id="layer"></select>
+<div class="row"><label><input id="foreground" type="checkbox" checked>Foreground</label></div>
+<div class="row"><label><input id="hexes" type="checkbox" checked>Authored hex flags</label></div>
+<div class="row"><label><input id="objectBounds" type="checkbox">Layer bounds / depth</label></div>
+<button id="saveMap">Save map overlay</button>
+<pre id="mapDetail"></pre><pre id="cellDetail">Click a hex to inspect its original flags and center.</pre>
+<small>Green = build flag. Blue = walk flag. Red = neither. Base/source markers come from the selected configuration. Foreground order shown here follows the current reconstruction; original map registration and ties remain unresolved.</small>
+</aside>
+<section><figure><figcaption id="mapCaption">Imported map and placement geometry</figcaption><div class="stage"><canvas id="mapCanvas"></canvas></div></figure><pre id="layerDetail"></pre></section>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), images=new Map();
+const diagnostic={ready:false,errors:[],frame:null,map:null,cell:null};window.diagnostic=diagnostic;
+let animations,maps,catalog,playing=false,lastFrame=0,drawToken=0,mapToken=0,selectedCell=null;
+const loadImage=path=>{if(!images.has(path))images.set(path,new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(new Error('Missing image: '+path));i.src='/'+path;}));return images.get(path);};
+const option=(value,label)=>new Option(label??value,value);
+function report(error){diagnostic.errors.push(String(error));$('status').textContent=String(error);$('status').classList.add('error');}
+function current(){return animations[$('asset').value];}
+function selection(){const [kind,...name]=$('state').value.split(':');return{kind,name:name.join(':')};}
+function count(state){return Math.max(1,(state.resolved_frames??state.added_frames??[]).length||state.frames||1);}
+function sourceFrame(resource,name,index,variation){
+ const state=resource.states[name], frames=state.resolved_frames??state.added_frames??[];
+ index=((index%count(state))+count(state))%count(state);
+ let source=resource.resources[String(state.res_id??1)],f=frames[index]??{},fw,fh;
+ if(f.res_id!==undefined)source=resource.resources[String(f.res_id)];
+ fw=source.frame_width;fh=source.frame_height;
+ const width=f.f_width??fw,height=f.f_height??fh,rotated=!!f.rot_90;
+ const columns=Math.max(1,Math.trunc(source.texture_width/fw));
+ const n=((state.raw??1)-1)*columns+(state.column??1)-1+index;
+ return{path:source.variations?.[variation]??source.texture,x:frames.length?(f.x??0):(n%columns)*fw,y:frames.length?(f.y??0):Math.trunc(n/columns)*fh,
+  width,height,cropWidth:rotated?height:width,cropHeight:rotated?width:height,rotated,
+  flipX:!!state.fliph||!!f.fliph,flipY:frames.length?!!f.flipv:false,
+  offsetX:frames.length?(f.offset_x??0):(state.offset_x??0),offsetY:frames.length?(f.offset_y??0):(state.offset_y??0),canvasWidth:fw,canvasHeight:fh,index,speed:state.speed??1};
+}
+function extraFrame(resource,name,variation){const f=resource.textures[name];return{path:f.variations?.[variation]??f.texture,x:f.x??0,y:f.y??0,width:f.frame_width,height:f.frame_height,cropWidth:f.frame_width,cropHeight:f.frame_height,rotated:false,flipX:!!f.fliph,flipY:!!f.flipv,offsetX:f.offset_x??0,offsetY:f.offset_y??0,canvasWidth:f.frame_width,canvasHeight:f.frame_height,index:0};}
+function crop(image,f){const c=document.createElement('canvas');c.width=f.width;c.height=f.height;const x=c.getContext('2d');x.imageSmoothingEnabled=false;x.translate(c.width/2,c.height/2);x.scale(f.flipX?-1:1,f.flipY?-1:1);if(f.rotated)x.rotate(-Math.PI/2);x.drawImage(image,f.x,f.y,f.cropWidth,f.cropHeight,-f.cropWidth/2,-f.cropHeight/2,f.cropWidth,f.cropHeight);return c;}
+function cross(x,cx,cy,size,color){x.strokeStyle=color;x.beginPath();x.moveTo(cx-size,cy);x.lineTo(cx+size,cy);x.moveTo(cx,cy-size);x.lineTo(cx,cy+size);x.stroke();}
+async function drawAtlas(){
+ const token=++drawToken,resource=current(),s=selection(),index=Number($('frame').value),variation=$('variation').value;
+ const f=s.kind==='animation'?sourceFrame(resource,s.name,index,variation):extraFrame(resource,s.name,variation),image=await loadImage(f.path);
+ if(token!==drawToken)return;
+ f.width??=image.width;f.height??=image.height;f.cropWidth??=f.width;f.cropHeight??=f.height;f.canvasWidth??=f.width;f.canvasHeight??=f.height;
+ $('frameNumber').value=String(index);diagnostic.frame={asset:$('asset').value,state:s.name,kind:s.kind,...f};
+ const preview=$('preview'),p=preview.getContext('2d'),scale=Number($('scale').value);
+ preview.width=Math.max(480,(Math.max(f.width,f.canvasWidth)+Math.abs(f.offsetX)*2+40)*scale);preview.height=Math.max(360,(Math.max(f.height,f.canvasHeight)+Math.abs(f.offsetY)*2+40)*scale);
+ p.imageSmoothingEnabled=false;p.translate(preview.width/2,preview.height/2);p.scale(scale,scale);
+ p.drawImage(crop(image,f),-f.width/2+f.offsetX,-f.height/2+f.offsetY);
+ if($('guides').checked){p.lineWidth=1/scale;p.strokeStyle='#97b6d0';p.strokeRect(-f.canvasWidth/2,-f.canvasHeight/2,f.canvasWidth,f.canvasHeight);p.strokeStyle='#8ef0a7';p.strokeRect(-f.width/2+f.offsetX,-f.height/2+f.offsetY,f.width,f.height);cross(p,0,0,10,'#ffdf78');cross(p,f.offsetX,f.offsetY,5,'#ff8db6');}
+ const sheet=$('sheet');sheet.width=image.width;sheet.height=image.height;const x=sheet.getContext('2d');x.drawImage(image,0,0);x.strokeStyle='#76ff9c';x.lineWidth=3;x.strokeRect(f.x,f.y,f.cropWidth,f.cropHeight);
+ $('sheetCaption').textContent=f.path+' · '+image.width+' × '+image.height;
+ $('assetDetail').textContent=JSON.stringify({frame:index,crop:[f.x,f.y,f.cropWidth,f.cropHeight],visible:[f.width,f.height],untrimmed:[f.canvasWidth,f.canvasHeight],offset:[f.offsetX,f.offsetY],quarter_turn:f.rotated,flip_x:f.flipX,flip_y:f.flipY,params:resource.params??{}},null,2);
+}
+function chooseState(){playing=false;$('play').textContent='Play';const s=selection();$('frame').max=String(s.kind==='animation'?count(current().states[s.name])-1:0);$('frame').value='0';drawAtlas().catch(report);}
+function chooseAsset(){const r=current();$('state').replaceChildren(...Object.keys(r.states).map(n=>option('animation:'+n,n)),...Object.keys(r.textures??{}).map(n=>option('extra:'+n,'Extra: '+n)));const colors=new Set();for(const s of Object.values(r.resources))for(const c of Object.keys(s.variations??{}))colors.add(c);for(const s of Object.values(r.textures??{}))for(const c of Object.keys(s.variations??{}))colors.add(c);$('variation').replaceChildren(option('','Original'),...[...colors].sort().map(c=>option(c)));chooseState();}
+function center(m,x,y){return[(m.hex_offset_x??0)+m.hex_side+m.hex_base/2+x*(m.hex_base+m.hex_side),(m.hex_offset_y??0)+m.hex_h/2+y*m.hex_h+(x%2)*m.hex_h/2];}
+function hexPath(x,m,point){const a=m.hex_base/2,b=m.hex_side,h=m.hex_h/2;x.beginPath();for(const [i,[dx,dy]]of [[-a-b,0],[-a,-h],[a,-h],[a+b,0],[a,h],[-a,h]].entries()){if(!i)x.moveTo(point[0]+dx,point[1]+dy);else x.lineTo(point[0]+dx,point[1]+dy);}x.closePath();}
+const layerDepth=l=>Number(l.y??0)+Number(l.tile.depth_pos??l.tile.h??0);
+async function drawMap(){
+ const token=++mapToken,m=maps[$('map').value],canvas=$('mapCanvas'),background=await loadImage(m.background);if(token!==mapToken)return;
+ canvas.width=m.width_pixels;canvas.height=m.height_pixels;
+ const x=canvas.getContext('2d');x.imageSmoothingEnabled=false;x.drawImage(background,0,0);
+ const foreground=[...(m.foreground??[])].sort((a,b)=>layerDepth(a)-layerDepth(b));
+ const loaded=await Promise.all(foreground.map(l=>loadImage(l.texture)));if(token!==mapToken)return;
+ if($('foreground').checked)foreground.forEach((l,i)=>{const t=l.tile;x.drawImage(loaded[i],t.sx??0,t.sy??0,t.w,t.h,(l.x??0)+(t.offset_x??0),(l.y??0)+(t.offset_y??0),t.w,t.h);});
+ const chosen=Number($('layer').value);foreground.forEach((l,i)=>{if(!$('objectBounds').checked&&i!==chosen)return;const t=l.tile,px=(l.x??0)+(t.offset_x??0),py=(l.y??0)+(t.offset_y??0);x.strokeStyle=i===chosen?'#ffe57b':'#ed80ff';x.lineWidth=i===chosen?3:1;x.strokeRect(px,py,t.w,t.h);x.beginPath();x.moveTo(px,layerDepth(l));x.lineTo(px+t.w,layerDepth(l));x.stroke();x.fillStyle=x.strokeStyle;x.font='14px monospace';x.fillText('object '+l.obj_id+' · current depth '+layerDepth(l),px,py-4);});
+ if($('hexes').checked&&m.hex_width){x.lineWidth=1;for(let y=0;y<m.hex_height;y++)for(let cx=0;cx<m.hex_width;cx++){const cell=m.cells[y*m.hex_width+cx]??{},c=center(m,cx,y);hexPath(x,m,c);x.fillStyle=cell.b?'#43d77c25':cell.w?'#59cfff20':'#ee675529';x.fill();x.strokeStyle=cell.b?'#77ed9b80':cell.w?'#70dbff70':'#ff9e8d60';x.stroke();}}
+ const mission=catalog.offlineConfigs.find(c=>String(c.configid)===$('mission').value);
+ if(mission)for(const [kind,points]of [['B',mission.bases],['S',mission.sources]])for(const p of points){const c=center(m,Number(p.x),Number(p.y));x.fillStyle=kind==='B'?'#ffe487':'#e58fff';x.beginPath();x.arc(c[0],c[1],10,0,Math.PI*2);x.fill();x.font='bold 14px sans-serif';x.fillStyle='#101216';x.fillText(kind,c[0]-5,c[1]+5);}
+ if(selectedCell){const c=center(m,...selectedCell);hexPath(x,m,c);x.strokeStyle='#fff';x.lineWidth=3;x.stroke();cross(x,...c,12,'#fff');}
+ diagnostic.map={id:$('map').value,foreground:foreground.length,hexes:(m.hex_width??0)*(m.hex_height??0),mission:mission?.configid??null,foreground_visible:$('foreground').checked};
+ $('mapCaption').textContent='Map '+$('map').value+' · '+m.width_pixels+' × '+m.height_pixels+' · '+(m.theme??'world');
+ $('mapDetail').textContent=JSON.stringify({map:$('map').value,pixels:[m.width_pixels,m.height_pixels],grid:[m.hex_width??0,m.hex_height??0],offset:[m.hex_offset_x??0,m.hex_offset_y??0],hex:[m.hex_base,m.hex_side,m.hex_h],foreground:foreground.length,water:m.water?{texture:m.water.texture,source_sha256:m.water.source_sha256}:null},null,2);
+ $('layerDetail').textContent=chosen>=0&&foreground[chosen]?JSON.stringify(foreground[chosen],null,2):'Choose a foreground layer to inspect its authored tile fields and current depth key.';
+}
+function chooseMap(){selectedCell=null;diagnostic.cell=null;$('cellDetail').textContent='Click a hex to inspect its original flags and center.';const m=maps[$('map').value];$('mission').replaceChildren(option('','None'),...catalog.offlineConfigs.filter(c=>String(c.map)===$('map').value).map(c=>option(String(c.configid),c.configid+' · mode '+c.gametype)));if($('mission').options.length>1)$('mission').selectedIndex=1;const foreground=[...(m.foreground??[])].sort((a,b)=>layerDepth(a)-layerDepth(b));$('layer').replaceChildren(option('-1','None'),...foreground.map((l,i)=>option(String(i),'Object '+l.obj_id+' · current depth '+layerDepth(l))));drawMap().catch(report);}
+function tab(map){$('atlasPane').classList.toggle('hidden',map);$('mapPane').classList.toggle('hidden',!map);$('atlasTab').setAttribute('aria-pressed',String(!map));$('mapTab').setAttribute('aria-pressed',String(map));}
+function save(canvas,name){canvas.toBlob(blob=>{if(!blob)return;const link=document.createElement('a'),url=URL.createObjectURL(blob);link.href=url;link.download=name+'.png';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);},'image/png');}
+$('saveFrame').onclick=()=>save($('preview'),'asset-frame-'+$('asset').value.replaceAll('/','-')+'-'+$('frame').value);
+$('saveMap').onclick=()=>save($('mapCanvas'),'asset-map-'+$('map').value);
+$('asset').onchange=chooseAsset;$('state').onchange=chooseState;
+for(const id of ['frame','variation','scale','guides'])$(id).oninput=()=>drawAtlas().catch(report);
+function step(delta){const n=Number($('frame').max)+1;$('frame').value=String((Number($('frame').value)+delta+n)%n);drawAtlas().catch(report);}
+$('previous').onclick=()=>step(-1);$('next').onclick=()=>step(1);$('play').onclick=()=>{playing=!playing;$('play').textContent=playing?'Pause':'Play';lastFrame=performance.now();};
+function tick(now){if(playing&&selection().kind==='animation'){const speed=current().states[selection().name].speed??1;if(now-lastFrame>=1000/Math.max(.01,speed)){step(1);lastFrame=now;}}requestAnimationFrame(tick);}requestAnimationFrame(tick);
+$('atlasTab').onclick=()=>tab(false);$('mapTab').onclick=()=>tab(true);$('map').onchange=chooseMap;
+for(const id of ['mission','layer','foreground','hexes','objectBounds'])$(id).onchange=()=>drawMap().catch(report);
+$('mapCanvas').onclick=event=>{const m=maps[$('map').value];if(!m.hex_width)return;const rect=event.currentTarget.getBoundingClientRect(),point=[(event.clientX-rect.left)*m.width_pixels/rect.width,(event.clientY-rect.top)*m.height_pixels/rect.height];let best=Infinity;for(let y=0;y<m.hex_height;y++)for(let x=0;x<m.hex_width;x++){const c=center(m,x,y),distance=(c[0]-point[0])**2+(c[1]-point[1])**2;if(distance<best){best=distance;selectedCell=[x,y];}}const [x,y]=selectedCell;diagnostic.cell={map:$('map').value,cell:selectedCell,center:center(m,x,y),flags:m.cells[y*m.hex_width+x]};$('cellDetail').textContent=JSON.stringify(diagnostic.cell,null,2);drawMap().catch(report);};
+Promise.all(['animations','maps','catalog'].map(n=>fetch('/data/'+n+'.json').then(r=>{if(!r.ok)throw Error('Missing '+n);return r.json();}))).then(data=>{[animations,maps,catalog]=data;$('asset').replaceChildren(...Object.keys(animations).sort().map(n=>option(n)));$('asset').value='towers/tower1_1';$('map').replaceChildren(...Object.keys(maps).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).map(n=>option(n)));$('map').value='1';chooseAsset();chooseMap();diagnostic.ready=true;$('status').textContent=Object.keys(animations).length+' animation resources · '+Object.keys(maps).length+' maps · preserved originals are never served';}).catch(report);
+</script>
+</html>

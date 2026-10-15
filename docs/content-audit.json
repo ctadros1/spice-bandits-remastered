@@ -1,7 +1,7 @@
 {
   "animation_sets": 108,
-  "animations_sha256": "8a89509aca9cb5a937dab885a525aa618f888ef43be073669a386344ea27a225",
-  "assets": 1958,
+  "animations_sha256": "4374c29a629c4cbd856745da46076381474d041cd0c7ca03890d29fc5cb11d5e",
+  "assets": 1960,
   "campaign_issues": [
     {
       "config": "8",
@@ -138,7 +138,7 @@
       "wave": 18
     }
   ],
-  "catalog_sha256": "1b1ad0d9a3d58c2531a33fc6f4e620419383f2271639d1db254d969ebf1821f8",
+  "catalog_sha256": "dbeb43f373adb3e6106c8642ba4af04244dae159217f5b3b7a67795bb88306fc",
   "conflicts": [
     {
       "candidates": [
@@ -258,9 +258,23 @@
       "stem": "maps/urban/700/level22"
     }
   ],
+  "frame_stacks": 55,
   "maps": 67,
-  "maps_sha256": "73a148119d5cedada769f1967e4e846ec72552613cc43b85e3962b9cede8cadf",
-  "missing_references": [],
+  "maps_sha256": "ef9b480b642625ad3f285aebb5ce50c5e6a203ab58eb18a398a3a3cf0a4631af",
+  "missing_references": [
+    {
+      "filename": "../creeps/creeps",
+      "parent": "sfx"
+    },
+    {
+      "filename": "../creeps/creeps",
+      "parent": "sfx"
+    },
+    {
+      "filename": "tower2_icon",
+      "parent": "towers"
+    }
+  ],
   "repairs": [
     {
       "derived_xml_sha256": "f294f2535e593b0580445616388d4a41146ce6ae90a0f86f5d715cd6f9336509",
@@ -287,6 +301,7 @@
       "source_sha256": "de92b2eeb4812267e901aa5239f885ba7ec62a02b25fa50e7d2608d24963bf2d"
     }
   ],
+  "resolved_animation_frames": 2389,
   "schema": 1,
   "unresolved_filename_edges": [
     {

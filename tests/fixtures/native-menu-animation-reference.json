@@ -1,0 +1,3601 @@
+{
+  "method": "Record animation declarations from six original menu methods.\n\nOriginal ARM code executes. Objective-C objects, arrays, numbers, layer methods,\nframe getters/setters, animation lookup and CG transforms are explicit stubs;\nno UIKit/Core Animation interpolation or original framebuffer executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "logo": {
+    "animations": [
+      {
+        "target": "logoFastRotateView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "Cumulative": true,
+          "ToValue": 0.6366197466850281,
+          "duration": 0.05000000074505806,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "logoView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "ToValue": 0.03099999949336052,
+          "Cumulative": true,
+          "duration": 2.0,
+          "RepeatCount": "inf",
+          "Autoreverses": true,
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "logoWiresView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "ToValue": 0.029999999329447746,
+          "Cumulative": true,
+          "duration": 2.0,
+          "RepeatCount": "inf",
+          "Autoreverses": true,
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      }
+    ],
+    "anchors": {
+      "chainView": [
+        0.0,
+        0.0
+      ],
+      "logoView": [
+        0.5,
+        0.10000000149011612
+      ]
+    },
+    "frames": [],
+    "hidden": [
+      {
+        "target": "eye3",
+        "opacity": 0.0
+      }
+    ],
+    "rocket_durations": {
+      "logoRocket1": 0.3,
+      "logoRocket2": 0.3
+    },
+    "light_targets": [
+      "logoTextLightView",
+      "logoLightView",
+      "logoWiresLightView"
+    ]
+  },
+  "chain": {
+    "animations": [
+      {
+        "target": "chainView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "ToValue": 0.10000000149011612,
+          "Cumulative": true,
+          "RemovedOnCompletion": false,
+          "duration": 5.0,
+          "RepeatCount": "inf",
+          "Autoreverses": true,
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "chain2View",
+        "name": "scalexAnimation",
+        "properties": {
+          "keypath": "transform.scale.x",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "ToValue": 1.1299999952316284,
+          "duration": 3.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "chain2View",
+        "name": "scaleyAnimation",
+        "properties": {
+          "keypath": "transform.scale.y",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "ToValue": 1.1299999952316284,
+          "duration": 3.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      }
+    ],
+    "anchors": {
+      "chainView": [
+        0.0,
+        0.0
+      ]
+    },
+    "frames": [],
+    "hidden": [],
+    "rocket_durations": {},
+    "light_targets": []
+  },
+  "gears": {
+    "animations": [
+      {
+        "target": "gear1ImageView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": 6.2831854820251465,
+          "duration": 15.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      },
+      {
+        "target": "gear2ImageView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": -6.2831854820251465,
+          "duration": 6.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      },
+      {
+        "target": "gear3ImageView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": 6.2831854820251465,
+          "duration": 20.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      },
+      {
+        "target": "spinnerImageView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": 6.2831854820251465,
+          "duration": 0.5,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      }
+    ],
+    "anchors": {},
+    "frames": [],
+    "hidden": [],
+    "rocket_durations": {},
+    "light_targets": []
+  },
+  "sky": {
+    "animations": [
+      {
+        "target": "starsImageView",
+        "name": "rotationAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": 6.2831854820251465,
+          "duration": 100.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      },
+      {
+        "target": "earthImageView",
+        "name": "moveAnimation",
+        "properties": {
+          "keypath": "transform.translation.y",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "FromValue": 0.0,
+          "ToValue": 10.0,
+          "duration": 10.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "earthImageView",
+        "name": "rotateAnimation",
+        "properties": {
+          "keypath": "transform.rotation.z",
+          "RemovedOnCompletion": false,
+          "FromValue": 0.0,
+          "ToValue": -6.2831854820251465,
+          "duration": 150.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "linear"
+          }
+        }
+      },
+      {
+        "target": "earthImageView",
+        "name": "scaleXAnimation",
+        "properties": {
+          "keypath": "transform.scale.x",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "FromValue": 1.0,
+          "ToValue": 0.8999999761581421,
+          "duration": 7.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "earthImageView",
+        "name": "scaleYAnimation",
+        "properties": {
+          "keypath": "transform.scale.y",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "FromValue": 1.0,
+          "ToValue": 0.8999999761581421,
+          "duration": 7.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      },
+      {
+        "target": "moonImageView",
+        "name": "moveAnimation",
+        "properties": {
+          "keypath": "transform.translation.y",
+          "RemovedOnCompletion": false,
+          "Autoreverses": true,
+          "FromValue": 0.0,
+          "ToValue": -17.0,
+          "duration": 14.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeInEaseOut"
+          }
+        }
+      }
+    ],
+    "anchors": {},
+    "frames": [],
+    "hidden": [],
+    "rocket_durations": {},
+    "light_targets": []
+  },
+  "light": {
+    "animations": [
+      {
+        "target": "logoTextLightView",
+        "name": "opacity",
+        "properties": {
+          "keypath": "opacity",
+          "RemovedOnCompletion": false,
+          "Values": [
+            1.0,
+            1.0,
+            0.05000000074505806,
+            1.0,
+            0.6000000238418579,
+            1.0,
+            0.4000000059604645
+          ],
+          "KeyTimes": [
+            0.0,
+            0.10000000149011612,
+            0.15000000596046448,
+            0.15000000596046448,
+            0.5,
+            0.550000011920929,
+            0.6000000238418579
+          ],
+          "duration": 2.0,
+          "RepeatCount": "inf",
+          "TimingFunction": {
+            "timing": "easeIn"
+          }
+        }
+      }
+    ],
+    "anchors": {},
+    "frames": [],
+    "hidden": [],
+    "rocket_durations": {},
+    "light_targets": []
+  },
+  "eyes": [
+    {
+      "random": 0,
+      "duration_random": 0,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 0,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 0,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 0,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 1,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 1,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 1,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 1,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 2,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 2,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 2,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 0,
+      "duration_random": 2,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 0,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 0,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 0,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 0,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 1,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 1,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 1,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 1,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 2,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 2,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 2,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 1,
+      "duration_random": 2,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            30.0,
+            25.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 0,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 0,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 0,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 0,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 2.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 1,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 1,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 1,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 1,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 3.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 2,
+      "last": -1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 2,
+      "last": 0,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 2,
+      "last": 1,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            50.0,
+            35.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    },
+    {
+      "random": 2,
+      "duration_random": 2,
+      "last": 2,
+      "record": {
+        "animations": [
+          {
+            "target": "eye3",
+            "name": "scalexAnimation",
+            "properties": {
+              "keypath": "transform.scale.x",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "scaleyAnimation",
+            "properties": {
+              "keypath": "transform.scale.y",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          },
+          {
+            "target": "eye3",
+            "name": "opacity",
+            "properties": {
+              "keypath": "opacity",
+              "Values": [
+                0.0,
+                1.0,
+                1.0,
+                0.0
+              ],
+              "KeyTimes": [
+                0.10000000149011612,
+                0.20000000298023224,
+                0.8999999761581421,
+                1.0
+              ],
+              "duration": 4.0,
+              "TimingFunction": {
+                "timing": "linear"
+              }
+            }
+          }
+        ],
+        "anchors": {},
+        "frames": [
+          [
+            10.0,
+            15.0,
+            16.0,
+            16.0
+          ]
+        ],
+        "hidden": [],
+        "rocket_durations": {},
+        "light_targets": []
+      }
+    }
+  ],
+  "active_eye": {
+    "animations": [],
+    "anchors": {},
+    "frames": [],
+    "hidden": [],
+    "rocket_durations": {},
+    "light_targets": []
+  },
+  "original_unchanged": true
+}

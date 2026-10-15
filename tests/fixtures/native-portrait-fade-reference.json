@@ -1,0 +1,2077 @@
+{
+  "method": "Original TutorialView show/remove animation requests and block callbacks.\n\nExplicit tablet/controller identities and frame bounds; all Objective-C sends,\nNIB/font/layout/session/notification/framework operations are recorded stubs.\nThe original show/remove/block instructions execute. UIKit pacing, rendering,\ntouch delivery, afterClose navigation and asynchronous execution do not.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 0,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 2,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 5,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 7,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 0,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 0,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 0,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": false,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "removeFromSuperview"
+          ]
+        }
+      }
+    },
+    {
+      "kind": 24,
+      "position": 4,
+      "can_dismiss": 1,
+      "pass_touches": 1,
+      "finished": true,
+      "result": {
+        "show": {
+          "initial_alphas": [
+            0.0
+          ],
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "target_alpha": 1.0
+        },
+        "remove": {
+          "request": {
+            "duration": 0.5,
+            "delay": 0.0,
+            "options": 0
+          },
+          "notifications": [
+            "TutorialViewDidRemoveFromSuperviewNotification"
+          ],
+          "target_alpha": 0.0,
+          "callbacks": [
+            "afterClose",
+            "removeFromSuperview"
+          ]
+        }
+      }
+    }
+  ],
+  "original_unchanged": true
+}

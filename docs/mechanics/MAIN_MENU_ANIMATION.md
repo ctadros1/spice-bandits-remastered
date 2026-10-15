@@ -1,0 +1,27 @@
+# Original main menu animation
+
+The preserved 1.14 tablet NIB supplies the image hierarchy. The new renderer applies each animated ancestor before the child's own transform, rather than spinning selected flattened images independently.
+
+## Recovered declarations
+
+`startLogoAnimations` at `0x20868` sets the logo pivot to `(0.5,0.1)` without changing its layer position. In the original model this moves its resting frame downward by 40% of its height. The logo rocks to 0.03099999949336052 radians over two seconds and reverses; its wires separately rock to 0.029999999329447746 radians. The fast outer ring accumulates 0.6366197466850281 radians every 0.05000000074505806 seconds. All three request ease-in/ease-out timing. Both rocket images use the original four frames over 0.3 seconds, with the second rocket rotated by π.
+
+`startChainAnimations` at `0x215b4` anchors the hanging chain at `(0,0)` and rocks it through 0.10000000149011612 radians over five seconds, reversing. The second chain scales both axes to 1.1299999952316284 over three seconds and reverses. These are authored animation transforms; no recording-aspect stretch is applied. `startGearAnimations` at `0x21ee0` retains full-turn periods 15, −6 and 20 seconds and a half-second spinner, all linear.
+
+`startLogoLightAnimation:` at `0x21330` supplies opacity values `[1,1,0.05,1,0.6,1,0.4]` over two seconds with ease-in timing. It supplies key times `[0,0.1,0.15,0.15,0.5,0.55,0.6]`. The same declaration targets the logo lettering, wires and separate lights. This replaces the previous invented sine-wave brightness.
+
+`notesAnimation:` at `0x1f470` calls `startLogoEyeAnimation` at `0x20e20`. The tablet timer literal is 0.699999988079071 seconds. An active eye animation blocks a new one. Otherwise `rand()%3` selects one of the first three eye frames, advancing to the next if it repeats the last choice. A fourth overlaid eye copies that frame, then animates scale x/y and opacity with values `[0,1,1,0]`, requested key times `[0.1,0.2,0.9,1]`, linear timing and `2+rand()%3` seconds. The base three images stay visible.
+
+`startSkyAnimations` at `0x21900` rotates the stars once per 100 seconds and Earth in the reverse direction once per 150 seconds. Earth moves down 10 pixels over ten seconds and scales both axes from 1 to 0.8999999761581421 over seven seconds, reversing both effects. The foreground moon/asteroid moves up 17 pixels over fourteen seconds and reverses. Translation/scale components use ease-in/ease-out timing; rotations are linear. These preserve the source's authored uniform scaling.
+
+## Framework interpretation and limits
+
+Both recovered key-time arrays violate Core Animation's endpoint requirements. Apple's [keyTimes documentation](https://developer.apple.com/documentation/quartzcore/cakeyframeanimation/keytimes) says invalid arrays are ignored. The reconstruction therefore uses equally spaced values for these two declarations, retaining the requested arrays in the source fixture. This is a documented framework interpretation, not execution of an old iOS compositor. Apple's [timingFunctions documentation](https://developer.apple.com/documentation/quartzcore/cakeyframeanimation/timingfunctions) places the whole-animation timing function before segment interpolation.
+
+The local macOS Core Animation framework was queried without creating a window: `builds/local-ca-metadata.log` records its timing control points and the logo's frame after the anchor change. Ease-in uses `(0.42,0),(1,1)`; ease-in/ease-out uses `(0.42,0),(0.58,1)`. The GDScript renderer inverts the cubic x coordinate before evaluating y. This local framework check does not establish old-iOS pixel equivalence.
+
+`tools/native_menu_animation_reference.py` executes six original ARM methods with explicit Objective-C object/array/number/layer and frame stubs, plus controlled random values. Its fixture retains ten rotations, chain scales, anchors, light arrays, rocket periods, 36 eye-selection/duration/previous-eye cases and an active-animation guard. The source verifier has 530 declaration/selection and local interpolation/anchor checks. It does not execute Core Animation or rasterize the original app.
+
+The new visual RNG is separate from combat and is deterministic in QA; it does not reproduce the original global random stream. Menu return resets presentation clocks. Exact historical view/controller lifecycle timing, implicit layer transactions, interrupted-animation composition, path flattening and original framebuffer equivalence remain comparison work. Bubbles, floating text, lamps, fireflies and musical notes are now separately ported and tested in [Menu effects](MENU_PARTICLES.md).
+
+The r50 native gallery exposed a QA capture defect: its five clock poses shared one cached Node2D framebuffer. That failed evidence is preserved under `builds/main-menu-stale-poses-r50/`; its earlier passing audit does not establish animation rendering. The capture helper now explicitly requests a redraw before force-drawing, records each presentation age/eye pose, and the package audit requires at least four distinct image hashes among the five menu poses. The r51 package menu audit passes 151 checks with 41 captures, including five distinct main-menu image hashes. Its five full-resolution poses were inspected; the archived frames/manifest/audit are in `builds/main-menu-poses-r51/`. A separate native mouse run then found an upgrade-description input-order regression, recorded in UPGRADES.md; it does not invalidate these animation frames.
