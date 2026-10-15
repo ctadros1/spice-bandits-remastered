@@ -1,0 +1,93 @@
+{
+  "pck_sha256": "2b8463fefe31bb1e834b26be194c029cc5c563b3005363684cbb9e50700b1d27",
+  "executable_sha256": "e63d402019abf8d25354bd54d53b29e3afbde3d26fcc48d3338cf9afe54d6769",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "92d0e4446b93744d7c515c3964e1b11d4619ba436d04eb81b2b34b956ca14cad"
+  },
+  "source_commit": "88af59447b233a8aabfee3de21540b276e52ab00",
+  "source_commit_created": true,
+  "signed_and_pushed": true,
+  "all_ten_native_passed": true,
+  "counted_png": 412,
+  "supplemental_comparison_png": 21,
+  "wav": 23,
+  "evidence_files_verified": 1222,
+  "presentation_checks": 473,
+  "audio_checks": 73,
+  "animator_source_checks": 38129,
+  "portal_source_checks": 42580,
+  "native_animator_poses_inspected": 12,
+  "nontransition_exact_preoptimization": 169,
+  "nontransition_compared_preoptimization": 170,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_comparison_sheets_inspected": 9,
+  "unchanged_comparison_sheets_exact": 3,
+  "source_bundle_tracked_files_verified": 462,
+  "offline_complete": false,
+  "scope": "Supplement to verified earlier releases/full r89 workspace. Universal2 compiled, Apple Silicon execution. Originals/proportions/profiles preserved. No Intel/Finder/Gatekeeper/notarization/current physical input/speaker/original-device equivalence. Full animator/owner/registry/death/GPU and hosted progression remain unresolved. Later publication record excluded.",
+  "evidence_archive_files_verified": 1222,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 413983148,
+  "release_tag": "backup-2026-10-15-r117",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r117",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r117-macOS.zip",
+      "bytes": 330928988,
+      "sha256": "bdd25e80c1b8b61a5eb7e28e8de0c017dec560fa6e26eb886a65c22b37e127dd"
+    },
+    {
+      "name": "r117-verification-evidence.tar.gz.part-001",
+      "bytes": 1900000000,
+      "sha256": "6433947dd4db8ddf1f1129fe11caa9c75633cdc2f9b5357b8d10c49cb4d01309"
+    },
+    {
+      "name": "r117-verification-evidence.tar.gz.part-002",
+      "bytes": 214569293,
+      "sha256": "b51f0ce468fd333aa2a40f1aa0ad89512d79e7424f6aa339bf351cef50a6f27b"
+    },
+    {
+      "name": "r117-package-restoration.zip",
+      "bytes": 1519023,
+      "sha256": "9cd0f48c4b47a1e6fd04589dedb6953320497255cee574f9e0954c385ff74f7d"
+    },
+    {
+      "name": "r117-source.bundle",
+      "bytes": 1731605,
+      "sha256": "cfe5741ea71a37091bb263b65ca4805066e0448d15ae3dcfa34629ce365e51d6"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 90853,
+      "sha256": "dce66658bae516cb913f1afa3e77fbfeafe99c8d6a748c1e609e5591c16f2e92"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1124,
+      "sha256": "a093e15b276de1073da81c8571779ea6524da9f51281cd3ad0be80b3aaa2e3cf"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 228716,
+      "sha256": "a72a13e978cb20115c6d6e75841ee2ea10b87654a25f00f837cfe91234ea27d6"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 538,
+      "sha256": "eec20a5ff64bd776ad11b9ed877265b8bc31af224f61a52346b2dced0dc27a4b"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1705,
+      "sha256": "1ea9fd5769f8e692e7a584bc8584f084072faf7d8c4f99f2a6f6b7371e82cd36"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-15T15:41:16.632045+00:00"
+}
