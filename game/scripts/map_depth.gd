@@ -38,3 +38,14 @@ static func creep_height(resource:Dictionary) -> float:
 	var state=resource.get("states",{}).get("RunDownRight",{})
 	var source=resource.get("resources",{}).get(str(int(state.get("res_id",1))),{})
 	return f32(int(resource.params.depth_pos)) if resource.get("params",{}).has("depth_pos") else f32(float(source.get("frame_height",0)))
+
+static func effect_height(resource:Dictionary,state:String) -> float:
+	# Mine/portal constructors retain the effect's initial animation height.
+	# They do not read depth_pos or multiply by the preview's draw scale.
+	var animation=resource.get("states",{}).get(state,{})
+	var source=resource.get("resources",{}).get(str(int(animation.get("res_id",1))),{})
+	return f32(float(source.get("frame_height",0)))
+
+static func effect(center_y:float,resource:Dictionary,state:String) -> float:
+	var height=effect_height(resource,state)
+	return key(top(center_y,height,0),height)

@@ -1,0 +1,9237 @@
+{
+  "declarations": [
+    {
+      "kind": "mine",
+      "height": 0,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "animation": true,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "animation": true,
+      "output": {
+        "height": 16.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 16.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "animation": true,
+      "output": {
+        "height": 40.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 40.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "animation": true,
+      "output": {
+        "height": 60.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 60.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "animation": true,
+      "output": {
+        "height": 100.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 100.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "animation": true,
+      "output": {
+        "height": 87.25,
+        "effects": [
+          "Mine",
+          "MineLights"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 87.25
+          }
+        ],
+        "vtable": 4692712
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "animation": true,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "animation": true,
+      "output": {
+        "height": 16.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 16.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "animation": true,
+      "output": {
+        "height": 40.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 40.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "animation": true,
+      "output": {
+        "height": 60.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 60.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "animation": true,
+      "output": {
+        "height": 100.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 100.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "animation": false,
+      "output": {
+        "height": 0.0,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 0.0
+          }
+        ],
+        "vtable": 4692776
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "animation": true,
+      "output": {
+        "height": 87.25,
+        "effects": [
+          "Portals"
+        ],
+        "registered": [
+          {
+            "map": 20480,
+            "actor": 0,
+            "height": 87.25
+          }
+        ],
+        "vtable": 4692776
+      }
+    }
+  ],
+  "positions": [
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "mine",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Mine",
+            "MineLights"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692712
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 0.625
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -7,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": 0,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 0,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 0.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 0.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -108,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -15,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -8,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 16,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 16.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 16.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 142,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -27,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -20,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 40,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 40.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 40.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -130,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -37,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -30,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 60,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 60.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 60.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 120,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -150,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -57,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 100,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 100.0,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 100.0
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 100,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -100.75
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -100.75
+        ],
+        "animator": [
+          231.25,
+          -100.75
+        ],
+        "top": -144,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        -7.125
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          -7.125
+        ],
+        "animator": [
+          231.25,
+          -7.125
+        ],
+        "top": -50,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        0
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          0.0
+        ],
+        "animator": [
+          231.25,
+          0.0
+        ],
+        "top": -43,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.0
+        ],
+        "animator": [
+          231.25,
+          150.0
+        ],
+        "top": 106,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": false,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": null,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    },
+    {
+      "kind": "portal",
+      "height": 87.25,
+      "center": [
+        231.25,
+        150.875
+      ],
+      "mouse": true,
+      "cell_light": 0.625,
+      "output": {
+        "declaration": {
+          "height": 87.25,
+          "effects": [
+            "Portals"
+          ],
+          "registered": [
+            {
+              "map": 20480,
+              "actor": 0,
+              "height": 87.25
+            }
+          ],
+          "vtable": 4692776
+        },
+        "point": [
+          231.25,
+          150.875
+        ],
+        "animator": [
+          231.25,
+          150.875
+        ],
+        "top": 107,
+        "light": 1.0
+      }
+    }
+  ],
+  "method": "Full original mine/portal constructors +cell/mouse position functions; supplied effect/frame height, hexcenter/screentogrid/cell callbacks; animation play/stop/registration stubs. No originalGPU/wholemaplifetime.",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true
+}

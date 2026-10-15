@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (130 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (137 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             comparisons=manifest.get('creep_layer_comparisons',[])
             record['creep_layer_comparisons']=comparisons
@@ -236,6 +236,15 @@ def main():
                 fresh = fresh and placement_poses.get(pose, {}).get('draw_trace') == trace
             preview_overlap = placement_poses.get('placement-phase-air-preview', {}).get('preview_overlap', {})
             fresh = fresh and all(preview_overlap.get(key, 0) >= 10 for key in ('overlapping_pixels', 'covered_pixels'))
+            magic_expected = {'magic-depth-background': [], 'magic-depth-tower-only': ['tower'], 'magic-depth-mine-only': ['mine'], 'magic-depth-mine-front': ['tower','mine'], 'magic-depth-mine-back': ['mine','tower'], 'magic-depth-mine-preview': ['tower','mine'], 'magic-depth-portal-preview': ['tower']}
+            required.update(magic_expected)
+            magic_poses = {c['name']: c for c in manifest['captures'] if c['name'].startswith('magic-depth-')}
+            for pose, order in magic_expected.items():
+                fresh = fresh and [o['kind'] for o in magic_poses.get(pose, {}).get('body_order', [])] == order
+            mine_overlap = magic_poses.get('magic-depth-mine-front', {}).get('mine_overlap', {})
+            fresh = fresh and all(mine_overlap.get(key, 0) >= 10 for key in ('overlapping_pixels', 'covered_pixels'))
+            portals = magic_poses.get('magic-depth-portal-preview', {}).get('portal_before', [])
+            fresh = fresh and len(portals) == 1 and portals[0]['preview']
             required.update({'result-room-%03d' % age for age in [50,72,90,150,240,300,360,420,480,540,600]})
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)

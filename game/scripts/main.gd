@@ -2981,12 +2981,36 @@ func battle_objects() -> Array:
 		objects.append({"y":base_depth(base),"base":base})
 	for t in sim.towers:
 		objects.append({"y":tower_depth(t),"tower":t})
+	for mine in sim.mines:
+		objects.append({"y":MapDepth.effect(mine.pos.y,Content.animations.get("sfx/mine",{}),"Idle"),"mine":mine,"preview":false})
+	if magic_placement=="m_mine":
+		var position=mouse_world(magic_preview_position)
+		objects.append({"y":MapDepth.effect(position.y,Content.animations.get("sfx/mine",{}),"Idle"),"mine":{"pos":position,"cell":sim.nearest(position)},"preview":true})
 	for e in sim.enemies:
 		if not uses_air_pass(e):objects.append({"y":creep_depth(e),"enemy":e})
 	# Original whole-map registration, equal-depth introsort order, global
 	# jitter and complete animator/owner lifetimes remain unresolved.
 	objects.sort_custom(func(a,b):return a.y<b.y)
 	return objects
+
+func battle_portal_objects() -> Array:
+	var objects=[]
+	for portal in sim.portals:
+		objects.append({"pos":portal.pos,"state":"Blue" if portal==sim.portals[0] else "Red","frame":int(maxi(0,sim.clock_ms-int(portal.get("born_ms",0)))/1000),"preview":false})
+	for pair in sim.static_portals:
+		for kind in ["in","out"]:objects.append({"pos":sim.center(pair[kind].x,pair[kind].y),"state":"Blue" if kind=="in" else "Red","frame":int(sim.clock_ms/1000),"preview":false})
+	if magic_placement=="m_portal":objects.append({"pos":mouse_world(magic_preview_position),"state":"Blue" if sim.portals.is_empty() else "Red","frame":0,"preview":true})
+	for portal in objects:portal.depth=MapDepth.effect(portal.pos.y,Content.animations.get("sfx/portals",{}),"Blue")
+	objects.sort_custom(func(a,b):return a.depth<b.depth)
+	return objects
+
+func draw_mine_object(mine:Dictionary,preview:bool) -> void:
+	var remaining=0 if preview else maxi(0,int(mine.ready)-sim.clock_ms)
+	var light=float(sim.map.cells[sim.cell_index(mine.cell)].get("l",1)) if sim.within(mine.cell) else 1.0
+	var pose=MagicView.mine(mine.pos,not preview,0 if remaining>0 or preview else 2,remaining,int(Content.catalog.tower_magic.mine_sleep),light)
+	for actor in pose.sprites:
+		sprite("sfx/mine" if actor.key=="body" else "sfx/mine_lights","Idle" if actor.key=="body" else "Builded",mine.pos,0 if actor.key=="body" else int(maxi(0,sim.clock_ms-int(mine.get("born_ms",0)))*5/1000),"",MagicView.straight(actor.color))
+	for bar in pose.bars:draw_rect(bar.rect,bar.color)
 
 func draw_game() -> void:
 	if probe_placement_order:placement_draw_trace.clear()
@@ -2995,18 +3019,9 @@ func draw_game() -> void:
 	for z in sim.zones:
 		if z.has("bubble"): continue
 		draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
-	for mine in sim.mines:
-		var remaining=maxi(0,int(mine.ready)-sim.clock_ms)
-		var light=float(sim.map.cells[sim.cell_index(mine.cell)].get("l",1))
-		var pose=MagicView.mine(mine.pos,true,0 if remaining>0 else 2,remaining,int(Content.catalog.tower_magic.mine_sleep),light)
-		for actor in pose.sprites:
-			sprite("sfx/mine" if actor.key=="body" else "sfx/mine_lights","Idle" if actor.key=="body" else "Builded",mine.pos,0 if actor.key=="body" else int(maxi(0,sim.clock_ms-int(mine.get("born_ms",0)))*5/1000),"",MagicView.straight(actor.color))
-		for bar in pose.bars:draw_rect(bar.rect,bar.color)
-	for portal in sim.portals:
-		sprite("sfx/portals", "Blue" if portal == sim.portals[0] else "Red", portal.pos, int(maxi(0,sim.clock_ms-int(portal.get("born_ms",0)))/1000))
-	for pair in sim.static_portals:
-		sprite("sfx/portals", "Blue", sim.center(pair["in"].x, pair["in"].y), int(sim.clock_ms/1000))
-		sprite("sfx/portals", "Red", sim.center(pair.out.x, pair.out.y), int(sim.clock_ms/1000))
+	# Portal art belongs to registered RenderBefore; its body is empty.
+	for portal in battle_portal_objects():
+		sprite("sfx/portals",portal.state,portal.pos,portal.frame,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*(0.3 if portal.preview else 1.0))
 	var objects=battle_objects()
 	var enemy_projectiles=enemy_missile_passes()
 	var depth_bases=[]
@@ -3041,6 +3056,8 @@ func draw_game() -> void:
 			extra_sprite(set_name, "pad1", position)
 			sprite(set_name, presentation.state, position, presentation.frame)
 			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
+		elif object.has("mine"):
+			draw_mine_object(object.mine,object.preview)
 		else:
 			draw_creep_body(object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
 	if probe_placement_order:placement_draw_trace.append("ground-bodies")
@@ -3095,7 +3112,6 @@ func draw_game() -> void:
 			if int(effect.get("type", 0)) == 5:
 				sprite("towers/nuke_explosion", "Explosion", effect.pos, mini(19, int((sim.clock_ms-int(effect.born))*15/1000)), "", Color.WHITE, 0, Vector2.ONE*2.0)
 			else: sprite("sfx/mine_explosion", "Explosion", effect.pos, int((600.0-remaining)/45.0), "", Color(1, 1, 1, clampf(remaining/300.0, 0, 1)))
-	draw_magic_preview_body()
 	draw_set_transform(Vector2.ZERO)
 	ClassicUI.draw_tower_info(self)
 
@@ -3134,18 +3150,6 @@ func draw_placement_phase() -> void:
 		# RenderInActive retains the last rendered Rot frame*9 when activated.
 		if tower_preview_animation=="Rot":tower_preview_facing=float(tower_preview_state.get("frame",0))*9
 		if probe_placement_order:placement_draw_trace.append("tower-preview")
-
-func draw_magic_preview_body() -> void:
-	if magic_placement.is_empty():return
-	var position=mouse_world(magic_preview_position)
-	var cell=sim.nearest(position)
-	if magic_placement=="m_mine":
-		var light=float(sim.map.cells[sim.cell_index(cell)].get("l",1)) if sim.within(cell) else 1.0
-		var pose=MagicView.mine(position,false,0,0,int(Content.catalog.tower_magic.mine_sleep),light)
-		sprite("sfx/mine","Idle",position,0,"",MagicView.straight(pose.sprites[0].color))
-	elif magic_placement=="m_portal":
-		# The constructor stops the inactive portal's first frame at0.3 scale.
-		sprite("sfx/portals","Blue" if sim.portals.is_empty() else "Red",position,0,"",MagicView.straight(MagicView.portal(false,0)[0].color),0,Vector2.ONE*0.3)
 
 func creep_layers(e:Dictionary,states:Dictionary) -> Array:
 	if not reference_creep_layers and e.has("visual_layers"):

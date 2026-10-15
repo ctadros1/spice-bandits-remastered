@@ -99,6 +99,10 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.grid=app.show_grid
 		record.build_type=app.build_type
 		record.limit="Synthetic aircraft/drag-preview overlap; actual draw trace compared to original full room/map routing. Mine/portal body registration, original GPU and whole owner order remain open."
+	if name.begins_with("magic-depth"):
+		record.body_order=app.battle_objects().filter(func(o):return o.has("mine") or o.has("tower")).map(func(o):return {"kind":"mine" if o.has("mine") else "tower","depth":o.y,"preview":o.get("preview",false)})
+		record.portal_before=app.battle_portal_objects().map(func(p):return {"position":[p.pos.x,p.pos.y],"depth":p.depth,"preview":p.preview})
+		record.limit="Supplied registered-mine depth/portal-before poses. Original constructor/position/vtable routing is independently probed; whole registry ties, portal growth/expiry and GPU equivalence remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -771,6 +775,41 @@ func run() -> void:
 	app.show_grid=true
 	await snapshot("placement-phase-air-preview-grid")
 	app.show_grid=false;app.probe_placement_order=false;app.build_type=0;app.tower_drag=false
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	await snapshot("magic-depth-background")
+	var magic_background=get_viewport().get_texture().get_image()
+	check(app.sim.build(Vector2i(7,4),1).is_empty(),"registered-mine fixture builds original Minigun")
+	var magic_tower=app.sim.towers[0]
+	await snapshot("magic-depth-tower-only")
+	var magic_tower_image=get_viewport().get_texture().get_image()
+	var magic_position=magic_tower.pos+Vector2(0,28)
+	app.sim.towers.clear()
+	var depth_mine={"pos":magic_position,"cell":app.sim.nearest(magic_position),"ready":app.sim.clock_ms,"born_ms":app.sim.clock_ms}
+	app.sim.mines.append(depth_mine)
+	await snapshot("magic-depth-mine-only")
+	var mine_only=get_viewport().get_texture().get_image()
+	app.sim.towers.append(magic_tower)
+	check(app.battle_objects().filter(func(o):return o.has("mine") or o.has("tower")).map(func(o):return o.has("mine"))==[false,true],"registered mine height places front mine after tower")
+	await snapshot("magic-depth-mine-front")
+	var mine_front=get_viewport().get_texture().get_image()
+	var mine_overlap=0;var mine_covered=0
+	for y in range(depth_rect.position.y,mine_front.get_height()):
+		for x in range(mine_front.get_width()):
+			var bg=magic_background.get_pixel(x,y);var tower=magic_tower_image.get_pixel(x,y);var mine=mine_only.get_pixel(x,y)
+			if tower==bg or mine==bg or tower==mine:continue
+			mine_overlap+=1
+			if mine_front.get_pixel(x,y)==mine:mine_covered+=1
+	check(mine_overlap>=10 and mine_covered>=10,"native registered front mine covers overlapping tower pixels")
+	captures[-1].mine_overlap={"overlapping_pixels":mine_overlap,"covered_pixels":mine_covered}
+	depth_mine.pos=magic_tower.pos+Vector2(0,-12);depth_mine.cell=app.sim.nearest(depth_mine.pos)
+	check(app.battle_objects().filter(func(o):return o.has("mine") or o.has("tower")).map(func(o):return o.has("mine"))==[true,false],"moving registered mine behind tower changes original depth order")
+	await snapshot("magic-depth-mine-back")
+	app.sim.mines.clear();app.magic_placement="m_mine";app.magic_preview_position=app.map_origin()+magic_position*app.map_scale()
+	await snapshot("magic-depth-mine-preview")
+	app.magic_placement="m_portal";app.magic_preview_position=app.map_origin()+magic_tower.pos*app.map_scale()
+	check(app.battle_portal_objects().size()==1 and app.battle_portal_objects()[0].preview,"inactive portal participates in registered before pass")
+	await snapshot("magic-depth-portal-preview")
+	app.magic_placement=""
 	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
 	var lit_ground=app.sim.spawn_enemy(1,0,"",930,false)
 	lit_ground.pos=app.sim.center(7,4);lit_ground.visual_pos=lit_ground.pos;lit_ground.grow_ms=400;lit_ground.draw_light=0.3
