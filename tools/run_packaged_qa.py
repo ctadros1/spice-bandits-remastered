@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (125 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (130 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             comparisons=manifest.get('creep_layer_comparisons',[])
             record['creep_layer_comparisons']=comparisons
@@ -221,6 +221,21 @@ def main():
                 entry = owner_poses.get(pose, {})
                 fresh = fresh and entry.get('owner_body_count') == body_count and entry.get('before_air_count') == before_count
             fresh = fresh and owner_poses.get('air-missile-owner-body', {}).get('owner_overlap_pixels', 0) >= 10
+            placement_expected = {'placement-phase-background': 'none', 'placement-phase-preview-only': 'tower', 'placement-phase-air-only': 'none', 'placement-phase-air-preview': 'tower', 'placement-phase-air-preview-grid': 'tower-grid'}
+            required.update(placement_expected)
+            placement_reference = json.loads((ROOT / 'tests/fixtures/native-placement-pass-reference.json').read_text())
+            placement_poses = {c['name']: c for c in manifest['captures'] if c['name'].startswith('placement-phase-')}
+            for pose, case_name in placement_expected.items():
+                source = next(c for c in placement_reference['cases'] if c['name'] == case_name)
+                trace = []
+                for call in source['output']['calls']:
+                    if call.get('pass') == 'body' and call.get('label') == 0:
+                        trace.append('ground-bodies')
+                    elif call.get('method') in ('selection', 'preview-hexes', 'grid', 'tower-preview', 'air-manager'):
+                        trace.append(call['method'])
+                fresh = fresh and placement_poses.get(pose, {}).get('draw_trace') == trace
+            preview_overlap = placement_poses.get('placement-phase-air-preview', {}).get('preview_overlap', {})
+            fresh = fresh and all(preview_overlap.get(key, 0) >= 10 for key in ('overlapping_pixels', 'covered_pixels'))
             required.update({'result-room-%03d' % age for age in [50,72,90,150,240,300,360,420,480,540,600]})
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)

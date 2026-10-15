@@ -94,6 +94,11 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.owner_body_count=phases.body.get(920,[]).size()
 		record.before_air_count=phases.before_air.size()
 		record.limit="Supplied live owner and original body flag; body pass versus cleared-flag before-air submission. No original GPU/collision/death-lifetime equivalence."
+	if name.begins_with("placement-phase"):
+		record.draw_trace=app.placement_draw_trace.duplicate()
+		record.grid=app.show_grid
+		record.build_type=app.build_type
+		record.limit="Synthetic aircraft/drag-preview overlap; actual draw trace compared to original full room/map routing. Mine/portal body registration, original GPU and whole owner order remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -735,6 +740,37 @@ func run() -> void:
 	for missile in app.sim.enemy_missiles:missile.body_flag=false
 	await snapshot("air-missile-owner-cleared")
 	check(get_viewport().get_texture().get_image().get_region(depth_rect).get_data()==missile_combined.get_region(depth_rect).get_data(),"cleared owner flags restore exact original before-air battle pixels")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	app.probe_placement_order=true;app.show_grid=false
+	var placement_position=app.sim.center(7,4)
+	var far_ground=app.sim.spawn_enemy(1,0,"",940,false)
+	far_ground.pos=placement_position+Vector2(200,0);far_ground.visual_pos=far_ground.pos
+	await snapshot("placement-phase-background")
+	var placement_background=get_viewport().get_texture().get_image()
+	app.build_type=1;app.tower_drag=true;app.tower_drag_position=app.map_origin()+placement_position*app.map_scale()
+	await snapshot("placement-phase-preview-only")
+	var preview_image=get_viewport().get_texture().get_image()
+	app.build_type=0
+	var preview_air=app.sim.spawn_enemy(2,0,"",941,false)
+	var preview_offset=preview_air.def.traits.get("offset",[0,0])
+	preview_air.pos=placement_position-Vector2(preview_offset[0],preview_offset[1])+Vector2(0,-7);preview_air.visual_pos=preview_air.pos
+	await snapshot("placement-phase-air-only")
+	var air_image=get_viewport().get_texture().get_image()
+	app.build_type=1
+	await snapshot("placement-phase-air-preview")
+	var combined_preview=get_viewport().get_texture().get_image()
+	var preview_overlap=0;var preview_covered=0
+	for y in range(depth_rect.position.y,air_image.get_height()):
+		for x in range(air_image.get_width()):
+			var background=placement_background.get_pixel(x,y);var air=air_image.get_pixel(x,y);var preview=preview_image.get_pixel(x,y)
+			if air==background or preview==background or air==preview:continue
+			preview_overlap+=1
+			if combined_preview.get_pixel(x,y)==air:preview_covered+=1
+	check(preview_overlap>=10 and preview_covered>=10,"native aircraft opaque pixels cover the dragged tower preview")
+	captures[-1].preview_overlap={"overlapping_pixels":preview_overlap,"covered_pixels":preview_covered}
+	app.show_grid=true
+	await snapshot("placement-phase-air-preview-grid")
+	app.show_grid=false;app.probe_placement_order=false;app.build_type=0;app.tower_drag=false
 	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
 	var lit_ground=app.sim.spawn_enemy(1,0,"",930,false)
 	lit_ground.pos=app.sim.center(7,4);lit_ground.visual_pos=lit_ground.pos;lit_ground.grow_ms=400;lit_ground.draw_light=0.3

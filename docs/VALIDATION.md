@@ -1,6 +1,6 @@
 # Verification record
 
-Current package r109 passes all ten native suites:386 presentation checks/125 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting, textured enemy health bars and live-owner missile phase routing are restored within recovered-code bounds. Offline fidelity remains incomplete.
+Current package r110 passes all ten native suites:392 presentation checks/130 PNGs,73 audio checks/23 WAVs, and the unchanged live performance gate. Normal ground lighting, textured enemy health bars and live-owner missile phase routing and placement phase are restored within recovered-code bounds. Offline fidelity remains incomplete.
 
 ## R106 XP emission and native audio capture
 

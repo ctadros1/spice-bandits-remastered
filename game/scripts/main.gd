@@ -32,6 +32,8 @@ var creep_depth_cache:Dictionary={}
 var reference_creep_layers=false
 var probe_creep_layers=false
 var creep_layer_usage={"cached":0,"reference":0}
+var probe_placement_order=false
+var placement_draw_trace:Array=[]
 const TUTORIAL_CELLS = [Vector2i(7, 4), Vector2i(8, 6), Vector2i(6, 7), Vector2i(11, 3)]
 var main_menu_view=MainMenuView.new()
 var menu_bubbles=MenuBubbleView.new()
@@ -2987,13 +2989,9 @@ func battle_objects() -> Array:
 	return objects
 
 func draw_game() -> void:
+	if probe_placement_order:placement_draw_trace.clear()
 	var scale = map_scale()
 	draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	if show_grid:
-		for y in range(int(sim.map.hex_height)):
-			for x in range(int(sim.map.hex_width)):
-				if sim.buildable(Vector2i(x, y)):
-					draw_hex(sim.center(x, y), Color(0.05, 0.1, 0.05, 0.28))
 	for z in sim.zones:
 		if z.has("bubble"): continue
 		draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
@@ -3045,9 +3043,13 @@ func draw_game() -> void:
 			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
 		else:
 			draw_creep_body(object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
+	if probe_placement_order:placement_draw_trace.append("ground-bodies")
 	# CMap::DrawTowerOvalSelection0x10406c follows all ground bodies.
 	var selection=selected_range_pose()
 	if not selection.is_empty():BuildHexView.draw_oval(self,selection.position,selection.draws,1.0/scale)
+	if probe_placement_order:placement_draw_trace.append("selection")
+	draw_placement_phase()
+	if probe_placement_order:placement_draw_trace.append("air-manager")
 	for missile in enemy_projectiles.before_air:draw_enemy_missile(missile,scale)
 	# Native air bodies follow every ground/map body, independent of Y.
 	for air in battle_air_objects():draw_creep_body(air,scale,enemy_projectiles.body.get(int(air.id),[]))
@@ -3093,6 +3095,12 @@ func draw_game() -> void:
 			if int(effect.get("type", 0)) == 5:
 				sprite("towers/nuke_explosion", "Explosion", effect.pos, mini(19, int((sim.clock_ms-int(effect.born))*15/1000)), "", Color.WHITE, 0, Vector2.ONE*2.0)
 			else: sprite("sfx/mine_explosion", "Explosion", effect.pos, int((600.0-remaining)/45.0), "", Color(1, 1, 1, clampf(remaining/300.0, 0, 1)))
+	draw_magic_preview_body()
+	draw_set_transform(Vector2.ZERO)
+	ClassicUI.draw_tower_info(self)
+
+# CMap::Render0x104088: preview hexes, then grid, inactive tower, air.
+func draw_placement_phase() -> void:
 	if build_type > 0:
 		var cell = sim.nearest(mouse_world(tower_drag_position if tower_drag else get_global_mouse_position()))
 		var pos = sim.center(cell.x, cell.y)
@@ -3102,25 +3110,42 @@ func draw_game() -> void:
 		BuildHexView.draw_oval(self,pos,BuildHexView.oval(1,spacing,range_value,0),1.0/map_scale())
 		var shape=build_hex_view.prepare(sim,cell,pos,BuildHexView.f32(BuildHexView.f32(range_value*spacing)*2),okay)
 		BuildHexView.draw(self,shape,1.0/map_scale())
-		var tint=TowerPreview.tint(okay)
-		extra_sprite("towers/"+str(def.filename),"pad1",pos+Vector2(0,-7),"",Vector2.ONE,tint)
-		sprite("towers/"+str(def.filename),tower_preview_animation,pos,int(tower_preview_state.get("frame",0)),"",tint,-7)
-		# RenderInActive retains the last rendered Rot frame*9 when activated.
-		if tower_preview_animation=="Rot":tower_preview_facing=float(tower_preview_state.get("frame",0))*9
+		if probe_placement_order:placement_draw_trace.append("preview-hexes")
 	if not magic_placement.is_empty():
 		var position=mouse_world(magic_preview_position)
 		var cell=sim.nearest(position)
 		var valid=sim.ability_error(magic_placement,position).is_empty()
 		BuildHexView.draw(self,build_hex_view.prepare(sim,cell,position,70,valid),1.0/map_scale())
-		if magic_placement=="m_mine":
-			var light=float(sim.map.cells[sim.cell_index(cell)].get("l",1)) if sim.within(cell) else 1.0
-			var pose=MagicView.mine(position,false,0,0,int(Content.catalog.tower_magic.mine_sleep),light)
-			sprite("sfx/mine","Idle",position,0,"",MagicView.straight(pose.sprites[0].color))
-		elif magic_placement=="m_portal":
-			# The constructor stops the inactive portal's first frame at0.3 scale.
-			sprite("sfx/portals","Blue" if sim.portals.is_empty() else "Red",position,0,"",MagicView.straight(MagicView.portal(false,0)[0].color),0,Vector2.ONE*0.3)
-	draw_set_transform(Vector2.ZERO)
-	ClassicUI.draw_tower_info(self)
+		if probe_placement_order:placement_draw_trace.append("preview-hexes")
+	if show_grid:
+		for y in range(int(sim.map.hex_height)):
+			for x in range(int(sim.map.hex_width)):
+				if sim.buildable(Vector2i(x, y)):
+					draw_hex(sim.center(x, y), Color(0.05, 0.1, 0.05, 0.28))
+		if probe_placement_order:placement_draw_trace.append("grid")
+	if build_type>0:
+		var cell=sim.nearest(mouse_world(tower_drag_position if tower_drag else get_global_mouse_position()))
+		var pos=sim.center(cell.x,cell.y)
+		var def=sim.tower_data(build_type,1)
+		var okay=sim.buildable(cell) and sim.tower_at(cell).is_empty() and sim.money>=floor(float(def.price)) and sim.can_unlock(def)
+		var tint=TowerPreview.tint(okay)
+		extra_sprite("towers/"+str(def.filename),"pad1",pos+Vector2(0,-7),"",Vector2.ONE,tint)
+		sprite("towers/"+str(def.filename),tower_preview_animation,pos,int(tower_preview_state.get("frame",0)),"",tint,-7)
+		# RenderInActive retains the last rendered Rot frame*9 when activated.
+		if tower_preview_animation=="Rot":tower_preview_facing=float(tower_preview_state.get("frame",0))*9
+		if probe_placement_order:placement_draw_trace.append("tower-preview")
+
+func draw_magic_preview_body() -> void:
+	if magic_placement.is_empty():return
+	var position=mouse_world(magic_preview_position)
+	var cell=sim.nearest(position)
+	if magic_placement=="m_mine":
+		var light=float(sim.map.cells[sim.cell_index(cell)].get("l",1)) if sim.within(cell) else 1.0
+		var pose=MagicView.mine(position,false,0,0,int(Content.catalog.tower_magic.mine_sleep),light)
+		sprite("sfx/mine","Idle",position,0,"",MagicView.straight(pose.sprites[0].color))
+	elif magic_placement=="m_portal":
+		# The constructor stops the inactive portal's first frame at0.3 scale.
+		sprite("sfx/portals","Blue" if sim.portals.is_empty() else "Red",position,0,"",MagicView.straight(MagicView.portal(false,0)[0].color),0,Vector2.ONE*0.3)
 
 func creep_layers(e:Dictionary,states:Dictionary) -> Array:
 	if not reference_creep_layers and e.has("visual_layers"):
