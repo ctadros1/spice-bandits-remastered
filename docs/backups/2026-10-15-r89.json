@@ -1,0 +1,75 @@
+{
+  "repository": "https://github.com/ctadros1/spice-bandits-remastered",
+  "release_tag": "backup-2026-10-15-r89",
+  "release_id": 413461452,
+  "snapshot_source_commit": "5fdf854bf932e1a3a4bb242a118fed3783a096c3",
+  "remote_asset_digests_match": true,
+  "assets": [
+    {
+      "name": "project-snapshot.tar.gz.part-001",
+      "bytes": 1500000000,
+      "sha256": "272a4061d1086f0f5962088640016dc0291e09f6f833ac373ad272175fdbcbba"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-002",
+      "bytes": 1500000000,
+      "sha256": "cc352a6ac33e8ab798af473939159adb55e5e75a04445b092941ff3e8f96e9df"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-003",
+      "bytes": 1500000000,
+      "sha256": "1bbf8f80ce535bbec65c04c5cef0b6a26830e5fbe60964f0d590a5e79c58d42c"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-004",
+      "bytes": 1500000000,
+      "sha256": "c7fdbe68b9a1693d036cd9836b995ba4b9e00c25c64476ef0db8baa06d5b3ede"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-005",
+      "bytes": 1500000000,
+      "sha256": "07c34e81940572d8de4504287010dc60eaa2d19fba7e52ca92894cce64237e29"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-006",
+      "bytes": 1500000000,
+      "sha256": "bd7de1d5a3ff5dcd74c04cb0a4c055ce86ba666ca79bbf41a9a368424b809c80"
+    },
+    {
+      "name": "project-snapshot.tar.gz.part-007",
+      "bytes": 401885756,
+      "sha256": "45a6a1e4d0766b044ac52d3db9fbfafb0b3f933a9110c369f36e460f57175ef3"
+    },
+    {
+      "name": "PARTS.json",
+      "bytes": 1230,
+      "sha256": "a75efb23c57a4a9d04f6aee0bbfd934ee6bbd2812f8efb9929a777847b506197"
+    },
+    {
+      "name": "PROJECT-SNAPSHOT-MANIFEST.json",
+      "bytes": 11764967,
+      "sha256": "35529aac1b2405b3a19123c35e86ce97e781b12b81f9a696f9257450b6e060cb"
+    },
+    {
+      "name": "local-verification.json",
+      "bytes": 344,
+      "sha256": "3571fe3b0ad9262e76ef0e90050f610ee2a64e2645bd027218bfcb4caa938b01"
+    },
+    {
+      "name": "source-history-current.bundle",
+      "bytes": 1187487,
+      "sha256": "aada785c61fe97626334ef6888ee061a4d6dca924407010359a6d22c9f772489"
+    }
+  ],
+  "local_archive_verification": {
+    "passed": true,
+    "parts": 7,
+    "entries": 49235,
+    "regular_files": 45636,
+    "regular_bytes": 11125488719,
+    "manifest_sha256": "35529aac1b2405b3a19123c35e86ce97e781b12b81f9a696f9257450b6e060cb",
+    "scope": "Every local part hash, archived regular-file hash, entry type, mode and link target; no extraction or original-device gameplay."
+  },
+  "signatures": "72020ae and5fdf854 verify locally with configured SSH signing key; GitHub reports unknown_key, not Verified.",
+  "scope": "Snapshot at creation; .git, output directory and Finder .DS_Store excluded. Separate complete Git bundle. External normal user save not included."
+}

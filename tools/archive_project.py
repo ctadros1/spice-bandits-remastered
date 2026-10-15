@@ -11,6 +11,7 @@ import hashlib
 import io
 import json
 import os
+import stat
 from pathlib import Path
 import tarfile
 
@@ -94,7 +95,7 @@ def snapshot(output):
             before = p.lstat()
             name = p.relative_to(ROOT).as_posix()
             info = tar.gettarinfo(str(p), arcname=name)
-            entry = {'path': name, 'mode': info.mode}
+            entry = {'path': name, 'mode': stat.S_IMODE(info.mode)}
             if info.isfile():
                 with p.open('rb') as file:
                     reader = HashReader(file)
