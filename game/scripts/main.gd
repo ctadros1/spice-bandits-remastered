@@ -2915,6 +2915,15 @@ func uses_air_pass(enemy:Dictionary) -> bool:
 func battle_air_objects() -> Array:
 	return sim.enemies.filter(func(e):return uses_air_pass(e))
 
+func selected_range_pose() -> Dictionary:
+	if sim==null or selected_tower<0:return {}
+	var tower=sim.find_tower(selected_tower)
+	if tower.is_empty() or tower.get("def",{}).is_empty():return {}
+	var spacing=BuildHexView.f32(float(sim.map.hex_h)/1000.0)
+	# Original RenderForceBefore forwards panel alpha to the same authored
+	# oval used by inactive towers. Supply's additive range field is separate.
+	return {"position":tower.pos,"draws":BuildHexView.oval(tower_panel_alpha(),spacing,float(tower.def.get("range",0)),0)}
+
 func battle_objects() -> Array:
 	var objects=[]
 	for layer in sim.map.get("foreground",[]):objects.append({"y":float(layer.y)+float(layer.tile.get("depth_pos",layer.tile.get("h",0))),"layer":layer})
@@ -2952,9 +2961,6 @@ func draw_game() -> void:
 	for pair in sim.static_portals:
 		sprite("sfx/portals", "Blue", sim.center(pair["in"].x, pair["in"].y), int(sim.clock_ms/1000))
 		sprite("sfx/portals", "Red", sim.center(pair.out.x, pair.out.y), int(sim.clock_ms/1000))
-	if selected_tower >= 0:
-		var selected = sim.find_tower(selected_tower)
-		if not selected.is_empty(): paint_ellipse(selected.pos, sim.range_axes(float(selected.def.get("range", 0))/1000.0), Color(0.2, 0.8, 0.1, 0.22*tower_panel_alpha()))
 	var objects=battle_objects()
 	var depth_bases=[]
 	for object in objects:
@@ -2990,6 +2996,9 @@ func draw_game() -> void:
 			if int(t.type) == 5 and t.get("animation", "") == "Open": sprite("towers/nuke_lights", "Blinking", position, int(maxi(0, sim.clock_ms-int(t.animation_ms))*10/1000))
 		else:
 			draw_creep_body(object.enemy,scale)
+	# CMap::DrawTowerOvalSelection0x10406c follows all ground bodies.
+	var selection=selected_range_pose()
+	if not selection.is_empty():BuildHexView.draw_oval(self,selection.position,selection.draws,1.0/scale)
 	# Native air bodies follow every ground/map body, independent of Y.
 	for air in battle_air_objects():draw_creep_body(air,scale)
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.

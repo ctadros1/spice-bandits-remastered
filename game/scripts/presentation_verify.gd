@@ -50,6 +50,12 @@ func snapshot(name:String,settle_portrait:bool=true) -> void:
 		record.air_enemy_ids=app.battle_air_objects().map(func(e):return e.id)
 		record.enemies=app.sim.enemies.map(func(e):return {"id":e.id,"type":e.type,"native_air":e.native_air,"air":e.air,"position":[e.pos.x,e.pos.y]})
 		record.limit="Synthetic body overlap. Separate resource-class air pass and manager vector order follow original ARM routing; exact creep depth, shadows, preview/selection/owner interleaving and original pixels remain open."
+	if name.begins_with("selection-range"):
+		var pose=app.selected_range_pose()
+		record.selected_tower=app.selected_tower
+		record.panel_alpha=app.tower_panel_alpha()
+		record.range_draws=pose.get("draws",[]).map(func(d):return {"filled":d.filled,"axes":[d.axes.x,d.axes.y],"color":[d.color.r,d.color.g,d.color.b,d.color.a]})
+		record.limit="Synthetic selected range after ground/before air bodies. Original routing and oval submissions execute with explicit GL stubs; Godot raster, supply bonus and full panel clock/owner behavior remain open."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -606,6 +612,14 @@ func run() -> void:
 	crossing.air=true;crossing.float_until=app.sim.clock_ms+1000
 	await snapshot("air-depth-lifted-ground")
 	check(app.battle_objects().any(func(o):return o.has("enemy") and o.enemy.id==903) and not app.battle_air_objects().any(func(e):return e.id==903),"lifted ground resource stays in ground drawing pass")
+	app.selected_tower=tall.id;app.refresh_controls()
+	var selected_range=app.selected_range_pose()
+	check(selected_range.draws.size()==4 and selected_range.draws[0].filled and selected_range.draws[0].color.a==0.25,"selected range retains original fill plus three outlines")
+	check(selected_range.position==tall.pos,"selected range stays at logical cell center independently of artwork offset")
+	await snapshot("selection-range-ground")
+	app.tower_panel_close_at=app.elapsed_ui;app.elapsed_ui+=0.2;app.refresh_controls()
+	check(absf(app.selected_range_pose().draws[0].color.a-0.125)<0.000001,"selected range fill follows half-opacity tower panel")
+	await snapshot("selection-range-fading")
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2
 	check(app.ClassicUI.Wave.battle_rows(app.sim)[0].x==64,"normal wave countdown scrolls half a native60px slot")

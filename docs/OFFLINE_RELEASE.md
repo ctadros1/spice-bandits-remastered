@@ -1,6 +1,14 @@
 # Offline prototype verification, October 14, 2026
 
-## Current r97 package and open live performance gate
+## Current r98 package and open live performance gate
+
+PCK `9e6279139ced7ef2a1b4473a21b105f87ec92493a3224da918e333ceb9a73c8b`, executable `95e7a27ece6db7e254e9fac42e73ea64da18432835f95fbffdc0ab4f1ec49327`, native helper `cdd19e817522f4fc68bc743f202d3bf51503bf1747b3da6d9cd5cb431b6ad259`.
+
+R98 restores the selected tower range after all ground bodies and before aircraft, using the original shared translucent fill, three outlines and panel alpha at the logical cell center.40 full original selection-router/panel/inactive-manager cases record48 calls/112 oval submissions with explicit GL/oval recording stubs;393 source comparisons pass. Two packaged settled/fading poses pass and were inspected. Supply-bonus integration, full panel clocks, preview/owner order and original raster remain open.
+
+Nine r98 native suites pass: presentation318/96 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live4x performance still fails at34.402ms median/37.443ms p95 against33.34;1x26.191/29.194 and2x27.514/32.254 pass. All live/input-isolation guards pass with zero stalled frames; three frozen mesh/direct comparisons retain exact RGBA. Normal/retained-campaign saves, package resources, strict signature, isolation and cleanup pass.334 counted PNGs include failed performance captures. These changing live workloads/shared-host measurements do not establish an inter-build speedup or original-device equivalence. Evidence: builds/selection-r98-native-suites.json, builds/selection-remaining-r98-native-suites.json and builds/selection-r98-evidence/.
+
+## Prior r97 package and open live performance gate
 
 PCK `30107427246b9a19624ea4cba6bfa03e527d94f6efc5b86781c7e8b1692b7044`, executable `41ec54d22ac8753562613707a3f30169111c49e7df793cc156ed308ac067ca38`, native helper `248ede79f36c81b13a8cfe034dcea1d3cac3bba2f7de6f3c6ec4c19ea9cbd726`.
 

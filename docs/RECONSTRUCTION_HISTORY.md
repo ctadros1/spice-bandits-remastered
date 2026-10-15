@@ -2,6 +2,12 @@
 
 These are earlier, package-specific records. Current status is in PLAN.md and VALIDATION.md. References to current packages inside these preserved records refer to their original checkpoint.
 
+## R98 selected range, October15
+
+R98 restores the selected tower range after all ground bodies and before aircraft, using the original shared translucent fill, three outlines and panel alpha at the logical cell center.40 full original selection-router/panel/inactive-manager cases record48 calls/112 oval submissions with explicit GL/oval recording stubs;393 source comparisons pass. Two packaged settled/fading poses pass and were inspected. Supply-bonus integration, full panel clocks, preview/owner order and original raster remain open.
+
+Nine r98 native suites pass: presentation318/96 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live4x performance still fails at34.402ms median/37.443ms p95 against33.34;1x26.191/29.194 and2x27.514/32.254 pass. All live/input-isolation guards pass with zero stalled frames; three frozen mesh/direct comparisons retain exact RGBA. Normal/retained-campaign saves, package resources, strict signature, isolation and cleanup pass.334 counted PNGs include failed performance captures. These changing live workloads/shared-host measurements do not establish an inter-build speedup or original-device equivalence. Evidence: builds/selection-r98-native-suites.json, builds/selection-remaining-r98-native-suites.json and builds/selection-r98-evidence/.
+
 ## R97 air body routing, October15
 
 R97 restores a separate native-air body pass after sorted ground bodies, retaining the creep manager vector order. Resource class stays independent of temporary levitation/targeting. Eight original air-routing cases/37 callbacks and nine full original room/map routing cases establish the order with supplied records and explicit drawing/framework stubs;110 source checks cover all29 populated enemies. Three packaged overlap/reversed/lifted poses pass and were inspected. Full mutable map registration, creep depth, preview/selection and owner/effect interleaving remain open.

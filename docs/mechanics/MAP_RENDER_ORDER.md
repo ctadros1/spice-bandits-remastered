@@ -29,7 +29,7 @@ Main now excludes native aircraft from battle_objects(), calls the unchanged ext
 
 Three packaged poses overlap original plane/bomber art with tower/base art, reverse aircraft vector input and levitate a ground creep. They were inspected; the reversed overlap changes battle pixels, and manifests record IDs/class/positions for both body lists. These synthetic scenes test drawing order, not legal placement, original pixels or the full original owner route.
 
-The change deliberately leaves selected range, tower/magic previews, full owner effects, missile/bubble/beam/global interleaving and mutable ground-vector lifetime open. Ground/air shadows and native creep depth still need their full original caller/offset behavior. No assets are stretched or recolored by the body-pass change.
+At the r97 checkpoint, the change leaves selected range, tower/magic previews, full owner effects, missile/bubble/beam/global interleaving and mutable ground-vector lifetime open. Ground/air shadows and native creep depth still need their full original caller/offset behavior. No assets are stretched or recolored by the body-pass change.
 
 ## Verification
 
@@ -39,3 +39,12 @@ R97 restores a separate native-air body pass after sorted ground bodies, retaini
 
 Nine r97 native suites pass: presentation313/94 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live performance remains failed:1x28.356ms median/32.886ms p95,2x35.182/84.967 and4x42.189/61.444; only1x meets the unchanged33.34ms median gate. All live/input-isolation guards pass with zero stalled frames, and all three frozen mesh/direct comparisons retain exact RGBA. CPU totals now exclude supplemental frozen redraws. Normal/retained-campaign saves, package resources, strict signature, isolated sole process and cleanup pass.332 counted PNGs include failed performance captures; this is not an all-ten pass or original-device equivalence. Evidence: builds/air-pass-r97-native-suites.json, builds/air-pass-remaining-r97-native-suites.json and builds/air-pass-r97-evidence/.
 
+
+
+## R98 selected range integration
+
+R98 restores the selected tower range after all ground bodies and before aircraft, using the original shared translucent fill, three outlines and panel alpha at the logical cell center.40 full original selection-router/panel/inactive-manager cases record48 calls/112 oval submissions with explicit GL/oval recording stubs;393 source comparisons pass. Two packaged settled/fading poses pass and were inspected. Supply-bonus integration, full panel clocks, preview/owner order and original raster remain open.
+
+Nine r98 native suites pass: presentation318/96 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live4x performance still fails at34.402ms median/37.443ms p95 against33.34;1x26.191/29.194 and2x27.514/32.254 pass. All live/input-isolation guards pass with zero stalled frames; three frozen mesh/direct comparisons retain exact RGBA. Normal/retained-campaign saves, package resources, strict signature, isolation and cleanup pass.334 counted PNGs include failed performance captures. These changing live workloads/shared-host measurements do not establish an inter-build speedup or original-device equivalence. Evidence: builds/selection-r98-native-suites.json, builds/selection-remaining-r98-native-suites.json and builds/selection-r98-evidence/.
+
+tools/native_selection_reference.py now executes the complete original map selector, selected-panel guard, inactive manager and oval arithmetic. Supplied panel/tower/resource records replace construction. Recorded GL/oval submissions establish guard behavior, caller order, logical center and color/alpha/radii; they do not execute GPU tessellation. Main.selected_range_pose() replaces the older plain green ellipse and uses the already traced BuildHexView.oval() helper. The current selected view still supplies zero additive support range; exact ProcessSupply/caller lifetime and full panel clocks remain separately open.

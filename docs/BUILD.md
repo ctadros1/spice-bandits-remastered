@@ -1,6 +1,6 @@
 # Local build
 
-The latest local r97 package restores separate aircraft bodies and passes nine native suites; live2x/4x performance still fails. [Validation](VALIDATION.md) binds its package hashes and remaining limits. Source build gates now include110 air-body routing comparisons.
+The latest local r98 package restores separate aircraft bodies and the selected range and passes nine native suites; live4x performance still fails. [Validation](VALIDATION.md) binds its package hashes and remaining limits. Source build gates now include110 air-body routing and393 selected-range comparisons.
 
 The project is pinned to Godot **4.7.2.stable.official.ed1daf0bf**, with the matching macOS export template. The local importer requires Python 3.9+, Pillow 12.3.0, and Apple's `afconvert`. Original inputs remain local beneath `original/`; the importer writes only derived assets, JSON, and its audit.
 
