@@ -1,6 +1,6 @@
 # Creep portal transport
 
-All ten native r114 suites pass within the bounds below. The last private backup remains r113 until the new checkpoint is published. All original probes read the unchanged decrypted 1.14 executable, SHA256 `e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`.
+All ten native r114 suites pass within the bounds below. The r114 private checkpoint is published with verified source-bundle/app restoration and remote checksums. All original probes read the unchanged decrypted 1.14 executable, SHA256 `e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`.
 
 `native_creep_portal_reference.py` executes full ProcessPortal0x7ee94, InterpolateEaseVectors2D0x110858 and InterpolateEase0x110674 on supplied mature-creep fields.58 cases/2,008 frames cover idle, entering, emerging and waiting states; uniform/nonuniform baseline scale, light, zero/small/large steps and interval boundaries. The original300ms duration is read from the executable. Source state1 shrinks toward zero with quintic easing and linear opacity; state2 grows back to the original scale; completed entry waits in state3 and completed exit returns to0.
 
