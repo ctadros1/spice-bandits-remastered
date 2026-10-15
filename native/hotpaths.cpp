@@ -34,7 +34,7 @@ struct Ellipse {
 struct Keys {
     const StringName hp{"hp"},state{"state"},aim{"aim"},native_air{"native_air"},air{"air"},owner{"owner"},target_owner{"target_owner"},pos{"pos"},speed{"speed"},slow{"slow"},grid{"grid"},cell{"cell"},next_cell{"next_cell"},progress{"move_progress"};
     const StringName velocity{"velocity"},rotation{"rotation"},rot_speed{"rot_speed"},alpha{"alpha"},born{"born"};
-    const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"};
+    const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"},owner_hidden{"owner_hidden"};
 };
 const Keys &keys() { static const Keys value;return value; }
 struct ParticleCoefficients {
@@ -468,6 +468,7 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
     };
     for(int si=0;si<systems.size();++si) {
         const Dictionary sys=systems[si],d=sys[k.definition];
+        if(bool(sys.get(k.owner_hidden,false)))continue;
         // Lobby cloud systems advance at separate caller-supplied clock
         // ratios. Keep their age while batching the shared texture in order.
         const double view_clock=sys.get("view_clock_ms",clock_ms);

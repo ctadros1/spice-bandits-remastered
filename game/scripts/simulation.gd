@@ -2,6 +2,7 @@ class_name BanditSimulation
 extends RefCounted
 
 const PortalView=preload("res://scripts/portal_view.gd")
+const CreepPortal=preload("res://scripts/creep_portal_view.gd")
 var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
@@ -761,6 +762,8 @@ func spawn_presentation(e: Dictionary) -> Dictionary:
 	# CCreep::ProcessGrowUp 0x7f058 + InterpolateEase 0x110674.
 	# Only ground creeps with the constructor flag enabled grow. ProcessWaves
 	# supplies true. Freeze does not skip this presentation timer in Update.
+	if float(e.grow_ms)>=400.0 and e.has("portal_pose"):
+		return {"scale":1.0,"alpha":e.portal_pose.anim_alpha,"native_scale":e.portal_pose.scale}
 	if not reference_spawn_presentation and float(e.grow_ms)>=400.0:return {"scale":1.0,"alpha":1.0}
 	var t = clampf(f32(float(e.grow_ms)/400.0), 0.0, 1.0)
 	var eased = f32(f32(t*6.0)-15.0)
@@ -1174,6 +1177,45 @@ func advance_frame(ms: float) -> void:
 func cancel_portal_placement() -> void:
 	if portals.size() == 1: portals.clear()
 
+func creep_portal_base(e:Dictionary) -> Vector2:
+	var values=e.def.traits.get("scale",[1,1])
+	return Vector2(values[0],values[1])
+
+func teleport_enemy(e:Dictionary,exit_cell:Vector2i) -> void:
+	# Original TeleportCreep sets state2/clock0 and collapses logical/drawn
+	# anchors at the exit, then pops/peeks its newly supplied path. The next
+	# movement update consumes a boundary without moving the logical point.
+	e.state=0;e.cell=exit_cell;e.next_cell=exit_cell;e.pos=center(exit_cell.x,exit_cell.y)
+	e.attacking=false;e.path=[];e.path_at=1
+	set_enemy_path(e)
+	e.portal_pose.state=2;e.portal_pose.clock=0.0;e.portal_marker=Vector2i(-1,-1)
+	e.portal_boundary=true;e.move_progress=1.0;e.move_carry=0.0;e.move_start=e.pos
+	if e.path.size()>1:e.dir=(center(e.path[1].x,e.path[1].y)-e.pos).normalized()
+	CreepView.update(self,e)
+
+func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vector2i) -> void:
+	var queue:Array=presentation.queue
+	if presentation.gates[0].state==3:
+		# A closing entrance flushes any still-shrinking queued creeps.
+		for id in queue:
+			var e=find_enemy(int(id))
+			if not e.is_empty() and e.hp>0 and e.has("portal_pose"):teleport_enemy(e,exit_cell)
+		queue.clear();return
+	if presentation.gates[0].state!=2:return
+	for e in enemies:
+		if e.hp<=0 or bool(e.native_air) or int(e.state) in [2,3,5]:continue
+		if e.next_cell==entry:e.portal_marker=entry
+		var phase=int(e.portal_pose.state) if e.has("portal_pose") else 0
+		if CreepPortal.can_enter(1,int(e.state),phase,e.next_cell==entry,CreepView.progress(self,e)):
+			if not e.has("portal_pose"):e.portal_pose=CreepPortal.create(creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
+			e.portal_pose.clock=0.0;e.portal_pose.state=1
+			queue.append(int(e.id))
+			emit("teleport",{"id":e.id,"pos":e.pos})
+		if e.get("portal_marker",Vector2i(-1,-1))==entry and e.cell==entry and e.has("portal_pose"):
+			# Native list traversal removes its first queued entry here.
+			if not queue.is_empty():queue.pop_front()
+			teleport_enemy(e,exit_cell)
+
 func step() -> void:
 	step_lookup_active = false
 	var timed = Time.get_ticks_usec() if profile_hotpaths else 0
@@ -1221,7 +1263,9 @@ func step() -> void:
 		if clock_ms < freeze_until or clock_ms < e.float_until: continue
 		if e.path.is_empty() or e.base < 0: continue
 		CreepView.prepare(self, e)
-		if e.speed > 0 and movement_point_allowed(e):
+		if e.get("portal_boundary",false):
+			e.portal_boundary=false;e.cell=e.next_cell;e.move_start=e.pos;e.move_progress=0.0
+		elif e.speed > 0 and movement_point_allowed(e):
 			var cell = e.path[e.path_at]
 			var point = center(cell.x, cell.y)
 			e.next_cell = cell
@@ -1280,7 +1324,9 @@ func step() -> void:
 				emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
 		elif e.path_at >= e.path.size() and clock_ms < e.disco_until: set_enemy_path(e)
 	for e in enemies:
-		if e.hp > 0: CreepView.update(self, e)
+		if e.hp > 0:
+			CreepView.update(self,e)
+			if e.has("portal_pose"):CreepPortal.advance(e.portal_pose,tick_ms,creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
 	if profile_hotpaths: timed = timed_section("creep_movement", timed)
 	for projectile in enemy_missiles.duplicate():
 		var b = bases[projectile.base]
@@ -1393,23 +1439,10 @@ func step() -> void:
 		if presentation.deleted:portals.clear()
 		else:
 			PortalView.advance(presentation,tick_ms)
-			if presentation.gates[0].state==2:
-				for e in enemies:
-					if e.hp <= 0 or e.air or clock_ms < e.float_until or clock_ms < e.portal_ms: continue
-					if e.cell == nearest(portals[0].pos):
-						e.pos = portals[1].pos
-						e.cell = nearest(e.pos)
-						e.portal_ms = clock_ms+int(catalog.tower_magic.portal_reload)
-						set_enemy_path(e)
+			check_portal_transfers(presentation,nearest(portals[0].pos),nearest(portals[1].pos))
 	for pair in static_portals:
 		PortalView.advance(pair.presentation,tick_ms)
-		for e in enemies:
-			if e.hp > 0 and not e.air and clock_ms >= e.portal_ms and e.cell == pair["in"]:
-				e.cell = pair.out
-				e.pos = center(e.cell.x, e.cell.y)
-				e.portal_ms = clock_ms+int(catalog.tower_magic.portal_reload)
-				set_enemy_path(e)
-				emit("teleport", {"id": e.id, "pos": e.pos})
+		check_portal_transfers(pair.presentation,pair["in"],pair.out)
 	for e in enemies.duplicate():
 		if e.hp <= 0:
 			release_displacement(int(e.id))

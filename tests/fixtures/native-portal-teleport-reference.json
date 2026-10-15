@@ -1,0 +1,783 @@
+{
+  "method": "Full original TeleportCreep, SetState and GetFirstMovementPoint bridge.\n\nUpdatePosition supplies an explicit two-node exit path (not pathfinding).\nMap center, hover/sound and direction are supplied/recorded stubs. Actual\nteleport position/aim/marker/phase writes and two path peek/pop calls execute.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "exit_cell": [
+        12,
+        9
+      ],
+      "exit_point": [
+        700,
+        410
+      ],
+      "next_cell": [
+        13,
+        9
+      ],
+      "next_point": [
+        760,
+        442
+      ],
+      "jitter": [
+        0,
+        0
+      ],
+      "aim_offset": [
+        0,
+        0
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          700.0,
+          410.0
+        ],
+        "movement_start": [
+          700.0,
+          410.0
+        ],
+        "drawn": [
+          700.0,
+          410.0
+        ],
+        "aim": [
+          700.0,
+          410.0
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          13,
+          9
+        ],
+        "next_point": [
+          760.0,
+          442.0
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              12,
+              9,
+              12,
+              9
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              12,
+              9
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        12,
+        9
+      ],
+      "exit_point": [
+        700,
+        410
+      ],
+      "next_cell": [
+        13,
+        9
+      ],
+      "next_point": [
+        760,
+        442
+      ],
+      "jitter": [
+        0,
+        0
+      ],
+      "aim_offset": [
+        5,
+        -10
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          700.0,
+          410.0
+        ],
+        "movement_start": [
+          700.0,
+          410.0
+        ],
+        "drawn": [
+          700.0,
+          410.0
+        ],
+        "aim": [
+          705.0,
+          400.0
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          13,
+          9
+        ],
+        "next_point": [
+          760.0,
+          442.0
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              12,
+              9,
+              12,
+              9
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              12,
+              9
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        12,
+        9
+      ],
+      "exit_point": [
+        700,
+        410
+      ],
+      "next_cell": [
+        13,
+        9
+      ],
+      "next_point": [
+        760,
+        442
+      ],
+      "jitter": [
+        2.75,
+        -3.5
+      ],
+      "aim_offset": [
+        0,
+        0
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          700.0,
+          410.0
+        ],
+        "movement_start": [
+          700.0,
+          410.0
+        ],
+        "drawn": [
+          702.75,
+          406.5
+        ],
+        "aim": [
+          702.75,
+          406.5
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          13,
+          9
+        ],
+        "next_point": [
+          760.0,
+          442.0
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              12,
+              9,
+              12,
+              9
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              12,
+              9
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        12,
+        9
+      ],
+      "exit_point": [
+        700,
+        410
+      ],
+      "next_cell": [
+        13,
+        9
+      ],
+      "next_point": [
+        760,
+        442
+      ],
+      "jitter": [
+        2.75,
+        -3.5
+      ],
+      "aim_offset": [
+        5,
+        -10
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          700.0,
+          410.0
+        ],
+        "movement_start": [
+          700.0,
+          410.0
+        ],
+        "drawn": [
+          702.75,
+          406.5
+        ],
+        "aim": [
+          707.75,
+          396.5
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          13,
+          9
+        ],
+        "next_point": [
+          760.0,
+          442.0
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              12,
+              9,
+              12,
+              9
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              12,
+              9
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        7,
+        4
+      ],
+      "exit_point": [
+        231.25,
+        150.875
+      ],
+      "next_cell": [
+        7,
+        5
+      ],
+      "next_point": [
+        231.25,
+        214.875
+      ],
+      "jitter": [
+        0,
+        0
+      ],
+      "aim_offset": [
+        0,
+        0
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          231.25,
+          150.875
+        ],
+        "movement_start": [
+          231.25,
+          150.875
+        ],
+        "drawn": [
+          231.25,
+          150.875
+        ],
+        "aim": [
+          231.25,
+          150.875
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          7,
+          5
+        ],
+        "next_point": [
+          231.25,
+          214.875
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              7,
+              4,
+              7,
+              4
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              7,
+              4
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        7,
+        4
+      ],
+      "exit_point": [
+        231.25,
+        150.875
+      ],
+      "next_cell": [
+        7,
+        5
+      ],
+      "next_point": [
+        231.25,
+        214.875
+      ],
+      "jitter": [
+        0,
+        0
+      ],
+      "aim_offset": [
+        5,
+        -10
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          231.25,
+          150.875
+        ],
+        "movement_start": [
+          231.25,
+          150.875
+        ],
+        "drawn": [
+          231.25,
+          150.875
+        ],
+        "aim": [
+          236.25,
+          140.875
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          7,
+          5
+        ],
+        "next_point": [
+          231.25,
+          214.875
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              7,
+              4,
+              7,
+              4
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              7,
+              4
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        7,
+        4
+      ],
+      "exit_point": [
+        231.25,
+        150.875
+      ],
+      "next_cell": [
+        7,
+        5
+      ],
+      "next_point": [
+        231.25,
+        214.875
+      ],
+      "jitter": [
+        2.75,
+        -3.5
+      ],
+      "aim_offset": [
+        0,
+        0
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          231.25,
+          150.875
+        ],
+        "movement_start": [
+          231.25,
+          150.875
+        ],
+        "drawn": [
+          234.0,
+          147.375
+        ],
+        "aim": [
+          234.0,
+          147.375
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          7,
+          5
+        ],
+        "next_point": [
+          231.25,
+          214.875
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              7,
+              4,
+              7,
+              4
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              7,
+              4
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    },
+    {
+      "exit_cell": [
+        7,
+        4
+      ],
+      "exit_point": [
+        231.25,
+        150.875
+      ],
+      "next_cell": [
+        7,
+        5
+      ],
+      "next_point": [
+        231.25,
+        214.875
+      ],
+      "jitter": [
+        2.75,
+        -3.5
+      ],
+      "aim_offset": [
+        5,
+        -10
+      ],
+      "output": {
+        "state": 0,
+        "portal_state": 2,
+        "clock": 0.0,
+        "logical": [
+          231.25,
+          150.875
+        ],
+        "movement_start": [
+          231.25,
+          150.875
+        ],
+        "drawn": [
+          234.0,
+          147.375
+        ],
+        "aim": [
+          239.0,
+          137.375
+        ],
+        "marker": [
+          -1,
+          -1
+        ],
+        "cell": [
+          7,
+          5
+        ],
+        "next_point": [
+          231.25,
+          214.875
+        ],
+        "progress": 1.0,
+        "position_enabled": true,
+        "remaining_path_nodes": 1,
+        "calls": [
+          {
+            "method": "hover-state",
+            "state": 0
+          },
+          {
+            "method": "UpdatePosition",
+            "cells": [
+              7,
+              4,
+              7,
+              4
+            ],
+            "progress": 0.0
+          },
+          {
+            "method": "hexcenter",
+            "cell": [
+              7,
+              4
+            ]
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 1
+          },
+          {
+            "method": "GetFirstMovementPoint",
+            "pop": 0
+          },
+          {
+            "method": "direction",
+            "force": 1
+          }
+        ]
+      }
+    }
+  ],
+  "original_unchanged": true
+}

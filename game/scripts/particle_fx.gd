@@ -113,9 +113,12 @@ func refresh_owners(sim) -> void:
 			var owner="enemy:%d:%s" % [e.id,alias]
 			owners[owner]=true
 			var found=false
+			var hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
 			for sys in owner_systems.get(owner,[]):
-				sys.pos=e.get("visual_pos",e.pos);sys.emitting=true;found=true
-			if not found:emit_system(str(binding.filename),e.get("visual_pos",e.pos),str(e.def.get("color","")),owner,-1,e.dir)
+				sys.pos=e.get("visual_pos",e.pos);sys.emitting=true;sys.owner_hidden=hidden;found=true
+			if not found:
+				emit_system(str(binding.filename),e.get("visual_pos",e.pos),str(e.def.get("color","")),owner,-1,e.dir)
+				if not systems.is_empty() and systems[-1].owner==owner:systems[-1].owner_hidden=hidden
 	for b in sim.bases:
 		if b.hp>=b.hpmax*0.5:continue
 		var owner="base:%s:%s" % [b.x,b.y]
@@ -227,6 +230,7 @@ func reference_draw_layer(layer: Layer, premultiplied: bool) -> void:
 	var origin=app.map_origin()-position
 	var zoom=app.map_scale()
 	for sys in systems:
+		if sys.get("owner_hidden",false):continue
 		var definition=sys.definition
 		if (int(definition.get("real_alpha",0))==1)!=premultiplied:continue
 		var rgba=definition.get("color",[1,1,1,1])

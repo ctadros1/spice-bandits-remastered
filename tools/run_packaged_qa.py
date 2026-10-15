@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (145 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (152 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -271,6 +271,16 @@ def main():
                 else:
                     fresh = fresh and len(rendered) == 2 and all(abs(g['scale']-scale) < 1e-6 for g in rendered)
             required.update({'result-room-%03d' % age for age in [50,72,90,150,240,300,360,420,480,540,600]})
+            transit_expected = {'portal-creep-normal': (0, 1, 1, True), 'portal-creep-enter-075': (1, .896484375, .75, True), 'portal-creep-enter-150': (1, .5, .5, False), 'portal-creep-enter-300': (3, 0, 0, False), 'portal-creep-exit-075': (2, .103515625, .25, True), 'portal-creep-exit-150': (2, .5, .5, True), 'portal-creep-exit-300': (0, 1, 1, True)}
+            required.update(transit_expected)
+            transit_poses = {c['name']:c.get('portal_creep',{}) for c in manifest['captures'] if c['name'].startswith('portal-creep-')}
+            for pose, (state, factor, alpha, visible) in transit_expected.items():
+                entry = transit_poses.get(pose, {})
+                fresh = fresh and entry.get('state') == state and entry.get('alpha') == alpha and entry.get('particles_visible') == visible
+                scale,base_scale=entry.get('scale',[]),entry.get('base_scale',[])
+                fresh = fresh and len(scale)==2 and len(base_scale)==2 and all(abs(s/b-factor)<1e-6 for s,b in zip(scale,base_scale))
+                fresh = fresh and entry.get('systems',0)>0 and entry.get('particles',0)>0
+                fresh = fresh and ((entry.get('hidden_systems')==0 and entry.get('native_groups',0)>0) if visible else (entry.get('hidden_systems')==entry.get('systems') and entry.get('native_groups')==0))
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)
             fresh = fresh and all(c.get('xp_render_count', 0) > 0 and abs(c.get('xp_render_age', -1) - c.get('result_age', -2)) < 0.001 for c in result_sequence)

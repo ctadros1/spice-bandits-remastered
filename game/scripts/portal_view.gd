@@ -8,7 +8,7 @@ static func gate(reload_ms:float) -> Dictionary:
 	return {"state":0,"active":false,"scale":f32(0.3),"opening":true,"open_remaining":f32(f32(reload_ms)*0.5),"close_remaining":f32(reload_ms)}
 
 static func create(reload_ms:float,duration_ms:float,permanent:bool=false) -> Dictionary:
-	return {"remaining":f32(duration_ms),"connected":false,"deleted":false,"permanent":permanent,"reload":f32(reload_ms),"gates":[gate(reload_ms),gate(reload_ms)],"transfer_checks":0}
+	return {"remaining":f32(duration_ms),"connected":false,"deleted":false,"permanent":permanent,"reload":f32(reload_ms),"gates":[gate(reload_ms),gate(reload_ms)],"transfer_checks":0,"queue":[]}
 
 static func connect_gates(pair:Dictionary,active:bool=true) -> void:
 	pair.connected=true

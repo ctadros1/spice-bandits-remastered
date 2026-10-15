@@ -1,0 +1,10227 @@
+{
+  "method": "Full original CheckForTransfer on supplied creep vector/list/position records.\n\nSound, list insertion/removal/allocation and TeleportCreep are explicit stubs.\nList link mutation is supplied so subsequent original queue reads execute.\nOriginal eligibility, half-cell entry, markers and call order execute. This\ndoes not execute movement, pathfinding, TeleportCreep, room or rendering.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "cases": [
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 1,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 0,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 0,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 1,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 2,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 3,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 4,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 5,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 0,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 0,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 1,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 2,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 2,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.499999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.5,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 0.999999,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    },
+    {
+      "kind": 1,
+      "creep_state": 6,
+      "portal_state": 3,
+      "progress": 1,
+      "resource_type": 2,
+      "return": 0,
+      "output": {
+        "portal_state": 3,
+        "clock": 27.0,
+        "marker": [
+          -1,
+          -1
+        ],
+        "queue": [],
+        "calls": []
+      }
+    }
+  ],
+  "half_cell_sequence": [
+    {
+      "return": 0,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [
+          4096
+        ],
+        "calls": [
+          {
+            "method": "sound",
+            "name": "portal_teleport-mono"
+          },
+          {
+            "method": "queue",
+            "actor": 4096
+          }
+        ]
+      }
+    },
+    {
+      "return": 1,
+      "output": {
+        "portal_state": 1,
+        "clock": 0.0,
+        "marker": [
+          7,
+          4
+        ],
+        "queue": [],
+        "calls": [
+          {
+            "method": "unhook",
+            "node": 45056
+          },
+          {
+            "method": "delete-node",
+            "node": 45056
+          },
+          {
+            "method": "teleport",
+            "actor": 4096
+          }
+        ]
+      }
+    }
+  ],
+  "original_unchanged": true
+}

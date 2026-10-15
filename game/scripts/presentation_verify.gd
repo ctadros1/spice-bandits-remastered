@@ -108,6 +108,12 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.registered_gates=app.sim.portals.size()
 		record.rendered_gates=app.battle_portal_objects().map(func(p):return {"state":p.gate_state,"scale":p.scale,"frame":p.frame,"preview":p.preview})
 		record.limit="Real isolated portal placement/pause/expiry bridge with original float32 scale/state/timer fixture. Complete creep transfer, animator clock/raster, registry ties and GPU equivalence remain open."
+	if name.begins_with("portal-creep"):
+		var e=app.sim.enemies[0]
+		var pose=e.portal_pose
+		var owners=app.particle_fx.systems.filter(func(system):return str(system.owner).begins_with("enemy:%d:"%int(e.id)))
+		record.portal_creep={"state":pose.state,"clock":pose.clock,"scale":[pose.scale.x,pose.scale.y],"base_scale":[app.sim.creep_portal_base(e).x,app.sim.creep_portal_base(e).y],"alpha":pose.anim_alpha,"particles_visible":pose.particles_visible,"systems":owners.size(),"hidden_systems":owners.filter(func(system):return bool(system.get("owner_hidden",false))).size(),"particles":owners.reduce(func(total,system):return total+system.particles.size(),0),"native_groups":SpiceNative.particle_batches(owners,false,app.particle_fx.clock_ms,Vector2.ZERO,1).size()+SpiceNative.particle_batches(owners,true,app.particle_fx.clock_ms,Vector2.ZERO,1).size()}
+		record.limit="Supplied fixed-position mature Marine transit ages and owner freeze particles. Source float32 body/shadow/health/particle-visibility fields are independently checked; real simulation queue/path bridge is separately exercised. No original path/GPU/complete owner-interleaving equivalence."
 	if name.begins_with("electricity") or name=="active-defense":
 		record.towers=app.sim.towers.map(func(t):return {"type":t.type,"level":t.level,"filename":t.def.filename,"position":[t.pos.x,t.pos.y]})
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
@@ -354,8 +360,27 @@ func run() -> void:
 	app.sim.advance_frame(30)
 	check(app.sim.portals.is_empty(),"native deleted pair leaves manager on following update")
 	await snapshot("portal-lifecycle-removed")
+	var transported=app.sim.spawn_enemy(1,0,"",1142,false)
+	transported.pos=app.sim.center(10,9);transported.visual_pos=transported.pos;transported.draw_light=1;transported.slow=0.5;transported.hp=transported.max_hp*0.5
+	transported.portal_pose=app.sim.CreepPortal.create(app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
+	app.effects.clear();app.particle_fx.reset();app.particle_fx.advance(app.sim,0)
+	await snapshot("portal-creep-normal")
+	transported.portal_pose.state=1
+	var transit_age=0
+	for age in [75,150,300]:
+		app.sim.CreepPortal.advance(transported.portal_pose,age-transit_age,app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
+		transit_age=age;app.particle_fx.advance(app.sim,0)
+		await snapshot("portal-creep-enter-%03d"%age)
+	check(transported.portal_pose.state==3 and transported.portal_pose.anim_alpha==0,"native waiting transit retains zero-size/alpha body and health")
+	transported.portal_pose.state=2;transported.portal_pose.clock=0;transit_age=0
+	for age in [75,150,300]:
+		app.sim.CreepPortal.advance(transported.portal_pose,age-transit_age,app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
+		transit_age=age;app.particle_fx.advance(app.sim,0)
+		await snapshot("portal-creep-exit-%03d"%age)
+	check(transported.portal_pose.state==0 and transported.portal_pose.anim_alpha==1,"native exit pose restores original full body and health")
 	Profile.data=preview_profile
 	app.magic_placement="";app.sim=preview_sim;app.tutorial=preview_tutorial;app.tutorial_step=preview_step
+	app.particle_fx.reset();app.particle_fx.advance(app.sim,0)
 	app.build_hex_view.reset();app.refresh_controls()
 	app.transition.open(0,3)
 	app.transition.advance(0.1)

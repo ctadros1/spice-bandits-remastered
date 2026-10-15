@@ -3190,6 +3190,7 @@ func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 	var tint=creep_body_tint(e,growth.alpha)
 	var scale_values = e.def.traits.get("scale", [1, 1])
 	var native_scale = Vector2(scale_values[0], scale_values[1])*growth.scale
+	if growth.has("native_scale"):native_scale=growth.native_scale
 	var animator_position=creep_animator_position(e)
 	var layers=creep_layers(e,states)
 	creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
