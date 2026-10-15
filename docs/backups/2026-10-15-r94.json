@@ -1,0 +1,43 @@
+{
+  "source_commit": "d9dbfe41d996953f66eb029411bcf577e97fa338",
+  "package_pck": "dbf3425472408ad485f283ade125fa4df92a20d4d6ac41b5cb5a0b9060f01564",
+  "restored_zip_codesign_and_QA_launch_pass": true,
+  "restored_normal_saves_unchanged": true,
+  "evidence_files_verified": 459,
+  "native_scope": "Nine r94 suites pass; live2x/4x performance remains failed. Offline reconstruction incomplete.",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r94-macOS.zip",
+      "bytes": 324946345,
+      "sha256": "b9180c0d3cc7743696c7de624f08cdbab1a3f017213a23e047337b69a65e3a8a"
+    },
+    {
+      "name": "r94-verification-evidence.tar.gz",
+      "bytes": 449506126,
+      "sha256": "71582b3012a6211f13fb39444a82110720c99aedd9b170014233e44a27129190"
+    },
+    {
+      "name": "r94-additional-captures.zip",
+      "bytes": 4954546,
+      "sha256": "c3d14397409e6d6afd1ee11bd940632be755c38224162a3a4c83cd8da804b5a4"
+    },
+    {
+      "name": "r94-source-history.bundle",
+      "bytes": 1214652,
+      "sha256": "6369a6129f5e1fd0535c79377e39758bdfa3b33335ed0407dc4db835637f09b6"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 83771,
+      "sha256": "003fc0fa26603aab7145bbf6f97c550bbce7f95e150a3a4475062f0418bccc18"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1250,
+      "sha256": "1f751e8dcefb528112582d7e2c13234dbfceed087e8364983f0e2f4170392068"
+    }
+  ],
+  "remote_assets_verified": true,
+  "release_tag": "backup-2026-10-15-r94",
+  "release_id": 413509458
+}
