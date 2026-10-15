@@ -1,5 +1,6 @@
 class_name BanditSimulation
 extends RefCounted
+var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
 const Targeting = preload("res://scripts/targeting.gd")
@@ -756,6 +757,7 @@ func spawn_presentation(e: Dictionary) -> Dictionary:
 	# CCreep::ProcessGrowUp 0x7f058 + InterpolateEase 0x110674.
 	# Only ground creeps with the constructor flag enabled grow. ProcessWaves
 	# supplies true. Freeze does not skip this presentation timer in Update.
+	if not reference_spawn_presentation and float(e.grow_ms)>=400.0:return {"scale":1.0,"alpha":1.0}
 	var t = clampf(f32(float(e.grow_ms)/400.0), 0.0, 1.0)
 	var eased = f32(f32(t*6.0)-15.0)
 	eased = f32(f32(eased*t)+10.0)

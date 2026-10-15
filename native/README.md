@@ -1,6 +1,6 @@
 # Measured hot paths
 
-Current r99 adds the original creep float32 top/key helper, supported by3,880 original/source checks. Nine native suites pass; live4x still fails its33.34ms median gate. Earlier performance values below retain their historical workloads and scope; [validation](../docs/VALIDATION.md) binds the latest package.
+The original creep float32 top/key helper is supported by3,880 original/source checks. Current r100 reuses prepared script rendering data and passes all ten native suites, including the unchanged33.34ms live median gate. Earlier performance values below retain their historical workloads and scope; [validation](../docs/VALIDATION.md) binds the latest package.
 
 The game remains a Godot project. This small GDExtension accelerates the original elliptical range test, ordered single/area target filtering, segment movement, and particle integration/emitter updates. Tower state machines, damage/rewards, navigation, progression and UI remain in GDScript. It contains manually reconstructed routines, not original source or a linked copy of the preserved executable.
 

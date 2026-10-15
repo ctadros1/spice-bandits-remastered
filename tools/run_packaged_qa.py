@@ -166,6 +166,18 @@ def main():
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
         fresh = fresh and record['captures'] == (98 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        if args.performance:
+            comparisons=manifest.get('creep_layer_comparisons',[])
+            record['creep_layer_comparisons']=comparisons
+            fresh=fresh and len(comparisons)==3
+            for comparison in comparisons:
+                usage=comparison.get('usage',{})
+                fresh=fresh and comparison.get('exact_rgba',False) and comparison.get('legacy_error')==0 and comparison.get('prepared_error')==0
+                fresh=fresh and min(usage.get('cached',0),usage.get('reference',0))>=max(1,comparison.get('enemies',0))
+                for key in ['legacy','prepared']:
+                    path=directory/comparison[key]
+                    fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns
+                    if path.exists():comparison[key+'_sha256']=digest(path)
         if args.menus:
             posed=[c for c in manifest['captures'] if c['name'].startswith('main-menu-')]
             record['main_menu_distinct_pose_images']=len({c['sha256'] for c in posed})

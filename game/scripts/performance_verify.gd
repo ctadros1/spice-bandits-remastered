@@ -8,6 +8,7 @@ var captures: Array=[]
 var failures: Array=[]
 var last_frame_us=0
 var rendering_comparisons=[]
+var creep_layer_comparisons=[]
 var last_sim_ms=0
 var advancing_frames=0
 var stalled_frames=0
@@ -129,6 +130,24 @@ func run() -> void:
 		var batch_draws=app.particle_fx.batch_draws-batch_before
 		rendering_comparisons.append({"speed":rate,"reference":"reference-%dx.png" % rate,"mesh_reference":"mesh-reference-%dx.png" % rate,"batch":"batch-%dx.png" % rate,"reference_error":reference_error,"mesh_error":mesh_error,"batch_error":batch_error,"exact_mesh_rgba":exact_mesh,"reference_draws":reference_draws,"batch_draws":batch_draws,"sim_ms":app.sim.clock_ms})
 		if reference_draws<2 or batch_draws<2 or reference_error!=OK or batch_error!=OK:failures.append("Particle comparison did not render both layers in both modes.")
+		# Use the same frozen actors to verify that the former eager fallback
+		# and prepared layer path both actually draw and retain exact pixels.
+		app.probe_creep_layers=true;app.creep_layer_usage={"cached":0,"reference":0}
+		app.reference_creep_layers=true;app.sim.reference_spawn_presentation=true;app.queue_redraw()
+		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
+		var legacy_creeps=get_tree().root.get_texture().get_image()
+		var legacy_name="legacy-creeps-%dx.png" % rate
+		var legacy_error=legacy_creeps.save_png(output.path_join(legacy_name))
+		app.reference_creep_layers=false;app.sim.reference_spawn_presentation=false;app.queue_redraw()
+		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
+		var prepared_creeps=get_tree().root.get_texture().get_image()
+		var prepared_name="prepared-creeps-%dx.png" % rate
+		var prepared_error=prepared_creeps.save_png(output.path_join(prepared_name))
+		var usage=app.creep_layer_usage.duplicate(true)
+		var exact_creeps=legacy_creeps.get_data()==prepared_creeps.get_data()
+		creep_layer_comparisons.append({"speed":rate,"legacy":legacy_name,"prepared":prepared_name,"legacy_error":legacy_error,"prepared_error":prepared_error,"exact_rgba":exact_creeps,"usage":usage,"enemies":app.sim.enemies.size(),"sim_ms":app.sim.clock_ms})
+		if not exact_creeps or legacy_error!=OK or prepared_error!=OK or int(usage.cached)<1 or int(usage.reference)<1:failures.append("Prepared creep layers did not render both paths with exact frozen RGBA.")
+		app.probe_creep_layers=false
 		app.set_process(true)
 		stages.append({"speed":rate,"frames":samples.size(),"median_frame_ms":median,"p95_frame_ms":p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"reported_fps":Engine.get_frames_per_second(),"static_memory_bytes":Performance.get_monitor(Performance.MEMORY_STATIC),"enemies":app.sim.enemies.size(),"towers":app.sim.towers.size(),"particle_systems":app.particle_fx.systems.size(),"sim_ms":app.sim.clock_ms,"sample_start_sim_ms":sample_start_ms,"sample_end_sim_ms":sample_end_ms,"advancing_frames":advancing_frames,"stalled_frames":stalled_frames,"live_advanced":live_advanced,"input_isolated":input_isolated,"bolts":bolt_metrics(),"timings":live_timings,"simulation_sections":live_sections,"timing_scope":"Live sampling only; frozen comparison redraws excluded."})
 		if samples.size()<45 or median>33.34 or error!=OK:failures.append("Dense%dx fixture did not sustain30 median frames/second or capture successfully." % rate)
@@ -150,6 +169,6 @@ func run() -> void:
 	stages.append({"kind":"world","zoom":0.2,"visible_generators":app.world_clouds.rendered.size(),"cloud_systems":cloud_count,"frames":samples.size(),"median_frame_ms":world_median,"p95_frame_ms":world_p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"timings":app.qa_timings.duplicate(true)})
 	if samples.size()<45 or world_median>33.34 or world_error!=OK:failures.append("Full world cloud fixture did not sustain30 median frames/second or capture successfully.")
 	var file=FileAccess.open(output.path_join("manifest.json"),FileAccess.WRITE)
-	file.store_string(JSON.stringify({"method":"Native packaged synthetic stress fixture:54 tower forms,200 initial enemies, inflated base health, no profile rewards. Live elapsed-time frame updates at1x/2x/4x and a fully zoomed-out world with nine original cloud generators; three-second wall-clock sampling after one-second warmups. Apple Silicon measurement only, not original-game timing equivalence or RSS. Paused same-state legacy/mesh/direct captures compare reconstructed renderers; direct triangles must match mesh RGBA exactly. No original-device pixel claim.","stages":stages,"captures":captures,"rendering_comparisons":rendering_comparisons,"failures":failures},"\t"));file.close()
+	file.store_string(JSON.stringify({"method":"Native packaged synthetic stress fixture:54 tower forms,200 initial enemies, inflated base health, no profile rewards. Live elapsed-time frame updates at1x/2x/4x and a fully zoomed-out world with nine original cloud generators; three-second wall-clock sampling after one-second warmups. Apple Silicon measurement only, not original-game timing equivalence or RSS. Paused same-state legacy/mesh/direct captures compare reconstructed renderers; direct triangles must match mesh RGBA exactly. Separate frozen eager/prepared creep-layer and completed-growth paths must both redraw and match full RGBA. No original-device pixel claim.","stages":stages,"captures":captures,"rendering_comparisons":rendering_comparisons,"creep_layer_comparisons":creep_layer_comparisons,"failures":failures},"\t"));file.close()
 	print("PERFORMANCE_VERIFICATION ",JSON.stringify(stages))
 	get_tree().quit(0 if failures.is_empty() else 1)

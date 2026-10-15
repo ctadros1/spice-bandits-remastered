@@ -3,10 +3,13 @@
 The reference is an earlier, apparently stretched recording. Captures keep
 their own proportions. No image is warped and no pixel-equivalence score is
 implied by paired states with different input/progression/timing.
+Full-resolution frame copies are retained so later galleries cannot silently
+change an earlier HTML comparison.
 """
 from pathlib import Path
 from PIL import Image,ImageDraw,ImageFont
-import hashlib,html,json
+import hashlib,html,json,shutil
+from run_packaged_qa import EXE,native_libraries
 
 ROOT=Path(__file__).resolve().parents[1]
 BUILD=ROOT/'builds'
@@ -15,11 +18,16 @@ sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
 def main():
     OUT.mkdir(exist_ok=True)
+    frames=OUT/'frames'
+    frames.mkdir(exist_ok=True)
     package=BUILD/'Spice Bandits Remastered.app/Contents/Resources/Spice Bandits Remastered.pck'
     package_sha=sha(package)
+    executable_sha=sha(EXE)
+    libraries=native_libraries()
     for suite in ['presentation','tutorial','menus','performance','audio']:
         audit=json.loads((BUILD/(suite+'-package-audit.json')).read_text())
         assert audit['passed'] and audit['pck_sha256']==package_sha,(suite,'stale or failed audit')
+        assert audit['executable_sha256']==executable_sha and audit['native_libraries_sha256']==libraries,(suite,'stale executable/helper audit')
     rows=[]
     tutorial_times=[121,129,132,140,163,181,186,190,196,201,207,209,212,220,231,240,252,266]
     for page,second in enumerate(tutorial_times):rows.append((f'Tutorial page {page}',second,'tutorial-gallery',f'page-{page:02d}','Portrait wrapping, callout anchors, pointers and native asset proportions.'))
@@ -66,15 +74,22 @@ def main():
                 picture=Image.open(path).convert('RGB');picture.thumbnail((504,294),Image.Resampling.LANCZOS)
                 x=12+column*520+(504-picture.width)//2
                 sheet.paste(picture,(x,y+55+(294-picture.height)//2))
-            entries.append({'name':name,'reference':str(reference.relative_to(ROOT)),'reference_time':reference_time,'reference_sha256':sha(reference),'current':str(current.relative_to(ROOT)),'current_sha256':sha(current),'limit':limit})
+            number=len(entries)+1
+            frozen_reference=frames/f'reference-{number:03d}{reference.suffix}'
+            frozen_current=frames/f'current-{number:03d}{current.suffix}'
+            shutil.copy2(reference,frozen_reference);shutil.copy2(current,frozen_current)
+            reference_sha,current_sha=sha(reference),sha(current)
+            assert sha(frozen_reference)==reference_sha and sha(frozen_current)==current_sha
+            entries.append({'name':name,'reference':str(reference.relative_to(ROOT)),'reference_time':reference_time,'reference_sha256':reference_sha,'current':str(current.relative_to(ROOT)),'current_sha256':current_sha,'reference_copy':str(frozen_reference.relative_to(OUT)),'current_copy':str(frozen_current.relative_to(OUT)),'limit':limit})
         filename=f'comparison-{offset//4+1:02d}.png';sheet.save(OUT/filename);sheets.append(filename)
     source=json.loads((BUILD/'reference/dense/manifest.json').read_text())
-    manifest={'pck_sha256':package_sha,'method':__doc__,'reference_manifest_sha256':sha(BUILD/'reference/dense/manifest.json'),'pairs':entries,'sheets':sheets,'complete_fidelity':False}
+    assert sha(package)==package_sha and sha(EXE)==executable_sha and native_libraries()==libraries,'Package changed during comparison generation'
+    manifest={'pck_sha256':package_sha,'executable_sha256':executable_sha,'native_libraries_sha256':libraries,'method':__doc__,'reference_manifest_sha256':sha(BUILD/'reference/dense/manifest.json'),'pairs':entries,'sheets':sheets,'frozen_frames':True,'complete_fidelity':False}
     (OUT/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     cards=[]
     for row in entries:
-        ref=Path('..')/Path(row['reference']).relative_to('builds')
-        current=Path('..')/Path(row['current']).relative_to('builds')
+        ref=Path(row['reference_copy'])
+        current=Path(row['current_copy'])
         cards.append(f'<section><h2>{html.escape(row["name"])}</h2><p>{html.escape(row["limit"])}</p><div class="pair"><figure><figcaption>iPad guide - {row["reference_time"]:.1f}s</figcaption><a href="{html.escape(str(ref))}"><img src="{html.escape(str(ref))}"></a></figure><figure><figcaption>Current package</figcaption><a href="{html.escape(str(current))}"><img src="{html.escape(str(current))}"></a></figure></div></section>')
     page='''<!doctype html><html><meta charset="utf-8"><title>Spice Bandits presentation comparison</title><style>body{font:16px system-ui;background:#16191f;color:#e8edf4;margin:32px}h1{font-size:28px}h2{font-size:21px}p{color:#bdc8d8;max-width:1000px;line-height:1.5}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0}img{width:100%;height:430px;object-fit:contain;background:black}section{margin:36px 0}figcaption{margin:8px 0}@media(max-width:900px){.pair{grid-template-columns:1fr}img{height:auto}}</style><h1>Original guide and current package</h1><p>The iPad recording guides composition and interaction. Each image keeps its own proportions: the recorded stretch is not copied into the app. States differ in timing, actions and progression. This review does not establish pixel equivalence or offline completion.</p>'''
     page+=f'<p>Package: <code>{package_sha}</code>. {len(entries)} paired states. Five package suites pass; their scopes remain separate from visual acceptance.</p>'+''.join(cards)+'</html>'

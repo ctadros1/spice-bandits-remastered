@@ -1,6 +1,6 @@
 # Local build
 
-The latest local r99 package restores separate aircraft bodies, the selected range and creep depth and passes nine native suites; live4x performance still fails. [Validation](VALIDATION.md) binds its package hashes and remaining limits. Source build gates now include110 air-body routing,393 selected-range and3,880 creep-depth comparisons.
+The latest local r100 package retains separate aircraft bodies, the selected range and creep depth, reuses prepared creep drawing data and passes all ten native suites including live performance. [Validation](VALIDATION.md) binds its package hashes and remaining limits. Source build gates now include110 air-body routing,393 selected-range and3,880 creep-depth comparisons.
 
 The project is pinned to Godot **4.7.2.stable.official.ed1daf0bf**, with the matching macOS export template. The local importer requires Python 3.9+, Pillow 12.3.0, and Apple's `afconvert`. Original inputs remain local beneath `original/`; the importer writes only derived assets, JSON, and its audit.
 

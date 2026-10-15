@@ -2,6 +2,16 @@
 
 These are earlier, package-specific records. Current status is in PLAN.md and VALIDATION.md. References to current packages inside these preserved records refer to their original checkpoint.
 
+## R100 prepared creep drawing and live gate, October15
+
+PCK `df9dea1b422a7e12104e6f7cdb67f298fba27c20d69e66c7cbc285f8b1b7351b`, executable `ebd32a9334652ff83185ad7d10d7bccdfcaab10db7e0abbbde1ffd1cfba4b3d8`, native helper `418d65538e54dc88edf74297c3fde790d6949c85f68513ed536e203a759bd9a5`.
+
+R100 reuses prepared creep layers and returns the exact completed growth plateau after400ms. It removes repeated pure fallback/animation and polynomial calculations without changing frame age, position, scale, alpha or RNG.435 source comparisons cover all29 populated resources; a fixed A/B/B/A microbenchmark measures selector3.171–3.237µs versus0.328–0.337 and completed growth1.241–1.312 versus0.455 per call. Those are bounded CPU measurements, not live inter-build speedup claims.
+
+All ten r100 native suites pass on one frozen package: presentation323/98 PNGs, menus184/55, tutorial88/20, audio50/23 WAVs, projectiles4, turns5, towers1, Desert1 and campaign148. Live1x24.133ms median/26.334ms p95,2x25.230/29.419 and4x31.759/34.917 meet the unchanged33.34ms median gate; world6.257/14.290 passes. All live/input-isolation guards pass with zero stalled frames. Three full-frame mesh/direct particle pairs and three eager/prepared creep-layer/completed-growth pairs match exact RGBA; the latter record200/161/99 actual draws per path.336 counted PNGs and23 WAVs retain15 supplemental frozen-comparison PNGs separately. Normal/retained-campaign saves, package resources, strict signature, isolation and process cleanup pass. These checks do not establish original-device pixels or complete offline fidelity. Evidence: builds/creep-layers-r100-native-suites.json and builds/creep-layers-benchmark-r100.json.
+
+The fresh r100 comparison binds41 paired states/11 inspected sheets to this PCK, executable and helper. It freezes/hashes82 full-resolution frame copies; the prior HTML linked mutable root galleries and could silently display later captures, while its retained sheets/manifest keep their historical scope. Both images retain their own proportions. Tutorial input/dismissal, camera, stock, progression and loading/result ages differ; matching-age result comparisons remain open. All original fidelity checklist items remain open. builds/presentation-comparison-r100-review.json records that review.
+
 ## R99 creep depth, October15
 
 R99 restores ground-creep depth from the initial RunDownRight untrimmed height, optional integer depth_pos and original float32 drawn-position truncation/map key.35 original constructor suffix branches,1,134 full supplied-position updates and126 attack-copy cases support3,880 source checks across all29 populated resources. A native helper computes the moving key while Main caches only immutable heights. Two Marine/tank overlap poses were inspected and retain exact battle pixels when enemy input reverses. Artwork positions/scales are unchanged; the older tower-depth fixture intentionally moves its Marine center from+30 to+11px to keep its original between-towers test with the now-retained38px height. This is a fixture change, not an unchanged-pixel comparison.

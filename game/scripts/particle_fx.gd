@@ -197,8 +197,12 @@ func draw_layer(layer: Layer, premultiplied: bool) -> void:
 	batch_draws+=1
 	if not is_instance_valid(app) or app.screen!="game":return
 	var zoom=1.0 if screen_space else app.map_scale()
+	var started=Time.get_ticks_usec()
 	var groups=SpiceNative.particle_batches(systems,premultiplied,clock_ms,Vector2.ZERO if screen_space else app.map_origin()-position,zoom,direct_triangles)
+	app.record_qa_time("particle_geometry",started)
+	started=Time.get_ticks_usec()
 	layer.set_meta("particle_meshes",draw_groups(layer,groups,zoom,direct_triangles))
+	app.record_qa_time("particle_submit",started)
 
 static func draw_groups(layer:CanvasItem,groups:Array,zoom:float,direct_triangles:bool=false) -> Array:
 	var meshes=[]

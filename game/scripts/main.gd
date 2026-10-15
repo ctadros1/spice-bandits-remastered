@@ -27,6 +27,9 @@ const MapDepth=preload("res://scripts/map_depth.gd")
 var tower_depth_cache:Dictionary={}
 var base_depth_cache:Dictionary={}
 var creep_depth_cache:Dictionary={}
+var reference_creep_layers=false
+var probe_creep_layers=false
+var creep_layer_usage={"cached":0,"reference":0}
 const TUTORIAL_CELLS = [Vector2i(7, 4), Vector2i(8, 6), Vector2i(6, 7), Vector2i(11, 3)]
 var main_menu_view=MainMenuView.new()
 var menu_bubbles=MenuBubbleView.new()
@@ -3085,14 +3088,19 @@ func draw_game() -> void:
 	draw_set_transform(Vector2.ZERO)
 	ClassicUI.draw_tower_info(self)
 
+func creep_layers(e:Dictionary,states:Dictionary) -> Array:
+	if not reference_creep_layers and e.has("visual_layers"):
+		if probe_creep_layers:creep_layer_usage.cached+=1
+		return e.visual_layers
+	if probe_creep_layers:creep_layer_usage.reference+=1
+	var state=sim.creep_animation(e)
+	if not states.has(state):state="Idle" if states.has("Idle") else str(states.keys()[0])
+	return e.get("visual_layers",[{"state":state,"rotation":0.0,"alpha":1.0,"born":e.born_ms}])
+
 func draw_creep_body(e:Dictionary,scale:float) -> void:
 	var position: Vector2 = e.get("visual_pos", e.pos)
-	var state = sim.creep_animation(e)
 	var set_name = "creeps/"+str(e.def.filename)
 	var states = Content.animations.get(set_name, {}).get("states", {})
-	if not states.has(state): state = "Idle" if states.has("Idle") else str(states.keys()[0])
-	var rate = float(states[state].get("speed", 17))
-	var frame = int(float(sim.clock_ms-e.born_ms)/1000.0*rate)
 	var growth = sim.spawn_presentation(e)
 	var tint = Color(0.55, 0.9, 1.0) if sim.clock_ms < sim.freeze_until else Color.WHITE
 	tint.a = growth.alpha
@@ -3100,7 +3108,7 @@ func draw_creep_body(e:Dictionary,scale:float) -> void:
 	var offset_values = e.def.traits.get("offset", [0, 0])
 	var native_scale = Vector2(scale_values[0], scale_values[1])*growth.scale
 	var native_offset = Vector2(offset_values[0], offset_values[1])
-	var layers = e.get("visual_layers", [{"state": state, "rotation": 0.0, "alpha": 1.0, "born": e.born_ms}])
+	var layers=creep_layers(e,states)
 	creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
 	for layer in layers:
 		if float(layer.alpha) <= 0: continue
