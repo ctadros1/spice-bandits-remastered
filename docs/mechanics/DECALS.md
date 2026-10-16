@@ -1,0 +1,38 @@
+# Original death-crater decals
+
+R125 connects a bounded original crater path to actual lethal damage. The current published all-ten backup remains R123 until the new native package review and recovery steps complete. This does not integrate the unfinished dying-owner/splash/particle lifecycle or prove complete offline fidelity.
+
+The preserved1.14 executable SHA256 remains `e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`. Original CMapArray constructor0x10ce60, CDecal constructor0x9d5bc, AddDecal0x9d760, Update0x9d6b0, manager Update0x9d9b0 and Render/RenderAll execute in bounded probes. Headers/cell lists are supplied for admission. Allocation/list operations/GL/quad/child destruction are explicit stubs; no complete map load, concurrent registry, original global RNG or GPU executes.
+
+## Behavior
+
+Original Map.Load0xffd90 constructs CMapArray using authored width_pixels/height_pixels. Its defaults are100px cells, per-cell capacity20, strict distance<30 and3 prior nearby entries before replacement. New entries go to the front of their cell list and the back of the global draw vector. On a fifth same-point birth, the fourth traversed older entry is marked and unhooked; the new entry keeps four cell members. The marked entry stays in the global vector/render route until the next manager update. Capacity is checked before density replacement.
+
+Negative or strictly out-of-world positions are rejected. Inclusive world edges and the final partial100px grid region create an unregistered decal with no density cell. The first port incorrectly rejected those positions;96 independent original cases exposed that difference. The corrected port retains them. Source assertions were not weakened.
+
+SetDie's crater callback uses logical position, one preserved crater_list texture, scale1 or authored1.6,4000ms hold,4000ms fade and no fade-in. The manager removes entries already marked at update entry, then advances the rest. At hold expiry, Update discards hold overflow, resets the phase clock and consumes the full current delta in fade. Exact float32 bits and the following-update removal are preserved. RenderAll retains global insertion order, including marked entries awaiting deletion. Original Render submits premultiplied alpha in all four color channels; Godot's decoded straight-alpha texture uses white RGB plus the same alpha. Original GPU/filtering/rounding equivalence remains open.
+
+Room.Update0xd2768 advances decals before UpdateGame, using the same scaled gameplay delta. Single-player StopSinglePlayerGame0xd4dd4 clears the running flag used by that update block. The bridge advances decals before each Simulation combat step, holds during pause and ends with the battle. New lethal damage therefore creates a fresh clock after that frame's decal advancement. Repeat lethal calls preserve the existing once-only reward guard and cannot create another crater.
+
+Main draws natural-size preserved crater textures after terrain/tutorial marks and before all ground/owner-before/body passes. Scale is uniform. It uses the same normal span in the ordered hit renderer; there is no new global shader. Actual crater selection uses an isolated visual RNG so it does not alter existing combat choices. The original shared rand stream and equivalent-input variant sequence remain unresolved. Base-impact destruction callbacks and complete SetDie/owner behavior are separate; this port connects the existing lethal damage path only.
+
+## Evidence and verification
+
+`tools/native_decal_reference.py` retains10 full constructor header cases,25 constructor/Update/manager/Render sequences (1105 states) and1536 full AddDecal admission cases. Spatial inputs include world/partial-cell edges, capacity, strict30px boundaries, null map-array and nonspatial types. Emulated operator-delete uses an explicit ARM return stub; preserved function/file bytes remain unchanged.
+
+`game/scripts/decal_view.gd` and `tools/decal_ui_verify.gd` pass6895 source/actual-Simulation comparisons: exact clock/alpha bits, admission/list order, next-update deletion, original render submissions, lethal creation, fresh logical position, pause/resume, authored scale and unchanged combat RNG/once-only rewards. The build gates the checker.
+
+The native source ordinary/ordered harness passes13 checks/10 frozen full-RGBA scene pairs, including a crater beneath real owners. It writes `builds/ordered-battle-r125` and its report/log. This proves current-path equivalence on supplied scenes, not original GPU identity. Ten packaged poses cover original art, owner occlusion, large scale, density replacement, hold/fade/expiry. All passed native metadata checks and were inspected full resolution on R125; R126/R127 copies are exact. Complete all-ten verification remains pending after the unchanged dense performance failures.
+
+The first checker alias shadowed Godot's native Decal class and failed parsing; its log is retained. The first admission port's96 failed edge cases, exact code/checker/report and log are retained in builds/decal-r125-first-admission-failure. No original bytes, expected state, numerical tolerance or performance limit were changed. Full scope and any later build/native failure belong in PLAN.md and the subsequent package record.
+
+
+R125/R126 verification and retained failures: both native presentation suites pass528 checks/208PNG. All10 new R125 states were inspected full resolution; R126 copies are byte-exact. R125 dense4x33.862/38.079 median/p95ms and R12634.700/37.949 FAIL the unchanged33.34ms median limit. Other eight suites were not run after performance. R126 has12 exact frozen reference/render-cache RGBA pairs, zero stalls and all protected save/package/isolation/cleanup guards pass. Only17 craters/update0.007ms per frame; the render cache has not demonstrated better live performance. Full failed apps/galleries/source snapshots are retained separately. CPU/live medians from evolving shared-host workloads do not isolate causation.
+
+R127 candidate adds only a native implementation of the existing pre-movement creep fields, with script reference/fallback.8987 serialized full-state float/type checks pass; ABBA64actor helper reference1.094/1.141us vs native wrapper0.492/0.487us per call. Separate original freeze/speed and simulation gates remain required; no new original behavior is claimed. Fresh build/all-ten review/backup remain pending.
+
+
+R127 native presentation528/208PASS, all10 craterPNG exact reviewedR125;193/198 priorR123 images exact/five changed random transition/shared-pointer states viewed. Dense4×35.115/39.489median/p95FAIL33.34; zero stalls/12RGBApairs/protectedguardsPASS. Full failed app/galleries/source521files retained separately; eight later suites not run. R128 reusable particle-key/white-default candidate passes512serialized exact geometry checks and bounded3072particle ABBA1.111–1.113ms vs0.831–0.835ms both-layer CPU. Original text-key path retained; no original arithmetic/ordering/quantization change. First fallback output-key type failure caught/corrected with source/report retained. Sampled frozenR127 diagnostic includes capture encoding/unsymbolized native stacks and cannot establish a specific cause. New package verification pending.
+
+
+R128 complete build passes all source/original gates. Nativepresentation528/208PASS; ten craterPNGexactreviewedR125. Dense4×33.429/37.142median/p95FAILunchanged33.34;1×25.591/27.249,2×26.108/30.959,world8.205/13.468.0stalls12frozenRGBApairs/12heldlivegeometrybytepairs/protectedguardsPASS. Other8suitesnotrun. Completefailedapp/galleries/source retained separately. Source checkpoint documents this failed release gate; R123 remains last all-ten and private app backup. No live causal speedup claim.

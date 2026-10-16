@@ -34,6 +34,8 @@ struct Ellipse {
 };
 struct Keys {
     const StringName count{"count"},frame{"frame"},loop{"loop"},divisor{"divisor"},multiplier{"multiplier"},stopped{"stopped"};
+    const StringName grow_ms{"grow_ms"},slow_pending{"slow_pending"},consumed_slow{"consumed_slow"},animation_divisor{"animation_divisor"},animation_multiplier{"animation_multiplier"},freeze_attached{"freeze_attached"},freeze_remaining{"freeze_remaining"},freeze_auxiliary_present{"freeze_auxiliary_present"},freeze_auxiliary_value{"freeze_auxiliary_value"},poison_count{"poison_count"},slow_count{"slow_count"};
+    const StringName view_clock_ms{"view_clock_ms"},real_alpha{"real_alpha"},color{"color"},size{"size"},life_cycle{"life_cycle"},scale{"scale"},scalable{"scalable"},use_real_size{"use_real_size"},rotational{"rotational"},region{"region"},size_offset{"size_offset"};
     const StringName hp{"hp"},state{"state"},aim{"aim"},native_air{"native_air"},air{"air"},owner{"owner"},target_owner{"target_owner"},pos{"pos"},speed{"speed"},slow{"slow"},grid{"grid"},cell{"cell"},next_cell{"next_cell"},progress{"move_progress"};
     const StringName velocity{"velocity"},rotation{"rotation"},rot_speed{"rot_speed"},alpha{"alpha"},born{"born"};
     const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"},owner_hidden{"owner_hidden"};
@@ -104,6 +106,7 @@ void integrate_particles(Array particles,const ParticleCoefficients &coefficient
 
 }
 void SpiceNative::_bind_methods() {
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_fields","actor","dt_ms","remaining"),&SpiceNative::advance_creep_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("frame_clock_advance","state","dt_ms"),&SpiceNative::frame_clock_advance);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_depth","center_y","height"),&SpiceNative::creep_depth);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_light","current","target","progress"),&SpiceNative::creep_light);
@@ -119,7 +122,7 @@ void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_systems","systems","clock_ms","emit_child","emit_batch","random","dt"),&SpiceNative::advance_systems,DEFVAL(Variant()),DEFVAL(0.03));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("emit_batch","system","clock_ms","random"),&SpiceNative::emit_batch);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("compile_particle","definition"),&SpiceNative::compile_particle);
-    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization"),&SpiceNative::particle_batches,DEFVAL(false));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization","reference_keys"),&SpiceNative::particle_batches,DEFVAL(false),DEFVAL(false));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("format_xp","value","compact"),&SpiceNative::format_xp,DEFVAL(true));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("projected_random_vector","latitude_rand","angle_rand"),&SpiceNative::projected_random_vector);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("water_table","seed"),&SpiceNative::water_table);
@@ -295,6 +298,27 @@ Dictionary SpiceNative::movement_tick(Vector2 start,Vector2 target,Vector2 futur
 }
 void SpiceNative::update_particle(Dictionary p,Dictionary d,double dt,double age) {
     ParticleCoefficients(d).integrate(p,dt,f32(age));
+}
+bool SpiceNative::advance_creep_fields(Dictionary actor,double dt_ms,int64_t remaining) {
+    const Keys &k=keys();
+    const float growth=f32(double(actor[k.grow_ms])+dt_ms);
+    const Variant pending=actor[k.slow_pending];
+    const bool consumed=double(pending)>0;
+    const Variant slow=consumed?pending:Variant(1.0);
+    const float speed=f32(double(actor[k.speed])*double(slow));
+    // Validate before mutation so unusual inputs retain the script fallback.
+    if(!std::isfinite(growth) || !std::isfinite(speed))return false;
+    const bool attached=actor.get(k.freeze_attached,false);
+    actor[k.grow_ms]=double(std::min(400.0f,growth));
+    actor[k.slow]=slow;actor[k.consumed_slow]=consumed;actor[k.slow_pending]=-1.0;
+    actor[k.animation_divisor]=speed!=0?double(f32(1000.0/double(speed))):std::numeric_limits<double>::infinity();
+    // ProcessSpeed reads attachment before ProcessFreeze releases it on expiry.
+    actor[k.animation_multiplier]=attached?0.0:1.0;
+    actor[k.freeze_remaining]=attached?remaining:int64_t(0);
+    if(attached && remaining<=0)actor[k.freeze_attached]=false;
+    if(!(attached && remaining>0) && bool(actor.get(k.freeze_auxiliary_present,false)) && !consumed)actor[k.freeze_auxiliary_value]=int64_t(0);
+    actor[k.poison_count]=int64_t(0);actor[k.slow_count]=int64_t(0);
+    return true;
 }
 bool SpiceNative::frame_clock_advance(Dictionary state,double dt_ms) {
     const Keys &k=keys();
@@ -476,8 +500,13 @@ void SpiceNative::emit_batch(Dictionary sys,double clock_ms,RandomNumberGenerato
     }
     sys[k.released]=clock_ms;
 }
-Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization) {
-    const Keys &k=keys();Array result;Texture2D *previous=nullptr;Variant current_texture;
+Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization,bool reference_keys) {
+    const Keys &k=keys();
+    // Keep the former text-key path selectable for exact geometry/CPU checks.
+    // Only dictionary lookup keys and an immutable white default are reused.
+    const auto lookup=[reference_keys](const char *text,const StringName &name)->Variant {return reference_keys?Variant(text):Variant(name);};
+    static const Array white=Array::make(1,1,1,1);
+    Array result;Texture2D *previous=nullptr;Variant current_texture;
     std::vector<Vector2> vertex_data,uv_data;std::vector<Color> color_data;std::vector<int32_t> index_data;
     auto flush=[&]() {
         if(vertex_data.empty())return;
@@ -492,24 +521,24 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
         if(bool(sys.get(k.owner_hidden,false)))continue;
         // Lobby cloud systems advance at separate caller-supplied clock
         // ratios. Keep their age while batching the shared texture in order.
-        const double view_clock=sys.get("view_clock_ms",clock_ms);
-        if((int(d.get("real_alpha",0))==1)!=premultiplied)continue;
-        const Array rgba=d.get("color",Array::make(1,1,1,1)),particles=sys[k.particles];
+        const double view_clock=sys.get(lookup("view_clock_ms",k.view_clock_ms),clock_ms);
+        if((int(d.get(lookup("real_alpha",k.real_alpha),0))==1)!=premultiplied)continue;
+        const Array rgba=d.get(lookup("color",k.color),(reference_keys?Array::make(1,1,1,1):white)),particles=sys[k.particles];
         Object *object=sys[k.texture];Texture2D *texture=Object::cast_to<Texture2D>(object);
         if(!texture)continue;
         const float tw=texture->get_width(),th=texture->get_height();
-        const double base_size=d.get("size",1),raw_life=d.get("life_cycle",1);
-        const float scale=f32(double(d.get("scale",0)));
-        const bool scalable=int(d.get("scalable",0))!=0,real_size=int(d.get("use_real_size",0))!=0,rotational=int(d.get("rotational",0))!=0;
+        const double base_size=d.get(lookup("size",k.size),1),raw_life=d.get(lookup("life_cycle",k.life_cycle),1);
+        const float scale=f32(double(d.get(lookup("scale",k.scale),0)));
+        const bool scalable=int(d.get(lookup("scalable",k.scalable),0))!=0,real_size=int(d.get(lookup("use_real_size",k.use_real_size),0))!=0,rotational=int(d.get(lookup("rotational",k.rotational),0))!=0;
         for(int pi=0;pi<particles.size();++pi) {
-            const Dictionary p=particles[pi];const Rect2 region=p["region"];
+            const Dictionary p=particles[pi];const Rect2 region=p[lookup("region",k.region)];
             const float age=f32(double(f32(view_clock/1000.0))-f32(double(p[k.born])/1000.0));
             float factor=1;
             if(scalable) {
                 const float progress=f32(double(age)/raw_life);
                 factor=scale<=1?f32(1.0-double(f32(double(f32(1.0-double(scale)))*progress))):f32(1.0+double(f32(double(scale)*progress)));
             }
-            const float half=f32((base_size+double(p["size_offset"]))*factor);
+            const float half=f32((base_size+double(p[lookup("size_offset",k.size_offset)]))*factor);
             const Vector2 shape=real_size?region.size*half:Vector2(half,half)*2.0f;
             const double alpha=p[k.alpha];
             Color tint(f32(double(rgba[0])),f32(double(rgba[1])),f32(double(rgba[2])),f32(double(rgba[3])*std::max(0.0,alpha)));

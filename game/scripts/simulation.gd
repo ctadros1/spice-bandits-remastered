@@ -4,6 +4,7 @@ extends RefCounted
 const PortalView=preload("res://scripts/portal_view.gd")
 const CreepPortal=preload("res://scripts/creep_portal_view.gd")
 const CreepHit=preload("res://scripts/creep_hit_view.gd")
+const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 var reference_spawn_presentation=false
 
@@ -42,6 +43,8 @@ var missiles: Array[Dictionary] = []
 var bubbles: Array[Dictionary] = []
 var animations: Dictionary = {}
 var enemy_missiles: Array[Dictionary] = []
+var decals=DecalView.new()
+var decal_rng=RandomNumberGenerator.new()
 var zones: Array[Dictionary] = []
 var mines: Array[Dictionary] = []
 var portals: Array[Dictionary] = []
@@ -112,6 +115,9 @@ func timed_section(key: String, started: int) -> int:
 func setup(data: Dictionary, map_data: Dictionary, mission: Dictionary, profile: Dictionary, seed: int = 114, animation_data: Dictionary = {}) -> void:
 	catalog = data
 	animations = animation_data
+	decals.setup(int(map_data.get("width_pixels",0)),int(map_data.get("height_pixels",0)))
+	# Isolated visual stream; original shared rand chronology remains open.
+	decal_rng.seed=seed ^ 0xDEC0
 	map = map_data
 	cell_positions.clear()
 	for y in range(int(map.hex_height)):
@@ -897,12 +903,28 @@ func bonuses(t: Dictionary) -> Dictionary:
 			result.rof = maxf(result.rof, f32(1.0 + float(support.def.get("rof_bonus", 0))/100.0))
 	return result
 
+func create_death_crater(e:Dictionary) -> Dictionary:
+	var name="creeps/"+str(e.def.filename)
+	var resource:Dictionary=animations.get(name,{})
+	if resource.is_empty() or e.get("crater_created",false):return {}
+	e.crater_created=true
+	var params:Dictionary=resource.get("params",{})
+	var choices:Array=params.get("crater_list",[])
+	if choices.is_empty():return {}
+	var choice=int(decal_rng.randi()%choices.size());var key=str(choices[choice])
+	var texture:Dictionary=resource.get("textures",{}).get(key,{})
+	if texture.is_empty():return {}
+	var result=decals.add(e.pos,str(texture.texture),float(params.get("crater_scale_factor",1)))
+	if not result.is_empty():result.merge({"owner_id":e.id,"resource":name,"variant":key})
+	return result
+
 func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
 	if e.hp<=0 or int(e.get("state",0)) in [2,3]:return
 	e.hp = f32(e.hp - amount)
 	if not e.has("hit_running"):e.merge(CreepHit.initial())
 	CreepHit.after_damage(e,kind)
 	if e.hp <= 0:
+		create_death_crater(e)
 		kills += 1
 		kill_chain += 1
 		var source_path = route(Vector2i(int(sources[e.source].x), int(sources[e.source].y)), Vector2i(int(bases[e.base].x), int(bases[e.base].y)), e.air) if e.base >= 0 else []
@@ -1232,6 +1254,9 @@ func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vec
 func step() -> void:
 	step_lookup_active = false
 	var timed = Time.get_ticks_usec() if profile_hotpaths else 0
+	# CRoom.Update advances global decals before UpdateGame combat births.
+	decals.advance(tick_ms)
+	if profile_hotpaths:timed=timed_section("decals",timed)
 	var previous_ms = clock_ms
 	clock_ms = int(f32(float(clock_ms)+tick_ms))
 	if map.has("water"):
@@ -1263,16 +1288,7 @@ func step() -> void:
 	if profile_hotpaths: timed = timed_section("spawn_paths", timed)
 	for e in enemies:
 		if e.hp <= 0: continue
-		e.grow_ms = minf(400, f32(float(e.grow_ms)+tick_ms))
-		e.slow = e.slow_pending if e.slow_pending > 0 else 1.0
-		e.consumed_slow=e.slow_pending>0
-		e.slow_pending = -1.0
-		var current_speed=f32(float(e.speed)*float(e.slow))
-		e.animation_divisor=f32(1000.0/current_speed) if current_speed!=0 else INF
-		e.animation_multiplier=0.0 if e.get("freeze_attached",false) else 1.0
-		CreepFreeze.process_creep(e,int(freeze_state.remaining))
-		e.poison_count = 0
-		e.slow_count = 0
+		CreepFreeze.advance_fields(e,tick_ms,int(freeze_state.remaining))
 		if e.float_until > 0 and clock_ms >= e.float_until:
 			e.air = e.native_air
 			e.float_until = 0

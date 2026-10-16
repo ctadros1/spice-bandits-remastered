@@ -165,8 +165,13 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (198 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (208 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
+            key_comparisons=manifest.get('particle_key_comparisons',[])
+            record['particle_key_comparisons']=key_comparisons
+            fresh=fresh and len(key_comparisons)==12
+            fresh=fresh and {(c.get('speed'),c.get('premultiplied'),c.get('quantized')) for c in key_comparisons}=={(s,p,q) for s in [1,2,4] for p in [False,True] for q in [False,True]}
+            fresh=fresh and all(c.get('exact_geometry_bytes') is True and c.get('groups',0)>0 and c.get('systems',0)>0 for c in key_comparisons)
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
             fresh=fresh and len(frame_comparisons)==3
@@ -174,6 +179,18 @@ def main():
                 usage=comparison.get('usage',{})
                 fresh=fresh and comparison.get('exact_rgba',False) and comparison.get('reference_error')==0 and comparison.get('prepared_error')==0
                 fresh=fresh and min(usage.get('cached',0),usage.get('reference',0))>0
+                for key in ['reference','prepared']:
+                    path=directory/comparison[key]
+                    fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns
+                    if path.exists():comparison[key+'_sha256']=digest(path)
+            decal_comparisons=manifest.get('decal_render_comparisons',[])
+            record['decal_render_comparisons']=decal_comparisons
+            fresh=fresh and len(decal_comparisons)==3
+            for comparison in decal_comparisons:
+                usage=comparison.get('usage',{})
+                fresh=fresh and comparison.get('exact_rgba',False) and comparison.get('reference_error')==0 and comparison.get('prepared_error')==0
+                fresh=fresh and min(usage.get('cached_frames',0),usage.get('reference_frames',0))>0
+                if comparison.get('decals',0)>0:fresh=fresh and min(usage.get('cached',0),usage.get('reference',0))>=comparison['decals']
                 for key in ['reference','prepared']:
                     path=directory/comparison[key]
                     fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns
@@ -222,6 +239,23 @@ def main():
             # sequence, rather than rounded JSON phases or a new tolerance.
             fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
+            decal_names = {'background', 'tower-only', 'ground-000', 'ground-tower-cover', 'ground-large', 'ground-density', 'ground-density-next', 'ground-hold', 'ground-fade', 'ground-expired'}
+            decal_names = {'decal-' + n for n in decal_names}
+            required.update(decal_names)
+            decal_poses = {c['name']: c for c in manifest['captures'] if c['name'] in decal_names}
+            decal_exact = len(decal_poses) == 10
+            if decal_exact:
+                fresh_decal = decal_poses['decal-ground-000']['decals'][0]
+                hold_decal = decal_poses['decal-ground-hold']['decals'][0]
+                fade_decal = decal_poses['decal-ground-fade']['decals'][0]
+                decal_exact = fresh_decal['clock_bits'] == 0 and fresh_decal['alpha_bits'] == 1065353216
+                decal_exact = decal_exact and hold_decal['clock_bits'] == 1165582336 and hold_decal['alpha_bits'] == 1065353216 and not hold_decal['fading']
+                decal_exact = decal_exact and fade_decal['clock_bits'] == 1157316608 and fade_decal['fading']
+                decal_exact = decal_exact and decal_poses['decal-ground-large']['decals'][0]['scale_bits'] == 1070386381
+                decal_exact = decal_exact and len(decal_poses['decal-ground-density']['decals']) == 5 and sum(d['deleted'] for d in decal_poses['decal-ground-density']['decals']) == 1
+                decal_exact = decal_exact and len(decal_poses['decal-ground-density-next']['decals']) == 4 and not decal_poses['decal-ground-expired']['decals']
+            fresh = fresh and decal_exact
+            record['decal_original_fields_and_manager_bridge_exact'] = decal_exact
             hit_names = {'normal', '000', '060', 'paused', 'expired', 'poison-first', 'poison-suppressed', 'secondary', 'status', 'tower-cover', 'air', 'air-status'}
             hit_names = {'creep-hit-' + n for n in hit_names}
             required.update(hit_names)

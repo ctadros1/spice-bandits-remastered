@@ -33,6 +33,10 @@ var reference_creep_hits=false
 var battle_uses_ordered_canvas=false
 var battle_draw_target:CanvasItem=self
 var creep_render_poses:Dictionary={}
+var decal_render_cache:Dictionary={}
+var reference_decal_rendering=false
+var probe_decal_rendering=false
+var decal_render_usage={"cached":0,"reference":0,"cached_frames":0,"reference_frames":0}
 var battle_span_started=0
 var ordered_battle_canvas
 var animation_epoch=0
@@ -1554,6 +1558,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	effects.clear()
 	continuous_beams.clear()
 	particle_fx.reset()
+	decal_render_cache.clear()
 	result_saved = false
 	hud_money_flash=ClassicUI.Wallet.flash_initial()
 	if qa_demo and id == "8":
@@ -3153,8 +3158,36 @@ func append_creep_draw_commands(commands:Array,creep:Dictionary,scale:float,miss
 		commands.append({"draw":draw_creep_body.bind(creep,scale,missiles,2)})
 	else:commands.append({"draw":draw_creep_body.bind(creep,scale,missiles)})
 
+func draw_game_decals() -> void:
+	if probe_decal_rendering:decal_render_usage["reference_frames" if reference_decal_rendering else "cached_frames"]+=1
+	for decal in sim.decals.items:
+		if reference_decal_rendering:
+			var texture=Content.tex(str(decal.texture))
+			if texture==null:continue
+			var size=texture.get_size()*float(decal.scale)
+			battle_draw_target.draw_texture_rect(texture,Rect2(decal.position-size/2,size),false,Color(1,1,1,float(decal.alpha)))
+			if probe_decal_rendering:decal_render_usage.reference+=1
+			continue
+		var pose=decal_render_cache.get(int(decal.id))
+		if pose==null or pose.path!=decal.texture or pose.position!=decal.position or pose.scale!=decal.scale:
+			var texture=Content.tex(str(decal.texture));var rect=Rect2()
+			if texture!=null:
+				var size=texture.get_size()*float(decal.scale);rect=Rect2(decal.position-size/2,size)
+			pose={"texture":texture,"rect":rect,"path":decal.texture,"position":decal.position,"scale":decal.scale};decal_render_cache[int(decal.id)]=pose
+		if pose.texture!=null:
+			battle_draw_target.draw_texture_rect(pose.texture,pose.rect,false,Color(1,1,1,float(decal.alpha)))
+			if probe_decal_rendering:decal_render_usage.cached+=1
+	# Geometry is immutable; alpha remains live. Bound stale entries between
+	# removals, and validate geometry when a QA reset reuses an ID.
+	if decal_render_cache.size()>sim.decals.items.size()+32:
+		var live={}
+		for decal in sim.decals.items:live[int(decal.id)]=true
+		for key in decal_render_cache.keys():
+			if not live.has(key):decal_render_cache.erase(key)
+
 func draw_game_prelude(scale:float) -> void:
 	battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	draw_game_decals()
 	for z in sim.zones:
 		if z.has("bubble"): continue
 		battle_draw_target.draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))

@@ -14,6 +14,7 @@ class SpiceNative : public RefCounted {
 protected:
     static void _bind_methods();
 public:
+    static bool advance_creep_fields(Dictionary actor, double dt_ms, int64_t remaining);
     static bool frame_clock_advance(Dictionary state, double dt_ms);
     static bool in_range(Vector2 a, Vector2 b, double radius, double hex_height);
     static PackedInt32Array range_candidates(Array entries, Vector2 position, double radius, double hex_height, int aim);
@@ -28,7 +29,7 @@ public:
     static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);
     static void emit_batch(Dictionary system, double clock_ms, RandomNumberGenerator *random);
     static int64_t compile_particle(Dictionary definition);
-    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom, bool mesh_color_quantization = false);
+    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom, bool mesh_color_quantization = false, bool reference_keys = false);
     static String format_xp(double value, bool compact = true);
     static Vector2 projected_random_vector(int64_t latitude_rand, int64_t angle_rand);
     static Dictionary bolt_ribbon(PackedVector2Array path, int64_t pass_id, double opacity);

@@ -18,11 +18,11 @@ func compare(name:String) -> void:
 	var ordered=await capture(true)
 	var exact=reference.get_data()==ordered.get_data()
 	check(exact,"exact reference/ordered full RGBA "+name)
-	var folder="res://../builds/ordered-battle-r121/"
+	var folder="res://../builds/ordered-battle-r125/"
 	reference.save_png(folder+name+"-reference.png");ordered.save_png(folder+name+"-ordered.png")
 	pairs.append({"name":name,"exact_full_rgba":exact,"width":reference.get_width(),"height":reference.get_height()})
 func run() -> void:
-	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://../builds/ordered-battle-r121"))
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://../builds/ordered-battle-r125"))
 	app=load("res://scripts/main.gd").new();app.set_meta("qa_fixture",true);root.add_child(app);app.set_process(false)
 	app.start_mission("1",true,false);app.tutorial=null;app.qa_gallery=true;app.refresh_controls();app.notice_until=0
 	app.animation_delta_ms=0
@@ -36,6 +36,8 @@ func run() -> void:
 	await compare("tower-creep-overlap")
 	enemy.draw_light=.3;enemy.freeze_remaining=1000
 	await compare("status-after-body")
+	app.sim.decals.add(app.sim.center(8,6),"assets/sfx/craters/crater_1.png",1.0)
+	await compare("decal-under-owners")
 	enemy.visual_layers=[{"state":"RunDown","alpha":.4,"rotation":15.0,"born":0},{"state":"RunRight","alpha":.6,"rotation":-15.0,"born":0}]
 	await compare("dual-clock-rotation-status")
 	app.selected_tower=app.sim.towers[0].id
@@ -54,5 +56,5 @@ func run() -> void:
 	await capture(false)
 	check(not app.ordered_battle_canvas.visible,"reference path hides stale ordered span pool")
 	var report={"checks":checks,"failures":failures,"pairs":pairs,"scope":"Native source Main reference/ordered no-hit equivalence on supplied frozen scenes. No packaged/runtime hit bridge, whole original draw registry or GPU equivalence claim."}
-	var out=FileAccess.open("res://../builds/ordered-battle-r121-verification.json",FileAccess.WRITE);out.store_string(JSON.stringify(report,"\t"));out.close()
+	var out=FileAccess.open("res://../builds/ordered-battle-r125-verification.json",FileAccess.WRITE);out.store_string(JSON.stringify(report,"\t"));out.close()
 	print("ORDERED_BATTLE ",JSON.stringify(report));app.free();quit(0 if failures.is_empty() else 1)

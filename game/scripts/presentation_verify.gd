@@ -30,6 +30,13 @@ func advance_result_until(time:float) -> void:
 		await get_tree().process_frame
 		RenderingServer.force_draw(true)
 
+func decal_birth(type:int,id:int,point:Vector2) -> Dictionary:
+	var enemy=app.sim.spawn_enemy(type,0,"",id,false)
+	enemy.pos=point;enemy.visual_pos=point;enemy.path=[]
+	app.sim.damage(enemy,float(enemy.max_hp)*10)
+	app.sim.advance_frame(0)
+	return app.sim.decals.items[-1]
+
 func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false) -> void:
 	var prior_result_renders=app.qa_result_render_count
 	if settle_portrait:app.portrait_view.advance(0.5)
@@ -88,6 +95,10 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 				var state=owner.render_animators[key]
 				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
+	if name.begins_with("decal-"):
+		record.decals=app.sim.decals.items.map(func(d):return {"id":d.id,"texture":d.texture,"position":[d.position.x,d.position.y],"scale_bits":PackedFloat32Array([d.scale]).to_byte_array().decode_u32(0),"clock_bits":PackedFloat32Array([d.clock]).to_byte_array().decode_u32(0),"alpha_bits":PackedFloat32Array([d.alpha]).to_byte_array().decode_u32(0),"deleted":d.deleted,"fading":d.fading,"variant":d.get("variant","")})
+		record.decal_cells=app.sim.decals.cells.values().map(func(members):return members.size())
+		record.limit="Controlled actual Simulation lethal callback/zero-delta cleanup and original-decal clock poses, real preserved textures under Main ground/owner passes. Existing immediate creep removal is not corrected here. No original global RNG/GPU/whole owner/death fidelity claim."
 	if name.begins_with("creep-hit-"):
 		record.hit_fields=app.sim.enemies.map(func(e):return {"id":e.id,"active":e.get("hit_active",false),"running":e.get("hit_running",false),"elapsed_bits":PackedFloat32Array([e.get("hit_elapsed",0.0)]).to_byte_array().decode_u32(0),"last_kind":e.get("hit_last_kind",0),"freeze_remaining":e.get("freeze_remaining",0),"native_air":e.native_air})
 		record.ordered_canvas=app.battle_uses_ordered_canvas
@@ -1105,6 +1116,60 @@ func run() -> void:
 	hit_air.freeze_remaining=1000
 	await snapshot("creep-hit-air-status")
 	check(hit_air.native_air and hit_air.hit_active and app.battle_uses_ordered_canvas,"native resource-class aircraft retain the ordered hit bridge")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls();app.sim.enemies.clear();app.animation_delta_ms=0
+	var decal_point=app.sim.center(8,6)
+	await snapshot("decal-background")
+	var decal_background=get_viewport().get_texture().get_image()
+	check(app.sim.build(Vector2i(8,6),1).is_empty(),"decal coverage fixture builds an original Minigun")
+	var decal_cover_tower=app.sim.towers[0]
+	await snapshot("decal-tower-only")
+	var decal_tower_image=get_viewport().get_texture().get_image()
+	app.sim.towers.clear()
+	var decal_first=decal_birth(1,982,decal_point)
+	await snapshot("decal-ground-000")
+	var decal_only=get_viewport().get_texture().get_image()
+	check(decal_first.clock==0 and decal_first.alpha==1 and decal_first.position==decal_point,"native lethal crater is fresh at original logical position")
+	app.sim.towers.append(decal_cover_tower)
+	await snapshot("decal-ground-tower-cover")
+	var decal_combined=get_viewport().get_texture().get_image();var decal_overlap=0;var decal_covered=0
+	for y in range(depth_rect.position.y,decal_only.get_height()):
+		for x in range(decal_only.get_width()):
+			var background=decal_background.get_pixel(x,y);var crater=decal_only.get_pixel(x,y);var tower=decal_tower_image.get_pixel(x,y)
+			if crater==background or tower==background or crater==tower:continue
+			decal_overlap+=1
+			if decal_combined.get_pixel(x,y)==tower:decal_covered+=1
+	check(decal_overlap>=20 and decal_covered>=20,"native opaque owner pixels cover overlapping crater art")
+	captures[-1].decal_coverage={"overlap":decal_overlap,"covered":decal_covered}
+	app.sim.towers.clear();app.sim.decals.setup(int(app.sim.map.width_pixels),int(app.sim.map.height_pixels))
+	var decal_large_type=-1
+	for type in Content.catalog.tower_creeps.size():
+		if str(Content.catalog.tower_creeps[type].get("filename",""))=="creep5":decal_large_type=type;break
+	var decal_large=decal_birth(decal_large_type,983,decal_point)
+	await snapshot("decal-ground-large")
+	check(decal_large.scale==preload("res://scripts/decal_view.gd").f32(1.6),"native actual resource retains the authored large-crater scale")
+	app.sim.decals.setup(int(app.sim.map.width_pixels),int(app.sim.map.height_pixels))
+	# Five same-point births: the fifth marks/unhooks the fourth traversed
+	# older cell entry; actual manager cleanup runs on the following update.
+	for index in range(5):
+		var decal_enemy=app.sim.spawn_enemy(1,0,"",984+index,false);decal_enemy.pos=decal_point;decal_enemy.visual_pos=decal_point;decal_enemy.path=[]
+		app.sim.damage(decal_enemy,float(decal_enemy.max_hp)*10)
+	app.sim.enemies.clear()
+	await snapshot("decal-ground-density")
+	check(app.sim.decals.items.size()==5 and app.sim.decals.items.filter(func(d):return d.deleted).size()==1 and app.sim.decals.cells.values()[0].size()==4,"native original density replacement retains marked global decal until next update")
+	app.sim.advance_frame(0)
+	await snapshot("decal-ground-density-next")
+	check(app.sim.decals.items.size()==4,"native following manager update removes marked density entry")
+	app.sim.decals.setup(int(app.sim.map.width_pixels),int(app.sim.map.height_pixels))
+	var decal_clock=decal_birth(1,990,decal_point)
+	for index in range(133):app.sim.advance_frame(30)
+	await snapshot("decal-ground-hold")
+	check(decal_clock.clock==3990 and not decal_clock.fading and decal_clock.alpha==1,"native original crater hold lasts before exact4000ms switch")
+	for index in range(67):app.sim.advance_frame(30)
+	await snapshot("decal-ground-fade")
+	check(decal_clock.fading and decal_clock.clock==2010 and decal_clock.alpha>0 and decal_clock.alpha<1,"native original switch frame consumes its full delta in fade")
+	for index in range(68):app.sim.advance_frame(30)
+	await snapshot("decal-ground-expired")
+	check(app.sim.decals.items.is_empty(),"native expired crater is deleted by the following manager update")
 	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2

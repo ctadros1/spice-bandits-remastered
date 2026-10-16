@@ -26,3 +26,20 @@ static func speed(base:float,first:float,second:float,pending:float,attached:boo
 	var slow=pending>0
 	if slow:current=f32(current*f32(pending))
 	return {"current":current,"divisor":f32(1000.0/current) if current!=0 else INF,"multiplier":0.0 if attached else 1.0,"pending":-1.0 if slow else pending,"consumed_slow":slow}
+
+# Existing Simulation pre-movement fields, with exact script reference/fallback.
+# Does not port additional original callers or change float/disco/hit ordering.
+static func advance_fields(creep:Dictionary,dt_ms:float,remaining:int) -> void:
+	if SpiceNative.advance_creep_fields(creep,dt_ms,remaining):return
+	reference_fields(creep,dt_ms,remaining)
+static func reference_fields(creep:Dictionary,dt_ms:float,remaining:int) -> void:
+	creep.grow_ms=minf(400,f32(float(creep.grow_ms)+dt_ms))
+	creep.slow=creep.slow_pending if creep.slow_pending>0 else 1.0
+	creep.consumed_slow=creep.slow_pending>0
+	creep.slow_pending=-1.0
+	var current_speed=f32(float(creep.speed)*float(creep.slow))
+	creep.animation_divisor=f32(1000.0/current_speed) if current_speed!=0 else INF
+	creep.animation_multiplier=0.0 if creep.get("freeze_attached",false) else 1.0
+	process_creep(creep,remaining)
+	creep.poison_count=0
+	creep.slow_count=0
