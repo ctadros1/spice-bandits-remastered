@@ -1,0 +1,62 @@
+{
+  "archive_kind": "preliminary-research-only",
+  "source_commit": "07823e50c13db23709252e566508d64230b8ae1b",
+  "source_files_verified": 535,
+  "evidence_files_verified": 33,
+  "evidence_bytes": 134243,
+  "source_empty_clone_verified": true,
+  "research_zip_crc_safe_empty_restore_verified": true,
+  "original_trace_reproduces_exactly": true,
+  "original_states": 18,
+  "child_factory_calls": 2,
+  "child_updates": 21,
+  "allocated_particles": 8,
+  "owned_deletes": 10,
+  "game_runtime_changed": false,
+  "latest_verified_app": "backup-2026-10-16-r135",
+  "r135_pck_sha256": "58d87926b59bca3354842cf7ec03da34ae435da1e1ce2b96ff3da60c60ca4307",
+  "r135_native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "4b0a2e730cf5e8f3836ecb072b836b7a3549f8b94ba40dd63d863421765239d3"
+  },
+  "four_protected_saves_unchanged": true,
+  "offline_complete": false,
+  "scope": "PRELIMINARY original child-owner research only. One controlled18-state trace,15read-only decompiles,21-edge catalog graph, pre-port supplied-packet failure/correction and deterministic repeat proof. No runtime/app change after verified R135. Original factory/real authored parameters/motion/render/GPU/whole room still open.",
+  "private": true,
+  "published": true,
+  "release_tag": "research-2026-10-16-r136-child-owner",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/research-2026-10-16-r136-child-owner",
+  "assets": [
+    {
+      "name": "r136-research-source.bundle",
+      "bytes": 2067538,
+      "sha256": "1abe329f72b3d602777f58ea4f410cd2628a0772a1e47ea7126ccde1b854c195"
+    },
+    {
+      "name": "particle-child-r136-research.zip",
+      "bytes": 35219,
+      "sha256": "a5eaba3066b93e077236cb032314a3f5fcd375827ac61dade0427742379ff4b8"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 105467,
+      "sha256": "a6cf329b638b5343c17578e22ec3eb037445efd4c7b87b9ed87ea7e7aa65bf16"
+    },
+    {
+      "name": "RESEARCH-MANIFEST.json",
+      "bytes": 6744,
+      "sha256": "61dd41bd76154f74e0eff9ca1fd86354f85ff29139d9ce103dc5679ae870c951"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 905,
+      "sha256": "80d174b79fce6bf494e9f503a94ddd9ff09db96352d1ebbc4f77231a9caee727"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1215,
+      "sha256": "2238c5bbc2e669cf22e15f1704752895d259ec01ca986b040deeed62935850cc"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-16T18:16:47.987475+00:00"
+}
