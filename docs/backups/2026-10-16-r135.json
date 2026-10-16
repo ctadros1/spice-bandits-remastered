@@ -1,0 +1,100 @@
+{
+  "pck_sha256": "58d87926b59bca3354842cf7ec03da34ae435da1e1ce2b96ff3da60c60ca4307",
+  "executable_sha256": "98a55f0188f6158d585624feccf470d3a25a786a0083845901d9a27facf76438",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "4b0a2e730cf5e8f3836ecb072b836b7a3549f8b94ba40dd63d863421765239d3"
+  },
+  "source_commit": "660f30d28a1fbff6c2451832f37d0c4b9d257d7d",
+  "source_commit_created": true,
+  "signed_and_pushed": true,
+  "all_ten_native_passed": true,
+  "counted_png": 452,
+  "supplemental_comparison_png": 27,
+  "wav": 23,
+  "evidence_files_verified": 1237,
+  "presentation_checks": 539,
+  "audio_checks": 73,
+  "creep_animator_source_checks": 14408,
+  "runtime_scripts": 76,
+  "animator_source_checks": 38129,
+  "portal_source_checks": 42580,
+  "native_decal_poses_inspected": 10,
+  "decal_source_checks": 6895,
+  "death_burst_source_checks": 8248,
+  "native_burst_poses_inspected": 6,
+  "prior_r133_native_particle_reset_checks": 3,
+  "local_clock_source_checks": 65741,
+  "particle_life_source_checks": 1171,
+  "original_lifetime_boundaries": 63,
+  "authored_lifetimes": 21,
+  "death_field_source_checks": 27469,
+  "native_creep_fields_source_checks": 8987,
+  "particle_geometry_source_checks": 512,
+  "held_live_particle_geometry_pairs": 12,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_comparison_sheets_inspected": 4,
+  "unchanged_comparison_sheets_exact": 8,
+  "source_bundle_tracked_files_verified": 531,
+  "offline_complete": false,
+  "scope": "Supplement to verified earlier releases/full r89 workspace. Universal2 compiled, Apple Silicon execution. Originals/proportions/profiles preserved. No Intel/Finder/Gatekeeper/notarization/current physical input/speaker/original-device equivalence. Full animator/owner/registry/death/GPU and hosted progression remain unresolved. Later publication record excluded.",
+  "evidence_archive_files_verified": 1237,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 415235721,
+  "release_tag": "backup-2026-10-16-r135",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r135",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r135-macOS.zip",
+      "bytes": 330966390,
+      "sha256": "35a6eac2ba65502a819f9cf08c273f50c92f9e845e11090460c83a80c1109363"
+    },
+    {
+      "name": "r135-verification-evidence.tar.gz",
+      "bytes": 1346121306,
+      "sha256": "bbd8597cb3664ba6ae501ebcc3c7a32b4420784b337aa5fc913c68a28c384332"
+    },
+    {
+      "name": "r135-package-restoration.zip",
+      "bytes": 1519740,
+      "sha256": "01723d7826184667b7c8fdda47ee785c7bebab8e1343b18e0c24fc1dc10e532e"
+    },
+    {
+      "name": "r135-source.bundle",
+      "bytes": 2046922,
+      "sha256": "66dd88d0c29be905e9139c65aacfafe2bb2acf5e4ce8024a32045fb21dc1e29b"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 104786,
+      "sha256": "7f50574e23c53d7fe947de5d838f81744023db4b7481408ed02d1b6f00dfe1af"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1395,
+      "sha256": "5b7d61f42541492eb89e786e7fb9fc26b851878ad15808ba0844e316deb8ad2d"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 233615,
+      "sha256": "aee4be9549ddea5c0984a4007b1b24684397a27911d767605c96b8753934eb86"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 347,
+      "sha256": "5a9928395ce93f3d54a5f841eafb2850e80767eadc491a944a08c78f126e3cf3"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 2137,
+      "sha256": "74f19c74a74aaaf92d04978be4155eacf0f4f432c8c12409aa742bed421d1b0a"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-16T18:02:43.376391+00:00"
+}
