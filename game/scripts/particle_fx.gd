@@ -37,6 +37,8 @@ func _ready() -> void:
 
 func reset() -> void:
 	systems.clear();timers.clear();clock_ms=0.0;clock_seconds=0.0;serial=0;random.seed=114
+	# CanvasItem retains prior commands until its next draw notification.
+	for layer in layers:layer.queue_redraw()
 
 func emit_system(name: String, point: Vector2, variation: String = "", owner: String = "", duration_ms: int = 0, direction: Vector2 = Vector2.ZERO, object_owner: int = -1) -> void:
 	var started=Time.get_ticks_usec()

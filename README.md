@@ -4,6 +4,8 @@ Reconstruct Spice Bandits 1.14 for macOS, preserving its original appearance, ca
 
 R129 passes all ten local packaged verification suites, including the unchanged performance limit. Original crater admission/lifetime/rendering is now connected; complete original appearance, effect ownership and progression remain under reconstruction. The [private R129 recovery checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r129) is published with verified source, app restoration and evidence checksums.
 
+The newer R133 reset fix passes source and presentation checks, but both packaged runs fail the unchanged performance limit. Its failures are preserved; R129 remains the fully verified app backup. Full death-effect ownership and timing remain open.
+
 Start with [PLAN.md](PLAN.md). Supporting material:
 
 - [Research findings](research/GAMEPLAY_FINDINGS.md): observed behavior, evidence conflicts, and fidelity targets.
@@ -15,7 +17,7 @@ Start with [PLAN.md](PLAN.md). Supporting material:
 
 As of October16,2026, the offline reconstruction is incomplete. Its saved simulation campaign reaches Madagascar, but the packaged app still differs substantially from the original interface, interactions and animation. The iPad TouchGameplay recording is the main presentation guide, with original asset proportions on a fixed iPad canvas. Multiplayer and expansion remain deferred. See [required differences](docs/FIDELITY.md), [mechanics evidence](docs/mechanics/BASELINE.md), and [verification](docs/VALIDATION.md).
 
-The current R123 package passes all ten native verification suites, including the unchanged performance gate. Recovered creep hit timing and per-owner additive drawing are connected; visual identity and complete offline reconstruction remain unproven. [Hit evidence](docs/mechanics/CREEP_HIT.md) records scope, visual review and preserved failures. The signed R123 source and [private app/evidence checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r123) have verified source/app restoration and all17 remote asset hashes/sizes.
+The historical R123 package passes all ten native verification suites, including the unchanged performance gate. Recovered creep hit timing and per-owner additive drawing are connected; visual identity and complete offline reconstruction remain unproven. [Hit evidence](docs/mechanics/CREEP_HIT.md) records scope, visual review and preserved failures. The signed R123 source and [private app/evidence checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r123) have verified source/app restoration and all17 remote asset hashes/sizes.
 
 See [offline release notes](docs/OFFLINE_RELEASE.md) for the verified scope and remaining differences.
 

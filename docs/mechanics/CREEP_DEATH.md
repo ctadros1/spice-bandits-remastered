@@ -1,5 +1,12 @@
 # Original creep death lifecycle: field port and integration gaps
 
+Current bounded integration (R130–R133): Main.kill now requests one initial burst for each sorted original explosion alias instead of a500ms smoke emission window.8248 source checks cover100 supplied original creation packets,50 original parent tails,29 actual Main.kill branches and46 live Main frames with pause/resume and exact clock bits. All preserved aliases resolve, including creep7's valid Creep6ExplosionParts binding. Six native poses pass clock/count auditing.
+
+R133 also clears cached drawing on ParticleFX.reset, proven with actual native before/after framebuffers. Both packaged R133 runs fail the unchanged performance gate (4×35.215 then34.141ms median); each passes539 presentation checks/214PNG and protection guards, with other8 suites not run. R132 passed all10 suites but retained stale drawing in3 wave poses. Failures are preserved. R129 remains the latest fully verified private app. This is not full original SetDie/owned lifecycle: logical caller anchor, child ownership, late-born local clocks, retained dying actors, splash, owner ordering, destructor and campaign timing remain open.
+
+The following R124 notes describe the earlier disconnected helper and its original evidence.
+
+
 R124 adds a disconnected source helper and reproducible original-code fixtures. The current verified macOS game and private recovery checkpoint remain R123; no new death behavior is enabled in Main or Simulation. Complete offline fidelity remains incomplete.
 
 The preserved decrypted1.14 executable SHA256 is `e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`. Original compiled functions execute in bounded ARM probes with supplied records and explicit stubs. These are not authentic source, original game execution or original-device pixels.

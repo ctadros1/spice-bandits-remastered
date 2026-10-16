@@ -1,5 +1,7 @@
 # Offline reconstruction verification, October 16, 2026
 
+Current candidate status: R133 reset-cache correction passes the native3-check framebuffer proof and full source build. Both packaged presentation runs pass539 checks/214PNG; unchanged dense4× performance fails35.215 then34.141ms median against33.34ms. The one repeat is retained alongside the first failure; other8 suites were not run. Four protected saves, package identity, signature, isolated QA and process cleanup pass. R132 all-ten pass is retained with its later visual-review failure. R129 remains the latest fully verified published private app. See [the current plan](../PLAN.md) and [death integration limits](mechanics/CREEP_DEATH.md).
+
 Offline reconstruction remains incomplete. R129 is a tested local Apple Silicon package, with Universal2 compilation. Intel execution, physical trackpad/speaker review and notarized distribution remain unverified.
 
 R129 is the latest all-ten verified macOS package. It restores bounded original lethal crater admission, insertion/removal order,4000ms hold/fade and natural preserved art before owners. Inclusive world/partial-cell edges, strict30px density handling and once-only lethal creation follow supplied original function executions. Fixed4:3 proportions and original files/saves are preserved. Full offline fidelity remains incomplete.
