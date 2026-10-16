@@ -1,0 +1,96 @@
+{
+  "pck_sha256": "f0037cee708fc8590ed00b4000975ae6f71a9d03f9bc8f54c8501d7e4eca08e4",
+  "executable_sha256": "fbe2153c9f52a87d4bfb6af89d37a642fa30994f40c6bd973f39638a5e6a2834",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "9042c2ea41474ae60c3b63e47dea65b1093c4002fe0e06c77ce30c64d57d9729"
+  },
+  "source_commit": "1bf82accc4da82a3a5219bd0eaa4e6344e5301b2",
+  "signed_and_pushed": true,
+  "all_ten_native_passed": false,
+  "candidate_accepted": false,
+  "archive_kind": "failed-candidate-recovery",
+  "performance_gate_ms": 33.34,
+  "performance_4x_medians_ms": [
+    35.215,
+    34.141
+  ],
+  "other_eight_suites": "NOTRUN",
+  "presentation_checks": 539,
+  "presentation_png": 214,
+  "evidence_files_verified": 2330,
+  "source_bundle_tracked_files_verified": 525,
+  "native_particle_reset_checks": 3,
+  "death_burst_source_checks": 8248,
+  "native_burst_poses_exact_to_reviewed_r132": 6,
+  "prior_r129_poses_exact": 203,
+  "prior_r129_poses_inspected": 5,
+  "failed_source_snapshots_empty_clone_verified": 5,
+  "offline_complete": false,
+  "latest_fully_verified_app_backup": "backup-2026-10-16-r129",
+  "comparison_guide_status": "Generated R132 unreviewed; frozen reviewed R129 retained. No R133 accepted guide.",
+  "scope": "Failed-candidate recovery archive, NOT accepted app: R133 native reset proof/source build/presentation pass, performance gate fails both first run and single preregistered repeat; other eight suites NOTRUN. Full original fidelity incomplete. Preserves exact R130/R131 audit failures, all-ten R132 visual review failure, both R133 performance failures, all clean source restorations and before/after native reset proof. Current generated R132 guide UNREVIEWED; reviewed R129 guide separate. Last fully verified private app remains R129; full originals/toolchains/workspace R89.",
+  "evidence_archive_files_verified": 2330,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 415208417,
+  "release_tag": "backup-2026-10-16-r133-failed-candidate",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r133-failed-candidate",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r133-macOS.zip",
+      "bytes": 330965742,
+      "sha256": "ca69cfd0cb00043cf3cc39ed48b46cd8c27a92f2f666e308e445179bbefa1f2a"
+    },
+    {
+      "name": "r133-verification-evidence.tar.gz.part-001",
+      "bytes": 1900000000,
+      "sha256": "de146f668f34b833ad8641dd6c0f8d65d8f54b63a4d1ad68702b415a009e5c75"
+    },
+    {
+      "name": "r133-verification-evidence.tar.gz.part-002",
+      "bytes": 1731275071,
+      "sha256": "29d2c15f29007b56a15f32eb3c372c6dfd6e6c4759f1360fa7938c5fcf56bcef"
+    },
+    {
+      "name": "r133-package-restoration.zip",
+      "bytes": 1519695,
+      "sha256": "ebe46c392b6920d4cc68d80630d2dc975ff1a3a8f6ab548faf7a0804484aaf2d"
+    },
+    {
+      "name": "r133-source.bundle",
+      "bytes": 2022979,
+      "sha256": "602c230703154525896b8b21dc5f6f8a3e74d2cb51ccf589b0a6ad06ad9d2947"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 103570,
+      "sha256": "50fc78aefe88986b29c8f257536e6eae89cd5525bf098c8026c7bcf9d976acd1"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1475,
+      "sha256": "6d2bcb21d6915a8e22caf8e79ed19270865a32e4963d4dad98b957eca82d9cab"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 482810,
+      "sha256": "b568e25d320057707248bb179dd6c0e709c7c041dd546a68bac72b4822ad6873"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 539,
+      "sha256": "3d00b75ad427a821cb06f66d602602daf2db5effc6477d88b9acf35f69b38fa7"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 2097,
+      "sha256": "1a0ab9a16bbf89f00f4d138d98f77eeaf391ab076a9e1725668c820c93868a74"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-16T17:29:25.997412+00:00"
+}
