@@ -35,7 +35,7 @@ struct Ellipse {
 struct Keys {
     const StringName count{"count"},frame{"frame"},loop{"loop"},divisor{"divisor"},multiplier{"multiplier"},stopped{"stopped"};
     const StringName grow_ms{"grow_ms"},slow_pending{"slow_pending"},consumed_slow{"consumed_slow"},animation_divisor{"animation_divisor"},animation_multiplier{"animation_multiplier"},freeze_attached{"freeze_attached"},freeze_remaining{"freeze_remaining"},freeze_auxiliary_present{"freeze_auxiliary_present"},freeze_auxiliary_value{"freeze_auxiliary_value"},poison_count{"poison_count"},slow_count{"slow_count"};
-    const StringName view_clock_ms{"view_clock_ms"},real_alpha{"real_alpha"},color{"color"},size{"size"},life_cycle{"life_cycle"},scale{"scale"},scalable{"scalable"},use_real_size{"use_real_size"},rotational{"rotational"},region{"region"},size_offset{"size_offset"};
+    const StringName local_clock_seconds{"local_clock_seconds"},view_clock_ms{"view_clock_ms"},real_alpha{"real_alpha"},color{"color"},size{"size"},life_cycle{"life_cycle"},scale{"scale"},scalable{"scalable"},use_real_size{"use_real_size"},rotational{"rotational"},region{"region"},size_offset{"size_offset"};
     const Variant output_texture{String("texture")},output_vertices{String("vertices")},output_uvs{String("uvs")},output_colors{String("colors")},output_indices{String("indices")},output_fallback{String("fallback")},output_region{String("region")},output_center{String("center")},output_shape{String("shape")},output_rotation{String("rotation")},output_tint{String("tint")};
     const StringName hp{"hp"},state{"state"},aim{"aim"},native_air{"native_air"},air{"air"},owner{"owner"},target_owner{"target_owner"},pos{"pos"},speed{"speed"},slow{"slow"},grid{"grid"},cell{"cell"},next_cell{"next_cell"},progress{"move_progress"};
     const StringName velocity{"velocity"},rotation{"rotation"},rot_speed{"rot_speed"},alpha{"alpha"},born{"born"};
@@ -414,15 +414,21 @@ void SpiceNative::advance_systems(Array systems,double clock_ms,Callable emit_ch
     std::unordered_set<int64_t> expired;
     for(int i=0;i<count;++i) {
         Dictionary sys=systems[i];
+        double system_clock=clock_ms;
+        if(sys.has(k.local_clock_seconds)) {
+            const float seconds=f32(double(sys[k.local_clock_seconds])+dt);
+            sys[k.local_clock_seconds]=double(seconds);
+            system_clock=double(seconds)*1000.0;sys[k.view_clock_ms]=system_clock;
+        }
         const Dictionary d=sys[k.definition];
         const int64_t token=sys.get(k.coefficients,-1);
         const CompiledParticle compiled=token>=0 && token<int64_t(compiled_particles.size()) ? compiled_particles[token] : CompiledParticle(d);
         const double until=sys[k.until];
-        if(until>=0 && clock_ms>=until)sys[k.emitting]=false;
+        if(until>=0 && system_clock>=until)sys[k.emitting]=false;
         const int64_t disable=compiled.disable;
-        if(disable>0 && clock_ms-double(sys[k.born])>=disable)sys[k.emitting]=false;
+        if(disable>0 && system_clock-double(sys[k.born])>=disable)sys[k.emitting]=false;
         Array particles=sys[k.particles];
-        integrate_particles(particles,compiled.particle,dt,clock_ms);
+        integrate_particles(particles,compiled.particle,dt,system_clock);
         const double amplitude=compiled.amplitude;
         const String child=compiled.child;
         if(amplitude!=0 || !child.is_empty())for(int j=0;j<particles.size();++j) {
@@ -435,14 +441,14 @@ void SpiceNative::advance_systems(Array systems,double clock_ms,Callable emit_ch
                 position.x=f32(double(position.x)+f32(double(f32(std::sin(double(phase))-std::sin(old)))*amplitude));
                 p[k.pos]=position;
             }
-            if(!child.is_empty() && clock_ms-double(p[k.child_released])>50) {
-                p[k.child_released]=clock_ms;
+            if(!child.is_empty() && system_clock-double(p[k.child_released])>50) {
+                p[k.child_released]=system_clock;
                 emit_child.call(child,p[k.pos],sys[k.variation]);
             }
         }
-        if(bool(sys[k.emitting]) && dt<compiled.particle.life && double(clock_ms-double(sys[k.released]))>compiled.interval*1000.0) {
-            if(particles.size()>=int(d.get("max_particles",100)))sys[k.released]=clock_ms;
-            else if(random)SpiceNative::emit_batch(sys,clock_ms,random);
+        if(bool(sys[k.emitting]) && dt<compiled.particle.life && double(system_clock-double(sys[k.released]))>compiled.interval*1000.0) {
+            if(particles.size()>=int(d.get("max_particles",100)))sys[k.released]=system_clock;
+            else if(random)SpiceNative::emit_batch(sys,system_clock,random);
             else emit_batch.call(sys);
         }
         if(!bool(sys[k.emitting]) && particles.is_empty())expired.insert(int64_t(sys[k.id]));

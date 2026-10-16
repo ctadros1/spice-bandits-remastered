@@ -56,7 +56,16 @@ func emit_creep_death_burst(resource:String,point:Vector2,variation:String="") -
 	var bindings:Dictionary=Content.particles.bindings.get(resource,{})
 	var aliases=bindings.keys();aliases.sort()
 	for alias in aliases:
-		if "explosion" in str(alias):emit_system(str(bindings[alias].filename),point,variation,"",0)
+		if not "explosion" in str(alias):continue
+		var previous_serial=serial
+		emit_system(str(bindings[alias].filename),point,variation,"",0)
+		if serial==previous_serial:continue
+		# Original CParticleSystem starts its own float32 clock at zero.
+		# Subtracting a late room birth from the global clock loses precision.
+		var sys=systems[-1]
+		sys.local_clock_seconds=0.0;sys.view_clock_ms=0.0
+		sys.born=0.0;sys.released=0.0;sys.until=0.0
+		for p in sys.particles:p.born=0.0;p.child_released=0.0
 
 func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String="",owner:String="",duration_ms:int=-1,direction:Vector2=Vector2.ZERO,object_owner:int=-1) -> void:
 	serial+=1
@@ -246,7 +255,7 @@ func reference_draw_layer(layer: Layer, premultiplied: bool) -> void:
 		if (int(definition.get("real_alpha",0))==1)!=premultiplied:continue
 		var rgba=definition.get("color",[1,1,1,1])
 		for p in sys.particles:
-			var age=Math.age(clock_ms,float(p.born))
+			var age=Math.age(float(sys.get("view_clock_ms",clock_ms)),float(p.born))
 			var half=Math.f32((float(definition.get("size",1))+float(p.size_offset))*Math.size_factor(age,definition))
 			var shape=p.region.size*half if int(definition.get("use_real_size",0)) else Vector2.ONE*half*2
 			var tint=Color(rgba[0],rgba[1],rgba[2],float(rgba[3])*maxf(0,float(p.alpha)))
@@ -261,10 +270,14 @@ func reference_advance_tick(dt: float = 0.03) -> void:
 	var expired={}
 	for sys in systems.duplicate():
 		var definition=sys.definition
-		if float(sys.until)>=0 and clock_ms>=float(sys.until):sys.emitting=false
+		var system_clock=clock_ms
+		if sys.has("local_clock_seconds"):
+			sys.local_clock_seconds=Math.f32(float(sys.local_clock_seconds)+dt)
+			system_clock=float(sys.local_clock_seconds)*1000.0;sys.view_clock_ms=system_clock
+		if float(sys.until)>=0 and system_clock>=float(sys.until):sys.emitting=false
 		var disable=int(definition.get("disable_after",0))
-		if disable>0 and clock_ms-float(sys.born)>=disable:sys.emitting=false
-		Math.advance_particles(sys.particles,definition,dt,clock_ms)
+		if disable>0 and system_clock-float(sys.born)>=disable:sys.emitting=false
+		Math.advance_particles(sys.particles,definition,dt,system_clock)
 		var amplitude=float(definition.get("amplifyX_withSin_by",0))
 		var child=str(definition.get("child_system",""))
 		if amplitude!=0 or not child.is_empty():
@@ -272,9 +285,9 @@ func reference_advance_tick(dt: float = 0.03) -> void:
 				if amplitude!=0:
 					var old=float(sys.phase);sys.phase=Math.f32(old+Math.f32(float(definition.get("amplification_speed",0))*dt))
 					p.pos.x=Math.f32(p.pos.x+Math.f32(Math.f32(sin(sys.phase)-sin(old))*amplitude))
-				if not child.is_empty() and clock_ms-float(p.child_released)>50:
-					p.child_released=clock_ms;emit_system(child,p.pos,str(sys.variation))
-		if sys.emitting and dt<float(definition.get("life_cycle",1)) and clock_ms-float(sys.released)>float(definition.get("release_interval",1))*1000.0:emit_batch(sys)
+				if not child.is_empty() and system_clock-float(p.child_released)>50:
+					p.child_released=system_clock;emit_system(child,p.pos,str(sys.variation))
+		if sys.emitting and dt<float(definition.get("life_cycle",1)) and system_clock-float(sys.released)>float(definition.get("release_interval",1))*1000.0:emit_batch(sys)
 		if not sys.emitting and sys.particles.is_empty():expired[sys.id]=true
 	# Dictionary equality during Array.erase scans whole earlier emitter
 	# records. Compact once, preserving live and newly emitted child order.
