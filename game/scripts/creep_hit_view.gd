@@ -1,6 +1,6 @@
 extends RefCounted
-# Field-only port of full original DoDamage/Update hit state. Not connected
-# to combat until the additive per-owner renderer and caller bridge pass.
+# Port of original DoDamage/Update hit fields, connected to Simulation
+# and the ordered per-owner additive renderer in R123.
 static func f32(value:float) -> float:return Vector2(value,0).x
 static func initial() -> Dictionary:
 	return {"hit_elapsed":0.0,"hit_active":false,"hit_running":false,"hit_last_kind":0}

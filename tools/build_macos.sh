@@ -44,6 +44,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/animator_ui_verify.gd" -- --qa > builds/animator-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_animation_ui_verify.gd" -- --qa > builds/creep-animation-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_hit_ui_verify.gd" -- --qa > builds/creep-hit-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/creep_death_ui_verify.gd" -- --qa > builds/creep-death-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_status_ui_verify.gd" -- --qa > builds/creep-status-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_light_ui_verify.gd" -- --qa > builds/creep-light-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_health_ui_verify.gd" -- --qa > builds/creep-health-verification.log 2>&1

@@ -1,0 +1,5676 @@
+{
+  "method": "Original splash creation/DoOnDying/Sprite.Update/Sprite.Render sequence.\nPreserved creep1..10 resource parameters and actual PNG dimensions supplied.\nNative resource/particle/sound/decal creation uses Effects recording stubs.\nActual Creep.SetDie, Sprite constructor, DoOnDying, Sprite.Update/interpolation\nand Sprite.Render execute; final GL/quad submission is recorded. No GPU,\nfull particle/culling/lifetime/room/global RNG or complete game executes.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "cases": [
+    {
+      "resource": "creeps/creep1",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              0.5,
+              0.5
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "marine_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep1ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep1ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.0,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep1ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep1ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115684864,
+                  1115684864
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057057817,
+                  1057057817
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115778073,
+                  1115778073
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057225589,
+                  1057225589
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115945845,
+                  1115945845
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1057393361,
+                  1057393361
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116113617,
+                  1116113617
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057728905,
+                  1057728905
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116449161,
+                  1116449161
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058288146,
+                  1058288146
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117008402,
+                  1117008402
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep2",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.2000000476837158,
+              1.2000000476837158
+            ],
+            "scale_div_bits": 1077936128,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep2ExplosionParts",
+            "count": 12,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep2ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067217355,
+                  1067217355
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117549003,
+                  1117549003
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067552899,
+                  1067552899
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117884547,
+                  1117884547
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1067888444,
+                  1067888444
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118220092,
+                  1118220092
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1068559532,
+                  1068559532
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118891180,
+                  1118891180
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1069678014,
+                  1069678014
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120009662,
+                  1120009662
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep3",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.2000000476837158,
+              1.2000000476837158
+            ],
+            "scale_div_bits": 1077936128,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep3ExplosionParts",
+            "count": 12,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep3ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067217355,
+                  1067217355
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117549003,
+                  1117549003
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067552899,
+                  1067552899
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117884547,
+                  1117884547
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1067888444,
+                  1067888444
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118220092,
+                  1118220092
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1068559532,
+                  1068559532
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118891180,
+                  1118891180
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1069678014,
+                  1069678014
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120009662,
+                  1120009662
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep4",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.2000000476837158,
+              1.2000000476837158
+            ],
+            "scale_div_bits": 1077936128,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep4ExplosionParts",
+            "count": 12,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep4ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067217355,
+                  1067217355
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117549003,
+                  1117549003
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067552899,
+                  1067552899
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117884547,
+                  1117884547
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1067888444,
+                  1067888444
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118220092,
+                  1118220092
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1068559532,
+                  1068559532
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1118891180,
+                  1118891180
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1069678014,
+                  1069678014
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120009662,
+                  1120009662
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1070386382,
+                  1070386382
+                ],
+                "initial_scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1120718030,
+                  1120718030
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep5",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.0,
+              1.0
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep5ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep5ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.600000023841858,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep5ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep5ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124073472,
+                  1124073472
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065446425,
+                  1065446425
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124166681,
+                  1124166681
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065614197,
+                  1065614197
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124334453,
+                  1124334453
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1065781969,
+                  1065781969
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124502225,
+                  1124502225
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066117513,
+                  1066117513
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124837769,
+                  1124837769
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066676754,
+                  1066676754
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125397010,
+                  1125397010
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep6",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.0,
+              1.0
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep6ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep6ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.600000023841858,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep6ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep6ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124073472,
+                  1124073472
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065446425,
+                  1065446425
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124166681,
+                  1124166681
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065614197,
+                  1065614197
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124334453,
+                  1124334453
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1065781969,
+                  1065781969
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124502225,
+                  1124502225
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066117513,
+                  1066117513
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124837769,
+                  1124837769
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066676754,
+                  1066676754
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125397010,
+                  1125397010
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep7",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              1.0,
+              1.0
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "tank_helicopter_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep6ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep6ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.600000023841858,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep6ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep6ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124073472,
+                  1124073472
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065446425,
+                  1065446425
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124166681,
+                  1124166681
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1065614197,
+                  1065614197
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124334453,
+                  1124334453
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1065781969,
+                  1065781969
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124502225,
+                  1124502225
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066117513,
+                  1066117513
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1124837769,
+                  1124837769
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1066676754,
+                  1066676754
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125397010,
+                  1125397010
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1067030938,
+                  1067030938
+                ],
+                "initial_scale_bits": [
+                  1065353216,
+                  1065353216
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1125751194,
+                  1125751194
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep8",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              0.5,
+              0.5
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "marine_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep8ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep8ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.0,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep8ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep8ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115684864,
+                  1115684864
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057057817,
+                  1057057817
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115778073,
+                  1115778073
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057225589,
+                  1057225589
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115945845,
+                  1115945845
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1057393361,
+                  1057393361
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116113617,
+                  1116113617
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057728905,
+                  1057728905
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116449161,
+                  1116449161
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058288146,
+                  1058288146
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117008402,
+                  1117008402
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep9",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              0.5,
+              0.5
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "marine_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep9ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep9ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.0,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep9ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep9ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115684864,
+                  1115684864
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057057817,
+                  1057057817
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115778073,
+                  1115778073
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057225589,
+                  1057225589
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115945845,
+                  1115945845
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1057393361,
+                  1057393361
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116113617,
+                  1116113617
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057728905,
+                  1057728905
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116449161,
+                  1116449161
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058288146,
+                  1058288146
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117008402,
+                  1117008402
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    },
+    {
+      "resource": "creeps/creep10",
+      "creation": {
+        "state": 3,
+        "crater_created": 1,
+        "sprites": [
+          {
+            "life_bits": 1133903872,
+            "position": [
+              323.75,
+              223.5
+            ],
+            "initial_scale": [
+              0.5,
+              0.5
+            ],
+            "scale_div_bits": 1084227584,
+            "blend_mode": 1,
+            "relative_scale": 1,
+            "texture": "ExplosionSplash"
+          }
+        ],
+        "events": [
+          {
+            "method": "portal-clean",
+            "owner": true
+          },
+          {
+            "method": "tower-clean",
+            "owner": true
+          },
+          {
+            "method": "param",
+            "name": "explosion_sound_list"
+          },
+          {
+            "method": "sound-load",
+            "cue": "marine_explosion_1"
+          },
+          {
+            "method": "sound-play",
+            "point": [
+              330.5,
+              220.5
+            ]
+          },
+          {
+            "method": "emit",
+            "system": "Creep10ExplosionParts",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "Creep10ExplosionParts2",
+            "count": 6,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "emit",
+            "system": "MissileExplodeGray",
+            "count": 3,
+            "point": [
+              333.25,
+              219.75
+            ],
+            "interval_bits": 1084227584
+          },
+          {
+            "method": "texture",
+            "name": "ExplosionSplash"
+          },
+          {
+            "method": "param",
+            "name": "exp_init_scale"
+          },
+          {
+            "method": "param",
+            "name": "exp_scale_div"
+          },
+          {
+            "method": "param",
+            "name": "exp_lifetime"
+          },
+          {
+            "method": "param",
+            "name": "crater_list"
+          },
+          {
+            "method": "texture",
+            "name": "crater1"
+          },
+          {
+            "method": "param",
+            "name": "crater_scale_factor"
+          },
+          {
+            "method": "decal",
+            "kind": 1,
+            "position": [
+              320.25,
+              230.75
+            ],
+            "texture": "crater1",
+            "stack_floats": [
+              1.0,
+              4000.0,
+              4000.0,
+              0.0
+            ]
+          }
+        ],
+        "particle_systems": [
+          {
+            "name": "Creep10ExplosionParts",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "Creep10ExplosionParts2",
+            "interval_bits": 1084227584
+          },
+          {
+            "name": "MissileExplodeGray",
+            "interval_bits": 1084227584
+          }
+        ]
+      },
+      "frames": [
+        {
+          "dt_ms": null,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  0,
+                  0
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  0,
+                  0
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 0,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133903872,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1065353216
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115684864,
+                  1115684864
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 16.667,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1133357728,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057057817,
+                  1057057817
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1064421130
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115778073,
+                  1115778073
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1132287296,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057225589,
+                  1057225589
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1062743409
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1115945845,
+                  1115945845
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 30,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1130321216,
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "scale_bits": [
+                  1057393361,
+                  1057393361
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1061065687
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332161
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116113617,
+                  1116113617
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 60,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1126389056,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1057728905,
+                  1057728905
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1057710244
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1116449161,
+                  1116449161
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 100,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 1115510016,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058288146,
+                  1058288146
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  1045966136
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117008402,
+                  1117008402
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 63.333,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 922746880,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 3,
+            "sprites": [
+              {
+                "life_bits": 0,
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "scale_bits": [
+                  1058642330,
+                  1058642330
+                ],
+                "initial_scale_bits": [
+                  1056964608,
+                  1056964608
+                ],
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ]
+              }
+            ],
+            "draws": [
+              {
+                "rgba_bits": [
+                  1065353216,
+                  1065353216,
+                  1065353216,
+                  0
+                ],
+                "position_bits": [
+                  1134682112,
+                  1130332160
+                ],
+                "rotation_bits": 0,
+                "size_bits": [
+                  1117362586,
+                  1117362586
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "dt_ms": 1,
+          "output": {
+            "state": 2,
+            "sprites": [],
+            "draws": []
+          }
+        }
+      ]
+    }
+  ]
+}

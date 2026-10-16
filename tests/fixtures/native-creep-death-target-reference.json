@@ -1,0 +1,511 @@
+{
+  "method": "Full original IsAnyCreepTargetedForPlayer with supplied creature vector.\nOwner/target/state and an empty base-manager vector are explicit inputs.\nNo HP/particle/death/room/services/constructor/GPU/game executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "cases": [
+    {
+      "state": 0,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 0,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 0,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 0,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 0,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 0,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 0,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 0,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 0,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 1,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 1,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 1,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 1,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 1,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 1,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 1,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 1,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 1,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 2,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 2,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 2,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 2,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 2,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 2,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 2,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 2,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 2,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 3,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 3,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 3,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 3,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 3,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 3,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 3,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 3,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 3,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 4,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 4,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 4,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 4,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 4,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 4,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 4,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 4,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 4,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 5,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 5,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 5,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 5,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 5,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 5,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 5,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 5,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 5,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 6,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 6,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 6,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 6,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 6,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 6,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 6,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 6,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 6,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 7,
+      "owner": 0,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 7,
+      "owner": 0,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 7,
+      "owner": 0,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 7,
+      "owner": 1,
+      "target": 0,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 7,
+      "owner": 1,
+      "target": 1,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 7,
+      "owner": 1,
+      "target": 2,
+      "player": 1,
+      "result": false
+    },
+    {
+      "state": 7,
+      "owner": 2,
+      "target": 0,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 7,
+      "owner": 2,
+      "target": 1,
+      "player": 1,
+      "result": true
+    },
+    {
+      "state": 7,
+      "owner": 2,
+      "target": 2,
+      "player": 1,
+      "result": false
+    }
+  ]
+}
