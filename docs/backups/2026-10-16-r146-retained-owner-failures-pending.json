@@ -1,0 +1,76 @@
+{
+  "signed_base_commit": "56ee9219338e679f2d6f7872d9a187f550bde08d",
+  "new_source_commit_created": false,
+  "source_signing_pending": true,
+  "original_r137_index_preserved": true,
+  "source_files_verified": {
+    "owner-life-r145-presentation-coverage-failure": 574,
+    "owner-life-r146-performance-failure": 576,
+    "current-source": 576
+  },
+  "actual_archive_empty_signed_base_clones_plus_patches_exact": true,
+  "failed_candidates": [
+    "owner-life-r145-presentation-coverage-failure",
+    "owner-life-r146-performance-failure"
+  ],
+  "all_ten_native_passed": false,
+  "presentation_checks": 547,
+  "presentation_captures": 216,
+  "r146_median_ms": [
+    35.227,
+    35.062,
+    43.75
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_followup_passed": true,
+  "functional_suites": 8,
+  "all_evidence_members_hashes_modes_safe_paths_gzip_crc_verified": true,
+  "evidence_files_verified": 2239,
+  "evidence_uncompressed_bytes": 2025621362,
+  "actual_archive_failed_app_strict_signature_empty_cwd_native_menu_verified": true,
+  "all_four_protected_saves_unchanged": true,
+  "no_remaining_game_processes": true,
+  "normal_external_saves_excluded": true,
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "published_checkpoint": false,
+  "release_id": 415411203,
+  "release_tag": "research-2026-10-16-r146-retained-owner-failures",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-e75542f16605e52be576",
+  "assets": [
+    {
+      "name": "r145-r146-retained-owner-failures.tar.gz",
+      "bytes": 1560676056,
+      "sha256": "3d042574d4e1825f7b7b252e76c9f186abd3da83ba1feb8ed54c4d9910fdcca2"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 260,
+      "sha256": "e464885856b1a9303561f368dd90e2f4a2a2adb8015934e6caeb6cecf0d28ed6"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 506512,
+      "sha256": "10e07ad43e3e7ce62385b9e91b26d250c2eb91772ea67052197b21123de7546c"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1199,
+      "sha256": "ff335fed9fe8c512134239b649543a7be52ae7e44d4f829ac5579337b43d9eb0"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1720,
+      "sha256": "54929f30782f928e7885c7727f7fb76163b5f0b61bfeaf927a07f9b2f4006a89"
+    },
+    {
+      "name": "r146-restore-proof.zip",
+      "bytes": 1539345,
+      "sha256": "090535f2e2ce4acbb03c3db8324078ffd0d3887316eee7a1eb4c9eb9212c4402"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_archive_stream_sha_size_verified": true,
+  "verified_at": "2026-10-16T21:55:45.933384+00:00"
+}

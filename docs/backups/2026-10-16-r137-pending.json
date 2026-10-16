@@ -1,0 +1,67 @@
+{
+  "private": true,
+  "draft": true,
+  "published_checkpoint": false,
+  "source_signing_pending": true,
+  "release_id": 415299518,
+  "release_tag": "backup-2026-10-16-r137",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-09c146f061784730bd34",
+  "signed_base_commit": "56ee9219338e679f2d6f7872d9a187f550bde08d",
+  "new_source_commit_created": false,
+  "source_files_exact_empty_clone_plus_patch": 547,
+  "restored_native_app_verified": true,
+  "all_remote_assets_verified": true,
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r137-macOS.zip",
+      "bytes": 330972595,
+      "sha256": "acfe6c2afed69fba6aa4898c96ee5d26424cfc870d4845ea2b2c77a740f49f84"
+    },
+    {
+      "name": "r137-verification-evidence.tar.gz",
+      "bytes": 705653371,
+      "sha256": "e71aff0cf7dd825ef9e024208171b417103196d0a3a99dde109b0acfa22d65b4"
+    },
+    {
+      "name": "r137-pending-restoration.zip",
+      "bytes": 1520679,
+      "sha256": "a98512f2392f905b08463f0deaf1812d639f96dfabda394b40c61d33ba629ca7"
+    },
+    {
+      "name": "r137-pending-source.bundle",
+      "bytes": 2062579,
+      "sha256": "fe88ce8e7b62664d7c14daeedd3168098528bab7f3155be01394a97de90f29da"
+    },
+    {
+      "name": "r137-staged-source.patch",
+      "bytes": 7395684,
+      "sha256": "d8d00f4501e00b4d32b24d8d7da184a087e40dda879e2fb3069cfb3e7ac8e76b"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 108276,
+      "sha256": "e4f5466e976f5863ae60159d4ba3bcec33c07bda8aaf566fe49228da185af3f7"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1789,
+      "sha256": "4493de69b91c592d5919848f56c9ba5b60eab7481b0d22ddbfb619686f8492b6"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 156399,
+      "sha256": "97eccb6bad8c0bfc15920146cac5668350f978afde9a6332b6137e1a52755510"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 345,
+      "sha256": "842756d3f2e701a0020095913ef5c0e8ce4f9b4bdde236150c326bcbebfe8c70"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 2457,
+      "sha256": "fc74138f031642bcc2ebf6dc1578b6daa2878aea97b19e4a623bb31e1b71055c"
+    }
+  ],
+  "verified_at": "2026-10-16T19:16:17.608083+00:00"
+}

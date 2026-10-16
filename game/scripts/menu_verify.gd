@@ -224,7 +224,7 @@ func run() -> void:
 	creep.disco_until=10000
 	app.sim.freeze_until=10000
 	app.particle_fx.emit_system("Creep1ExplosionParts",creep.pos,"blue")
-	for i in range(14):app.sim.clock_ms+=30;app.particle_fx.advance(app.sim)
+	for i in range(14):app.sim.advance_frame(30);app.particle_fx.advance(app.sim)
 	check(app.particle_fx.systems.size()>=4,"preserved debris and enemy status particle systems activate")
 	check(app.particle_fx.systems.any(func(sys):return not sys.particles.is_empty()),"particle integration retains visible authored particles")
 	await snapshot("particles")

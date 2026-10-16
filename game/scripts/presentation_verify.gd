@@ -11,6 +11,7 @@ var ordered_blend_samples=[]
 var window_restoration={}
 var destination=""
 var death_burst_parents=[]
+var death_burst_owner={}
 
 class BlendFixture extends Node2D:
 	var screen="game"
@@ -34,7 +35,7 @@ func advance_result_until(time:float) -> void:
 func decal_birth(type:int,id:int,point:Vector2) -> Dictionary:
 	var enemy=app.sim.spawn_enemy(type,0,"",id,false)
 	enemy.pos=point;enemy.visual_pos=point;enemy.path=[]
-	app.sim.damage(enemy,float(enemy.max_hp)*10)
+	app.sim.damage(enemy,float(enemy.max_hp)*10,0,2)
 	app.sim.advance_frame(0)
 	return app.sim.decals.items[-1]
 
@@ -97,12 +98,13 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
 	if name.begins_with("death-burst-"):
-		record.death_burst={"clock_bits":PackedFloat32Array([app.particle_fx.clock_seconds]).to_byte_array().decode_u32(0),"parents":death_burst_parents.map(func(p):return {"name":p.name,"active":p.particles.size(),"released_bits":PackedFloat32Array([p.released]).to_byte_array().decode_u32(0)}),"global_systems":app.particle_fx.systems.size(),"paused":app.sim.paused}
-		record.limit="Actual lethal Simulation event/Main kill/ParticleFX newborn parent packets; independent original fullCreep.Update count/clock rows. Global child callbacks/rendering, current logical caller anchor and retained dying-owner lifetime remain unfinished. Expired refers to newborn parent counts, not all global child smoke."
+		record.death_burst={"clock_bits":PackedFloat32Array([app.particle_fx.clock_seconds]).to_byte_array().decode_u32(0),"parents":death_burst_parents.map(func(p):return {"name":p.name,"active":p.particles.size(),"released_bits":PackedFloat32Array([p.released]).to_byte_array().decode_u32(0)}),"global_systems":app.particle_fx.systems.size(),"paused":app.sim.paused,"owner_state":death_burst_owner.get("state",-1),"owner_retained":app.sim.enemies.has(death_burst_owner),"sprite_life_bits":death_burst_owner.get("death_sprites",[]).map(func(owned):return PackedFloat32Array([owned.life]).to_byte_array().decode_u32(0))}
+		record.death_burst.splashes=death_burst_owner.get("death_sprites",[]).map(splash_fields)
+		record.limit="Actual lethal Simulation event/Main kill/ParticleFX newborn parent packets; independent original fullCreep.Update count/clock rows. Actual shared owner counts, local clocks, splash state, retained state2 and final destruction are checked. Full original construction/attached-smoke/owner render/culling/sharedRNG/GPU remain incomplete."
 	if name.begins_with("decal-"):
 		record.decals=app.sim.decals.items.map(func(d):return {"id":d.id,"texture":d.texture,"position":[d.position.x,d.position.y],"scale_bits":PackedFloat32Array([d.scale]).to_byte_array().decode_u32(0),"clock_bits":PackedFloat32Array([d.clock]).to_byte_array().decode_u32(0),"alpha_bits":PackedFloat32Array([d.alpha]).to_byte_array().decode_u32(0),"deleted":d.deleted,"fading":d.fading,"variant":d.get("variant","")})
 		record.decal_cells=app.sim.decals.cells.values().map(func(members):return members.size())
-		record.limit="Controlled actual Simulation lethal callback/zero-delta cleanup and original-decal clock poses, real preserved textures under Main ground/owner passes. Existing immediate creep removal is not corrected here. No original global RNG/GPU/whole owner/death fidelity claim."
+		record.limit="Controlled actual Simulation lethal callback/zero-delta cleanup and original-decal clock poses, real preserved textures under Main ground/owner passes. This isolated crater fixture uses damage kind2 to omit the separately verified splash. Retained owner state now runs in the shared simulation. No original global RNG/GPU/whole owner/death fidelity claim."
 	if name.begins_with("creep-hit-"):
 		record.hit_fields=app.sim.enemies.map(func(e):return {"id":e.id,"active":e.get("hit_active",false),"running":e.get("hit_running",false),"elapsed_bits":PackedFloat32Array([e.get("hit_elapsed",0.0)]).to_byte_array().decode_u32(0),"last_kind":e.get("hit_last_kind",0),"freeze_remaining":e.get("freeze_remaining",0),"native_air":e.native_air})
 		record.ordered_canvas=app.battle_uses_ordered_canvas
@@ -160,6 +162,13 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 		record.bolts=app.effects.filter(func(e):return e.kind=="shot").map(func(e):return {"texture":e.texture,"source":[e.points[0].x,e.points[0].y],"target":[e.points[-1].x,e.points[-1].y],"ball_source":[e.ball_source.x,e.ball_source.y],"ball":e.ball,"scatter":e.scatter,"ribbon_alpha":e.get("ribbon_alpha",1),"clock":e.get("bolt_clock",{}).duplicate(true)})
 		record.render_slots=app.bolt_renderer.slots.filter(func(s):return s.visible).map(func(s):return {"texture":s.effect.texture,"atlas_pixels":[s.product.size.x,s.product.size.y],"atlas_rect":[s.atlas_rect.position.x,s.atlas_rect.position.y,s.atlas_rect.size.x,s.atlas_rect.size.y],"rectangle":[s.screen_rect.position.x,s.screen_rect.position.y,s.screen_rect.size.x,s.screen_rect.size.y]})
 	captures.append(record)
+
+func splash_fields(owned:Dictionary) -> Dictionary:
+	var resource=Content.animations.get("creeps/"+str(death_burst_owner.def.filename),{})
+	var texture=Content.tex(str(resource.get("textures",{}).get(str(owned.texture),{}).get("texture","")))
+	var size=texture.get_size()*owned.scale
+	return {"life_bits":splash_bits(owned.life),"scale_bits":[splash_bits(owned.scale.x),splash_bits(owned.scale.y)],"rgba_bits":[splash_bits(1),splash_bits(1),splash_bits(1),splash_bits(owned.alpha)],"size_bits":[splash_bits(size.x),splash_bits(size.y)]}
+func splash_bits(v:float) -> int:return PackedFloat32Array([v]).to_byte_array().decode_u32(0)
 
 func pose_beam_tower(type:int,level:int) -> void:
 	var tower=app.sim.towers[0]
@@ -404,19 +413,20 @@ func run() -> void:
 	var transported=app.sim.spawn_enemy(1,0,"",1142,false)
 	transported.pos=app.sim.center(10,9);transported.visual_pos=transported.pos;transported.draw_light=1;transported.slow=0.5;transported.hp=transported.max_hp*0.5
 	transported.portal_pose=app.sim.CreepPortal.create(app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
-	app.effects.clear();app.particle_fx.reset();app.particle_fx.advance(app.sim,0)
+	app.effects.clear();app.particle_fx.reset()
+	app.sim.particle_state.refresh_creep(app.sim,transported);app.particle_fx.advance(app.sim,0)
 	await snapshot("portal-creep-normal")
 	transported.portal_pose.state=1
 	var transit_age=0
 	for age in [75,150,300]:
 		app.sim.CreepPortal.advance(transported.portal_pose,age-transit_age,app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
-		transit_age=age;app.particle_fx.advance(app.sim,0)
+		transit_age=age;app.sim.particle_state.refresh_creep(app.sim,transported);app.particle_fx.advance(app.sim,0)
 		await snapshot("portal-creep-enter-%03d"%age)
 	check(transported.portal_pose.state==3 and transported.portal_pose.anim_alpha==0,"native waiting transit retains zero-size/alpha body and health")
 	transported.portal_pose.state=2;transported.portal_pose.clock=0;transit_age=0
 	for age in [75,150,300]:
 		app.sim.CreepPortal.advance(transported.portal_pose,age-transit_age,app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
-		transit_age=age;app.particle_fx.advance(app.sim,0)
+		transit_age=age;app.sim.particle_state.refresh_creep(app.sim,transported);app.particle_fx.advance(app.sim,0)
 		await snapshot("portal-creep-exit-%03d"%age)
 	check(transported.portal_pose.state==0 and transported.portal_pose.anim_alpha==1,"native exit pose restores original full body and health")
 	Profile.data=preview_profile
@@ -1177,12 +1187,20 @@ func run() -> void:
 	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls();app.sim.enemies.clear()
 	var burst_qa_gallery=app.qa_gallery;app.qa_gallery=false;app.sim.live_updates=true
 	var burst_enemy=app.sim.spawn_enemy(1,0,"",995,false);burst_enemy.pos=app.sim.center(8,6);burst_enemy.visual_pos=burst_enemy.pos;burst_enemy.path=[]
+	death_burst_owner=burst_enemy
 	app.sim.damage(burst_enemy,float(burst_enemy.max_hp)*10)
 	app._process(0)
 	death_burst_parents=app.particle_fx.systems.duplicate()
 	check(death_burst_parents.size()==3,"native actual lethal event creates three original death aliases")
+	var owned_burst_roots=death_burst_parents.filter(func(p):return p.has("owned_tree") and not str(p.definition.get("child_system","")).is_empty())
+	check(owned_burst_roots.size()==2,"native lethal burst connects both original owned-child roots")
+	check(app.sim.enemies.has(burst_enemy) and int(burst_enemy.state)==3 and burst_enemy.death_sprites.size()==1,"native lethal flow retains actual owner and splash")
+	check(owned_burst_roots.all(func(s):return s.owned_tree.particles.all(func(p):return p.child.particles.is_empty() and p.child.clock_seconds==0)),"native lethal child factories start empty with zero clocks")
 	await snapshot("death-burst-0000")
-	for index in range(10):app._process(.03)
+	for index in range(5):app._process(.03)
+	await snapshot("death-burst-0150")
+	for index in range(5):app._process(.03)
+	check(app.particle_fx.systems.size()==3 and owned_burst_roots.all(func(s):return s.owned_tree.particles.any(func(p):return not p.child.particles.is_empty())),"native child smoke emits inside parents without global orphan systems")
 	await snapshot("death-burst-0300")
 	for index in range(10):app._process(.03)
 	await snapshot("death-burst-0600")
@@ -1198,6 +1216,10 @@ func run() -> void:
 	for index in range(14):app._process(.03)
 	await snapshot("death-burst-1350")
 	check(death_burst_parents.all(func(p):return p.particles.is_empty() and p.released==0.0),"native newborn death parents expire without a second smoke burst")
+	check(app.sim.enemies.has(burst_enemy) and int(burst_enemy.state)==2 and app.particle_fx.systems.size()==3,"native newly complete owner retains empty roots until next manager pass")
+	app._process(.03)
+	check(not app.sim.enemies.has(burst_enemy) and app.particle_fx.systems.is_empty(),"native next manager pass destroys owner roots and child pools")
+	await snapshot("death-burst-1380-removed")
 	app.qa_gallery=burst_qa_gallery
 	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true

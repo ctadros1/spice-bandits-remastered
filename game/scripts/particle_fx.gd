@@ -1,23 +1,48 @@
 extends Control
 
 const Math = preload("res://scripts/particle_math.gd")
+const Owned=preload("res://scripts/particle_owned_view.gd")
+const OwnedReference=preload("res://scripts/particle_child_view.gd")
 class Layer extends Node2D:
 	var fx
 	var premultiplied=false
 	func _draw() -> void:
 		var started=Time.get_ticks_usec();fx.draw_layer(self,premultiplied);fx.app.record_qa_time("particle_draw",started)
 
-var app
-var systems: Array[Dictionary]=[]
-var clock_ms=0.0
-var clock_seconds=0.0
-var random=RandomNumberGenerator.new()
+const State=preload("res://scripts/particle_state.gd")
+var state=State.new()
+var app:
+	get:return state.app
+	set(value):state.app=value
+var systems:Array[Dictionary]:
+	get:return state.systems
+	set(value):state.replace_systems(value)
+var clock_ms:
+	get:return state.clock_ms
+	set(value):state.clock_ms=value
+var clock_seconds:
+	get:return state.clock_seconds
+	set(value):state.clock_seconds=value
+var random:
+	get:return state.random
+	set(value):state.random=value
 var layers: Array[Layer]=[]
-var serial=0
+var serial:
+	get:return state.serial
+	set(value):state.serial=value
+var owned_serial:
+	get:return state.owned_serial
+	set(value):state.owned_serial=value
+var owned_prepared:
+	get:return state.owned_prepared
+	set(value):state.owned_prepared=value
 var timers: Dictionary={}
-var reference_emission=false
+var reference_emission:
+	get:return state.reference_emission
+	set(value):state.reference_emission=value
 var reference_rendering=false
 var direct_triangles=true
+var coalesce_owned=true
 var reference_draws=0
 var batch_draws=0
 var screen_space=false
@@ -36,75 +61,27 @@ func _ready() -> void:
 		add_child(layer);layers.append(layer)
 
 func reset() -> void:
-	systems.clear();timers.clear();clock_ms=0.0;clock_seconds=0.0;serial=0;random.seed=114
+	state.reset();timers.clear()
 	# CanvasItem retains prior commands until its next draw notification.
 	for layer in layers:layer.queue_redraw()
 
+func use_state(value) -> void:
+	var target=app;state=value;state.app=target
+
 func emit_system(name: String, point: Vector2, variation: String = "", owner: String = "", duration_ms: int = 0, direction: Vector2 = Vector2.ZERO, object_owner: int = -1) -> void:
-	var started=Time.get_ticks_usec()
-	var definition=Content.particles.systems.get(name,{})
-	if definition.is_empty() or str(definition.texture).is_empty():return
-	var texture=Content.tex(definition.variations.get(variation,definition.texture))
-	if texture==null:return
-	emit_definition(name,definition,texture,point,variation,owner,duration_ms,direction,object_owner)
-	if is_instance_valid(app):app.record_qa_time("particle_emit_system",started)
+	state.emit_system(name,point,variation,owner,duration_ms,direction,object_owner)
 
 func emit_creep_death_burst(resource:String,point:Vector2,variation:String="") -> void:
-	# SetDie emits each matching alias once; its5s interval exceeds every
-	# supplied newborn death tail. Keep definitions/native cache unchanged.
-	# Complete retained-owner/existing smoke/child lifetime remains separate.
-	var bindings:Dictionary=Content.particles.bindings.get(resource,{})
-	var aliases=bindings.keys();aliases.sort()
-	for alias in aliases:
-		if not "explosion" in str(alias):continue
-		var previous_serial=serial
-		emit_system(str(bindings[alias].filename),point,variation,"",0)
-		if serial==previous_serial:continue
-		# Original CParticleSystem starts its own float32 clock at zero.
-		# Subtracting a late room birth from the global clock loses precision.
-		var sys=systems[-1]
-		sys.local_clock_seconds=0.0;sys.view_clock_ms=0.0
-		sys.born=0.0;sys.released=0.0;sys.until=0.0
-		for p in sys.particles:p.born=0.0;p.child_released=0.0
+	state.emit_creep_death_burst(resource,point,variation)
 
 func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String="",owner:String="",duration_ms:int=-1,direction:Vector2=Vector2.ZERO,object_owner:int=-1) -> void:
-	serial+=1
-	var sys={"id":serial,"name":name,"definition":definition,"native_coefficients":SpiceNative.compile_particle(definition),"texture":texture,"pos":point,"direction":direction,"owner":owner,"object_owner":object_owner,"particles":[],"variation":variation,"born":clock_ms,"released":clock_ms,"until":clock_ms+duration_ms if duration_ms>=0 else -1,"emitting":duration_ms!=0,"phase":0.0}
-	systems.append(sys)
-	emit_batch(sys)
+	state.emit_definition(name,definition,texture,point,variation,owner,duration_ms,direction,object_owner)
 
 func emit_batch(sys: Dictionary) -> void:
-	var started=Time.get_ticks_usec()
-	if reference_emission:reference_emit_batch(sys)
-	else:SpiceNative.emit_batch(sys,clock_ms,random)
-	if is_instance_valid(app):app.record_qa_time("particle_emit_batch",started)
+	state.emit_batch(sys)
 
 func reference_emit_batch(sys: Dictionary) -> void:
-	var definition=sys.definition
-	var number=int(definition.get("num_release",1))
-	for i in range(number):
-		if sys.particles.size()>=int(definition.get("max_particles",100)):break
-		var rectangles=definition.texture_list
-		var rect=rectangles[random.randi_range(0,rectangles.size()-1)] if not rectangles.is_empty() else {"x":definition.get("tx",0),"y":definition.get("ty",0),"w":definition.get("tw",sys.texture.get_width()),"h":definition.get("th",sys.texture.get_height())}
-		var region=Rect2(float(rect.x),float(rect.y),float(rect.w),float(rect.h))
-		var velocity_values=definition.get("velocity",[0,0])
-		var velocity=Vector2(float(velocity_values[0]),float(velocity_values[1]))
-		var point:Vector2=sys.pos
-		if int(definition.get("circled_emission",0)):
-			var angle=TAU*i/maxi(1,number)+deg_to_rad(random.randf_range(-float(definition.get("circle_angle_var",0)),float(definition.get("circle_angle_var",0))))
-			var heading=Vector2(cos(angle),sin(angle))
-			point+=heading*float(definition.get("circle_radius",0))
-			velocity=heading*(float(definition.get("circle_vel_amount",0))+random.randf_range(0,float(definition.get("velocity_var",1))))
-		else:velocity+=Vector2.from_angle(random.randf()*TAU)*float(definition.get("velocity_var",1))
-		var rot_speed=float(definition.get("rot_speed",1.0))
-		if random.randi_range(0,99)<int(definition.get("rot_dir_rand",0)):rot_speed*=1 if random.randi()%2 else -1
-		var rotation=float(definition.get("rot_angle",0))
-		var rot_variation=float(definition.get("rot_angle_var",0))
-		rotation+=random.randf_range(-rot_variation/2,rot_variation/2)
-		var size_offset=random.randf_range(-float(definition.get("size_init_var",0)),float(definition.get("size_init_var",0)))
-		var p={"pos":point,"velocity":velocity,"rotation":rotation,"rot_speed":rot_speed,"alpha":0.0 if float(definition.get("fade_in_time",0))>0 else 1.0,"born":clock_ms,"region":region,"size_offset":size_offset,"child_released":clock_ms}
-		sys.particles.push_front(p)
-	sys.released=clock_ms
+	state.reference_emit_batch(sys)
 
 func refresh_owners(sim) -> void:
 	var owners={}
@@ -115,30 +92,6 @@ func refresh_owners(sim) -> void:
 		if str(sys.owner).is_empty():continue
 		if not owner_systems.has(sys.owner):owner_systems[sys.owner]=[]
 		owner_systems[sys.owner].append(sys)
-	for e in sim.enemies:
-		if e.hp<=0:continue
-		var name="creeps/"+str(e.def.filename)
-		var bindings=Content.particles.bindings.get(name,{})
-		var aliases=[]
-		if sim.clock_ms<sim.freeze_until or e.slow<1.0:aliases.append("freeze")
-		if sim.clock_ms<e.disco_until:aliases.append("lsd")
-		if float(e.get("poison_count",0))>0:
-			var radiation=sim.zones.any(func(z):return int(z.type)==5 and not z.has("bubble") and e.pos.distance_to(z.pos)<float(z.def.get("poison_range",0))*float(sim.map.hex_h)/1000.0)
-			aliases.append("radiation" if radiation else "poison")
-		if e.hp<e.max_hp*0.6000000238418579:aliases.append("smoke")
-		if str(e.def.filename) in ["creep5","creep6"]:aliases.append("hover_flow2")
-		for alias in aliases:
-			var binding=bindings.get(alias,{})
-			if binding.is_empty():continue
-			var owner="enemy:%d:%s" % [e.id,alias]
-			owners[owner]=true
-			var found=false
-			var hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
-			for sys in owner_systems.get(owner,[]):
-				sys.pos=e.get("visual_pos",e.pos);sys.emitting=true;sys.owner_hidden=hidden;found=true
-			if not found:
-				emit_system(str(binding.filename),e.get("visual_pos",e.pos),str(e.def.get("color","")),owner,-1,e.dir)
-				if not systems.is_empty() and systems[-1].owner==owner:systems[-1].owner_hidden=hidden
 	for b in sim.bases:
 		if b.hp>=b.hpmax*0.5:continue
 		var owner="base:%s:%s" % [b.x,b.y]
@@ -181,7 +134,7 @@ func refresh_owners(sim) -> void:
 	for key in timers.keys():
 		if not live_timers.has(key):timers.erase(key)
 	for sys in systems:
-		if not str(sys.owner).is_empty() and not owners.has(sys.owner):sys.emitting=false
+		if not sys.has("creep_owner") and not str(sys.owner).is_empty() and not owners.has(sys.owner):sys.emitting=false
 
 func remove_owner(id: int) -> void:
 	if id<0:return
@@ -201,18 +154,18 @@ func advance(sim, elapsed_ms: float = -1.0) -> void:
 			var dt=Math.f32(Math.f32(elapsed_ms)*Math.f32(0.001))
 			clock_seconds=Math.f32(clock_seconds+dt)
 			clock_ms=clock_seconds*1000.0
-			SpiceNative.advance_systems(systems,clock_ms,emit_system,emit_batch,random,dt)
+			state.advance_unowned(dt)
 	else:
 		while clock_ms+30<=sim.clock_ms:
 			clock_ms+=30
-			SpiceNative.advance_systems(systems,clock_ms,emit_system,emit_batch,random)
+			state.advance_unowned(.03)
 	for layer in layers:layer.queue_redraw()
 
 func advance_ui(elapsed_ms:float) -> void:
 	position=Vector2.ZERO;size=app.view_size()
 	var dt=Math.f32(Math.f32(elapsed_ms)*Math.f32(0.001))
 	clock_seconds=Math.f32(clock_seconds+Math.f32(dt*Math.f32(clock_multiplier)));clock_ms=clock_seconds*1000.0
-	if dt>0:SpiceNative.advance_systems(systems,clock_ms,emit_system,emit_batch,random,dt)
+	if dt>0:state.advance_unowned(dt)
 	for layer in layers:layer.queue_redraw()
 
 func draw_layer(layer: Layer, premultiplied: bool) -> void:
@@ -221,7 +174,7 @@ func draw_layer(layer: Layer, premultiplied: bool) -> void:
 	if not is_instance_valid(app) or app.screen!="game":return
 	var zoom=1.0 if screen_space else app.map_scale()
 	var started=Time.get_ticks_usec()
-	var groups=SpiceNative.particle_batches(systems,premultiplied,clock_ms,Vector2.ZERO if screen_space else app.map_origin()-position,zoom,direct_triangles)
+	var groups=SpiceNative.particle_batches(systems,premultiplied,clock_ms,Vector2.ZERO if screen_space else app.map_origin()-position,zoom,direct_triangles,false,coalesce_owned)
 	app.record_qa_time("particle_geometry",started)
 	started=Time.get_ticks_usec()
 	layer.set_meta("particle_meshes",draw_groups(layer,groups,zoom,direct_triangles))
@@ -253,6 +206,10 @@ func reference_draw_layer(layer: Layer, premultiplied: bool) -> void:
 		if sys.get("owner_hidden",false):continue
 		var definition=sys.definition
 		if (int(definition.get("real_alpha",0))==1)!=premultiplied:continue
+		if sys.has("owned_tree"):
+			layer.draw_set_transform(Vector2.ZERO)
+			layer.set_meta("owned_reference_meshes",draw_groups(layer,OwnedReference.batches(sys.owned_tree,origin,zoom),zoom,true))
+			continue
 		var rgba=definition.get("color",[1,1,1,1])
 		for p in sys.particles:
 			var age=Math.age(float(sys.get("view_clock_ms",clock_ms)),float(p.born))
@@ -269,6 +226,9 @@ func reference_advance_tick(dt: float = 0.03) -> void:
 	dt=Math.f32(dt)
 	var expired={}
 	for sys in systems.duplicate():
+		if sys.has("owned_tree"):
+			if advance_owned_system(sys,dt,true):expired[sys.id]=true
+			continue
 		var definition=sys.definition
 		var system_clock=clock_ms
 		if sys.has("local_clock_seconds"):
@@ -292,3 +252,18 @@ func reference_advance_tick(dt: float = 0.03) -> void:
 	# Dictionary equality during Array.erase scans whole earlier emitter
 	# records. Compact once, preserving live and newly emitted child order.
 	if not expired.is_empty():systems=systems.filter(func(sys):return not expired.has(sys.id))
+
+func reference_spawn_particle(sys:Dictionary,i:int) -> Dictionary:
+	return state.reference_spawn_particle(sys,i)
+
+func create_owned_tree(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String) -> Dictionary:
+	return state.create_owned_tree(name,definition,texture,point,variation)
+
+func make_owned_child(name:String,texture:Texture2D,variation:String) -> Dictionary:
+	return state.make_owned_child(name,texture,variation)
+
+func make_owned_particle(tree:Dictionary,index:int,fresh:bool,old:Dictionary) -> Dictionary:
+	return state.make_owned_particle(tree,index,fresh,old)
+
+func advance_owned_system(sys:Dictionary,dt:float,reference:bool=false) -> bool:
+	return state.advance_owned_system(sys,dt,reference)

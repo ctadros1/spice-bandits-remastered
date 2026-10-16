@@ -124,7 +124,7 @@ static func advance(system:Dictionary,dt:float,make_particle:Callable,make_child
 			var old=float(system.get("phase",0));var phase=Math.f32(old+Math.f32(float(d.get("amplification_speed",0))*dt));system.phase=phase
 			p.pos.x=Math.f32(p.pos.x+Math.f32(Math.f32(sin(phase)-sin(old))*amplitude))
 	system.particles=live
-	var interval=Math.f32(Math.f32(float(d.get("release_interval",1)))*Math.f32(interval_scale))
+	var interval=Math.f32(Math.f32(float(system.get("interval_seconds",d.get("release_interval",1))))*Math.f32(interval_scale))
 	if interval<Math.f32(float(system.clock_seconds)-float(system.release_seconds)) and dt<life:
 		emit(system,int(system.rate),make_particle,make_child)
 
@@ -139,3 +139,21 @@ static func destroy(system:Dictionary,deleted:Array) -> void:
 			if not child.is_empty():destroy(child,deleted);deleted.append(child.id)
 			deleted.append(p.id)
 		system[key]=[]
+
+static func field_float(value:int) -> float:
+	var bytes=PackedByteArray();bytes.resize(4);bytes.encode_u32(0,value);return bytes.decode_float(0)
+
+static func batches(root:Dictionary,origin:Vector2,zoom:float) -> Array:
+	# Independent scalar packet path: the original strip's nondegenerate quads.
+	var packet=render(root,false)
+	if int(packet.count)==0:return []
+	var vertices=PackedVector2Array();var uvs=PackedVector2Array();var colors=PackedColorArray();var indices=PackedInt32Array()
+	for quad_index in range(int((int(packet.count)+1)/6)):
+		var source=quad_index*6;var at=vertices.size()
+		for j in range(4):
+			var v:Dictionary=packet.vertices[source+j]
+			vertices.append(origin+Vector2(field_float(int(v.position_bits[0])),field_float(int(v.position_bits[1])))*Math.f32(zoom))
+			uvs.append(Vector2(field_float(int(v.uv_bits[0])),field_float(int(v.uv_bits[1]))))
+			colors.append(Color(float(v.rgba8[0])/255.0,float(v.rgba8[1])/255.0,float(v.rgba8[2])/255.0,float(v.rgba8[3])/255.0))
+		for j in [0,1,2,2,1,3]:indices.append(at+j)
+	return [{"texture":root.texture,"vertices":vertices,"uvs":uvs,"colors":colors,"indices":indices}]

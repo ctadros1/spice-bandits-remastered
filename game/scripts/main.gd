@@ -1558,6 +1558,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	effects.clear()
 	continuous_beams.clear()
 	particle_fx.reset()
+	particle_fx.use_state(sim.particle_state)
 	decal_render_cache.clear()
 	result_saved = false
 	hud_money_flash=ClassicUI.Wallet.flash_initial()
@@ -2690,7 +2691,7 @@ func add_beam_effect(event: Dictionary) -> void:
 		if continuous:continuous_beams[key]=effect
 
 func handle_event(event: Dictionary) -> void:
-	if event.kind=="kill" or event.kind=="base_impact":creep_animation_owners.erase(int(event.get("id",-1)))
+	if event.kind=="owner_removed":creep_animation_owners.erase(int(event.get("id",-1)))
 	match event.kind:
 		"build":
 			sound("tower_place")
@@ -2727,7 +2728,7 @@ func handle_event(event: Dictionary) -> void:
 		"kill":
 			if not test_session or qa_persist_progress: pending_xp.append({"reward": float(event.reward), "type": int(event.type)})
 			var enemy_def = Content.catalog.tower_creeps[int(event.type)]
-			particle_fx.emit_creep_death_burst("creeps/"+str(enemy_def.filename),event.pos,str(enemy_def.get("color","")))
+			if not event.get("managed_death",false):particle_fx.emit_creep_death_burst("creeps/"+str(enemy_def.filename),event.pos,str(enemy_def.get("color","")))
 			resource_sound(Content.animations.get("creeps/"+str(enemy_def.filename), {}).get("params", {}), "explosion_sound", int(event.ms))
 		"explosion":
 			var cues = Content.animations.get("towers/"+str(event.get("filename", "")), {}).get("params", {}).get("missile_explosion_sounds", [])
@@ -3123,7 +3124,7 @@ func battle_span_end(_canvas:CanvasItem) -> void:
 
 func draw_game() -> void:
 	if probe_placement_order:placement_draw_trace.clear()
-	battle_uses_ordered_canvas=ordered_battle_rendering or (not reference_creep_hits and sim.enemies.any(func(e):return e.get("hit_active",false) and int(e.get("state",0)) not in [2,3]))
+	battle_uses_ordered_canvas=ordered_battle_rendering or sim.enemies.any(func(e):return not e.get("death_sprites",[]).is_empty()) or (not reference_creep_hits and sim.enemies.any(func(e):return e.get("hit_active",false) and int(e.get("state",0)) not in [2,3]))
 	ordered_battle_canvas.visible=battle_uses_ordered_canvas
 	var scale=map_scale()
 	var objects=battle_objects()
@@ -3138,7 +3139,14 @@ func draw_game() -> void:
 				append_creep_draw_commands(commands,object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
 			else:commands.append({"draw":draw_game_object.bind(object,enemy_projectiles,scale)})
 		commands.append({"draw":draw_game_middle.bind(enemy_projectiles,scale)})
-		for air in battle_air_objects():append_creep_draw_commands(commands,air,scale,enemy_projectiles.body.get(int(air.id),[]))
+		# Original air manager calls After for every vector entry, including
+		# ground owners. The map calls registered ground After again later.
+		for enemy in sim.enemies:
+			if uses_air_pass(enemy):append_creep_draw_commands(commands,enemy,scale,enemy_projectiles.body.get(int(enemy.id),[]))
+			append_creep_after_commands(commands,enemy,enemy_projectiles,scale)
+		for object in objects:
+			if object.has("enemy"):append_creep_after_commands(commands,object.enemy,enemy_projectiles,scale)
+			elif object.has("base"):commands.append({"draw":draw_base_after.bind(object.base)})
 		commands.append({"draw":draw_game_tail.bind(depth_bases,enemy_projectiles,scale)})
 		if ui_time_ms()<notice_until:commands.append({"draw":draw_game_notice})
 		ordered_battle_canvas.prepare(commands)
@@ -3146,7 +3154,12 @@ func draw_game() -> void:
 		draw_game_prelude(scale)
 		for object in objects:draw_game_object(object,enemy_projectiles,scale)
 		draw_game_middle(enemy_projectiles,scale)
-		for air in battle_air_objects():draw_creep_body(air,scale,enemy_projectiles.body.get(int(air.id),[]))
+		for enemy in sim.enemies:
+			if uses_air_pass(enemy):draw_creep_body(enemy,scale,enemy_projectiles.body.get(int(enemy.id),[]))
+			draw_creep_after_missiles(enemy,enemy_projectiles,scale)
+		for object in objects:
+			if object.has("enemy"):draw_creep_after_missiles(object.enemy,enemy_projectiles,scale)
+			elif object.has("base"):draw_base_after(object.base)
 		draw_game_tail(depth_bases,enemy_projectiles,scale)
 
 func append_creep_draw_commands(commands:Array,creep:Dictionary,scale:float,missiles:Array) -> void:
@@ -3243,16 +3256,6 @@ func draw_game_middle(enemy_projectiles:Dictionary,scale:float) -> void:
 func draw_game_tail(depth_bases:Array,enemy_projectiles:Dictionary,scale:float) -> void:
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
 	# Full map/owner/air interleaving remains separately unresolved.
-	for b in depth_bases:
-		if b.hp>=b.hpmax:continue
-		var params=Content.animations["bases/base"+str(b.type)].get("params",{})
-		if b.hp<=0 and bool(params.get("hide_hp_bar_on_dead",false)):continue
-		var frame=Content.frame("bases/base"+str(b.type),"Idle-100")
-		var offset=params.get("hp_bar_offset",[0,0])
-		var origin=b.pos+Vector2(-5,-frame.canvas_size.y/2.0-15)+Vector2(offset[0],offset[1])
-		ClassicUI.region(battle_draw_target,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
-		var width=32*maxf(0,b.hp)/b.hpmax
-		if width>0:ClassicUI.region(battle_draw_target,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))
 	for bubble in sim.bubbles:
 		if not bubble.active: continue
 		var texture = Content.tex("assets/sfx/goo_bubble.png" if int(bubble.type) == 8 else "assets/sfx/poison_bubble.png")
@@ -3266,7 +3269,6 @@ func draw_game_tail(depth_bases:Array,enemy_projectiles:Dictionary,scale:float) 
 		battle_draw_target.draw_set_transform(map_origin()+missile.pos*scale, 0.0 if is_nuke else deg_to_rad(float(missile.angle)-90.0), Vector2.ONE*scale)
 		extra_sprite(set_name, "missile2" if is_nuke and missile.up >= 1.0 else "missile", Vector2.ZERO, "", Vector2.ONE*float(missile.scale), Color(1, 1, 1, missile.alpha))
 		battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	for missile in enemy_projectiles.ground_after:draw_enemy_missile(missile,scale)
 	for effect in effects:
 		var remaining = float(effect.until-sim.clock_ms)
 		if effect.kind == "shot":
@@ -3365,6 +3367,9 @@ func creep_render_pose(e:Dictionary) -> Dictionary:
 	return {"position":position,"set_name":set_name,"growth":growth,"tint":tint,"native_scale":native_scale,"animator_position":animator_position,"layers":layers,"body_clocks":body_clocks}
 
 func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[],phase:int=0) -> void:
+	if int(e.get("state",0)) in [2,3]:
+		for missile in owner_missiles:draw_enemy_missile(missile,scale)
+		return
 	var value=creep_render_poses.get(int(e.id),{}) if phase>=2 else {}
 	if value.is_empty():value=creep_render_pose(e)
 	if phase==1:creep_render_poses[int(e.id)]=value
@@ -3613,3 +3618,34 @@ func click_map(pos: Vector2, silent_rejection:bool=false) -> void:
 			selected_tower = int(t.get("id", -1))
 		update_tutorial()
 		refresh_controls()
+
+func append_creep_after_commands(commands:Array,e:Dictionary,passes:Dictionary,scale:float) -> void:
+	if not uses_air_pass(e) and passes.ground_after.any(func(missile):return int(missile.owner)==int(e.id)):
+		commands.append({"draw":draw_creep_after_missiles.bind(e,passes,scale)})
+	if not e.get("death_sprites",[]).is_empty():
+		commands.append({"premultiplied":true,"draw":draw_creep_splashes.bind(e,scale)})
+
+func draw_creep_after_missiles(e:Dictionary,passes:Dictionary,scale:float) -> void:
+	if uses_air_pass(e):return
+	for missile in passes.ground_after:
+		if int(missile.owner)==int(e.id):draw_enemy_missile(missile,scale)
+
+func draw_creep_splashes(e:Dictionary,scale:float) -> void:
+	var resource=Content.animations.get("creeps/"+str(e.def.filename),{})
+	for owned in e.get("death_sprites",[]):
+		var texture=Content.tex(str(resource.get("textures",{}).get(str(owned.texture),{}).get("texture","")))
+		if texture==null:continue
+		var size=texture.get_size()*owned.scale
+		battle_draw_target.draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+		battle_draw_target.draw_texture_rect(texture,Rect2(owned.position-size/2,size),false,Color(1,1,1,owned.alpha))
+
+func draw_base_after(b:Dictionary) -> void:
+	if b.hp>=b.hpmax:return
+	var params=Content.animations["bases/base"+str(b.type)].get("params",{})
+	if b.hp<=0 and bool(params.get("hide_hp_bar_on_dead",false)):return
+	var frame=Content.frame("bases/base"+str(b.type),"Idle-100")
+	var offset=params.get("hp_bar_offset",[0,0])
+	var origin=b.pos+Vector2(-5,-frame.canvas_size.y/2.0-15)+Vector2(offset[0],offset[1])
+	ClassicUI.region(battle_draw_target,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
+	var width=32*maxf(0,b.hp)/b.hpmax
+	if width>0:ClassicUI.region(battle_draw_target,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))

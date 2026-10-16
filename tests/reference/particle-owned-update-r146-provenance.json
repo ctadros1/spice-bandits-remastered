@@ -1,0 +1,9 @@
+{
+  "source_candidate": "R146",
+  "original_baseline_helper_sha256": "6c0b7b2b7fe3351866f6b2d9ccbc0170d18bbd170b40f7d4daa8fec6c13302ed",
+  "baseline_sha256": "c5aedb5d63d584e04401a112cf09837b08ed3c76adae112fa2bf464a70e717f7",
+  "independent_runs_match": true,
+  "definitions": 90,
+  "trace_rows": 3780,
+  "unchanged_key_types_and_full_state_required": true
+}

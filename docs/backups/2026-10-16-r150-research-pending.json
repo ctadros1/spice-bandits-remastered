@@ -1,0 +1,69 @@
+{
+  "private": true,
+  "draft": true,
+  "published_checkpoint": false,
+  "source_commit_created": false,
+  "source_signing_pending": true,
+  "signed_base_commit": "56ee9219338e679f2d6f7872d9a187f550bde08d",
+  "source_files_archived_clone_plus_patch_exact": 589,
+  "zip_crc_safe_members_all_hashes_verified": true,
+  "real_r137_index_preserved": true,
+  "research_independent_reproduction_verified": true,
+  "archive_name": "r149-r150-source-owner-birth-research.zip",
+  "bytes": 3560463,
+  "sha256": "18367e436f66d300f5e2daf7dffc9ea4ed40d674987c1a3a91e27bd6433bac47",
+  "members": 35,
+  "release_id": 415422277,
+  "offline_complete": false,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-c2ce2d043f8713a1d612",
+  "release_tag": "untagged-c2ce2d043f8713a1d612",
+  "assets": [
+    {
+      "name": "r147-owned-update-failure.tar.gz",
+      "bytes": 983051415,
+      "sha256": "943dd69dc4b96146b429d9336ff98e49b19be2704e5d0f255c7deb5ab6d7e003"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 251,
+      "sha256": "62e341c039e95f8b2540174e1cca88b8a84207b83e2f2b2fb918dd656630c039"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 303086,
+      "sha256": "e0e15e7cd7c95631fcdc7706a1e8e3b0e86fed22d3c43caa8dd3a7c9a2ad8ad4"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1092,
+      "sha256": "0459d6eaa19d12bd820ca95bc3c0e1ad4cf4a64f98cd0c6d9168e6e52fac4efb"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1905,
+      "sha256": "97861d2c7a273b5ba10f16ca935879670b48275a57c24935f61f9de4b04eecab"
+    },
+    {
+      "name": "r147-restore-proof.zip",
+      "bytes": 1528078,
+      "sha256": "1f866ca0fd297547251c7df9744b4500f2d5d7bd75156e0e453af8b71771952c"
+    },
+    {
+      "name": "r148-source-particle-owner-research.zip",
+      "bytes": 3140004,
+      "sha256": "c426de2445582bccc4c95925a13ab730975fb6d4e26c78da174c445f0e818889"
+    },
+    {
+      "name": "r149-r150-source-owner-birth-research.zip",
+      "bytes": 3560463,
+      "sha256": "18367e436f66d300f5e2daf7dffc9ea4ed40d674987c1a3a91e27bd6433bac47"
+    }
+  ],
+  "total_remote_bytes": 991586294,
+  "all_eight_remote_assets_sha_sizes_verified": true,
+  "actual_remote_zip_crc_all_members_source_restore_verified": true,
+  "current_r147_package_unchanged": true,
+  "all_four_external_saves_unchanged": true,
+  "no_game_process": true,
+  "verified_at": "2026-10-16T22:41:39.623632+00:00"
+}

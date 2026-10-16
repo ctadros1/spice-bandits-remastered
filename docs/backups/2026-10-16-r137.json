@@ -1,0 +1,149 @@
+{
+  "pck_sha256": "db63285a28b8b36b36cda1be457b6a20a3fe5e5c12cf5e3c1766bdd6bf442963",
+  "executable_sha256": "005d7dd62739d1c5588f8e7be3271f095bb9f48d910cfefdf97c26914f8a7dcb",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "45af8d1accba70873048ec64dee2d845132c050467526e423e20784b7785241f"
+  },
+  "source_commit": "a5505c9f009665af719f055a350b15df10cfad99",
+  "source_commit_created": true,
+  "signed_and_pushed": true,
+  "source_signing_pending": false,
+  "all_ten_native_passed": true,
+  "counted_png": 452,
+  "supplemental_comparison_png": 27,
+  "wav": 23,
+  "evidence_files_verified": 894,
+  "presentation_checks": 539,
+  "audio_checks": 73,
+  "creep_animator_source_checks": 14408,
+  "runtime_scripts": 77,
+  "animator_source_checks": 38129,
+  "portal_source_checks": 42580,
+  "native_decal_poses_inspected": 10,
+  "decal_source_checks": 6895,
+  "death_burst_source_checks": 8248,
+  "native_burst_poses_inspected": 6,
+  "prior_r133_native_particle_reset_checks": 3,
+  "particle_child_source_checks": 49931,
+  "original_opacity_cases": 373,
+  "original_motion_cases": 126,
+  "original_recursive_render_cases": 96,
+  "original_factory_cases": 64,
+  "child_component_connected": false,
+  "local_clock_source_checks": 65741,
+  "particle_life_source_checks": 1171,
+  "original_lifetime_boundaries": 63,
+  "authored_lifetimes": 21,
+  "death_field_source_checks": 27469,
+  "native_creep_fields_source_checks": 8987,
+  "particle_geometry_source_checks": 512,
+  "held_live_particle_geometry_pairs": 12,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_comparison_sheets_inspected": 0,
+  "unchanged_comparison_sheets_exact": 12,
+  "source_bundle_tracked_files_verified": 547,
+  "offline_complete": false,
+  "scope": "Live opacity floor/fade cap and disconnected owned-child reference. Supplement to verified earlier releases/full r89 workspace. Universal2 compiled, Apple Silicon execution. Originals/proportions/profiles preserved. No Intel/Finder/Gatekeeper/notarization/current physical input/speaker/original-device equivalence. Full animator/owner/registry/death/GPU and hosted progression remain unresolved. Later publication record excluded.",
+  "evidence_archive_files_verified": 894,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "signed_and_local_signature_verified": true,
+  "tree": "5d83c49ab21364998d847bd49d8e7638ecdabef1",
+  "source_files": 547,
+  "fresh_final_bundle_empty_clone_source_bytes_modes_exact": true,
+  "bundle_name": "r137-final-signed-source.bundle",
+  "bundle_bytes": 2518887,
+  "bundle_sha256": "6fc4c6f55fedb55ca9ea640539b82d1b2d55b3dd72b0331c555914792460b849",
+  "later_dirty_work_preserved": true,
+  "remote_push_pending": false,
+  "remote_main_verified": "a5505c9f009665af719f055a350b15df10cfad99",
+  "github_verification": false,
+  "github_verification_reason": "unknown_key",
+  "private": true,
+  "published": true,
+  "draft": false,
+  "release_id": 415299518,
+  "release_tag": "backup-2026-10-16-r137",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r137",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r137-macOS.zip",
+      "bytes": 330972595,
+      "sha256": "acfe6c2afed69fba6aa4898c96ee5d26424cfc870d4845ea2b2c77a740f49f84"
+    },
+    {
+      "name": "r137-verification-evidence.tar.gz",
+      "bytes": 705653371,
+      "sha256": "e71aff0cf7dd825ef9e024208171b417103196d0a3a99dde109b0acfa22d65b4"
+    },
+    {
+      "name": "r137-pending-restoration.zip",
+      "bytes": 1520679,
+      "sha256": "a98512f2392f905b08463f0deaf1812d639f96dfabda394b40c61d33ba629ca7"
+    },
+    {
+      "name": "r137-pending-source.bundle",
+      "bytes": 2062579,
+      "sha256": "fe88ce8e7b62664d7c14daeedd3168098528bab7f3155be01394a97de90f29da"
+    },
+    {
+      "name": "r137-staged-source.patch",
+      "bytes": 7395684,
+      "sha256": "d8d00f4501e00b4d32b24d8d7da184a087e40dda879e2fb3069cfb3e7ac8e76b"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 108276,
+      "sha256": "e4f5466e976f5863ae60159d4ba3bcec33c07bda8aaf566fe49228da185af3f7"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1789,
+      "sha256": "4493de69b91c592d5919848f56c9ba5b60eab7481b0d22ddbfb619686f8492b6"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 156399,
+      "sha256": "97eccb6bad8c0bfc15920146cac5668350f978afde9a6332b6137e1a52755510"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 345,
+      "sha256": "842756d3f2e701a0020095913ef5c0e8ce4f9b4bdde236150c326bcbebfe8c70"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 2457,
+      "sha256": "fc74138f031642bcc2ebf6dc1578b6daa2878aea97b19e4a623bb31e1b71055c"
+    },
+    {
+      "name": "r137-final-signed-source.bundle",
+      "bytes": 2518887,
+      "sha256": "6fc4c6f55fedb55ca9ea640539b82d1b2d55b3dd72b0331c555914792460b849"
+    },
+    {
+      "name": "R137-FINAL-SOURCE-VERIFICATION.json",
+      "bytes": 671,
+      "sha256": "30b9a15f50547d0d740689f358ace3ccd2b9850d37894ef451fb8a0d47d717ce"
+    },
+    {
+      "name": "R137-FINAL-RESTORE.md",
+      "bytes": 1551,
+      "sha256": "a65443ec67451d93e4cd488610dc8a933177e40062284469fadf78b9ad1dc06f"
+    },
+    {
+      "name": "r137-final-signature-push-proof.zip",
+      "bytes": 4905,
+      "sha256": "3371cd66e11cc6f4f0e16ed3d7f8d55db1796eb235020bd05c7d5aca84315730"
+    }
+  ],
+  "all_remote_assets_sha_sizes_verified": true,
+  "actual_remote_final_bundle_empty_clone_547_files_bytes_modes_signature_verified": true,
+  "pending_assets_preserved_as_history": true,
+  "current_newer_r147_performance_failure_not_accepted": true,
+  "total_remote_bytes": 1050400188,
+  "verified_at": "2026-10-16T22:45:52.373010+00:00"
+}

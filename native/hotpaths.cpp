@@ -10,6 +10,7 @@
 #include <cmath>
 #include <limits>
 #include <cstdio>
+#include <cstring>
 #include <godot_cpp/variant/string_name.hpp>
 #include <godot_cpp/variant/rect2.hpp>
 #include <godot_cpp/variant/packed_vector2_array.hpp>
@@ -127,7 +128,14 @@ void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_systems","systems","clock_ms","emit_child","emit_batch","random","dt"),&SpiceNative::advance_systems,DEFVAL(Variant()),DEFVAL(0.03));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("emit_batch","system","clock_ms","random"),&SpiceNative::emit_batch);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("compile_particle","definition"),&SpiceNative::compile_particle);
-    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization","reference_keys"),&SpiceNative::particle_batches,DEFVAL(false),DEFVAL(false));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization","reference_keys","coalesce_owned"),&SpiceNative::particle_batches,DEFVAL(false),DEFVAL(false),DEFVAL(true));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_spawn_fields","system","index","random"),&SpiceNative::particle_spawn_fields);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_emit","system","count","make_particle","make_child"),&SpiceNative::owned_particle_emit);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_advance","system","dt","make_particle","make_child","interval_scale","prepared"),&SpiceNative::owned_particle_advance,DEFVAL(1.0),DEFVAL(true));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_restart","system"),&SpiceNative::owned_particle_restart);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_destroy","system","deleted"),&SpiceNative::owned_particle_destroy);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_render","root","homogeneous"),&SpiceNative::owned_particle_render);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_batches","root","origin","zoom"),&SpiceNative::owned_particle_batches);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("format_xp","value","compact"),&SpiceNative::format_xp,DEFVAL(true));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("projected_random_vector","latitude_rand","angle_rand"),&SpiceNative::projected_random_vector);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("water_table","seed"),&SpiceNative::water_table);
@@ -418,6 +426,11 @@ void SpiceNative::advance_systems(Array systems,double clock_ms,Callable emit_ch
     std::unordered_set<int64_t> expired;
     for(int i=0;i<count;++i) {
         Dictionary sys=systems[i];
+        if(sys.has("owned_tree")) {
+            Callable advance_owned(emit_batch.get_object(),"advance_owned_system");
+            if(bool(advance_owned.call(sys,dt,false)))expired.insert(int64_t(sys[k.id]));
+            continue;
+        }
         double system_clock=clock_ms;
         if(sys.has(k.local_clock_seconds)) {
             const float seconds=f32(double(sys[k.local_clock_seconds])+dt);
@@ -511,7 +524,9 @@ void SpiceNative::emit_batch(Dictionary sys,double clock_ms,RandomNumberGenerato
     }
     sys[k.released]=clock_ms;
 }
-Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization,bool reference_keys) {
+#include "particle_children.inc"
+
+Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization,bool reference_keys,bool coalesce_owned) {
     const Keys &k=keys();
     // Keep the former text-key path selectable for exact geometry/CPU checks.
     // Lookup/output keys and immutable white default are reused. Output keys
@@ -536,6 +551,26 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
         // ratios. Keep their age while batching the shared texture in order.
         const double view_clock=sys.get(lookup("view_clock_ms",k.view_clock_ms),clock_ms);
         if((int(d.get(lookup("real_alpha",k.real_alpha),0))==1)!=premultiplied)continue;
+        if(sys.has("owned_tree")) {
+            if(!coalesce_owned) {
+                // Former per-root allocation/submission path stays callable.
+                flush();const Array owned=owned_particle_batches(sys["owned_tree"],origin,zoom);
+                for(int i=0;i<owned.size();++i)result.append(owned[i]);previous=nullptr;continue;
+            }
+            Object *object=sys[k.texture];Texture2D *texture=Object::cast_to<Texture2D>(object);
+            if(!texture)continue;
+            if(previous!=texture) {flush();current_texture=sys[k.texture];previous=texture;}
+            const float z=f32(zoom);
+            auto append_owned=[&](const ChildQuad &q) {
+                const int at=vertex_data.size();
+                const Color tint(f32(double(q.rgba[0])/255),f32(double(q.rgba[1])/255),f32(double(q.rgba[2])/255),f32(double(q.rgba[3])/255));
+                for(int j=0;j<4;++j) {vertex_data.push_back(origin+q.position[j]*z);uv_data.push_back(q.uv[j]);color_data.push_back(tint);}
+                for(int j:{0,1,2,2,1,3})index_data.push_back(at+j);
+            };
+            // Only adjacent equal-texture roots in this material pass share
+            // buffers. Traversal and original in-place child colors stay intact.
+            child_visit_root(Dictionary(sys["owned_tree"]),append_owned);continue;
+        }
         const Array rgba=d.get(lookup("color",k.color),(reference_keys?Array::make(1,1,1,1):white)),particles=sys[k.particles];
         Object *object=sys[k.texture];Texture2D *texture=Object::cast_to<Texture2D>(object);
         if(!texture)continue;
@@ -626,4 +661,41 @@ extern "C" GDExtensionBool GDE_EXPORT spice_hotpaths_init(GDExtensionInterfaceGe
     init.register_initializer(initialize_spice);
     init.set_minimum_library_initialization_level(MODULE_INITIALIZATION_LEVEL_SCENE);
     return init.init();
+}
+
+
+Dictionary SpiceNative::particle_spawn_fields(Dictionary sys,int64_t i,RandomNumberGenerator *random) {
+    const Keys &k=keys();const Dictionary d=sys[k.definition];
+    Object *object=sys[k.texture];Texture2D *texture=Object::cast_to<Texture2D>(object);
+    if(!random||!texture)return Dictionary();
+    const int number=d.get("num_release",1);const double clock_ms=double(sys.get("clock_seconds",0))*1000.0;
+    const Array rectangles=d["texture_list"],velocity_values=d.get("velocity",Array::make(0,0));
+    constexpr double tau=6.28318530717958647692,deg_to_rad=0.01745329251994329577;
+        Dictionary rect;
+        if(!rectangles.is_empty())rect=rectangles[random->randi_range(0,rectangles.size()-1)];
+        else {
+            rect["x"]=d.get("tx",0);rect["y"]=d.get("ty",0);
+            rect["w"]=d.get("tw",texture->get_width());rect["h"]=d.get("th",texture->get_height());
+        }
+        const Rect2 region{f32(double(rect["x"])),f32(double(rect["y"])),f32(double(rect["w"])),f32(double(rect["h"]))};
+        Vector2 velocity{f32(double(velocity_values[0])),f32(double(velocity_values[1]))};
+        Vector2 point=sys[k.pos];
+        if(int(d.get("circled_emission",0))) {
+            const double angle=tau*i/std::max(1,number)+random->randf_range(-double(d.get("circle_angle_var",0)),double(d.get("circle_angle_var",0)))*deg_to_rad;
+            const Vector2 heading(std::cos(angle),std::sin(angle));
+            point+=heading*f32(double(d.get("circle_radius",0)));
+            velocity=heading*f32(double(d.get("circle_vel_amount",0))+random->randf_range(0,double(d.get("velocity_var",1))));
+        } else velocity+=Vector2::from_angle(f32(random->randf()*tau))*f32(double(d.get("velocity_var",1)));
+        double rot_speed=d.get("rot_speed",1.0);
+        if(random->randi_range(0,99)<int(d.get("rot_dir_rand",0)))rot_speed*=random->randi()%2?1:-1;
+        double rotation=d.get("rot_angle",0);
+        const double rot_variation=d.get("rot_angle_var",0);
+        rotation+=random->randf_range(-rot_variation/2,rot_variation/2);
+        const double size_variation=d.get("size_init_var",0);
+        const double size_offset=random->randf_range(-size_variation,size_variation);
+        Dictionary p;
+        p[k.pos]=point;p[k.velocity]=velocity;p[k.rotation]=rotation;p[k.rot_speed]=rot_speed;
+        p[k.alpha]=double(d.get("fade_in_time",0))>0?0.0:1.0;p[k.born]=clock_ms;
+        p["region"]=region;p["size_offset"]=size_offset;p[k.child_released]=clock_ms;
+    return p;
 }

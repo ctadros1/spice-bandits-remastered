@@ -1,0 +1,5 @@
+{
+  "sha256": "55babdcc207641a6974d44f17482c8f2004dbfc4518f3177abf3ab29553cf92d",
+  "source": "Preserved live R141 controller before R145 state extraction; runtime source exists in verified R141 private failed-candidate archive. Immutable regression baseline only; not imported into the game package.",
+  "private_recovery_release": "research-2026-10-16-r141-draw-failures"
+}

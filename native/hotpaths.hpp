@@ -29,7 +29,14 @@ public:
     static void advance_systems(Array systems, double clock_ms, Callable emit_child, Callable emit_batch, RandomNumberGenerator *random = nullptr, double dt = 0.03);
     static void emit_batch(Dictionary system, double clock_ms, RandomNumberGenerator *random);
     static int64_t compile_particle(Dictionary definition);
-    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom, bool mesh_color_quantization = false, bool reference_keys = false);
+    static Array particle_batches(Array systems, bool premultiplied, double clock_ms, Vector2 origin, double zoom, bool mesh_color_quantization = false, bool reference_keys = false, bool coalesce_owned = true);
+    static Dictionary particle_spawn_fields(Dictionary system,int64_t index,RandomNumberGenerator *random);
+    static void owned_particle_emit(Dictionary system,int64_t count,Callable make_particle,Callable make_child);
+    static void owned_particle_advance(Dictionary system,double dt,Callable make_particle,Callable make_child,double interval_scale=1.0,bool prepared=true);
+    static void owned_particle_restart(Dictionary system);
+    static void owned_particle_destroy(Dictionary system,Array deleted);
+    static Dictionary owned_particle_render(Dictionary root,bool homogeneous);
+    static Array owned_particle_batches(Dictionary root,Vector2 origin,double zoom);
     static String format_xp(double value, bool compact = true);
     static Vector2 projected_random_vector(int64_t latitude_rand, int64_t angle_rand);
     static Dictionary bolt_ribbon(PackedVector2Array path, int64_t pass_id, double opacity);

@@ -6,6 +6,9 @@ const CreepPortal=preload("res://scripts/creep_portal_view.gd")
 const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
+const Death=preload("res://scripts/creep_death_view.gd")
+const ParticleState=preload("res://scripts/particle_state.gd")
+var particle_state=ParticleState.new()
 var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
@@ -113,6 +116,7 @@ func timed_section(key: String, started: int) -> int:
 	return now
 
 func setup(data: Dictionary, map_data: Dictionary, mission: Dictionary, profile: Dictionary, seed: int = 114, animation_data: Dictionary = {}) -> void:
+	particle_state.reset()
 	catalog = data
 	animations = animation_data
 	decals.setup(int(map_data.get("width_pixels",0)),int(map_data.get("height_pixels",0)))
@@ -925,6 +929,7 @@ func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
 	CreepHit.after_damage(e,kind)
 	if e.hp <= 0:
 		create_death_crater(e)
+		begin_enemy_death(e,kind)
 		kills += 1
 		kill_chain += 1
 		var source_path = route(Vector2i(int(sources[e.source].x), int(sources[e.source].y)), Vector2i(int(bases[e.base].x), int(bases[e.base].y)), e.air) if e.base >= 0 else []
@@ -934,7 +939,7 @@ func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
 		var reward = maxi(1, int(f32(nominal*(1.0 + int(upgrades.get("up_interest", 0))*0.05))))
 		money = f32(money+reward)
 		score = f32(score+reward)
-		emit("kill", {"id": e.id, "pos": e.pos, "type": e.type, "owner": owner, "reward": reward})
+		emit("kill", {"id": e.id, "pos": e.pos, "type": e.type, "owner": owner, "reward": reward,"managed_death":true})
 
 func shoot(t: Dictionary, e: Dictionary, boost: Dictionary) -> void:
 	var d = t.def
@@ -1252,6 +1257,8 @@ func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vec
 			teleport_enemy(e,exit_cell)
 
 func step() -> void:
+	check_room_outcome()
+	if outcome!="playing":return
 	step_lookup_active = false
 	var timed = Time.get_ticks_usec() if profile_hotpaths else 0
 	# CRoom.Update advances global decals before UpdateGame combat births.
@@ -1286,85 +1293,26 @@ func step() -> void:
 		if survival_remaining_ms==0:finish("victory");return
 	# Recovered normal-update order: enemies, towers, mines, portals, bases.
 	if profile_hotpaths: timed = timed_section("spawn_paths", timed)
-	for e in enemies:
-		if e.hp <= 0: continue
-		CreepFreeze.advance_fields(e,tick_ms,int(freeze_state.remaining))
-		if e.float_until > 0 and clock_ms >= e.float_until:
-			e.air = e.native_air
-			e.float_until = 0
-			e.state = 0
-			set_enemy_path(e)
-		if e.disco_until > 0 and clock_ms >= e.disco_until:
-			e.disco_until = 0
-			set_enemy_path(e)
-		if e.get("hit_running",false):CreepHit.advance(e,tick_ms)
-		if int(e.freeze_remaining)>0 or clock_ms < e.float_until: continue
-		if e.path.is_empty() or e.base < 0: continue
-		CreepView.prepare(self, e)
-		if e.get("portal_boundary",false):
-			e.portal_boundary=false;e.cell=e.next_cell;e.move_start=e.pos;e.move_progress=0.0
-		elif e.speed > 0 and movement_point_allowed(e):
-			var cell = e.path[e.path_at]
-			var point = center(cell.x, cell.y)
-			e.next_cell = cell
-			var future = point
-			var peek = {"cell":cell,"path_at":int(e.path_at)+1,"path":e.path,"disco_until":e.disco_until,"bombing":e.get("bombing",false),"def":e.def}
-			if movement_point_allowed(peek): future = center(e.path[peek.path_at].x, e.path[peek.path_at].y)
-			var movement = CreepView.movement_tick(e.move_start, point, future, CreepView.progress(self, e), float(e.get("move_carry", 0)), f32(float(e.speed)*float(e.slow)), tick_ms, float(map.hex_h))
-			e.move_progress = movement.progress
-			e.move_carry = movement.carry
-			e.pos = movement.position
-			e.move_start = movement.start
-			if movement.transitioned:
-				e.cell = cell
-				e.path_at += 1
-				e.next_cell = e.path[e.path_at] if e.path_at < e.path.size() else cell
-			if (movement.target-movement.start).length() > 0.001: e.dir = (movement.target-movement.start).normalized()
-			if e.bombing and cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and int(e.bomb_dropped_at) != int(e.path_at):
-				if movement.progress > 0.5:
-					launch_enemy_missiles(e, true)
-					e.bomb_dropped_at = e.path_at
-			# Native kamikaze switches to attack in the latter half of the
-			# final base link, before reaching its center.
-			if int(e.def.traits.get("kamikaze", 0)) == 1 and e.next_cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and float(e.move_progress) > 0.5 and e.disco_until == 0:
-				base_damage(int(e.base), float(e.def.damage))
-				e.hp = 0.0
-				emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
-				continue
-		e.draw_light=CreepLight.from_map(map,e.cell,e.next_cell,CreepView.progress(self,e),float(e.get("draw_light",1)))
-		if not movement_point_allowed(e) and e.disco_until == 0:
-			var b = bases[e.base]
-			if int(e.def.traits.get("shoot_bomb", 0)) == 1:
-				var circle = bomber_circle(e.cell, int(e.base))
-				if not circle.is_empty():
-					circle.pop_back() # native skips the trailing base before selecting another ring
-					e.path = circle
-					e.path_at = 0
-					e.bombing = true
-					e.bomb_dropped_at = -1
-				continue
-			if int(e.def.traits.get("kamikaze", 0)) != 1:
-				if not e.attacking:
-					e.attacking = true
-					e.attack_point = displace_point(e.cell, b.pos, int(e.id), e.pos)
-					e.attack_reload_ms = 0
-				var aim_distance = float(e.speed)/1000.0*float(map.hex_h)*seconds*float(e.slow)
-				e.pos = e.pos.move_toward(e.attack_point, aim_distance)
-				e.dir = (b.pos-e.pos).normalized()
-				if e.pos.distance_to(e.attack_point) > 0.001: continue
-				e.attack_reload_ms += tick_ms
-				if int(e.attack_reload_ms) < int(e.def.rof): continue
-				e.attack_reload_ms = 0
-			if int(e.def.traits.get("shoot_missile", 0)) == 1: launch_enemy_missiles(e)
-			else: base_damage(int(e.base), float(e.def.damage))
-			if int(e.def.traits.get("kamikaze", 0)) == 1:
-				e.hp = 0.0
-				emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
-		elif e.path_at >= e.path.size() and clock_ms < e.disco_until: set_enemy_path(e)
-	for e in enemies:
-		if e.hp > 0:
-			CreepView.update(self,e)
-			if e.has("portal_pose"):CreepPortal.advance(e.portal_pose,tick_ms,creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
+	var creep_index=0
+	while creep_index<enemies.size():
+		var e=enemies[creep_index]
+		if int(e.get("state",0))==2:
+			destroy_enemy_owner(e);enemies.remove_at(creep_index);continue
+		if e.hp<=0 and int(e.get("state",0))!=3:
+			# Full Creep.Update's zero-HP guard uses SetState, not SetDie.
+			e.state=3;e.death_sprites=[]
+		if int(e.get("state",0))==3:
+			var counts=e.get("particle_roots",[]).map(func(sys):return sys.particles.size())
+			var tail=Death.tail(3,null,counts,e.get("death_sprites",[]),tick_ms)
+			e.state=tail.state;e.death_sprites=tail.sprites
+		else:
+			update_living_enemy(e)
+			if e.hp>0:
+				CreepView.update(self,e)
+				if e.has("portal_pose"):CreepPortal.advance(e.portal_pose,tick_ms,creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
+			if int(e.get("state",0)) not in [2,3]:particle_state.refresh_creep(self,e)
+		particle_state.advance_creep(e,tick_ms)
+		creep_index+=1
 	if profile_hotpaths: timed = timed_section("creep_movement", timed)
 	for projectile in enemy_missiles.duplicate():
 		var b = bases[projectile.base]
@@ -1481,16 +1429,6 @@ func step() -> void:
 	for pair in static_portals:
 		PortalView.advance(pair.presentation,tick_ms)
 		check_portal_transfers(pair.presentation,pair["in"],pair.out)
-	for e in enemies.duplicate():
-		if e.hp <= 0:
-			release_displacement(int(e.id))
-			enemies.erase(e)
-	var living = 0
-	for b in bases:
-		if b.hp > 0: living += 1
-		if b.hp <= 0 and str(b.get("mustsurvive", "")) not in ["", "0"]: living = -100
-	if living <= 0: finish("defeat")
-	elif tutorial_finished and wave_index >= config.waves.size() and running_waves.is_empty() and enemies.is_empty(): finish("victory")
 	step_lookup_active = false
 	step_support.clear();step_enemies.clear()
 	if profile_hotpaths: timed_section("cleanup", timed)
@@ -1548,3 +1486,120 @@ func digest() -> String:
 		outcome, paused, early_wave_count, enemies, towers, bases, running_waves, missiles, enemy_missiles, zones, bubbles, mines, portals,
 		static_portals, abilities, freeze_until, freeze_state, disco_until, defense_until, pending_towers,
 		last_paths_ms, next_id, rng.state, tutorial_finished, spawn_hold, survival_remaining_ms, displacement_owners, build_overrides]).sha256_text()
+
+func check_room_outcome() -> void:
+	var living = 0
+	for b in bases:
+		if b.hp > 0: living += 1
+		if b.hp <= 0 and str(b.get("mustsurvive", "")) not in ["", "0"]: living = -100
+	if living <= 0: finish("defeat")
+	elif tutorial_finished and wave_index >= config.waves.size() and running_waves.is_empty() and not is_any_creep_targeted(1): finish("victory")
+
+func update_living_enemy(e:Dictionary) -> void:
+	var seconds=float(tick_ms)/1000.0
+	CreepFreeze.advance_fields(e,tick_ms,int(freeze_state.remaining))
+	if e.float_until > 0 and clock_ms >= e.float_until:
+		e.air = e.native_air
+		e.float_until = 0
+		e.state = 0
+		set_enemy_path(e)
+	if e.disco_until > 0 and clock_ms >= e.disco_until:
+		e.disco_until = 0
+		set_enemy_path(e)
+	if e.get("hit_running",false):CreepHit.advance(e,tick_ms)
+	if int(e.freeze_remaining)>0 or clock_ms < e.float_until: return
+	if e.path.is_empty() or e.base < 0: return
+	CreepView.prepare(self, e)
+	if e.get("portal_boundary",false):
+		e.portal_boundary=false;e.cell=e.next_cell;e.move_start=e.pos;e.move_progress=0.0
+	elif e.speed > 0 and movement_point_allowed(e):
+		var cell = e.path[e.path_at]
+		var point = center(cell.x, cell.y)
+		e.next_cell = cell
+		var future = point
+		var peek = {"cell":cell,"path_at":int(e.path_at)+1,"path":e.path,"disco_until":e.disco_until,"bombing":e.get("bombing",false),"def":e.def}
+		if movement_point_allowed(peek): future = center(e.path[peek.path_at].x, e.path[peek.path_at].y)
+		var movement = CreepView.movement_tick(e.move_start, point, future, CreepView.progress(self, e), float(e.get("move_carry", 0)), f32(float(e.speed)*float(e.slow)), tick_ms, float(map.hex_h))
+		e.move_progress = movement.progress
+		e.move_carry = movement.carry
+		e.pos = movement.position
+		e.move_start = movement.start
+		if movement.transitioned:
+			e.cell = cell
+			e.path_at += 1
+			e.next_cell = e.path[e.path_at] if e.path_at < e.path.size() else cell
+		if (movement.target-movement.start).length() > 0.001: e.dir = (movement.target-movement.start).normalized()
+		if e.bombing and cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and int(e.bomb_dropped_at) != int(e.path_at):
+			if movement.progress > 0.5:
+				launch_enemy_missiles(e, true)
+				e.bomb_dropped_at = e.path_at
+		# Native kamikaze switches to attack in the latter half of the
+		# final base link, before reaching its center.
+		if int(e.def.traits.get("kamikaze", 0)) == 1 and e.next_cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and float(e.move_progress) > 0.5 and e.disco_until == 0:
+			base_damage(int(e.base), float(e.def.damage))
+			e.hp = 0.0
+			begin_enemy_death(e,0)
+			emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
+			return
+	e.draw_light=CreepLight.from_map(map,e.cell,e.next_cell,CreepView.progress(self,e),float(e.get("draw_light",1)))
+	if not movement_point_allowed(e) and e.disco_until == 0:
+		var b = bases[e.base]
+		if int(e.def.traits.get("shoot_bomb", 0)) == 1:
+			var circle = bomber_circle(e.cell, int(e.base))
+			if not circle.is_empty():
+				circle.pop_back() # native skips the trailing base before selecting another ring
+				e.path = circle
+				e.path_at = 0
+				e.bombing = true
+				e.bomb_dropped_at = -1
+			return
+		if int(e.def.traits.get("kamikaze", 0)) != 1:
+			if not e.attacking:
+				e.attacking = true
+				e.attack_point = displace_point(e.cell, b.pos, int(e.id), e.pos)
+				e.attack_reload_ms = 0
+			var aim_distance = float(e.speed)/1000.0*float(map.hex_h)*seconds*float(e.slow)
+			e.pos = e.pos.move_toward(e.attack_point, aim_distance)
+			e.dir = (b.pos-e.pos).normalized()
+			if e.pos.distance_to(e.attack_point) > 0.001: return
+			e.attack_reload_ms += tick_ms
+			if int(e.attack_reload_ms) < int(e.def.rof): return
+			e.attack_reload_ms = 0
+		if int(e.def.traits.get("shoot_missile", 0)) == 1: launch_enemy_missiles(e)
+		else: base_damage(int(e.base), float(e.def.damage))
+		if int(e.def.traits.get("kamikaze", 0)) == 1:
+			e.hp = 0.0
+			begin_enemy_death(e,0)
+			emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
+	elif e.path_at >= e.path.size() and clock_ms < e.disco_until: set_enemy_path(e)
+
+func begin_enemy_death(e:Dictionary,kind:int) -> void:
+	if int(e.get("state",0)) in [2,3]:return
+	e.death_previous_state=int(e.get("state",0));e.state=3;e.death_kind=kind
+	var resource="creeps/"+str(e.def.filename)
+	var offset=e.def.traits.get("offset",[0,0])
+	var creation=Death.creation(animations.get(resource,{"params":{},"textures":{}}),{}, {},kind,true,e.pos,Vector2(offset[0],offset[1]),enemy_visual_aim_point(e),e.get("visual_pos",e.pos))
+	e.death_sprites=creation.sprites
+	for i in e.death_sprites.size():e.death_sprites[i].index=i
+	particle_state.begin_creep_death(e,enemy_visual_aim_point(e))
+	# SetDie cleans portal/tower references immediately, not the owner itself.
+	for tower in towers:
+		if int(tower.get("tracking",{}).get("id",-1))==int(e.id):tower.tracking.id=-1
+	for portal in portals:
+		var presentation=portal.get("presentation",{})
+		if presentation.has("queue"):presentation.queue.erase(int(e.id))
+	for pair in static_portals:pair.presentation.queue.erase(int(e.id))
+
+func destroy_enemy_owner(e:Dictionary) -> void:
+	particle_state.destroy_creep(e)
+	release_displacement(int(e.id))
+	enemy_missiles=enemy_missiles.filter(func(missile):return int(missile.owner)!=int(e.id))
+	emit("owner_removed",{"id":e.id})
+
+func is_any_creep_targeted(player:int) -> bool:
+	# Original query includes dying/state-2 owners until actual removal.
+	for e in enemies:
+		var target=int(e.get("target_owner",0))
+		if target in [0,player] and int(e.get("owner",0))!=player:return true
+		if target==player and bases.any(func(base):return int(base.get("player",1))==player and base.hp>0):return true
+	return false

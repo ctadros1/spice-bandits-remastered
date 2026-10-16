@@ -165,8 +165,21 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (214 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (216 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
+            owned_comparisons=manifest.get('owned_group_comparisons',[])
+            record['owned_group_comparisons']=owned_comparisons
+            fresh=fresh and len(owned_comparisons)==3 and {c.get('speed') for c in owned_comparisons}=={1,2,4}
+            for comparison in owned_comparisons:
+                fresh=fresh and comparison.get('exact_rgba') is True and comparison.get('error')==0 and comparison.get('visible_owned_roots',0)>0
+                fresh=fresh and comparison.get('coalesced_error')==0 and comparison.get('injected_owned_roots',0)>=2 and comparison.get('injected_visible_change') is True and comparison.get('caller_state_restored') is True
+                fresh=fresh and 0<comparison.get('coalesced_groups',0)<comparison.get('unmerged_groups',0)
+                paths=[directory/comparison[k] for k in ['unmerged','coalesced']]
+                fresh=fresh and all(p.is_file() and p.stat().st_mtime_ns>=started_ns for p in paths)
+                if all(p.is_file() for p in paths):
+                    hashes=[digest(p) for p in paths]
+                    fresh=fresh and hashes[0]==hashes[1]
+                    comparison['unmerged_sha256'],comparison['coalesced_sha256']=hashes
             key_comparisons=manifest.get('particle_key_comparisons',[])
             record['particle_key_comparisons']=key_comparisons
             fresh=fresh and len(key_comparisons)==12
@@ -239,13 +252,13 @@ def main():
             # sequence, rather than rounded JSON phases or a new tolerance.
             fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
-            burst_frames={'death-burst-0000':0,'death-burst-0300':10,'death-burst-0600':20,'death-burst-paused':20,'death-burst-0930':31,'death-burst-1350':45}
+            burst_frames={'death-burst-0000':0,'death-burst-0150':5,'death-burst-0300':10,'death-burst-0600':20,'death-burst-paused':20,'death-burst-0930':31,'death-burst-1350':45}
             required.update(burst_frames)
             burst_poses={c['name']:c for c in manifest['captures'] if c['name'] in burst_frames}
             burst_fixture=json.loads((ROOT/'tests/fixtures/native-creep-death-tail-reference.json').read_text())
             burst_case=next(c for c in burst_fixture['cases'] if c['resource']=='creeps/creep1' and c['dt_ms']==30)
             burst_rows={r['frame']:r['output']['systems'] for r in burst_case['frames']}
-            burst_exact=len(burst_poses)==6
+            burst_exact=len(burst_poses)==7
             for pose,frame in burst_frames.items():
                 actual=burst_poses.get(pose,{}).get('death_burst',{})
                 expected=burst_rows[frame]
@@ -254,6 +267,21 @@ def main():
                 burst_exact=burst_exact and actual.get('paused')==(pose=='death-burst-paused')
             fresh=fresh and burst_exact
             record['death_burst_original_parent_counts_clocks_exact']=burst_exact
+            removed=next((c for c in manifest['captures'] if c['name']=='death-burst-1380-removed'),{}).get('death_burst',{})
+            required.add('death-burst-1380-removed')
+            retained=all(burst_poses.get(pose,{}).get('death_burst',{}).get('owner_retained') is True and burst_poses[pose]['death_burst'].get('owner_state')==(2 if pose=='death-burst-1350' else 3) for pose in burst_frames)
+            removed_exact=removed.get('owner_retained') is False and removed.get('owner_state')==2 and removed.get('global_systems')==0
+            fresh=fresh and retained and removed_exact
+            record['retained_death_owner_state_and_next_pass_destruction_exact']=retained and removed_exact
+            splash_fixture=json.loads((ROOT/'tests/fixtures/native-creep-splash-mid-reference.json').read_text())
+            splash_case=next(c for c in splash_fixture['cases'] if c['resource']=='creeps/creep1')
+            splash_exact=True
+            for pose,key in [('death-burst-0000','zero_delta'),('death-burst-0150','mid_150ms')]:
+                expected=splash_case[key]
+                fields=[{**{k:sp[k] for k in ('life_bits','scale_bits','rgba_bits')},'size_bits':draw['size_bits']} for sp,draw in zip(expected['sprites'],expected['draws'])]
+                splash_exact=splash_exact and burst_poses.get(pose,{}).get('death_burst',{}).get('splashes')==fields
+            fresh=fresh and splash_exact
+            record['death_splash_original_mid_flash_fields_exact']=splash_exact
             decal_names = {'background', 'tower-only', 'ground-000', 'ground-tower-cover', 'ground-large', 'ground-density', 'ground-density-next', 'ground-hold', 'ground-fade', 'ground-expired'}
             decal_names = {'decal-' + n for n in decal_names}
             required.update(decal_names)

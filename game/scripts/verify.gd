@@ -730,7 +730,9 @@ func run() -> void:
 	marine.cell = Vector2i(int(marine_test.bases[0].x), int(marine_test.bases[0].y))
 	marine.pos = marine_test.bases[0].pos
 	marine_test.advance(30)
-	check(marine_test.bases[0].hp == 95 and marine_test.enemies.is_empty() and marine_test.kills == 0, "marine kamikaze hits base once without kill reward")
+	check(marine_test.bases[0].hp == 95 and marine_test.enemies.size()==1 and int(marine.state)==3 and marine_test.kills == 0, "original SetDie(0) retains marine after one kamikaze impact without kill reward")
+	marine_test.advance(2000)
+	check(marine_test.bases[0].hp==95 and marine_test.enemies.is_empty() and marine_test.kills==0,"retained kamikaze finishes its actual tail and never repeats base damage or reward")
 	var standing = make_sim()
 	standing.next_wave_ms = 1000000
 	var tank = standing.spawn_enemy(5, 0, "")

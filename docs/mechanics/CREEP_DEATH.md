@@ -1,5 +1,9 @@
 # Original creep death lifecycle: field port and integration gaps
 
+R143/R144 now execute combined original room/manager/dying-owner and conditional victory admission traces. See [caller chronology and integration limits](CREEP_DEATH_CALLER.md). Runtime retained-owner integration remains open.
+
+R141 now includes owned-child drawing optimization and verified coverage. Presentation and eight separate functional suites pass; the unchanged dense4×33.34ms median gate remains open (34.004ms recorded). Exact failed candidates/current evidence/new bounded original pause research are privately recovery-verified. Full retained dying-owner/splash/anchor/room timing, originalRNG/GPU/progression and presentation identity remain incomplete. See the current HANDOFF and particle pause evidence.
+
 R135 now passes all ten local suites with bounded one-burst creation, newborn local clocks and float32 lifetime expiry. See [particle clocks and lifetime evidence](PARTICLE_CLOCKS.md) for current proof and preserved failures. Full owned children/retained dying actors/splash/anchor/owner order/destructor/campaign chronology remain open.
 
 Earlier integration and original R124 notes follow.

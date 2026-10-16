@@ -1,5 +1,6 @@
 extends SceneTree
-const View=preload("res://scripts/particle_child_view.gd")
+var View=preload("res://scripts/particle_child_view.gd")
+var report_path="res://../builds/particle-child-reference-verification.json"
 var next_particle=0
 var children=[]
 var factory_calls=0
@@ -117,5 +118,5 @@ func run():
 		state.motion_limited=bool(c.input.motion_limited);state.motion_seconds=Vector2(float(c.input.motion_seconds),0).x;state.delay_seconds=Vector2(float(c.input.delay),0).x
 		View.emit(state,2,make_particle,make_child);check_motion(state,c.frames[0])
 		for frame in range(1,c.frames.size()):View.advance(state,float(c.input.dt),make_particle,make_child);check_motion(state,c.frames[frame])
-	var report={"checks":checks,"failure_count":failure_count,"diagnostics":diagnostics,"failures":failures,"render_cases":fixture.cases.size(),"motion_cases":motion.cases.size(),"opacity_cases":opacity.cases.size(),"owner_states":owner.states.size(),"factory_cases":factory.cases.size(),"scope":"Independent original factory/C2, recursive render/packing, ownership/reuse/destruction, motion/delay/phase/first-release and opacity field comparisons. Child component remains disconnected; opacity floor and fade-window cap are connected in existing particle math/native coefficients. Supplied short-life zero-variance/no-wind records, sin/cos stubs and AngPos0 remain explicit; no GPU/atlas/whole owner-room/original parser acceptance."}
-	var f=FileAccess.open("res://../builds/particle-child-r137-verification.json",FileAccess.WRITE);f.store_string(JSON.stringify(report,"\t"));f.close();print("PARTICLE_CHILD_FIELDS ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)
+	var report={"checks":checks,"failure_count":failure_count,"diagnostics":diagnostics,"failures":failures,"render_cases":fixture.cases.size(),"motion_cases":motion.cases.size(),"opacity_cases":opacity.cases.size(),"owner_states":owner.states.size(),"factory_cases":factory.cases.size(),"scope":"Independent original factory/C2, recursive render/packing, ownership/reuse/destruction, motion/delay/phase/first-release and opacity field comparisons. Source field scope; the native wrapper uses these same original cases. Live integration is verified separately by particle_owned_live_ui_verify.gd. Supplied short-life zero-variance/no-wind records, sin/cos stubs and AngPos0 remain explicit; no GPU/atlas/whole owner-room/original parser acceptance."}
+	var f=FileAccess.open(report_path,FileAccess.WRITE);f.store_string(JSON.stringify(report,"\t"));f.close();print("PARTICLE_CHILD_FIELDS ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)

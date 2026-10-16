@@ -16,6 +16,7 @@ var stalled_frames=0
 
 var decal_render_comparisons=[]
 var particle_key_comparisons=[]
+var owned_group_comparisons=[]
 func bolt_metrics() -> Dictionary:
 	var renderer=app.bolt_renderer
 	var visible=renderer.slots.filter(func(s):return s.visible)
@@ -105,17 +106,23 @@ func run() -> void:
 		# per-particle renderer with ordered batches. Redraw notifications need
 		# scene frames; stop app processing so neither state nor UI clocks move.
 		app.set_process(false)
+		# Original recursive Render mutates child RGBA. Give every compared path
+		# the same complete held state, rather than comparing successive renders.
+		var held_particle_systems=app.particle_fx.systems.duplicate(true)
 		# Held live geometry: both native lookup paths must retain every byte.
 		for premul in [false,true]:
 			for quantized in [false,true]:
 				var fx=app.particle_fx
 				var geometry_origin=app.map_origin()-fx.position
+				fx.systems=held_particle_systems.duplicate(true)
 				var original_groups=SpiceNative.particle_batches(fx.systems,premul,fx.clock_ms,geometry_origin,app.map_scale(),quantized,true)
+				fx.systems=held_particle_systems.duplicate(true)
 				var prepared_groups=SpiceNative.particle_batches(fx.systems,premul,fx.clock_ms,geometry_origin,app.map_scale(),quantized,false)
 				var exact_geometry=var_to_bytes(original_groups)==var_to_bytes(prepared_groups)
 				particle_key_comparisons.append({"speed":rate,"premultiplied":premul,"quantized":quantized,"exact_geometry_bytes":exact_geometry,"groups":prepared_groups.size(),"systems":fx.systems.size()})
 				if not exact_geometry or prepared_groups.is_empty():failures.append("Particle lookup paths differ in held live geometry or fixture was empty.")
 		var reference_before=app.particle_fx.reference_draws
+		app.particle_fx.systems=held_particle_systems.duplicate(true)
 		app.particle_fx.reference_rendering=true
 		for layer in app.particle_fx.layers:layer.queue_redraw()
 		await get_tree().process_frame
@@ -123,6 +130,7 @@ func run() -> void:
 		RenderingServer.force_draw(true)
 		var reference_error=get_tree().root.get_texture().get_image().save_png(output.path_join("reference-%dx.png" % rate))
 		app.particle_fx.reference_rendering=false
+		app.particle_fx.systems=held_particle_systems.duplicate(true)
 		app.particle_fx.direct_triangles=false
 		for layer in app.particle_fx.layers:layer.queue_redraw()
 		await get_tree().process_frame
@@ -130,6 +138,7 @@ func run() -> void:
 		RenderingServer.force_draw(true)
 		var mesh_image=get_tree().root.get_texture().get_image()
 		var mesh_error=mesh_image.save_png(output.path_join("mesh-reference-%dx.png" % rate))
+		app.particle_fx.systems=held_particle_systems.duplicate(true)
 		app.particle_fx.direct_triangles=true
 		var batch_before=app.particle_fx.batch_draws
 		for layer in app.particle_fx.layers:layer.queue_redraw()
@@ -143,6 +152,47 @@ func run() -> void:
 		var batch_draws=app.particle_fx.batch_draws-batch_before
 		rendering_comparisons.append({"speed":rate,"reference":"reference-%dx.png" % rate,"mesh_reference":"mesh-reference-%dx.png" % rate,"batch":"batch-%dx.png" % rate,"reference_error":reference_error,"mesh_error":mesh_error,"batch_error":batch_error,"exact_mesh_rgba":exact_mesh,"reference_draws":reference_draws,"batch_draws":batch_draws,"sim_ms":app.sim.clock_ms})
 		if reference_draws<2 or batch_draws<2 or reference_error!=OK or batch_error!=OK:failures.append("Particle comparison did not render both layers in both modes.")
+		# The live1x sample can legitimately contain no recent death. Add one
+		# real authored burst AFTER live timing and the existing comparisons.
+		# Restore RNG/serial/ordinary systems afterward so later samples retain
+		# their caller state; no gameplay event, sound or reward is generated.
+		var ordinary_image=get_tree().root.get_texture().get_image()
+		var fx=app.particle_fx
+		var saved_rng=fx.random.state;var saved_serial=fx.serial;var saved_owned_serial=fx.owned_serial
+		var saved_clocks=[fx.clock_ms,fx.clock_seconds]
+		fx.systems=held_particle_systems.duplicate(true)
+		var first_injected=fx.systems.size()
+		var point=(app.view_size()*0.5-app.map_origin())/app.map_scale()
+		fx.emit_creep_death_burst("creeps/creep1",point,"blue")
+		var injected=fx.systems.slice(first_injected)
+		for step in range(4):SpiceNative.advance_systems(injected,fx.clock_ms,fx.emit_system,fx.emit_batch,fx.random,0.03)
+		var grouping_state=fx.systems.duplicate(true)
+		var owned_roots=grouping_state.filter(func(s):return s.has("owned_tree") and not s.get("owner_hidden",false) and s.owned_tree.particles.any(func(p):return p.alpha>0)).size()
+		var injected_owned=injected.filter(func(s):return s.has("owned_tree") and not s.owned_tree.particles.is_empty()).size()
+		var groups=[]
+		for coalesced in [false,true]:
+			var snapshot=grouping_state.duplicate(true);var count=0
+			for premul in [false,true]:count+=SpiceNative.particle_batches(snapshot,premul,fx.clock_ms,app.map_origin()-fx.position,app.map_scale(),true,false,coalesced).size()
+			groups.append(count)
+		fx.systems=grouping_state.duplicate(true);fx.coalesce_owned=true
+		for layer in fx.layers:layer.queue_redraw()
+		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
+		var coalesced_image=get_tree().root.get_texture().get_image();var coalesced_name="coalesced-owned-%dx.png"%rate
+		var coalesced_error=coalesced_image.save_png(output.path_join(coalesced_name))
+		var injected_visible=coalesced_image.get_data()!=ordinary_image.get_data()
+		fx.systems=grouping_state.duplicate(true);fx.coalesce_owned=false
+		for layer in fx.layers:layer.queue_redraw()
+		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
+		var unmerged_name="unmerged-owned-%dx.png"%rate
+		var unmerged_image=get_tree().root.get_texture().get_image();var unmerged_error=unmerged_image.save_png(output.path_join(unmerged_name))
+		var owned_exact=coalesced_image.get_data()==unmerged_image.get_data()
+		fx.coalesce_owned=true;fx.systems=held_particle_systems.duplicate(true)
+		fx.random.state=saved_rng;fx.serial=saved_serial;fx.owned_serial=saved_owned_serial
+		var caller_restored=fx.random.state==saved_rng and fx.serial==saved_serial and fx.owned_serial==saved_owned_serial and [fx.clock_ms,fx.clock_seconds]==saved_clocks
+		owned_group_comparisons.append({"speed":rate,"unmerged":unmerged_name,"coalesced":coalesced_name,"error":unmerged_error,"coalesced_error":coalesced_error,"exact_rgba":owned_exact,"visible_owned_roots":owned_roots,"injected_owned_roots":injected_owned,"injected_visible_change":injected_visible,"unmerged_groups":groups[0],"coalesced_groups":groups[1],"caller_state_restored":caller_restored})
+		if not owned_exact or unmerged_error!=OK or coalesced_error!=OK or owned_roots<1 or injected_owned<2 or not injected_visible or groups[1]>=groups[0] or not caller_restored:failures.append("Owned grouping must exercise visible authored roots/fewer groups/exact frozenRGBA and restore caller state.")
+		for layer in fx.layers:layer.queue_redraw()
+		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
 		# Use the same frozen actors to verify that the former eager fallback
 		# and prepared layer path both actually draw and retain exact pixels.
 		app.probe_creep_layers=true;app.creep_layer_usage={"cached":0,"reference":0}
@@ -210,6 +260,6 @@ func run() -> void:
 	stages.append({"kind":"world","zoom":0.2,"visible_generators":app.world_clouds.rendered.size(),"cloud_systems":cloud_count,"frames":samples.size(),"median_frame_ms":world_median,"p95_frame_ms":world_p95,"maximum_frame_ms":samples[-1] if not samples.is_empty() else 0.0,"timings":app.qa_timings.duplicate(true)})
 	if samples.size()<45 or world_median>33.34 or world_error!=OK:failures.append("Full world cloud fixture did not sustain30 median frames/second or capture successfully.")
 	var file=FileAccess.open(output.path_join("manifest.json"),FileAccess.WRITE)
-	file.store_string(JSON.stringify({"method":"Native packaged synthetic stress fixture:54 tower forms,200 initial enemies, inflated base health, no profile rewards. Live elapsed-time frame updates at1x/2x/4x and a fully zoomed-out world with nine original cloud generators; three-second wall-clock sampling after one-second warmups. Apple Silicon measurement only, not original-game timing equivalence or RSS. Paused same-state legacy/mesh/direct captures compare reconstructed renderers; direct triangles must match mesh RGBA exactly. Separate frozen eager/prepared creep-layer/growth and original/prepared frame-lookup paths must both redraw and match full RGBA. No original-device pixel claim.","stages":stages,"captures":captures,"rendering_comparisons":rendering_comparisons,"creep_layer_comparisons":creep_layer_comparisons,"frame_lookup_comparisons":frame_lookup_comparisons,"decal_render_comparisons":decal_render_comparisons,"particle_key_comparisons":particle_key_comparisons,"failures":failures},"\t"));file.close()
+	file.store_string(JSON.stringify({"method":"Native packaged synthetic stress fixture:54 tower forms,200 initial enemies, inflated base health, no profile rewards. Live elapsed-time frame updates at1x/2x/4x and a fully zoomed-out world with nine original cloud generators; three-second wall-clock sampling after one-second warmups. Apple Silicon measurement only, not original-game timing equivalence or RSS. Paused same-state legacy/mesh/direct captures compare reconstructed renderers; direct triangles must match mesh RGBA exactly. Separate frozen eager/prepared creep-layer/growth and original/prepared frame-lookup paths must both redraw and match full RGBA. No original-device pixel claim.","stages":stages,"captures":captures,"rendering_comparisons":rendering_comparisons,"creep_layer_comparisons":creep_layer_comparisons,"frame_lookup_comparisons":frame_lookup_comparisons,"decal_render_comparisons":decal_render_comparisons,"particle_key_comparisons":particle_key_comparisons,"owned_group_comparisons":owned_group_comparisons,"failures":failures},"\t"));file.close()
 	print("PERFORMANCE_VERIFICATION ",JSON.stringify(stages))
 	get_tree().quit(0 if failures.is_empty() else 1)

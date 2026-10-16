@@ -1,0 +1,66 @@
+{
+  "private": true,
+  "draft": true,
+  "published_checkpoint": false,
+  "source_commit_created": false,
+  "source_signing_pending": true,
+  "signed_base_commit": "56ee9219338e679f2d6f7872d9a187f550bde08d",
+  "source_files_archived_clone_plus_patch_exact": 567,
+  "zip_crc_safe_members_all_hashes_verified": true,
+  "real_r137_index_preserved": true,
+  "research_independent_reproduction_verified": true,
+  "archive_name": "r143-r144-source-research-supplement.zip",
+  "bytes": 3210748,
+  "sha256": "6ede7899b91fb72b657a843e23483cba12717182ad559c9e168c072c17e6bba5",
+  "members": 27,
+  "release_id": 415363877,
+  "offline_complete": false,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-359b5de79f8f7237a202",
+  "release_tag": "untagged-359b5de79f8f7237a202",
+  "all_seven_remote_asset_sha_sizes_verified": true,
+  "remote_asset_id_download_crc_sha_all_members_verified": true,
+  "draft_tag_cli_download_failed_release_not_found": true,
+  "failed_cli_log_retained": "builds/death-caller-r144-backup-stage.log",
+  "all_four_external_saves_unchanged": true,
+  "current_r141_package_unchanged": true,
+  "no_game_process": true,
+  "assets": [
+    {
+      "name": "r141-owned-failed-evidence.tar.gz.part-001",
+      "bytes": 1635465083,
+      "sha256": "e58ca7ca985fe89d05e4ecd1d98da090a3c57a765f17172746c957a84ed9621a"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 356,
+      "sha256": "ce1e805312beba8929f3a47377b40067a193f5ac9bf0b0dbf3348e9dd363107c"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 418243,
+      "sha256": "c54cea9eb668f0d88d47c50b885934a21608ca11aeade1c08b770b5f822b5ae3"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1904,
+      "sha256": "b7be2ac5029643977e5cff7163a4384332484c42aec91ead8305ddbde7093898"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 2222,
+      "sha256": "357310ff6f7ad50bdf8f2e25b4695b1a63531e0010a36b27be7369408bec68c8"
+    },
+    {
+      "name": "r141-failed-restore-proof.zip",
+      "bytes": 1539019,
+      "sha256": "5605b4d2a20860c6e142701ec75a8c76f9e6b6a25d3bdc35e0e5cbe02a2e899e"
+    },
+    {
+      "name": "r143-r144-source-research-supplement.zip",
+      "bytes": 3210748,
+      "sha256": "6ede7899b91fb72b657a843e23483cba12717182ad559c9e168c072c17e6bba5"
+    }
+  ],
+  "total_remote_bytes": 1640637575,
+  "verified_at": "2026-10-16T21:09:03.622243+00:00"
+}

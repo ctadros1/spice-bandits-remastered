@@ -1,0 +1,90 @@
+{
+  "new_source_commit_created": false,
+  "source_signing_pending": true,
+  "signed_base_commit": "56ee9219338e679f2d6f7872d9a187f550bde08d",
+  "failed_candidates": [
+    "r138",
+    "r139"
+  ],
+  "all_ten_native_passed": false,
+  "presentation_checks": 543,
+  "r138_dense4x_median_ms": 34.021,
+  "r139_dense4x_median_ms": 34.074,
+  "unchanged_median_limit_ms": 33.34,
+  "original_r137_index_preserved": true,
+  "source_files_verified": {
+    "r138": 553,
+    "r139": 554
+  },
+  "empty_signed_base_clone_plus_patches_source_exact": true,
+  "evidence_files_verified": 1702,
+  "evidence_uncompressed_bytes": 1607694077,
+  "all_evidence_members_parts_full_hash_and_gzip_crc_verified": true,
+  "restored_failed_app_strict_signature_empty_cwd_native_menu_verified": true,
+  "all_four_protected_saves_unchanged": true,
+  "offline_complete": false,
+  "scope": "ExactR138/R139 failed performance apps/two native galleries per candidate/all source and signed base/full patches/first probes/native-original source checks/CPUbenchmarks. Current candidate implementation is live owned children for19resolved emitters; original parser/globalRNG/retained dying owner/room/caller/GPU fidelity remains open. Neither failed package is a release acceptance; other8suites notrun. R137 private draft allten/R135 published checkpoint and earlier verified archives remain separate. Signingpending, no newcommit/bypass. Originals/saves preserved.",
+  "private": true,
+  "draft": true,
+  "published_checkpoint": false,
+  "release_id": 415325692,
+  "release_tag": "research-2026-10-16-r139-owned-failures",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-9a2cbc40ce5aa7f8be98",
+  "assets": [
+    {
+      "name": "r139-owned-failed-evidence.tar.gz.part-001",
+      "bytes": 1292043202,
+      "sha256": "f1c0bffc9483df223cc4299bee0fda95460d9d27b31c7f2de28f8a32de0aad01"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 356,
+      "sha256": "5ad4dd65d18c45943ad76772afa92f99eb3ec5ba4a4dbce8ef5f393115d693d2"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 370447,
+      "sha256": "766f7d503650d2106f78904f9100c314aed093b380ef9a31bf61a690ad8445bd"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1427,
+      "sha256": "3a71653eb0a017b5deec88db0d7fa715247c59da02a61caa53389ffbce431737"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1896,
+      "sha256": "f9a7ee9fb411eea9ae9c46049cea03214c79e845a365e19901185b32a1f0bd45"
+    },
+    {
+      "name": "r139-failed-restore-proof.zip",
+      "bytes": 1536863,
+      "sha256": "fa4f95d028fc606a30305de09db87a930a65c6c6ae57ca7ae8171578eb87e806"
+    },
+    {
+      "name": "r139-functional-followup.tar.gz",
+      "bytes": 325023273,
+      "sha256": "79320e987286151ffdd73b12a664e209d01be7fcaa762a08f44f6230f7be4992"
+    },
+    {
+      "name": "FUNCTIONAL-MANIFEST.json",
+      "bytes": 48564,
+      "sha256": "8a90dbaa01e60bd0b302d0499fb161d6ecb552ccccc3216daf62b3729232573c"
+    },
+    {
+      "name": "FUNCTIONAL-RECOVERY.json",
+      "bytes": 1973,
+      "sha256": "fd0a0f214a15b4dbacc38e6133e4b19d9b9df62dcae66e9f63522958b3907e7a"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "verified_at": "2026-10-16T19:55:36.812707+00:00",
+  "functional_followup": {
+    "passed": true,
+    "suites": 8,
+    "files_verified": 284,
+    "archive_sha256": "79320e987286151ffdd73b12a664e209d01be7fcaa762a08f44f6230f7be4992",
+    "performance_gate_still_failed": true,
+    "all_ten_accepted": false
+  }
+}
