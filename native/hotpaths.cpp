@@ -36,6 +36,7 @@ struct Keys {
     const StringName count{"count"},frame{"frame"},loop{"loop"},divisor{"divisor"},multiplier{"multiplier"},stopped{"stopped"};
     const StringName grow_ms{"grow_ms"},slow_pending{"slow_pending"},consumed_slow{"consumed_slow"},animation_divisor{"animation_divisor"},animation_multiplier{"animation_multiplier"},freeze_attached{"freeze_attached"},freeze_remaining{"freeze_remaining"},freeze_auxiliary_present{"freeze_auxiliary_present"},freeze_auxiliary_value{"freeze_auxiliary_value"},poison_count{"poison_count"},slow_count{"slow_count"};
     const StringName view_clock_ms{"view_clock_ms"},real_alpha{"real_alpha"},color{"color"},size{"size"},life_cycle{"life_cycle"},scale{"scale"},scalable{"scalable"},use_real_size{"use_real_size"},rotational{"rotational"},region{"region"},size_offset{"size_offset"};
+    const Variant output_texture{String("texture")},output_vertices{String("vertices")},output_uvs{String("uvs")},output_colors{String("colors")},output_indices{String("indices")},output_fallback{String("fallback")},output_region{String("region")},output_center{String("center")},output_shape{String("shape")},output_rotation{String("rotation")},output_tint{String("tint")};
     const StringName hp{"hp"},state{"state"},aim{"aim"},native_air{"native_air"},air{"air"},owner{"owner"},target_owner{"target_owner"},pos{"pos"},speed{"speed"},slow{"slow"},grid{"grid"},cell{"cell"},next_cell{"next_cell"},progress{"move_progress"};
     const StringName velocity{"velocity"},rotation{"rotation"},rot_speed{"rot_speed"},alpha{"alpha"},born{"born"};
     const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"},owner_hidden{"owner_hidden"};
@@ -503,8 +504,10 @@ void SpiceNative::emit_batch(Dictionary sys,double clock_ms,RandomNumberGenerato
 Array SpiceNative::particle_batches(Array systems,bool premultiplied,double clock_ms,Vector2 origin,double zoom,bool mesh_color_quantization,bool reference_keys) {
     const Keys &k=keys();
     // Keep the former text-key path selectable for exact geometry/CPU checks.
-    // Only dictionary lookup keys and an immutable white default are reused.
+    // Lookup/output keys and immutable white default are reused. Output keys
+    // retain String type; geometry serialization remains byte-exact.
     const auto lookup=[reference_keys](const char *text,const StringName &name)->Variant {return reference_keys?Variant(text):Variant(name);};
+    const auto output_key=[reference_keys](const char *text,const Variant &key)->Variant {return reference_keys?Variant(text):key;};
     static const Array white=Array::make(1,1,1,1);
     Array result;Texture2D *previous=nullptr;Variant current_texture;
     std::vector<Vector2> vertex_data,uv_data;std::vector<Color> color_data;std::vector<int32_t> index_data;
@@ -513,7 +516,7 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
         PackedVector2Array vertices,uvs;PackedColorArray colors;PackedInt32Array indices;
         vertices.resize(vertex_data.size());uvs.resize(uv_data.size());colors.resize(color_data.size());indices.resize(index_data.size());
         std::copy(vertex_data.begin(),vertex_data.end(),vertices.ptrw());std::copy(uv_data.begin(),uv_data.end(),uvs.ptrw());std::copy(color_data.begin(),color_data.end(),colors.ptrw());std::copy(index_data.begin(),index_data.end(),indices.ptrw());
-        Dictionary group;group["texture"]=current_texture;group["vertices"]=vertices;group["uvs"]=uvs;group["colors"]=colors;group["indices"]=indices;result.append(group);
+        Dictionary group;group[output_key("texture",k.output_texture)]=current_texture;group[output_key("vertices",k.output_vertices)]=vertices;group[output_key("uvs",k.output_uvs)]=uvs;group[output_key("colors",k.output_colors)]=colors;group[output_key("indices",k.output_indices)]=indices;result.append(group);
         vertex_data.clear();uv_data.clear();color_data.clear();index_data.clear();
     };
     for(int si=0;si<systems.size();++si) {
@@ -547,7 +550,7 @@ Array SpiceNative::particle_batches(Array systems,bool premultiplied,double cloc
             const float rotation=f32(raw_rotation),z=f32(zoom);
             const Vector2 center=origin+Vector2(p[k.pos])*z;
             if(region.position.x<0 || region.position.y<0 || region.get_end().x>tw || region.get_end().y>th || region.size.x<=0 || region.size.y<=0) {
-                flush();Dictionary fallback;fallback["fallback"]=true;fallback["texture"]=sys[k.texture];fallback["region"]=region;fallback["center"]=center;fallback["shape"]=shape;fallback["rotation"]=raw_rotation;fallback["tint"]=tint;result.append(fallback);previous=nullptr;continue;
+                flush();Dictionary fallback;fallback[output_key("fallback",k.output_fallback)]=true;fallback[output_key("texture",k.output_texture)]=sys[k.texture];fallback[output_key("region",k.output_region)]=region;fallback[output_key("center",k.output_center)]=center;fallback[output_key("shape",k.output_shape)]=shape;fallback[output_key("rotation",k.output_rotation)]=raw_rotation;fallback[output_key("tint",k.output_tint)]=tint;result.append(fallback);previous=nullptr;continue;
             }
             if(mesh_color_quantization) {
                 // ArrayMesh upload clamps/truncates to RGBA8. Preserve that
