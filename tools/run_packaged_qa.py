@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (208 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (214 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             key_comparisons=manifest.get('particle_key_comparisons',[])
             record['particle_key_comparisons']=key_comparisons
@@ -239,6 +239,21 @@ def main():
             # sequence, rather than rounded JSON phases or a new tolerance.
             fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
+            burst_frames={'death-burst-0000':0,'death-burst-0300':10,'death-burst-0600':20,'death-burst-paused':20,'death-burst-0930':31,'death-burst-1350':45}
+            required.update(burst_frames)
+            burst_poses={c['name']:c for c in manifest['captures'] if c['name'] in burst_frames}
+            burst_fixture=json.loads((ROOT/'tests/fixtures/native-creep-death-tail-reference.json').read_text())
+            burst_case=next(c for c in burst_fixture['cases'] if c['resource']=='creeps/creep1' and c['dt_ms']==30)
+            burst_rows={r['frame']:r['output']['systems'] for r in burst_case['frames']}
+            burst_exact=len(burst_poses)==6
+            for pose,frame in burst_frames.items():
+                actual=burst_poses.get(pose,{}).get('death_burst',{})
+                expected=burst_rows[frame]
+                burst_exact=burst_exact and actual.get('clock_bits')==expected[0]['clock_bits']
+                burst_exact=burst_exact and actual.get('parents')==[{'name':r['name'],'active':r['active'],'released_bits':0} for r in expected]
+                burst_exact=burst_exact and actual.get('paused')==(pose=='death-burst-paused')
+            fresh=fresh and burst_exact
+            record['death_burst_original_parent_counts_clocks_exact']=burst_exact
             decal_names = {'background', 'tower-only', 'ground-000', 'ground-tower-cover', 'ground-large', 'ground-density', 'ground-density-next', 'ground-hold', 'ground-fade', 'ground-expired'}
             decal_names = {'decal-' + n for n in decal_names}
             required.update(decal_names)

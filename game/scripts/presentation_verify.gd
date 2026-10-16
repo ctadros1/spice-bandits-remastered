@@ -10,6 +10,7 @@ var core_blend_samples=[]
 var ordered_blend_samples=[]
 var window_restoration={}
 var destination=""
+var death_burst_parents=[]
 
 class BlendFixture extends Node2D:
 	var screen="game"
@@ -95,6 +96,9 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 				var state=owner.render_animators[key]
 				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
+	if name.begins_with("death-burst-"):
+		record.death_burst={"clock_bits":PackedFloat32Array([app.particle_fx.clock_seconds]).to_byte_array().decode_u32(0),"parents":death_burst_parents.map(func(p):return {"name":p.name,"active":p.particles.size(),"released_bits":PackedFloat32Array([p.released]).to_byte_array().decode_u32(0)}),"global_systems":app.particle_fx.systems.size(),"paused":app.sim.paused}
+		record.limit="Actual lethal Simulation event/Main kill/ParticleFX newborn parent packets; independent original fullCreep.Update count/clock rows. Global child callbacks/rendering, current logical caller anchor and retained dying-owner lifetime remain unfinished. Expired refers to newborn parent counts, not all global child smoke."
 	if name.begins_with("decal-"):
 		record.decals=app.sim.decals.items.map(func(d):return {"id":d.id,"texture":d.texture,"position":[d.position.x,d.position.y],"scale_bits":PackedFloat32Array([d.scale]).to_byte_array().decode_u32(0),"clock_bits":PackedFloat32Array([d.clock]).to_byte_array().decode_u32(0),"alpha_bits":PackedFloat32Array([d.alpha]).to_byte_array().decode_u32(0),"deleted":d.deleted,"fading":d.fading,"variant":d.get("variant","")})
 		record.decal_cells=app.sim.decals.cells.values().map(func(members):return members.size())
@@ -1170,6 +1174,31 @@ func run() -> void:
 	for index in range(68):app.sim.advance_frame(30)
 	await snapshot("decal-ground-expired")
 	check(app.sim.decals.items.is_empty(),"native expired crater is deleted by the following manager update")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls();app.sim.enemies.clear()
+	var burst_qa_gallery=app.qa_gallery;app.qa_gallery=false;app.sim.live_updates=true
+	var burst_enemy=app.sim.spawn_enemy(1,0,"",995,false);burst_enemy.pos=app.sim.center(8,6);burst_enemy.visual_pos=burst_enemy.pos;burst_enemy.path=[]
+	app.sim.damage(burst_enemy,float(burst_enemy.max_hp)*10)
+	app._process(0)
+	death_burst_parents=app.particle_fx.systems.duplicate()
+	check(death_burst_parents.size()==3,"native actual lethal event creates three original death aliases")
+	await snapshot("death-burst-0000")
+	for index in range(10):app._process(.03)
+	await snapshot("death-burst-0300")
+	for index in range(10):app._process(.03)
+	await snapshot("death-burst-0600")
+	var burst_before_pause=var_to_bytes(death_burst_parents)
+	app.toggle_pause();app._process(.5)
+	check(app.sim.paused,"native death-burst fixture uses actual Main pause controls")
+	check(var_to_bytes(death_burst_parents)==burst_before_pause,"native paused death burst holds exact parent particle state")
+	await snapshot("death-burst-paused")
+	app.toggle_pause()
+	check(not app.sim.paused,"native death-burst fixture resumes through actual Main controls")
+	for index in range(11):app._process(.03)
+	await snapshot("death-burst-0930")
+	for index in range(14):app._process(.03)
+	await snapshot("death-burst-1350")
+	check(death_burst_parents.all(func(p):return p.particles.is_empty() and p.released==0.0),"native newborn death parents expire without a second smoke burst")
+	app.qa_gallery=burst_qa_gallery
 	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2

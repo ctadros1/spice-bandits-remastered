@@ -2727,9 +2727,7 @@ func handle_event(event: Dictionary) -> void:
 		"kill":
 			if not test_session or qa_persist_progress: pending_xp.append({"reward": float(event.reward), "type": int(event.type)})
 			var enemy_def = Content.catalog.tower_creeps[int(event.type)]
-			var bindings = Content.particles.bindings.get("creeps/"+str(enemy_def.filename), {})
-			for alias in ["explosion_parts", "explosion_parts2", "explosion_smoke"]:
-				if bindings.has(alias): particle_fx.emit_system(str(bindings[alias].filename), event.pos, str(enemy_def.get("color", "")), "", 500 if alias == "explosion_smoke" else 0)
+			particle_fx.emit_creep_death_burst("creeps/"+str(enemy_def.filename),event.pos,str(enemy_def.get("color","")))
 			resource_sound(Content.animations.get("creeps/"+str(enemy_def.filename), {}).get("params", {}), "explosion_sound", int(event.ms))
 		"explosion":
 			var cues = Content.animations.get("towers/"+str(event.get("filename", "")), {}).get("params", {}).get("missile_explosion_sounds", [])

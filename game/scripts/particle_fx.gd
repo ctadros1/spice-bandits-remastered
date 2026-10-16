@@ -47,6 +47,15 @@ func emit_system(name: String, point: Vector2, variation: String = "", owner: St
 	emit_definition(name,definition,texture,point,variation,owner,duration_ms,direction,object_owner)
 	if is_instance_valid(app):app.record_qa_time("particle_emit_system",started)
 
+func emit_creep_death_burst(resource:String,point:Vector2,variation:String="") -> void:
+	# SetDie emits each matching alias once; its5s interval exceeds every
+	# supplied newborn death tail. Keep definitions/native cache unchanged.
+	# Complete retained-owner/existing smoke/child lifetime remains separate.
+	var bindings:Dictionary=Content.particles.bindings.get(resource,{})
+	var aliases=bindings.keys();aliases.sort()
+	for alias in aliases:
+		if "explosion" in str(alias):emit_system(str(bindings[alias].filename),point,variation,"",0)
+
 func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String="",owner:String="",duration_ms:int=-1,direction:Vector2=Vector2.ZERO,object_owner:int=-1) -> void:
 	serial+=1
 	var sys={"id":serial,"name":name,"definition":definition,"native_coefficients":SpiceNative.compile_particle(definition),"texture":texture,"pos":point,"direction":direction,"owner":owner,"object_owner":object_owner,"particles":[],"variation":variation,"born":clock_ms,"released":clock_ms,"until":clock_ms+duration_ms if duration_ms>=0 else -1,"emitting":duration_ms!=0,"phase":0.0}
