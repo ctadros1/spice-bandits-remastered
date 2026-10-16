@@ -36,7 +36,7 @@ Live median/p95ms:1×22.310/29.209,2×20.752/30.754,4×31.419/48.843,world11.579
 
 All12 R119 creep-clock PNGs are byte-identical to the full-resolution-reviewed R118 poses;169 other captures are exact and five changed placement/random-transition states were inspected. The refreshed45 guide pairs/90 hashed frozen frames have two changed sheets and four changed full-resolution tutorial states inspected; ten sheets match reviewed R117. The prior R117 comparison is frozen separately. HTTP serving and all90 frame hashes pass. Tutorial action timing, combat density, portrait/camera/wrapping, earlier-version art, original GPU/RNG and physical input remain comparison limits. Whole original room/owner/culling/registry/death ordering, additive hits and unavailable hosted progression remain open. Passing these suites does not close any required presentation checklist item.
 
-Review reports: `builds/creep-animation-r119-pose-review.json` and `builds/presentation-comparison-r119-review.json`. R119 signed source/private backup publication follows this review; R117 remains the last verified archival checkpoint until publication verification.
+Review reports: `builds/creep-animation-r119-pose-review.json` and `builds/presentation-comparison-r119-review.json`. R119 source is signed/pushed and its private app/evidence/full-Git-bundle checkpoint passes empty restoration and all9 remote SHA/size checks. See [backup coverage](../BACKUP.md); subsequent publication records/research are outside that frozen snapshot.
 
 ## Retained failures and limits
 

@@ -1,6 +1,6 @@
 # Local build
 
-The build now includes the creep animation bridge unit and72-script parse gate. Do not rerun the completed R119 batch or modify the frozen package until its recovery checkpoint finishes. Actual game/verification runs require -- --qa; preserve normal and earned saves.
+The build now includes the creep animation bridge unit and72-script parse gate. The completed R119 batch and verified recovery checkpoint are frozen; use fresh labels and retain failed packages for subsequent changes. Actual game/verification runs require -- --qa; preserve normal and earned saves.
 
 R119 is the latest all-ten verified macOS package. It restores bounded creep-owned animation and shared freeze countdown behavior from the preserved 1.14 executable: walking turns retain phase, speed/slow/freeze set both clock rates, expiry releases the shared attachment in the recovered order, and attack stops/resets both animators. Main retains separate render clocks for body, shadow and status. Original proportions stay on the fixed 4:3 canvas. Complete offline fidelity remains open.
 
@@ -10,7 +10,7 @@ Live median/p95ms:1×22.310/29.209,2×20.752/30.754,4×31.419/48.843,world11.579
 
 All12 R119 creep-clock PNGs are byte-identical to the full-resolution-reviewed R118 poses;169 other captures are exact and five changed placement/random-transition states were inspected. The refreshed45 guide pairs/90 hashed frozen frames have two changed sheets and four changed full-resolution tutorial states inspected; ten sheets match reviewed R117. The prior R117 comparison is frozen separately. HTTP serving and all90 frame hashes pass. Tutorial action timing, combat density, portrait/camera/wrapping, earlier-version art, original GPU/RNG and physical input remain comparison limits. Whole original room/owner/culling/registry/death ordering, additive hits and unavailable hosted progression remain open. Passing these suites does not close any required presentation checklist item.
 
-[Detailed creep animation scope](mechanics/CREEP_ANIMATION.md). The R119 signed source/private recovery publication is pending; the verified R117 archive remains available.
+[Detailed creep animation scope](mechanics/CREEP_ANIMATION.md). R119 source is signed/pushed and its private recovery checkpoint is verified; see [backup and restore](BACKUP.md). All9 uploaded asset hashes/sizes and empty source/app restoration pass.
 
 ## Historical checkpoints
 

@@ -1,5 +1,7 @@
 # Spice Bandits reconstruction handoff — October15,2026
 
+**Historical transfer record.** This file preserves the October15 handoff state. On October16, the new chat completed R119 review, signed/pushed source `94b7b5438955cc02599b66c7e8650c37c59df8ae` and verified the private `backup-2026-10-16-r119` checkpoint. Current progress belongs in PLAN.md and docs/BACKUP.md; statements below about pending R119 work describe the transfer time.
+
 This is a transfer to a new chat because the previous Codex chat repeatedly returned `{"detail":"Bad Request"}`. The cause is unidentified. Two previous failed chat turns were verified through Codex thread status despite successful tool commands. Do not present this as a game error or claim the request problem is fixed. The latest tool commands work. Do not restart/reset Codex or erase conversation history as a speculative repair.
 
 ## Full authorized goal

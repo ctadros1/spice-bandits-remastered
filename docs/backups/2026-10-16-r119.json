@@ -1,0 +1,90 @@
+{
+  "pck_sha256": "6bbbe967fdc195922920295fa551d7a5a041aa847c3da52ee19b79a13506a974",
+  "executable_sha256": "0a6a46acc4b40f44719aeefd68689facf5fb62eee0438a1960e8385077eef77e",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "18c81b2b99424c1e70d8c0d2860c48565a0a1e847c589b6f9b3753e7b7670391"
+  },
+  "source_commit": "94b7b5438955cc02599b66c7e8650c37c59df8ae",
+  "source_commit_created": true,
+  "signed_and_pushed": true,
+  "all_ten_native_passed": true,
+  "counted_png": 424,
+  "supplemental_comparison_png": 21,
+  "wav": 23,
+  "evidence_files_verified": 1223,
+  "presentation_checks": 488,
+  "audio_checks": 73,
+  "creep_animator_source_checks": 14408,
+  "runtime_scripts": 72,
+  "animator_source_checks": 38129,
+  "portal_source_checks": 42580,
+  "native_animator_poses_inspected": 12,
+  "nontransition_exact_preoptimization": 169,
+  "nontransition_compared_preoptimization": 170,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_comparison_sheets_inspected": 2,
+  "unchanged_comparison_sheets_exact": 10,
+  "source_bundle_tracked_files_verified": 481,
+  "offline_complete": false,
+  "scope": "Supplement to verified earlier releases/full r89 workspace. Universal2 compiled, Apple Silicon execution. Originals/proportions/profiles preserved. No Intel/Finder/Gatekeeper/notarization/current physical input/speaker/original-device equivalence. Full animator/owner/registry/death/GPU and hosted progression remain unresolved. Later publication record excluded.",
+  "evidence_archive_files_verified": 1223,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 414634993,
+  "release_tag": "backup-2026-10-16-r119",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r119",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r119-macOS.zip",
+      "bytes": 330937290,
+      "sha256": "f1b8848a90972af376edef9162d6c01263bd2a8b512339fcb019c7dfb89d59c5"
+    },
+    {
+      "name": "r119-verification-evidence.tar.gz",
+      "bytes": 1341366769,
+      "sha256": "d046506dd810473344fded6d2a99349278f637598372ace0a2e5c6f470023766"
+    },
+    {
+      "name": "r119-package-restoration.zip",
+      "bytes": 1519322,
+      "sha256": "387740341e1bb5f08a714a06007b3a4e6cf8a476fc514ffad50fe0cafc558b43"
+    },
+    {
+      "name": "r119-source.bundle",
+      "bytes": 1778021,
+      "sha256": "ce23e164f3aa760d4b24640ef8ad6a7f9223f5ec979d5155cb3aa52c40b9775d"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 94736,
+      "sha256": "a737fa7d581e7b677530d6bfa261c98023ff2ae19329d6dcddcf9b26504b1f53"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1124,
+      "sha256": "7502bd4dcabfd8443a32ba2f6229215d4dca006b58dd34bb4776868d96da91bd"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 228662,
+      "sha256": "3fb2126294702ef8f7efe6a5a079f5cfa9ae38d5e55d7f3b91e22676a5ac33a6"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 347,
+      "sha256": "646c7c2ef3e28a048f865d2cc620cd47f85ae32e935528f66a604613166e5a9e"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1772,
+      "sha256": "f5e0d58c14a305e8b861bdc108479904ee9e8d20d704df6886ef1e3364e7e616"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-16T06:47:58.707747+00:00"
+}

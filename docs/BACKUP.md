@@ -1,10 +1,16 @@
 # Private backup and edit history
 
-Repository: [Spice Bandits: Remastered](https://github.com/ctadros1/spice-bandits-remastered), verified private on October15,2026. Source history retains the original implementation commit and subsequent reconstruction checkpoints. Large project files remain outside ordinary Git history and are backed up as private release assets. Keep the repository private: preserved original IPAs include store-account metadata and licensed assets.
+Repository: [Spice Bandits: Remastered](https://github.com/ctadros1/spice-bandits-remastered), verified private on October16,2026. Source history retains the original implementation commit and subsequent reconstruction checkpoints. Large project files remain outside ordinary Git history and are backed up as private release assets. Keep the repository private: preserved original IPAs include store-account metadata and licensed assets.
 
 The first source push and comprehensive archival upload are complete. The [private backup release](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r89) contains seven archive parts totaling9,401,885,756 bytes, the per-file/part manifests, a complete Git bundle and the local verification report. Every archived regular-file hash, entry type, permission mode and link target passed local streaming verification:49,235 entries/45,636 regular files/11,125,488,719 uncompressed file bytes. GitHub's SHA-256 digests and byte counts match all11 uploaded assets. [Verification record](backups/2026-10-15-r89.json) binds the exact hashes.
 
-## Latest animator checkpoint
+## Latest creep animation checkpoint
+
+R119 source `94b7b5438955cc02599b66c7e8650c37c59df8ae` is signed and pushed. Its [private recovery checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r119) is published: all9 remote SHA-256 digests/sizes match1,675,928,043 bytes. All481 tracked files restore byte/executable-mode exact from an empty signed Git-bundle clone. All1,223 archived evidence files (1,461,238,683 uncompressed bytes) pass streaming hash verification. The app ZIP passes CRC/safe paths, empty extraction, deep strict signature and isolated native menu launch from an external empty working folder; all4 protected saves remain unchanged. The snapshot includes the failed R118 app/galleries/source and prior R117 comparison. Later publication records and R120 preliminary research are excluded; full originals/toolchains/workspace remain in the R89 archive. Complete offline fidelity remains open.
+
+[Exact R119 record](backups/2026-10-16-r119.json) binds the package, source, restoration proof and assets. Twelve creep-clock poses are exact to reviewed R118;169 other captures are exact, five changed native captures inspected. Two changed guide sheets/four tutorial states were viewed, ten sheets exact to reviewed R117;90 frozen frame hashes and HTTP serving pass.
+
+## Historical R117 animator checkpoint
 
 The [r117 private checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r117) preserves the all-ten-pass app,1,222 hashed evidence files (2,477,196,993 uncompressed bytes),45 guide pairs/90 frozen frames and full signed source history. All10 remote asset SHA-256 digests and sizes match2,449,071,845 bytes. The2,114,569,293-byte evidence archive uses two ordered parts; `EVIDENCE-ARCHIVE.json` binds their full concatenated hash and order. Every archived evidence file was independently streamed and checked.
 
