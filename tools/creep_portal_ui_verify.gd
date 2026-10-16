@@ -72,7 +72,15 @@ func run() -> void:
 	Gates.advance(closing,30);sim.check_portal_transfers(closing,entry,exit_cell)
 	check(closing.queue.is_empty() and e.portal_pose.state==2 and e.pos==exit_point,"closing entrance flushes queued creep before pair removal")
 	var fx=load("res://scripts/particle_fx.gd").new();root.add_child(fx);fx.use_state(sim.particle_state)
-	e.slow=0.5;e.portal_pose.particles_visible=false
+	e.portal_pose.particles_visible=false
+	# The original constructor never Emits. Warm the actual owner clock/rate
+	# phase while keeping this controlled portal pose fixed for geometry.
+	for frame in 18:
+		e.slow_pending=.5
+		load("res://scripts/creep_freeze_view.gd").advance_fields(e,30,0)
+		sim.particle_state.refresh_creep(sim,e)
+		sim.particle_state.update_creep_fields(e,sim.enemy_visual_aim_point(e),e.dir)
+		sim.particle_state.advance_creep(e,30)
 	sim.particle_state.refresh_creep(sim,e)
 	var owned=fx.systems.filter(func(system):return str(system.owner).begins_with("enemy:%d:"%int(e.id)))
 	check(not owned.is_empty() and owned.all(func(system):return bool(system.get("owner_hidden",false))),"new actual owner systems inherit portal particle visibility")

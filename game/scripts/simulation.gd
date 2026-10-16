@@ -776,6 +776,7 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 	next_id += 1
 	enemies.append(e)
 	set_enemy_path(e)
+	particle_state.initialize_creep(e)
 	emit("spawn", {"id": e.id, "type": type})
 	return e
 
@@ -1302,6 +1303,7 @@ func step() -> void:
 			# Full Creep.Update's zero-HP guard uses SetState, not SetDie.
 			e.state=3;e.death_sprites=[]
 		if int(e.get("state",0))==3:
+			particle_state.stop_creep_smoke(e)
 			var counts=e.get("particle_roots",[]).map(func(sys):return sys.particles.size())
 			var tail=Death.tail(3,null,counts,e.get("death_sprites",[]),tick_ms)
 			e.state=tail.state;e.death_sprites=tail.sprites
@@ -1311,6 +1313,7 @@ func step() -> void:
 				CreepView.update(self,e)
 				if e.has("portal_pose"):CreepPortal.advance(e.portal_pose,tick_ms,creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
 			if int(e.get("state",0)) not in [2,3]:particle_state.refresh_creep(self,e)
+		particle_state.update_creep_fields(e,enemy_visual_aim_point(e),e.dir)
 		particle_state.advance_creep(e,tick_ms)
 		creep_index+=1
 	if profile_hotpaths: timed = timed_section("creep_movement", timed)

@@ -26,7 +26,9 @@ func actor(s,resource:String,splash:bool):
 	if supplied_only:
 		# Resource7 is preserved but absent from the populated offline catalog.
 		# Exercise the same supplied-resource scope as the original probe.
+		s.particle_state.destroy_creep(e)
 		e.def=e.def.duplicate(true);e.def.filename=resource.trim_prefix("creeps/")
+		e.def.traits=content.catalog.resource_params[resource];s.particle_state.initialize_creep(e)
 	e.owner=0;e.target_owner=1;e.speed=0;e.path=[]
 	e.pos=Vector2(320.25,230.75);e.visual_pos=Vector2(330.5,220.5)
 	s.damage(e,float(e.max_hp)*10,0,0 if splash else 2)

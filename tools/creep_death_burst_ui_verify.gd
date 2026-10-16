@@ -75,7 +75,9 @@ func run():
 	live.start_mission("1",true,false,false);live.tutorial=null;live.sim.spawn_hold=true;live.sim.live_updates=true;live.qa_gallery=false
 	var enemy=live.sim.spawn_enemy(1,0,"",995,false);enemy.pos=live.sim.center(8,6);enemy.visual_pos=enemy.pos;enemy.path=[]
 	live.sim.damage(enemy,float(enemy.max_hp)*10);live._process(0)
-	var live_parents=live.particle_fx.systems.duplicate()
+	var live_parents=live.particle_fx.systems.filter(func(sys):return "explosion" in str(sys.get("creep_alias","")))
+	var dormant=live.particle_fx.systems.filter(func(sys):return not "explosion" in str(sys.get("creep_alias","")))
+	check(live_parents.size()==3 and dormant.size()==5 and dormant.all(func(sys):return sys.particles.is_empty()),"actual Main retains five empty constructor roots plus three SetDie bursts")
 	var original_case=timeline.cases.filter(func(c):return c.resource=="creeps/creep1" and c.dt_ms==30)[0]
 	for frame in range(46):
 		if frame>0:live._process(.03)

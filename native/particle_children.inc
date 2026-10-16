@@ -144,7 +144,16 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
     const float clock=f32(double(system[k.clock_seconds])+f32(double(f32(double(d.get(k.time_scale,1))))*dt));system[k.clock_seconds]=double(clock);
     const float disable=f32(double(d.get(k.disable_after,0))/1000.0);
     if(disable>0 && disable<=clock && !bool(system[k.first_release]))system[k.rate]=0;
-    // Imported definitions are immutable. Keep the former reconstruct/copy
+    // Empty owned roots still run their clock and Emit(0) release phases.
+    // They have no particle physics, color, child or phase work to perform.
+    const Array particles=system[k.particles];
+    if(particles.is_empty()) {
+        const float life=f32(double(d.get(k.life_cycle,1)));
+        const float interval=f32(double(f32(double(system.get(k.interval_seconds,d.get(k.release_interval,1)))))*f32(interval_scale));
+        if(interval<f32(double(clock)-double(system[k.release_seconds]))&&dt<life)owned_particle_emit(system,int64_t(system[k.rate]),make_particle,make_child);
+        return;
+    }
+    // Headers are immutable after construction. Keep the reconstruct/copy
     // path selectable for exact state and controlled CPU comparisons.
     ParticleCoefficients coefficients=[&]() {
         if(!prepared) {Dictionary physics=d.duplicate();physics[k.wind_enabled]=system[k.wind_enabled];return ParticleCoefficients(physics);}
@@ -153,7 +162,7 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
         return ParticleCoefficients(d);
     }();
     coefficients.wind_enabled=bool(system[k.wind_enabled]);
-    const float life=f32(double(d.get(k.life_cycle,1)));const Array particles=system[k.particles],color=d.get(k.color,Array::make(1,1,1,1));Array live,pool=system[k.pool];
+    const float life=f32(double(d.get(k.life_cycle,1)));const Array color=d.get(k.color,Array::make(1,1,1,1));Array live,pool=system[k.pool];
     const bool limited=system.get(k.motion_limited,false);const double motion=system.get(k.motion_seconds,0);
     // Imported definitions are immutable. Reuse only within this update call.
     const bool real_alpha=d.get(k.real_alpha,false);const float amplitude=f32(double(d.get(k.amplifyX_withSin_by,0)));

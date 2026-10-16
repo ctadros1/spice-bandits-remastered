@@ -46,6 +46,10 @@ class FreezeEmission(StatusBirth):
    assert head not in seen;seen.add(head);values.append(self.word(head+0x20));head=self.word(head+0x38)
   return values
  def full(self,name,dt_ms=30):
+  # R151 audit: this probe retains the original initialized heavy-disable byte.
+  # Preserve the R150 fixture bytes; R148 explicitly supplies both values.
+  heavy=struct.unpack('<I',self.u.mem_read(0x40a1e8,4))[0]
+  assert heavy==0x47c580 and bytes(self.u.mem_read(heavy,1))==b'\x01'
   self.emits=[];ctor=self.sample(name);u=self.u;nodes=[node for alias,node in sorted(self.slots.items())];self.owned_next={node:(nodes[i+1] if i+1<len(nodes) else E+0x268) for i,node in enumerate(nodes)};u.mem_write(E+0x270,I(nodes[0]));u.mem_write(E+0x3000+0x14,I(1000))
   for node in nodes:
    p=self.word(node+0x14);u.mem_write(p+0x50,F(1));u.mem_write(p+0x7c,I(1));u.mem_write(p+0x48,F(0));child=self.word(p+0x100);u.mem_write(child-12,bytes(12))

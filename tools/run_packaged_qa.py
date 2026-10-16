@@ -265,6 +265,7 @@ def main():
                 burst_exact=burst_exact and actual.get('clock_bits')==expected[0]['clock_bits']
                 burst_exact=burst_exact and actual.get('parents')==[{'name':r['name'],'active':r['active'],'released_bits':0} for r in expected]
                 burst_exact=burst_exact and actual.get('paused')==(pose=='death-burst-paused')
+                burst_exact=burst_exact and actual.get('global_systems')==8
             fresh=fresh and burst_exact
             record['death_burst_original_parent_counts_clocks_exact']=burst_exact
             removed=next((c for c in manifest['captures'] if c['name']=='death-burst-1380-removed'),{}).get('death_burst',{})
@@ -398,7 +399,7 @@ def main():
                 fresh = fresh and entry.get('state') == state and entry.get('alpha') == alpha and entry.get('particles_visible') == visible
                 scale,base_scale=entry.get('scale',[]),entry.get('base_scale',[])
                 fresh = fresh and len(scale)==2 and len(base_scale)==2 and all(abs(s/b-factor)<1e-6 for s,b in zip(scale,base_scale))
-                fresh = fresh and entry.get('systems',0)>0 and entry.get('particles',0)>0
+                fresh = fresh and entry.get('systems')==5 and entry.get('particles',0)>0
                 fresh = fresh and ((entry.get('hidden_systems')==0 and entry.get('native_groups',0)>0) if visible else (entry.get('hidden_systems')==entry.get('systems') and entry.get('native_groups')==0))
             result_sequence = [c for c in manifest['captures'] if c['name'].startswith('result-room-')]
             fresh = fresh and len(result_sequence) == 11 and all(c.get('initial_delay') == 3 and abs(c.get('result_age', -1) - int(c['name'].rsplit('-',1)[1])/100) < 0.001 for c in result_sequence)

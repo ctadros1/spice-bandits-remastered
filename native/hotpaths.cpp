@@ -324,6 +324,7 @@ bool SpiceNative::advance_creep_fields(Dictionary actor,double dt_ms,int64_t rem
     const bool attached=actor.get(k.freeze_attached,false);
     actor[k.grow_ms]=double(std::min(400.0f,growth));
     actor[k.slow]=slow;actor[k.consumed_slow]=consumed;actor[k.slow_pending]=-1.0;
+    if(consumed && bool(actor.get(k.freeze_auxiliary_present,false)))actor[k.freeze_auxiliary_value]=int64_t(1);
     actor[k.animation_divisor]=speed!=0?double(f32(1000.0/double(speed))):std::numeric_limits<double>::infinity();
     // ProcessSpeed reads attachment before ProcessFreeze releases it on expiry.
     actor[k.animation_multiplier]=attached?0.0:1.0;
@@ -414,7 +415,8 @@ void SpiceNative::update_particles(Array particles,Dictionary d,double dt,double
     integrate_particles(particles,ParticleCoefficients(d),dt,clock_ms);
 }
 int64_t SpiceNative::compile_particle(Dictionary d) {
-    const String signature=String(d.get("source_sha256",""))+":"+String(d.get("name",""));
+    // Creep.C2 clones and transforms authored headers before compiling them.
+    const String signature=String(d.get("source_sha256",""))+":"+String(d.get("name",""))+":"+String(d.get("native_header_variant",""));
     const std::string key=signature.utf8().get_data();
     auto found=particle_ids.find(key);if(found!=particle_ids.end())return found->second;
     const int64_t index=compiled_particles.size();compiled_particles.emplace_back(d);particle_ids.emplace(key,index);return index;

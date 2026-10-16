@@ -410,10 +410,19 @@ func run() -> void:
 	app.sim.advance_frame(30)
 	check(app.sim.portals.is_empty(),"native deleted pair leaves manager on following update")
 	await snapshot("portal-lifecycle-removed")
-	var transported=app.sim.spawn_enemy(1,0,"",1142,false)
-	transported.pos=app.sim.center(10,9);transported.visual_pos=transported.pos;transported.draw_light=1;transported.slow=0.5;transported.hp=transported.max_hp*0.5
-	transported.portal_pose=app.sim.CreepPortal.create(app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
 	app.effects.clear();app.particle_fx.reset()
+	var transported=app.sim.spawn_enemy(1,0,"",1142,false)
+	transported.pos=app.sim.center(10,9);transported.visual_pos=transported.pos;transported.draw_light=1;transported.hp=transported.max_hp*0.5
+	transported.portal_pose=app.sim.CreepPortal.create(app.sim.creep_portal_base(transported),1,float(transported.def.traits.get("shadow_scale_factor",1)))
+	# Constructor roots start empty. Warm their actual clock and slow-admission
+	# phases before holding the seven controlled portal poses for comparison.
+	for frame in 18:
+		transported.slow_pending=.5
+		app.sim.CreepFreeze.advance_fields(transported,30,0)
+		app.sim.particle_state.refresh_creep(app.sim,transported)
+		app.sim.particle_state.update_creep_fields(transported,app.sim.enemy_visual_aim_point(transported),transported.dir)
+		app.sim.particle_state.advance_creep(transported,30)
+	check(transported.particle_roots.size()==5 and transported.particle_roots.any(func(sys):return str(sys.creep_alias)=="freeze" and not sys.particles.is_empty()),"native portal fixture warms original empty constructor freeze root")
 	app.sim.particle_state.refresh_creep(app.sim,transported);app.particle_fx.advance(app.sim,0)
 	await snapshot("portal-creep-normal")
 	transported.portal_pose.state=1
@@ -1190,7 +1199,9 @@ func run() -> void:
 	death_burst_owner=burst_enemy
 	app.sim.damage(burst_enemy,float(burst_enemy.max_hp)*10)
 	app._process(0)
-	death_burst_parents=app.particle_fx.systems.duplicate()
+	death_burst_parents=app.particle_fx.systems.filter(func(sys):return "explosion" in str(sys.get("creep_alias","")))
+	var dormant_roots=app.particle_fx.systems.filter(func(sys):return not "explosion" in str(sys.get("creep_alias","")))
+	check(dormant_roots.size()==5 and dormant_roots.all(func(sys):return sys.particles.is_empty()),"native lethal owner retains all five empty constructor roots")
 	check(death_burst_parents.size()==3,"native actual lethal event creates three original death aliases")
 	var owned_burst_roots=death_burst_parents.filter(func(p):return p.has("owned_tree") and not str(p.definition.get("child_system","")).is_empty())
 	check(owned_burst_roots.size()==2,"native lethal burst connects both original owned-child roots")
@@ -1200,7 +1211,7 @@ func run() -> void:
 	for index in range(5):app._process(.03)
 	await snapshot("death-burst-0150")
 	for index in range(5):app._process(.03)
-	check(app.particle_fx.systems.size()==3 and owned_burst_roots.all(func(s):return s.owned_tree.particles.any(func(p):return not p.child.particles.is_empty())),"native child smoke emits inside parents without global orphan systems")
+	check(app.particle_fx.systems.size()==8 and dormant_roots.all(func(sys):return sys.particles.is_empty()) and owned_burst_roots.all(func(s):return s.owned_tree.particles.any(func(p):return not p.child.particles.is_empty())),"native child smoke emits inside parents without global orphan systems")
 	await snapshot("death-burst-0300")
 	for index in range(10):app._process(.03)
 	await snapshot("death-burst-0600")
@@ -1216,7 +1227,7 @@ func run() -> void:
 	for index in range(14):app._process(.03)
 	await snapshot("death-burst-1350")
 	check(death_burst_parents.all(func(p):return p.particles.is_empty() and p.released==0.0),"native newborn death parents expire without a second smoke burst")
-	check(app.sim.enemies.has(burst_enemy) and int(burst_enemy.state)==2 and app.particle_fx.systems.size()==3,"native newly complete owner retains empty roots until next manager pass")
+	check(app.sim.enemies.has(burst_enemy) and int(burst_enemy.state)==2 and app.particle_fx.systems.size()==8 and dormant_roots.all(func(sys):return sys.particles.is_empty()),"native newly complete owner retains empty roots until next manager pass")
 	app._process(.03)
 	check(not app.sim.enemies.has(burst_enemy) and app.particle_fx.systems.is_empty(),"native next manager pass destroys owner roots and child pools")
 	await snapshot("death-burst-1380-removed")

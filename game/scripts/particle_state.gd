@@ -55,7 +55,7 @@ func emit_creep_death_burst(resource:String,point:Vector2,variation:String="") -
 		sys.born=0.0;sys.released=0.0;sys.until=0.0
 		for p in sys.particles:p.born=0.0;p.child_released=0.0
 
-func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String="",owner:String="",duration_ms:int=-1,direction:Vector2=Vector2.ZERO,object_owner:int=-1,force_owned:bool=false) -> void:
+func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:Vector2,variation:String="",owner:String="",duration_ms:int=-1,direction:Vector2=Vector2.ZERO,object_owner:int=-1,force_owned:bool=false,initial_emit:bool=true) -> void:
 	serial+=1
 	var sys={"id":serial,"name":name,"definition":definition,"native_coefficients":SpiceNative.compile_particle(definition),"texture":texture,"pos":point,"direction":direction,"owner":owner,"object_owner":object_owner,"particles":[],"variation":variation,"born":clock_ms,"released":clock_ms,"until":clock_ms+duration_ms if duration_ms>=0 else -1,"emitting":duration_ms!=0,"phase":0.0}
 	var child_name=str(definition.get("child_system",""))
@@ -63,7 +63,7 @@ func emit_definition(name:String,definition:Dictionary,texture:Texture2D,point:V
 		sys.owned_tree=create_owned_tree(name,definition,texture,point,variation)
 		sys.particles=sys.owned_tree.particles
 	systems.append(sys)
-	emit_batch(sys)
+	if initial_emit:emit_batch(sys)
 
 func emit_batch(sys: Dictionary) -> void:
 	var started=Time.get_ticks_usec()
@@ -166,7 +166,7 @@ func advance_owned_system(sys:Dictionary,dt:float,reference:bool=false) -> bool:
 
 # Roots owned by a creep remain allocated (including empty pools) until its
 # manager destroys that creep. The renderer and headless simulation share them.
-func creep_root(e:Dictionary,alias:String,point:Vector2) -> Dictionary:
+func creep_root(e:Dictionary,alias:String,point:Vector2,initial_emit:bool=true,raw_map_field8:Variant=null) -> Dictionary:
 	var roots:Array=e.get("particle_roots",[])
 	for sys in roots:
 		if str(sys.creep_alias)==alias:return sys
@@ -174,15 +174,46 @@ func creep_root(e:Dictionary,alias:String,point:Vector2) -> Dictionary:
 	var binding:Dictionary=content.particles.bindings.get(resource,{}).get(alias,{})
 	var name=str(binding.get("filename",""));var d:Dictionary=content.particles.systems.get(name,{})
 	if d.is_empty():return {}
+	# Creep.C2 changes its private system header, never the resource template.
+	if not initial_emit:
+		d=d.duplicate(true)
+		d.native_header_variant=resource+":"+str(raw_map_field8)
+		var params:Dictionary=e.def.get("traits",{})
+		if alias=="smoke":
+			for pair in [["size","smoke_scale"],["release_interval","smoke_emition_multiplier"],["velocity_var","smoke_vel_rand_multiplier"],["rot_speed","smoke_rot_multiplier"]]:
+				if params.has(pair[1]):d[pair[0]]=Math.f32(Math.f32(float(d.get(pair[0],0)))*Math.f32(float(params[pair[1]])))
+			if params.has("smoke_lifecycle"):d.life_cycle=Math.f32(Math.f32(float(params.smoke_lifecycle))*Math.f32(.7))
+			if params.has("smoke_alpha_multiplier"):d.color[3]=Math.f32(Math.f32(float(d.color[3]))*Math.f32(float(params.smoke_alpha_multiplier)))
+			# The constructor's later interval assignment overrides the earlier
+			# smoke_max_dmg_emittion_rate parameter in the original body.
+			e.smoke_base_interval=Math.f32(float(d.release_interval));e.smoke_work_interval=e.smoke_base_interval
+			e.smoke_max_multiplier=Math.f32(float(params.get("smoke_max_dmg_emittion_rate_multiplier",1)))
+			e.smoke_rate=int(d.get("num_release",1));e.smoke_color_flag=bool(params.get("smoke_color_from_damage",false))
+			e.smoke_idle_multiplier=Math.f32(float(params.get("smoke_emittion_mult_on_idle",1)))
+		elif alias in ["hover_flow","hover_flow2"] and raw_map_field8!=null and int(raw_map_field8)==1:
+			for k in 3:d.color[k]=1.0
 	var variation=str(e.def.get("color","")) if bool(binding.get("have_variation",false)) else ""
 	var texture=content.tex(d.variations.get(variation,d.texture))
 	if texture==null:return {}
-	emit_definition(name,d,texture,point,variation,"enemy:%d:%s" % [e.id,alias],-1,e.dir,-1,true)
+	emit_definition(name,d,texture,point,variation,"enemy:%d:%s" % [e.id,alias],-1,e.dir,-1,true,initial_emit)
 	var sys=systems[-1]
 	owners[int(e.id)]=e
 	sys.creep_owner=int(e.id);sys.creep_alias=alias;sys.retain_for_owner=true
+	sys.creep_binding=binding
+	if not initial_emit and alias in ["smoke","poison","radiation","lsd","freeze"]:
+		sys.owned_tree.rate=0;sys.emitting=false
 	roots.append(sys);roots.sort_custom(func(a,b):return str(a.creep_alias)<str(b.creep_alias));e.particle_roots=roots
 	return sys
+
+func initialize_creep(e:Dictionary,raw_map_field8:Variant=null) -> void:
+	# All non-explosion roots are born empty. Only SetDie explicitly Emits.
+	# Raw map+8 can be supplied by original-field tests; its live producer is
+	# unresolved, so live hover color retains the authored resource RGB.
+	var aliases=content.particles.bindings.get("creeps/"+str(e.def.filename),{}).keys();aliases.sort()
+	for alias in aliases:
+		if not "explosion" in str(alias):creep_root(e,str(alias),e.pos,false,raw_map_field8)
+	e.freeze_auxiliary_present=e.get("particle_roots",[]).any(func(sys):return str(sys.creep_alias)=="freeze")
+	e.freeze_auxiliary_value=0
 
 func stop_creep(e:Dictionary) -> void:
 	for sys in e.get("particle_roots",[]):
@@ -203,19 +234,46 @@ func begin_creep_death(e:Dictionary,point:Vector2) -> void:
 		for p in sys.particles:p.born=0.0;p.child_released=0.0
 
 func refresh_creep(sim,e:Dictionary) -> void:
+	# Freeze's real constructor alias is driven by ProcessSpeed/ProcessFreeze.
+	# LSD/poison/radiation retain the existing caller bridge pending recovery.
 	var aliases=[]
-	if sim.clock_ms<sim.freeze_until or e.slow<1.0:aliases.append("freeze")
 	if sim.clock_ms<e.disco_until:aliases.append("lsd")
 	if float(e.get("poison_count",0))>0:
 		var radiation=sim.zones.any(func(z):return int(z.type)==5 and not z.has("bubble") and e.pos.distance_to(z.pos)<float(z.def.get("poison_range",0))*float(sim.map.hex_h)/1000.0)
 		aliases.append("radiation" if radiation else "poison")
-	if e.hp<e.max_hp*0.6000000238418579:aliases.append("smoke")
-	if str(e.def.filename) in ["creep5","creep6"]:aliases.append("hover_flow2")
-	for alias in aliases:creep_root(e,alias,sim.enemy_visual_aim_point(e))
 	for sys in e.get("particle_roots",[]):
-		var enabled=str(sys.creep_alias) in aliases
-		sys.emitting=enabled;sys.owned_tree.rate=int(sys.owned_tree.backup_rate) if enabled else 0
-		sys.pos=sim.enemy_visual_aim_point(e);sys.owner_hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
+		var alias=str(sys.creep_alias)
+		if alias=="freeze":sys.owned_tree.rate=int(e.get("freeze_auxiliary_value",0))
+		elif alias in ["lsd","poison","radiation"]:sys.owned_tree.rate=int(sys.owned_tree.backup_rate) if alias in aliases else 0
+		sys.owner_hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
+
+func stop_creep_smoke(e:Dictionary) -> void:
+	for sys in e.get("particle_roots",[]):
+		if str(sys.creep_alias)=="smoke":sys.owned_tree.rate=0;sys.emitting=false
+
+func update_creep_fields(e:Dictionary,aim:Vector2,direction:Vector2,heavy:bool=false) -> void:
+	# Full original UpdateParticles: its smoke pointer aliases a mapped root.
+	# It is never a separately advanced emitter. Preserve float32 operation order.
+	for sys in e.get("particle_roots",[]):
+		var tree:Dictionary=sys.owned_tree
+		if str(sys.creep_alias)=="smoke":
+			var maximum=Math.f32(float(int(e.max_hp)))
+			if float(e.hp)<Math.f32(maximum*Math.f32(.6000000238418579)):
+				if e.get("smoke_color_flag",false) and int(e.state) not in [2,3]:
+					var factor=Math.f32(Math.f32(maxf(0,Math.f32(float(e.hp)))/maximum)/Math.f32(.6000000238418579))
+					var base=Math.f32(float(e.smoke_base_interval))
+					var interval=Math.f32(base+Math.f32(Math.f32(Math.f32(base*Math.f32(float(e.smoke_max_multiplier)))-base)*Math.f32(1.0-factor)))
+					e.smoke_work_interval=maxf(Math.f32(.03),interval);tree.interval_seconds=e.smoke_work_interval
+					for k in 3:tree.definition.color[k]=factor
+					tree.rate=int(e.smoke_rate)
+			else:tree.rate=0
+		var binding:Dictionary=sys.get("creep_binding",{})
+		var x=Math.f32(float(binding.get("offsetX",0)));var y=Math.f32(float(binding.get("offsetY",0)))
+		var distance=Math.f32(sqrt(Math.f32(Math.f32(x*x)+Math.f32(y*y))))
+		sys.pos=Vector2(Math.f32(aim.x+Math.f32(-Math.f32(direction.x*distance))),Math.f32(aim.y+Math.f32(-Math.f32(direction.y*distance))))
+		if bool(binding.get("emitt_on_walking",false)):
+			tree.rate=0 if int(e.state) in [1,2,3,4,5,6] or heavy else int(tree.backup_rate)
+		sys.emitting=int(tree.rate)!=0
 
 func advance_creep(e:Dictionary,dt_ms:float) -> void:
 	var dt=Math.f32(Math.f32(dt_ms)*Math.f32(.001))

@@ -36,6 +36,7 @@ static func reference_fields(creep:Dictionary,dt_ms:float,remaining:int) -> void
 	creep.grow_ms=minf(400,f32(float(creep.grow_ms)+dt_ms))
 	creep.slow=creep.slow_pending if creep.slow_pending>0 else 1.0
 	creep.consumed_slow=creep.slow_pending>0
+	if creep.consumed_slow and creep.get("freeze_auxiliary_present",false):creep.freeze_auxiliary_value=1
 	creep.slow_pending=-1.0
 	var current_speed=f32(float(creep.speed)*float(creep.slow))
 	creep.animation_divisor=f32(1000.0/current_speed) if current_speed!=0 else INF
