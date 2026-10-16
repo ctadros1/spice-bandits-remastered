@@ -13,7 +13,7 @@ Start with [PLAN.md](PLAN.md). Supporting material:
 
 As of October16,2026, the offline reconstruction is incomplete. Its saved simulation campaign reaches Madagascar, but the packaged app still differs substantially from the original interface, interactions and animation. The iPad TouchGameplay recording is the main presentation guide, with original asset proportions on a fixed iPad canvas. Multiplayer and expansion remain deferred. See [required differences](docs/FIDELITY.md), [mechanics evidence](docs/mechanics/BASELINE.md), and [verification](docs/VALIDATION.md).
 
-The current R123 package passes all ten native verification suites, including the unchanged performance gate. Recovered creep hit timing and per-owner additive drawing are connected; visual identity and complete offline reconstruction remain unproven. [Hit evidence](docs/mechanics/CREEP_HIT.md) records scope, visual review and preserved failures. R119 remains the last verified private app/evidence backup until R123 restoration and remote checks complete.
+The current R123 package passes all ten native verification suites, including the unchanged performance gate. Recovered creep hit timing and per-owner additive drawing are connected; visual identity and complete offline reconstruction remain unproven. [Hit evidence](docs/mechanics/CREEP_HIT.md) records scope, visual review and preserved failures. The signed R123 source and [private app/evidence checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r123) have verified source/app restoration and all17 remote asset hashes/sizes.
 
 See [offline release notes](docs/OFFLINE_RELEASE.md) for the verified scope and remaining differences.
 

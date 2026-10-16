@@ -1,0 +1,132 @@
+{
+  "pck_sha256": "b900729ff4c65eaf92f7f72a763b1fc99d2333d0998ab3314a623404af45b275",
+  "executable_sha256": "56c0104de928f16209708564dd16e99033cafa62a520709303e8f82bcbb6b899",
+  "native_libraries_sha256": {
+    "Contents/Frameworks/libspice_hotpaths.dylib": "dbd05fb27e716ab87b436b99547d12add7959be1ab4d34592709e49dd1781beb"
+  },
+  "source_commit": "9eec025a8b293644f3ecee25fc07bca4b649ad8a",
+  "source_commit_created": true,
+  "signed_and_pushed": true,
+  "all_ten_native_passed": true,
+  "counted_png": 436,
+  "supplemental_comparison_png": 21,
+  "wav": 23,
+  "evidence_files_verified": 1681,
+  "presentation_checks": 509,
+  "audio_checks": 73,
+  "creep_hit_source_checks": 5369,
+  "creep_animator_source_checks": 14408,
+  "runtime_scripts": 74,
+  "animator_source_checks": 38129,
+  "portal_source_checks": 42580,
+  "native_hit_poses_inspected": 12,
+  "prior_presentation_exact": 180,
+  "prior_presentation_compared": 186,
+  "old_current_source_full_rgba_pairs": 7,
+  "comparison_pairs": 45,
+  "frozen_comparison_frames": 90,
+  "changed_comparison_sheets_inspected": 2,
+  "unchanged_comparison_sheets_exact": 10,
+  "source_bundle_tracked_files_verified": 492,
+  "offline_complete": false,
+  "scope": "Universal2 compiled, Apple Silicon execution. Original proportions/profiles protected. No Intel/Finder/Gatekeeper/notarization/current physical input/speaker/original-device equivalence. Full original damage/pathfinding/owner/registry/death/globalFX/GPU and hosted progression unresolved. Later publication excluded.",
+  "evidence_archive_files_verified": 1681,
+  "evidence_ordered_parts_full_sha256_verified": true,
+  "zip_crc_safe_paths_and_empty_restore_passed": true,
+  "restored_empty_cwd_native_menu_passed": true,
+  "normal_and_retained_campaign_preserved": true,
+  "private": true,
+  "published": true,
+  "release_id": 415027026,
+  "release_tag": "backup-2026-10-16-r123",
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r123",
+  "assets": [
+    {
+      "name": "Spice-Bandits-Remastered-r123-macOS.zip",
+      "bytes": 330946407,
+      "sha256": "56f16c34576c8658b3a3f69747070e3315869f4ae801b144ff16cf33327449a1"
+    },
+    {
+      "name": "r123-verification-evidence.tar.gz.part-001",
+      "bytes": 1900000000,
+      "sha256": "b4b4ee7eed11b1206aaae5942d17a7eae22adb85ddfc9250fd6d769325799153"
+    },
+    {
+      "name": "r123-verification-evidence.tar.gz.part-002",
+      "bytes": 673871662,
+      "sha256": "648c50c426d18a2208f1d9d21bc2c2c20ba79d44921a373f8df88c74b4ad39b3"
+    },
+    {
+      "name": "r123-pending-source.bundle",
+      "bytes": 1830494,
+      "sha256": "63d7eea864543cde8c8009aee87e822a515a96e6f11927bb6630f9c4e41966ee"
+    },
+    {
+      "name": "SOURCE-PENDING.json",
+      "bytes": 97328,
+      "sha256": "b9d6ca22a6f189b1523c66556372508eecf59ec06cc3e7b6425ddd7170a5f232"
+    },
+    {
+      "name": "RESTORE-PENDING.md",
+      "bytes": 728,
+      "sha256": "1bf8a80a546f04b359377abcdb113a0e2e3738e67373cc5088a21730f9b35ac3"
+    },
+    {
+      "name": "RESTORE-STATUS.json",
+      "bytes": 255,
+      "sha256": "ddaf3dd21d641c24cfa94ee2793124b7bac7a39612bc92ec81e4e94deb7f34cf"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 324298,
+      "sha256": "04091adc3788269b8f70f64d9fa570576a8c8a800fe77c8fe34b468a1310b722"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 538,
+      "sha256": "a53b65cf90ec68c6b95499ec15629245278c22c1db547ddd649360da1e3e857c"
+    },
+    {
+      "name": "r123-pending-restoration.zip",
+      "bytes": 1545356,
+      "sha256": "d20dc54dbd61960fc116722403c07d235eff7a3dd0c4a6e6ff2bf39f12e5f7e2"
+    },
+    {
+      "name": "r124-preliminary-death-research.zip",
+      "bytes": 53825,
+      "sha256": "187b6ca2245441fa42292b361a3f03f07ab1f37e0cefabe5cf87028e6a989095"
+    },
+    {
+      "name": "r124-death-fields-and-splash-port.zip",
+      "bytes": 231425,
+      "sha256": "e6416680ac35be4ba75c310f4c8c4372569d2cfd695b2ca18f4f397d532216de"
+    },
+    {
+      "name": "r123-source.bundle",
+      "bytes": 1844380,
+      "sha256": "3b8bffe01035d2d080e2ff6cfcb4d1bf9fb570c2aa10a4f444fc57b0057fef2b"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 96890,
+      "sha256": "6d20f264eeb16070661c3e0a285612fc2ff644d5180d634a55220d03fa6496b7"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1088,
+      "sha256": "bb4ed0d379052ff03537e74412d72427dd66e39610ac79b5b00c6483398f324c"
+    },
+    {
+      "name": "CHECKPOINT.json",
+      "bytes": 1776,
+      "sha256": "b2d6015c8ad07d9d3fbcebf80f9f9d6b863c947c5fc75f32061c2d9d194e0f7f"
+    },
+    {
+      "name": "r123-package-restoration.zip",
+      "bytes": 1519627,
+      "sha256": "fceab944754ea6cea1eaee05237ff4fb85a123f4e6a982d63e79a9a263b094d7"
+    }
+  ],
+  "all_remote_assets_verified": true,
+  "verified_at": "2026-10-16T14:32:37.750721+00:00"
+}
