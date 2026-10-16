@@ -1,5 +1,7 @@
 # Original animator clocks, frame blending and offsets
 
+Current package is R123: the recovered creep clocks now also feed an ordered additive hit pass. See [hit integration, native verification and remaining limits](CREEP_HIT.md). Historical clock evidence below remains scoped to R118–R119.
+
 R116–R117 restores bounded rendering behavior from the preserved1.14 executable. Full offline fidelity remains incomplete.
 
 ## Original code and scope

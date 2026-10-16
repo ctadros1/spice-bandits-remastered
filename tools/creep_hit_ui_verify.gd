@@ -52,6 +52,28 @@ func run() -> void:
 			if call.blend==[1.0,1.0]:seen_add=true;check(not seen_screen,"hit must precede status "+str(i))
 			elif call.blend==[1.0,769.0]:seen_screen=true
 			else:check(not seen_add,"normal frames must precede hit "+str(i))
-	var report={"checks":checks,"failures":failures,"full_original_damage_cases":fixture.damage.size(),"full_original_update_cases":fixture.updates.size(),"full_original_render_cases":fixture.render.size(),"sequence_rows":fixture.sequence.size(),"scope":"Field-only helper and original direct-frame ONE/ONE plan. Combat/caller bridge and native ordered additive rendering are pending. No runtime integration or whole original/GPU fidelity claim."}
-	var out=FileAccess.open("res://../builds/creep-hit-verification-r120.json",FileAccess.WRITE);out.store_string(JSON.stringify(report,"\t"));out.close()
+	var content=root.get_node("Content");var profile=root.get_node("Profile").fresh()
+	var mission=content.mission("1");var sim=load("res://scripts/simulation.gd").new()
+	sim.setup(content.catalog,content.maps[mission.map],mission,profile,121,content.animations);sim.spawn_hold=true
+	var creep=sim.spawn_enemy(1,0,"");creep.hp=1000;creep.max_hp=1000
+	sim.damage(creep,1,0,3)
+	check(creep.hit_active and creep.hit_running and creep.hit_last_kind==3,"actual damage bridge starts poison hit")
+	sim.advance_frame(30);sim.damage(creep,1,0,3)
+	check(creep.hit_elapsed==30.0 and creep.hit_active,"actual consecutive poison does not restart clock")
+	sim.advance_frame(30)
+	check(creep.hit_elapsed==60.0 and creep.hit_active,"actual source flash remains at exact60ms")
+	sim.paused=true;sim.advance_frame(30)
+	check(creep.hit_elapsed==60.0 and creep.hit_active,"actual pause holds flash state")
+	sim.paused=false;sim.advance_frame(.001)
+	check(creep.hit_elapsed==0 and not creep.hit_active,"actual expiry clears strictly after60ms")
+	sim.damage(creep,1,0,3)
+	check(not creep.hit_active,"actual consecutive poison suppression survives expiry")
+	sim.damage(creep,1,0,2)
+	check(creep.hit_active and creep.hit_last_kind==2,"actual direct missile kind reactivates flash")
+	creep.state=2;var hp=creep.hp;sim.damage(creep,1)
+	check(creep.hp==hp,"actual damage ignores original state2")
+	creep.state=0;sim.damage(creep,2000)
+	check(not creep.hit_active and not creep.hit_running,"actual lethal damage clears flash flags")
+	var report={"checks":checks,"failures":failures,"full_original_damage_cases":fixture.damage.size(),"full_original_update_cases":fixture.updates.size(),"full_original_render_cases":fixture.render.size(),"sequence_rows":fixture.sequence.size(),"scope":"Original hit fields/direct-frame plan and actual Simulation damage/timer/pause bridge. Native ordered additive rendering verified separately. Full callers/death/original GPU remain bounded."}
+	var out=FileAccess.open("res://../builds/creep-hit-verification.json",FileAccess.WRITE);out.store_string(JSON.stringify(report,"\t"));out.close()
 	print("CREEP_HIT ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)

@@ -136,10 +136,12 @@ static func magic_offer(key:String) -> Dictionary:
 		if int(offer.itemtype)==0 and str(offer.tag)==key:return offer
 	return {}
 
-static func info_text(app,point:Vector2,value:String,points:int,color:Color=Color.WHITE) -> void:
-	app.draw_string(app.font,point+Vector2(0,app.font.get_ascent(points)),value,HORIZONTAL_ALIGNMENT_LEFT,-1,points,color)
+static func info_text(app,point:Vector2,value:String,points:int,color:Color=Color.WHITE,canvas:CanvasItem=null) -> void:
+	if canvas==null:canvas=app
+	canvas.draw_string(app.font,point+Vector2(0,app.font.get_ascent(points)),value,HORIZONTAL_ALIGNMENT_LEFT,-1,points,color)
 
-static func draw_tower_info(app) -> void:
+static func draw_tower_info(app,canvas:CanvasItem=null) -> void:
+	if canvas==null:canvas=app
 	# RenderTowerInfoPanel0xf2e60 and SetupTowerInfoLabels0xedc14. This
 	# authored sloping panel overlaps beneath the tower tray at its right edge.
 	var tower=app.sim.find_tower(app.selected_tower)
@@ -149,12 +151,12 @@ static func draw_tower_info(app) -> void:
 	var height=app.view_size().y
 	var alpha=app.tower_panel_alpha() if not tower.is_empty() else 1.0
 	var white=Color(1,1,1,alpha)
-	region(app,Rect2(0,376,377,110),Rect2(0,height-110,377,110),white)
+	region(canvas,Rect2(0,376,377,110),Rect2(0,height-110,377,110),white)
 	var center=Vector2(49,height-70)
 	app.extra_sprite("towers/"+str(definition.filename),"pad1",center,"",Vector2.ONE,white)
 	app.draw_sprite_frame(Content.frame("towers/"+str(definition.filename),"Idle",0),center,white,0,Vector2.ONE)
-	info_text(app,Vector2(98,height-98),str(definition.name),20,white)
-	info_text(app,Vector2(98,height-78),str(definition.get("description","")),13,white)
+	info_text(app,Vector2(98,height-98),str(definition.name),20,white,canvas)
+	info_text(app,Vector2(98,height-78),str(definition.get("description","")),13,white,canvas)
 	var form=int(definition.type)
 	var support=form in [16,17,18]
 	var damage=""
@@ -164,16 +166,16 @@ static func draw_tower_info(app) -> void:
 	var reload=float(definition.get("rof",0))
 	var rof="+%d%%"%int(definition.get("rof_bonus",0)) if support else "%.1f"%((int(1000.0/reload*100)+0.5)/100.0) if reload>0 else ""
 	var range="+%d%%"%int(definition.get("range_bonus",0)) if support else "%.1f"%((int(float(definition.get("range",0))/1000.0*100)+0.5)/100.0)
-	if form not in [8,11]:region(app,Rect2(360,124,26,21),Rect2(96,height-29,26,21),white)
-	region(app,Rect2(360,101,26,20),Rect2(173,height-28,26,20),white)
-	region(app,Rect2(363,75,20,21),Rect2(248,height-28,20,21),white)
-	for row in [[122,damage],[203,rof],[275,range]]:info_text(app,Vector2(row[0],height-25),str(row[1]),17,white)
+	if form not in [8,11]:region(canvas,Rect2(360,124,26,21),Rect2(96,height-29,26,21),white)
+	region(canvas,Rect2(360,101,26,20),Rect2(173,height-28,26,20),white)
+	region(canvas,Rect2(363,75,20,21),Rect2(248,height-28,20,21),white)
+	for row in [[122,damage],[203,rof],[275,range]]:info_text(app,Vector2(row[0],height-25),str(row[1]),17,white,canvas)
 	var upgrade_price=int(definition.price)
 	if not tower.is_empty():
 		var options=app.sim.upgrade_options(tower)
 		if not options.is_empty():upgrade_price=int(app.sim.tower_data(options[0][0],options[0][1]).price)
-		info_text(app,Vector2(9,height-27),"$%d"%app.sim.sell_price(tower),20,Color(1,0.09,0,alpha))
-	info_text(app,Vector2(53,height-27),"$%d"%upgrade_price,20,Color(0,0.706,1,alpha))
+		info_text(app,Vector2(9,height-27),"$%d"%app.sim.sell_price(tower),20,Color(1,0.09,0,alpha),canvas)
+	info_text(app,Vector2(53,height-27),"$%d"%upgrade_price,20,Color(0,0.706,1,alpha),canvas)
 
 static func centered(app, path: String, position: Vector2, angle: float=0.0, scale: float=1.0, pivot:Vector2=Vector2.ZERO) -> void:
 	var texture=Content.tex(path)

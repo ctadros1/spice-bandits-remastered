@@ -1,5 +1,7 @@
 # Creep-owned animation and freeze countdown
 
+Current package is R123: the recovered creep clocks now also feed an ordered additive hit pass. See [hit integration, native verification and remaining limits](CREEP_HIT.md). Historical clock evidence below remains scoped to R118–R119.
+
 R118 uses the preserved decrypted1.14 ARMv7 executable, SHA-256`e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`. The executable is unchanged. These are bounded executions with supplied records and explicit framework/GL callbacks, not a running original installation.
 
 ## Recovered behavior

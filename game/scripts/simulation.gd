@@ -3,6 +3,7 @@ extends RefCounted
 
 const PortalView=preload("res://scripts/portal_view.gd")
 const CreepPortal=preload("res://scripts/creep_portal_view.gd")
+const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 var reference_spawn_presentation=false
 
@@ -761,6 +762,7 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 		"base": -1, "path": [], "path_at": 1, "attacking": false, "attack_reload_ms": 0, "attack_point": Vector2.ZERO, "slow": 1.0, "slow_until": 0,
 		"float_until": 0, "disco_until": disco_until, "portal_ms": 0, "born_ms": clock_ms, "slow_pending": -1.0,
 		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400,"draw_light":1.0,"freeze_attached":false,"freeze_remaining":0,"animation_divisor":1.0,"animation_multiplier":1.0}
+	e.merge(CreepHit.initial())
 	next_id += 1
 	enemies.append(e)
 	set_enemy_path(e)
@@ -895,9 +897,11 @@ func bonuses(t: Dictionary) -> Dictionary:
 			result.rof = maxf(result.rof, f32(1.0 + float(support.def.get("rof_bonus", 0))/100.0))
 	return result
 
-func damage(e: Dictionary, amount: float, owner: int = 0) -> void:
-	if e.hp <= 0: return
+func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
+	if e.hp<=0 or int(e.get("state",0)) in [2,3]:return
 	e.hp = f32(e.hp - amount)
+	if not e.has("hit_running"):e.merge(CreepHit.initial())
+	CreepHit.after_damage(e,kind)
 	if e.hp <= 0:
 		kills += 1
 		kill_chain += 1
@@ -952,7 +956,7 @@ func shoot(t: Dictionary, e: Dictionary, boost: Dictionary) -> void:
 		e.state = 5
 		emit("float", {"pos": e.pos})
 	else:
-		damage(e, f32(float(d.get("damage", 0))*boost.damage), t.id)
+		damage(e, f32(float(d.get("damage", 0))*boost.damage), t.id,1 if int(t.type)==15 else 0)
 
 func enemy_aim_point(e: Dictionary) -> Vector2:
 	var offset = e.def.get("traits", {}).get("offset", [0, 0])
@@ -1107,7 +1111,7 @@ func impact(p: Dictionary) -> void:
 		# CMissile::DoDamageToTarget 0xdecc4: a normal missile directly hits
 		# its target even when collateral damage is ground-only. Nukes use area.
 		if int(p.type) != 5 and int(e.id) == int(p.target):
-			damage(e, per_missile, p.owner)
+			damage(e, per_missile, p.owner,2)
 			continue
 		if radius <= 0 or not can_hit(int(p.def.get("damagerangeaim", p.def.get("aim", 0))), e): continue
 		var distance = f32(e.pos.distance_to(destination)/float(map.hex_h))
@@ -1277,6 +1281,7 @@ func step() -> void:
 		if e.disco_until > 0 and clock_ms >= e.disco_until:
 			e.disco_until = 0
 			set_enemy_path(e)
+		if e.get("hit_running",false):CreepHit.advance(e,tick_ms)
 		if int(e.freeze_remaining)>0 or clock_ms < e.float_until: continue
 		if e.path.is_empty() or e.base < 0: continue
 		CreepView.prepare(self, e)
@@ -1428,7 +1433,7 @@ func step() -> void:
 			# bonus to poison damage; chemical resources have zero direct damage.
 			var nominal = f32(float(z.def.get("poison_damage", 0))+float(z.get("damage_bonus", 0)))
 			var falloff = f32(1.0-distance/nominal) if nominal > 0 and distance > 0 else 1.0
-			damage(e, f32(f32(nominal*falloff)*seconds/pow(2.0, e.poison_count)), z.owner)
+			damage(e, f32(f32(nominal*falloff)*seconds/pow(2.0, e.poison_count)), z.owner,3)
 			e.poison_count += 1
 	# UpdatePoisons0xe75dc updates clouds before bubbles: arrivals become damaging
 	# on the following tick and their lifetime does not run while in flight.

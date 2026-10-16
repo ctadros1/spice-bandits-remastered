@@ -3,8 +3,18 @@ extends Node2D
 # is drawing, so a per-owner additive span can precede later normal owners.
 class Span extends Node2D:
 	var commands:Array=[]
+	var before_draw:Callable
+	var after_draw:Callable
+	var pass_canvas=true
 	func _draw() -> void:
-		for command in commands:command.call(self)
+		if before_draw.is_valid():before_draw.call(self)
+		for command in commands:
+			if pass_canvas:command.call(self)
+			else:command.call()
+		if after_draw.is_valid():after_draw.call(self)
+var before_draw:Callable
+var after_draw:Callable
+var pass_canvas=true
 var spans:Array[Span]=[]
 var additive_material:ShaderMaterial
 func _init() -> void:
@@ -23,7 +33,7 @@ func prepare(commands:Array) -> void:
 			if count==spans.size():
 				var span=Span.new();add_child(span);spans.append(span)
 			var span=spans[count]
-			span.commands.clear();span.material=additive_material if additive else null;span.visible=true
+			span.before_draw=before_draw;span.after_draw=after_draw;span.pass_canvas=pass_canvas;span.commands.clear();span.material=additive_material if additive else null;span.visible=true
 			count+=1;previous_additive=additive
 		spans[count-1].commands.append(entry.draw)
 	for i in spans.size():

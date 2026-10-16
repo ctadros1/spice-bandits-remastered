@@ -88,6 +88,12 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 				var state=owner.render_animators[key]
 				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
+	if name.begins_with("creep-hit-"):
+		record.hit_fields=app.sim.enemies.map(func(e):return {"id":e.id,"active":e.get("hit_active",false),"running":e.get("hit_running",false),"elapsed_bits":PackedFloat32Array([e.get("hit_elapsed",0.0)]).to_byte_array().decode_u32(0),"last_kind":e.get("hit_last_kind",0),"freeze_remaining":e.get("freeze_remaining",0),"native_air":e.native_air})
+		record.ordered_canvas=app.battle_uses_ordered_canvas
+		record.ordered_spans=app.ordered_battle_canvas.spans.filter(func(span):return span.visible and app.ordered_battle_canvas.visible).map(func(span):return span.material!=null)
+		record.paused=app.sim.paused
+		record.limit="Controlled preserved creep frames, fixed pose/delta and zero-amount original damage calls (which also trigger flash), actual Simulation/Main fields and per-owner ordered ONE/ONE pass. Full original caller/death/culling/GPU/equivalent-input fidelity remains open."
 	if name.begins_with("creep-clock-"):
 		var creep=app.sim.enemies[0]
 		record.creep_clocks=[]
@@ -1057,6 +1063,48 @@ func run() -> void:
 		if action.name=="freeze-expiry":check(animated_creep.animation_multiplier==0 and animated_creep.freeze_remaining==0 and not animated_creep.freeze_attached,"native expiry frame holds animator before releasing the freeze pointer")
 		if action.name=="resume":check(animated_creep.animation_multiplier==1 and not app.sim.freeze_state.room_active,"native following frame resumes the owned animator")
 	app.sim.paused=false
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	app.sim.enemies.clear();app.animation_delta_ms=0
+	var hit_creep=app.sim.spawn_enemy(1,0,"",950,false)
+	hit_creep.pos=app.sim.center(8,6);hit_creep.visual_pos=hit_creep.pos;hit_creep.path=[];hit_creep.hp=500;hit_creep.max_hp=1000;hit_creep.grow_ms=400
+	hit_creep.visual_layers=[{"state":"RunDown","rotation":0.0,"alpha":1.0,"born":0}]
+	await snapshot("creep-hit-normal")
+	var hit_normal=get_viewport().get_texture().get_image()
+	app.sim.damage(hit_creep,0,0,0)
+	await snapshot("creep-hit-000")
+	check(hit_normal.get_data()!=get_viewport().get_texture().get_image().get_data(),"native original zero-amount call activates a visible additive creep flash")
+	check(app.battle_uses_ordered_canvas and app.ordered_battle_canvas.spans.filter(func(span):return span.visible and span.material!=null).size()==1,"native flash owns one in-place additive span")
+	app.sim.advance_frame(60)
+	await snapshot("creep-hit-060")
+	check(hit_creep.hit_active and hit_creep.hit_elapsed==60.0,"native hit survives exact original60ms boundary")
+	app.sim.paused=true;app.sim.advance_frame(30)
+	await snapshot("creep-hit-paused")
+	check(hit_creep.hit_elapsed==60.0,"native pause retains current flash age")
+	app.sim.paused=false;app.sim.advance_frame(.001)
+	await snapshot("creep-hit-expired")
+	check(not hit_creep.hit_active and not app.battle_uses_ordered_canvas,"native expired hit returns to ordinary renderer")
+	app.sim.damage(hit_creep,0,0,3)
+	await snapshot("creep-hit-poison-first")
+	app.sim.advance_frame(60.001);app.sim.damage(hit_creep,0,0,3)
+	await snapshot("creep-hit-poison-suppressed")
+	check(not hit_creep.hit_active,"native consecutive poison cannot retrigger after source expiry")
+	app.sim.damage(hit_creep,0,0,0)
+	hit_creep.visual_layers=[{"state":"RunDown","rotation":0.0,"alpha":.4,"born":0},{"state":"RunRight","rotation":0.0,"alpha":.6,"born":0}]
+	await snapshot("creep-hit-secondary")
+	hit_creep.freeze_remaining=1000
+	await snapshot("creep-hit-status")
+	check(hit_creep.hit_active and hit_creep.freeze_remaining>0,"native additive hit and later screen status share owned frames")
+	hit_creep.freeze_remaining=0
+	check(app.sim.build(Vector2i(8,6),1).is_empty(),"native hit overlap fixture places an actual original minigun")
+	await snapshot("creep-hit-tower-cover")
+	app.sim.enemies.clear()
+	var hit_air=app.sim.spawn_enemy(4,0,"",951,false)
+	hit_air.pos=app.sim.center(8,6);hit_air.visual_pos=hit_air.pos;hit_air.path=[];hit_air.grow_ms=400
+	app.sim.damage(hit_air,0,0,2)
+	await snapshot("creep-hit-air")
+	hit_air.freeze_remaining=1000
+	await snapshot("creep-hit-air-status")
+	check(hit_air.native_air and hit_air.hit_active and app.battle_uses_ordered_canvas,"native resource-class aircraft retain the ordered hit bridge")
 	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2

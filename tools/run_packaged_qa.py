@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (186 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (198 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -222,6 +222,22 @@ def main():
             # sequence, rather than rounded JSON phases or a new tolerance.
             fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
+            hit_names = {'normal', '000', '060', 'paused', 'expired', 'poison-first', 'poison-suppressed', 'secondary', 'status', 'tower-cover', 'air', 'air-status'}
+            hit_names = {'creep-hit-' + n for n in hit_names}
+            required.update(hit_names)
+            hit_poses = {c['name']: c for c in manifest['captures'] if c['name'] in hit_names}
+            hit_exact = len(hit_poses) == 12
+            for hit_name, pose in hit_poses.items():
+                state = pose.get('hit_fields', [{}])[0]
+                active = hit_name not in {'creep-hit-normal', 'creep-hit-expired', 'creep-hit-poison-suppressed'}
+                hit_exact = hit_exact and state.get('active') == active and pose.get('ordered_canvas') == active
+                if active: hit_exact = hit_exact and pose.get('ordered_spans') == [False, True, False]
+                if hit_name in {'creep-hit-060', 'creep-hit-paused'}: hit_exact = hit_exact and state.get('elapsed_bits') == 1114636288
+                if hit_name == 'creep-hit-paused': hit_exact = hit_exact and pose.get('paused') is True
+                if hit_name in {'creep-hit-air', 'creep-hit-air-status'}: hit_exact = hit_exact and state.get('native_air') is True and state.get('last_kind') == 2
+                if hit_name in {'creep-hit-status', 'creep-hit-air-status'}: hit_exact = hit_exact and state.get('freeze_remaining') == 1000
+            fresh = fresh and hit_exact
+            record['creep_hit_fields_and_ordered_spans_exact'] = hit_exact
             status_expected = {'creep-status-background', 'creep-status-tower-only', 'creep-status-blend-plate', 'creep-status-normal-030', 'creep-status-freeze-030', 'creep-status-freeze-100', 'creep-status-slow-030', 'creep-status-zero-primary', 'creep-status-secondary', 'creep-status-tower-cover'}
             required.update(status_expected)
             status_poses = {c['name']: c for c in manifest['captures'] if c['name'] in status_expected}

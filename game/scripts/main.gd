@@ -23,10 +23,18 @@ const RewardClockView = preload("res://scripts/reward_clock_view.gd")
 const RewardView = preload("res://scripts/reward_view.gd")
 const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
 const CreepLight = preload("res://scripts/creep_light_view.gd")
+const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const CreepStatus = preload("res://scripts/creep_status_view.gd")
 const Animator=preload("res://scripts/animator_view.gd")
 const CreepAnimator=preload("res://scripts/creep_animator_view.gd")
 var creep_animation_owners:Dictionary={}
+var ordered_battle_rendering=false
+var reference_creep_hits=false
+var battle_uses_ordered_canvas=false
+var battle_draw_target:CanvasItem=self
+var creep_render_poses:Dictionary={}
+var battle_span_started=0
+var ordered_battle_canvas
 var animation_epoch=0
 var animation_delta_ms=0.0
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
@@ -249,6 +257,7 @@ func _ready() -> void:
 	magic_panel_root=Control.new();magic_panel_root.mouse_filter=Control.MOUSE_FILTER_IGNORE;add_child(magic_panel_root);move_child(magic_panel_root,2)
 	hud_layer=preload("res://scripts/hud_layer.gd").new();hud_layer.app=self;add_child(hud_layer);move_child(hud_layer,3)
 	var tutorial_before_hud=preload("res://scripts/tutorial_gl_layer.gd").new();tutorial_before_hud.app=self;tutorial_before_hud.phase="before_hud";add_child(tutorial_before_hud);move_child(tutorial_before_hud,2)
+	ordered_battle_canvas=preload("res://scripts/ordered_canvas_view.gd").new();ordered_battle_canvas.before_draw=battle_span_begin;ordered_battle_canvas.after_draw=battle_span_end;ordered_battle_canvas.pass_canvas=false;add_child(ordered_battle_canvas);move_child(ordered_battle_canvas,0)
 	music = AudioStreamPlayer.new()
 	add_child(music)
 	ambient = AudioStreamPlayer.new()
@@ -1490,7 +1499,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	sim = Simulation.new()
 	base_depth_cache.clear()
 	creep_depth_cache.clear()
-	creep_animation_owners.clear()
+	creep_animation_owners.clear();creep_render_poses.clear()
 	sim.setup(Content.catalog, Content.maps[c.map], c, Profile.data, 114, Content.animations)
 	sim.live_updates=not test_session or "--qa-performance" in OS.get_cmdline_user_args() or "--qa-live-runtime" in OS.get_cmdline_user_args()
 	screen = "game"
@@ -2769,7 +2778,7 @@ func sprite(set_name: String, state: String, pos: Vector2, index: float = 0, col
 		# The ordinary path stays one lookup/quad. Most battle sprites have
 		# neither source interpolation flag; do not resolve their state again.
 		var texture:Texture2D=first.texture
-		draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+first.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
+		battle_draw_target.draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+first.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
 		return
 	if flags&2 and owned:tint=Animator.straight(animator.alpha_color)
 	if not flags&1:draw_sprite_frame(first,pos,tint,lift,native_scale);return
@@ -2785,13 +2794,13 @@ func sprite(set_name: String, state: String, pos: Vector2, index: float = 0, col
 
 func draw_sprite_frame(frame:Dictionary,pos:Vector2,tint:Color,lift:float,native_scale:Vector2) -> void:
 	var texture:Texture2D=frame.texture
-	draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
+	battle_draw_target.draw_texture_rect(texture,Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale+Vector2(0,lift),texture.get_size()*native_scale),false,tint)
 
 func extra_sprite(set_name: String, name: String, pos: Vector2, variation: String = "", native_scale: Vector2 = Vector2.ONE, tint: Color = Color.WHITE) -> bool:
 	var frame = Content.extra_frame(set_name, name, variation)
 	if frame.is_empty(): return false
 	var texture: Texture2D = frame.texture
-	draw_texture_rect(texture, Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale, texture.get_size()*native_scale), false, tint)
+	battle_draw_target.draw_texture_rect(texture, Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale, texture.get_size()*native_scale), false, tint)
 	return true
 
 func creep_owned_animation(e:Dictionary,index:int,layer:Dictionary,states:Dictionary) -> Dictionary:
@@ -2827,7 +2836,7 @@ func creep_shadow(e: Dictionary, set_name: String, position: Vector2, layer: Dic
 		var f = Content.frame("creeps/"+animated, layer.state, frame)
 		if f.is_empty(): return
 		var size = f.texture.get_size()*factor
-		draw_texture_rect(f.texture, Rect2(position-size/2.0, size), false, tint)
+		battle_draw_target.draw_texture_rect(f.texture, Rect2(position-size/2.0, size), false, tint)
 		return
 	var shadow = Content.extra_frame(set_name, "shadow", str(e.def.get("color", "")))
 	var body = Content.frame(set_name, layer.state, frame, str(e.def.get("color", "")))
@@ -2835,9 +2844,9 @@ func creep_shadow(e: Dictionary, set_name: String, position: Vector2, layer: Dic
 	var direction = Simulation.AIM_ANIMATIONS.get(str(layer.state), e.dir)
 	var angle = sim.f32(sim.f32(sim.native_angpos(direction)*57.295780181884766)-90.0)+float(layer.rotation)
 	var size = body.texture.get_size()*Vector2(factor, factor*0.800000011920929)
-	draw_set_transform(map_origin()+position*map_zoom, deg_to_rad(angle), Vector2.ONE*map_zoom)
-	draw_texture_rect(shadow.texture, Rect2(-size/2.0, size), false, tint)
-	draw_set_transform(map_origin(), 0, Vector2.ONE*map_zoom)
+	battle_draw_target.draw_set_transform(map_origin()+position*map_zoom, deg_to_rad(angle), Vector2.ONE*map_zoom)
+	battle_draw_target.draw_texture_rect(shadow.texture, Rect2(-size/2.0, size), false, tint)
+	battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*map_zoom)
 
 func draw_avatar(rect: Rect2) -> void:
 	# AvatarDrawer::sortArray (0x490f8) sorts sN by length then lexical order;
@@ -2853,6 +2862,8 @@ func draw_avatar(rect: Rect2) -> void:
 				break
 
 func _draw() -> void:
+	battle_draw_target=self
+	if ordered_battle_canvas!=null:ordered_battle_canvas.visible=screen=="game" and sim!=null and battle_uses_ordered_canvas
 	if world_blades!=null:world_blades.prepare(self)
 	if world_clouds!=null:world_clouds.prepare()
 	if font == null: return
@@ -2886,7 +2897,7 @@ func _draw() -> void:
 		draw_image("assets/menu_nakladka_bottom.png", Rect2(0, size.y-59, size.x, 59))
 		text(Vector2(32, size.y-20), "%s · Level %d · %.1f XP" % [Profile.data.name, int(Profile.data.level), Profile.data.xp], 21)
 		text(Vector2(size.x-290, size.y-20), "%d spice · %d points" % [int(Profile.data.spice), int(Profile.data.specpoints)], 21, Color("#fff0b1"))
-	if ui_time_ms() < notice_until:
+	if ui_time_ms() < notice_until and not (screen=="game" and battle_uses_ordered_canvas):
 		draw_rect(Rect2(26, size.y-225, size.x-52, 48), Color(0.02, 0.05, 0.08, 0.93))
 		text(Vector2(42, size.y-194), notice, 19, Color("#ffed9b"))
 
@@ -3034,9 +3045,9 @@ func enemy_missile_passes() -> Dictionary:
 
 func draw_enemy_missile(missile:Dictionary,scale:float) -> void:
 	var definition=Content.catalog.tower_creeps[int(missile.type)]
-	draw_set_transform(map_origin()+missile.pos*scale,deg_to_rad(float(missile.angle)-90.0),Vector2.ONE*scale)
-	if not extra_sprite("creeps/"+str(definition.filename),"missile",Vector2.ZERO):draw_circle(Vector2.ZERO,3.0,Color("#ffe3a0"))
-	draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+	battle_draw_target.draw_set_transform(map_origin()+missile.pos*scale,deg_to_rad(float(missile.angle)-90.0),Vector2.ONE*scale)
+	if not extra_sprite("creeps/"+str(definition.filename),"missile",Vector2.ZERO):battle_draw_target.draw_circle(Vector2.ZERO,3.0,Color("#ffe3a0"))
+	battle_draw_target.draw_set_transform(map_origin(),0,Vector2.ONE*scale)
 
 func selected_range_pose() -> Dictionary:
 	if sim==null or selected_tower<0:return {}
@@ -3093,68 +3104,112 @@ func draw_mine_object(mine:Dictionary,preview:bool) -> void:
 		var lights=actor.key=="lights"
 		var animation=owned_animation(mine,"lights","sfx/mine_lights","Builded") if lights else {}
 		sprite("sfx/mine_lights" if lights else "sfx/mine","Builded" if lights else "Idle",mine.pos,0,"",MagicView.straight(actor.color),0,Vector2.ONE,animation)
-	for bar in pose.bars:draw_rect(bar.rect,bar.color)
+	for bar in pose.bars:battle_draw_target.draw_rect(bar.rect,bar.color)
+
+func render_canvas() -> CanvasItem:
+	return battle_draw_target
+
+func battle_span_begin(canvas:CanvasItem) -> void:
+	battle_draw_target=canvas
+	canvas.draw_set_transform(map_origin(),0,Vector2.ONE*map_scale())
+	if qa_performance_active:battle_span_started=Time.get_ticks_usec()
+
+func battle_span_end(_canvas:CanvasItem) -> void:
+	if qa_performance_active:record_qa_time("draw",battle_span_started)
+	battle_draw_target=self
 
 func draw_game() -> void:
 	if probe_placement_order:placement_draw_trace.clear()
-	var scale = map_scale()
-	draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	for z in sim.zones:
-		if z.has("bubble"): continue
-		draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
-	# Portal art belongs to registered RenderBefore; its body is empty.
-	for portal in battle_portal_objects():
-		var animation=owned_animation(portal.gate,"portal","sfx/portals",portal.state,bool(portal.gate.get("animation_played",false)))
-		sprite("sfx/portals",portal.state,portal.pos,0,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*float(portal.scale),animation)
+	battle_uses_ordered_canvas=ordered_battle_rendering or (not reference_creep_hits and sim.enemies.any(func(e):return e.get("hit_active",false) and int(e.get("state",0)) not in [2,3]))
+	ordered_battle_canvas.visible=battle_uses_ordered_canvas
+	var scale=map_scale()
 	var objects=battle_objects()
 	var enemy_projectiles=enemy_missile_passes()
 	var depth_bases=[]
 	for object in objects:
-		if object.has("layer"):
-			var layer = object.layer
-			var tile = layer.tile
-			var texture = Content.tex(layer.texture)
-			if texture != null:
-				draw_texture_rect_region(texture, Rect2(float(layer.x)+float(tile.get("offset_x", 0)), float(layer.y)+float(tile.get("offset_y", 0)), float(tile.w), float(tile.h)), Rect2(float(tile.get("sx", 0)), float(tile.get("sy", 0)), float(tile.w), float(tile.h)))
-		elif object.has("base"):
-			var b=object.base
-			depth_bases.append(b)
-			var pct=int(b.hp/b.hpmax*100)
-			var state="Idle-%d" % (int(ceil(pct/20.0))*20)
-			# Original map registration places the base body in this depth
-			# pass. Its visible center is independent of its depth override.
-			sprite("bases/base"+str(b.type),state,b.pos)
-		elif object.has("tower"):
-			var t = object.tower
-			var set_name = "towers/"+str(t.def.filename)
-			var presentation = Content.tower_presentation(t.def, t.angle, sim.clock_ms-int(t.get("born_ms", 0)))
-			if int(t.type) == 5 and t.has("animation"):
-				var state = Content.animations[set_name].states.get(t.animation, {})
-				var count = state.get("resolved_frames", []).size()
-				var frame = int(maxi(0, sim.clock_ms-int(t.animation_ms))*float(state.get("speed", 1))/1000.0)
-				if t.animation == "Close" and frame >= count: presentation = {"state": "Idle", "frame": 0}
-				else: presentation = {"state": t.animation, "frame": mini(frame, maxi(0, count-1))}
-			var position = t.pos+Vector2(0, -7)
-			for foundation in Content.tower_foundation(str(sim.map.theme), t.cell, sim.clock_ms-int(t.get("foundation_ms", 0))):
-				sprite(foundation.name, "Building", position, foundation.frame, "", Color(1, 1, 1, foundation.alpha))
-			extra_sprite(set_name, "pad1", position)
-			var animation=owned_animation(t,"body",set_name,presentation.state) if bool(Content.animations[set_name].states.get(presentation.state,{}).get("alpha_between_frame",false)) else {}
-			sprite(set_name,presentation.state,position,presentation.frame,"",Color.WHITE,0,Vector2.ONE,animation)
-			if int(t.type)==5 and t.get("animation","")=="Open":sprite("towers/nuke_lights","Blinking",position,0,"",Color.WHITE,0,Vector2.ONE,owned_animation(t,"nuke-lights","towers/nuke_lights","Blinking"))
-		elif object.has("mine"):
-			draw_mine_object(object.mine,object.preview)
-		else:
-			draw_creep_body(object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
+		if object.has("base"):depth_bases.append(object.base)
+	if battle_uses_ordered_canvas:
+		var commands=[{"draw":draw_game_prelude.bind(scale)}]
+		for object in objects:
+			if object.has("enemy") and object.enemy.get("hit_active",false) and int(object.enemy.get("state",0)) not in [2,3]:
+				append_creep_draw_commands(commands,object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
+			else:commands.append({"draw":draw_game_object.bind(object,enemy_projectiles,scale)})
+		commands.append({"draw":draw_game_middle.bind(enemy_projectiles,scale)})
+		for air in battle_air_objects():append_creep_draw_commands(commands,air,scale,enemy_projectiles.body.get(int(air.id),[]))
+		commands.append({"draw":draw_game_tail.bind(depth_bases,enemy_projectiles,scale)})
+		if ui_time_ms()<notice_until:commands.append({"draw":draw_game_notice})
+		ordered_battle_canvas.prepare(commands)
+	else:
+		draw_game_prelude(scale)
+		for object in objects:draw_game_object(object,enemy_projectiles,scale)
+		draw_game_middle(enemy_projectiles,scale)
+		for air in battle_air_objects():draw_creep_body(air,scale,enemy_projectiles.body.get(int(air.id),[]))
+		draw_game_tail(depth_bases,enemy_projectiles,scale)
+
+func append_creep_draw_commands(commands:Array,creep:Dictionary,scale:float,missiles:Array) -> void:
+	if creep.get("hit_active",false) and int(creep.get("state",0)) not in [2,3]:
+		commands.append({"draw":draw_creep_body.bind(creep,scale,missiles,1)})
+		commands.append({"additive":true,"draw":draw_creep_body.bind(creep,scale,missiles,3)})
+		commands.append({"draw":draw_creep_body.bind(creep,scale,missiles,2)})
+	else:commands.append({"draw":draw_creep_body.bind(creep,scale,missiles)})
+
+func draw_game_prelude(scale:float) -> void:
+	battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	for z in sim.zones:
+		if z.has("bubble"): continue
+		battle_draw_target.draw_circle(z.pos, float(z.def.get("poison_range", 1500))/1000.0*40.0, Color(0.4, 0.75, 0.05, 0.22))
+	# Portal art belongs to registered RenderBefore; its body is empty.
+	for portal in battle_portal_objects():
+		var animation=owned_animation(portal.gate,"portal","sfx/portals",portal.state,bool(portal.gate.get("animation_played",false)))
+		sprite("sfx/portals",portal.state,portal.pos,0,"",MagicView.straight(MagicView.portal(false,0)[0].color) if portal.preview else Color.WHITE,0,Vector2.ONE*float(portal.scale),animation)
+
+func draw_game_object(object:Dictionary,enemy_projectiles:Dictionary,scale:float) -> void:
+	if object.has("layer"):
+		var layer = object.layer
+		var tile = layer.tile
+		var texture = Content.tex(layer.texture)
+		if texture != null:
+			battle_draw_target.draw_texture_rect_region(texture, Rect2(float(layer.x)+float(tile.get("offset_x", 0)), float(layer.y)+float(tile.get("offset_y", 0)), float(tile.w), float(tile.h)), Rect2(float(tile.get("sx", 0)), float(tile.get("sy", 0)), float(tile.w), float(tile.h)))
+	elif object.has("base"):
+		var b=object.base
+		var pct=int(b.hp/b.hpmax*100)
+		var state="Idle-%d" % (int(ceil(pct/20.0))*20)
+		# Original map registration places the base body in this depth
+		# pass. Its visible center is independent of its depth override.
+		sprite("bases/base"+str(b.type),state,b.pos)
+	elif object.has("tower"):
+		var t = object.tower
+		var set_name = "towers/"+str(t.def.filename)
+		var presentation = Content.tower_presentation(t.def, t.angle, sim.clock_ms-int(t.get("born_ms", 0)))
+		if int(t.type) == 5 and t.has("animation"):
+			var state = Content.animations[set_name].states.get(t.animation, {})
+			var count = state.get("resolved_frames", []).size()
+			var frame = int(maxi(0, sim.clock_ms-int(t.animation_ms))*float(state.get("speed", 1))/1000.0)
+			if t.animation == "Close" and frame >= count: presentation = {"state": "Idle", "frame": 0}
+			else: presentation = {"state": t.animation, "frame": mini(frame, maxi(0, count-1))}
+		var position = t.pos+Vector2(0, -7)
+		for foundation in Content.tower_foundation(str(sim.map.theme), t.cell, sim.clock_ms-int(t.get("foundation_ms", 0))):
+			sprite(foundation.name, "Building", position, foundation.frame, "", Color(1, 1, 1, foundation.alpha))
+		extra_sprite(set_name, "pad1", position)
+		var animation=owned_animation(t,"body",set_name,presentation.state) if bool(Content.animations[set_name].states.get(presentation.state,{}).get("alpha_between_frame",false)) else {}
+		sprite(set_name,presentation.state,position,presentation.frame,"",Color.WHITE,0,Vector2.ONE,animation)
+		if int(t.type)==5 and t.get("animation","")=="Open":sprite("towers/nuke_lights","Blinking",position,0,"",Color.WHITE,0,Vector2.ONE,owned_animation(t,"nuke-lights","towers/nuke_lights","Blinking"))
+	elif object.has("mine"):
+		draw_mine_object(object.mine,object.preview)
+	else:
+		draw_creep_body(object.enemy,scale,enemy_projectiles.body.get(int(object.enemy.id),[]))
+
+func draw_game_middle(enemy_projectiles:Dictionary,scale:float) -> void:
 	if probe_placement_order:placement_draw_trace.append("ground-bodies")
 	# CMap::DrawTowerOvalSelection0x10406c follows all ground bodies.
 	var selection=selected_range_pose()
-	if not selection.is_empty():BuildHexView.draw_oval(self,selection.position,selection.draws,1.0/scale)
+	if not selection.is_empty():BuildHexView.draw_oval(battle_draw_target,selection.position,selection.draws,1.0/scale)
 	if probe_placement_order:placement_draw_trace.append("selection")
 	draw_placement_phase()
 	if probe_placement_order:placement_draw_trace.append("air-manager")
 	for missile in enemy_projectiles.before_air:draw_enemy_missile(missile,scale)
-	# Native air bodies follow every ground/map body, independent of Y.
-	for air in battle_air_objects():draw_creep_body(air,scale,enemy_projectiles.body.get(int(air.id),[]))
+
+func draw_game_tail(depth_bases:Array,enemy_projectiles:Dictionary,scale:float) -> void:
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
 	# Full map/owner/air interleaving remains separately unresolved.
 	for b in depth_bases:
@@ -3164,22 +3219,22 @@ func draw_game() -> void:
 		var frame=Content.frame("bases/base"+str(b.type),"Idle-100")
 		var offset=params.get("hp_bar_offset",[0,0])
 		var origin=b.pos+Vector2(-5,-frame.canvas_size.y/2.0-15)+Vector2(offset[0],offset[1])
-		ClassicUI.region(self,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
+		ClassicUI.region(battle_draw_target,Rect2(130,313,32,4),Rect2(origin,Vector2(32,4)))
 		var width=32*maxf(0,b.hp)/b.hpmax
-		if width>0:ClassicUI.region(self,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))
+		if width>0:ClassicUI.region(battle_draw_target,Rect2(97,313,width,4),Rect2(origin,Vector2(width,4)))
 	for bubble in sim.bubbles:
 		if not bubble.active: continue
 		var texture = Content.tex("assets/sfx/goo_bubble.png" if int(bubble.type) == 8 else "assets/sfx/poison_bubble.png")
 		var size = float(bubble.size)
-		draw_texture_rect_region(texture, Rect2(bubble.shadow-Vector2(10, 8), Vector2(20, 16)), Rect2(66, 27, 20, 16), Color(1, 1, 1, bubble.alpha))
-		draw_texture_rect_region(texture, Rect2(bubble.pos-Vector2.ONE*size/2.0, Vector2.ONE*size), Rect2(0, 0, 64, 64), Color(1, 1, 1, bubble.alpha))
+		battle_draw_target.draw_texture_rect_region(texture, Rect2(bubble.shadow-Vector2(10, 8), Vector2(20, 16)), Rect2(66, 27, 20, 16), Color(1, 1, 1, bubble.alpha))
+		battle_draw_target.draw_texture_rect_region(texture, Rect2(bubble.pos-Vector2.ONE*size/2.0, Vector2.ONE*size), Rect2(0, 0, 64, 64), Color(1, 1, 1, bubble.alpha))
 	for missile in sim.missiles:
 		if not missile.get("active", true): continue
 		var set_name = "towers/"+str(missile.def.filename)
 		var is_nuke = int(missile.type) == 5
-		draw_set_transform(map_origin()+missile.pos*scale, 0.0 if is_nuke else deg_to_rad(float(missile.angle)-90.0), Vector2.ONE*scale)
+		battle_draw_target.draw_set_transform(map_origin()+missile.pos*scale, 0.0 if is_nuke else deg_to_rad(float(missile.angle)-90.0), Vector2.ONE*scale)
 		extra_sprite(set_name, "missile2" if is_nuke and missile.up >= 1.0 else "missile", Vector2.ZERO, "", Vector2.ONE*float(missile.scale), Color(1, 1, 1, missile.alpha))
-		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+		battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
 	for missile in enemy_projectiles.ground_after:draw_enemy_missile(missile,scale)
 	for effect in effects:
 		var remaining = float(effect.until-sim.clock_ms)
@@ -3190,15 +3245,22 @@ func draw_game() -> void:
 			var direction=(effect.to-point).normalized()
 			var params=Content.animations.get("towers/"+str(effect.filename),{}).get("params",{})
 			point+=direction*float(params.get("shoot_offset_len",10))
-			draw_set_transform(map_origin()+point*scale,direction.angle()+PI/2,Vector2.ONE*scale)
+			battle_draw_target.draw_set_transform(map_origin()+point*scale,direction.angle()+PI/2,Vector2.ONE*scale)
 			sprite("towers/tower_fire","Fire-1" if int(effect.born/30)%2 else "Fire-2",Vector2.ZERO)
-			draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+			battle_draw_target.draw_set_transform(map_origin(),0,Vector2.ONE*scale)
 		else:
 			if int(effect.get("type", 0)) == 5:
 				sprite("towers/nuke_explosion", "Explosion", effect.pos, mini(19, int((sim.clock_ms-int(effect.born))*15/1000)), "", Color.WHITE, 0, Vector2.ONE*2.0)
 			else: sprite("sfx/mine_explosion", "Explosion", effect.pos, int((600.0-remaining)/45.0), "", Color(1, 1, 1, clampf(remaining/300.0, 0, 1)))
-	draw_set_transform(Vector2.ZERO)
-	ClassicUI.draw_tower_info(self)
+	battle_draw_target.draw_set_transform(Vector2.ZERO)
+	ClassicUI.draw_tower_info(self,render_canvas())
+
+func draw_game_notice() -> void:
+	var canvas=battle_draw_target;var size=view_size()
+	canvas.draw_set_transform(Vector2.ZERO)
+	canvas.draw_rect(Rect2(26,size.y-225,size.x-52,48),Color(0.02,0.05,0.08,0.93))
+	canvas.draw_string(bold,Vector2(42,size.y-194)+Vector2.ONE,notice,HORIZONTAL_ALIGNMENT_LEFT,-1,19,Color(0,0,0,0.8))
+	canvas.draw_string(bold,Vector2(42,size.y-194),notice,HORIZONTAL_ALIGNMENT_LEFT,-1,19,Color("#ffed9b"))
 
 # CMap::Render0x104088: preview hexes, then grid, inactive tower, air.
 func draw_placement_phase() -> void:
@@ -3208,15 +3270,15 @@ func draw_placement_phase() -> void:
 		var def = sim.tower_data(build_type, 1)
 		var okay = sim.buildable(cell) and sim.tower_at(cell).is_empty() and sim.money>=floor(float(def.price)) and sim.can_unlock(def)
 		var range_value=float(def.get("range",0));var spacing=BuildHexView.f32(float(sim.map.hex_h)/1000)
-		BuildHexView.draw_oval(self,pos,BuildHexView.oval(1,spacing,range_value,0),1.0/map_scale())
+		BuildHexView.draw_oval(battle_draw_target,pos,BuildHexView.oval(1,spacing,range_value,0),1.0/map_scale())
 		var shape=build_hex_view.prepare(sim,cell,pos,BuildHexView.f32(BuildHexView.f32(range_value*spacing)*2),okay)
-		BuildHexView.draw(self,shape,1.0/map_scale())
+		BuildHexView.draw(battle_draw_target,shape,1.0/map_scale())
 		if probe_placement_order:placement_draw_trace.append("preview-hexes")
 	if not magic_placement.is_empty():
 		var position=mouse_world(magic_preview_position)
 		var cell=sim.nearest(position)
 		var valid=sim.ability_error(magic_placement,position).is_empty()
-		BuildHexView.draw(self,build_hex_view.prepare(sim,cell,position,70,valid),1.0/map_scale())
+		BuildHexView.draw(battle_draw_target,build_hex_view.prepare(sim,cell,position,70,valid),1.0/map_scale())
 		if probe_placement_order:placement_draw_trace.append("preview-hexes")
 	if show_grid:
 		for y in range(int(sim.map.hex_height)):
@@ -3256,7 +3318,7 @@ func creep_animator_position(e:Dictionary) -> Vector2:
 func creep_health_layout(e:Dictionary) -> Dictionary:
 	return preload("res://scripts/creep_health_view.gd").layout(creep_animator_position(e),float(e.hp),int(e.max_hp),float(sim.spawn_presentation(e).alpha),int(e.get("state",0)))
 
-func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
+func creep_render_pose(e:Dictionary) -> Dictionary:
 	var position: Vector2 = e.get("visual_pos", e.pos)
 	var set_name = "creeps/"+str(e.def.filename)
 	var states = Content.animations.get(set_name, {}).get("states", {})
@@ -3269,17 +3331,41 @@ func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 	var layers=creep_layers(e,states)
 	var body_clocks=[creep_owned_animation(e,0,layers[0],states),{}]
 	if layers.size()>1 and float(layers[1].alpha)!=0:body_clocks[1]=creep_owned_animation(e,1,layers[1],states)
-	creep_shadow(e,set_name,position,layers[0],growth,native_scale.x,scale,int(body_clocks[0].get("frame",0)))
-	for index in layers.size():
-		var layer=layers[index]
-		if float(layer.alpha)<=0:continue
-		var animation=body_clocks[index]
-		var layer_frame=int(animation.get("frame",0))
-		var color = tint
-		color.a *= float(layer.alpha)
-		draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
-		sprite(set_name,layer.state,Vector2.ZERO,layer_frame,str(e.def.get("color","")),color,0,native_scale,animation)
-		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	return {"position":position,"set_name":set_name,"growth":growth,"tint":tint,"native_scale":native_scale,"animator_position":animator_position,"layers":layers,"body_clocks":body_clocks}
+
+func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[],phase:int=0) -> void:
+	var value=creep_render_poses.get(int(e.id),{}) if phase>=2 else {}
+	if value.is_empty():value=creep_render_pose(e)
+	if phase==1:creep_render_poses[int(e.id)]=value
+	var position:Vector2=value.position;var set_name:String=value.set_name
+	var growth:Dictionary=value.growth;var tint:Color=value.tint
+	var native_scale:Vector2=value.native_scale;var animator_position:Vector2=value.animator_position
+	var layers:Array=value.layers;var body_clocks:Array=value.body_clocks
+	if phase==3:
+		for draw in CreepHit.frames(int(e.get("state",0)),bool(e.get("hit_active",false)),layers):
+			var index=int(draw.index);var layer=layers[index]
+			var image=Content.frame(set_name,layer.state,int(body_clocks[index].get("frame",0)),str(e.def.get("color","")),true)
+			if image.is_empty():continue
+			var texture:Texture2D=image.texture
+			battle_draw_target.draw_set_transform(map_origin()+animator_position*scale,deg_to_rad(float(layer.rotation)),Vector2.ONE*scale)
+			# Ordered additive span owns its material. This direct frame uses
+			# raw premultiplied RGB, outside normal adjacent-frame blending.
+			battle_draw_target.draw_texture_rect(texture,Rect2((-texture.get_size()/2+image.offset)*native_scale,texture.get_size()*native_scale),false)
+		battle_draw_target.draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+		return
+	if phase!=2:
+		creep_shadow(e,set_name,position,layers[0],growth,native_scale.x,scale,int(body_clocks[0].get("frame",0)))
+		for index in layers.size():
+			var layer=layers[index]
+			if float(layer.alpha)<=0:continue
+			var animation=body_clocks[index]
+			var layer_frame=int(animation.get("frame",0))
+			var color = tint
+			color.a *= float(layer.alpha)
+			battle_draw_target.draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
+			sprite(set_name,layer.state,Vector2.ZERO,layer_frame,str(e.def.get("color","")),color,0,native_scale,animation)
+			battle_draw_target.draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
+	if phase==1:return
 	if CreepStatus.active(int(e.get("state",0)),int(e.get("freeze_remaining",0)),float(e.get("slow_pending",-1))):
 		var coefficient=CreepStatus.coefficient(float(e.get("draw_light",1)))
 		for index in CreepStatus.layers(layers).size():
@@ -3288,17 +3374,18 @@ func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 			var image=Content.frame(set_name,layer.state,frame,str(e.def.get("color","")),true)
 			if image.is_empty():continue
 			var texture:Texture2D=image.texture
-			draw_set_transform(map_origin()+animator_position*scale,deg_to_rad(float(layer.rotation)),Vector2.ONE*scale)
+			battle_draw_target.draw_set_transform(map_origin()+animator_position*scale,deg_to_rad(float(layer.rotation)),Vector2.ONE*scale)
 			# LCD's white CONSTANT_COLOR and ONE_MINUS_SRC_COLOR implement
 			# the source screen blend per command, between this body and HP.
-			CreepStatus.draw(self,texture,Rect2((-texture.get_size()/2+image.offset)*native_scale,texture.get_size()*native_scale),coefficient)
-			draw_set_transform(map_origin(),0,Vector2.ONE*scale)
+			CreepStatus.draw(battle_draw_target,texture,Rect2((-texture.get_size()/2+image.offset)*native_scale,texture.get_size()*native_scale),coefficient)
+			battle_draw_target.draw_set_transform(map_origin(),0,Vector2.ONE*scale)
 	# Original full Render routes flag+a0 after this owner's body, before HP.
 	for missile in owner_missiles:draw_enemy_missile(missile,scale)
 	var health=creep_health_layout(e) if float(e.hp)<int(e.max_hp) else {}
 	if not health.is_empty():
-		draw_texture(Content.tex("assets/creeps/life_bar_red.png"),health.origin,health.color)
-		if health.fill.size.x>0:draw_texture_rect_region(Content.tex("assets/creeps/life_bar_green.png"),health.fill,health.source,health.color)
+		battle_draw_target.draw_texture(Content.tex("assets/creeps/life_bar_red.png"),health.origin,health.color)
+		if health.fill.size.x>0:battle_draw_target.draw_texture_rect_region(Content.tex("assets/creeps/life_bar_green.png"),health.fill,health.source,health.color)
+	if phase==2:creep_render_poses.erase(int(e.id))
 
 func draw_battle_overlays(canvas: CanvasItem) -> void:
 	if screen != "game" or sim == null:return
@@ -3327,7 +3414,7 @@ func draw_hex(pos: Vector2, color: Color) -> void:
 	var side = float(sim.map.hex_side)
 	var h = float(sim.map.hex_h)/2.0
 	var pts = PackedVector2Array([pos+Vector2(-b-side, 0), pos+Vector2(-b, -h), pos+Vector2(b, -h), pos+Vector2(b+side, 0), pos+Vector2(b, h), pos+Vector2(-b, h), pos+Vector2(-b-side, 0)])
-	draw_polyline(pts, color, 1.2, true)
+	battle_draw_target.draw_polyline(pts, color, 1.2, true)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if transition!=null and transition.phase!=3:
