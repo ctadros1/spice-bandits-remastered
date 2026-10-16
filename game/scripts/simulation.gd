@@ -3,6 +3,7 @@ extends RefCounted
 
 const PortalView=preload("res://scripts/portal_view.gd")
 const CreepPortal=preload("res://scripts/creep_portal_view.gd")
+const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 var reference_spawn_presentation=false
 
 const CreepView = preload("res://scripts/creep_view.gd")
@@ -63,7 +64,15 @@ var kill_chain_idle_ms = 0
 var early_wave_count: int = 0
 var outcome: String = "playing"
 var paused: bool = false
-var freeze_until: int = 0
+var freeze_state=CreepFreeze.initial()
+# Compatibility deadline for UI/renderer poses; the source decrements an
+# integer countdown with float32 subtraction in ProcessPlayers.
+var freeze_until:int:
+	get:return clock_ms+int(freeze_state.remaining) if int(freeze_state.remaining)>0 else 0
+	set(value):
+		freeze_state.remaining=maxi(0,value-clock_ms)
+		if int(freeze_state.remaining)>0:
+			for enemy in enemies:CreepFreeze.apply(enemy,1)
 var disco_until: int = 0
 var defense_until: int = 0
 var last_paths_ms: int = 0
@@ -751,7 +760,7 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 		"dir": Vector2.RIGHT, "source": source_index, "air": def.get("class", "ground") == "air", "native_air": def.get("class", "ground") == "air",
 		"base": -1, "path": [], "path_at": 1, "attacking": false, "attack_reload_ms": 0, "attack_point": Vector2.ZERO, "slow": 1.0, "slow_until": 0,
 		"float_until": 0, "disco_until": disco_until, "portal_ms": 0, "born_ms": clock_ms, "slow_pending": -1.0,
-		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400,"draw_light":1.0}
+		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400,"draw_light":1.0,"freeze_attached":false,"freeze_remaining":0,"animation_divisor":1.0,"animation_multiplier":1.0}
 	next_id += 1
 	enemies.append(e)
 	set_enemy_path(e)
@@ -1223,16 +1232,13 @@ func step() -> void:
 	clock_ms = int(f32(float(clock_ms)+tick_ms))
 	if map.has("water"):
 		water_phase = f32(water_phase+f32(tick_ms/float(map.water.speed)))
-	for expiry in [["m_freeze", freeze_until], ["m_actdef", defense_until]]:
+	for expiry in [["m_actdef", defense_until]]:
 		if previous_ms < int(expiry[1]) and clock_ms >= int(expiry[1]): emit("magic_end", {"key": expiry[0]})
 	var seconds = float(tick_ms)/1000.0
 	validate_paths()
-	if clock_ms < freeze_until or spawn_hold:
+	if bool(freeze_state.room_active) or spawn_hold:
 		next_wave_ms += tick_ms
 		for running in running_waves: running.spawn_ms += tick_ms
-	elif survival_remaining_ms > 0:
-		survival_remaining_ms = maxi(0, int(f32(float(survival_remaining_ms)-tick_ms)))
-		if survival_remaining_ms == 0: finish("victory"); return
 	if not spawn_hold and clock_ms >= next_wave_ms and wave_index < config.waves.size(): next_wave(false)
 	for running in ([] if spawn_hold else running_waves.duplicate()):
 		var wave = config.waves[running.index]
@@ -1243,13 +1249,24 @@ func step() -> void:
 			running.spawn_ms = clock_ms + spawn_delay(float(wave.delay))
 			if live_updates:break
 		if running.at >= wave.creep_ids.size(): running_waves.erase(running)
+	# Waves read the previous room flag; ProcessPlayers then updates the
+	# shared countdown before ProcessSpeed/ProcessFreeze on each creep.
+	if CreepFreeze.advance_timer(freeze_state,tick_ms):emit("magic_end",{"key":"m_freeze"})
+	if not spawn_hold and not freeze_state.room_active and survival_remaining_ms>0:
+		survival_remaining_ms=maxi(0,int(f32(float(survival_remaining_ms)-tick_ms)))
+		if survival_remaining_ms==0:finish("victory");return
 	# Recovered normal-update order: enemies, towers, mines, portals, bases.
 	if profile_hotpaths: timed = timed_section("spawn_paths", timed)
 	for e in enemies:
 		if e.hp <= 0: continue
 		e.grow_ms = minf(400, f32(float(e.grow_ms)+tick_ms))
 		e.slow = e.slow_pending if e.slow_pending > 0 else 1.0
+		e.consumed_slow=e.slow_pending>0
 		e.slow_pending = -1.0
+		var current_speed=f32(float(e.speed)*float(e.slow))
+		e.animation_divisor=f32(1000.0/current_speed) if current_speed!=0 else INF
+		e.animation_multiplier=0.0 if e.get("freeze_attached",false) else 1.0
+		CreepFreeze.process_creep(e,int(freeze_state.remaining))
 		e.poison_count = 0
 		e.slow_count = 0
 		if e.float_until > 0 and clock_ms >= e.float_until:
@@ -1260,7 +1277,7 @@ func step() -> void:
 		if e.disco_until > 0 and clock_ms >= e.disco_until:
 			e.disco_until = 0
 			set_enemy_path(e)
-		if clock_ms < freeze_until or clock_ms < e.float_until: continue
+		if int(e.freeze_remaining)>0 or clock_ms < e.float_until: continue
 		if e.path.is_empty() or e.base < 0: continue
 		CreepView.prepare(self, e)
 		if e.get("portal_boundary",false):
@@ -1508,5 +1525,5 @@ func digest() -> String:
 	return JSON.stringify([clock_ms, accumulator, money, wave_index, next_wave_ms, kills, score,
 		built_count, upgrade_top_count, kill_chain, closed_kill_chain, kill_chain_idle_ms, replay,
 		outcome, paused, early_wave_count, enemies, towers, bases, running_waves, missiles, enemy_missiles, zones, bubbles, mines, portals,
-		static_portals, abilities, freeze_until, disco_until, defense_until, pending_towers,
+		static_portals, abilities, freeze_until, freeze_state, disco_until, defense_until, pending_towers,
 		last_paths_ms, next_id, rng.state, tutorial_finished, spawn_hold, survival_remaining_ms, displacement_owners, build_overrides]).sha256_text()

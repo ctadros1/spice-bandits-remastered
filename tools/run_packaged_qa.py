@@ -165,7 +165,7 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (174 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (186 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
         if args.performance:
             frame_comparisons=manifest.get('frame_lookup_comparisons',[])
             record['frame_lookup_comparisons']=frame_comparisons
@@ -214,6 +214,14 @@ def main():
                 states = animator_poses.get(pose, {}).get('animators', [])
                 relevant = [a for a in states if a['key'] == ('nuke-lights' if 'nuke' in pose else 'portal' if 'portal' in pose else 'lights')]
                 fresh = fresh and len(relevant) == (2 if pose in ('animator-portal-025', 'animator-portal-loop') else 1) and all(a['phase'] == phase and a['stopped'] == (pose == 'animator-portal-stopped') for a in relevant)
+            creep_sequence = json.loads((ROOT / 'tests/fixtures/native-creep-animation-sequence-reference.json').read_text())
+            creep_expected = {'creep-clock-' + row['input']['name']: row['clocks'] for row in creep_sequence['rows']}
+            required.update(creep_expected)
+            creep_poses = {c['name']: c for c in manifest['captures'] if c['name'] in creep_expected}
+            # Compare raw float32 bits from the full original owner/animator
+            # sequence, rather than rounded JSON phases or a new tolerance.
+            fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
+            record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             status_expected = {'creep-status-background', 'creep-status-tower-only', 'creep-status-blend-plate', 'creep-status-normal-030', 'creep-status-freeze-030', 'creep-status-freeze-100', 'creep-status-slow-030', 'creep-status-zero-primary', 'creep-status-secondary', 'creep-status-tower-cover'}
             required.update(status_expected)
             status_poses = {c['name']: c for c in manifest['captures'] if c['name'] in status_expected}

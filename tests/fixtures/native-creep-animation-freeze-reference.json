@@ -1,0 +1,3783 @@
+{
+  "method": "Full original UseFreeze, ProcessSpeed and ProcessFreeze in update order.\nSupplied pointer/countdown, resource speed, state, pending slowdown/tracker.\nNo constructor, countdown producer, manager eligibility/attachment, movement,\nroom lifecycle or GPU executes. Explicit fields and raw float32 bits retained.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "cases": [
+    {
+      "input": {
+        "state": 0,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 0,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 1,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 2,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 0,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 3,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 16384,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 16384,
+            "pointer_after_freeze": 16384,
+            "remaining": 77,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 4,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 5,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 6,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": false,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": false,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": false,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": false,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": true,
+        "tracker": false,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": true,
+        "tracker": false,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 17,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 17,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": true,
+        "tracker": true,
+        "slow": -1
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 0
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 0,
+            "consumed_slow": 0
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "state": 7,
+        "existing": true,
+        "tracker": true,
+        "slow": 0.6
+      },
+      "output": {
+        "attached_pointer": 12288,
+        "tracker_after_attach": 1,
+        "frames": [
+          {
+            "counter": 2,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 2,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 1,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 12288,
+            "remaining": 1,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": 0,
+            "pointer_before_freeze": 12288,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 0,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -1,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          },
+          {
+            "counter": -2,
+            "pointer_before_freeze": 0,
+            "pointer_after_freeze": 0,
+            "remaining": 0,
+            "multiplier_bits": 1065353216,
+            "tracker": 1,
+            "consumed_slow": 1
+          }
+        ]
+      }
+    }
+  ]
+}

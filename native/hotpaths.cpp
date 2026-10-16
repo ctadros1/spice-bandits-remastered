@@ -8,6 +8,7 @@
 #include <unordered_map>
 #include <string>
 #include <cmath>
+#include <limits>
 #include <cstdio>
 #include <godot_cpp/variant/string_name.hpp>
 #include <godot_cpp/variant/rect2.hpp>
@@ -32,6 +33,7 @@ struct Ellipse {
     }
 };
 struct Keys {
+    const StringName count{"count"},frame{"frame"},loop{"loop"},divisor{"divisor"},multiplier{"multiplier"},stopped{"stopped"};
     const StringName hp{"hp"},state{"state"},aim{"aim"},native_air{"native_air"},air{"air"},owner{"owner"},target_owner{"target_owner"},pos{"pos"},speed{"speed"},slow{"slow"},grid{"grid"},cell{"cell"},next_cell{"next_cell"},progress{"move_progress"};
     const StringName velocity{"velocity"},rotation{"rotation"},rot_speed{"rot_speed"},alpha{"alpha"},born{"born"};
     const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"},owner_hidden{"owner_hidden"};
@@ -102,6 +104,7 @@ void integrate_particles(Array particles,const ParticleCoefficients &coefficient
 
 }
 void SpiceNative::_bind_methods() {
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("frame_clock_advance","state","dt_ms"),&SpiceNative::frame_clock_advance);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_depth","center_y","height"),&SpiceNative::creep_depth);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_light","current","target","progress"),&SpiceNative::creep_light);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_missile_origin","input","target"),&SpiceNative::creep_missile_origin);
@@ -292,6 +295,24 @@ Dictionary SpiceNative::movement_tick(Vector2 start,Vector2 target,Vector2 futur
 }
 void SpiceNative::update_particle(Dictionary p,Dictionary d,double dt,double age) {
     ParticleCoefficients(d).integrate(p,dt,f32(age));
+}
+bool SpiceNative::frame_clock_advance(Dictionary state,double dt_ms) {
+    const Keys &k=keys();
+    const int64_t count=state[k.count];
+    if(count<2) {state[k.frame]=0;state[k.stopped]=true;return true;}
+    if(bool(state[k.stopped]))return true;
+    // Separate float32 operations match CAnimProcessor::Update. No fused
+    // arithmetic or remainder carry; keep script fallback for invalid clocks.
+    const float rate=f32(double(f32(double(state[k.speed])/double(state[k.divisor])))*double(state[k.multiplier]));
+    const float delta=f32(double(f32(double(f32(dt_ms))/1000.0))*rate);
+    const float phase=f32(double(state[k.phase])+delta);
+    if(!std::isfinite(phase) || double(phase)>=double(std::numeric_limits<int64_t>::max()) || double(phase)<double(std::numeric_limits<int64_t>::min()))return false;
+    const int64_t frame=static_cast<int64_t>(phase);
+    if(frame>=count) {
+        const bool loop=state[k.loop];
+        state[k.frame]=loop?0:count-1;state[k.stopped]=!loop;state[k.phase]=0.0;
+    } else {state[k.phase]=double(phase);state[k.frame]=frame;}
+    return true;
 }
 double SpiceNative::creep_light(double current,double target,double progress) {
     const float a=f32(current),b=f32(target);

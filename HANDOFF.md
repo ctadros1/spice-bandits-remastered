@@ -1,0 +1,100 @@
+# Spice Bandits reconstruction handoff — October15,2026
+
+This is a transfer to a new chat because the previous Codex chat repeatedly returned `{"detail":"Bad Request"}`. The cause is unidentified. Two previous failed chat turns were verified through Codex thread status despite successful tool commands. Do not present this as a game error or claim the request problem is fixed. The latest tool commands work. Do not restart/reset Codex or erase conversation history as a speculative repair.
+
+## Full authorized goal
+
+Fully recreate the original Spice Bandits offline game for macOS in Godot, using the preserved1.14 assets and recovered code with the supplied iPad recording as the main visual and interaction guide. Preserve original asset proportions on the fixed4:3 canvas, original files and existing saves. Complete and verify gameplay, UI, animation, sound, campaign and progression before multiplayer or expansion; record unresolved evidence gaps honestly in PLAN.md. Continue autonomously without routine milestone approval. Maintain the authorized private GitHub repository spice-bandits-remastered as a verified backup and edit history.
+
+The user explicitly asks for original appearance/interactions/animations, not merely a playable tower-defense approximation. Required presentation checklist items remain open until corresponding evidence proves them complete. The iPad recording appears stretched: use its composition/interaction guidance without stretching source assets. Fixed1024×768 with borders is the current target; dynamic monitor-filling layout is deferred. No expansion or multiplayer work yet. Ask only for genuine input-dependent blockers.
+
+Create a persistent goal in the new chat with the full objective above. The old chat is `01a133b4-91d2-7ba3-a56b-67ec6d4a678c`; its goal unexpectedly reports `blocked` at handoff. No goal-status change was made during this handoff. This is not evidence of a game-development impasse: useful authorized work remains. The new chat should pursue the full objective, not substitute a smaller checkpoint. No new chat was created automatically.
+
+## Workspace and current authoritative state
+
+Work in `/Users/christian/Projects/Spice Bandits - Remastered`. Read applicable instructions, PLAN.md, README.md, original/README.md, research/SOURCES.md, research/GAMEPLAY_FINDINGS.md, research/EXECUTABLE_AND_ASSET_ASSESSMENT.md, docs/FIDELITY.md and this handoff. Prior observations are useful pointers; current source, packages and actual results are authoritative.
+
+The working tree contains important **uncommitted R118/R119 implementation, fixtures and docs**. Preserve it. Do not reset/clean/stash indiscriminately. Current local and remote main both equal signed publication commit `d0565bc370a093bd3ce4cb2f0dd71413a02a4518`. The preceding R117 source is `88af59447b233a8aabfee3de21540b276e52ab00`.
+
+**R119 has now passed all ten frozen native suites.** This completed while the user requested the handoff. The batch was reaped with exit0; current game-process inventory is empty. Do not restart a completed batch or treat its formerly running status as current. Report: `builds/creep-animation-r119-native-suites.json`; log: `builds/creep-animation-r119-native-batch.log`. Current PCK was freshly hashed and still matches that report.
+
+- PCK: `6bbbe967fdc195922920295fa551d7a5a041aa847c3da52ee19b79a13506a974`.
+- Executable: `0a6a46acc4b40f44719aeefd68689facf5fb62eee0438a1960e8385077eef77e`.
+- Packaged native helper: `18c81b2b99424c1e70d8c0d2860c48565a0a1e847c589b6f9b3753e7b7670391`.
+- Presentation488 checks/186 PNGs; menus184/55; tutorial88/20; audio73/23 WAVs; projectiles4 PNGs; turns5; towers1; Desert1; campaign148.
+-424 counted PNGs plus21 supplemental frozen-renderer PNGs.
+- Live median/p95ms:1×22.310/29.209;2×20.752/30.754;4×31.419/48.843; world11.579/12.550. Unchanged33.34ms median limit passes; zero stalled battle frames; nine frozen renderer RGBA pairs exact. Shared-host/evolving live fixtures do not prove isolated speedup or uniformly smooth frames.
+- All four protected profiles, package identity, strict signature, runtime isolation and process cleanup pass.4,035 originals passed unchanged in the fresh full build.
+
+**Do not claim offline completion or original-device pixel parity.** R119 visual review/comparison refresh, documentation finalization, signed source push and private evidence/app backup remain unfinished. PLAN.md and leading release/validation paragraphs still describe R117. `docs/mechanics/CREEP_ANIMATION.md` currently says native verification pending; update it to the completed R119 evidence with its limits.
+
+## Current implementation and original evidence
+
+New helpers: `game/scripts/creep_freeze_view.gd`, `creep_animator_view.gd`. Modified integration: simulation.gd, main.gd, presentation_verify.gd, tower_preview_view.gd; native/hotpaths.cpp/.hpp; tools/build_macos.sh and run_packaged_qa.py. New source verifier: tools/creep_animation_ui_verify.gd. Native generators/fixtures:
+
+- tools/native_creep_animation_speed_reference.py and tests/fixtures/native-creep-animation-speed-reference.json.
+- tools/native_creep_animation_render_reference.py and matching render fixture.
+- tools/native_creep_animation_freeze_reference.py and matching freeze fixture.
+- tools/native_creep_freeze_reference.py and tests/fixtures/native-creep-freeze-reference.json.
+- tools/native_creep_animation_sequence_reference.py and matching sequence fixture.
+
+Preserved executable SHA-256: `e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048`. Original path: original/game-files/ipa-1.14/Payload/Tower.app/Tower. Read-only decompiles are in builds/creep-animator-r118-decompiled. These are bounded original compiled function executions with supplied records/explicit callbacks, not authentic source or a running whole original game.
+
+Recovered rules:
+
+- ProcessSpeed0x7a924: separate float32 speed products; positive pending slow consumed; both animator divisors1000/currentSpeed; zero speed gives infinity; both multipliers0 iff creep+0x20c is nonnull. That field is a pointer to a player's shared freeze countdown.
+- UseFreeze0x7bc1c rejects states2/3. FreezeCreeps0xfbddc applies to supplied creatures whose owner differs from player.id. New spawns have no inherited attachment.
+- ProcessPlayers0xd4080 reads positivity before float32 decrement/integer truncation; expiry clamps0/plays off once; room flag stays true on expiry frame. UpdateGame0xd338c runs waves before ProcessPlayers, then creatures/towers/mines/portals/bases.
+- Creep.Update0x7e8d0 calls ProcessSpeed before ProcessFreeze0x7bc3c. Expiry releases the pointer after the multiplier was set0; the following update resumes animation. Waves use previous room freeze flag; survival uses updated flag.
+- Constructor0x78374 clears reset-on-name-change for both animators. Walking direction changes preserve phase. Attack branch0x7cbfe..7cc1e explicitly stops/sets frame0 on both, including hidden secondary.
+- Full Creep.Render0x7f5c8 explicitly updates primary before shadow/body, preventing a second update in full Animator.Render. Secondary updates only on its nonzero-alpha render. Animated shadows copy primary name/frame. Godot normal once-per-process/QA-held-epoch scheduling is an explicit adaptation; arbitrary original extra Render calls repeat delta.
+- Main owns creep clocks separately from simulation combat state, erases on kill/base impact, detects ID reuse, and shares owned frames with body/shadow/status. Simulation owns integer countdown and per-creep attachment/remaining; compatibility deadline returns0 when inactive.
+
+Evidence includes864 speed cases;96 render cases/672 rows;64 freeze sequences/320 rows;72 timer cases;72 manager attachment cases/576 supplied creatures. New12-row full original Render/Update/Play/Stop/SetFrame trace uses supplied real Marine metadata12 frames/17FPS. Complete direction/attack/clock/loader/culling/death/global/GPU callers are not executed.
+
+Source checks pass:14,408 creep-animation;38,129 generic animator;42,580 portal;41,541 simulation;72 runtime-script parse. Full build log: builds/creep-animation-r119-build.log. Twelve new native gallery poses `creep-clock-{000,walk,turn,slow,paused,frozen,freeze-expiry,resume,attack,attack-resume,loop,secondary}` have exact integer phase_bits/frame/stopped/name equality to the independent original trace, checked by run_packaged_qa.py. No rounded-float tolerance was added.
+
+## Retained failures / R119 optimization
+
+R118 native presentation passed488/186 and all12 new poses were inspected full resolution. Its4× performance failed33.989ms median/40.384p95 against unchanged33.34. Failed app, both galleries, audits/logs, tracked source patch and every new source file are retained in `builds/creep-animation-r118-performance-failure`. Do not overwrite/delete them. All protected saves/package/isolation/cleanup passed despite the performance failure.
+
+R119 adds a pure ordinary-clock native helper `SpiceNative.frame_clock_advance`, preserving separate float32 operations, stopping, discarded overflow and nonloop behavior. The original GDScript calculation remains reference/fallback for nonfinite/out-of-int64 clocks. No fast/fused math is enabled. All original animator and creep fixtures pass using the helper. `tools/frame_clock_benchmark.gd` records576 exact full-state comparisons and a fixed64-clock ABBA CPU sample: reference0.964–0.976µs/call versus native0.290–0.291. This is bounded CPU evidence, not an isolated live inter-build speedup. R119 native all-ten evidence is above.
+
+Earlier R118 source harness failures remain in builds: stale supplied manager actor memory fixed by explicitly clearing each reserved record; native class-shadowing alias renamed; missing third spawn_enemy argument fixed. That deferred error left only owned PID85721 alive; it was terminated/reaped and a30-second unit watchdog added. No expected original math or threshold was weakened.
+
+## Immediate next actions
+
+1. Revalidate current Git/package/batch state. R119 batch is already complete/pass; do not rerun solely because an earlier note says running. Source runtime/package should stay frozen until reviews/backup finish.
+2. Compare all12 R119 creep-clock PNGs against the retained full-resolution-inspected R118 poses. If exact, retain a hashed equality review; inspect differences if any. Review changed prior native captures and retain randomized transitions/shared-pointer limitations honestly.
+3. Freeze the existing R117 comparison before overwriting, then regenerate tools/compare_presentation.py with the bundled PIL Python. It requires current successful presentation/tutorial/menus/performance/audio audits. Review changed contact sheets/full-resolution states, verify frozen90 frame hashes/HTTP serving, retain a package-bound review. Prior45-pair/12-sheet comparison remains R117, not R119.
+4. Update PLAN.md, docs/FIDELITY.md, VALIDATION.md, BUILD.md, OFFLINE_RELEASE.md, mechanics/CREEP_ANIMATION.md and ANIMATOR.md. Keep all required fidelity checklist items open where proof is missing. Record R118 failure, R119 success, scopes and unresolved differences. Fix stale absolute-age text through new mechanics links without erasing historical evidence.
+5. Review all dirty/untracked changes, run git diff --check, sign and push intended source to private main using configured1Password signer. No unsigned/signing bypass. Verify remote main and local signature. The user already authorized repo creation, commits and pushes.
+6. Create a fresh private R119 recovery checkpoint including tested app, all current native evidence/comparisons, R118 failed app/galleries/source, original probes/decompiles, complete signed Git bundle and restore instructions. Reuse/adapt ignored scripts builds/prepare_checkpoint_r117.py, verify_restore_r117.py and publish_checkpoint_r117.py with a fresh unique label. Verify empty source clone bytes/executable modes/signature, all tar hashes/ordered parts, ZIP CRC/safe extraction/deep strict signature/native isolated launch from external empty cwd, all4 protected profiles and remote asset SHA/size before publishing. Do not claim backup complete before verification. Then commit/push publication record separately.
+7. Continue the full offline reconstruction. Candidate next evidence gap: original additive hit flash at creep+0x334, before screen-status pass. Creep.Update increments+0x330 only while+0x335 then clears both flags strictly after the original constant; full DoDamage at0x7a62c is716 bytes. Original Render submits ONE/ONE with0.2 raw RGBA, current direct primary frame and visible secondary before freeze/slow Screen. Full hit caller/timing/GPU are still open; do not implement from this static note alone. Other major requirements remain below.
+
+## Preservation, repository and tools
+
+Private repo: https://github.com/ctadros1/spice-bandits-remastered. Last verified published app/evidence backup is R117: https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-15-r117.10 remote SHA/size checks verified2,449,071,845 bytes;1,222 evidence files;462 source files empty-bundle-clone byte/mode exact. R117 app retained at builds/package-history/r117-animator.app. R89 private7-part9.4GB full workspace backup retains original IPAs/videos/toolchains. Later supplements retain later source/evidence. R118/R119 source and app are not yet pushed/archived at handoff.
+
+1Password signing worked for R117; use normal configured signer. Local ED25519 fingerprint `SHA256:PJZf/txTjoXik5mogVE/7PMFZ9uGF+O8ELR2pEM9PxI`; allowed signers file builds/github-backup-2026-10-15/snapshot-02/allowed-signers. A local Good signature does not prove GitHub's Verified badge.
+
+Protected paths under `~/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/`:
+
+- profile.json SHA`9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3`.
+- profile.json.bak SHA`56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd`.
+- verification/fresh-campaign-profile.json SHA`c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd`.
+- its .bak SHA`ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb`.
+
+Do not reset/seed/replay the earned campaign:1,970 battles/67 distinct wins across all54 Normal missions/Madagascar, level73/XP53286.707 under the documented local progression policy. Source checks/QA poses do not establish recovered hosted progression. Missing later service thresholds/rank/reward mapping remain unavailable. User has only supplied IPAs, no working original installation/save; do not ask again. Apple Simulator cannot run this ARMv7 iphoneos binary; copied-original touchHLE0.3 startup failed at unsupported UIWindow setRootViewController before gameplay, with default network denial. Do not repeat it as a progression solution without new evidence.
+
+Pinned Godot: work/toolchain/Godot.app/Contents/MacOS/Godot,4.7.2. All actual game/verification runs must include `-- --qa` except editor import/version. Build: `zsh tools/build_macos.sh > builds/<unique>-build.log 2>&1`. Frozen all-ten: `python3 tools/run_packaged_suites.py --label <unique> > builds/<unique>-native-batch.log 2>&1`. Use fresh labels; preserve failures; never overlap game instances or edit runtime/package during a batch. Bundled PIL Python: `/Users/christian/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3`.
+
+Other AI agents share this Mac's main pointer. Prefer app-scoped/browser DOM/isolated engine checks; do not repeatedly ask for unlocking/refocus or infer a game bug from undelivered mouse input. Native physical input, trackpad gestures, speaker listening, Intel execution and notarized distribution still need appropriate verification. Inspector/comparison servers were tool sessions19878(port8765) and22357(port8766); revalidate before using and do not blindly kill them.
+
+Use work_state_read(includeClosed=true) to read canonical project list `offline-reconstruction`, then work_state_write for ongoing state/tasks. Separate list-state writes from task writes. No subagents were used for this work. Never search giant one-line JSON/rollout files with broad rg that prints full lines: parse/filter and print concise matching fields.
+
+## Remaining fidelity boundaries
+
+PLAN.md's eight presentation requirements remain open: original tray/drag behavior, mode fan/locks/transitions, animated Earth loading, results/XP/spice/medals, tutorial alignment/arrows/camera, electricity/combat animation, all supplied video/menu/shop/career/fitting review, equivalent-state visual/physical verification. Many bounded ports exist; do not mark whole requirements complete from source math or synthetic checks alone.
+
+Whole original room/owner clocks, culling, mutable equal-depth registration, Before/After/global effect ordering, death/particle lifetime, original pathfinding/RNG, additive hits, hosted later progression, exact UIKit text/GPU raster and equivalent-input original-device fidelity remain unresolved. Five-video corpus has4,440 captures/81 sheets; full contact timelines and selected dense/full-resolution states were reviewed, not every frame. Fixed guide pairs explicitly differ in actions/timing/progression/version; they are not numeric pixel-equivalence proof.

@@ -88,6 +88,14 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 				var state=owner.render_animators[key]
 				record.animators.append({"key":key,"phase":state.phase,"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.limit="Controlled source clock increments and supplied owner states; actual imported frames and blend recipe. Full room clock/culling/lifecycle/original GPU equivalence remains separate."
+	if name.begins_with("creep-clock-"):
+		var creep=app.sim.enemies[0]
+		record.creep_clocks=[]
+		for state in app.creep_animation_owners.get(int(creep.id),{}).get("clocks",[]):
+			if state.is_empty():continue
+			record.creep_clocks.append({"phase_bits":PackedFloat32Array([state.phase]).to_byte_array().decode_u32(0),"frame":state.frame,"stopped":state.stopped,"name":state.name})
+		record.creep_freeze={"remaining":creep.freeze_remaining,"attached":creep.freeze_attached,"room_active":app.sim.freeze_state.room_active,"divisor":creep.animation_divisor,"multiplier":creep.animation_multiplier}
+		record.limit="Controlled fixed-position Marine, actual imported12-frame17FPS art and owned render clocks. Real isolated simulation slow/freeze/expiry bridge; supplied direction/attack inputs and delta. Full callers/culling/room clock producer/original GPU remain open."
 	if name.begins_with("creep-status"):
 		record.status=app.sim.enemies.map(func(e):return {"id":e.id,"state":e.state,"light":e.draw_light,"freeze_remaining":app.sim.freeze_until-app.sim.clock_ms,"slow_pending":e.slow_pending,"coefficient":app.CreepStatus.coefficient(e.draw_light),"active":app.CreepStatus.active(e.state,app.sim.freeze_until-app.sim.clock_ms,e.slow_pending),"layers":app.CreepStatus.layers(e.visual_layers).size()})
 		record.limit="Supplied status states and original direct-frame screen pass. Full lifecycle/additive hit/GPU equivalence remain open."
@@ -903,17 +911,19 @@ func run() -> void:
 	lit_ground.draw_light=0.3
 	await snapshot("creep-status-normal-030")
 	app.sim.freeze_until=app.sim.clock_ms+1000
+	app.sim.CreepFreeze.process_creep(lit_ground,1000)
 	await snapshot("creep-status-freeze-030")
 	var status_frozen=get_viewport().get_texture().get_image()
 	lit_ground.draw_light=1
 	await snapshot("creep-status-freeze-100")
-	app.sim.freeze_until=0;lit_ground.draw_light=.3;lit_ground.slow_pending=.5
+	app.sim.freeze_until=0;app.sim.CreepFreeze.process_creep(lit_ground,0);lit_ground.draw_light=.3;lit_ground.slow_pending=.5
 	await snapshot("creep-status-slow-030")
 	check(status_frozen.get_data()==get_viewport().get_texture().get_image().get_data(),"same source freeze and pending-slow predicates produce exact complete-frame RGBA")
 	lit_ground.slow_pending=-1
 	var initial_layers=lit_ground.visual_layers.duplicate(true)
 	lit_ground.visual_layers[0].alpha=0
 	app.sim.freeze_until=app.sim.clock_ms+1000
+	app.sim.CreepFreeze.process_creep(lit_ground,1000)
 	await snapshot("creep-status-zero-primary")
 	lit_ground.visual_layers=initial_layers.duplicate(true)
 	lit_ground.visual_layers[0].alpha=.4;lit_ground.visual_layers[1].alpha=.6
@@ -1021,6 +1031,32 @@ func run() -> void:
 	await snapshot("animator-nuke-075")
 	check(animated_nuke.render_animators["nuke-lights"].phase==.75,"native nuke lights reach source three-quarter phase")
 	check(nuke_initial.get_data()!=get_viewport().get_texture().get_image().get_data(),"native nuke light fades during original second half of frame")
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
+	app.sim.enemies.clear()
+	var animated_creep=app.sim.spawn_enemy(1,0,"",940,false)
+	var creep_anchor=app.sim.center(8,6)
+	animated_creep.speed=1000;animated_creep.grow_ms=400
+	app.sim.abilities.m_freeze=1
+	var creep_direction="RunDown"
+	var creep_attack=false
+	# The independent original ARM sequence fixture audits exact phase bits
+	# after each real native render; the whole caller is not being emulated.
+	for action in [{"name":"000","dt":0},{"name":"walk","dt":60},{"name":"turn","dt":0,"direction":"RunUp"},{"name":"slow","dt":30,"slow":.5},{"name":"paused","dt":30,"paused":true},{"name":"frozen","dt":30},{"name":"freeze-expiry","dt":30},{"name":"resume","dt":30},{"name":"attack","dt":30,"attack":true},{"name":"attack-resume","dt":30,"play":true},{"name":"loop","dt":1000},{"name":"secondary","dt":30}]:
+		app.sim.paused=bool(action.get("paused",false))
+		creep_direction=str(action.get("direction",creep_direction))
+		if action.get("attack",false):creep_attack=true
+		if action.get("play",false):creep_attack=false
+		animated_creep.slow_pending=float(action.get("slow",-1))
+		if action.name=="frozen":check(app.sim.use_ability("m_freeze").is_empty(),"native creep clock gallery attaches the real freeze ability")
+		if action.name=="freeze-expiry":app.sim.freeze_state.remaining=1
+		app.sim.advance_frame(float(action.dt))
+		animated_creep.pos=creep_anchor;animated_creep.visual_pos=creep_anchor;animated_creep.attacking=creep_attack
+		animated_creep.visual_layers=[{"state":creep_direction,"rotation":0.0,"alpha":.4 if action.name=="secondary" else 1.0,"born":0},{"state":creep_direction,"rotation":0.0,"alpha":.6 if action.name=="secondary" else 0.0,"born":0}]
+		app.animation_epoch+=1;app.animation_delta_ms=float(action.dt)
+		await snapshot("creep-clock-"+str(action.name))
+		if action.name=="freeze-expiry":check(animated_creep.animation_multiplier==0 and animated_creep.freeze_remaining==0 and not animated_creep.freeze_attached,"native expiry frame holds animator before releasing the freeze pointer")
+		if action.name=="resume":check(animated_creep.animation_multiplier==1 and not app.sim.freeze_state.room_active,"native following frame resumes the owned animator")
+	app.sim.paused=false
 	app.animation_delta_ms=retained_animation_delta
 	app.start_mission("8",true,false);app.sim.spawn_hold=true
 	app.sim.clock_ms=int(app.sim.config.wavedelay)/2

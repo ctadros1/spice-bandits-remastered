@@ -1,0 +1,226 @@
+{
+  "method": "Full original creep/animator Render/Update/Play/Stop/SetFrame owner sequence.\nSupplied12-frame17FPS animation/group/creep records and process-speed fields.\nDirection/attack/freeze/room actions are explicit inputs; their complete callers,\nconstructor, clock producer, loader and GPU do not execute. GL/final frame and\nunrelated owner callbacks are recording stubs. Separate fixtures test freeze\nmanager/countdown/expiry ordering; this trace binds actual frame arithmetic.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "rows": [
+    {
+      "input": {
+        "name": "000",
+        "dt": 0
+      },
+      "clocks": [
+        {
+          "phase_bits": 0,
+          "frame": 0,
+          "stopped": false,
+          "name": "RunDown"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "walk",
+        "dt": 60
+      },
+      "clocks": [
+        {
+          "phase_bits": 1065520988,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunDown"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "turn",
+        "dt": 0,
+        "direction": "RunUp"
+      },
+      "clocks": [
+        {
+          "phase_bits": 1065520988,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "slow",
+        "dt": 30,
+        "slow": 0.5
+      },
+      "clocks": [
+        {
+          "phase_bits": 1067660083,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "paused",
+        "dt": 30,
+        "paused": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 1067660083,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "frozen",
+        "dt": 30,
+        "held": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 1067660083,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "freeze-expiry",
+        "dt": 30,
+        "held": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 1067660083,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "resume",
+        "dt": 30
+      },
+      "clocks": [
+        {
+          "phase_bits": 1071938273,
+          "frame": 1,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "attack",
+        "dt": 30,
+        "attack": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 0,
+          "frame": 0,
+          "stopped": true,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "attack-resume",
+        "dt": 30,
+        "play": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 1057132380,
+          "frame": 0,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "loop",
+        "dt": 1000
+      },
+      "clocks": [
+        {
+          "phase_bits": 0,
+          "frame": 0,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76
+      ]
+    },
+    {
+      "input": {
+        "name": "secondary",
+        "dt": 30,
+        "secondary": true
+      },
+      "clocks": [
+        {
+          "phase_bits": 1057132380,
+          "frame": 0,
+          "stopped": false,
+          "name": "RunUp"
+        },
+        {
+          "phase_bits": 1057132380,
+          "frame": 0,
+          "stopped": false,
+          "name": "RunUp"
+        }
+      ],
+      "updates": [
+        76,
+        192
+      ]
+    }
+  ]
+}

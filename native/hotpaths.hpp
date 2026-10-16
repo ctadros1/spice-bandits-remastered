@@ -14,6 +14,7 @@ class SpiceNative : public RefCounted {
 protected:
     static void _bind_methods();
 public:
+    static bool frame_clock_advance(Dictionary state, double dt_ms);
     static bool in_range(Vector2 a, Vector2 b, double radius, double hex_height);
     static PackedInt32Array range_candidates(Array entries, Vector2 position, double radius, double hex_height, int aim);
     static Dictionary select_target(Array entries, Dictionary query, Callable grid);

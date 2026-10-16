@@ -3,6 +3,8 @@ static func f32(value:float) -> float:return Vector2(value,0).x
 static func initial(count:int,speed:float,loop:bool=true,multiplier:float=1,divisor:float=1) -> Dictionary:
 	return {"count":count,"speed":speed,"loop":loop,"multiplier":multiplier,"divisor":divisor,"frame":0,"phase":0.0,"stopped":false}
 static func advance(state:Dictionary,dt_ms:float) -> void:
+	if not SpiceNative.frame_clock_advance(state,dt_ms):reference_advance(state,dt_ms)
+static func reference_advance(state:Dictionary,dt_ms:float) -> void:
 	if state.count<2:state.frame=0;state.stopped=true;return
 	if state.stopped:return
 	var rate=f32(f32(float(state.speed)/float(state.divisor))*float(state.multiplier))

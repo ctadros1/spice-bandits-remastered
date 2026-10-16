@@ -25,6 +25,8 @@ const XPEmitterView = preload("res://scripts/xp_emitter_view.gd")
 const CreepLight = preload("res://scripts/creep_light_view.gd")
 const CreepStatus = preload("res://scripts/creep_status_view.gd")
 const Animator=preload("res://scripts/animator_view.gd")
+const CreepAnimator=preload("res://scripts/creep_animator_view.gd")
+var creep_animation_owners:Dictionary={}
 var animation_epoch=0
 var animation_delta_ms=0.0
 const TowerPreview = preload("res://scripts/tower_preview_view.gd")
@@ -1488,6 +1490,7 @@ func start_mission(id: String, bypass_unlock: bool = false, show_story: bool = t
 	sim = Simulation.new()
 	base_depth_cache.clear()
 	creep_depth_cache.clear()
+	creep_animation_owners.clear()
 	sim.setup(Content.catalog, Content.maps[c.map], c, Profile.data, 114, Content.animations)
 	sim.live_updates=not test_session or "--qa-performance" in OS.get_cmdline_user_args() or "--qa-live-runtime" in OS.get_cmdline_user_args()
 	screen = "game"
@@ -2673,6 +2676,7 @@ func add_beam_effect(event: Dictionary) -> void:
 		if continuous:continuous_beams[key]=effect
 
 func handle_event(event: Dictionary) -> void:
+	if event.kind=="kill" or event.kind=="base_impact":creep_animation_owners.erase(int(event.get("id",-1)))
 	match event.kind:
 		"build":
 			sound("tower_place")
@@ -2790,12 +2794,34 @@ func extra_sprite(set_name: String, name: String, pos: Vector2, variation: Strin
 	draw_texture_rect(texture, Rect2(pos+(-texture.get_size()/2.0+frame.offset)*native_scale, texture.get_size()*native_scale), false, tint)
 	return true
 
-func creep_shadow(e: Dictionary, set_name: String, position: Vector2, layer: Dictionary, growth: Dictionary, body_scale_x: float, map_zoom: float) -> void:
+func creep_owned_animation(e:Dictionary,index:int,layer:Dictionary,states:Dictionary) -> Dictionary:
+	var definition=states.get(layer.state,states.get("Idle",{}))
+	if definition.is_empty():return {}
+	var id=int(e.id)
+	var owner=creep_animation_owners.get(id,{})
+	if owner.is_empty() or not is_same(owner.creep,e):
+		owner={"creep":e,"clocks":[{},{}],"was_attacking":false};creep_animation_owners[id]=owner
+	if index==0:
+		if e.attacking and not owner.was_attacking:
+			# The source attack branch also stops the currently hidden animator.
+			for clock in owner.clocks:
+				if not clock.is_empty():clock.stopped=true;clock.phase=0.0;clock.frame=0;clock.was_attacking=true
+		owner.was_attacking=bool(e.attacking)
+	var state=owner.clocks[index]
+	if state.is_empty():
+		state=CreepAnimator.initial(str(layer.state),definition)
+		state.last_epoch=-1;owner.clocks[index]=state
+	CreepAnimator.prepare(state,str(layer.state),definition,float(e.get("animation_divisor",1)),float(e.get("animation_multiplier",1)),bool(e.attacking))
+	if state.last_epoch!=animation_epoch:
+		CreepAnimator.render_tick(state,animation_delta_ms,sim.paused)
+		state.last_epoch=animation_epoch
+	return state
+
+func creep_shadow(e: Dictionary, set_name: String, position: Vector2, layer: Dictionary, growth: Dictionary, body_scale_x: float, map_zoom: float, frame:int=0) -> void:
 	# CCreepShadow::Render0xfc7b8: black tint, animator-sized quad,
 	# native facing/physical rotation and a linear grow factor.
 	var factor = float(e.def.traits.get("shadow_scale_factor", 1))*float(growth.alpha)
 	var tint = Color(0, 0, 0, clampf(1.0-body_scale_x*0.5, 0, 1))
-	var frame = 0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*float(Content.animations[set_name].states.get(layer.state, {}).get("speed", 8))/1000.0)
 	var animated = str(e.def.traits.get("animated_shadow", ""))
 	if not animated.is_empty():
 		var f = Content.frame("creeps/"+animated, layer.state, frame)
@@ -3241,21 +3267,24 @@ func draw_creep_body(e:Dictionary,scale:float,owner_missiles:Array=[]) -> void:
 	if growth.has("native_scale"):native_scale=growth.native_scale
 	var animator_position=creep_animator_position(e)
 	var layers=creep_layers(e,states)
-	creep_shadow(e, set_name, position, layers[0], growth, native_scale.x, scale)
-	for layer in layers:
-		if float(layer.alpha) <= 0: continue
-		var layer_rate = float(states.get(layer.state, {}).get("speed", 8))
-		var layer_frame = 0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*layer_rate/1000.0)
+	var body_clocks=[creep_owned_animation(e,0,layers[0],states),{}]
+	if layers.size()>1 and float(layers[1].alpha)!=0:body_clocks[1]=creep_owned_animation(e,1,layers[1],states)
+	creep_shadow(e,set_name,position,layers[0],growth,native_scale.x,scale,int(body_clocks[0].get("frame",0)))
+	for index in layers.size():
+		var layer=layers[index]
+		if float(layer.alpha)<=0:continue
+		var animation=body_clocks[index]
+		var layer_frame=int(animation.get("frame",0))
 		var color = tint
 		color.a *= float(layer.alpha)
 		draw_set_transform(map_origin()+animator_position*scale, deg_to_rad(float(layer.rotation)), Vector2.ONE*scale)
-		sprite(set_name, layer.state, Vector2.ZERO, layer_frame, str(e.def.get("color", "")), color, 0, native_scale)
+		sprite(set_name,layer.state,Vector2.ZERO,layer_frame,str(e.def.get("color","")),color,0,native_scale,animation)
 		draw_set_transform(map_origin(), 0, Vector2.ONE*scale)
-	if CreepStatus.active(int(e.get("state",0)),sim.freeze_until-sim.clock_ms,float(e.get("slow_pending",-1))):
+	if CreepStatus.active(int(e.get("state",0)),int(e.get("freeze_remaining",0)),float(e.get("slow_pending",-1))):
 		var coefficient=CreepStatus.coefficient(float(e.get("draw_light",1)))
-		for layer in CreepStatus.layers(layers):
-			var rate=float(states.get(layer.state,{}).get("speed",8))
-			var frame=0 if e.attacking else int(float(sim.clock_ms-int(layer.born))*rate/1000.0)
+		for index in CreepStatus.layers(layers).size():
+			var layer=layers[index]
+			var frame=int(body_clocks[index].get("frame",0))
 			var image=Content.frame(set_name,layer.state,frame,str(e.def.get("color","")),true)
 			if image.is_empty():continue
 			var texture:Texture2D=image.texture

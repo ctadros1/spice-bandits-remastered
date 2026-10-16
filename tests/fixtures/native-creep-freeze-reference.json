@@ -1,0 +1,5495 @@
+{
+  "method": "Full original ProcessPlayers and FreezeCreeps/UseFreeze supplied records.\nOne/two player vectors, resources/countdowns and creep owner/state records are\nsupplied. Sounds/statistics/LSD callbacks are recording stubs. No room clock\nproducer, constructor, spawn, profile service, whole scene or GPU executes.\n",
+  "source_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "timers": [
+    {
+      "input": {
+        "remaining": [],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          -1
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          -1
+        ],
+        "room_active": false,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          1
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          16
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          15
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          16
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          17
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          16
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          17
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          30
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          29
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          13
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          10000
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          9999
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          9983
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          9970
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          9969
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          10000
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          0,
+          100
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          0,
+          99
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0,
+          83
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0,
+          70
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0,
+          69
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          0,
+          100
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          30,
+          1
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          29,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          13,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono",
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono",
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          30,
+          1
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono",
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          1,
+          0
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          1,
+          0
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono"
+        ]
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 0
+      },
+      "output": {
+        "remaining": [
+          100,
+          100
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 0.1
+      },
+      "output": {
+        "remaining": [
+          99,
+          99
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 16.667
+      },
+      "output": {
+        "remaining": [
+          83,
+          83
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 30
+      },
+      "output": {
+        "remaining": [
+          70,
+          70
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 31
+      },
+      "output": {
+        "remaining": [
+          69,
+          69
+        ],
+        "room_active": true,
+        "sounds": []
+      }
+    },
+    {
+      "input": {
+        "remaining": [
+          100,
+          100
+        ],
+        "dt": 10001
+      },
+      "output": {
+        "remaining": [
+          0,
+          0
+        ],
+        "room_active": true,
+        "sounds": [
+          "freeze_deactivation-mono",
+          "freeze_deactivation-mono"
+        ]
+      }
+    }
+  ],
+  "attachments": [
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 0,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 1,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 0,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 1,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2
+        ]
+      },
+      "output": [
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          4,
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          5,
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          6,
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    },
+    {
+      "input": {
+        "player_owner": 2,
+        "count": 10000,
+        "owners": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2
+        ],
+        "states": [
+          7,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "output": [
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        },
+        {
+          "attached": true,
+          "tracker": 1
+        },
+        {
+          "attached": false,
+          "tracker": 17
+        }
+      ]
+    }
+  ]
+}
