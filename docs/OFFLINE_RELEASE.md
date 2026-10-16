@@ -1,6 +1,6 @@
 # Offline reconstruction verification, October 16, 2026
 
-Current candidate status: R133 reset-cache correction passes the native3-check framebuffer proof and full source build. Both packaged presentation runs pass539 checks/214PNG; unchanged dense4× performance fails35.215 then34.141ms median against33.34ms. The one repeat is retained alongside the first failure; other8 suites were not run. Four protected saves, package identity, signature, isolated QA and process cleanup pass. R132 all-ten pass is retained with its later visual-review failure. R129 remains the latest fully verified published private app. See [the current plan](../PLAN.md) and [death integration limits](mechanics/CREEP_DEATH.md).
+Current R135 local package passes all ten native suites, including539presentation checks/214PNG and the unchanged33.34ms performance gate (dense4×25.209/29.077ms median/p95). Source gates include65741 newborn local-clock checks and1171 float32 lifetime checks across all90 authored particle definitions.4035 originals/all4 saves/package/signature/isolation/cleanup pass. Earlier R133/R134 performance failures remain preserved; no isolated speedup cause is established. Source/private R135 checkpoint is pending. [Particle evidence and remaining scope](mechanics/PARTICLE_CLOCKS.md). Complete offline/original-device fidelity remains unproven.
 
 Offline reconstruction remains incomplete. R129 is a tested local Apple Silicon package, with Universal2 compilation. Intel execution, physical trackpad/speaker review and notarized distribution remain unverified.
 

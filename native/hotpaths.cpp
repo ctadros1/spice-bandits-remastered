@@ -51,7 +51,8 @@ struct ParticleCoefficients {
         const Array wind=d.get("wind",Array::make(0,0));
         gx=gravity[0];gy=gravity[1];wx=wind[0];wy=wind[1];
         wind_enabled=d.get("wind_enabled",true);
-        raw_life=d.get("life_cycle",1);life=f32(raw_life);
+        // Original lifetime field is float32, including its expiry comparison.
+        life=f32(double(d.get("life_cycle",1)));raw_life=double(life);
         fade=f32(double(d.get("fade_in_time",0)));blend=f32(double(d.get("blend_delay",0)));
     }
     float opacity(float age) const {

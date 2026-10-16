@@ -1,0 +1,639 @@
+{
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "content_sha256": "1469630c5202079a5361c5c8c10ae671b19b7cbb8981cd7404acb2529642ecd2",
+  "distinct_authored_lifetimes": 21,
+  "cases": [
+    {
+      "system": "MisileFireRail",
+      "life": 0.15,
+      "life_bits": 1041865114,
+      "age_bits": 1041865113,
+      "output": {
+        "active": 1,
+        "clock_bits": 1041865113
+      }
+    },
+    {
+      "system": "MisileFireRail",
+      "life": 0.15,
+      "life_bits": 1041865114,
+      "age_bits": 1041865114,
+      "output": {
+        "active": 0,
+        "clock_bits": 1041865114
+      }
+    },
+    {
+      "system": "MisileFireRail",
+      "life": 0.15,
+      "life_bits": 1041865114,
+      "age_bits": 1041865115,
+      "output": {
+        "active": 0,
+        "clock_bits": 1041865115
+      }
+    },
+    {
+      "system": "GooBubbleTrail",
+      "life": 0.4,
+      "life_bits": 1053609165,
+      "age_bits": 1053609164,
+      "output": {
+        "active": 1,
+        "clock_bits": 1053609164
+      }
+    },
+    {
+      "system": "GooBubbleTrail",
+      "life": 0.4,
+      "life_bits": 1053609165,
+      "age_bits": 1053609165,
+      "output": {
+        "active": 0,
+        "clock_bits": 1053609165
+      }
+    },
+    {
+      "system": "GooBubbleTrail",
+      "life": 0.4,
+      "life_bits": 1053609165,
+      "age_bits": 1053609166,
+      "output": {
+        "active": 0,
+        "clock_bits": 1053609166
+      }
+    },
+    {
+      "system": "TowerSold",
+      "life": 0.5,
+      "life_bits": 1056964608,
+      "age_bits": 1056964607,
+      "output": {
+        "active": 1,
+        "clock_bits": 1056964607
+      }
+    },
+    {
+      "system": "TowerSold",
+      "life": 0.5,
+      "life_bits": 1056964608,
+      "age_bits": 1056964608,
+      "output": {
+        "active": 0,
+        "clock_bits": 1056964608
+      }
+    },
+    {
+      "system": "TowerSold",
+      "life": 0.5,
+      "life_bits": 1056964608,
+      "age_bits": 1056964609,
+      "output": {
+        "active": 0,
+        "clock_bits": 1056964609
+      }
+    },
+    {
+      "system": "OceanSpray",
+      "life": 0.6,
+      "life_bits": 1058642330,
+      "age_bits": 1058642329,
+      "output": {
+        "active": 1,
+        "clock_bits": 1058642329
+      }
+    },
+    {
+      "system": "OceanSpray",
+      "life": 0.6,
+      "life_bits": 1058642330,
+      "age_bits": 1058642330,
+      "output": {
+        "active": 0,
+        "clock_bits": 1058642330
+      }
+    },
+    {
+      "system": "OceanSpray",
+      "life": 0.6,
+      "life_bits": 1058642330,
+      "age_bits": 1058642331,
+      "output": {
+        "active": 0,
+        "clock_bits": 1058642331
+      }
+    },
+    {
+      "system": "Creep10DebrisSmoke",
+      "life": 0.7,
+      "life_bits": 1060320051,
+      "age_bits": 1060320050,
+      "output": {
+        "active": 1,
+        "clock_bits": 1060320050
+      }
+    },
+    {
+      "system": "Creep10DebrisSmoke",
+      "life": 0.7,
+      "life_bits": 1060320051,
+      "age_bits": 1060320051,
+      "output": {
+        "active": 0,
+        "clock_bits": 1060320051
+      }
+    },
+    {
+      "system": "Creep10DebrisSmoke",
+      "life": 0.7,
+      "life_bits": 1060320051,
+      "age_bits": 1060320052,
+      "output": {
+        "active": 0,
+        "clock_bits": 1060320052
+      }
+    },
+    {
+      "system": "MissileExplodeBlack",
+      "life": 0.8,
+      "life_bits": 1061997773,
+      "age_bits": 1061997772,
+      "output": {
+        "active": 1,
+        "clock_bits": 1061997772
+      }
+    },
+    {
+      "system": "MissileExplodeBlack",
+      "life": 0.8,
+      "life_bits": 1061997773,
+      "age_bits": 1061997773,
+      "output": {
+        "active": 0,
+        "clock_bits": 1061997773
+      }
+    },
+    {
+      "system": "MissileExplodeBlack",
+      "life": 0.8,
+      "life_bits": 1061997773,
+      "age_bits": 1061997774,
+      "output": {
+        "active": 0,
+        "clock_bits": 1061997774
+      }
+    },
+    {
+      "system": "MissileExplodeGray",
+      "life": 0.9,
+      "life_bits": 1063675494,
+      "age_bits": 1063675493,
+      "output": {
+        "active": 1,
+        "clock_bits": 1063675493
+      }
+    },
+    {
+      "system": "MissileExplodeGray",
+      "life": 0.9,
+      "life_bits": 1063675494,
+      "age_bits": 1063675494,
+      "output": {
+        "active": 0,
+        "clock_bits": 1063675494
+      }
+    },
+    {
+      "system": "MissileExplodeGray",
+      "life": 0.9,
+      "life_bits": 1063675494,
+      "age_bits": 1063675495,
+      "output": {
+        "active": 0,
+        "clock_bits": 1063675495
+      }
+    },
+    {
+      "system": "CreepHover",
+      "life": 1.0,
+      "life_bits": 1065353216,
+      "age_bits": 1065353215,
+      "output": {
+        "active": 1,
+        "clock_bits": 1065353215
+      }
+    },
+    {
+      "system": "CreepHover",
+      "life": 1.0,
+      "life_bits": 1065353216,
+      "age_bits": 1065353216,
+      "output": {
+        "active": 0,
+        "clock_bits": 1065353216
+      }
+    },
+    {
+      "system": "CreepHover",
+      "life": 1.0,
+      "life_bits": 1065353216,
+      "age_bits": 1065353217,
+      "output": {
+        "active": 0,
+        "clock_bits": 1065353217
+      }
+    },
+    {
+      "system": "RadiationDebris",
+      "life": 1.1,
+      "life_bits": 1066192077,
+      "age_bits": 1066192076,
+      "output": {
+        "active": 1,
+        "clock_bits": 1066192076
+      }
+    },
+    {
+      "system": "RadiationDebris",
+      "life": 1.1,
+      "life_bits": 1066192077,
+      "age_bits": 1066192077,
+      "output": {
+        "active": 0,
+        "clock_bits": 1066192077
+      }
+    },
+    {
+      "system": "RadiationDebris",
+      "life": 1.1,
+      "life_bits": 1066192077,
+      "age_bits": 1066192078,
+      "output": {
+        "active": 0,
+        "clock_bits": 1066192078
+      }
+    },
+    {
+      "system": "Cloud",
+      "life": 1.3,
+      "life_bits": 1067869798,
+      "age_bits": 1067869797,
+      "output": {
+        "active": 1,
+        "clock_bits": 1067869797
+      }
+    },
+    {
+      "system": "Cloud",
+      "life": 1.3,
+      "life_bits": 1067869798,
+      "age_bits": 1067869798,
+      "output": {
+        "active": 0,
+        "clock_bits": 1067869798
+      }
+    },
+    {
+      "system": "Cloud",
+      "life": 1.3,
+      "life_bits": 1067869798,
+      "age_bits": 1067869799,
+      "output": {
+        "active": 0,
+        "clock_bits": 1067869799
+      }
+    },
+    {
+      "system": "Creep2ExplosionParts",
+      "life": 1.4,
+      "life_bits": 1068708659,
+      "age_bits": 1068708658,
+      "output": {
+        "active": 1,
+        "clock_bits": 1068708658
+      }
+    },
+    {
+      "system": "Creep2ExplosionParts",
+      "life": 1.4,
+      "life_bits": 1068708659,
+      "age_bits": 1068708659,
+      "output": {
+        "active": 0,
+        "clock_bits": 1068708659
+      }
+    },
+    {
+      "system": "Creep2ExplosionParts",
+      "life": 1.4,
+      "life_bits": 1068708659,
+      "age_bits": 1068708660,
+      "output": {
+        "active": 0,
+        "clock_bits": 1068708660
+      }
+    },
+    {
+      "system": "ThermalPlant",
+      "life": 1.5,
+      "life_bits": 1069547520,
+      "age_bits": 1069547519,
+      "output": {
+        "active": 1,
+        "clock_bits": 1069547519
+      }
+    },
+    {
+      "system": "ThermalPlant",
+      "life": 1.5,
+      "life_bits": 1069547520,
+      "age_bits": 1069547520,
+      "output": {
+        "active": 0,
+        "clock_bits": 1069547520
+      }
+    },
+    {
+      "system": "ThermalPlant",
+      "life": 1.5,
+      "life_bits": 1069547520,
+      "age_bits": 1069547521,
+      "output": {
+        "active": 0,
+        "clock_bits": 1069547521
+      }
+    },
+    {
+      "system": "CreepFreeze",
+      "life": 1.6,
+      "life_bits": 1070386381,
+      "age_bits": 1070386380,
+      "output": {
+        "active": 1,
+        "clock_bits": 1070386380
+      }
+    },
+    {
+      "system": "CreepFreeze",
+      "life": 1.6,
+      "life_bits": 1070386381,
+      "age_bits": 1070386381,
+      "output": {
+        "active": 0,
+        "clock_bits": 1070386381
+      }
+    },
+    {
+      "system": "CreepFreeze",
+      "life": 1.6,
+      "life_bits": 1070386381,
+      "age_bits": 1070386382,
+      "output": {
+        "active": 0,
+        "clock_bits": 1070386382
+      }
+    },
+    {
+      "system": "XpBarGrow",
+      "life": 1.7,
+      "life_bits": 1071225242,
+      "age_bits": 1071225241,
+      "output": {
+        "active": 1,
+        "clock_bits": 1071225241
+      }
+    },
+    {
+      "system": "XpBarGrow",
+      "life": 1.7,
+      "life_bits": 1071225242,
+      "age_bits": 1071225242,
+      "output": {
+        "active": 0,
+        "clock_bits": 1071225242
+      }
+    },
+    {
+      "system": "XpBarGrow",
+      "life": 1.7,
+      "life_bits": 1071225242,
+      "age_bits": 1071225243,
+      "output": {
+        "active": 0,
+        "clock_bits": 1071225243
+      }
+    },
+    {
+      "system": "BaseSmoke",
+      "life": 2.0,
+      "life_bits": 1073741824,
+      "age_bits": 1073741823,
+      "output": {
+        "active": 1,
+        "clock_bits": 1073741823
+      }
+    },
+    {
+      "system": "BaseSmoke",
+      "life": 2.0,
+      "life_bits": 1073741824,
+      "age_bits": 1073741824,
+      "output": {
+        "active": 0,
+        "clock_bits": 1073741824
+      }
+    },
+    {
+      "system": "BaseSmoke",
+      "life": 2.0,
+      "life_bits": 1073741824,
+      "age_bits": 1073741825,
+      "output": {
+        "active": 0,
+        "clock_bits": 1073741825
+      }
+    },
+    {
+      "system": "MissileNukeCloud",
+      "life": 2.2,
+      "life_bits": 1074580685,
+      "age_bits": 1074580684,
+      "output": {
+        "active": 1,
+        "clock_bits": 1074580684
+      }
+    },
+    {
+      "system": "MissileNukeCloud",
+      "life": 2.2,
+      "life_bits": 1074580685,
+      "age_bits": 1074580685,
+      "output": {
+        "active": 0,
+        "clock_bits": 1074580685
+      }
+    },
+    {
+      "system": "MissileNukeCloud",
+      "life": 2.2,
+      "life_bits": 1074580685,
+      "age_bits": 1074580686,
+      "output": {
+        "active": 0,
+        "clock_bits": 1074580686
+      }
+    },
+    {
+      "system": "OilTower",
+      "life": 2.5,
+      "life_bits": 1075838976,
+      "age_bits": 1075838975,
+      "output": {
+        "active": 1,
+        "clock_bits": 1075838975
+      }
+    },
+    {
+      "system": "OilTower",
+      "life": 2.5,
+      "life_bits": 1075838976,
+      "age_bits": 1075838976,
+      "output": {
+        "active": 0,
+        "clock_bits": 1075838976
+      }
+    },
+    {
+      "system": "OilTower",
+      "life": 2.5,
+      "life_bits": 1075838976,
+      "age_bits": 1075838977,
+      "output": {
+        "active": 0,
+        "clock_bits": 1075838977
+      }
+    },
+    {
+      "system": "MissileLaunch",
+      "life": 3.0,
+      "life_bits": 1077936128,
+      "age_bits": 1077936127,
+      "output": {
+        "active": 1,
+        "clock_bits": 1077936127
+      }
+    },
+    {
+      "system": "MissileLaunch",
+      "life": 3.0,
+      "life_bits": 1077936128,
+      "age_bits": 1077936128,
+      "output": {
+        "active": 0,
+        "clock_bits": 1077936128
+      }
+    },
+    {
+      "system": "MissileLaunch",
+      "life": 3.0,
+      "life_bits": 1077936128,
+      "age_bits": 1077936129,
+      "output": {
+        "active": 0,
+        "clock_bits": 1077936129
+      }
+    },
+    {
+      "system": "AAACloud",
+      "life": 3.5,
+      "life_bits": 1080033280,
+      "age_bits": 1080033279,
+      "output": {
+        "active": 1,
+        "clock_bits": 1080033279
+      }
+    },
+    {
+      "system": "AAACloud",
+      "life": 3.5,
+      "life_bits": 1080033280,
+      "age_bits": 1080033280,
+      "output": {
+        "active": 0,
+        "clock_bits": 1080033280
+      }
+    },
+    {
+      "system": "AAACloud",
+      "life": 3.5,
+      "life_bits": 1080033280,
+      "age_bits": 1080033281,
+      "output": {
+        "active": 0,
+        "clock_bits": 1080033281
+      }
+    },
+    {
+      "system": "GooBubbleExplodeSpray",
+      "life": 4.5,
+      "life_bits": 1083179008,
+      "age_bits": 1083179007,
+      "output": {
+        "active": 1,
+        "clock_bits": 1083179007
+      }
+    },
+    {
+      "system": "GooBubbleExplodeSpray",
+      "life": 4.5,
+      "life_bits": 1083179008,
+      "age_bits": 1083179008,
+      "output": {
+        "active": 0,
+        "clock_bits": 1083179008
+      }
+    },
+    {
+      "system": "GooBubbleExplodeSpray",
+      "life": 4.5,
+      "life_bits": 1083179008,
+      "age_bits": 1083179009,
+      "output": {
+        "active": 0,
+        "clock_bits": 1083179009
+      }
+    },
+    {
+      "system": "level23_LargeSmoke",
+      "life": 5.0,
+      "life_bits": 1084227584,
+      "age_bits": 1084227583,
+      "output": {
+        "active": 1,
+        "clock_bits": 1084227583
+      }
+    },
+    {
+      "system": "level23_LargeSmoke",
+      "life": 5.0,
+      "life_bits": 1084227584,
+      "age_bits": 1084227584,
+      "output": {
+        "active": 0,
+        "clock_bits": 1084227584
+      }
+    },
+    {
+      "system": "level23_LargeSmoke",
+      "life": 5.0,
+      "life_bits": 1084227584,
+      "age_bits": 1084227585,
+      "output": {
+        "active": 0,
+        "clock_bits": 1084227585
+      }
+    }
+  ],
+  "scope": "Original CParticleSystem.Update0x111088, supplied one-particle system, zero birth, dt0 and clocks one float32 bit below/exactly/above each authored life. Emit returns success without creating; sinf stub available but amplitude zero. Active count and clock bits recorded. No whole room, child ownership, texture/GPU or original resource parsing executes. All original files unchanged."
+}
