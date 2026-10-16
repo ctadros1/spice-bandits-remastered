@@ -2,7 +2,7 @@
 
 Reconstruct Spice Bandits 1.14 for macOS, preserving its original appearance, campaign, tower branches, enemy behavior, sound, and progression as closely as the evidence allows.
 
-R129 passes all ten local packaged verification suites, including the unchanged performance limit. Original crater admission/lifetime/rendering is now connected; complete original appearance, effect ownership and progression remain under reconstruction. The latest published private app backup is R123 while R129 recovery verification is being prepared.
+R129 passes all ten local packaged verification suites, including the unchanged performance limit. Original crater admission/lifetime/rendering is now connected; complete original appearance, effect ownership and progression remain under reconstruction. The [private R129 recovery checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r129) is published with verified source, app restoration and evidence checksums.
 
 Start with [PLAN.md](PLAN.md). Supporting material:
 
