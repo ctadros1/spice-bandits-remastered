@@ -6,13 +6,14 @@ static func opacity(age: float, definition: Dictionary) -> float:
 	var life=f32(float(definition.get("life_cycle",1)))
 	var fade=f32(float(definition.get("fade_in_time",0)))
 	var blend=f32(float(definition.get("blend_delay",0)))
+	if blend>0:fade=minf(fade,f32(life/blend))
 	var value=1.0
 	if blend>0 and age>f32(life/blend):value=f32(1.0-f32(f32(age-f32(life/blend))/f32(life/blend)))
 	elif fade>0:
 		if age<=fade:value=f32(age/fade)
 		else:value=f32(1.0-f32(f32(age-fade)/f32(life-fade)))
 	elif blend==0:value=f32(1.0-f32(age/life))
-	return minf(1,value)
+	return 0.0 if value<0.0 else minf(1,value)
 
 static func update_particle(p: Dictionary, definition: Dictionary, dt: float, age: float) -> void:
 	SpiceNative.update_particle(p,definition,dt,age)

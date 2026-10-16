@@ -2,7 +2,7 @@
 
 Reconstruct Spice Bandits 1.14 for macOS, preserving its original appearance, campaign, tower branches, enemy behavior, sound, and progression as closely as the evidence allows.
 
-R135 passes all ten local packaged verification suites, including the unchanged performance limit. It restores bounded original death bursts, their independent clocks and exact float32 expiry, and clears stale drawing on reset. Full original effect ownership, appearance, interactions and progression remain under reconstruction. The [private R135 recovery checkpoint](https://github.com/ctadros1/spice-bandits-remastered/releases/tag/backup-2026-10-16-r135) has verified source, app restoration and evidence hashes. Earlier failed candidates remain preserved.
+R137 passes all ten native suites, including 539 presentation checks / 214 PNGs and the unchanged 33.34 ms median performance gate (4× 32.685/39.581 ms median/p95). The live particle math restores the original zero-opacity floor and fade-window cap; the new child reference component remains disconnected. Full build gates pass 4,035 originals, 77 scripts and 49,931 exact child/opacity checks. All protected saves/package/signature/isolation/cleanup pass. The refreshed 45-pair guide is byte-identical to reviewed R135; five changed presentation states and three focused source-native smoke captures were inspected. Signed source and R137 private recovery verification are pending; R135 remains the verified private app backup. [Particle-child evidence and limits](docs/mechanics/PARTICLE_CHILDREN.md). Offline reconstruction remains incomplete.
 
 Start with [PLAN.md](PLAN.md). Supporting material:
 

@@ -1,0 +1,1416 @@
+{
+  "cases": [
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": false,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 0,
+        "allocations": 0
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": false,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 0,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": false,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": false,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 1,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": false
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 0,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    },
+    {
+      "input": {
+        "found": true,
+        "texture": true,
+        "homogeneous": true,
+        "uv_list": true,
+        "child_name": "Creep1DebrisSmoke",
+        "info": true
+      },
+      "output": {
+        "returned": 8404992,
+        "allocations": 1,
+        "header_exact": true,
+        "active": 0,
+        "clock_bits": 0,
+        "release_bits": 0,
+        "delay_bits": 0,
+        "backup_rate": 6,
+        "wind_flag": 1,
+        "homogeneous_flag": 0,
+        "first_release_flag": 1,
+        "active_head": 0,
+        "pool_head": 0,
+        "texture": 8409088,
+        "info": 8417280,
+        "child_string": 8392960,
+        "texture_sequence": 8396960,
+        "texture_list": 8396972
+      }
+    }
+  ],
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_functions_unchanged": true,
+  "original_unchanged": true,
+  "scope": "Full original GetNewParticleSystem/C2 on supplied resource header; map/string/new/memcpy/memset/texture/unwind stubs explicit. Header copy/live clock/count/list/pointer initialization; no original resource parser, GPU or game execution."
+}

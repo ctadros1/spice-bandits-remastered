@@ -54,6 +54,8 @@ struct ParticleCoefficients {
         // Original lifetime field is float32, including its expiry comparison.
         life=f32(double(d.get("life_cycle",1)));raw_life=double(life);
         fade=f32(double(d.get("fade_in_time",0)));blend=f32(double(d.get("blend_delay",0)));
+        // Update11117a..11118c caps fade-in at the blend-window boundary.
+        if(blend>0)fade=std::min(fade,f32(double(life)/blend));
     }
     float opacity(float age) const {
         float value=1.0f;
@@ -63,7 +65,8 @@ struct ParticleCoefficients {
         } else if(fade>0) {
             value=age<=fade ? f32(double(age)/fade) : f32(1.0-double(f32(double(f32(double(age)-fade))/f32(double(life)-fade))));
         } else if(blend==0) value=f32(1.0-double(f32(double(age)/life)));
-        return std::min(1.0f,value);
+        // Update111204..111212 selects zero for a negative computed opacity.
+        return value<0.0f?0.0f:std::min(1.0f,value);
     }
     void integrate(Dictionary p,double dt,float age) const {
         const Keys &k=keys();

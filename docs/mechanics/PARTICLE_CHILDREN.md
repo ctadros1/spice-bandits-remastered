@@ -1,4 +1,26 @@
-# Particle children: preliminary ownership evidence
+# Particle children and opacity
+
+R137 corrects two rules in the existing live particle math: computed opacity is floored at zero, and fade-in is capped at the blend window. The original Update instructions at 0x11117a–0x11118c and 0x111204–0x111212 establish these rules. BaseSmoke's authored life 2 / blend 2 / fade 2.8 makes the second correction visible: at age 0.2 its original opacity is 0.2, and at age 1 it is 1. Both the native helper and script fallback now match the original float bits.
+
+The new `particle_child_view.gd` remains a disconnected reference component. Live ParticleFX still creates repeated global children; owned child systems, retained dying actors and room-wide ordering are unfinished. Do not treat the reference component as completed reconstruction.
+
+The build passes 49,931 exact checks against:
+
+- 64 full original GetNewParticleSystem/C2 factory cases, including missing definitions, texture properties, UV lists and opaque info pointers. New systems have no initial emission.
+- 96 full original recursive FillBuffers cases and 192 held renders. These cover parent-first order, original degenerate strip bridges, exact local float positions/UVs and signed-int-to-low-byte RGBA packing. Rendering mutates child colors in place; a held second render multiplies them again.
+- The earlier 18-state recursive Emit/Update/Restart/D2 ownership trace, including child retention across pooling and reuse and recursive destruction.
+- 126 original motion/delay/amplitude/disable/first-release cases, comprising 1,638 frames. Motion gating, discarded entry-delay overflow, strict float32 release comparisons, child update placement and phase advancement are compared bit for bit.
+- 373 full original opacity cases across all authored life/blend/fade combinations and boundary ages. These check actual native math and the script fallback, including pooled particles and the BaseSmoke fade cap.
+
+All four new fixtures reproduce byte for byte in independent second original-code executions (`builds/particle-child-r137-reproduction.json`). Original executable files and executed function bodies remain unchanged. Supplied records and explicit map/string/allocation/deletion/memory/texture callbacks and trigonometry stubs are documented in the generators. This is bounded compiled-function evidence, not an execution of the original resource parser, global RNG, room, GPU or complete game.
+
+The source OpenGL BaseSmoke probe captures ages 0.2, 1 and 1.8 with exact original opacity bits (`builds/particle-opacity-r137-source-after`). All three captures were inspected. Its scope is a supplied single-step source/native trajectory with preserved texture, not packaged before/after or original-GPU equivalence. The attempt to run an external script through the frozen R135 export timed out with no output; the owned process was killed and reaped, all saves stayed unchanged, and the attempt is preserved in `builds/particle-opacity-r137-export-script-failure`. Its cause is unidentified.
+
+Initial signed-color packing, pooled negative-opacity and remaining fade-window failures are retained in separate `builds/particle-child-r137-*failure` and `builds/particle-opacity-r137-pre-port` folders. Original expectations were unchanged; no tolerance or performance threshold was relaxed. The full R137 build and all ten frozen packaged suites pass, including the unchanged 33.34 ms median performance gate (4× 32.685 ms median / 39.581 ms p95). All protected saves, signature/package/isolation/cleanup guards pass. All45guide pairs/90hashes/12sheets are exact to reviewed R135; 209/214 presentation images match and five changed transition/pointer states were inspected. R135 remains the verified private app checkpoint until R137 recovery verification finishes.
+
+Next, integrate actual owned children using the verified lifecycle and recursive render rules, with an appropriate native path and the existing script reference. Preserve pure geometry comparisons and restore identical owned state before comparing renderer paths: render mutation must not be hidden by weakening equality checks. Full caller anchors, retained dying actors/splash, owner/registry/room timing, authored random/wind behavior and original-device fidelity remain open.
+
+## Historical R136 preliminary trace
 
 R136 adds original-code evidence only. The current game, all-ten results and verified private app backup remain R135. No child ownership change is enabled in the game yet.
 

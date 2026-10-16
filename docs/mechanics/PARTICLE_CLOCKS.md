@@ -1,5 +1,7 @@
 # Particle clocks and expiry
 
+R137 corrects the live opacity floor and fade-window cap using 373 original Update cases across every authored life/blend/fade combination; the native helper and script fallback pass exact bits. Its broader child model remains disconnected. [Evidence and remaining integration](PARTICLE_CHILDREN.md).
+
 R135 passes all ten local native suites. This is bounded evidence for initial death bursts and float32 lifetime expiry; full original particle ownership and offline reconstruction remain incomplete.
 
 Original SetDie creates each sorted alias containing `explosion` at its drawn aim point with a5second interval. The supplied newborn parent tails finish before another release. Main currently uses a one-burst adapter at its logical event point. That caller anchor, existing smoke/status systems and complete retained-owner lifetime remain open.
