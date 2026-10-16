@@ -1,0 +1,1780 @@
+{
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "protected_original_functions_unchanged": true,
+  "inputs": {
+    "parent_life": 0.3,
+    "child_life": 0.12,
+    "parent_maximum": 3,
+    "initial_parent_emit": 2,
+    "child_maximum": 10,
+    "child_emit": 1,
+    "child_interval": 0.05,
+    "dt": 0.03,
+    "pooled_wait_dt": 0.1,
+    "source_point": [
+      101.25,
+      203.5
+    ],
+    "velocity": [
+      10,
+      -70
+    ],
+    "wind_enabled": false,
+    "variances": 0,
+    "child_name": "Creep1DebrisSmoke",
+    "factory_initialization": "explicit supplied short-life records, not authored resource parsing"
+  },
+  "states": [
+    {
+      "label": "initial_emit",
+      "parent_clock_bits": 0,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120567296,
+            1129021440
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120567296,
+            1129021440
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 2,
+      "child_updates": 0,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 0,
+          "active": 0,
+          "active_chain": [],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 0,
+          "active": 0,
+          "active_chain": [],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_1",
+      "parent_clock_bits": 1022739087,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120606618,
+            1128883814
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120606618,
+            1128883814
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 2,
+      "child_updates": 2,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1022739087,
+          "active": 0,
+          "active_chain": [],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1022739087,
+          "active": 0,
+          "active_chain": [],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_2",
+      "parent_clock_bits": 1031127695,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120645940,
+            1128746188
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120645940,
+            1128746188
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 4,
+      "child_updates": 4,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1031127695,
+          "active": 1,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120645940,
+                1128746188
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1031127695,
+          "active": 1,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120645940,
+                1128746188
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_3",
+      "parent_clock_bits": 1035489771,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120685262,
+            1128608562
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120685262,
+            1128608562
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 4,
+      "child_updates": 6,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1035489771,
+          "active": 1,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120685262,
+                1128608562
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1035489771,
+          "active": 1,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120685262,
+                1128608562
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_4",
+      "parent_clock_bits": 1039516303,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120724584,
+            1128470936
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120724584,
+            1128470936
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 6,
+      "child_updates": 8,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1039516303,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120724584,
+                1128470936
+              ]
+            },
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120724584,
+                1128470936
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1039516303,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120724584,
+                1128470936
+              ]
+            },
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120724584,
+                1128470936
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_5",
+      "parent_clock_bits": 1041865113,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120763906,
+            1128333310
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120763906,
+            1128333310
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 6,
+      "child_updates": 10,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1041865113,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120763906,
+                1128333310
+              ]
+            },
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120763906,
+                1128333310
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1041865113,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120763906,
+                1128333310
+              ]
+            },
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120763906,
+                1128333310
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_6",
+      "parent_clock_bits": 1043878379,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120803228,
+            1128195684
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120803228,
+            1128195684
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 12,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1043878379,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            },
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1043878379,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            },
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_7",
+      "parent_clock_bits": 1045891645,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120842550,
+            1128058058
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120842550,
+            1128058058
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 14,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1045891645,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120842550,
+                1128058058
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120842550,
+                1128058058
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1045891645,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120842550,
+                1128058058
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1039516303,
+              "position_bits": [
+                1120842550,
+                1128058058
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "update_8",
+      "parent_clock_bits": 1047904911,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120881872,
+            1127920432
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120881872,
+            1127920432
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 16,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1047904911,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120881872,
+                1127920432
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120881872,
+                1127920432
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1047904911,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120881872,
+                1127920432
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120881872,
+                1127920432
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "update_9",
+      "parent_clock_bits": 1049247088,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120921194,
+            1127782806
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120921194,
+            1127782806
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 18,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1049247088,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120921194,
+                1127782806
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120921194,
+                1127782806
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1049247088,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120921194,
+                1127782806
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120921194,
+                1127782806
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1031127695,
+              "position_bits": [
+                1120803228,
+                1128195684
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "update_10",
+      "parent_clock_bits": 1050253721,
+      "parent_active": 2,
+      "active": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        },
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 20,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_11",
+      "parent_clock_bits": 1051260354,
+      "parent_active": 0,
+      "active": [],
+      "pool": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        },
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 20,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "update_12",
+      "parent_clock_bits": 1052266987,
+      "parent_active": 0,
+      "active": [],
+      "pool": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        },
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 20,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "pooled_wait",
+      "parent_clock_bits": 1055622430,
+      "parent_active": 0,
+      "active": [],
+      "pool": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        },
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 20,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "reuse",
+      "parent_clock_bits": 1055622430,
+      "parent_active": 1,
+      "active": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 1055622430,
+          "position_bits": [
+            1120567296,
+            1129021440
+          ]
+        }
+      ],
+      "pool": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 20,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "reused_update",
+      "parent_clock_bits": 1056629063,
+      "parent_active": 1,
+      "active": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 1055622430,
+          "position_bits": [
+            1120606618,
+            1128883814
+          ]
+        }
+      ],
+      "pool": [
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 21,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1051260354,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120999838,
+                1127507554
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120999838,
+                1127507554
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ]
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "restart",
+      "parent_clock_bits": 1056629063,
+      "parent_active": 0,
+      "active": [],
+      "pool": [
+        {
+          "pointer": 8413184,
+          "child": 8396800,
+          "born_bits": 1055622430,
+          "position_bits": [
+            1120606618,
+            1128883814
+          ]
+        },
+        {
+          "pointer": 8413440,
+          "child": 8397312,
+          "born_bits": 0,
+          "position_bits": [
+            1120960516,
+            1127645180
+          ]
+        }
+      ],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 21,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1051260354,
+          "active": 2,
+          "active_chain": [
+            {
+              "pointer": 8413952,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120999838,
+                1127507554
+              ]
+            },
+            {
+              "pointer": 8414464,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120999838,
+                1127507554
+              ]
+            }
+          ],
+          "pool_chain": [
+            {
+              "pointer": 8414976,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ]
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [
+            {
+              "pointer": 8413696,
+              "child": 0,
+              "born_bits": 1050253721,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414208,
+              "child": 0,
+              "born_bits": 1047904911,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            },
+            {
+              "pointer": 8414720,
+              "child": 0,
+              "born_bits": 1043878379,
+              "position_bits": [
+                1120960516,
+                1127645180
+              ]
+            }
+          ],
+          "pool_chain": []
+        }
+      ]
+    },
+    {
+      "label": "destructor",
+      "parent_clock_bits": 1056629063,
+      "parent_active": 0,
+      "active": [],
+      "pool": [],
+      "factory_calls": 2,
+      "heap_allocations": 8,
+      "child_updates": 21,
+      "children": [
+        {
+          "pointer": 8396800,
+          "clock_bits": 1051260354,
+          "active": 2,
+          "active_chain": [],
+          "pool_chain": []
+        },
+        {
+          "pointer": 8397312,
+          "clock_bits": 1050253721,
+          "active": 3,
+          "active_chain": [],
+          "pool_chain": []
+        }
+      ]
+    }
+  ],
+  "factory": [
+    {
+      "name": "Creep1DebrisSmoke",
+      "info": 0,
+      "child": 8396800
+    },
+    {
+      "name": "Creep1DebrisSmoke",
+      "info": 0,
+      "child": 8397312
+    }
+  ],
+  "child_updates": [
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120606618,
+        1128883814
+      ],
+      "clock_before_bits": 0
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120606618,
+        1128883814
+      ],
+      "clock_before_bits": 0
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120645940,
+        1128746188
+      ],
+      "clock_before_bits": 1022739087
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120645940,
+        1128746188
+      ],
+      "clock_before_bits": 1022739087
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120685262,
+        1128608562
+      ],
+      "clock_before_bits": 1031127695
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120685262,
+        1128608562
+      ],
+      "clock_before_bits": 1031127695
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120724584,
+        1128470936
+      ],
+      "clock_before_bits": 1035489771
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120724584,
+        1128470936
+      ],
+      "clock_before_bits": 1035489771
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120763906,
+        1128333310
+      ],
+      "clock_before_bits": 1039516303
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120763906,
+        1128333310
+      ],
+      "clock_before_bits": 1039516303
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120803228,
+        1128195684
+      ],
+      "clock_before_bits": 1041865113
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120803228,
+        1128195684
+      ],
+      "clock_before_bits": 1041865113
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120842550,
+        1128058058
+      ],
+      "clock_before_bits": 1043878379
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120842550,
+        1128058058
+      ],
+      "clock_before_bits": 1043878379
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120881872,
+        1127920432
+      ],
+      "clock_before_bits": 1045891645
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120881872,
+        1127920432
+      ],
+      "clock_before_bits": 1045891645
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120921194,
+        1127782806
+      ],
+      "clock_before_bits": 1047904911
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120921194,
+        1127782806
+      ],
+      "clock_before_bits": 1047904911
+    },
+    {
+      "child": 8397312,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120960516,
+        1127645180
+      ],
+      "clock_before_bits": 1049247088
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120960516,
+        1127645180
+      ],
+      "clock_before_bits": 1049247088
+    },
+    {
+      "child": 8396800,
+      "dt_bits": 1022739087,
+      "position_bits": [
+        1120606618,
+        1128883814
+      ],
+      "clock_before_bits": 1050253721
+    }
+  ],
+  "deleted": [
+    8413952,
+    8414464,
+    8414976,
+    8396800,
+    8413184,
+    8413696,
+    8414208,
+    8414720,
+    8397312,
+    8413440
+  ],
+  "passed": true,
+  "scope": "Full original parent Emit/Update/Restart/D2 and recursive child Update/Emit/D2 on supplied simple records. Factory records name and supplies child initialized fields; new/delete/string/unwind are explicit recording stubs, randomness disabled by supplied zero variances. External heap-delete ARM bx-lr stub modifies emulated stub only. Demonstrates child allocation-on-new-parent, frozen pooled child clocks, reuse without factory/reset, restart pooling and recursive destruction of active/pooled child particles. No original resource parser/factory initialization, trajectories/global RNG/whole room/render/GPU or game integration."
+}
