@@ -7,6 +7,7 @@ const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 const CreepDisco=preload("res://scripts/creep_disco_view.gd")
+const CreepState=preload("res://scripts/creep_state_view.gd")
 const Death=preload("res://scripts/creep_death_view.gd")
 const ParticleState=preload("res://scripts/particle_state.gd")
 const MapTheme=preload("res://scripts/map_theme.gd")
@@ -782,6 +783,7 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 	enemies.append(e)
 	set_enemy_path(e)
 	particle_state.initialize_creep(e,MapTheme.selector(map.get("theme")))
+	CreepState.initialize(e)
 	# ProcessWaves calls UseLsd directly after AddCreep for positive timers.
 	# This caller does not use the manager's same-owner filter.
 	if int(disco_state.remaining)>0:use_disco_on(e,1,false)
@@ -1173,13 +1175,8 @@ func disco_cell_affiliation(e:Dictionary) -> Variant:
 	if not within(e.cell):return null
 	return int(map.cells[cell_index(e.cell)].get("p",1))
 
-func set_disco_creep_state(value:int,e:Dictionary) -> void:
-	var previous=int(e.state)
-	if previous!=value and previous in [0,7] and value in [1,2,3,4,5,6]:
-		var multiplier=float(e.get("smoke_idle_multiplier",0))
-		if multiplier>0 and e.get("particle_roots",[]).any(func(sys):return str(sys.creep_alias)=="smoke"):
-			e.smoke_work_interval=f32(float(e.smoke_work_interval)*multiplier)
-	e.state=value
+func set_disco_creep_state(value:int,e:Dictionary,stop_sound:Callable=Callable()) -> void:
+	CreepState.change(e,value,stop_sound)
 
 func use_disco_on(e:Dictionary,player:int=1,manager:bool=true) -> bool:
 	if manager and int(e.get("owner",0))==player:return false
