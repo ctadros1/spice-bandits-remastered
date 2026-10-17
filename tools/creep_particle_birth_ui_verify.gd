@@ -117,6 +117,26 @@ func transformed_headers() -> void:
 			check(sims[0].particle_state.random.state==sims[1].particle_state.random.state and sims[0].particle_state.owned_serial==sims[1].particle_state.owned_serial,"transformed native/reference RNG and serial")
 		for k in 2:sims[k].particle_state.destroy_creep(actors[k])
 	check(before==var_to_bytes(content.particles),"all authored particle templates immutable")
+func map_themes() -> void:
+	var fixture=JSON.parse_string(FileAccess.get_file_as_string("res://../tests/fixtures/native-map-theme-reference.json"))
+	var theme=load("res://scripts/map_theme.gd") if FileAccess.file_exists("res://scripts/map_theme.gd") else null
+	check(theme!=null,"missing original map theme selector")
+	if theme!=null:
+		for row in fixture.cases:check(theme.selector(row.input)==int(row.selector),"full original theme exact string mapping")
+	var type=-1
+	for i in content.catalog.tower_creeps.size():
+		if str(content.catalog.tower_creeps[i].get("filename",""))=="creep5":type=i;break
+	check(type>0,"preserved hover resource has populated catalog entry")
+	if type<0:return
+	for row in fixture.preserved_imported_maps:
+		var s=make_sim();s.map=s.map.duplicate(true);s.map.theme=content.maps[row.map].get("theme")
+		var e=s.spawn_enemy(type,0,"",9001,false)
+		var roots=e.particle_roots.filter(func(sys):return str(sys.creep_alias) in ["hover_flow","hover_flow2"])
+		check(roots.size()==2,"actual hover roots for imported map "+str(row.map))
+		for sys in roots:
+			var original=content.particles.systems[sys.name].color
+			for k in 3:check(bits(sys.definition.color[k])==bits(1 if int(row.selector)==1 else original[k]),"actual constructor theme RGB "+str(row.map))
+		s.particle_state.destroy_creep(e)
 func run() -> void:
 	content=root.get_node("Content")
 	var fixture=JSON.parse_string(FileAccess.get_file_as_string("res://../tests/fixtures/native-creep-particle-constructor-reference.json"))
@@ -153,7 +173,7 @@ func run() -> void:
 			for k in 3:check(bits(d.color[k])==int(x.rgb_bits[k]),"original constructor RGB")
 			check(bits(d.color[3])==int(x.alpha_bits),"original constructor alpha")
 		s.particle_state.destroy_creep(e)
-	owner_fields();birth_tail();transformed_headers()
+	owner_fields();birth_tail();transformed_headers();map_themes()
 	# ProcessSpeed must also turn on the existing freeze alias for consumed slow.
 	for reference in [true,false]:
 		var e={"grow_ms":400,"speed":1000,"slow_pending":.6,"freeze_auxiliary_present":true,"freeze_auxiliary_value":17}

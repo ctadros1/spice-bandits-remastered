@@ -118,7 +118,7 @@ static func prepare(sim, e: Dictionary) -> void:
 	if future_at>=e.path.size():
 		if p>=0.5 and e.has("semi"):e.semi.enabled=false
 		return
-	var peek={"path":e.path,"path_at":future_at,"cell":e.path[e.path_at],"disco_until":e.disco_until,"bombing":e.get("bombing",false),"def":e.def}
+	var peek={"path":e.path,"path_at":future_at,"cell":e.path[e.path_at],"disco_until":e.disco_until,"disco_managed":e.get("disco_managed",false),"state":e.get("state",0),"bombing":e.get("bombing",false),"def":e.def}
 	if not sim.movement_point_allowed(peek):
 		if p >= 0.5 and e.has("semi"): e.semi.enabled = false
 		return

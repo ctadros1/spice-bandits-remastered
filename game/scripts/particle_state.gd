@@ -14,6 +14,8 @@ var serial=0
 var owned_serial=0
 var owned_prepared=true
 var reference_emission=false
+var reference_owner_dispatch=false
+var reference_owner_fields=false
 
 func _init() -> void:
 	var tree=Engine.get_main_loop()
@@ -22,7 +24,7 @@ func _init() -> void:
 func reset() -> void:
 	for sys in systems:
 		if sys.has("owned_tree"):Owned.destroy(sys.owned_tree,[])
-	for e in owners.values():e.particle_roots=[]
+	for e in owners.values():e.particle_roots=[];e.disco_root={}
 	owners.clear()
 	owned_serial=0;systems.clear();clock_ms=0.0;clock_seconds=0.0;serial=0;random.seed=114
 
@@ -207,13 +209,19 @@ func creep_root(e:Dictionary,alias:String,point:Vector2,initial_emit:bool=true,r
 
 func initialize_creep(e:Dictionary,raw_map_field8:Variant=null) -> void:
 	# All non-explosion roots are born empty. Only SetDie explicitly Emits.
-	# Raw map+8 can be supplied by original-field tests; its live producer is
-	# unresolved, so live hover color retains the authored resource RGB.
+	# Raw map+8 can be supplied by original-field tests. Simulation derives
+	# the live selector through the independently checked original theme mapping.
 	var aliases=content.particles.bindings.get("creeps/"+str(e.def.filename),{}).keys();aliases.sort()
 	for alias in aliases:
 		if not "explosion" in str(alias):creep_root(e,str(alias),e.pos,false,raw_map_field8)
 	e.freeze_auxiliary_present=e.get("particle_roots",[]).any(func(sys):return str(sys.creep_alias)=="freeze")
 	e.freeze_auxiliary_value=0
+	bind_creep_disco_root(e)
+
+func bind_creep_disco_root(e:Dictionary) -> void:
+	e.disco_root={}
+	for sys in e.get("particle_roots",[]):
+		if str(sys.creep_alias)=="lsd":e.disco_root=sys.owned_tree;return
 
 func stop_creep(e:Dictionary) -> void:
 	for sys in e.get("particle_roots",[]):
@@ -244,6 +252,7 @@ func refresh_creep(sim,e:Dictionary) -> void:
 	for sys in e.get("particle_roots",[]):
 		var alias=str(sys.creep_alias)
 		if alias=="freeze":sys.owned_tree.rate=int(e.get("freeze_auxiliary_value",0))
+		elif alias=="lsd" and e.get("disco_managed",false):pass
 		elif alias in ["lsd","poison","radiation"]:sys.owned_tree.rate=int(sys.owned_tree.backup_rate) if alias in aliases else 0
 		sys.owner_hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
 
@@ -252,6 +261,11 @@ func stop_creep_smoke(e:Dictionary) -> void:
 		if str(sys.creep_alias)=="smoke":sys.owned_tree.rate=0;sys.emitting=false
 
 func update_creep_fields(e:Dictionary,aim:Vector2,direction:Vector2,heavy:bool=false) -> void:
+	if not reference_owner_fields:
+		SpiceNative.update_creep_particle_fields(e,aim,direction,heavy);return
+	reference_creep_fields(e,aim,direction,heavy)
+
+func reference_creep_fields(e:Dictionary,aim:Vector2,direction:Vector2,heavy:bool=false) -> void:
 	# Full original UpdateParticles: its smoke pointer aliases a mapped root.
 	# It is never a separately advanced emitter. Preserve float32 operation order.
 	for sys in e.get("particle_roots",[]):
@@ -276,6 +290,7 @@ func update_creep_fields(e:Dictionary,aim:Vector2,direction:Vector2,heavy:bool=f
 		sys.emitting=int(tree.rate)!=0
 
 func advance_creep(e:Dictionary,dt_ms:float) -> void:
+	if not reference_emission and not reference_owner_dispatch and SpiceNative.advance_creep_particles(e.get("particle_roots",[]),clock_ms,dt_ms,make_owned_particle,make_owned_child,owned_prepared):return
 	var dt=Math.f32(Math.f32(dt_ms)*Math.f32(.001))
 	for sys in e.get("particle_roots",[]):advance_owned_system(sys,dt,reference_emission)
 
@@ -285,6 +300,7 @@ func destroy_creep(e:Dictionary) -> void:
 	owners.erase(id)
 	systems=systems.filter(func(sys):return int(sys.get("creep_owner",-1))!=id)
 	e.particle_roots=[]
+	e.disco_root={}
 
 func advance_unowned(dt:float) -> void:
 	# Owner roots are stepped at their creep's actual phase, even headless.
@@ -306,4 +322,6 @@ func replace_systems(value:Array[Dictionary]) -> void:
 	for sys in systems:
 		var id=int(sys.get("creep_owner",-1))
 		if owners.has(id):owners[id].particle_roots.append(sys)
-	for e in owners.values():e.particle_roots.sort_custom(func(a,b):return str(a.creep_alias)<str(b.creep_alias))
+	for e in owners.values():
+		e.particle_roots.sort_custom(func(a,b):return str(a.creep_alias)<str(b.creep_alias))
+		bind_creep_disco_root(e)

@@ -1,0 +1,955 @@
+{
+  "method": "R161 bounded original map Load cell-affiliation assignment slice.\nOriginal0x100b12..0x100b66 (84bytes) executes with supplied map/grid/row/cell/\nstack records. XML getChildNode/getText/destructor and integer atoi are stubs;\nchild name is read from original instructions/data. No full Load/XML parser,\ncell constructor, runtime map mutation, room/game/pathfinder/GPU executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "slice": {
+    "start": "0x100b12",
+    "stop": "0x100b66",
+    "bytes": 84,
+    "sha256": "2fb01a09d86fdbf69b8e53e80a6416fb6c085f5af1367e87f36c623eede1b049"
+  },
+  "original_unchanged": true,
+  "cases": [
+    {
+      "supplied_getText": null,
+      "row": 0,
+      "column": 0,
+      "cell108": 1,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": null
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        }
+      ]
+    },
+    {
+      "supplied_getText": null,
+      "row": 1,
+      "column": 2,
+      "cell108": 1,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": null
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "",
+      "row": 0,
+      "column": 0,
+      "cell108": 0,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": ""
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": ""
+        }
+      ]
+    },
+    {
+      "supplied_getText": "",
+      "row": 1,
+      "column": 2,
+      "cell108": 0,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": ""
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": ""
+        }
+      ]
+    },
+    {
+      "supplied_getText": "0",
+      "row": 0,
+      "column": 0,
+      "cell108": 0,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "0"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "0"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "0",
+      "row": 1,
+      "column": 2,
+      "cell108": 0,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "0"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "0"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "1",
+      "row": 0,
+      "column": 0,
+      "cell108": 1,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "1"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "1"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "1",
+      "row": 1,
+      "column": 2,
+      "cell108": 1,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "1"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "1"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "2",
+      "row": 0,
+      "column": 0,
+      "cell108": 2,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "2"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "2"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "2",
+      "row": 1,
+      "column": 2,
+      "cell108": 2,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "2"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "2"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "3",
+      "row": 0,
+      "column": 0,
+      "cell108": 3,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "3"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "3"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "3",
+      "row": 1,
+      "column": 2,
+      "cell108": 3,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "3"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "3"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "-1",
+      "row": 0,
+      "column": 0,
+      "cell108": 4294967295,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "-1"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "-1"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "-1",
+      "row": 1,
+      "column": 2,
+      "cell108": 4294967295,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "-1"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "-1"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "2147483647",
+      "row": 0,
+      "column": 0,
+      "cell108": 2147483647,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "2147483647"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "2147483647"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "2147483647",
+      "row": 1,
+      "column": 2,
+      "cell108": 2147483647,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "2147483647"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "2147483647"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "-2147483648",
+      "row": 0,
+      "column": 0,
+      "cell108": 2147483648,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "-2147483648"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "-2147483648"
+        }
+      ]
+    },
+    {
+      "supplied_getText": "-2147483648",
+      "row": 1,
+      "column": 2,
+      "cell108": 2147483648,
+      "calls": [
+        {
+          "call": "getChildNode-stub",
+          "original_key": "p"
+        },
+        {
+          "call": "getText-stub",
+          "supplied": "-2147483648"
+        },
+        {
+          "call": "XMLNodeDestructor-stub"
+        },
+        {
+          "call": "atoi-stub",
+          "supplied": "-2147483648"
+        }
+      ]
+    }
+  ],
+  "preserved_imported_maps": [
+    {
+      "map": "1",
+      "cells": 234,
+      "p_counts": {
+        "0": 234
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "100",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1000",
+      "cells": 270,
+      "p_counts": {
+        "0": 270
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1001",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1002",
+      "cells": 238,
+      "p_counts": {
+        "0": 238
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1003",
+      "cells": 289,
+      "p_counts": {
+        "0": 289
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1004",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1005",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1006",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1007",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1008",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1009",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "101",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1010",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "1011",
+      "cells": 992,
+      "p_counts": {
+        "0": 992
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "13",
+      "cells": 952,
+      "p_counts": {
+        "0": 952
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "200",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "201",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "202",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "203",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "204",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "205",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "300",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "301",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "302",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "303",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "304",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "400",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "500",
+      "cells": 756,
+      "p_counts": {
+        "0": 756
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "501",
+      "cells": 1036,
+      "p_counts": {
+        "0": 1036
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "502",
+      "cells": 1036,
+      "p_counts": {
+        "0": 1036
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "606",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "607",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "608",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "609",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "610",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "611",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "612",
+      "cells": 441,
+      "p_counts": {
+        "0": 441
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "717",
+      "cells": 336,
+      "p_counts": {
+        "0": 336
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "718",
+      "cells": 336,
+      "p_counts": {
+        "0": 336
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "719",
+      "cells": 336,
+      "p_counts": {
+        "0": 336
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "720",
+      "cells": 361,
+      "p_counts": {
+        "0": 361
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "721",
+      "cells": 361,
+      "p_counts": {
+        "0": 361
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "722",
+      "cells": 646,
+      "p_counts": {
+        "0": 646
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "723",
+      "cells": 494,
+      "p_counts": {
+        "0": 494
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "800",
+      "cells": 432,
+      "p_counts": {
+        "0": 432
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "801",
+      "cells": 400,
+      "p_counts": {
+        "0": 400
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "802",
+      "cells": 440,
+      "p_counts": {
+        "0": 440
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "803",
+      "cells": 700,
+      "p_counts": {
+        "0": 700
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "804",
+      "cells": 340,
+      "p_counts": {
+        "0": 340
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "805",
+      "cells": 735,
+      "p_counts": {
+        "0": 735
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "810",
+      "cells": 418,
+      "p_counts": {
+        "0": 418
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "811",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "812",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "813",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "814",
+      "cells": 342,
+      "p_counts": {
+        "0": 342
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "900",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "901",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "902",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "903",
+      "cells": 252,
+      "p_counts": {
+        "0": 252
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "904",
+      "cells": 396,
+      "p_counts": {
+        "0": 396
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "905",
+      "cells": 270,
+      "p_counts": {
+        "0": 270
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "906",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "907",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "908",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "909",
+      "cells": 374,
+      "p_counts": {
+        "0": 374
+      },
+      "missing_p": 0
+    },
+    {
+      "map": "lobby_map",
+      "cells": 0,
+      "p_counts": {},
+      "missing_p": 0
+    }
+  ]
+}

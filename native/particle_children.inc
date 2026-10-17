@@ -12,23 +12,24 @@ uint8_t child_channel(double x) {
 }
 struct ChildQuad { Vector2 position[4],uv[4];uint8_t rgba[4]; };
 struct ChildRenderKeys {
-    const StringName clock{"clock_seconds"},born{"born_seconds"},size_var{"size_init_var"},orient{"orient_to_velocity"},angle{"direction_angle"},width{"width"},height{"height"},uv{"uv"},rgba{"rgba"},child{"child"};
+    const Variant clock{StringName("clock_seconds")},born{StringName("born_seconds")},size_var{StringName("size_init_var")},orient{StringName("orient_to_velocity")},angle{StringName("direction_angle")},width{StringName("width")},height{StringName("height")},uv{StringName("uv")},rgba{StringName("rgba")},child{StringName("child")};
+    const Variant definition{StringName("definition")},size{StringName("size")},scalable{StringName("scalable")},real_size{StringName("use_real_size")},real_alpha{StringName("real_alpha")},rotational{StringName("rotational")},life{StringName("life_cycle")},scale{StringName("scale")},texture{StringName("texture")},size_offset{StringName("size_offset")},pos{StringName("pos")},rotation{StringName("rotation")},particles{StringName("particles")},alpha{StringName("alpha")};
 };
 const ChildRenderKeys &child_keys() {static const ChildRenderKeys value;return value;}
 struct ChildAppearance {
     float size,clock=0,life=1,scale=0;
     bool size_var,scalable,real_size,rotates,real_alpha;
     explicit ChildAppearance(const Dictionary &system) {
-        const Keys &k=keys();const auto &ck=child_keys();const Dictionary d=system[k.definition];
-        size=f32(double(d.get(k.size,1)));size_var=double(d.get(ck.size_var,0))!=0;
-        scalable=d.get(k.scalable,false);real_size=d.get(k.use_real_size,false);real_alpha=d.get(k.real_alpha,false);
-        rotates=bool(d.get(k.rotational,false))||bool(d.get(ck.orient,false));
-        if(scalable) {clock=f32(double(system[ck.clock]));life=f32(double(d.get(k.life_cycle,1)));scale=f32(double(d.get(k.scale,0)));}
+        const auto &ck=child_keys();const Dictionary d=system[ck.definition];
+        size=f32(double(d.get(ck.size,1)));size_var=double(d.get(ck.size_var,0))!=0;
+        scalable=d.get(ck.scalable,false);real_size=d.get(ck.real_size,false);real_alpha=d.get(ck.real_alpha,false);
+        rotates=bool(d.get(ck.rotational,false))||bool(d.get(ck.orient,false));
+        if(scalable) {clock=f32(double(system[ck.clock]));life=f32(double(d.get(ck.life,1)));scale=f32(double(d.get(ck.scale,0)));}
     }
 };
 ChildQuad child_quad(bool root_rotation,const ChildAppearance &a,const Dictionary &p) {
-    const Keys &k=keys();const auto &ck=child_keys();const Dictionary t=p[k.texture];const float size=a.size;
-    float half=a.size_var?f32(double(size)+f32(double(p.get(k.size_offset,0)))):size;
+    const auto &ck=child_keys();const Dictionary t=p[ck.texture];const float size=a.size;
+    float half=a.size_var?f32(double(size)+f32(double(p.get(ck.size_offset,0)))):size;
     float factor=1;
     if(a.scalable) {
         const float age=f32(double(a.clock)-f32(double(p.get(ck.born,0))));
@@ -41,13 +42,13 @@ ChildQuad child_quad(bool root_rotation,const ChildAppearance &a,const Dictionar
         w=f32(double(f32(double(t[ck.width])*0.5))*size);h=f32(double(f32(double(t[ck.height])*0.5))*size);
         if(a.scalable) {w=f32(double(w)*factor);h=f32(double(h)*factor);}
     }
-    const Vector2 position=child_point(p[k.pos]);const float x=position.x,y=position.y;
+    const Vector2 position=child_point(p[ck.pos]);const float x=position.x,y=position.y;
     ChildQuad q;
     if(!a.rotates) {
         q.position[0]=Vector2(f32(double(x)-w),f32(double(y)-h));q.position[1]=Vector2(f32(double(x)+w),f32(double(y)-h));
         q.position[2]=Vector2(f32(double(x)-w),f32(double(y)+h));q.position[3]=Vector2(f32(double(x)+w),f32(double(y)+h));
     } else {
-        float angle=root_rotation?f32(double(p.get(k.rotation,0))):f32(double(p.get(ck.angle,0)));
+        float angle=root_rotation?f32(double(p.get(ck.rotation,0))):f32(double(p.get(ck.angle,0)));
         angle=f32(double(angle)+f32(1.57079632679489661923));
         const float c=f32(std::cos(double(angle))),s=f32(std::sin(double(angle)));
         const float wc=f32(double(w)*c),hs=f32(double(h)*s),hc=f32(double(h)*c),ws=f32(double(w)*s);
@@ -63,9 +64,13 @@ ChildQuad child_quad(bool root_rotation,const ChildAppearance &a,const Dictionar
     return q;
 }
 template<class Sink>void child_visit(bool root_rotation,const ChildAppearance &appearance,const Dictionary &p,Sink &sink) {
-    const Keys &k=keys();const auto &ck=child_keys();sink(child_quad(root_rotation,appearance,p));
-    const Dictionary child=p.get(ck.child,Dictionary());if(child.is_empty())return;
-    const ChildAppearance child_appearance(child);const Array particles=child[k.particles];const double opacity=p[k.alpha];
+    const auto &ck=child_keys();sink(child_quad(root_rotation,appearance,p));
+    // Dictionary::get evaluates its fallback even when the key is present.
+    // Read the existing child without allocating a discarded empty dictionary.
+    if(!p.has(ck.child))return;
+    const Dictionary child=p[ck.child];if(child.is_empty())return;
+    const Array particles=child[ck.particles];if(particles.is_empty())return;
+    const ChildAppearance child_appearance(child);const double opacity=p[ck.alpha];
     for(int i=0;i<particles.size();++i) {
         const Dictionary cp=particles[i];Array rgba=cp[ck.rgba];
         if(child_appearance.real_alpha)for(int j=0;j<3;++j)rgba[j]=double(f32(double(rgba[j])*opacity));
@@ -73,8 +78,9 @@ template<class Sink>void child_visit(bool root_rotation,const ChildAppearance &a
     }
 }
 template<class Sink>void child_visit_root(const Dictionary &root,Sink &sink) {
-    const Keys &k=keys();const ChildAppearance appearance(root);const Dictionary d=root[k.definition];const bool rotates=d.get(k.rotational,false);
-    const Array particles=root[k.particles];for(int i=0;i<particles.size();++i)child_visit(rotates,appearance,Dictionary(particles[i]),sink);
+    const auto &ck=child_keys();const Array particles=root[ck.particles];if(particles.is_empty())return;
+    const ChildAppearance appearance(root);const Dictionary d=root[ck.definition];const bool rotates=d.get(ck.rotational,false);
+    for(int i=0;i<particles.size();++i)child_visit(rotates,appearance,Dictionary(particles[i]),sink);
 }
 }
 namespace {
@@ -116,6 +122,7 @@ struct OwnedUpdateKeys {
     const Variant wind_enabled{String("wind_enabled")};
 };
 const OwnedUpdateKeys &owned_update_keys() {static const OwnedUpdateKeys value;return value;}
+const Array &owned_white_color() {static const Array value=Array::make(1,1,1,1);return value;}
 }
 void SpiceNative::owned_particle_emit(Dictionary system,int64_t count,Callable make_particle,Callable make_child) {
     const auto &k=owned_update_keys();
@@ -124,13 +131,18 @@ void SpiceNative::owned_particle_emit(Dictionary system,int64_t count,Callable m
     for(int64_t i=0;i<count;++i) {
         if(particles.size()>=int64_t(d.get(k.max_particles,100)))continue;
         const bool fresh=pool.is_empty();Dictionary p=fresh?Dictionary():Dictionary(pool.pop_front());
-        const Dictionary old_child=p.get(k.child,Dictionary());const Dictionary values=make_particle.call(system,i,fresh,p);p.merge(values,true);
+        Variant old_child;
+        if(!fresh) {
+            if(p.has(k.child)) {const Dictionary retained=p[k.child];old_child=retained;}
+            else old_child=Dictionary();
+        }
+        const Dictionary values=make_particle.call(system,i,fresh,p);p.merge(values,true);
         if(fresh) {
             const String name=d.get(k.child_system,"");p[k.child]=name.is_empty()?Variant(Dictionary()):make_child.call(name);
         } else p[k.child]=old_child;
         p[k.born_seconds]=system[k.clock_seconds];
         const double opacity=double(d.get(k.fade_in_time,0))>0?0:1;p[k.alpha]=opacity;
-        const Array color=d.get(k.color,Array::make(1,1,1,1));Array rgba;
+        const Array color=d.get(k.color,owned_white_color());Array rgba;
         for(int j=0;j<4;++j) {const float value=f32(double(color[j]));rgba.append(double(j==3||bool(d.get(k.real_alpha,false))?f32(double(value)*opacity):value));}
         p[k.rgba]=rgba;particles.push_front(p);system[k.first_release]=false;
     }
@@ -162,7 +174,7 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
         return ParticleCoefficients(d);
     }();
     coefficients.wind_enabled=bool(system[k.wind_enabled]);
-    const float life=f32(double(d.get(k.life_cycle,1)));const Array color=d.get(k.color,Array::make(1,1,1,1));Array live,pool=system[k.pool];
+    const float life=f32(double(d.get(k.life_cycle,1)));const Array color=d.get(k.color,owned_white_color());Array live,pool=system[k.pool];
     const bool limited=system.get(k.motion_limited,false);const double motion=system.get(k.motion_seconds,0);
     // Imported definitions are immutable. Reuse only within this update call.
     const bool real_alpha=d.get(k.real_alpha,false);const float amplitude=f32(double(d.get(k.amplifyX_withSin_by,0)));
@@ -177,8 +189,11 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
         if(real_alpha)for(int j=0;j<3;++j)rgba[j]=double(f32(double(color_values[j])*opacity));
         rgba[3]=double(f32(double(color_values[3])*opacity));
         if(active) {
-            live.append(p);Dictionary child=p.get(k.child,Dictionary());
-            if(moving&&!child.is_empty()) {child[k.pos]=p[k.pos];owned_particle_advance(child,dt,make_particle,make_child,interval_scale,prepared);}
+            live.append(p);
+            if(p.has(k.child)) {
+                Dictionary child=p[k.child];
+                if(moving&&!child.is_empty()) {child[k.pos]=p[k.pos];owned_particle_advance(child,dt,make_particle,make_child,interval_scale,prepared);}
+            }
         } else pool.push_front(p);
         if(amplitude!=0) {
             const double old=system.get(k.phase,0);const float phase=f32(old+f32(amplification_speed*dt));system[k.phase]=double(phase);
@@ -188,6 +203,61 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
     system[k.particles]=live;
     const float interval=f32(double(f32(double(system.get(k.interval_seconds,d.get(k.release_interval,1)))))*f32(interval_scale));
     if(interval<f32(double(clock)-double(system[k.release_seconds]))&&dt<life)owned_particle_emit(system,int64_t(system[k.rate]),make_particle,make_child);
+}
+void SpiceNative::update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy) {
+    // Original R148 owner arithmetic, including every float32 boundary. The
+    // script reference remains callable; no state or appearance is cached.
+    static const StringName roots_key("particle_roots"),tree_key("owned_tree"),alias_key("creep_alias"),binding_key("creep_binding"),max_hp("max_hp"),color_flag("smoke_color_flag"),base_key("smoke_base_interval"),max_multiplier("smoke_max_multiplier"),work_key("smoke_work_interval"),smoke_rate("smoke_rate"),interval_key("interval_seconds"),rate_key("rate"),backup_key("backup_rate"),offset_x("offsetX"),offset_y("offsetY"),moving_key("emitt_on_walking");
+    const auto &k=keys();const Array roots=actor.get(roots_key,Array());
+    for(int i=0;i<roots.size();++i) {
+        Dictionary sys=roots[i],tree=sys[tree_key];
+        if(String(sys[alias_key])=="smoke") {
+            const float maximum=f32(double(int64_t(actor[max_hp])));
+            if(double(actor[k.hp])<double(f32(double(maximum)*double(f32(.6000000238418579))))) {
+                const int64_t state=actor[k.state];
+                if(bool(actor.get(color_flag,false))&&state!=2&&state!=3) {
+                    const float ratio=f32(std::max(0.0,double(f32(double(actor[k.hp]))))/double(maximum));
+                    const float factor=f32(double(ratio)/double(f32(.6000000238418579)));
+                    const float base=f32(double(actor[base_key]));
+                    const float scaled=f32(double(base)*double(f32(double(actor[max_multiplier]))));
+                    const float difference=f32(double(scaled)-double(base));
+                    const float interval=f32(double(base)+double(f32(double(difference)*double(f32(1.0-double(factor))))));
+                    const float work=std::max(f32(.03),interval);actor[work_key]=double(work);tree[interval_key]=double(work);
+                    Dictionary d=tree[k.definition];Array color=d[k.color];for(int j=0;j<3;++j)color[j]=double(factor);
+                    tree[rate_key]=actor[smoke_rate];
+                }
+            } else tree[rate_key]=int64_t(0);
+        }
+        const Dictionary binding=sys.get(binding_key,Dictionary());
+        const float x=f32(double(binding.get(offset_x,0))),y=f32(double(binding.get(offset_y,0)));
+        const float distance=f32(std::sqrt(double(f32(double(f32(double(x)*x))+double(f32(double(y)*y))))));
+        sys[k.pos]=Vector2(f32(double(aim.x)+double(-f32(double(direction.x)*distance))),f32(double(aim.y)+double(-f32(double(direction.y)*distance))));
+        if(bool(binding.get(moving_key,false))) {
+            const int64_t state=actor[k.state];tree[rate_key]=(state>=1&&state<=6)||heavy?Variant(int64_t(0)):tree[backup_key];
+        }
+        sys[k.emitting]=int64_t(tree[rate_key])!=0;
+    }
+}
+bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared) {
+    // Only retained creep roots use this bridge. Validate before mutation;
+    // other system adapters retain their existing script/lifetime path.
+    static const StringName owned_tree("owned_tree"),retained("retain_for_owner"),death_burst("death_burst");
+    const auto &k=keys();
+    for(int i=0;i<roots.size();++i) {
+        const Dictionary sys=roots[i];
+        if(!bool(sys.get(retained,false))||!sys.has(owned_tree))return false;
+    }
+    const float dt=f32(double(f32(dt_ms))*double(f32(.001)));
+    for(int i=0;i<roots.size();++i) {
+        Dictionary sys=roots[i],tree=sys[owned_tree];tree[k.pos]=sys[k.pos];
+        if(!bool(tree.get(death_burst,false))&&double(sys[k.until])>=0&&clock_ms>=double(sys[k.until])) {sys[k.emitting]=false;tree["rate"]=int64_t(0);}
+        owned_particle_advance(tree,double(dt),make_particle,make_child.bindv(Array::make(sys[k.texture],sys[k.variation])),1.0,prepared);
+        sys[k.particles]=tree[k.particles];sys[k.phase]=double(tree.get(k.phase,0));
+        const double seconds=tree["clock_seconds"];sys[k.view_clock_ms]=seconds*1000.0;
+        if(sys.has(k.local_clock_seconds))sys[k.local_clock_seconds]=seconds;
+        if(int64_t(tree["rate"])==0)sys[k.emitting]=false;
+    }
+    return true;
 }
 void SpiceNative::owned_particle_restart(Dictionary system) {
     const Array particles=system["particles"];Array pool=system["pool"];

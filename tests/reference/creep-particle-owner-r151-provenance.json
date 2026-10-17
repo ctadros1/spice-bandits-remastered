@@ -1,0 +1,33 @@
+{
+  "baseline_sha256": "d9b227be2cd69ed416ea55c62277b7d36f06ff0cf2886bc591aeef323df2d116",
+  "baseline_bytes": 231139,
+  "independent_repeat_exact": true,
+  "rows": 1000,
+  "frozen_native_r151_sha256": "362f718a123aa353798df3c434fd2ea9b86e4486f9d2bedd74033bdc8c94a20a",
+  "source_commit": "08f77033289b1f48276539db442448dd5e161e7d",
+  "all_tracked_game_sources_match_frozen_r151": true,
+  "isolated_clone_project": "game was APFS cloned, helper replaced only in clone with actual frozen signed app library",
+  "results": [
+    {
+      "phase": "capture",
+      "exit": 0,
+      "report": {
+        "checks": 2,
+        "failures": [],
+        "rows": 1000,
+        "scope": "R151 behavior preservation, not original game parity. Complete normalized native system/actor field bytes preserve key types/order/numeric bits plus RNG/serials; only texture objects become class/path.10supplied resources/both prepared paths/50frames, constructor/freeze/slow/damage/heal/delay/wind/SetDie child bursts/pools/final destruction. Original caller/manager/GPU remain separate."
+      }
+    },
+    {
+      "phase": "independent-repeat",
+      "exit": 0,
+      "report": {
+        "checks": 7002,
+        "failures": [],
+        "rows": 1000,
+        "scope": "R151 behavior preservation, not original game parity. Complete normalized native system/actor field bytes preserve key types/order/numeric bits plus RNG/serials; only texture objects become class/path.10supplied resources/both prepared paths/50frames, constructor/freeze/slow/damage/heal/delay/wind/SetDie child bursts/pools/final destruction. Original caller/manager/GPU remain separate."
+      }
+    }
+  ],
+  "baseline_key_types_order_numeric_rng_serials_preserved": true
+}

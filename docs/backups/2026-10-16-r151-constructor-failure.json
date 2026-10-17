@@ -1,0 +1,78 @@
+{
+  "source_commit": "08f77033289b1f48276539db442448dd5e161e7d",
+  "signed_and_pushed": true,
+  "all_ten_accepted": false,
+  "presentation_checks": 549,
+  "presentation_captures": 216,
+  "median_ms": [
+    38.287,
+    43.274,
+    48.434
+  ],
+  "p95_ms": [
+    41.413,
+    48.478,
+    59.052
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_archive_restore": {
+    "source_files": 593,
+    "members": 1313,
+    "sha256": "f2981d2a3f791e304d6102e635b36ef4f92a07745b8a908bfe042ef51421e448",
+    "bytes": 979163736,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "release_id": 415453185,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-f96ef73455832b758c47",
+  "release_tag": "research-2026-10-16-r151-creep-particle-birth-failure",
+  "assets": [
+    {
+      "name": "r151-creep-particle-birth-failure.tar.gz",
+      "bytes": 979163736,
+      "sha256": "f2981d2a3f791e304d6102e635b36ef4f92a07745b8a908bfe042ef51421e448"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 221,
+      "sha256": "d85c2f9c4e8b55b30fb8ffce5e12bfaf5fa5bbf6811a1610ab06ab2b50d34a5e"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 295700,
+      "sha256": "cc995500c8e0cf16c9871c0a8d6b59b84a4effda9eeade1453e156d5dc856795"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 774,
+      "sha256": "2076d08bb862d8c75917f79f616ebbcc448ff42f70491de53d032a77c03572b4"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 481,
+      "sha256": "2432abd06ee9b6f2c3f7b4271aa9c437d04f8950faa0d0f6b963e6a7df6ec4bb"
+    },
+    {
+      "name": "r151-restore-proof.zip",
+      "bytes": 3041360,
+      "sha256": "dad97e7ae97df609e11e6d89c7682190190fd945f0a87234bdb275c9e9bf22ac"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_full_archive_restore": {
+    "source_files": 593,
+    "members": 1313,
+    "sha256": "f2981d2a3f791e304d6102e635b36ef4f92a07745b8a908bfe042ef51421e448",
+    "bytes": 979163736,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "verified_at": "2026-10-16T23:15:13.320033+00:00",
+  "no_remaining_game_processes": true
+}

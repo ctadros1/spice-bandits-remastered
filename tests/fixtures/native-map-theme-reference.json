@@ -1,0 +1,713 @@
+{
+  "method": "R152 original map theme selector and bounded Load assignment.\nExecute full GetThemeByName184bytes and its full ismatch40byte helper without\nstubs; separately execute Load0xfffa8..0xfffbc with supplied getText result\nand map/stack pointers. XML parsing and the remaining Load body do not run.\nNo original file/function bytes are modified; no game/GPU/room executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "full_function_bytes": {
+    "0x103338": 184,
+    "0x122020": 40
+  },
+  "load_assignment_slice": {
+    "start": "0xfffa8",
+    "stop": "0xfffbc",
+    "bytes": 20,
+    "sha256": "771141770c81f4151029d64627586a1b4aa6cfd6fab723711214e202acbfb426",
+    "supplied_getText_and_map_pointers": true
+  },
+  "original_unchanged": true,
+  "cases": [
+    {
+      "input": null,
+      "selector": 0,
+      "compared_original_names": []
+    },
+    {
+      "input": "",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "__unknown__",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "snow",
+      "selector": 1,
+      "compared_original_names": [
+        "snow"
+      ]
+    },
+    {
+      "input": "winter",
+      "selector": 1,
+      "compared_original_names": [
+        "snow",
+        "winter"
+      ]
+    },
+    {
+      "input": "desert",
+      "selector": 2,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert"
+      ]
+    },
+    {
+      "input": "forest",
+      "selector": 4,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest"
+      ]
+    },
+    {
+      "input": "jungle",
+      "selector": 3,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle"
+      ]
+    },
+    {
+      "input": "urban",
+      "selector": 5,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban"
+      ]
+    },
+    {
+      "input": "sport",
+      "selector": 6,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "SNOW",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "WINTER",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "DESERT",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "FOREST",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "JUNGLE",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "URBAN",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "SPORT",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "snow ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "winter ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "desert ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "forest ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "jungle ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "urban ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "sport ",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "",
+      "selector": 0,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "desert",
+      "selector": 2,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert"
+      ]
+    },
+    {
+      "input": "forest",
+      "selector": 4,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest"
+      ]
+    },
+    {
+      "input": "jungle",
+      "selector": 3,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle"
+      ]
+    },
+    {
+      "input": "snow",
+      "selector": 1,
+      "compared_original_names": [
+        "snow"
+      ]
+    },
+    {
+      "input": "sport",
+      "selector": 6,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban",
+        "sport"
+      ]
+    },
+    {
+      "input": "urban",
+      "selector": 5,
+      "compared_original_names": [
+        "snow",
+        "winter",
+        "desert",
+        "forest",
+        "jungle",
+        "urban"
+      ]
+    }
+  ],
+  "preserved_imported_maps": [
+    {
+      "map": "1",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "100",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1000",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1001",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1002",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1003",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1004",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1005",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1006",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1007",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1008",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1009",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "101",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1010",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "1011",
+      "theme": "snow",
+      "selector": 1
+    },
+    {
+      "map": "13",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "200",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "201",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "202",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "203",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "204",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "205",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "300",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "301",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "302",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "303",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "304",
+      "theme": "desert",
+      "selector": 2
+    },
+    {
+      "map": "400",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "500",
+      "theme": "sport",
+      "selector": 6
+    },
+    {
+      "map": "501",
+      "theme": "sport",
+      "selector": 6
+    },
+    {
+      "map": "502",
+      "theme": "sport",
+      "selector": 6
+    },
+    {
+      "map": "606",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "607",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "608",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "609",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "610",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "611",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "612",
+      "theme": "forest",
+      "selector": 4
+    },
+    {
+      "map": "717",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "718",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "719",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "720",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "721",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "722",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "723",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "800",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "801",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "802",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "803",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "804",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "805",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "810",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "811",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "812",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "813",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "814",
+      "theme": "urban",
+      "selector": 5
+    },
+    {
+      "map": "900",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "901",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "902",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "903",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "904",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "905",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "906",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "907",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "908",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "909",
+      "theme": "jungle",
+      "selector": 3
+    },
+    {
+      "map": "lobby_map",
+      "theme": null,
+      "selector": 0
+    }
+  ]
+}

@@ -33,6 +33,8 @@ public:
     static Dictionary particle_spawn_fields(Dictionary system,int64_t index,RandomNumberGenerator *random);
     static void owned_particle_emit(Dictionary system,int64_t count,Callable make_particle,Callable make_child);
     static void owned_particle_advance(Dictionary system,double dt,Callable make_particle,Callable make_child,double interval_scale=1.0,bool prepared=true);
+    static bool advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared);
+    static void update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy);
     static void owned_particle_restart(Dictionary system);
     static void owned_particle_destroy(Dictionary system,Array deleted);
     static Dictionary owned_particle_render(Dictionary root,bool homogeneous);

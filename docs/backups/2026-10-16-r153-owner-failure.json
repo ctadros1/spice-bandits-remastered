@@ -1,0 +1,80 @@
+{
+  "signed_base_commit": "08f77033289b1f48276539db442448dd5e161e7d",
+  "new_source_signed_and_pushed": false,
+  "source_signing_pending": true,
+  "all_ten_accepted": false,
+  "presentation_checks": 549,
+  "presentation_captures": 216,
+  "median_ms": [
+    36.36,
+    39.875,
+    46.548
+  ],
+  "p95_ms": [
+    39.345,
+    44.82,
+    50.82
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_archive_restore": {
+    "source_files": 604,
+    "members": 1312,
+    "sha256": "e618e37bc2380bbfefaa8609808c872e9e7b82f9a84528b2e47f00a0dc147446",
+    "bytes": 979766523,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "release_id": 415464857,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-01306920cceba2041df0",
+  "release_tag": "research-2026-10-16-r153-creep-owner-failure",
+  "assets": [
+    {
+      "name": "r153-creep-owner-failure.tar.gz",
+      "bytes": 979766523,
+      "sha256": "e618e37bc2380bbfefaa8609808c872e9e7b82f9a84528b2e47f00a0dc147446"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 212,
+      "sha256": "4099f288467f29924929f3adc5c294a55ea547131f8582bf6af9d7aab14cc47f"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 278752,
+      "sha256": "8aa6791be428fbd9269ee3c4f61b95ea0135fa551db0610189005e0c9da759d6"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 822,
+      "sha256": "016bf6a44b7c6b21e0bc1861c22030051987850b1a743d0acb849c7fa43dd86c"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 473,
+      "sha256": "fd0be755293795aecc033f245bdfb71f75c756fb4d8384fee377a23ae5d65b80"
+    },
+    {
+      "name": "r153-restore-proof.zip",
+      "bytes": 3082652,
+      "sha256": "ed777543837d6682f52b41d3d909b986926b6fe50204dd46c800a5b1e0620359"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_full_archive_restore": {
+    "source_files": 604,
+    "members": 1312,
+    "sha256": "e618e37bc2380bbfefaa8609808c872e9e7b82f9a84528b2e47f00a0dc147446",
+    "bytes": 979766523,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "initial_local_space_failure_preserved_and_recovered": true,
+  "verified_at": "2026-10-16T23:41:06.206765+00:00",
+  "no_remaining_game_processes": true
+}

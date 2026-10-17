@@ -1,0 +1,83 @@
+{
+  "signed_base_commit": "08f77033289b1f48276539db442448dd5e161e7d",
+  "new_source_signed_and_pushed": false,
+  "source_signing_pending": true,
+  "all_ten_accepted": false,
+  "presentation_checks": 549,
+  "presentation_captures": 216,
+  "median_ms": [
+    35.287,
+    38.947,
+    45.693
+  ],
+  "p95_ms": [
+    38.679,
+    45.718,
+    50.272
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_archive_restore": {
+    "source_files": 628,
+    "current_source_files": 631,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1353,
+    "sha256": "066a25bd785753d1ce6dbffbc2a77a00e82e57211a9a565b546334ab262de7a7",
+    "bytes": 984851648,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "release_id": 415500377,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-0b0c111ba2d2b85eefdf",
+  "release_tag": "research-2026-10-16-r162-disco-actor-failure",
+  "assets": [
+    {
+      "name": "r162-disco-actor-failure.tar.gz",
+      "bytes": 984851648,
+      "sha256": "066a25bd785753d1ce6dbffbc2a77a00e82e57211a9a565b546334ab262de7a7"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 212,
+      "sha256": "25ab0c9f8ae13360124ea0c92e76b8b5d9f3e950451025e2b4cda9d9a11cad35"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 287824,
+      "sha256": "a7874bad256845fe2b37fbc39de44a7c6d94c654c2906776fe82f79df752f028"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 914,
+      "sha256": "51add55f120b149390486595bca9de263ae043d2e500f863611f70f315f6c0a1"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 483,
+      "sha256": "b6e53910a2f2af611d2131deaedf0d88cfeb8cf09f17e5d8c758906a4c160550"
+    },
+    {
+      "name": "r162-restore-proof.zip",
+      "bytes": 3039865,
+      "sha256": "d8fee2abc78d36b09cf7a8007758a783ec8ed236b494d0a2379518adf6eb5b02"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_full_archive_restore": {
+    "source_files": 628,
+    "current_source_files": 631,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1353,
+    "sha256": "066a25bd785753d1ce6dbffbc2a77a00e82e57211a9a565b546334ab262de7a7",
+    "bytes": 984851648,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "verified_at": "2026-10-17T06:17:36.561465+00:00",
+  "no_remaining_game_processes": true
+}

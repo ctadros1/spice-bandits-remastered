@@ -6,8 +6,10 @@ const CreepPortal=preload("res://scripts/creep_portal_view.gd")
 const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
+const CreepDisco=preload("res://scripts/creep_disco_view.gd")
 const Death=preload("res://scripts/creep_death_view.gd")
 const ParticleState=preload("res://scripts/particle_state.gd")
+const MapTheme=preload("res://scripts/map_theme.gd")
 var particle_state=ParticleState.new()
 var reference_spawn_presentation=false
 
@@ -80,7 +82,10 @@ var freeze_until:int:
 		freeze_state.remaining=maxi(0,value-clock_ms)
 		if int(freeze_state.remaining)>0:
 			for enemy in enemies:CreepFreeze.apply(enemy,1)
-var disco_until: int = 0
+var disco_state=CreepDisco.initial()
+var disco_until:int:
+	get:return clock_ms+int(disco_state.remaining) if int(disco_state.remaining)>0 else 0
+	set(value):disco_state.remaining=maxi(0,value-clock_ms)
 var defense_until: int = 0
 var last_paths_ms: int = 0
 var pending_towers: Array[int] = []
@@ -589,7 +594,7 @@ func set_enemy_path(e: Dictionary) -> void:
 	var best_path: Array[Vector2i] = []
 	var best_cost = INF
 	var target = -1
-	if clock_ms < e.get("disco_until", 0):
+	if disco_wandering(e):
 		var eligible: Array[Vector2i] = []
 		for y in range(int(map.hex_height)):
 			for x in range(int(map.hex_width)):
@@ -631,7 +636,7 @@ func set_enemy_path(e: Dictionary) -> void:
 func movement_point_allowed(e: Dictionary) -> bool:
 	var remaining = e.path.size()-int(e.path_at)
 	if remaining <= 0: return false
-	if clock_ms < int(e.disco_until) or bool(e.get("bombing", false)): return true
+	if disco_wandering(e) or bool(e.get("bombing", false)): return true
 	var stand_off = int(e.def.base_distance)
 	if remaining > stand_off: return true
 	# GetFirstMovementPoint 0x7ba04: horizontal links count differently.
@@ -770,13 +775,16 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 		"speed": f32(float(def.speed)*speed_scale), "cell": c, "next_cell": c, "pos": center(c.x, c.y),
 		"dir": Vector2.RIGHT, "source": source_index, "air": def.get("class", "ground") == "air", "native_air": def.get("class", "ground") == "air",
 		"base": -1, "path": [], "path_at": 1, "attacking": false, "attack_reload_ms": 0, "attack_point": Vector2.ZERO, "slow": 1.0, "slow_until": 0,
-		"float_until": 0, "disco_until": disco_until, "portal_ms": 0, "born_ms": clock_ms, "slow_pending": -1.0,
+		"float_until": 0, "disco_until": 0, "disco_attached":false, "portal_ms": 0, "born_ms": clock_ms, "slow_pending": -1.0,
 		"grow_ms": 0 if grow and def.get("class", "ground") == "ground" else 400,"draw_light":1.0,"freeze_attached":false,"freeze_remaining":0,"animation_divisor":1.0,"animation_multiplier":1.0}
 	e.merge(CreepHit.initial())
 	next_id += 1
 	enemies.append(e)
 	set_enemy_path(e)
-	particle_state.initialize_creep(e)
+	particle_state.initialize_creep(e,MapTheme.selector(map.get("theme")))
+	# ProcessWaves calls UseLsd directly after AddCreep for positive timers.
+	# This caller does not use the manager's same-owner filter.
+	if int(disco_state.remaining)>0:use_disco_on(e,1,false)
 	emit("spawn", {"id": e.id, "type": type})
 	return e
 
@@ -1156,6 +1164,33 @@ func duration(key: String, upgrade_key: String = "") -> int:
 	if not upgrade_key.is_empty(): result = f32(result*(1.0+float(upgrades.get(upgrade_key, 0))*0.05))
 	return int(result)
 
+func disco_wandering(e:Dictionary) -> bool:
+	if e.get("disco_managed",false):return int(e.get("state",0))==7
+	# Explicit older presentation/reference poses supply only a deadline.
+	return clock_ms<int(e.get("disco_until",0))
+
+func disco_cell_affiliation(e:Dictionary) -> Variant:
+	if not within(e.cell):return null
+	return int(map.cells[cell_index(e.cell)].get("p",1))
+
+func set_disco_creep_state(value:int,e:Dictionary) -> void:
+	var previous=int(e.state)
+	if previous!=value and previous in [0,7] and value in [1,2,3,4,5,6]:
+		var multiplier=float(e.get("smoke_idle_multiplier",0))
+		if multiplier>0 and e.get("particle_roots",[]).any(func(sys):return str(sys.creep_alias)=="smoke"):
+			e.smoke_work_interval=f32(float(e.smoke_work_interval)*multiplier)
+	e.state=value
+
+func use_disco_on(e:Dictionary,player:int=1,manager:bool=true) -> bool:
+	if manager and int(e.get("owner",0))==player:return false
+	var admitted=CreepDisco.use(e,player,disco_state,disco_cell_affiliation(e),release_displacement.bind(int(e.id)),set_enemy_path.bind(e),set_disco_creep_state.bind(e))
+	if admitted:e.disco_until=disco_until
+	return admitted
+
+func reset_disco_admission() -> void:
+	for e in enemies:
+		if int(e.get("disco_blocked",0))!=0:e.disco_blocked=0
+
 func ability_error(key: String, pos: Vector2 = Vector2.ZERO) -> String:
 	if paused or outcome != "playing": return "The game is paused."
 	if key not in ["m_freeze", "m_lsd", "m_actdef", "m_mine", "m_portal"]: return "Unknown magic."
@@ -1180,10 +1215,8 @@ func use_ability(key: String, pos: Vector2 = Vector2.ZERO) -> String:
 	match key:
 		"m_freeze": freeze_until = clock_ms + duration("freeze_duration", "up_freeze")
 		"m_lsd":
-			disco_until = clock_ms + duration("lsd_duration", "up_pharm")
-			for e in enemies:
-				e.disco_until = disco_until
-				set_enemy_path(e)
+			disco_state.remaining=CreepDisco.duration(int(catalog.tower_magic.lsd_duration),int(upgrades.get("up_pharm",0)),int(upgrades.get("up_wizard",0)))
+			for e in enemies:use_disco_on(e)
 		"m_actdef": defense_until = clock_ms + duration("actdef_duration", "up_actdef")
 		"m_mine": mines.append({"pos": pos, "cell": nearest(pos), "ready": clock_ms + int(catalog.tower_magic.mine_sleep), "born_ms":clock_ms,"static": false})
 		"m_portal":
@@ -1289,6 +1322,9 @@ func step() -> void:
 	# Waves read the previous room flag; ProcessPlayers then updates the
 	# shared countdown before ProcessSpeed/ProcessFreeze on each creep.
 	if CreepFreeze.advance_timer(freeze_state,tick_ms):emit("magic_end",{"key":"m_freeze"})
+	CreepDisco.advance_timer(disco_state,tick_ms)
+	if disco_state.reset_admission:
+		reset_disco_admission()
 	if not spawn_hold and not freeze_state.room_active and survival_remaining_ms>0:
 		survival_remaining_ms=maxi(0,int(f32(float(survival_remaining_ms)-tick_ms)))
 		if survival_remaining_ms==0:finish("victory");return
@@ -1487,7 +1523,7 @@ func digest() -> String:
 	return JSON.stringify([clock_ms, accumulator, money, wave_index, next_wave_ms, kills, score,
 		built_count, upgrade_top_count, kill_chain, closed_kill_chain, kill_chain_idle_ms, replay,
 		outcome, paused, early_wave_count, enemies, towers, bases, running_waves, missiles, enemy_missiles, zones, bubbles, mines, portals,
-		static_portals, abilities, freeze_until, freeze_state, disco_until, defense_until, pending_towers,
+		static_portals, abilities, freeze_until, freeze_state, disco_until, disco_state, defense_until, pending_towers,
 		last_paths_ms, next_id, rng.state, tutorial_finished, spawn_hold, survival_remaining_ms, displacement_owners, build_overrides]).sha256_text()
 
 func check_room_outcome() -> void:
@@ -1506,6 +1542,12 @@ func update_living_enemy(e:Dictionary) -> void:
 		e.float_until = 0
 		e.state = 0
 		set_enemy_path(e)
+	if e.get("disco_attached",false):
+		if e.get("disco_managed",false):
+			CreepDisco.process(e,set_enemy_path.bind(e),set_disco_creep_state.bind(e))
+			if e.disco_attached:e.disco_until=clock_ms+int(e.disco_timer.remaining)
+		elif int(disco_state.remaining)>0:e.disco_until=clock_ms+int(disco_state.remaining)
+		else:e.disco_attached=false;e.disco_until=0;set_enemy_path(e)
 	if e.disco_until > 0 and clock_ms >= e.disco_until:
 		e.disco_until = 0
 		set_enemy_path(e)
@@ -1520,7 +1562,7 @@ func update_living_enemy(e:Dictionary) -> void:
 		var point = center(cell.x, cell.y)
 		e.next_cell = cell
 		var future = point
-		var peek = {"cell":cell,"path_at":int(e.path_at)+1,"path":e.path,"disco_until":e.disco_until,"bombing":e.get("bombing",false),"def":e.def}
+		var peek = {"cell":cell,"path_at":int(e.path_at)+1,"path":e.path,"disco_until":e.disco_until,"disco_managed":e.get("disco_managed",false),"state":e.state,"bombing":e.get("bombing",false),"def":e.def}
 		if movement_point_allowed(peek): future = center(e.path[peek.path_at].x, e.path[peek.path_at].y)
 		var movement = CreepView.movement_tick(e.move_start, point, future, CreepView.progress(self, e), float(e.get("move_carry", 0)), f32(float(e.speed)*float(e.slow)), tick_ms, float(map.hex_h))
 		e.move_progress = movement.progress
@@ -1538,14 +1580,14 @@ func update_living_enemy(e:Dictionary) -> void:
 				e.bomb_dropped_at = e.path_at
 		# Native kamikaze switches to attack in the latter half of the
 		# final base link, before reaching its center.
-		if int(e.def.traits.get("kamikaze", 0)) == 1 and e.next_cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and float(e.move_progress) > 0.5 and e.disco_until == 0:
+		if int(e.def.traits.get("kamikaze", 0)) == 1 and e.next_cell == Vector2i(int(bases[e.base].x), int(bases[e.base].y)) and float(e.move_progress) > 0.5 and not disco_wandering(e):
 			base_damage(int(e.base), float(e.def.damage))
 			e.hp = 0.0
 			begin_enemy_death(e,0)
 			emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
 			return
 	e.draw_light=CreepLight.from_map(map,e.cell,e.next_cell,CreepView.progress(self,e),float(e.get("draw_light",1)))
-	if not movement_point_allowed(e) and e.disco_until == 0:
+	if not movement_point_allowed(e) and not disco_wandering(e):
 		var b = bases[e.base]
 		if int(e.def.traits.get("shoot_bomb", 0)) == 1:
 			var circle = bomber_circle(e.cell, int(e.base))
@@ -1574,7 +1616,7 @@ func update_living_enemy(e:Dictionary) -> void:
 			e.hp = 0.0
 			begin_enemy_death(e,0)
 			emit("base_impact", {"id": e.id, "pos": e.pos, "type": e.type})
-	elif e.path_at >= e.path.size() and clock_ms < e.disco_until: set_enemy_path(e)
+	elif e.path_at >= e.path.size() and disco_wandering(e): set_enemy_path(e)
 
 func begin_enemy_death(e:Dictionary,kind:int) -> void:
 	if int(e.get("state",0)) in [2,3]:return

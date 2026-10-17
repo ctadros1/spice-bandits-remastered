@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "draft": true,
+  "release_id": 415488927,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-d65a68a86da93fc8f4ab",
+  "source_base": "08f77033289b1f48276539db442448dd5e161e7d",
+  "source_signing_pending": true,
+  "source_files": 623,
+  "actual_remote_zip_members_verified": 17,
+  "actual_remote_signed_base_patch_source_bytes_modes_exact": true,
+  "assets": [
+    {
+      "name": "r157-disco-timer-failure.tar.gz",
+      "bytes": 984507514,
+      "sha256": "3a5dfaf8d84e32c08934786f8551102a5987bb485fbb251d82cda26fe5eed16e"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 212,
+      "sha256": "37e1a472e16ee8e71ddbffc8dfa7f1b655e241ffe4ae030be583eaf62795d417"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 284701,
+      "sha256": "05b09d9f727a40f86c33dc105a55576cdab399a92b9a47969e9d01afc287c9ff"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 913,
+      "sha256": "bb39bc11882e13e1927bd747d9701802564ffcac51fc01be22baae0ab10f9a54"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 483,
+      "sha256": "fb85333c85f4e8d9007b2d0f512e5a660ee5954de928f0cd86df032f04cb1e9d"
+    },
+    {
+      "name": "r157-restore-proof.zip",
+      "bytes": 3042424,
+      "sha256": "af3b928843d06366f1b92343678969fce1bffc3e4d92d2297630310fcec7fa45"
+    },
+    {
+      "name": "r161-disco-cell-affiliation-pending-source.zip",
+      "bytes": 3304224,
+      "sha256": "2c98677e627658df499a7ed3712285f6a23b99c6652c0fd593a30baee18aaf61"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "r157_app_four_saves_and_real_index_preserved": true,
+  "offline_complete": false,
+  "verified_at": "2026-10-17T00:36:00.857886+00:00"
+}

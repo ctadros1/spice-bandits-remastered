@@ -1,0 +1,83 @@
+{
+  "signed_base_commit": "08f77033289b1f48276539db442448dd5e161e7d",
+  "new_source_signed_and_pushed": false,
+  "source_signing_pending": true,
+  "all_ten_accepted": false,
+  "presentation_checks": 549,
+  "presentation_captures": 216,
+  "median_ms": [
+    34.981,
+    39.773,
+    45.588
+  ],
+  "p95_ms": [
+    38.825,
+    44.653,
+    49.429
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_archive_restore": {
+    "source_files": 607,
+    "current_source_files": 610,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1351,
+    "sha256": "168ee22003ddd6a68a9d7764a935a94d9edd8f41f70501b9d0b4d6040739ce64",
+    "bytes": 983376996,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "release_id": 415478038,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-271748616874994d50b1",
+  "release_tag": "research-2026-10-16-r154-particle-defaults-failure",
+  "assets": [
+    {
+      "name": "r154-particle-defaults-failure.tar.gz",
+      "bytes": 983376996,
+      "sha256": "168ee22003ddd6a68a9d7764a935a94d9edd8f41f70501b9d0b4d6040739ce64"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 218,
+      "sha256": "f4df3bd767f05002a510064679a4b8abaeede39c40304b61c6ccdc1a52302507"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 292625,
+      "sha256": "3ca9bc1c76bbb3ba471f0a8a9da7720b33f08534f8396fbace15450fa3a58448"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 914,
+      "sha256": "11b19a2ac1bbc29c906ccacccbd6f16c6ca2d05816ee65fcb201ddf74dda5afe"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 483,
+      "sha256": "1302913e130b5f61f707f7950d586054e7d0d1abc948228a13b9e24a284ffbcc"
+    },
+    {
+      "name": "r154-restore-proof.zip",
+      "bytes": 3041925,
+      "sha256": "d85caad383ff7a21ea71e5af5318116f0c71719381219b6cc35a8dc12749f4ee"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_full_archive_restore": {
+    "source_files": 607,
+    "current_source_files": 610,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1351,
+    "sha256": "168ee22003ddd6a68a9d7764a935a94d9edd8f41f70501b9d0b4d6040739ce64",
+    "bytes": 983376996,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "verified_at": "2026-10-17T00:09:57.009493+00:00",
+  "no_remaining_game_processes": true
+}

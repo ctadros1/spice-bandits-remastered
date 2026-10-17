@@ -43,6 +43,12 @@ struct Keys {
     const StringName definition{"definition"},until{"until"},emitting{"emitting"},particles{"particles"},phase{"phase"},child_released{"child_released"},variation{"variation"},released{"released"},id{"id"},texture{"texture"},coefficients{"native_coefficients"},owner_hidden{"owner_hidden"};
 };
 const Keys &keys() { static const Keys value;return value; }
+struct ParticleMotionKeys {
+    // Preserve StringName key types while avoiding a new Variant wrapper for
+    // every dictionary access in every particle's motion update.
+    const Variant velocity{StringName("velocity")},pos{StringName("pos")},rotation{StringName("rotation")},rot_speed{StringName("rot_speed")},alpha{StringName("alpha")};
+};
+const ParticleMotionKeys &particle_motion_keys() {static const ParticleMotionKeys value;return value;}
 struct ParticleCoefficients {
     double gx,gy,wx,wy,raw_life;
     float life,fade,blend;
@@ -70,7 +76,7 @@ struct ParticleCoefficients {
         return value<0.0f?0.0f:std::min(1.0f,value);
     }
     void integrate(Dictionary p,double dt,float age) const {
-        const Keys &k=keys();
+        const auto &k=particle_motion_keys();
         Vector2 v=p[k.velocity];
         v.x=f32(double(v.x)+f32(gx*dt));v.y=f32(double(v.y)+f32(gy*dt));
         if(wind_enabled) {
@@ -132,6 +138,8 @@ void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_spawn_fields","system","index","random"),&SpiceNative::particle_spawn_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_emit","system","count","make_particle","make_child"),&SpiceNative::owned_particle_emit);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_advance","system","dt","make_particle","make_child","interval_scale","prepared"),&SpiceNative::owned_particle_advance,DEFVAL(1.0),DEFVAL(true));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_particles","roots","clock_ms","dt_ms","make_particle","make_child","prepared"),&SpiceNative::advance_creep_particles);
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("update_creep_particle_fields","actor","aim","direction","heavy"),&SpiceNative::update_creep_particle_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_restart","system"),&SpiceNative::owned_particle_restart);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_destroy","system","deleted"),&SpiceNative::owned_particle_destroy);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_render","root","homogeneous"),&SpiceNative::owned_particle_render);
