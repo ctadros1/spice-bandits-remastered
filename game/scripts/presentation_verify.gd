@@ -1014,7 +1014,7 @@ func run() -> void:
 	check(app.creep_health_layout(damaged).is_empty(),"full-health actor draws no life bar")
 	await snapshot("creep-health-full")
 	damaged.hp=25;damaged.float_until=app.sim.clock_ms+1000
-	check(app.creep_health_layout(damaged).origin.y==damaged.visual_pos.y-14,"health bar follows lifted animator")
+	check(app.creep_health_layout(damaged).origin==damaged.visual_pos+Vector2(-16,16),"health bar retains original raw animator anchor independently of body lift")
 	await snapshot("creep-health-lifted-025")
 	damaged.float_until=0;damaged.grow_ms=200
 	check(app.creep_health_layout(damaged).color.a==0.5,"health bar uses original halfway growth opacity")

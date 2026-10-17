@@ -3349,7 +3349,10 @@ func creep_animator_position(e:Dictionary) -> Vector2:
 	return position+Vector2(offset[0],offset[1])+Vector2(0,-30 if sim.clock_ms<e.float_until else 0)
 
 func creep_health_layout(e:Dictionary) -> Dictionary:
-	return preload("res://scripts/creep_health_view.gd").layout(creep_animator_position(e),float(e.hp),int(e.max_hp),float(sim.spawn_presentation(e).alpha),int(e.get("state",0)))
+	# Original Creep.Render reads the primary animator position only. Body
+	# offsets (including hover/lift) belong to RenderFrame and do not move HP.
+	var point:Vector2=e.get("visual_pos",e.pos)
+	return preload("res://scripts/creep_health_view.gd").layout(point,float(e.hp),int(e.max_hp),float(sim.spawn_presentation(e).alpha),int(e.get("state",0)))
 
 func creep_render_pose(e:Dictionary) -> Dictionary:
 	var position: Vector2 = e.get("visual_pos", e.pos)

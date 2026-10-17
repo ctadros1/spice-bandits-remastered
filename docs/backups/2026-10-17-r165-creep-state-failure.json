@@ -1,0 +1,84 @@
+{
+  "signed_base_commit": "7f5c825d7b6535e9e69a2b123431e03940dcdadc",
+  "candidate_signed_base_commit": "39388bac508eb7fb185c6035064c86cb0839ef54",
+  "new_source_signed_and_pushed": true,
+  "source_signing_pending": false,
+  "all_ten_accepted": false,
+  "presentation_checks": 549,
+  "presentation_captures": 216,
+  "median_ms": [
+    35.828,
+    39.129,
+    45.21
+  ],
+  "p95_ms": [
+    39.17,
+    44.015,
+    49.961
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_archive_restore": {
+    "source_files": 638,
+    "current_source_files": 639,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1381,
+    "sha256": "c4c884118aa6b7b343e6d11841e14bece6efe6feb4f3e108c2a2f8304e701d71",
+    "bytes": 984767959,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "offline_complete": false,
+  "private": true,
+  "draft": true,
+  "release_id": 415627522,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-9b2b038775c30000ba61",
+  "release_tag": "research-2026-10-17-r165-creep-state-failure",
+  "assets": [
+    {
+      "name": "r165-creep-state-failure.tar.gz",
+      "bytes": 984767959,
+      "sha256": "c4c884118aa6b7b343e6d11841e14bece6efe6feb4f3e108c2a2f8304e701d71"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 212,
+      "sha256": "c5e44f9e613af6ff53fa9804ec8ff5ae6d00d908a24f6223a71328a3b71e16ed"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 293243,
+      "sha256": "400d142fc4431e87073271943b208dd05f8ee8248ad3cc9b9df9144b90665a35"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 990,
+      "sha256": "7479bddddc51ec274c3d586343e70fa08efb456e051fd888c50fbbcda080f692"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 483,
+      "sha256": "4b5e6719667f4ba009a6a084e3314b2daaef8846beee173ed0f4c7215179c801"
+    },
+    {
+      "name": "r165-restore-proof.zip",
+      "bytes": 3045065,
+      "sha256": "5864700af34e19ddfed5d28681b62affd0713ca43e6f4edae17393ac7a6d87fa"
+    }
+  ],
+  "all_remote_sha_sizes_verified": true,
+  "actual_remote_full_archive_restore": {
+    "source_files": 638,
+    "current_source_files": 639,
+    "current_source_bytes_modes_signature_exact": true,
+    "members": 1381,
+    "sha256": "c4c884118aa6b7b343e6d11841e14bece6efe6feb4f3e108c2a2f8304e701d71",
+    "bytes": 984767959,
+    "source_bytes_modes_signature_exact": true,
+    "app_signature_empty_cwd_native_qa_save_guards_passed": true
+  },
+  "verified_at": "2026-10-17T06:33:41.579785+00:00",
+  "no_remaining_game_processes": true
+}

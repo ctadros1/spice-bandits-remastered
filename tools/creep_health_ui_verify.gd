@@ -28,13 +28,13 @@ func run() -> void:
 	var app=load("res://scripts/main.gd").new();app.sim=load("res://scripts/simulation.gd").new()
 	var enemy={"pos":Vector2(200,200),"visual_pos":Vector2(210,230),"def":{"traits":{"offset":[3,-4]}},"float_until":1000,"hp":25,"max_hp":100,"grow_ms":200,"state":0}
 	var result=app.creep_health_layout(enemy)
-	check(result.origin==Vector2(197,212),"actual renderer uses drawn position, resource offset and levitation lift")
+	check(result.origin==Vector2(194,246),"actual renderer uses raw drawn animator position independently of body offset/lift")
 	check(result.fill.size==Vector2(8,16),"actual renderer crops eight pixels without scaling the texture height")
 	check(result.color==Color(1,1,1,0.5),"actual renderer uses existing original linear growth alpha")
 	app.sim.clock_ms=1000;enemy.grow_ms=400
-	check(app.creep_health_layout(enemy).origin==Vector2(197,242),"bar follows restored animator after lift expiry")
+	check(app.creep_health_layout(enemy).origin==Vector2(194,246),"body lift expiry leaves raw health anchor unchanged")
 	enemy.hp=100;check(app.creep_health_layout(enemy).is_empty(),"full health draws no bar")
 	app.free()
-	var report={"checks":checks,"failures":failures,"original_cases":reference.cases.size(),"drawn_cases":drawn,"limit":"Original full Render condition/geometry/RGBA/UV with supplied records. Existing growth and lift bridge verified; complete portal/state lifetime, texture loader and original GPU remain open."}
+	var report={"checks":checks,"failures":failures,"original_cases":reference.cases.size(),"drawn_cases":drawn,"limit":"Original full Render condition/geometry/RGBA/UV with supplied records. Growth alpha and raw-position health bridge verified against independent body-offset cases; complete portal/state lifetime, texture loader and original GPU remain open."}
 	var file=FileAccess.open(ProjectSettings.globalize_path("res://../builds/creep-health-verification.json"),FileAccess.WRITE);file.store_string(JSON.stringify(report,"\t"));file.close()
 	print("CREEP_HEALTH_VERIFICATION ",JSON.stringify(report));quit(0 if failures.is_empty() else 1)
