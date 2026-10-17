@@ -1,0 +1,9 @@
+{
+  "baseline_sha256": "9128f9ceb247b5d767451a7814f4d55472121f2bcc34efb4cf234fcbb55daabf",
+  "source_commit": "99755824c3c67d7b5780198eb93abe9245b29f97",
+  "native_helper_sha256": "d765376bd810f1ab401771cab5efed9fa4e5bf862a35b9b892ef727128af6df7",
+  "independent_runs_identical": true,
+  "scope": "R169 behavior preservation: normalized complete actor/system/key/numeric state, ordered callback requests, RNG/serials/aliases. Ten supplied resources inclunusedcreep7, both prepared paths, variable delta, delay/freeze/slow/Disco/health/death/child tails/pool reuse. Baseline native API is eager for both requested labels; original full game/GPU remains separate.",
+  "test_source_sha256": "c3fc7714691e0e67779cc9dab468afa26ec1fd5d77dc9e865be00a4eef56337e",
+  "preserved_test_source": "tests/reference/particle-child-binding-r169-capture.gd"
+}

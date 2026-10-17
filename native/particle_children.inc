@@ -238,7 +238,7 @@ void SpiceNative::update_creep_particle_fields(Dictionary actor,Vector2 aim,Vect
         sys[k.emitting]=int64_t(tree[rate_key])!=0;
     }
 }
-bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared) {
+bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared,bool defer_child_binding) {
     // Only retained creep roots use this bridge. Validate before mutation;
     // other system adapters retain their existing script/lifetime path.
     static const StringName owned_tree("owned_tree"),retained("retain_for_owner"),death_burst("death_burst");
@@ -251,7 +251,14 @@ bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_
     for(int i=0;i<roots.size();++i) {
         Dictionary sys=roots[i],tree=sys[owned_tree];tree[k.pos]=sys[k.pos];
         if(!bool(tree.get(death_burst,false))&&double(sys[k.until])>=0&&clock_ms>=double(sys[k.until])) {sys[k.emitting]=false;tree["rate"]=int64_t(0);}
-        owned_particle_advance(tree,double(dt),make_particle,make_child.bindv(Array::make(sys[k.texture],sys[k.variation])),1.0,prepared);
+        // Empty roots with no new parent births cannot call a child factory.
+        // They still run every clock/delay/Emit(0)/release phase below.
+        // Active parents must retain the callback even when their rate is0:
+        // an existing child can continue emitting independently.
+        Callable bound_child;
+        if(!defer_child_binding||int64_t(tree["rate"])>0||!Array(tree[k.particles]).is_empty())
+            bound_child=make_child.bindv(Array::make(sys[k.texture],sys[k.variation]));
+        owned_particle_advance(tree,double(dt),make_particle,bound_child,1.0,prepared);
         sys[k.particles]=tree[k.particles];sys[k.phase]=double(tree.get(k.phase,0));
         const double seconds=tree["clock_seconds"];sys[k.view_clock_ms]=seconds*1000.0;
         if(sys.has(k.local_clock_seconds))sys[k.local_clock_seconds]=seconds;

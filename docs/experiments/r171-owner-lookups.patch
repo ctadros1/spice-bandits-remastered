@@ -1,0 +1,184 @@
+--- a/native/hotpaths.hpp
++++ b/native/hotpaths.hpp
+@@ -34,7 +34,7 @@
+     static void owned_particle_emit(Dictionary system,int64_t count,Callable make_particle,Callable make_child);
+     static void owned_particle_advance(Dictionary system,double dt,Callable make_particle,Callable make_child,double interval_scale=1.0,bool prepared=true);
+     static bool advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared,bool defer_child_binding);
+-    static void update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy);
++    static void update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy,bool prepared_lookups);
+     static void owned_particle_restart(Dictionary system);
+     static void owned_particle_destroy(Dictionary system,Array deleted);
+     static Dictionary owned_particle_render(Dictionary root,bool homogeneous);
+--- a/native/hotpaths.cpp
++++ b/native/hotpaths.cpp
+@@ -139,7 +139,7 @@
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_emit","system","count","make_particle","make_child"),&SpiceNative::owned_particle_emit);
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_advance","system","dt","make_particle","make_child","interval_scale","prepared"),&SpiceNative::owned_particle_advance,DEFVAL(1.0),DEFVAL(true));
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_particles","roots","clock_ms","dt_ms","make_particle","make_child","prepared","defer_child_binding"),&SpiceNative::advance_creep_particles,DEFVAL(true));
+-    ClassDB::bind_static_method("SpiceNative",D_METHOD("update_creep_particle_fields","actor","aim","direction","heavy"),&SpiceNative::update_creep_particle_fields);
++    ClassDB::bind_static_method("SpiceNative",D_METHOD("update_creep_particle_fields","actor","aim","direction","heavy","prepared_lookups"),&SpiceNative::update_creep_particle_fields,DEFVAL(true));
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_restart","system"),&SpiceNative::owned_particle_restart);
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_destroy","system","deleted"),&SpiceNative::owned_particle_destroy);
+     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_render","root","homogeneous"),&SpiceNative::owned_particle_render);
+--- a/native/particle_children.inc
++++ b/native/particle_children.inc
+@@ -204,38 +204,74 @@
+     const float interval=f32(double(f32(double(system.get(k.interval_seconds,d.get(k.release_interval,1)))))*f32(interval_scale));
+     if(interval<f32(double(clock)-double(system[k.release_seconds]))&&dt<life)owned_particle_emit(system,int64_t(system[k.rate]),make_particle,make_child);
+ }
+-void SpiceNative::update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy) {
+-    // Original R148 owner arithmetic, including every float32 boundary. The
+-    // script reference remains callable; no state or appearance is cached.
+-    static const StringName roots_key("particle_roots"),tree_key("owned_tree"),alias_key("creep_alias"),binding_key("creep_binding"),max_hp("max_hp"),color_flag("smoke_color_flag"),base_key("smoke_base_interval"),max_multiplier("smoke_max_multiplier"),work_key("smoke_work_interval"),smoke_rate("smoke_rate"),interval_key("interval_seconds"),rate_key("rate"),backup_key("backup_rate"),offset_x("offsetX"),offset_y("offsetY"),moving_key("emitt_on_walking");
+-    const auto &k=keys();const Array roots=actor.get(roots_key,Array());
++namespace {
++// Preserve the existing StringName dictionary keys while reusing their Variant
++// wrappers. No field values, headers, appearance or arithmetic are cached.
++template<class Key>struct CreepOwnerLookupKeys {
++    const Key roots_key{StringName("particle_roots")};
++    const Key tree_key{StringName("owned_tree")};
++    const Key alias_key{StringName("creep_alias")};
++    const Key binding_key{StringName("creep_binding")};
++    const Key max_hp{StringName("max_hp")};
++    const Key color_flag{StringName("smoke_color_flag")};
++    const Key base_key{StringName("smoke_base_interval")};
++    const Key max_multiplier{StringName("smoke_max_multiplier")};
++    const Key work_key{StringName("smoke_work_interval")};
++    const Key smoke_rate{StringName("smoke_rate")};
++    const Key interval_key{StringName("interval_seconds")};
++    const Key rate_key{StringName("rate")};
++    const Key backup_key{StringName("backup_rate")};
++    const Key offset_x{StringName("offsetX")};
++    const Key offset_y{StringName("offsetY")};
++    const Key moving_key{StringName("emitt_on_walking")};
++    const Key hp{StringName("hp")};
++    const Key state{StringName("state")};
++    const Key definition{StringName("definition")};
++    const Key color{StringName("color")};
++    const Key pos{StringName("pos")};
++    const Key emitting{StringName("emitting")};
++};
++template<class Key>void update_creep_owner_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy,bool defer_empty_defaults,const CreepOwnerLookupKeys<Key> &o) {
++    const Array roots=defer_empty_defaults?(actor.has(o.roots_key)?Array(actor[o.roots_key]):Array()):Array(actor.get(o.roots_key,Array()));
+     for(int i=0;i<roots.size();++i) {
+-        Dictionary sys=roots[i],tree=sys[tree_key];
+-        if(String(sys[alias_key])=="smoke") {
+-            const float maximum=f32(double(int64_t(actor[max_hp])));
+-            if(double(actor[k.hp])<double(f32(double(maximum)*double(f32(.6000000238418579))))) {
+-                const int64_t state=actor[k.state];
+-                if(bool(actor.get(color_flag,false))&&state!=2&&state!=3) {
+-                    const float ratio=f32(std::max(0.0,double(f32(double(actor[k.hp]))))/double(maximum));
++        Dictionary sys=roots[i],tree=sys[o.tree_key];
++        if(String(sys[o.alias_key])=="smoke") {
++            const float maximum=f32(double(int64_t(actor[o.max_hp])));
++            if(double(actor[o.hp])<double(f32(double(maximum)*double(f32(.6000000238418579))))) {
++                const int64_t state=actor[o.state];
++                if(bool(actor.get(o.color_flag,false))&&state!=2&&state!=3) {
++                    const float ratio=f32(std::max(0.0,double(f32(double(actor[o.hp]))))/double(maximum));
+                     const float factor=f32(double(ratio)/double(f32(.6000000238418579)));
+-                    const float base=f32(double(actor[base_key]));
+-                    const float scaled=f32(double(base)*double(f32(double(actor[max_multiplier]))));
++                    const float base=f32(double(actor[o.base_key]));
++                    const float scaled=f32(double(base)*double(f32(double(actor[o.max_multiplier]))));
+                     const float difference=f32(double(scaled)-double(base));
+                     const float interval=f32(double(base)+double(f32(double(difference)*double(f32(1.0-double(factor))))));
+-                    const float work=std::max(f32(.03),interval);actor[work_key]=double(work);tree[interval_key]=double(work);
+-                    Dictionary d=tree[k.definition];Array color=d[k.color];for(int j=0;j<3;++j)color[j]=double(factor);
+-                    tree[rate_key]=actor[smoke_rate];
++                    const float work=std::max(f32(.03),interval);actor[o.work_key]=double(work);tree[o.interval_key]=double(work);
++                    Dictionary d=tree[o.definition];Array color=d[o.color];for(int j=0;j<3;++j)color[j]=double(factor);
++                    tree[o.rate_key]=actor[o.smoke_rate];
+                 }
+-            } else tree[rate_key]=int64_t(0);
++            } else tree[o.rate_key]=int64_t(0);
+         }
+-        const Dictionary binding=sys.get(binding_key,Dictionary());
+-        const float x=f32(double(binding.get(offset_x,0))),y=f32(double(binding.get(offset_y,0)));
++        const Dictionary binding=defer_empty_defaults?(sys.has(o.binding_key)?Dictionary(sys[o.binding_key]):Dictionary()):Dictionary(sys.get(o.binding_key,Dictionary()));
++        const float x=f32(double(binding.get(o.offset_x,0))),y=f32(double(binding.get(o.offset_y,0)));
+         const float distance=f32(std::sqrt(double(f32(double(f32(double(x)*x))+double(f32(double(y)*y))))));
+-        sys[k.pos]=Vector2(f32(double(aim.x)+double(-f32(double(direction.x)*distance))),f32(double(aim.y)+double(-f32(double(direction.y)*distance))));
+-        if(bool(binding.get(moving_key,false))) {
+-            const int64_t state=actor[k.state];tree[rate_key]=(state>=1&&state<=6)||heavy?Variant(int64_t(0)):tree[backup_key];
++        sys[o.pos]=Vector2(f32(double(aim.x)+double(-f32(double(direction.x)*distance))),f32(double(aim.y)+double(-f32(double(direction.y)*distance))));
++        if(bool(binding.get(o.moving_key,false))) {
++            const int64_t state=actor[o.state];tree[o.rate_key]=(state>=1&&state<=6)||heavy?Variant(int64_t(0)):tree[o.backup_key];
+         }
+-        sys[k.emitting]=int64_t(tree[rate_key])!=0;
++        sys[o.emitting]=int64_t(tree[o.rate_key])!=0;
++    }
++}
++}
++void SpiceNative::update_creep_particle_fields(Dictionary actor,Vector2 aim,Vector2 direction,bool heavy,bool prepared_lookups) {
++    if(prepared_lookups) {
++        static const CreepOwnerLookupKeys<Variant> lookup;
++        update_creep_owner_fields(actor,aim,direction,heavy,true,lookup);
++    } else {
++        // Exact eager/default-allocation path remains selectable for ABBA and
++        // complete-state comparisons; both paths share the same arithmetic.
++        static const CreepOwnerLookupKeys<StringName> lookup;
++        update_creep_owner_fields(actor,aim,direction,heavy,false,lookup);
+     }
+ }
+ bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared,bool defer_child_binding) {
+--- /dev/null
++++ b/tools/particle_owner_lookup_benchmark.gd
+@@ -0,0 +1,58 @@
++extends SceneTree
++const Sim=preload("res://scripts/simulation.gd")
++var failures=[]
++var checks=0
++func _initialize() -> void:
++	create_timer(120).timeout.connect(func():quit(2));run.call_deferred()
++func check(ok:bool,label:String) -> void:
++	checks+=1
++	if not ok:failures.append(label)
++func normalize(value):
++	if value is Dictionary:
++		var result={}
++		for key in value:result[key]=normalize(value[key])
++		return result
++	if value is Array:
++		var result=[]
++		for item in value:result.append(normalize(item))
++		return result
++	if value is Resource:return {"class":value.get_class(),"path":value.resource_path}
++	return value
++func run() -> void:
++	var content=root.get_node("Content");var profile=root.get_node("Profile");var phases=[];var combined="--combined" in OS.get_cmdline_user_args()
++	for damaged in [false,true]:
++		var endings=[]
++		for prepared_lookups in [false,true,true,false]:
++			var sim=Sim.new();var config=content.mission("8").duplicate(true);config.waves=[]
++			sim.setup(content.catalog,content.maps[config.map],config,profile.fresh(),114,content.animations);sim.spawn_hold=true
++			var state=sim.particle_state;var actors=[]
++			for i in 32:
++				var actor=sim.spawn_enemy([1,2,3,4,5,6,9,15][i%8],i%sim.sources.size(),"",10000+i,false)
++				actor.hp=30 if damaged else 100;actor.max_hp=100;actors.append(actor)
++			var samples=[]
++			for sample in 10:
++				var started=Time.get_ticks_usec()
++				for repeat in 64:
++					for actor in actors:
++						SpiceNative.update_creep_particle_fields(actor,actor.pos,actor.dir,false,prepared_lookups)
++						SpiceNative.advance_creep_particles(actor.particle_roots,state.clock_ms,30,state.make_owned_particle,state.make_owned_child,state.owned_prepared,prepared_lookups if combined else true)
++				if sample>=2:samples.append((Time.get_ticks_usec()-started)/2048.0)
++			check(actors.all(func(actor):return actor.particle_roots.all(func(sys):return int(sys.owned_tree.advance_calls)==640)),"all active and empty roots advanced640times")
++			var idle=0;var roots=0
++			for actor in actors:
++				for sys in actor.particle_roots:
++					roots+=1
++					if int(sys.owned_tree.rate)<=0 and sys.owned_tree.particles.is_empty():idle+=1
++			endings.append(var_to_bytes(normalize({"systems":state.systems,"actors":actors,"rng":str(state.random.state),"serial":state.owned_serial})).hex_encode().sha256_text())
++			var ordered=samples.duplicate();ordered.sort()
++			phases.append({"damaged":damaged,"prepared_lookups":prepared_lookups,"deferred_child_binding":prepared_lookups if combined else true,"samples_us_per_owner":samples,"median_us_per_owner":ordered[ordered.size()/2],"roots":roots,"eligible_empty_roots":idle})
++			for actor in actors:state.destroy_creep(actor)
++		for ending in endings:check(ending==endings[0],"complete final actor/system/RNG/serial state exact in ABBA branches")
++	var output=""
++	for arg in OS.get_cmdline_user_args():
++		if arg.begins_with("--output="):output=arg.trim_prefix("--output=")
++	check(not output.is_empty() and not FileAccess.file_exists(output),"fresh explicit benchmark report")
++	var report={"checks":checks,"failures":failures,"phases":phases,"combined":combined,"scope":"Controlled headless ABBA32actualowners, healthy/damaged workloads. Eight measured2048owner-call samples per phase after two warmups; includes actual native owner-field update and root/child physics. Field-only mode holds deferred child binding on; combined mode switches both old/eager paths versus both prepared paths. Every root640updates and complete final normalized actor/system/key/numeric bytes/RNG/serial hashes exact. No live FPS or isolated inter-package speedup claim; unchanged33.34ms gate remains required."}
++	if not output.is_empty() and not FileAccess.file_exists(output):
++		var file=FileAccess.open(output,FileAccess.WRITE);file.store_string(JSON.stringify(report,"\t"));file.close()
++	print("OWNER_LOOKUP_BENCHMARK ",JSON.stringify(report));quit(1 if not failures.is_empty() else 0)
