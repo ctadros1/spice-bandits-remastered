@@ -7,6 +7,7 @@ const CreepHit=preload("res://scripts/creep_hit_view.gd")
 const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 const CreepDisco=preload("res://scripts/creep_disco_view.gd")
+const CreepPoison=preload("res://scripts/creep_poison.gd")
 const CreepState=preload("res://scripts/creep_state_view.gd")
 const Death=preload("res://scripts/creep_death_view.gd")
 const ParticleState=preload("res://scripts/particle_state.gd")
@@ -526,6 +527,8 @@ func sell(id: int) -> String:
 	towers.erase(t)
 	# CTower destructor0xe3134 destroys its owned missiles, clouds and bubbles.
 	missiles = missiles.filter(func(p): return int(p.owner) != id)
+	for zone in zones:
+		if int(zone.owner)==id:CreepPoison.clear(zone)
 	zones = zones.filter(func(z): return int(z.owner) != id)
 	bubbles = bubbles.filter(func(b): return int(b.owner) != id)
 	pending_towers.erase(id)
@@ -1172,7 +1175,7 @@ func shoot(t: Dictionary, e: Dictionary, boost: Dictionary) -> void:
 			"alpha": 0.4, "size": 16, "type": t.type, "def": d, "owner": t.id}
 		bubbles.append(bubble)
 		zones.append({"pos": destination, "def": d, "until": -1, "owner": t.id, "type": t.type, "bubble": bubble,
-			"damage_bonus": f32(float(d.get("damage", 0))*f32(float(boost.damage)-1.0))})
+			"damage_bonus": f32(float(d.get("damage", 0))*f32(float(boost.damage)-1.0)), "creeps_in_range": []})
 	elif t.type == 11:
 		e.float_until = clock_ms + int(d.get("float_time", 3000))
 		e.state = 5
@@ -1343,7 +1346,7 @@ func impact(p: Dictionary) -> void:
 		damage(e, f32(per_missile*falloff), p.owner)
 	if p.type == 5:
 		zones.append({"pos": destination, "def": p.def, "until": clock_ms + int(p.def.get("poison_duration", 6000)), "owner": p.owner, "type": 5,
-			"damage_bonus": f32(float(p.def.get("damage", 0))*f32(float(p.boost)-1.0))})
+			"damage_bonus": f32(float(p.def.get("damage", 0))*f32(float(p.boost)-1.0)), "creeps_in_range": []})
 	emit("explosion", {"pos": destination, "type": p.type, "filename": p.def.filename, "radius": maxf(0.4, radius)})
 
 func duration(key: String, upgrade_key: String = "") -> int:
@@ -1525,6 +1528,12 @@ func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vec
 			if not queue.is_empty():queue.pop_front()
 			teleport_enemy(e,exit_cell)
 
+# The existing offline bridge supplies argument_b=false (credit enabled).
+# The selected helper preserves both bool inputs at its callback boundary;
+# full original room-flag production and reward/SetDie joins remain separate.
+func cloud_damage(e:Dictionary,owner:int,amount:float,_credit:bool,kind:int) -> void:
+	damage(e,amount,owner,kind)
+
 func step() -> void:
 	check_room_outcome()
 	if outcome!="playing":return
@@ -1658,22 +1667,15 @@ func step() -> void:
 			z.until = clock_ms+int(z.def.get("poison_duration", 2000))-tick_ms
 			emit("cloud_active", {"pos": z.pos, "type": z.type})
 		if clock_ms >= z.until:
+			# Original destructor clears tracked emitters. The existing zone
+			# lifetime adapter still omits the full original cloud particle tail.
+			CreepPoison.clear(z)
 			zones.erase(z)
 			continue
-		for e in enemies:
-			var distance = f32(e.pos.distance_to(z.pos)/float(map.hex_h))
-			if e.hp <= 0 or e.air or distance >= float(z.def.get("poison_range", 0))/1000.0: continue
-			if z.def.has("slowdown"):
-				# Counters reset before enemy movement. Clouds supply the next frame's factor.
-				var factor = f32(1.0-float(z.def.slowdown)/pow(2.0, e.slow_count)/100.0)
-				e.slow_pending = factor if e.slow_pending <= 0 else f32(e.slow_pending*factor)
-				e.slow_count += 1
-			# CPoison::DoDamage0xe17c0 adds the tower's direct-damage support
-			# bonus to poison damage; chemical resources have zero direct damage.
-			var nominal = f32(float(z.def.get("poison_damage", 0))+float(z.get("damage_bonus", 0)))
-			var falloff = f32(1.0-distance/nominal) if nominal > 0 and distance > 0 else 1.0
-			damage(e, f32(f32(nominal*falloff)*seconds/pow(2.0, e.poison_count)), z.owner,3)
-			e.poison_count += 1
+		if z.def.has("slowdown"):
+			CreepPoison.apply_slow(enemies,z,float(map.hex_h))
+		else:
+			CreepPoison.apply_damage(enemies,z,float(map.hex_h),tick_ms,cloud_damage)
 	# UpdatePoisons0xe75dc updates clouds before bubbles: arrivals become damaging
 	# on the following tick and their lifetime does not run while in flight.
 	for b in bubbles.duplicate():
@@ -1957,6 +1959,7 @@ func begin_enemy_death(e:Dictionary,kind:int) -> void:
 	for pair in static_portals:pair.presentation.queue.erase(int(e.id))
 
 func destroy_enemy_owner(e:Dictionary) -> void:
+	for zone in zones:CreepPoison.erase(zone,e)
 	particle_state.destroy_creep(e)
 	release_displacement(int(e.id))
 	enemy_missiles=enemy_missiles.filter(func(missile):return int(missile.owner)!=int(e.id))

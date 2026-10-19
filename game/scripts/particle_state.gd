@@ -242,18 +242,16 @@ func begin_creep_death(e:Dictionary,point:Vector2) -> void:
 		for p in sys.particles:p.born=0.0;p.child_released=0.0
 
 func refresh_creep(sim,e:Dictionary) -> void:
-	# Freeze's real constructor alias is driven by ProcessSpeed/ProcessFreeze.
-	# LSD/poison/radiation retain the existing caller bridge pending recovery.
+	# Poison/radiation rates belong to ordered cloud Emit/Stop callers.
+	# Keep them across the next ProcessSpeed exposure-counter reset.
+	# Freeze and the remaining legacy LSD bridge retain their owner phase.
 	var aliases=[]
 	if sim.clock_ms<e.disco_until:aliases.append("lsd")
-	if float(e.get("poison_count",0))>0:
-		var radiation=sim.zones.any(func(z):return int(z.type)==5 and not z.has("bubble") and e.pos.distance_to(z.pos)<float(z.def.get("poison_range",0))*float(sim.map.hex_h)/1000.0)
-		aliases.append("radiation" if radiation else "poison")
 	for sys in e.get("particle_roots",[]):
 		var alias=str(sys.creep_alias)
 		if alias=="freeze":sys.owned_tree.rate=int(e.get("freeze_auxiliary_value",0))
 		elif alias=="lsd" and e.get("disco_managed",false):pass
-		elif alias in ["lsd","poison","radiation"]:sys.owned_tree.rate=int(sys.owned_tree.backup_rate) if alias in aliases else 0
+		elif alias=="lsd":sys.owned_tree.rate=int(sys.owned_tree.backup_rate) if alias in aliases else 0
 		sys.owner_hidden=e.has("portal_pose") and not e.portal_pose.particles_visible
 
 func stop_creep_smoke(e:Dictionary) -> void:

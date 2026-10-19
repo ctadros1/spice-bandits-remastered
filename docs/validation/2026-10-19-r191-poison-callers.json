@@ -1,0 +1,372 @@
+{
+  "revision": "R191",
+  "offline_complete": false,
+  "candidate_exported": false,
+  "current_package": "R187 unchanged; unchanged33.34ms performance failure remains",
+  "unit_gate": {
+    "checks": 54867,
+    "direct_cases": 4608,
+    "distance_cases": 1152,
+    "failures": [],
+    "scope": "Selected original Emit/Stop and ordered cloud apply/list/counter/callback raw values, plus complete direct supplied actor/root dictionary bytes. Actual Simulation constructed chemical/radiation/Goo mixtures, owned emission through resets, independent aliases, ordered overlapping clouds and owner cleanup also checked. Full original cloud constructor/Update/lifetime and real damage/GPU/audio remain separate.",
+    "sequences": 143
+  },
+  "original_distance_reproduction": {
+    "independent_pair_byte_exact": true,
+    "bytes": 1489283,
+    "sha256": "719b9b87abd98bc61cf54c0fd0ae47f4c8a257fd33a9370f2b836d302de1beec",
+    "cases": 1152,
+    "original_body_byte_checks_after_every_call": true,
+    "original_source_fixture_R190_unchanged": true,
+    "scope": "Original full selected cloud caller bodies, supplied diagonal/strict-radius/height/positive nominal damage/bonus/delta/exposure inputs; original damage is recording callback, not actual HP/rewards/GPU."
+  },
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 144.40110566700002,
+    "r187_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "98f0d2ed9aad33dc7b763d250ce411333aa13a3f6de6ca54a8b5afb1e24e3efa",
+      "executable_sha256": "8efefb7ae277263b48ac4618dd57164119bffae64f3e30366bc6a7b95ff4541b",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "8982ee58078b522c9ed608dae32a21359e5cab19c41c13d3bbd158f7b89da17d"
+      }
+    },
+    "candidate_exported": false,
+    "offline_complete": false
+  },
+  "source_guards": {
+    "fresh_build_logs": [
+      "builds/air-pass-verification.log",
+      "builds/animator-verification.log",
+      "builds/bolt-appearance-verification.log",
+      "builds/bolt-clock-verification.log",
+      "builds/bolt-construct-verification.log",
+      "builds/bolt-order-verification.log",
+      "builds/bolt-ribbon-verification.log",
+      "builds/build-hex-verification.log",
+      "builds/creep-air-path-verification.log",
+      "builds/creep-animation-verification.log",
+      "builds/creep-approach-verification.log",
+      "builds/creep-death-burst-verification.log",
+      "builds/creep-death-verification.log",
+      "builds/creep-depth-verification.log",
+      "builds/creep-disco-actor-verification.log",
+      "builds/creep-disco-admission-verification.log",
+      "builds/creep-disco-timer-verification.log",
+      "builds/creep-fields-verification.log",
+      "builds/creep-health-offset-verification.log",
+      "builds/creep-health-verification.log",
+      "builds/creep-hit-verification.log",
+      "builds/creep-hover-verification.log",
+      "builds/creep-initial-path-verification.log",
+      "builds/creep-light-verification.log",
+      "builds/creep-missile-verification.log",
+      "builds/creep-owner-verification.log",
+      "builds/creep-particle-birth-verification.log",
+      "builds/creep-particle-migration-verification.log",
+      "builds/creep-poison-verification.log",
+      "builds/creep-portal-verification.log",
+      "builds/creep-replan-verification.log",
+      "builds/creep-retained-verification.log",
+      "builds/creep-reward-verification.log",
+      "builds/creep-shooting-verification.log",
+      "builds/creep-source-replan-verification.log",
+      "builds/creep-spawn-path-verification.log",
+      "builds/creep-state-verification.log",
+      "builds/creep-status-verification.log",
+      "builds/decal-verification.log",
+      "builds/editor-import.log",
+      "builds/frame-lookup-verification.log",
+      "builds/hud-plate-verification.log",
+      "builds/hud-wallet-verification.log",
+      "builds/input-profile-verification.log",
+      "builds/magic-depth-verification.log",
+      "builds/magic-panel-verification.log",
+      "builds/magic-view-verification.log",
+      "builds/main-menu-verification.log",
+      "builds/map-animation-verification.log",
+      "builds/map-depth-verification.log",
+      "builds/menu-bubble-verification.log",
+      "builds/menu-float-verification.log",
+      "builds/menu-motion-verification.log",
+      "builds/menu-navigation-verification.log",
+      "builds/menu-ui-verification.log",
+      "builds/message-verification.log",
+      "builds/mode-effect-verification.log",
+      "builds/mode-item-verification.log",
+      "builds/mode-text-derivation.log",
+      "builds/native-build.log",
+      "builds/normal-walk-verification.log",
+      "builds/particle-active-copy-verification.log",
+      "builds/particle-child-binding-verification.log",
+      "builds/particle-child-verification.log",
+      "builds/particle-defaults-verification.log",
+      "builds/particle-keys-verification.log",
+      "builds/particle-life-verification.log",
+      "builds/particle-local-clock-verification.log",
+      "builds/particle-owned-benchmark.log",
+      "builds/particle-owned-draw-benchmark.log",
+      "builds/particle-owned-keys-verification.log",
+      "builds/particle-owned-live-verification.log",
+      "builds/particle-owned-verification.log",
+      "builds/particle-state-verification.log",
+      "builds/portal-lifecycle-verification.log",
+      "builds/portrait-verification.log",
+      "builds/promotion-verification.log",
+      "builds/result-lifecycle-verification.log",
+      "builds/reward-clock-verification.log",
+      "builds/reward-geometry-verification.log",
+      "builds/reward-spice-verification.log",
+      "builds/runtime-scripts-verification.log",
+      "builds/selection-verification.log",
+      "builds/story-verification.log",
+      "builds/tower-preview-verification.log",
+      "builds/transition-verification.log",
+      "builds/turn-pose-verification.log",
+      "builds/tutorial-arrow-verification.log",
+      "builds/tutorial-fade-verification.log",
+      "builds/tutorial-layout-verification.log",
+      "builds/ui-verification.log",
+      "builds/upgrade-verification.log",
+      "builds/verification.log",
+      "builds/water-verification.log",
+      "builds/wave-collapse-verification.log",
+      "builds/wave-verification.log",
+      "builds/world-blade-verification.log",
+      "builds/world-camera-verification.log",
+      "builds/world-cloud-verification.log",
+      "builds/xp-chronology-verification.log",
+      "builds/xp-verification.log"
+    ],
+    "all_logs_clean": true,
+    "all_existing_fixture_reference_JSON_files_exact": 149,
+    "native_source_helper_sha256": "9da96f4b6381ac07b5497efc919695ae4b812db768fba0b7bcb411c9cedb6c1c",
+    "R187_package_and_all_four_saves_unchanged": true,
+    "no_remaining_game_processes": true,
+    "candidate_exported": false,
+    "old_reference_fixtures_or_numeric_thresholds_modified": false
+  },
+  "source_native_review": {
+    "native_manifest_passed": true,
+    "six_full_1280x960_images_visually_reviewed": true,
+    "independent_actual_PNG_probe_decoding_passed": true,
+    "renderer_actual_constructed_actor_ID_observed_all_six": true,
+    "uniform_effective_original_asset_scale": 1.25,
+    "four_effect_context_actor_regions_distinct": true,
+    "images": [
+      {
+        "name": "poison-active",
+        "png_sha256": "f9929b83b817c69c98ccc9134d1f740fcb510af82cb64ac06d6ede3ad453acd9",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "abad8317daed026682b2c4bef9d9f02540fd08171c1338640f21eca831c27ffc"
+      },
+      {
+        "name": "poison-cleared-owned-tail",
+        "png_sha256": "f1cba9c612e85609d666ef3564df01725dc608bef3201dd6aa8588ccd7e16c11",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "57a69ccf2fecd8015aa96a34d5f42367138f3d207ec9a42e121743b55fcbdcee"
+      },
+      {
+        "name": "radiation-active",
+        "png_sha256": "1920e114973a1a0a229c99cf6bef0f4ac1198ec9f9c3a9288e13e465f4b92874",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "972b3a7f86abf4724feabfe6d04592a53e610a2b691dfbdd863fc99e6963863c"
+      },
+      {
+        "name": "poison-radiation-active",
+        "png_sha256": "bebf0c75c0aa7999d0b92e628af8900f8890cdcd03de5640e32f36e8b52186a0",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "3b97823b586f1720eace687bf1d6e57434df07988ef8437a3da969108ec9cec5"
+      },
+      {
+        "name": "poison-goo-active",
+        "png_sha256": "3a1a1f60026820a66893c05f72532ee108bb3252eecefea599fca2d24305e4ee",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "a55e34f355d9913318447862af85da0c1b90caf7e588471db9bcd0c01a8ce3d4"
+      },
+      {
+        "name": "poison-last-cloud-outside",
+        "png_sha256": "b4bf38f31491a44211bf5ec9393363ff547170c0ff79fdffe2250bcbb535d8c7",
+        "probe_RGBA": [
+          [
+            149,
+            180,
+            18,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "physical_actor": [
+          101.464786529541,
+          480.0
+        ],
+        "actor_region": [
+          66,
+          410,
+          136,
+          520
+        ],
+        "actor_region_RGBA_sha256": "de8224aa0f3b3c37c799b18b2d050c02e13e2ad0fc9b4d8565665c441bab6759"
+      }
+    ],
+    "source_engine_native_only": true,
+    "current_packaged_app_unchanged": true,
+    "numeric_performance_gate_not_rerun": true,
+    "original_whole_cloud_or_video_identity": false,
+    "limitations": "Unchanged legacy unowned cloud visualization remains in these frames. Only selected owned particle/counter/caller integration is reviewed; full original cloud Update/expiry/tails/resource/RNG/GPU/video identity stays open."
+  },
+  "source_native_run_guards": {
+    "exit_code": 0,
+    "seconds": 5.100720917,
+    "clean_log": true,
+    "all_four_saves_exact": true,
+    "no_game_processes": true
+  },
+  "post_verification_comment_only_wording": {
+    "game/scripts/simulation.gd": {
+      "executable_lines_exact": true,
+      "executable_sha256": "b37d3d20badeab8d7f759a99cf94f9cfaf4a7522027d565432530a8959c3a434"
+    },
+    "game/scripts/creep_poison.gd": {
+      "executable_lines_exact": true,
+      "executable_sha256": "55f454e6e53e24d3c71fe1c5b4ff45b3f336bde36f54f07860f1d75b9c5946ca"
+    }
+  },
+  "preserved_failures": [
+    "builds/creep-poison-r191-first-json-array-failure",
+    "builds/creep-poison-r191-first-native-setup-failure",
+    "builds/creep-poison-r191-second-native-probe-failure"
+  ],
+  "limits": [
+    "Source-only candidate, not new packaged/full-native performance acceptance.",
+    "Current zone expiry adapter is earlier than full original particle-tail cloud lifetime.",
+    "Unchanged unowned cloud rendering/randomness/parent activation/decal/GL/RNG behavior remains approximate.",
+    "Original resource/room flag producers and real damage/death/reward joins are outside these selected recording callbacks.",
+    "All8UI fidelity groups and full offline reconstruction remain incomplete."
+  ],
+  "signed_source": "pending",
+  "private_recovery": "pending",
+  "next": "Preserve signed source and actual private evidence recovery; recover original CPoison.Update/UpdateParticles/constructor parent/deleted/tail chronology before coherent package/visual/performance review."
+}
