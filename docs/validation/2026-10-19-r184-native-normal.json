@@ -97,7 +97,18 @@
     ],
     "first_native_audit_failure": "Obsolete222count rejected actual235captures despite runtime764checks pass. Only external run_packaged_qa.py changed; exact app unchanged. Negative missing-pose/one-bit-position tests reject."
   },
-  "private_recovery": "pending",
+  "private_recovery": {
+    "audit": "docs/backups/2026-10-19-r184-native-normal-candidate.json",
+    "release_id": 417763690,
+    "archive": {
+      "name": "r184-native-normal-candidate.tar.gz",
+      "bytes": 1373674388,
+      "sha256": "21b2e72218ba24918da2e97054863d99f1b84979b0c72f37a1b8725a02a2f89d"
+    },
+    "all_six_actual_remote_assets_verified": true,
+    "actual_restored_app_and_three_sources_verified": true,
+    "later_publication_docs_outside_frozen_source": true
+  },
   "visual_review": "builds/normal-r184-changed-presentation.json",
   "guards": {
     "all_four_saves_unchanged": true,
@@ -105,5 +116,13 @@
     "no_game_processes": true,
     "accepted_R137_guide_105_files_unchanged": true
   },
-  "next": "R185 coherent synthetic turn inputs; independently count eligible renderer coverage; profile/improve actual creep movement hotpath before rerunning unchanged33.34ms gate. Continue all8requiredUIgroups and full offline fidelity."
+  "next": "R185 coherent synthetic turn inputs; independently count eligible renderer coverage; profile/improve actual creep movement hotpath before rerunning unchanged33.34ms gate. Continue all8requiredUIgroups and full offline fidelity.",
+  "source_publication": {
+    "signed_commit": "18c32184ea664876e9c2df91b05755e9760f0eb6",
+    "remote_private_main_exact": true,
+    "actual_GitHub_empty_clone_bytes_executable_modes_exact": 728,
+    "pinned_signature_verified": true,
+    "all_ten_accepted": false,
+    "offline_complete": false
+  }
 }

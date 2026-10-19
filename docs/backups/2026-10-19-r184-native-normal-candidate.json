@@ -1,0 +1,126 @@
+{
+  "signed_base_commit": "18c32184ea664876e9c2df91b05755e9760f0eb6",
+  "source_signed_and_pushed": true,
+  "actual_GitHub_source_clone_verified": true,
+  "source_signing_pending": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "presentation_checks": 764,
+  "presentation_captures": 235,
+  "functional_suites_passed": 7,
+  "functional_suites_failed": [
+    "turns"
+  ],
+  "performance_gate_failed": true,
+  "median_ms": [
+    49.069,
+    49.77,
+    52.443
+  ],
+  "p95_ms": [
+    64.219,
+    100.364,
+    64.701
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_restore": {
+    "members": 2570,
+    "bytes": 1373674388,
+    "sha256": "21b2e72218ba24918da2e97054863d99f1b84979b0c72f37a1b8725a02a2f89d",
+    "sources": [
+      {
+        "source": "normal-r184-candidate",
+        "files": 728,
+        "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "normal-r184-first-audit-failure",
+        "files": 728,
+        "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 728,
+        "signed_base": "18c32184ea664876e9c2df91b05755e9760f0eb6",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "verified_at": "2026-10-19T21:16:53.373077+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 417763690,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-6acbbebfc6a3b6ce547b",
+  "assets": [
+    {
+      "name": "r184-native-normal-candidate.tar.gz",
+      "bytes": 1373674388,
+      "sha256": "21b2e72218ba24918da2e97054863d99f1b84979b0c72f37a1b8725a02a2f89d"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 155,
+      "sha256": "44c241c8f1c68e780dd6228c7aa1a3c7c285c250beee867e5cf8afe20c292336"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 567506,
+      "sha256": "00bf485bb09c7773e757d2c68f14ccad2be755e721edaefa5030197d01dc4f69"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1595,
+      "sha256": "2e044106a156496a9df0b8be761f27d6694def503760bad923bf38e9ad6bdc5a"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 790,
+      "sha256": "1853eb331573a9ae14d989034b8df2785007a210c899953a3ac0d59ce00253f7"
+    },
+    {
+      "name": "r184-restore-proof.zip",
+      "bytes": 3047326,
+      "sha256": "69f203d2d2126bcb8e71de7a70bf87787f75d6b056343da37289800252962bd0"
+    }
+  ],
+  "archive": {
+    "name": "r184-native-normal-candidate.tar.gz",
+    "bytes": 1373674388,
+    "sha256": "21b2e72218ba24918da2e97054863d99f1b84979b0c72f37a1b8725a02a2f89d"
+  },
+  "all_remote_assets_actual_hash_size_verified": true,
+  "actual_remote_full_restore": {
+    "members": 2570,
+    "bytes": 1373674388,
+    "sha256": "21b2e72218ba24918da2e97054863d99f1b84979b0c72f37a1b8725a02a2f89d",
+    "sources": [
+      {
+        "source": "normal-r184-candidate",
+        "files": 728,
+        "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "normal-r184-first-audit-failure",
+        "files": 728,
+        "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 728,
+        "signed_base": "18c32184ea664876e9c2df91b05755e9760f0eb6",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "no_remaining_game_processes": true
+}
