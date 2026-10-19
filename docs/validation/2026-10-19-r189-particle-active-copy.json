@@ -435,7 +435,30 @@
     "first_historical_2560_complete_rows_already_exact": true
   },
   "reference_body_allocation_only_proof": true,
-  "private_recovery": "pending",
-  "source_signing": "pending",
+  "private_recovery": {
+    "receipt": "docs/backups/2026-10-19-r189-particle-active-copy-candidate.json",
+    "release_id": 417826382,
+    "all_five_assets_actual_download_verified": true,
+    "asset_bytes": 5878727,
+    "archive": {
+      "name": "r189-particle-active-copy-candidate.tar.gz",
+      "bytes": 5697198,
+      "sha256": "48979be81bd8364975defd1389c735dee867052654afbcc28ba42c94aad8e1cb"
+    },
+    "actual_remote_restore": {
+      "members_verified": 113,
+      "archive_bytes": 5697198,
+      "source_files_verified": 774,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r187_package_and_all_four_saves_unchanged": true
+    },
+    "publication_outside_frozen_source": true
+  },
+  "source_signing": {
+    "signed_pushed_commit": "9e36524a03cd769ae832038ddc0ede932581b1f2",
+    "actual_GitHub_source_clone_bytes_executable_modes_pinned_signature_verified": 774
+  },
   "new_whole_app_native_or_visual_acceptance": false
 }
