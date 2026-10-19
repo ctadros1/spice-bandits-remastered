@@ -1,0 +1,79 @@
+{
+  "revision": "R192",
+  "runtime_changed": false,
+  "candidate_exported": false,
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "independent_pair_byte_exact": true,
+  "fixture": "tests/fixtures/native-poison-lifecycle-reference.json",
+  "bytes": 23650904,
+  "sha256": "79fdc974b0c362b7413bcdcfe794f7860eff807ea55f10f200e3d11316e8ef7e",
+  "sequences": 73,
+  "frames": 2791,
+  "particle_status_cases": 61,
+  "emission_header_cases": 900,
+  "full_selected_original_body_bytes": 2820,
+  "bodies": {
+    "0x7bc88": {
+      "bytes": 60,
+      "sha256": "441b4378c0543c16a8540c80d5d25d1db52286cf5e8f6b00fe8e8381bce47cf9"
+    },
+    "0x7bcc4": {
+      "bytes": 32,
+      "sha256": "9bc3603221c0b356daa64811737fd11d2d1bb8ef763b98db15af6e13bd163834"
+    },
+    "0xe17c0": {
+      "bytes": 396,
+      "sha256": "cc9e388861259f24d81dfe13478772d01af76ba0f56c88902c5aa2b66fc3b442"
+    },
+    "0xe16bc": {
+      "bytes": 260,
+      "sha256": "347fc5ba6380787525fd992708e810b1e774db245f1b7776c9d92415d8bed2b1"
+    },
+    "0xe1a8c": {
+      "bytes": 60,
+      "sha256": "6a16f73a9433be0bcb047e9d65e982b3f28288abb7901c7ad7a6c9f7c29c00e3"
+    },
+    "0xe11ac": {
+      "bytes": 48,
+      "sha256": "95a5e90423c700b7fc8b89ff3474f4d37ceebcec1349f0abd15fa7c568e5c5c1"
+    },
+    "0xe1afc": {
+      "bytes": 40,
+      "sha256": "faa1f9c65eecaf98a0e5cb94beb037b2a0db9a03c4f9a1d51b969fd68f2d8d8a"
+    },
+    "0x7a904": {
+      "bytes": 32,
+      "sha256": "eff1d657810d10dca4d2699e0cfc13bca6e2c00843501e05e7a5ebc7d7d6f94b"
+    },
+    "0xe0eb4": {
+      "bytes": 424,
+      "sha256": "538b93a83e34a56c7797c48131588a7df61a8fbf2553e46637d4ad9e1dcd1ada"
+    },
+    "0xe1268": {
+      "bytes": 1108,
+      "sha256": "a9616e56cfe7373dc977fc9c261f9cf12e4c4282a6dcb0497cd8e7edb58b910e"
+    },
+    "0xe194c": {
+      "bytes": 320,
+      "sha256": "b1a87c843bfbe953cc25cfb2cb294c901a6ed39274472d9e5882b30bf39cc4b4"
+    },
+    "0x81bb0": {
+      "bytes": 40,
+      "sha256": "faa1f9c65eecaf98a0e5cb94beb037b2a0db9a03c4f9a1d51b969fd68f2d8d8a"
+    }
+  },
+  "scope": "R192 bounded full original CPoison C2/Update/UpdateParticles chronology.\n\nFull selected bodies execute unchanged on supplied resource/actor/global-vector\nand parent records, with reserved vector capacity. Particle factory/Update/\ndestructor are explicit recording/status stubs, not original particle physics;\nUpdate stub counts are a supplied finite-tail model. Random/vector, decals,\nsound, delete, exception registration, ldexpf/memmove are explicit callbacks.\nNo resource parser, real parent production, cloud particle trajectory/render,\nactual damage/death/reward, room/tower manager or whole game runs. Original\nfiles/instruction bytes remain unchanged. Captures caller clocks, requests,\nheader mutations, before-update deletion/compaction, parent gating and tails.\n",
+  "all_four_saves_and_R187_package_unchanged": true,
+  "R191_source_native_helper_unchanged": "9da96f4b6381ac07b5497efc919695ae4b812db768fba0b7bcb411c9cedb6c1c",
+  "no_game_processes": true,
+  "preserved_earlier_tail_model": "builds/poison-lifecycle-r192-tail-model-units.json",
+  "callback_units": "Raw PS header+0x4c and its clock are seconds. Imported definition metadata uses milliseconds. CPoison writes f32(duration_ms*f32(.001)); preserve that exact product.",
+  "resource_tier_producer": "Static code chain: Room.UpdateTowers r4 loops1..3 and passes r3 at0xd190e; Manager.Load preserves r3 through r10 and passes it to C2 at0xe27dc; C2 stores it at resource+8. Full XML/Objective-C producer not executed.",
+  "limits": [
+    "Particle factory/Update/dtor use explicit supplied-header/status callbacks; no original particle physics/trajectory acceptance.",
+    "Random/vector, decal, sound, allocation/exception and damage callbacks explicitly scoped.",
+    "Parent30 byte44 and parent40 word4 are supplied raw records; original parent producers not executed.",
+    "Full room/tower manager, renderer, global RNG and whole original game remain separate."
+  ],
+  "next": "Implement a reference-controlled cloud lifecycle/emission header controller and compare all rows; then bind real retained particle state rather than introducing the finite-tail status stub into gameplay."
+}
