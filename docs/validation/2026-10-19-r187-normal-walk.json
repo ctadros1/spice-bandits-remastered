@@ -1,0 +1,337 @@
+{
+  "revision": "R187",
+  "offline_complete": false,
+  "source_gate": {
+    "ABBA": [
+      {
+        "median_us_per_actor": 8.13671875,
+        "reference": true
+      },
+      {
+        "median_us_per_actor": 3.6875,
+        "reference": false
+      },
+      {
+        "median_us_per_actor": 3.757568359375,
+        "reference": false
+      },
+      {
+        "median_us_per_actor": 8.1279296875,
+        "reference": true
+      }
+    ],
+    "actual_constructors_attempted": 29,
+    "actual_normal_nonboundary_cases": 13,
+    "checks": 2847,
+    "differences": {},
+    "failures": [],
+    "scope": "Exact full actor serialization against retained GDScript nonboundary normal update, transactional fallback, actual constructor inputs and controlled CPU timing. Original oracle gates/native whole-app performance still required; no whole-game/GPU identity."
+  },
+  "run_guards": {
+    "exit_code": 0,
+    "seconds": 1.5705670840000001,
+    "clean_log": true,
+    "report_exists": true,
+    "all_four_saves_unchanged": true,
+    "packaged_R185_app_unchanged": true,
+    "no_game_processes": true
+  },
+  "retained_path_proof": {
+    "all_previous_native_APIs_byte_exact": true,
+    "retained_reference_script_byte_exact": true,
+    "only_native_helper_and_selection_added": true,
+    "boundary_alignment_reroute_unusual_inputs_keep_retained_script": true
+  },
+  "original_gates_full_build_native_suites": "Full source/original and presentation/eight functional suites pass; unchanged33.34ms performance fails. No isolated interbuild whole-app speedup attribution.",
+  "package_exported": true,
+  "private_recovery": "pending",
+  "unchanged_performance_limit_ms": 33.34,
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 124.796124334,
+    "r185_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "98f0d2ed9aad33dc7b763d250ce411333aa13a3f6de6ca54a8b5afb1e24e3efa",
+      "executable_sha256": "8efefb7ae277263b48ac4618dd57164119bffae64f3e30366bc6a7b95ff4541b",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "8982ee58078b522c9ed608dae32a21359e5cab19c41c13d3bbd158f7b89da17d"
+      }
+    },
+    "candidate_exported": true,
+    "offline_complete": false
+  },
+  "build_log_scan": {
+    "logs": [
+      "builds/air-pass-verification.log",
+      "builds/animator-verification.log",
+      "builds/bolt-appearance-verification.log",
+      "builds/bolt-clock-verification.log",
+      "builds/bolt-construct-verification.log",
+      "builds/bolt-order-verification.log",
+      "builds/bolt-ribbon-verification.log",
+      "builds/build-hex-verification.log",
+      "builds/creep-air-path-verification.log",
+      "builds/creep-animation-verification.log",
+      "builds/creep-approach-verification.log",
+      "builds/creep-death-burst-verification.log",
+      "builds/creep-death-verification.log",
+      "builds/creep-depth-verification.log",
+      "builds/creep-disco-actor-verification.log",
+      "builds/creep-disco-admission-verification.log",
+      "builds/creep-disco-timer-verification.log",
+      "builds/creep-fields-verification.log",
+      "builds/creep-health-offset-verification.log",
+      "builds/creep-health-verification.log",
+      "builds/creep-hit-verification.log",
+      "builds/creep-hover-verification.log",
+      "builds/creep-initial-path-verification.log",
+      "builds/creep-light-verification.log",
+      "builds/creep-missile-verification.log",
+      "builds/creep-owner-verification.log",
+      "builds/creep-particle-birth-verification.log",
+      "builds/creep-particle-migration-verification.log",
+      "builds/creep-portal-verification.log",
+      "builds/creep-replan-verification.log",
+      "builds/creep-retained-verification.log",
+      "builds/creep-reward-verification.log",
+      "builds/creep-shooting-verification.log",
+      "builds/creep-source-replan-verification.log",
+      "builds/creep-spawn-path-verification.log",
+      "builds/creep-state-verification.log",
+      "builds/creep-status-verification.log",
+      "builds/decal-verification.log",
+      "builds/editor-import.log",
+      "builds/export.log",
+      "builds/frame-lookup-verification.log",
+      "builds/hud-plate-verification.log",
+      "builds/hud-wallet-verification.log",
+      "builds/input-profile-verification.log",
+      "builds/magic-depth-verification.log",
+      "builds/magic-panel-verification.log",
+      "builds/magic-view-verification.log",
+      "builds/main-menu-verification.log",
+      "builds/map-animation-verification.log",
+      "builds/map-depth-verification.log",
+      "builds/menu-bubble-verification.log",
+      "builds/menu-float-verification.log",
+      "builds/menu-motion-verification.log",
+      "builds/menu-navigation-verification.log",
+      "builds/menu-ui-verification.log",
+      "builds/message-verification.log",
+      "builds/mode-effect-verification.log",
+      "builds/mode-item-verification.log",
+      "builds/mode-text-derivation.log",
+      "builds/native-build.log",
+      "builds/normal-r187-build.log",
+      "builds/particle-child-binding-verification.log",
+      "builds/particle-child-verification.log",
+      "builds/particle-defaults-verification.log",
+      "builds/particle-keys-verification.log",
+      "builds/particle-life-verification.log",
+      "builds/particle-local-clock-verification.log",
+      "builds/particle-owned-benchmark.log",
+      "builds/particle-owned-draw-benchmark.log",
+      "builds/particle-owned-keys-verification.log",
+      "builds/particle-owned-live-verification.log",
+      "builds/particle-owned-verification.log",
+      "builds/particle-state-verification.log",
+      "builds/portal-lifecycle-verification.log",
+      "builds/portrait-verification.log",
+      "builds/promotion-verification.log",
+      "builds/result-lifecycle-verification.log",
+      "builds/reward-clock-verification.log",
+      "builds/reward-geometry-verification.log",
+      "builds/reward-spice-verification.log",
+      "builds/runtime-scripts-verification.log",
+      "builds/selection-verification.log",
+      "builds/story-verification.log",
+      "builds/tower-preview-verification.log",
+      "builds/transition-verification.log",
+      "builds/tutorial-arrow-verification.log",
+      "builds/tutorial-fade-verification.log",
+      "builds/tutorial-layout-verification.log",
+      "builds/ui-verification.log",
+      "builds/upgrade-verification.log",
+      "builds/verification.log",
+      "builds/water-verification.log",
+      "builds/wave-collapse-verification.log",
+      "builds/wave-verification.log",
+      "builds/world-blade-verification.log",
+      "builds/world-camera-verification.log",
+      "builds/world-cloud-verification.log",
+      "builds/xp-chronology-verification.log",
+      "builds/xp-verification.log",
+      "builds/turn-pose-verification.log",
+      "builds/normal-walk-verification.log"
+    ],
+    "log_count": 101,
+    "errors_or_leaks": [],
+    "unchanged_original_fixtures": 140
+  },
+  "native": {
+    "presentation_checks": 764,
+    "presentation_PNG": 235,
+    "all_eight_separate_functional_suites_passed": true,
+    "independent_first_turn_PNG_readiness_passed": true,
+    "performance_failed": true,
+    "median_ms": [
+      35.532,
+      35.998,
+      36.78
+    ],
+    "p95_ms": [
+      38.615,
+      40.72,
+      46.118
+    ],
+    "world_ms": [
+      5.934,
+      14.531
+    ],
+    "exact_RGBA_pairs": 15,
+    "exact_geometry_comparisons": 12,
+    "fresh_complete_capture_set": true,
+    "errors": [],
+    "all_ten_accepted": false,
+    "all_four_saves_package_source_signature_guards": true,
+    "no_game_processes": true
+  },
+  "visual_review": {
+    "R185_count": 235,
+    "R187_count": 235,
+    "same": 230,
+    "changed": [
+      "portal-lifecycle-pending.png",
+      "transition-cover-010.png",
+      "transition-cover-025.png",
+      "transition-reveal-010.png",
+      "transition-reveal-035.png"
+    ],
+    "all13normal_poses_exact": true,
+    "package_identity": {
+      "pck_sha256": "98f0d2ed9aad33dc7b763d250ce411333aa13a3f6de6ca54a8b5afb1e24e3efa",
+      "executable_sha256": "8efefb7ae277263b48ac4618dd57164119bffae64f3e30366bc6a7b95ff4541b",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "8982ee58078b522c9ed608dae32a21359e5cab19c41c13d3bbd158f7b89da17d"
+      }
+    },
+    "offline_complete": false,
+    "changed_pixel_bounds": [
+      {
+        "name": "portal-lifecycle-pending.png",
+        "bounds": [
+          482,
+          495,
+          483,
+          497
+        ]
+      },
+      {
+        "name": "transition-cover-010.png",
+        "bounds": [
+          0,
+          1,
+          917,
+          877
+        ]
+      },
+      {
+        "name": "transition-cover-025.png",
+        "bounds": [
+          0,
+          0,
+          1280,
+          960
+        ]
+      },
+      {
+        "name": "transition-reveal-010.png",
+        "bounds": [
+          0,
+          0,
+          417,
+          789
+        ]
+      },
+      {
+        "name": "transition-reveal-035.png",
+        "bounds": [
+          0,
+          0,
+          1216,
+          960
+        ]
+      }
+    ],
+    "reviewed_changed_full_resolution": [
+      "portal-lifecycle-pending.png",
+      "transition-cover-010.png",
+      "transition-cover-025.png",
+      "transition-reveal-010.png",
+      "transition-reveal-035.png"
+    ],
+    "reviewed_turns_full_resolution": [
+      "turn-550.png",
+      "turn-700.png",
+      "turn-800.png",
+      "turn-050.png",
+      "turn-200.png"
+    ],
+    "all25turn_actor_records_exact_R185": true,
+    "independent_native_scene_readiness_verified": true,
+    "turn_scene_readiness": {
+      "initial_clock": 0,
+      "probe_points": [
+        [
+          256,
+          700
+        ],
+        [
+          1152,
+          19
+        ]
+      ],
+      "ready_clock": 0,
+      "rgba8": [
+        [
+          239,
+          183,
+          80,
+          255
+        ],
+        [
+          0,
+          176,
+          224,
+          255
+        ]
+      ],
+      "warmup_draws": 3
+    },
+    "scope": "Five changed presentationPNG and all5turns viewed full1280x960. All13actual normalPNG exact reviewedR185;230/235presentationexact. Firstturn terrain/HUD now present, Simclock0. Tiny portal-preview RGB edge difference is bounded, not attributed to isolated code cause. No originalGPU/equivalent input/wholegame identity; all8requiredUIgroups remainopen."
+  },
+  "comparison": {
+    "review_only": true,
+    "pairs": 45,
+    "additional_native_poses": 13,
+    "changed_pairs_vs_R185": [],
+    "byte_identical_sheets_vs_reviewed_R185": [
+      "comparison-01.png",
+      "comparison-02.png",
+      "comparison-03.png",
+      "comparison-04.png",
+      "comparison-05.png",
+      "comparison-06.png",
+      "comparison-07.png",
+      "comparison-08.png",
+      "comparison-09.png",
+      "comparison-10.png",
+      "comparison-11.png",
+      "comparison-12.png"
+    ],
+    "accepted_guide_105_files_unchanged": true,
+    "all_ten_accepted": false
+  }
+}

@@ -14,6 +14,7 @@ class SpiceNative : public RefCounted {
 protected:
     static void _bind_methods();
 public:
+    static bool advance_normal_walk(Dictionary actor, double dt_ms, Dictionary map);
     static bool advance_creep_fields(Dictionary actor, double dt_ms, int64_t remaining);
     static bool frame_clock_advance(Dictionary state, double dt_ms);
     static bool in_range(Vector2 a, Vector2 b, double radius, double hex_height);

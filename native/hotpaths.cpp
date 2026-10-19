@@ -118,6 +118,7 @@ void integrate_particles(Array particles,const ParticleCoefficients &coefficient
 
 }
 void SpiceNative::_bind_methods() {
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_normal_walk","actor","dt_ms","map"),&SpiceNative::advance_normal_walk);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_fields","actor","dt_ms","remaining"),&SpiceNative::advance_creep_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("frame_clock_advance","state","dt_ms"),&SpiceNative::frame_clock_advance);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("creep_depth","center_y","height"),&SpiceNative::creep_depth);
@@ -319,6 +320,71 @@ Dictionary SpiceNative::movement_tick(Vector2 start,Vector2 target,Vector2 futur
 }
 void SpiceNative::update_particle(Dictionary p,Dictionary d,double dt,double age) {
     ParticleCoefficients(d).integrate(p,dt,f32(age));
+}
+bool SpiceNative::advance_normal_walk(Dictionary actor,double dt_ms,Dictionary map) {
+    // Only the nonboundary state0 branch. All validation precedes mutation;
+    // full state transitions/callbacks and unusual numerics keep the script path.
+    const Keys &k=keys();
+    static const StringName start_key("move_start"),target_key("move_target"),carry_key("move_carry"),corner_key("corner"),semi_key("semi"),corner_flag("corner_key"),semi_flag("semi_key"),enabled_key("enabled"),direction_key("dir"),light_key("draw_light");
+    const auto number=[](const Variant &v) {return (v.get_type()==Variant::FLOAT || v.get_type()==Variant::INT) && std::isfinite(double(v));};
+    const Variant state=actor.get(k.state,Variant()),raw_p=actor.get(k.progress,Variant()),raw_carry=actor.get(carry_key,0.0),raw_speed=actor.get(k.speed,Variant()),raw_slow=actor.get(k.slow,Variant()),raw_height=map.get("hex_h",Variant());
+    if(!number(state) || int64_t(state)!=0 || !number(raw_p) || double(raw_p)>=1.0 || !number(raw_carry) || !number(raw_speed) || !number(raw_slow) || !number(raw_height) || !std::isfinite(dt_ms))return false;
+    const Variant raw_start=actor.get(start_key,Variant()),raw_target=actor.get(target_key,Variant()),raw_cell=actor.get(k.cell,Variant()),raw_next=actor.get(k.next_cell,Variant());
+    if(raw_start.get_type()!=Variant::VECTOR2 || raw_target.get_type()!=Variant::VECTOR2 || raw_cell.get_type()!=Variant::VECTOR2I || raw_next.get_type()!=Variant::VECTOR2I)return false;
+    const Vector2 start=raw_start,target=raw_target;
+    float p=f32(double(raw_p)),carry=f32(double(raw_carry));
+    if(p>=1.0f || !std::isfinite(p) || !std::isfinite(carry) || !start.is_finite() || !target.is_finite() || start==target)return false;
+    const float length=start.distance_to(target),speed=f32(double(raw_speed)*double(raw_slow));
+    if(length==0 || !std::isfinite(length) || !std::isfinite(speed))return false;
+    const float factor=f32(double(raw_height)/length);
+    const float increment=f32(double(f32(double(f32(dt_ms/1000.0))*f32(double(speed)/1000.0)))*factor);
+    p=f32(double(p)+increment);
+    if(p>1.0f) {p=1.0f;carry=std::min(increment,f32(0.3));}
+    if(!std::isfinite(p) || !std::isfinite(carry))return false;
+    // InterpolateVectors2D multiplies the endpoints separately; do not use
+    // movement_tick's alternate start+(target-start)*p position formula.
+    const double position_progress=std::clamp(double(p),0.0,1.0);
+    const float opposite=f32(1.0-position_progress);
+    const Vector2 position(f32(double(f32(double(start.x)*opposite))+f32(double(target.x)*position_progress)),f32(double(f32(double(start.y)*opposite))+f32(double(target.y)*position_progress)));
+    const Vector2 direction=(target-start).normalized();
+    if(!position.is_finite() || !direction.is_finite())return false;
+    const Variant raw_width=map.get("hex_width",Variant()),raw_rows=map.get("hex_height",Variant()),raw_cells=map.get("cells",Variant()),raw_previous=actor.get(light_key,1.0);
+    if(!number(raw_width) || !number(raw_rows) || double(raw_width)<=0 || double(raw_rows)<=0 || double(raw_width)>std::numeric_limits<int32_t>::max() || double(raw_rows)>std::numeric_limits<int32_t>::max() || raw_cells.get_type()!=Variant::ARRAY || !number(raw_previous))return false;
+    const int64_t width=raw_width,rows=raw_rows;
+    const Array cells=raw_cells;
+    const auto cell_at=[&](Vector2i point)->Variant {
+        if(point.x<0 || point.y<0 || point.x>=width || point.y>=rows)return Variant();
+        const int64_t index=int64_t(point.y)*width+point.x;
+        return index<cells.size()?cells[index]:Variant();
+    };
+    const Variant current=cell_at(raw_cell),next=cell_at(raw_next);
+    float light=f32(double(raw_previous));
+    if(current.get_type()!=Variant::NIL) {
+        if(current.get_type()!=Variant::DICTIONARY)return false;
+        const Dictionary value=current;const Variant a=value.get("l",1.0);
+        if(!number(a) || !std::isfinite(f32(double(a))))return false;
+        light=f32(double(a));
+        if(next.get_type()!=Variant::NIL) {
+            if(next.get_type()!=Variant::DICTIONARY)return false;
+            const Dictionary value_next=next;const Variant b=value_next.get("l",1.0);
+            if(!number(b) || !std::isfinite(f32(double(b))))return false;
+            light=f32(creep_light(light,double(b),p));
+        }
+    }
+    if(!std::isfinite(light))return false;
+    const Variant raw_corner=actor.get(corner_key,Variant()),raw_semi=actor.get(semi_key,Variant());
+    if((actor.has(corner_key) && raw_corner.get_type()!=Variant::DICTIONARY) || (actor.has(semi_key) && raw_semi.get_type()!=Variant::DICTIONARY))return false;
+    actor[k.progress]=double(p);actor[carry_key]=double(carry);actor[k.pos]=position;
+    if(p>0.25f && p<0.75f) {
+        if(actor.has(corner_key)) {Dictionary corner=raw_corner;corner[enabled_key]=false;}
+        actor.erase(corner_flag);
+    }
+    if(p>0.0f && p<0.5f) {
+        if(actor.has(semi_key)) {Dictionary semi=raw_semi;semi[enabled_key]=false;}
+        actor.erase(semi_flag);
+    }
+    actor[direction_key]=direction;actor[light_key]=double(light);
+    return true;
 }
 bool SpiceNative::advance_creep_fields(Dictionary actor,double dt_ms,int64_t remaining) {
     const Keys &k=keys();

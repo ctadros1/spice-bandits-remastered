@@ -12,6 +12,7 @@ const Death=preload("res://scripts/creep_death_view.gd")
 const ParticleState=preload("res://scripts/particle_state.gd")
 const MapTheme=preload("res://scripts/map_theme.gd")
 var particle_state=ParticleState.new()
+var reference_normal_walk=false
 var reference_spawn_presentation=false
 var creep_aim_angles:Dictionary={}
 
@@ -1787,6 +1788,7 @@ func update_normal_creep_movement(e:Dictionary) -> void:
 	var b:Dictionary=bases[e.base] if int(e.base)>=0 else {}
 	if state==0:
 		CreepView.prepare(self,e)
+		if not reference_normal_walk and SpiceNative.advance_normal_walk(e,tick_ms,map):return
 		var start:Vector2=e.get("move_start",center(e.cell.x,e.cell.y))
 		var target:Vector2=e.get("move_target",center(e.next_cell.x,e.next_cell.y))
 		var p=CreepView.progress(self,e)

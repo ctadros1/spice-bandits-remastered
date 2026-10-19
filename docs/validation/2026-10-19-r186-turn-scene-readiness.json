@@ -73,7 +73,18 @@
   },
   "package_exported": false,
   "prior_R185_performance_failure_and_app_preserved": true,
-  "private_recovery": "pending",
+  "private_recovery": {
+    "audit": "docs/backups/2026-10-19-r186-turn-scene-readiness-candidate.json",
+    "release_id": 417790900,
+    "archive": {
+      "name": "r186-turn-scene-readiness-candidate.tar.gz",
+      "bytes": 10840493,
+      "sha256": "b5219ff95a588b2b92bd420a5a21504fc24a233af64e14e2cb9797c8c0f5eabf"
+    },
+    "all_five_actual_remote_assets_verified": true,
+    "actual734_source_restore_verified": true,
+    "later_publication_docs_outside_frozen_source": true
+  },
   "next": "Verify source script/original guards, normal signing and private source/evidence recovery, then profile bounded nonboundary normal walking CPU fields before next coherent app export. No unchanged performance rerun.",
   "source_guards": {
     "checks": [
@@ -95,5 +106,13 @@
   },
   "original_files_checked": 4035,
   "runtime_scripts_checked": 82,
-  "turn_pose_checks": 175
+  "turn_pose_checks": 175,
+  "source_publication": {
+    "signed_commit": "e6bd56e9fbbccae5bd8e8e0416701878b62e7d09",
+    "remote_private_main_exact": true,
+    "actual_GitHub_empty_clone_bytes_executable_modes_exact": 734,
+    "pinned_signature_verified": true,
+    "all_ten_accepted": false,
+    "offline_complete": false
+  }
 }
