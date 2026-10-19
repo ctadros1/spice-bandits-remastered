@@ -13,6 +13,7 @@ const ParticleState=preload("res://scripts/particle_state.gd")
 const MapTheme=preload("res://scripts/map_theme.gd")
 var particle_state=ParticleState.new()
 var reference_spawn_presentation=false
+var creep_aim_angles:Dictionary={}
 
 const CreepView = preload("res://scripts/creep_view.gd")
 const CreepLight = preload("res://scripts/creep_light_view.gd")
@@ -94,6 +95,7 @@ var next_id: int = 1
 var path_cache: Dictionary = {}
 var route_cost_cache: Dictionary = {}
 var displacement_owners: Dictionary = {}
+var displacement_last_owners: Dictionary = {}
 var build_overrides: Dictionary = {}
 var penalty_ground: PackedFloat32Array = PackedFloat32Array()
 var penalty_air: PackedFloat32Array = PackedFloat32Array()
@@ -169,6 +171,7 @@ func setup(data: Dictionary, map_data: Dictionary, mission: Dictionary, profile:
 		for cell in [Vector2i(6, 7), Vector2i(7, 4), Vector2i(8, 6), Vector2i(11, 3)]: build_overrides[cell_index(cell)] = 1
 		# CMagicPanel ctor0x96c60 injects all five stocks only in training.
 		abilities = {"m_freeze": 5, "m_lsd": 5, "m_actdef": 5, "m_mine": 5, "m_portal": 5}
+	update_source_paths()
 
 func f32(value: float) -> float:
 	# Vector2 uses32-bit components in the pinned single-precision build;
@@ -556,11 +559,44 @@ func validate_paths() -> void:
 	reroute_all()
 
 func reroute_all() -> void:
+	update_source_paths()
 	for e in enemies:
 		if e.hp <= 0: continue
 		set_enemy_path(e)
 
+func update_source_paths() -> void:
+	# CSource::CheckBases/UpdateShortestPath0xdc398/0xdbbe8. The two
+	# cached vectors include both endpoints; fresh ground actors remove the
+	# trailing base point only after copying their source's vector.
+	for source in sources:
+		var owner=int(source.get("neutrality",0))
+		var target=int(source.get("target",0))
+		if not bases.is_empty() and not bases.any(func(base):return base.hp>0 and (int(base.get("neutrality",base.get("player",0)))==0 or int(base.get("neutrality",base.get("player",0)))==target)):
+			target=0;source.target=0
+		var previous:Dictionary=source.get("cached_paths",{})
+		var cached={}
+		for kind in ["ground","air"]:
+			var best:Array[Vector2i]=[]
+			var selected=int(previous.get(kind,{}).get("base_index",-1))
+			var best_cost=100000000.0
+			# The original skips route production when both ids are nonzero.
+			if owner==0 or target==0:
+				for i in bases.size():
+					var base:Dictionary=bases[i]
+					var base_owner=int(base.get("neutrality",base.get("player",0)))
+					if base.hp<=0 or (owner!=0 and owner==base_owner) or (target!=0 and target!=base_owner):continue
+					var candidate=route(Vector2i(int(source.x),int(source.y)),Vector2i(int(base.x),int(base.y)),kind=="air")
+					# Original failure returns cost0; selection compares the cost
+					# alone, retaining that base even with an empty route.
+					var cost=0.0 if candidate.is_empty() else route_cost(candidate,kind=="air")
+					if cost<best_cost:best_cost=cost;selected=i;best=candidate
+			cached[kind]={"path":best,"base_index":selected}
+		source.cached_paths=cached
+
 func set_enemy_path(e: Dictionary) -> void:
+	if normal_creep_movement(e):
+		set_normal_creep_path(e)
+		return
 	release_displacement(int(e.id))
 	# UpdateShortestPath0x7ace0 plans from the current segment's endpoint,
 	# while preserving its progress. Blocking the endpoint before the native
@@ -633,6 +669,85 @@ func set_enemy_path(e: Dictionary) -> void:
 	e.path_at = 1
 	e.base = target
 	e.next_cell = best_path[1] if best_path.size() > 1 else e.cell
+
+func normal_creep_movement(e:Dictionary) -> bool:
+	return int(e.state) in [0,1,4] and not disco_wandering(e) and not bool(e.get("bombing",false)) and int(e.def.traits.get("kamikaze",0))!=1 and int(e.def.traits.get("shoot_bomb",0))!=1
+
+func set_normal_creep_path(e:Dictionary) -> void:
+	# UpdateShortestPath retains its selected segment and a separate pending
+	# vector. Original A* includes its starting cell, even when that cell is
+	# the current segment endpoint. Keep that duplicate boundary entry.
+	var air=bool(e.get("native_air",false))
+	var owner=int(e.get("owner",0))
+	var available=bases.any(func(base):return base.hp>0 and (owner==0 or int(base.get("neutrality",base.get("player",0)))!=owner))
+	if not available:
+		if int(e.state)!=1:e.path_previous_state=int(e.state)
+		CreepState.change(e,1)
+		return
+	if int(e.state)==1:CreepState.change(e,int(e.get("path_previous_state",0)))
+	var current:Vector2i=e.cell
+	var endpoint:Vector2i=e.next_cell
+	var p=CreepView.progress(self,e)
+	var next_open=open_cell(endpoint)
+	var current_open=open_cell(current)
+	var pending_count=maxi(0,e.path.size()-int(e.path_at)-1)
+	var threshold=0.5 if absi(endpoint.x-current.x)>=2 and endpoint.y==current.y else f32(0.7)
+	var force_endpoint=pending_count>0 and (not current_open or (not next_open and p>=threshold))
+	var search_cell=endpoint if force_endpoint or next_open else current
+	var best_path:Array[Vector2i]=[]
+	var copied_source=false
+	var source_index=int(e.get("source",-1))
+	if not force_endpoint and source_index>=0 and source_index<sources.size():
+		var cached:Dictionary=sources[source_index].get("cached_paths",{}).get("air" if air else "ground",{})
+		var cached_path:Array=cached.get("path",[])
+		if current in cached_path:
+			# Copy, remove the base point, then erase through the current cell.
+			# The active endpoint/progress remain independent of this vector.
+			best_path.assign(cached_path)
+			if not best_path.is_empty():best_path.pop_back()
+			while not best_path.is_empty():
+				var point=best_path.pop_front()
+				if point==current:break
+			e.base=int(cached.get("base_index",-1));copied_source=true
+	if not copied_source:
+		var target_owner=int(e.get("target_owner",0))
+		var best_cost=100000000.0
+		if owner==0 or target_owner==0:
+			for i in bases.size():
+				var b:Dictionary=bases[i]
+				var base_owner=int(b.get("neutrality",b.get("player",0)))
+				if b.hp<=0 or (owner!=0 and base_owner==owner) or (target_owner!=0 and base_owner!=target_owner):continue
+				var candidate=route(search_cell,Vector2i(int(b.x),int(b.y)),air)
+				var cost=0.0 if candidate.is_empty() else route_cost(candidate,air)
+				if cost<best_cost:best_path=candidate;best_cost=cost;e.base=i
+		# FindPathToBase only removes the base point for vectors of size>=2.
+		if best_path.size()>1:best_path.pop_back()
+		if force_endpoint and (best_path.is_empty() or best_path[0]!=endpoint):best_path.push_front(endpoint)
+	if not e.has("move_start"):e.move_start=e.pos
+	if not e.has("move_progress"):e.move_progress=0.0 if current==endpoint else p
+	if not e.has("move_target"):e.move_target=center(endpoint.x,endpoint.y)
+	if not force_endpoint and not copied_source and not next_open:
+		e.cell=endpoint;e.next_cell=current;e.move_progress=f32(1.0-p)
+		e.move_start=center(endpoint.x,endpoint.y);e.move_target=center(current.x,current.y)
+		e.pos=vector_interpolate(e.move_start,e.move_target,float(e.move_progress))
+	e.path=[e.cell,e.next_cell]
+	e.path.append_array(best_path)
+	e.path_at=1
+	e.path_remaining=best_path.size()
+	var pending={"path":best_path,"path_at":0,"cell":e.cell,"state":e.state,"disco_until":0,"def":e.def}
+	if movement_point_allowed(pending):
+		if e.attacking:
+			release_cell_displacement(e.cell,int(e.id))
+			e.attacking=false
+		CreepState.change(e,0)
+	else:
+		e.attack_point=e.move_target
+		if int(e.base)<0:return
+		var b:Dictionary=bases[e.base]
+		e.attack_point=displace_point(e.cell,b.pos,int(e.id),e.move_target)
+		var delta:Vector2i=e.cell-Vector2i(int(b.x),int(b.y))
+		var distance=int(f32(sqrt(f32(delta.x*delta.x+delta.y*delta.y))))
+		CreepState.change(e,1 if distance-2>int(e.def.base_distance) else 4)
 
 func movement_point_allowed(e: Dictionary) -> bool:
 	var remaining = e.path.size()-int(e.path_at)
@@ -714,9 +829,17 @@ func release_displacement(owner: int) -> void:
 		for i in range(slots.size()):
 			if int(slots[i]) == owner: slots[i] = -1
 
+func release_cell_displacement(cell:Vector2i,owner:int) -> void:
+	# Full FreeDisplacePoint returns after the first retained owner match,
+	# including an already-free slot. The original does not clear its id.
+	var slots:Array=displacement_owners.get(cell,[])
+	var retained:Array=displacement_last_owners.get(cell,slots)
+	for i in retained.size():
+		if int(retained[i])==owner:slots[i]=-1;return
+
 func displace_point(cell: Vector2i, toward: Vector2, owner: int, fallback: Vector2) -> Vector2:
-	# Native rejects the outside edges and offers nine ordered points at h/3.
-	if cell.x <= 0 or cell.y <= 0 or not within(cell): return fallback
+	# GetCell accepts valid zero coordinates. Nine ordered points use h/3.
+	if not within(cell): return fallback
 	var slots = displacement_owners.get(cell, [-1, -1, -1, -1, -1, -1, -1, -1, -1])
 	displacement_owners[cell] = slots
 	var directions = [Vector2.ZERO, Vector2(1, -1), Vector2.RIGHT, Vector2(1, 1), Vector2.DOWN, Vector2(-1, 1), Vector2.LEFT, Vector2(-1, -1), Vector2.UP]
@@ -731,6 +854,8 @@ func displace_point(cell: Vector2i, toward: Vector2, owner: int, fallback: Vecto
 		if distance < best_distance: best_distance = distance; best = i
 	if best < 0: return fallback
 	slots[best] = owner
+	if not displacement_last_owners.has(cell):displacement_last_owners[cell]=[0,0,0,0,0,0,0,0,0]
+	displacement_last_owners[cell][best]=owner
 	return origin+directions[best]*radius
 
 func spawn_delay(delay: float) -> int:
@@ -781,14 +906,46 @@ func spawn_enemy(type: int, source_index: int, wave_type: String, enemy_id: int 
 	e.merge(CreepHit.initial())
 	next_id += 1
 	enemies.append(e)
-	set_enemy_path(e)
-	particle_state.initialize_creep(e,MapTheme.selector(map.get("theme")))
-	CreepState.initialize(e)
+	if normal_creep_movement(e):
+		particle_state.initialize_creep(e,MapTheme.selector(map.get("theme")))
+		CreepState.initialize(e)
+		initialize_normal_creep_spawn(e)
+	else:
+		set_enemy_path(e)
+		particle_state.initialize_creep(e,MapTheme.selector(map.get("theme")))
+		CreepState.initialize(e)
 	# ProcessWaves calls UseLsd directly after AddCreep for positive timers.
 	# This caller does not use the manager's same-owner filter.
 	if int(disco_state.remaining)>0:use_disco_on(e,1,false)
 	emit("spawn", {"id": e.id, "type": type})
 	return e
+
+func initialize_normal_creep_spawn(e:Dictionary) -> void:
+	# Full original CCreep constructor: SetInitPosition, source-vector copy,
+	# optional base-end removal and state selection precede any path pop.
+	var source:Dictionary=sources[e.source]
+	var kind="air" if bool(e.get("native_air",false)) else "ground"
+	var cached:Dictionary=source.cached_paths[kind]
+	var pending:Array=cached.path.duplicate()
+	e.base=int(cached.base_index)
+	e.target_owner=int(source.get("target",0))
+	var available=bases.any(func(base):return base.hp>0 and (int(e.owner)==0 or int(base.get("neutrality",base.get("player",0)))!=int(e.owner)))
+	if not available:pending.clear()
+	elif not pending.is_empty():pending.pop_back()
+	e.path=[e.cell,e.cell];e.path.append_array(pending);e.path_at=1;e.next_cell=e.cell
+	e.move_start=e.pos;e.move_target=e.pos;e.move_progress=0.0;e.previous_move_progress=0.0;e.move_carry=0.0
+	e.path_remaining=pending.size();e.attack_alignment=0.0;e.attack_reload_ms=f32(float(int(e.def.rof)))
+	var offset=e.def.traits.get("offset",[0,0]);e.animator_offset=Vector2(offset[0],offset[1]);e.hover_phase=0.0
+	e.visual_pos=e.pos;e.visual_aim=e.pos+e.animator_offset;e.normal_position_written=false
+	e.primary_animation="RunDownRight";e.secondary_animation="RunDownRight"
+	e.anim_age=[{"state":"RunDownRight","born":clock_ms},{"state":"RunDownRight","born":clock_ms}]
+	e.visual_layers=[{"state":"RunDownRight","rotation":0.0,"alpha":1.0,"born":clock_ms},{"state":"RunDownRight","rotation":0.0,"alpha":1.0,"born":clock_ms}]
+	CreepState.change(e,0)
+	if not available:CreepState.change(e,1)
+	# Original IsMyBasePosition ignores its coordinate arguments and tests
+	# owner membership. Preserve that observed helper behavior here.
+	if not open_cell(e.cell) and not bases.any(func(base):return int(base.get("neutrality",base.get("player",0)))==int(e.owner)):
+		CreepState.change(e,1)
 
 func spawn_presentation(e: Dictionary) -> Dictionary:
 	# CCreep::ProcessGrowUp 0x7f058 + InterpolateEase 0x110674.
@@ -805,13 +962,18 @@ func spawn_presentation(e: Dictionary) -> Dictionary:
 
 func creep_animation(e: Dictionary) -> String:
 	if e.attacking:
-		var angle = f32(atan2(e.dir.y, e.dir.x))
-		var closest = INF
-		var state = "RunDown"
+		var direction:Vector2=e.get("shooting_direction",e.dir)
+		var angle=creep_shooting_angle(direction)
+		if creep_aim_angles.is_empty():
+			for name in AIM_ANIMATIONS:creep_aim_angles[name]=normalize_degrees(f32(f32(native_angpos(AIM_ANIMATIONS[name])*57.295780181884766)-90.0))
+		var closest=10000.0
+		var state="RunDown"
 		for name in AIM_ANIMATIONS:
-			var facing: Vector2 = AIM_ANIMATIONS[name]
-			var difference = absf(wrapf(angle-f32(atan2(facing.y, facing.x)), -PI, PI))
-			if difference < closest: closest = difference; state = name
+			var facing=float(creep_aim_angles[name])
+			# Original compares candidate and candidate-360 only. Preserve
+			# its asymmetric wrap and strict lexical first-wins tie behavior.
+			var difference=minf(absf(f32(angle-facing)),absf(f32(angle-f32(facing-360.0))))
+			if difference<closest:closest=difference;state=name
 		return state
 	# GetDirFixFloatinPoint 0x7f150 zeros axes below0.05 pixel, then
 	# GetAnimationFromDir 0x7f1f0 maps the eight signed directions.
@@ -819,6 +981,15 @@ func creep_animation(e: Dictionary) -> String:
 	if movement.is_zero_approx(): movement = e.dir*float(map.hex_h)
 	var direction = Vector2i(0 if absf(movement.x) < 0.05000000074505806 else int(signf(movement.x)), 0 if absf(movement.y) < 0.05000000074505806 else int(signf(movement.y)))
 	return WALK_ANIMATIONS.get(direction, "RunDown")
+
+func creep_shooting_angle(direction:Vector2) -> float:
+	# Full Vector2Normalize0x11046c precedes AngPos; keep its float32
+	# reciprocal/multiplications and zero-vector behavior.
+	var squared=f32(f32(direction.x*direction.x)+f32(direction.y*direction.y))
+	if squared!=0.0:
+		var inverse=f32(1.0/f32(sqrt(squared)))
+		direction=Vector2(f32(direction.x*inverse),f32(direction.y*inverse))
+	return normalize_degrees(f32(f32(native_angpos(direction)*57.295780181884766)-90.0))
 
 func choose_target(t: Dictionary, radius: float) -> Dictionary:
 	var result = SpiceNative.select_target(enemies, {"cell":Vector2(t.cell),"mode":str(t.targeting),"gravity":int(t.type)==11,"aim":int(t.def.get("aim",0)),"owner":int(t.get("player",1)),"ellipse":true,"origin":t.pos,"radius":radius,"hex_height":float(map.hex_h)}, target_grid)
@@ -933,6 +1104,22 @@ func create_death_crater(e:Dictionary) -> Dictionary:
 	if not result.is_empty():result.merge({"owner_id":e.id,"resource":name,"variant":key})
 	return result
 
+func creep_kill_reward(e:Dictionary) -> int:
+	# Full DoDamage0x7a62c consumes cached raw+0x2b4 and the current source
+	# vector, not a fresh route to the selected base or the queue's length.
+	var source_index=int(e.get("source",-1))
+	var source_path:Array=[]
+	if source_index>=0 and source_index<sources.size():
+		var kind="air" if bool(e.get("native_air",e.air)) else "ground"
+		source_path=sources[source_index].get("cached_paths",{}).get(kind,{}).get("path",[])
+	var remaining=int(e.get("path_remaining",maxi(0,e.path.size()-int(e.path_at))))
+	var factor=f32(2.0-f32(f32(float(remaining))/f32(float(maxi(1,source_path.size())))))
+	var nominal=int(floorf(f32(f32(float(int(e.def.price)))*factor)))
+	var level=f32(float(int(upgrades.get("up_interest",0))))
+	var percent=f32(float(int(catalog.get("tower_upgrades",{}).get("up_interest",{}).get("percent",5))))
+	var bonus=f32(f32(f32(f32(float(nominal))*level)*percent)*f32(0.01))
+	return maxi(1,int(f32(f32(float(nominal))+bonus)))
+
 func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
 	if e.hp<=0 or int(e.get("state",0)) in [2,3]:return
 	e.hp = f32(e.hp - amount)
@@ -943,11 +1130,7 @@ func damage(e: Dictionary, amount: float, owner: int = 0, kind:int=0) -> void:
 		begin_enemy_death(e,kind)
 		kills += 1
 		kill_chain += 1
-		var source_path = route(Vector2i(int(sources[e.source].x), int(sources[e.source].y)), Vector2i(int(bases[e.base].x), int(bases[e.base].y)), e.air) if e.base >= 0 else []
-		var remaining = maxi(0, e.path.size()-e.path_at)
-		var factor = f32(2.0-f32(float(remaining)/maxi(1, source_path.size())))
-		var nominal = floorf(f32(float(e.def.price)*factor))
-		var reward = maxi(1, int(f32(nominal*(1.0 + int(upgrades.get("up_interest", 0))*0.05))))
+		var reward = creep_kill_reward(e)
 		money = f32(money+reward)
 		score = f32(score+reward)
 		emit("kill", {"id": e.id, "pos": e.pos, "type": e.type, "owner": owner, "reward": reward,"managed_death":true})
@@ -1001,6 +1184,7 @@ func enemy_aim_point(e: Dictionary) -> Vector2:
 	return e.pos+Vector2(float(offset[0]), float(offset[1]))
 
 func enemy_visual_aim_point(e: Dictionary) -> Vector2:
+	if e.has("visual_aim"):return e.visual_aim
 	var offset = e.def.get("traits", {}).get("offset", [0, 0])
 	return e.get("visual_pos", e.pos)+Vector2(float(offset[0]), float(offset[1]))
 
@@ -1253,16 +1437,69 @@ func creep_portal_base(e:Dictionary) -> Vector2:
 	return Vector2(values[0],values[1])
 
 func teleport_enemy(e:Dictionary,exit_cell:Vector2i) -> void:
+	if normal_creep_movement(e):
+		teleport_normal_creep(e,exit_cell)
+		return
 	# Original TeleportCreep sets state2/clock0 and collapses logical/drawn
 	# anchors at the exit, then pops/peeks its newly supplied path. The next
 	# movement update consumes a boundary without moving the logical point.
 	e.state=0;e.cell=exit_cell;e.next_cell=exit_cell;e.pos=center(exit_cell.x,exit_cell.y)
+	e.move_target=e.pos;e.visual_pos=e.pos;e.normal_position_written=true
 	e.attacking=false;e.path=[];e.path_at=1
 	set_enemy_path(e)
 	e.portal_pose.state=2;e.portal_pose.clock=0.0;e.portal_marker=Vector2i(-1,-1)
 	e.portal_boundary=true;e.move_progress=1.0;e.move_carry=0.0;e.move_start=e.pos
 	if e.path.size()>1:e.dir=(center(e.path[1].x,e.path[1].y)-e.pos).normalized()
 	CreepView.update(self,e)
+
+func teleport_normal_creep(e:Dictionary,exit_cell:Vector2i) -> void:
+	# Full TeleportCreep0x9c2c8 joins the iiiif initializer and original A*.
+	# GetFirst(pop) consumes the exit; GetFirst(peek) selects the next cell
+	# while retaining that head. Progress1 schedules the stationary boundary.
+	CreepState.change(e,0)
+	initialize_normal_creep_segment(e,exit_cell,exit_cell,0.0)
+	e.pos=center(exit_cell.x,exit_cell.y);e.move_start=e.pos
+	e.erase("portal_boundary")
+	var pending={"path":e.path,"path_at":2,"cell":e.cell,"state":e.state,"disco_until":0,"def":e.def}
+	e.path_remaining=maxi(0,e.path.size()-2)
+	if movement_point_allowed(pending):e.path.remove_at(2);e.previous_move_progress=0.0
+	e.path_remaining=maxi(0,e.path.size()-2)
+	if movement_point_allowed(pending):
+		e.next_cell=e.path[2];e.move_target=center(e.next_cell.x,e.next_cell.y)
+	e.path[1]=e.next_cell
+	e.move_start=e.pos;e.move_progress=1.0
+	e.normal_position_written=true;e.normal_boundary=true
+	e.portal_pose.state=2;e.portal_pose.clock=0.0;e.portal_marker=Vector2i(-1,-1)
+	if e.move_target!=e.move_start:e.dir=(e.move_target-e.move_start).normalized()
+	e.primary_animation=creep_animation(e)
+	CreepView.update(self,e)
+	e.visual_pos=e.pos+e.get("body_jitter",Vector2.ZERO)
+	e.visual_aim=e.visual_pos+e.get("animator_offset",Vector2.ZERO)
+
+func initialize_normal_creep_segment(e:Dictionary,start:Vector2i,end:Vector2i,progress:float) -> void:
+	# CCreep::UpdatePosition(iiiif)0x7aaac. This is the segment/portal
+	# initializer; fresh AddCreep uses a separate SetInitPosition/source path.
+	var old_current:Vector2i=e.cell
+	var old_next:Vector2i=e.next_cell
+	if int(e.state)!=4 and not e.attacking:
+		e.pos=center(start.x,start.y);e.move_start=e.pos
+	e.move_target=center(end.x,end.y)
+	e.previous_move_progress=CreepView.progress(self,e)
+	e.segment_relation=1 if old_current==start and old_next==end else (2 if old_current==end else (3 if old_next==start else 0))
+	var pending=e.path.slice(int(e.path_at)+1)
+	e.cell=start;e.next_cell=end;e.path=[start,end];e.path.append_array(pending);e.path_at=1
+	for key in ["corner","corner_key","semi","semi_key"]:e.erase(key)
+	if int(e.state)!=4 and not e.attacking and e.move_target!=e.move_start:
+		e.dir=(e.move_target-e.move_start).normalized()
+		e.primary_animation=WALK_ANIMATIONS.get(Vector2i(CreepView.signed(e.move_target-e.move_start)),str(e.get("primary_animation","RunDownRight")))
+	# The original true argument is retained in state4, which skips the
+	# normal reroute. Non-state4 normal paths clear that argument internally.
+	if int(e.state)!=4:set_normal_creep_path(e)
+	e.move_progress=minf(1.0,f32(progress))
+	e.pos=vector_interpolate(e.move_start,e.move_target,float(e.move_progress))
+	e.visual_pos=e.pos+e.get("body_jitter",Vector2.ZERO)
+	e.visual_aim=e.visual_pos+e.get("animator_offset",Vector2.ZERO)
+	e.normal_position_written=true
 
 func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vector2i) -> void:
 	var queue:Array=presentation.queue
@@ -1343,6 +1580,7 @@ func step() -> void:
 		else:
 			update_living_enemy(e)
 			if e.hp>0:
+				advance_creep_hover(e,tick_ms)
 				CreepView.update(self,e)
 				if e.has("portal_pose"):CreepPortal.advance(e.portal_pose,tick_ms,creep_portal_base(e),float(e.draw_light),float(e.def.traits.get("shadow_scale_factor",1)))
 			if int(e.get("state",0)) not in [2,3]:particle_state.refresh_creep(self,e)
@@ -1531,6 +1769,85 @@ func check_room_outcome() -> void:
 	if living <= 0: finish("defeat")
 	elif tutorial_finished and wave_index >= config.waves.size() and running_waves.is_empty() and not is_any_creep_targeted(1): finish("victory")
 
+func advance_creep_hover(e:Dictionary,dt_ms:float) -> void:
+	# Original position writes aim before the hover tail changes offset58.
+	# Waiting, Freeze and already-aligned paths retain the previous aim.
+	if normal_creep_movement(e) and bool(e.get("normal_position_written",false)):
+		var authored=e.def.traits.get("offset",[0,0])
+		e.aim_offset_before_hover=e.get("animator_offset",Vector2(authored[0],authored[1]))
+	CreepState.advance_hover(e,dt_ms)
+
+func update_normal_creep_movement(e:Dictionary) -> void:
+	# Full original 0x7bfa8 normal states: finish the current segment before
+	# asking GetFirstMovementPoint about the still-unconsumed route head.
+	# State 1 waits; state 4 aligns before setting raw +0x236 (attacking).
+	var state=int(e.state)
+	e.normal_position_written=state==0 or (state==4 and not e.attacking)
+	e.normal_boundary=false
+	var b:Dictionary=bases[e.base] if int(e.base)>=0 else {}
+	if state==0:
+		CreepView.prepare(self,e)
+		var start:Vector2=e.get("move_start",center(e.cell.x,e.cell.y))
+		var target:Vector2=e.get("move_target",center(e.next_cell.x,e.next_cell.y))
+		var p=CreepView.progress(self,e)
+		if p>=1.0 or start==target:
+			e.normal_boundary=true
+			e.cell=e.next_cell;e.move_start=e.pos
+			e.move_progress=float(e.get("move_carry",0));e.move_carry=0.0
+			e.path_at+=1
+			e.path_remaining=maxi(0,e.path.size()-int(e.path_at))
+			if movement_point_allowed(e):
+				e.previous_move_progress=0.0
+				e.next_cell=e.path[e.path_at]
+				target=center(e.next_cell.x,e.next_cell.y)
+				e.move_target=target
+			else:
+				# A failed GetFirstMovementPoint leaves the pending head intact.
+				# path_at continues to identify the retained arrived endpoint.
+				e.path_at-=1
+				e.attack_point=target
+				if not b.is_empty():
+					e.attack_point=displace_point(e.cell,b.pos,int(e.id),target)
+					var delta:Vector2i=e.cell-Vector2i(int(b.x),int(b.y))
+					var distance=int(f32(sqrt(f32(delta.x*delta.x+delta.y*delta.y))))
+					CreepState.change(e,1 if distance-2>int(e.def.base_distance) else 4)
+				if not e.has("attack_alignment"):e.attack_alignment=0.0
+				for key in ["corner","corner_key","semi","semi_key"]:e.erase(key)
+			e.pos=vector_interpolate(e.move_start,target,float(e.move_progress))
+		else:
+			var movement=CreepView.movement_tick(start,target,target,p,float(e.get("move_carry",0)),f32(float(e.speed)*float(e.slow)),tick_ms,float(map.hex_h))
+			e.move_progress=movement.progress;e.move_carry=movement.carry
+			# Original InterpolateVectors2D multiplies both endpoints separately.
+			e.pos=vector_interpolate(start,target,float(e.move_progress))
+			CreepView.finish_walk(e)
+		if target!=e.move_start:e.dir=(target-e.move_start).normalized()
+		e.draw_light=CreepLight.from_map(map,e.cell,e.next_cell,CreepView.progress(self,e),float(e.get("draw_light",1)))
+		# The original rechecks the state after a boundary and can begin
+		# alignment on this same update (0x7ca98), including the carried step.
+		state=int(e.state)
+	if state!=4:return
+	if b.is_empty():e.normal_position_written=false;return
+	if not e.attacking:
+		var start:Vector2=e.move_start+e.get("body_jitter",Vector2.ZERO)
+		e.move_target=e.attack_point
+		var length=f32(start.distance_to(e.attack_point))
+		var increment=f32(f32(f32(tick_ms/1000.0)*f32(f32(float(e.speed)*float(e.slow))/1000.0))*f32(float(map.hex_h)/length)) if length>0 else 1.0
+		e.attack_alignment=minf(1.0,f32(float(e.get("attack_alignment",0))+increment))
+		e.pos=vector_interpolate(start,e.attack_point,float(e.attack_alignment))
+		if e.attack_point!=start:e.dir=(e.attack_point-start).normalized()
+		if float(e.attack_alignment)!=1.0:return
+		e.attack_alignment=0.0;e.attacking=true;e.dir=(b.pos-e.pos).normalized()
+		# 0x7cbb8–0x7cbf2 selects facing once from the base position
+		# minus (attack point + current pre-hover primary body offset).
+		e.shooting_direction=b.pos-(e.attack_point+e.get("animator_offset",Vector2.ZERO))
+		e.move_start=e.attack_point;e.move_target=e.attack_point
+	# The completion frame also advances the original float32 reload timer.
+	e.attack_reload_ms=f32(float(e.attack_reload_ms)+f32(tick_ms))
+	if float(e.attack_reload_ms)<float(int(e.def.rof)):return
+	e.attack_reload_ms=0.0
+	if int(e.def.traits.get("shoot_missile",0))==1:launch_enemy_missiles(e)
+	else:base_damage(int(e.base),float(e.def.damage))
+
 func update_living_enemy(e:Dictionary) -> void:
 	var seconds=float(tick_ms)/1000.0
 	CreepFreeze.advance_fields(e,tick_ms,int(freeze_state.remaining))
@@ -1549,11 +1866,16 @@ func update_living_enemy(e:Dictionary) -> void:
 		e.disco_until = 0
 		set_enemy_path(e)
 	if e.get("hit_running",false):CreepHit.advance(e,tick_ms)
-	if int(e.freeze_remaining)>0 or clock_ms < e.float_until: return
+	if int(e.freeze_remaining)>0 or clock_ms < e.float_until:
+		if normal_creep_movement(e):e.normal_position_written=false
+		return
+	if normal_creep_movement(e) and not e.get("portal_boundary",false):
+		update_normal_creep_movement(e)
+		return
 	if e.path.is_empty() or e.base < 0: return
 	CreepView.prepare(self, e)
 	if e.get("portal_boundary",false):
-		e.portal_boundary=false;e.cell=e.next_cell;e.move_start=e.pos;e.move_progress=0.0
+		e.portal_boundary=false;e.cell=e.next_cell;e.move_start=e.pos;e.move_progress=0.0;e.normal_position_written=true
 	elif e.speed > 0 and movement_point_allowed(e):
 		var cell = e.path[e.path_at]
 		var point = center(cell.x, cell.y)

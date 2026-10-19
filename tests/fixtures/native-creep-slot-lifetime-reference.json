@@ -1,0 +1,7518 @@
+{
+  "method": "R176 full original displacement reservation/free lifetime on supplied cells.\nCreateDisplacePoints, GetDisplacePointInHexagon and FreeDisplacePointInHexagon\nexecute unchanged with explicit memory/exception callbacks and supplied map,\ncell/world point, global hex distance and owner ids. The free routine retains\nowner ids and returns after its first match even when that slot is already free.\nOwner0 cases expose original zero-initialized free owner fields. No actor/room\nor original map producer, death owner caller, renderer or GPU executes.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "full_function_bytes": {
+    "0x7ba04": 272,
+    "0x1066fc": 52,
+    "0x10bca4": 84,
+    "0x10b954": 412,
+    "0x10bebc": 528,
+    "0x1104e0": 40,
+    "0x1104b0": 48,
+    "0x10c0cc": 40,
+    "0x10b904": 80
+  },
+  "sequences": [
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 48,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1122500608,
+            1122500608
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1122500608
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1118306304
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1118306304,
+            1120403456
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1118306304,
+            1122500608
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1118306304,
+            1118306304
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            3239051264,
+            3239051264
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 48,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1122500608
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 2,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            2,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 2,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1122500608
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1118306304
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1118306304,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1118306304,
+            1122500608
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1118306304,
+            1118306304
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 48,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1122500608
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9002,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9002,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9002,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1122500608,
+            1118306304
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1122500608
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1118306304
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1118306304,
+            1120403456
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1118306304,
+            1122500608
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1118306304,
+            1118306304
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 64,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1123199659,
+            1123199659
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1123199659
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1120403456,
+            1117607253
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1117607253,
+            1120403456
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1117607253,
+            1123199659
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1117607253,
+            1117607253
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            3239051264,
+            3239051264
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 64,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1123199659
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 2,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            2,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 2,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1123199659
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1120403456,
+            1117607253
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1117607253,
+            1120403456
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1117607253,
+            1123199659
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1117607253,
+            1117607253
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          0,
+          0
+        ],
+        "height": 64,
+        "center": [
+          100.0,
+          100.0
+        ],
+        "toward": [
+          200.0,
+          100.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1123199659
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9002,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9002,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9002,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1120403456
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1123199659,
+            1117607253
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1120403456
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1123199659
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1120403456,
+            1117607253
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1117607253,
+            1120403456
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1117607253,
+            1123199659
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1117607253,
+            1117607253
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 48,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1131675648,
+            1131675648
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1131675648
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1129578496
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129578496,
+            1130627072
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129578496,
+            1131675648
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129578496,
+            1129578496
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            3239051264,
+            3239051264
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 48,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1131675648
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 2,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            2,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 2,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1131675648
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1129578496
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129578496,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129578496,
+            1131675648
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129578496,
+            1129578496
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 48,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1131675648
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9002,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9002,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9002,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1131675648,
+            1129578496
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1131675648
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1129578496
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129578496,
+            1130627072
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129578496,
+            1131675648
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129578496,
+            1129578496
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 64,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1132025173,
+            1132025173
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1132025173
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1130627072,
+            1129228971
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129228971,
+            1130627072
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129228971,
+            1132025173
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            1129228971,
+            1129228971
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 0,
+          "point_bits": [
+            3239051264,
+            3239051264
+          ],
+          "active_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 0,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "retained_owners": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 64,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1132025173
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 2,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            2,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            2,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 2,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            2,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1132025173
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1130627072,
+            1129228971
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            -1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129228971,
+            1130627072
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129228971,
+            1132025173
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 1,
+          "point_bits": [
+            1129228971,
+            1129228971
+          ],
+          "active_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 1,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "retained_owners": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "input": {
+        "cell": [
+          4,
+          4
+        ],
+        "height": 64,
+        "center": [
+          228.0,
+          228.0
+        ],
+        "toward": [
+          328.0,
+          228.0
+        ]
+      },
+      "frames": [
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            0,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1132025173
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9002,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9002,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            9002,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9002,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1130627072
+          ],
+          "active_owners": [
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9002,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1132025173,
+            1129228971
+          ],
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            0,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1130627072
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1132025173
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1130627072,
+            1129228971
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            0,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129228971,
+            1130627072
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129228971,
+            1132025173
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            -1,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            0,
+            9001
+          ]
+        },
+        {
+          "action": "reserve",
+          "owner": 9001,
+          "point_bits": [
+            1129228971,
+            1129228971
+          ],
+          "active_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        },
+        {
+          "action": "free",
+          "owner": 9001,
+          "point_bits": null,
+          "active_owners": [
+            -1,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ],
+          "retained_owners": [
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001,
+            9001
+          ]
+        }
+      ]
+    }
+  ]
+}

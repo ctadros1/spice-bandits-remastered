@@ -1,0 +1,56 @@
+{
+  "verified_at": "2026-10-17T07:17:16.454421+00:00",
+  "source_commit": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+  "private": true,
+  "draft": true,
+  "release_id": 415649292,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-fb4329085e08a9f16c2a",
+  "assets": [
+    {
+      "name": "r170-source-evidence.tar.gz",
+      "bytes": 5193318,
+      "sha256": "681e399a688227c0d2be80b02822157c82c4ccf10a1e22351a15a23edd983e2e"
+    },
+    {
+      "name": "MANIFEST.json",
+      "bytes": 13962,
+      "sha256": "72be697367ee9344c128d817747b61c963c75766fceaa6ea7c2777aca6b6ee8d"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 971,
+      "sha256": "f0ccb314565e76ed04114e2d928b45774ca087cb701ffa9abf7c1712469a5079"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 613,
+      "sha256": "86d2277039458b51856b08b0883328acae6c372d9989760d750a14bb82635674"
+    }
+  ],
+  "archive": {
+    "bytes": 5193318,
+    "sha256": "681e399a688227c0d2be80b02822157c82c4ccf10a1e22351a15a23edd983e2e"
+  },
+  "actual_remote_restore": {
+    "members": 71,
+    "source_files": 658,
+    "all_bytes_modes_exact": true,
+    "pinned_source_signature_good": true,
+    "gzip_crc_verified": true
+  },
+  "local_restore": {
+    "members": 71,
+    "source_files": 658,
+    "all_bytes_modes_exact": true,
+    "pinned_source_signature_good": true,
+    "gzip_crc_verified": true
+  },
+  "all_remote_assets_actual_download_hash_size_verified": true,
+  "r169_app_unchanged": true,
+  "r169_app_backup_release_id": 415633968,
+  "protected_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "no_game_remains": true,
+  "source_only": true,
+  "full_offline_complete": false
+}

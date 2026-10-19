@@ -5,6 +5,7 @@ import hashlib
 import json
 import platform
 import re
+import struct
 import subprocess
 import time
 from datetime import datetime, timezone
@@ -165,7 +166,37 @@ def main():
             manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
         if 'verification' in manifest: record['verification'] = manifest['verification']
         elif 'checks' in manifest: record['verification'] = {'checks': manifest['checks'], 'failures': manifest.get('failures', [])}
-        fresh = fresh and record['captures'] == (216 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        fresh = fresh and record['captures'] == (235 if args.presentation else 20 if args.tutorial else 4 if args.projectiles else 23 if args.audio else 5 if args.turns else 55 if args.menus else 4 if args.performance else 148)
+        if args.presentation:
+            # The thirteen R184 captures are required independently of the
+            # total count. Their native fields must agree with immutable
+            # original inputs; no expected pose is injected into the actor.
+            expected=json.loads((ROOT/'game/data/qa-normal-poses.json').read_text())
+            normal={c['name']:c for c in manifest['captures'] if c['name'].startswith('creep-normal-')}
+            wanted={'creep-normal-'+r['name'] for r in expected['poses']}|{'creep-normal-portal-enter','creep-normal-portal-exit','creep-normal-portal-boundary'}
+            exact=set(normal)==wanted and len({c['name'] for c in manifest['captures']})==record['captures']
+            decode=lambda words:struct.unpack('<2f',struct.pack('<2I',*map(int,words)))
+            encode=lambda xy:list(struct.unpack('<2I',struct.pack('<2f',*xy)))
+            for row in expected['poses']:
+                actual=normal.get('creep-normal-'+row['name'],{}).get('normal_pose',{})
+                exact=exact and actual.get('original_fixture')==row['original_fixture'] and actual.get('original_sha256')==row['original_sha256']
+                fields=actual.get('actual',{})
+                for key,value in fields.items():
+                    if key=='primary' and not row['primary_name_verified']:continue
+                    exact=exact and value==row['expected'].get(key)
+                exact=exact and len(fields)==14
+                pos=decode(row['expected']['position_bits']);offset=decode(row['expected']['offset_bits'])
+                exact=exact and actual.get('body_bits')==encode([pos[i]+offset[i] for i in range(2)]) and actual.get('health_bits')==encode([pos[0]-16,pos[1]+16])
+                exact=exact and actual.get('native_scale_bits')==actual.get('authored_scale_bits')
+                canvas=normal.get('creep-normal-'+row['name'],{}).get('canvas_stretch',[])
+                exact=exact and len(canvas)==2 and canvas[0]==canvas[1]
+            exit_fields=normal.get('creep-normal-portal-exit',{}).get('normal_pose',{}).get('actual',{})
+            boundary=normal.get('creep-normal-portal-boundary',{}).get('normal_pose',{}).get('actual',{})
+            exact=exact and exit_fields.get('logical_bits')==boundary.get('logical_bits') and exit_fields.get('next_cell')==boundary.get('cell')
+            exact=exact and exit_fields.get('progress_bits')==1065353216 and boundary.get('progress_bits')==0
+            record['normal_original_input_pose_fields_and_portal_bridge_exact']=bool(exact)
+            record['normal_pose_capture_count']=len(normal)
+            fresh=fresh and exact
         if args.performance:
             owned_comparisons=manifest.get('owned_group_comparisons',[])
             record['owned_group_comparisons']=owned_comparisons
@@ -252,6 +283,29 @@ def main():
             # sequence, rather than rounded JSON phases or a new tolerance.
             fresh = fresh and all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
             record['creep_clock_original_sequence_exact'] = all(creep_poses.get(pose, {}).get('creep_clocks') == clocks for pose, clocks in creep_expected.items())
+            hover_path=ROOT/'tests/fixtures/native-creep-authored-hover-reference.json'
+            hover_fixture=json.loads(hover_path.read_text())
+            fresh=fresh and digest(hover_path)=='a04db89611a085fe6f0108e590fef4ab47ede915607a5f3d31d53a22e632153a'
+            hover_sequence=next(s for s in hover_fixture['sequences'] if s['resource']=='creeps/creep5' and s['delta']==100)
+            hover_frames={'creep-hover-000':-1,'creep-hover-moving':6,'creep-hover-frozen':13,'creep-hover-paused':13,'creep-hover-expiry':14,'creep-hover-resume':15}
+            required.update(hover_frames)
+            hover_poses={c['name']:c.get('creep_hover',{}) for c in manifest['captures'] if c['name'] in hover_frames}
+            def float_bits(v):return struct.unpack('<I',struct.pack('<f',v))[0]
+            def from_bits(v):return struct.unpack('<f',struct.pack('<I',v))[0]
+            hover_exact=len(hover_poses)==6
+            for pose,frame in hover_frames.items():
+                actual=hover_poses.get(pose,{})
+                original=hover_sequence['frames'][frame]['after'] if frame>=0 else {'phase_bits':hover_sequence['initial_phase_bits'],'offset_y_bits':hover_sequence['initial_offset_bits'][1]}
+                offset=[hover_sequence['initial_offset_bits'][0],original['offset_y_bits']]
+                raw=actual.get('raw_position',[])
+                hover_exact=hover_exact and actual.get('resource')=='creep5' and actual.get('phase_bits')==original['phase_bits'] and actual.get('offset_bits')==offset and len(raw)==2
+                if len(raw)==2:
+                    hover_exact=hover_exact and actual.get('body_bits')==[float_bits(raw[i]+from_bits(offset[i])) for i in range(2)] and actual.get('health_bits')==[float_bits(raw[0]-16),float_bits(raw[1]+16)]
+                frozen=pose in ('creep-hover-frozen','creep-hover-paused','creep-hover-expiry')
+                hover_exact=hover_exact and actual.get('multiplier_bits')==(0 if frozen else 1065353216) and actual.get('paused')==(pose=='creep-hover-paused') and actual.get('freeze_attached')==(pose in ('creep-hover-frozen','creep-hover-paused'))
+            hover_exact=hover_exact and next((c.get('paused_battle_rgba_exact') for c in manifest['captures'] if c['name']=='creep-hover-paused'),False) is True
+            record['creep_hover_original_phase_offset_health_exact']=hover_exact
+            fresh=fresh and hover_exact
             burst_frames={'death-burst-0000':0,'death-burst-0150':5,'death-burst-0300':10,'death-burst-0600':20,'death-burst-paused':20,'death-burst-0930':31,'death-burst-1350':45}
             required.update(burst_frames)
             burst_poses={c['name']:c for c in manifest['captures'] if c['name'] in burst_frames}

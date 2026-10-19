@@ -71,9 +71,12 @@ class Constructor(FactoryProbe):
   room=E+0x1000;map_obj=E+0x2000;creep_res=E+0x3000;u.mem_write(room+0xc,I(map_obj));u.mem_write(map_obj+8,I(map_field8));u.mem_write(creep_res+4,I(resource_kind));u.mem_write(creep_res+0x10,I(50));u.mem_write(creep_res+0x18,I(100));u.mem_write(creep_res+0x28,I(self.intern(name)));u.mem_write(creep_res+0x4c,I(E+0x4000))
   sp=STACK-0x2000;u.mem_write(sp,struct.pack('<5I',creep_res,0,0,BITS(1),0));u.reg_write(UC_ARM_REG_SP,sp);u.reg_write(UC_ARM_REG_LR,END|1)
   for reg,value in zip([UC_ARM_REG_R0,UC_ARM_REG_R1,UC_ARM_REG_R2,UC_ARM_REG_R3],[E,room,0,1]):u.reg_write(reg,value)
+  # Optional later join supplies a real source/graph after these explicit
+  # resource records are installed. Existing constructor probes omit it.
+  if hasattr(self,'prepare_constructor_context'):self.prepare_constructor_context()
   try:u.emu_start(0x78375,END,count=2000000)
   except Exception:
-   Path('builds/creep-constructor-r149-failure-trace.json').write_text(json.dumps(list(self.trace),indent=2));raise
+   Path(getattr(self,'failure_trace_path','builds/creep-constructor-r149-failure-trace.json')).write_text(json.dumps(list(self.trace),indent=2));raise
   assert u.reg_read(UC_ARM_REG_PC)==END,hex(u.reg_read(UC_ARM_REG_PC));assert all(bytes(u.mem_read(a,len(b)))==b for a,b in self.bodies.items())
   roots=[]
   for alias,node in self.slots.items():

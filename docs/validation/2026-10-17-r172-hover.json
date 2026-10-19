@@ -1,0 +1,535 @@
+{
+  "original_authored_hover_reproduction": {
+    "independent_runs_identical": true,
+    "sha256": "a04db89611a085fe6f0108e590fef4ab47ede915607a5f3d31d53a22e632153a",
+    "bytes": 2304411,
+    "constructors": 10,
+    "sequences": 30,
+    "frames": 7200,
+    "original_unchanged": true
+  },
+  "source_unit": {
+    "authored_sequences": 30,
+    "checks": 62743,
+    "failure_count": 0,
+    "failures": [],
+    "movement_sequences": 30,
+    "owner_cases": 48,
+    "render_cases": 48,
+    "scope": "Original R164 tail/SetState and R166 full movement-position phase/offset bits; actual Sim owner step compares R167 Freeze/hover fields with supplied counters and no walking route; actual Main body anchor plus existing scaled frame offset compares R168 quad requests and raw HP separation. Additional R172 full-constructor-derived authored offsets cover all ten supplied resources/7200 frames through actual renderer anchors. Default Godot sine matches supplied float32 math.sin stub on these inputs, not original libm/GPU. Full pathfinding, Fly/portal/growth/status/audio ownership remain separate.",
+    "single_calls": 864,
+    "tail_sequences": 30
+  },
+  "preport": {
+    "checks": 40806,
+    "failure_count": 8731,
+    "failures": [
+      "actual simulation exposes original hover phase",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits",
+      "single original hover call phase bits",
+      "single original hover call retained offset bits"
+    ],
+    "movement_sequences": 30,
+    "owner_cases": 48,
+    "render_cases": 48,
+    "scope": "Original R164 tail/SetState and R166 full movement-position phase/offset bits; actual Sim owner step compares R167 Freeze/hover fields with supplied counters and no walking route; actual Main body anchor plus existing scaled frame offset compares R168 quad requests and raw HP separation. Default Godot sine matches supplied float32 math.sin stub on these inputs, not original libm/GPU. Full pathfinding, Fly/portal/growth/status/audio ownership remain separate.",
+    "single_calls": 864,
+    "tail_sequences": 30
+  },
+  "native_batch": {
+    "pck_sha256": "e5c23e8389259a1546383cfb12cba28d61407850e16052b776665c955c76e1d7",
+    "executable_sha256": "ab50466c2d9142f48a31d6313a7ddb84be8737598ea9c22aae1dbb4a46293ad1",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "54610a3fc3e6c359843ffdaa13517c32584095dd1c4d9ccb29a0f7641240a3cf"
+    },
+    "started_utc": "2026-10-17T07:33:32.489266+00:00",
+    "protected_before": {
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json": "9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json.bak": "56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json": "c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json.bak": "ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb"
+    },
+    "suites": [
+      {
+        "suite": "presentation",
+        "passed": true,
+        "captures": 222,
+        "checks": 566,
+        "audit": "builds/presentation-package-audit.json",
+        "log": "builds/package-presentation-creep-hover-r172-corrected.log"
+      },
+      {
+        "suite": "performance",
+        "passed": false,
+        "captures": 4,
+        "checks": null,
+        "audit": "builds/performance-package-audit.json",
+        "log": "builds/package-performance-creep-hover-r172-corrected.log"
+      }
+    ],
+    "passed": false,
+    "protected_after": {
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json": "9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json.bak": "56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json": "c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json.bak": "ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb"
+    },
+    "protected_unchanged": true,
+    "package_unchanged": true,
+    "remaining_game_processes": [],
+    "no_remaining_game_processes": true,
+    "finished_utc": "2026-10-17T07:35:30.782935+00:00"
+  },
+  "separate_functional_followup": {
+    "pck_sha256": "e5c23e8389259a1546383cfb12cba28d61407850e16052b776665c955c76e1d7",
+    "executable_sha256": "ab50466c2d9142f48a31d6313a7ddb84be8737598ea9c22aae1dbb4a46293ad1",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "54610a3fc3e6c359843ffdaa13517c32584095dd1c4d9ccb29a0f7641240a3cf"
+    },
+    "started_utc": "2026-10-17T07:35:31.188985+00:00",
+    "performance_gate_still_failed": true,
+    "all_ten_accepted": false,
+    "suites": [
+      {
+        "suite": "menus",
+        "passed": true,
+        "checks": 184,
+        "captures": 55
+      },
+      {
+        "suite": "tutorial",
+        "passed": true,
+        "checks": 88,
+        "captures": 20
+      },
+      {
+        "suite": "audio",
+        "passed": true,
+        "checks": 73,
+        "captures": 23
+      },
+      {
+        "suite": "projectiles",
+        "passed": true,
+        "checks": null,
+        "captures": 4
+      },
+      {
+        "suite": "turns",
+        "passed": true,
+        "checks": null,
+        "captures": 5
+      },
+      {
+        "suite": "towers",
+        "passed": true,
+        "checks": null,
+        "captures": 1
+      },
+      {
+        "suite": "desert",
+        "passed": true,
+        "checks": null,
+        "captures": 1
+      },
+      {
+        "suite": "campaign",
+        "passed": true,
+        "checks": null,
+        "captures": 148
+      }
+    ],
+    "passed": true,
+    "scope": "Separate eight functional suites after preserved R172 performance failure. Does not rerun, replace or relax the33.34ms gate; no all-ten acceptance.",
+    "protected_unchanged": true,
+    "package_unchanged": true,
+    "source_unchanged": true,
+    "no_remaining_game_processes": true,
+    "finished_utc": "2026-10-17T07:37:22.544828+00:00"
+  },
+  "qa_only_correction": {
+    "first_failure": "native paused hover retains exact battle RGBA",
+    "all_original_hover_phase_offset_health_fields_exact": true,
+    "only_changed_game_native_file": [
+      "game/scripts/presentation_verify.gd"
+    ],
+    "runtime_hover_unchanged_from_full_passing_build": true,
+    "first_app_gallery_662_source_preserved": "builds/creep-hover-r172-first-native-failure"
+  },
+  "visual_review": {
+    "previous_primary_captures": 216,
+    "current_primary_captures": 222,
+    "common_byte_exact": 212,
+    "changed_common": [
+      {
+        "name": "transition-cover-010",
+        "old_sha256": "9116f101d3bd4c96bc82b69a5fc811ff3fa3402a800027b657011141ed35e5b6",
+        "new_sha256": "0b940e299cb76569af27281a344d8b05c3f255dc74deefba428f076510f40e84",
+        "rgba_exact": false,
+        "bbox": [
+          0,
+          0,
+          718,
+          949
+        ],
+        "changed_pixels": 378004,
+        "reviewed_full_resolution": true,
+        "review_note": "Randomized cover/reveal mask phase; no new runtime transition edit. Existing underlying nontransition captures remain byte exact."
+      },
+      {
+        "name": "transition-cover-025",
+        "old_sha256": "ca731794ad8923fb5d169d7b7c7a1c722eea7b97c0041786e4226dac48ba79ab",
+        "new_sha256": "011beb04173ae8f10b2ccc6a9e6b33293b624688f9f684e84d98bafda939e315",
+        "rgba_exact": false,
+        "bbox": [
+          0,
+          0,
+          1280,
+          960
+        ],
+        "changed_pixels": 414982,
+        "reviewed_full_resolution": true,
+        "review_note": "Randomized cover/reveal mask phase; no new runtime transition edit. Existing underlying nontransition captures remain byte exact."
+      },
+      {
+        "name": "transition-reveal-010",
+        "old_sha256": "534528ce5ec34c9dd242764d8b8f6a68a803c95ae4c5ef17ce84d6951206a026",
+        "new_sha256": "3d8401e3f6625f4062583fe9f756d8b470b17125103a94f0318b0bd83f25975c",
+        "rgba_exact": false,
+        "bbox": [
+          0,
+          456,
+          45,
+          789
+        ],
+        "changed_pixels": 6125,
+        "reviewed_full_resolution": true,
+        "review_note": "Randomized cover/reveal mask phase; no new runtime transition edit. Existing underlying nontransition captures remain byte exact."
+      },
+      {
+        "name": "transition-reveal-035",
+        "old_sha256": "b0c4256d9fc45e13a3600b598fa1565ebf37cce6e364229692d1bca8701f09fe",
+        "new_sha256": "a2a2fe8235e083dbc68d5ddf5ccc435d0979014d62fc84a9989bdb320639078f",
+        "rgba_exact": false,
+        "bbox": [
+          16,
+          0,
+          1097,
+          960
+        ],
+        "changed_pixels": 309431,
+        "reviewed_full_resolution": true,
+        "review_note": "Randomized cover/reveal mask phase; no new runtime transition edit. Existing underlying nontransition captures remain byte exact."
+      }
+    ],
+    "added": [
+      {
+        "name": "creep-hover-000",
+        "first_sha256": "49d6c2e6aaefcdadd6170243726ab5f5c3f6660d512ae96bb6b725f8b7815fbb",
+        "corrected_sha256": "49d6c2e6aaefcdadd6170243726ab5f5c3f6660d512ae96bb6b725f8b7815fbb",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135443968
+          ],
+          "freeze_attached": false,
+          "freeze_remaining": 0,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 1065353216,
+          "offset_bits": [
+            0,
+            3231711232
+          ],
+          "paused": false,
+          "phase_bits": 0,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": null
+      },
+      {
+        "name": "creep-hover-moving",
+        "first_sha256": "b4c8b3d2891b88e7441bab9a3d3fe06a1ee966afd36246f803ad6018103d8c87",
+        "corrected_sha256": "b4c8b3d2891b88e7441bab9a3d3fe06a1ee966afd36246f803ad6018103d8c87",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135506614
+          ],
+          "freeze_attached": false,
+          "freeze_remaining": 0,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 1065353216,
+          "offset_bits": [
+            0,
+            3225789668
+          ],
+          "paused": false,
+          "phase_bits": 1067641018,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": null
+      },
+      {
+        "name": "creep-hover-frozen",
+        "first_sha256": "6eef9a064ed29e1e637ce829b0c1fb577382752edc1b2a8cf134e62fd0dcc90e",
+        "corrected_sha256": "6eef9a064ed29e1e637ce829b0c1fb577382752edc1b2a8cf134e62fd0dcc90e",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135480763
+          ],
+          "freeze_attached": true,
+          "freeze_remaining": 9300,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 0,
+          "offset_bits": [
+            0,
+            3229098594
+          ],
+          "paused": false,
+          "phase_bits": 1076029628,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": null
+      },
+      {
+        "name": "creep-hover-paused",
+        "first_sha256": "cd779e0022e051f1c8020eb25572be8a3eaa8113bce38df14ab415a602d3ac9c",
+        "corrected_sha256": "cd779e0022e051f1c8020eb25572be8a3eaa8113bce38df14ab415a602d3ac9c",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135480763
+          ],
+          "freeze_attached": true,
+          "freeze_remaining": 9300,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 0,
+          "offset_bits": [
+            0,
+            3229098594
+          ],
+          "paused": true,
+          "phase_bits": 1076029628,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": true
+      },
+      {
+        "name": "creep-hover-expiry",
+        "first_sha256": "2e34b460b2b08f4fb6cc5cdb54cb7194fa27e34d4d91c5d52c4ab0d2dbc3bdcf",
+        "corrected_sha256": "2e34b460b2b08f4fb6cc5cdb54cb7194fa27e34d4d91c5d52c4ab0d2dbc3bdcf",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135470351
+          ],
+          "freeze_attached": false,
+          "freeze_remaining": 0,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 0,
+          "offset_bits": [
+            0,
+            3230022743
+          ],
+          "paused": false,
+          "phase_bits": 1076792229,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": null
+      },
+      {
+        "name": "creep-hover-resume",
+        "first_sha256": "281130701e3ecb0c2b80613cf58f6ad3b969f2351aa0ced66f98e652bb082571",
+        "corrected_sha256": "281130701e3ecb0c2b80613cf58f6ad3b969f2351aa0ced66f98e652bb082571",
+        "byte_exact_first": true,
+        "image_size": [
+          1280,
+          960
+        ],
+        "window_size": [
+          1280,
+          960
+        ],
+        "canvas_stretch": [
+          1.25,
+          1.25
+        ],
+        "fields": {
+          "body_bits": [
+            1140129792,
+            1135459068
+          ],
+          "freeze_attached": false,
+          "freeze_remaining": 0,
+          "health_bits": [
+            1139605504,
+            1136132096
+          ],
+          "multiplier_bits": 1065353216,
+          "offset_bits": [
+            0,
+            3230744813
+          ],
+          "paused": false,
+          "phase_bits": 1077554830,
+          "raw_position": [
+            490.0,
+            352.0
+          ],
+          "resource": "creep5"
+        },
+        "paused_battle_rgba_exact": null
+      }
+    ],
+    "accepted_r137_comparison_unchanged": true,
+    "first_six_hover_images_reviewed_full_resolution": true,
+    "review_scope": "All six hover captures and four changed transition images viewed at original1280x960. Corrected hover PNGs byte exact the reviewed first-package images.212existing images byte exact R169; only four randomized transition images differ. Exact source geometry/phase/health assertions remain required. This is bounded visual review, not original-device/global-fidelity acceptance.",
+    "all_six_corrected_hover_reviews_carried_by_byte_identity": true,
+    "all_ten_changed_or_added_frames_reviewed": true,
+    "fixed_4_by_3_equal_axis_stretch_verified": true
+  },
+  "unchanged_median_limit_ms": 33.34,
+  "median_ms": [
+    34.288,
+    37.886,
+    44.832
+  ],
+  "p95_ms": [
+    37.981,
+    42.544,
+    55.185
+  ],
+  "world_ms": [
+    6.185,
+    13.98
+  ],
+  "stalled_frames": 0,
+  "exact_rgba_pairs": 15,
+  "exact_geometry_comparisons": 12,
+  "all_originals_unchanged": 4035,
+  "runtime_scripts": 82,
+  "accepted_r137_comparison_unchanged": true,
+  "full_offline_complete": false
+}

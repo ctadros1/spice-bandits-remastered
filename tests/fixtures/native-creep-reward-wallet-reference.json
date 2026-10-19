@@ -1,0 +1,1903 @@
+{
+  "method": "Additional original full DoDamage/SetDie with a nonnull local-player record.\nThe room+0x2a8 local-player pointer and its +0x20 currency counter are supplied;\nfull original instructions add the computed reward there. This complements the\n64 score/route cases whose local-player pointer is null. Full C2/source/reroute\nand DoDamage/SetDie run; parent resource/player/room/backend callbacks remain\nexplicit and are not full original producers/Objective-C services/GPU identity.\n",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "original_unchanged": true,
+  "cases": [
+    {
+      "input": {
+        "source_cell": [
+          4,
+          4
+        ],
+        "bases": [
+          {
+            "cell": [
+              10,
+              10
+            ],
+            "owner": 1,
+            "inactive": false
+          }
+        ],
+        "source_owner": 0,
+        "source_target": 0,
+        "mask": "open",
+        "price": 4,
+        "upgrade_level": 0,
+        "initial_money": 200
+      },
+      "before_damage": {
+        "state": 0,
+        "hover": 1,
+        "aligned": 0,
+        "progress_bits": 0,
+        "alignment_bits": 0,
+        "carry_bits": 0,
+        "start_bits": [
+          1134166016,
+          1133510656
+        ],
+        "target_bits": [
+          1134166016,
+          1133510656
+        ],
+        "attack_point_bits": [
+          0,
+          0
+        ],
+        "position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "logical_bits": [
+          1134166016,
+          1133510656
+        ],
+        "offset_bits": [
+          0,
+          3231711232
+        ],
+        "phase_bits": 0,
+        "cell": [
+          4,
+          4
+        ],
+        "next_cell": [
+          4,
+          4
+        ],
+        "working_interval_bits": 1042536202,
+        "reload_bits": 1232348160,
+        "path": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "events": [
+          {
+            "kind": "SetState-full",
+            "old": 1,
+            "new": 0
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 0
+          }
+        ],
+        "displacement_owners": {},
+        "aim_bits": [
+          1134166016,
+          1133346816
+        ],
+        "secondary_position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "raw_hit_pending": 0,
+        "remaining_count": 8,
+        "previous_progress_bits": 0,
+        "position_flags": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "segment_relation": 0,
+        "portal_state": 0,
+        "portal_clock_bits": 0,
+        "portal_marker": [
+          -1,
+          -1
+        ],
+        "walking_animator": {
+          "primary": "RunDownRight",
+          "secondary": "RunDownRight",
+          "rotation_bits": 0,
+          "alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0,
+          "secondary_alpha_bits": 1065353216
+        },
+        "base_index": 0,
+        "speed_bits": 1148846080,
+        "primary": "RunDownRight",
+        "secondary": "RunDownRight",
+        "source_cell_walkable": 1
+      },
+      "after_damage": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 4,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          },
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a150"
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 3
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0x9cec8"
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0xe9a74"
+          },
+          {
+            "kind": "sound-load-stub",
+            "name": "tank_helicopter_explosion_1"
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 3
+          },
+          {
+            "kind": "player-lookup-stub",
+            "owner": 1
+          },
+          {
+            "kind": "reward-floor-stub",
+            "input_bits": 1083808154,
+            "output_bits": 1082130432
+          },
+          {
+            "kind": "upgrade-level-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "upgrade-percent-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "player",
+            "argument_bits": 4574080
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "addXP:",
+            "argument_bits": 1082130432
+          },
+          {
+            "kind": "indicator-stub",
+            "text": "+4",
+            "position_bits": [
+              1134166016,
+              1133346816
+            ]
+          }
+        ],
+        "local_player_money": 204
+      },
+      "after_repeat": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 4,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          }
+        ],
+        "local_player_money": 204
+      }
+    },
+    {
+      "input": {
+        "source_cell": [
+          4,
+          4
+        ],
+        "bases": [
+          {
+            "cell": [
+              10,
+              10
+            ],
+            "owner": 1,
+            "inactive": false
+          }
+        ],
+        "source_owner": 0,
+        "source_target": 0,
+        "mask": "open",
+        "price": 4,
+        "upgrade_level": 7,
+        "initial_money": 200
+      },
+      "before_damage": {
+        "state": 0,
+        "hover": 1,
+        "aligned": 0,
+        "progress_bits": 0,
+        "alignment_bits": 0,
+        "carry_bits": 0,
+        "start_bits": [
+          1134166016,
+          1133510656
+        ],
+        "target_bits": [
+          1134166016,
+          1133510656
+        ],
+        "attack_point_bits": [
+          0,
+          0
+        ],
+        "position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "logical_bits": [
+          1134166016,
+          1133510656
+        ],
+        "offset_bits": [
+          0,
+          3231711232
+        ],
+        "phase_bits": 0,
+        "cell": [
+          4,
+          4
+        ],
+        "next_cell": [
+          4,
+          4
+        ],
+        "working_interval_bits": 1042536202,
+        "reload_bits": 1232348160,
+        "path": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "events": [
+          {
+            "kind": "SetState-full",
+            "old": 1,
+            "new": 0
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 0
+          }
+        ],
+        "displacement_owners": {},
+        "aim_bits": [
+          1134166016,
+          1133346816
+        ],
+        "secondary_position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "raw_hit_pending": 0,
+        "remaining_count": 8,
+        "previous_progress_bits": 0,
+        "position_flags": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "segment_relation": 0,
+        "portal_state": 0,
+        "portal_clock_bits": 0,
+        "portal_marker": [
+          -1,
+          -1
+        ],
+        "walking_animator": {
+          "primary": "RunDownRight",
+          "secondary": "RunDownRight",
+          "rotation_bits": 0,
+          "alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0,
+          "secondary_alpha_bits": 1065353216
+        },
+        "base_index": 0,
+        "speed_bits": 1148846080,
+        "primary": "RunDownRight",
+        "secondary": "RunDownRight",
+        "source_cell_walkable": 1
+      },
+      "after_damage": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 5,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          },
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a150"
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 3
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0x9cec8"
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0xe9a74"
+          },
+          {
+            "kind": "sound-load-stub",
+            "name": "tank_helicopter_explosion_1"
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 3
+          },
+          {
+            "kind": "player-lookup-stub",
+            "owner": 1
+          },
+          {
+            "kind": "reward-floor-stub",
+            "input_bits": 1083808154,
+            "output_bits": 1082130432
+          },
+          {
+            "kind": "upgrade-level-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "upgrade-percent-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "player",
+            "argument_bits": 4574080
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "addXP:",
+            "argument_bits": 1084227584
+          },
+          {
+            "kind": "indicator-stub",
+            "text": "+5",
+            "position_bits": [
+              1134166016,
+              1133346816
+            ]
+          }
+        ],
+        "local_player_money": 205
+      },
+      "after_repeat": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 5,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          }
+        ],
+        "local_player_money": 205
+      }
+    },
+    {
+      "input": {
+        "source_cell": [
+          4,
+          4
+        ],
+        "bases": [
+          {
+            "cell": [
+              10,
+              10
+            ],
+            "owner": 1,
+            "inactive": false
+          }
+        ],
+        "source_owner": 0,
+        "source_target": 0,
+        "mask": "open",
+        "price": 17,
+        "upgrade_level": 1,
+        "initial_money": 37
+      },
+      "before_damage": {
+        "state": 0,
+        "hover": 1,
+        "aligned": 0,
+        "progress_bits": 0,
+        "alignment_bits": 0,
+        "carry_bits": 0,
+        "start_bits": [
+          1134166016,
+          1133510656
+        ],
+        "target_bits": [
+          1134166016,
+          1133510656
+        ],
+        "attack_point_bits": [
+          0,
+          0
+        ],
+        "position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "logical_bits": [
+          1134166016,
+          1133510656
+        ],
+        "offset_bits": [
+          0,
+          3231711232
+        ],
+        "phase_bits": 0,
+        "cell": [
+          4,
+          4
+        ],
+        "next_cell": [
+          4,
+          4
+        ],
+        "working_interval_bits": 1042536202,
+        "reload_bits": 1232348160,
+        "path": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "events": [
+          {
+            "kind": "SetState-full",
+            "old": 1,
+            "new": 0
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 0
+          }
+        ],
+        "displacement_owners": {},
+        "aim_bits": [
+          1134166016,
+          1133346816
+        ],
+        "secondary_position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "raw_hit_pending": 0,
+        "remaining_count": 8,
+        "previous_progress_bits": 0,
+        "position_flags": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "segment_relation": 0,
+        "portal_state": 0,
+        "portal_clock_bits": 0,
+        "portal_marker": [
+          -1,
+          -1
+        ],
+        "walking_animator": {
+          "primary": "RunDownRight",
+          "secondary": "RunDownRight",
+          "rotation_bits": 0,
+          "alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0,
+          "secondary_alpha_bits": 1065353216
+        },
+        "base_index": 0,
+        "speed_bits": 1148846080,
+        "primary": "RunDownRight",
+        "secondary": "RunDownRight",
+        "source_cell_walkable": 1
+      },
+      "after_damage": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 21,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          },
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a150"
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 3
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0x9cec8"
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0xe9a74"
+          },
+          {
+            "kind": "sound-load-stub",
+            "name": "tank_helicopter_explosion_1"
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 3
+          },
+          {
+            "kind": "player-lookup-stub",
+            "owner": 1
+          },
+          {
+            "kind": "reward-floor-stub",
+            "input_bits": 1101214516,
+            "output_bits": 1101004800
+          },
+          {
+            "kind": "upgrade-level-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "upgrade-percent-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "player",
+            "argument_bits": 4574080
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "addXP:",
+            "argument_bits": 1101529088
+          },
+          {
+            "kind": "indicator-stub",
+            "text": "+21",
+            "position_bits": [
+              1134166016,
+              1133346816
+            ]
+          }
+        ],
+        "local_player_money": 58
+      },
+      "after_repeat": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 21,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          }
+        ],
+        "local_player_money": 58
+      }
+    },
+    {
+      "input": {
+        "source_cell": [
+          4,
+          4
+        ],
+        "bases": [
+          {
+            "cell": [
+              10,
+              10
+            ],
+            "owner": 1,
+            "inactive": false
+          }
+        ],
+        "source_owner": 0,
+        "source_target": 0,
+        "mask": "open",
+        "price": 0,
+        "upgrade_level": 0,
+        "initial_money": 0
+      },
+      "before_damage": {
+        "state": 0,
+        "hover": 1,
+        "aligned": 0,
+        "progress_bits": 0,
+        "alignment_bits": 0,
+        "carry_bits": 0,
+        "start_bits": [
+          1134166016,
+          1133510656
+        ],
+        "target_bits": [
+          1134166016,
+          1133510656
+        ],
+        "attack_point_bits": [
+          0,
+          0
+        ],
+        "position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "logical_bits": [
+          1134166016,
+          1133510656
+        ],
+        "offset_bits": [
+          0,
+          3231711232
+        ],
+        "phase_bits": 0,
+        "cell": [
+          4,
+          4
+        ],
+        "next_cell": [
+          4,
+          4
+        ],
+        "working_interval_bits": 1042536202,
+        "reload_bits": 1232348160,
+        "path": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "events": [
+          {
+            "kind": "SetState-full",
+            "old": 1,
+            "new": 0
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "IsCellWalkable-full",
+            "map": "0x900000",
+            "cell": [
+              4,
+              4
+            ]
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 0
+          }
+        ],
+        "displacement_owners": {},
+        "aim_bits": [
+          1134166016,
+          1133346816
+        ],
+        "secondary_position_bits": [
+          1134166016,
+          1133510656
+        ],
+        "raw_hit_pending": 0,
+        "remaining_count": 8,
+        "previous_progress_bits": 0,
+        "position_flags": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "segment_relation": 0,
+        "portal_state": 0,
+        "portal_clock_bits": 0,
+        "portal_marker": [
+          -1,
+          -1
+        ],
+        "walking_animator": {
+          "primary": "RunDownRight",
+          "secondary": "RunDownRight",
+          "rotation_bits": 0,
+          "alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0,
+          "secondary_alpha_bits": 1065353216
+        },
+        "base_index": 0,
+        "speed_bits": 1148846080,
+        "primary": "RunDownRight",
+        "secondary": "RunDownRight",
+        "source_cell_walkable": 1
+      },
+      "after_damage": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 1,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          },
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a150"
+          },
+          {
+            "kind": "SetState-full",
+            "old": 0,
+            "new": 3
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0x9cec8"
+          },
+          {
+            "kind": "owner-clean-stub",
+            "address": "0xe9a74"
+          },
+          {
+            "kind": "sound-load-stub",
+            "name": "tank_helicopter_explosion_1"
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 6
+          },
+          {
+            "kind": "death-particle-emit-stub",
+            "count": 3
+          },
+          {
+            "kind": "player-lookup-stub",
+            "owner": 1
+          },
+          {
+            "kind": "reward-floor-stub",
+            "input_bits": 0,
+            "output_bits": 0
+          },
+          {
+            "kind": "upgrade-level-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "upgrade-percent-stub",
+            "name": "up_interest"
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "player",
+            "argument_bits": 4574080
+          },
+          {
+            "kind": "objc-notification-stub",
+            "selector": "addXP:",
+            "argument_bits": 1065353216
+          },
+          {
+            "kind": "indicator-stub",
+            "text": "+1",
+            "position_bits": [
+              1134166016,
+              1133346816
+            ]
+          }
+        ],
+        "local_player_money": 1
+      },
+      "after_repeat": {
+        "hp_bits": 3212836864,
+        "state": 3,
+        "previous_state": 0,
+        "score": 1,
+        "player_kills": 1,
+        "room_kills": 1,
+        "room_total_kills": 1,
+        "remaining_count": 8,
+        "source_cache": {
+          "target": 0,
+          "routes": {
+            "ground": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            },
+            "air": {
+              "path": [
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  5
+                ],
+                [
+                  6,
+                  6
+                ],
+                [
+                  7,
+                  6
+                ],
+                [
+                  8,
+                  7
+                ],
+                [
+                  8,
+                  8
+                ],
+                [
+                  9,
+                  8
+                ],
+                [
+                  9,
+                  9
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "base_index": 0
+            }
+          },
+          "base_cells_walkable": [
+            1
+          ]
+        },
+        "events": [
+          {
+            "kind": "damage-death-full",
+            "address": "0x7a62c"
+          }
+        ],
+        "local_player_money": 1
+      }
+    }
+  ]
+}

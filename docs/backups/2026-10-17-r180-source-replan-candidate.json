@@ -1,0 +1,71 @@
+{
+  "verified_at": "2026-10-17T10:49:08.410194+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 415748937,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-6c6779f2f69169b650d4",
+  "archive": {
+    "name": "r180-source-replan-candidate.tar.gz",
+    "bytes": 6919611,
+    "sha256": "8ea18f67a30014cdc70d8430e002c792cccf9cc6d153b07bd18573d44657b797"
+  },
+  "local_restore": {
+    "members_verified": 198,
+    "archive_bytes": 6919611,
+    "source_files_verified": 705,
+    "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+    "all_member_hashes_modes_and_gzip_crc_verified": true,
+    "candidate_exported": false,
+    "r172_package_and_all_four_saves_unchanged": true
+  },
+  "actual_remote_restore": {
+    "members_verified": 198,
+    "archive_bytes": 6919611,
+    "source_files_verified": 705,
+    "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+    "all_member_hashes_modes_and_gzip_crc_verified": true,
+    "candidate_exported": false,
+    "r172_package_and_all_four_saves_unchanged": true
+  },
+  "first_four_assets_actual_download_hash_size_verified": true,
+  "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+  "source_signing_pending": true,
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 113.786264,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "offline_complete": false,
+  "assets": [
+    {
+      "name": "r180-source-replan-candidate.tar.gz",
+      "bytes": 6919611,
+      "sha256": "8ea18f67a30014cdc70d8430e002c792cccf9cc6d153b07bd18573d44657b797"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 39390,
+      "sha256": "447cbdbb89025b6a6915fb86c3b3f757687fac451a5efeac591d24b0e1e0c0bd"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 140964,
+      "sha256": "75e98aa24a1767512222c00c93b3941fb38670d49566064ed58b40dba941d6d3"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 1335,
+      "sha256": "eb911a4f681e0f01f0b606357cb2e86e362e0d47bc4c03fa485899fab3a8a74a"
+    },
+    {
+      "name": "RESTORE-PROOF.json",
+      "bytes": 1506,
+      "sha256": "028dd4976198e68ee3e02788051b8943ebb993fb08f46229fd63aa57d84e1f32"
+    }
+  ],
+  "all_remote_assets_actual_hash_size_verified": true,
+  "no_game_processes": true
+}

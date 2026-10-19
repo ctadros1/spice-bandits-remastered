@@ -1,0 +1,48 @@
+{
+  "original_state_fixture_reproduction": {
+    "independent_runs_identical": true,
+    "unchanged_r163_fixture": true,
+    "sha256": "e90885520e9cd6c11606f62ce53daa1a9ccfdc2f08eb0381f454ee910984fb37",
+    "original_unchanged": true,
+    "original_constructor_records": 40
+  },
+  "actual_game_checks": {
+    "runs": [
+      {
+        "script": "creep_state_ui_verify",
+        "exit_code": 0,
+        "errors": [],
+        "reports": [
+          {
+            "checks": 18637,
+            "constructor_records": 40,
+            "failure_count": 0,
+            "failures": [],
+            "original_cases": 4608,
+            "scope": "Actual Disco transition: full original SetState/hover selection and float32 working interval on supplied records; nine populated resources plus explicit unused creep7 through a private catalog/spawn path. Original movement/hover tail, sound backend and constructor smoke interval correction remain separate."
+          }
+        ]
+      },
+      {
+        "script": "creep_particle_birth_ui_verify",
+        "exit_code": 0,
+        "errors": [],
+        "reports": [
+          {
+            "birth_tail_sequences": 30,
+            "checks": 145189,
+            "failures": [],
+            "original_constructor_cases": 40,
+            "owner_cases": 720,
+            "scope": "Actual spawn, supplied R149 constructor fields, R148 UpdateParticles fields and R150 shared owner methods with identical explicit header subset. Raw map selector supplied; full manager/trajectories/parser/GPU remain open."
+          }
+        ]
+      }
+    ],
+    "runtime_changes": false,
+    "all_original_fixtures_unchanged": true
+  },
+  "runtime_change_required": false,
+  "original_or_immutable_baselines_changed": false,
+  "correction": "Prior constructor working-interval gap claim is contradicted by all40original records and actualgame checks. Marine work/base both0.04800000041723251, Tank5both0.1599999964237213. No constructor math correction or baseline weakening is justified."
+}

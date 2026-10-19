@@ -382,6 +382,9 @@ func exercise_projectiles() -> void:
 	victim.pos = tower.pos+Vector2(120, 0)
 	victim.move_start = victim.pos
 	victim.visual_pos = victim.pos+Vector2(8, 0)
+	# This fixture writes the drawn anchor directly; keep its retained
+	# original aim field coherent with that deliberately supplied pose.
+	victim.visual_aim = victim.visual_pos+victim.animator_offset
 	victim.speed = 0
 	victim.hp = 5000
 	chemical.shoot(tower, victim, {"damage": 1.0, "rof": 1.0})
@@ -393,6 +396,7 @@ func exercise_projectiles() -> void:
 	check(bubble.flying and bubble.size == 64 and victim.hp == 5000 and zone.until == -1, "chemical bubble grows for510ms without starting cloud damage or lifetime")
 	var destination: Vector2 = zone.pos
 	victim.pos += Vector2(20, 0)
+	victim.move_start = victim.pos
 	while bubble.active and chemical.clock_ms < 3000: chemical.advance(30)
 	check(zone.pos == destination and zone.has("bubble") and victim.hp == 5000, "chemical bubble retains launch target point and arrival does not damage in the same tick")
 	chemical.advance(30)
@@ -545,7 +549,11 @@ func run() -> void:
 	aiming_tower.targeting = "strongest"
 	var aiming_victim = aiming.spawn_enemy(5, 0, "")
 	aiming_victim.pos = aiming_tower.pos+Vector2(0, -107)
+	aiming_victim.visual_pos = aiming_victim.pos
 	aiming_victim.speed = 0
+	# This targeting fixture supplies a stationary waiting owner. A state-0
+	# owner still derives its position from its segment even at zero speed.
+	preload("res://scripts/creep_state_view.gd").change(aiming_victim,1)
 	aiming_victim.hp = 5000
 	aiming_victim.max_hp = 5000
 	aiming.advance(90)
@@ -558,12 +566,20 @@ func run() -> void:
 	var original_target = aiming_tower.tracking.id
 	var competitor = aiming.spawn_enemy(5, 0, "")
 	competitor.pos = aiming_tower.pos+Vector2(0, 93)
+	competitor.visual_pos = competitor.pos
 	competitor.speed = 0
+	preload("res://scripts/creep_state_view.gd").change(competitor,1)
 	competitor.hp = 10
 	aiming_tower.targeting = "weakest"
 	aiming.advance(210)
 	check(aiming_tower.tracking.id == original_target and competitor.hp == 10, "native FSW change retains a living in-range target until reacquisition")
 	aiming_victim.pos = aiming_tower.pos+Vector2(1000, 0)
+	# This explicit pose change moves the target's retained drawn anchor too;
+	# native waiting/aligned updates do not derive it from logical position.
+	aiming_victim.visual_pos = aiming_victim.pos
+	# Queued tower-path validation legitimately restored state0 earlier.
+	# Reassert this targeting-only fixture's stationary state after moving it.
+	preload("res://scripts/creep_state_view.gd").change(aiming_victim,1)
 	aiming.advance(30)
 	check(aiming_tower.tracking.id == competitor.id and not aiming_tower.tracking.locked, "out-of-range target reacquires using the new FSW mode")
 	check(aiming.normalize_degrees(-90) == 270.0 and aiming.normalize_degrees(360) == 0 and aiming.normalize_degrees(9) == 8.997802734375, "native angle normalization quantizes unsigned16-bit turns")
@@ -754,12 +770,16 @@ func run() -> void:
 	check(standing.displace_point(held, held_center+Vector2(300, 0), 703, held_center) == first_point, "released displacement can be reserved again")
 	tank.path_at = tank.path.size()
 	tank.attacking = true
+	preload("res://scripts/creep_state_view.gd").change(tank,4)
 	tank.attack_point = tank.pos
 	tank.speed = 0
-	standing.advance(1980)
-	check(standing.bases[tank.base].hp == 100, "tank reload begins after alignment instead of an immediate hit")
+	check(tank.attack_reload_ms == float(int(tank.def.rof)), "original constructor starts the tank reload already charged")
 	standing.advance(30)
-	check(standing.bases[tank.base].hp == 97, "tank hits once at the authored two-second reload")
+	check(standing.bases[tank.base].hp == 97 and tank.attack_reload_ms == 0, "charged tank attacks immediately after alignment and clears its reload")
+	standing.advance(1980)
+	check(standing.bases[tank.base].hp == 97, "tank waits the authored reload after its first immediate hit")
+	standing.advance(30)
+	check(standing.bases[tank.base].hp == 94, "tank hits again at the authored two-second reload")
 	var blasts = make_sim()
 	var aerial = blasts.spawn_enemy(2, 0, "")
 	var nearby = blasts.spawn_enemy(5, 0, "")

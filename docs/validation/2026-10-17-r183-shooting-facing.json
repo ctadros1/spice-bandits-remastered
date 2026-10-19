@@ -1,0 +1,609 @@
+{
+  "revision": "R183",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "gate": {
+    "actor_cases": 24,
+    "checks": 80423,
+    "direct_cases": 656,
+    "direction_differences": [],
+    "equal_minimum_distance_cases": 21,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "omitted_primary_names": 0,
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual Simulation facing and resource5/kind1 + resource4/kind2 constructor/living/hover/view/source rerouting. Original full shooting-direction/AngPos/AngleNormalize and C2/source/movement bodies; supplied stdmap lexical slots and float64 atan/backend callbacks. Other special/resource/Freeze/owner/backend/GPU identity remains open."
+  },
+  "independent_original_reproduction": {
+    "byte_identical": true,
+    "bytes": 7822894,
+    "sha256": "30790afa94ea428d648fba8e82d749b189d8a5cc8bb7e99edc8f3e4c9a13ae54",
+    "direct_cases": 656,
+    "actor_cases": 24,
+    "movement_frames": 2440,
+    "equal_minimum_distance_cases": 21,
+    "original_unchanged": true,
+    "explicit_stdmap_float64_atan_backend_callbacks": true
+  },
+  "same_fixture_prior_runtime": {
+    "actor_cases": 24,
+    "checks": 80423,
+    "direct_cases": 656,
+    "direction_differences": [
+      {
+        "actual": "TurnRight",
+        "direction_bits": [
+          0.0,
+          0.0
+        ],
+        "expected": "TurnUpLeft"
+      },
+      {
+        "actual": "TurnLeft",
+        "direction_bits": [
+          2147483648.0,
+          0.0
+        ],
+        "expected": "TurnUpLeft"
+      },
+      {
+        "actual": "TurnRight",
+        "direction_bits": [
+          0.0,
+          2147483648.0
+        ],
+        "expected": "TurnUpLeft"
+      },
+      {
+        "actual": "TurnLeft",
+        "direction_bits": [
+          2147483648.0,
+          2147483648.0
+        ],
+        "expected": "TurnUpLeft"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1132554454.0,
+          1148287809.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1131539457.0,
+          1148359405.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1130427256.0,
+          1148426159.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1129310565.0,
+          1148488050.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1128189722.0,
+          1148545060.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1127065071.0,
+          1148597170.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1125936953.0,
+          1148644366.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1124805712.0,
+          1148686632.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1123269915.0,
+          1148723956.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1120997011.0,
+          1148756327.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1118719934.0,
+          1148783734.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1116439377.0,
+          1148806169.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1112627205.0,
+          1148823626.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1108056342.0,
+          1148836099.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          1099669127.0,
+          1148843585.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "TurnRight",
+        "direction_bits": [
+          925089591.0,
+          907157164.0
+        ],
+        "expected": "RunDownRight"
+      },
+      {
+        "actual": "TurnRight",
+        "direction_bits": [
+          925089508.0,
+          907158662.0
+        ],
+        "expected": "RunDownRight"
+      },
+      {
+        "actual": "TurnRight",
+        "direction_bits": [
+          925089466.0,
+          907159411.0
+        ],
+        "expected": "RunDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          909033860.0,
+          924974046.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          909033119.0,
+          924974096.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          909031636.0,
+          924974196.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "RunDown",
+        "direction_bits": [
+          909026448.0,
+          924974546.0
+        ],
+        "expected": "TurnDownRight"
+      },
+      {
+        "actual": "TurnDownLeft",
+        "direction_bits": [
+          3056518249.0,
+          924973996.0
+        ],
+        "expected": "RunDown"
+      },
+      {
+        "actual": "RunDownLeft",
+        "direction_bits": [
+          3069670134.0,
+          920821768.0
+        ],
+        "expected": "TurnDownLeft"
+      },
+      {
+        "actual": "TurnLeft",
+        "direction_bits": [
+          3072573156.0,
+          907158662.0
+        ],
+        "expected": "RunDownLeft"
+      },
+      {
+        "actual": "TurnLeft",
+        "direction_bits": [
+          3072573239.0,
+          907157164.0
+        ],
+        "expected": "RunDownLeft"
+      }
+    ],
+    "equal_minimum_distance_cases": 0,
+    "examples": [
+      {
+        "actual": "RunDownRight",
+        "expected": "RunDown",
+        "field": "full_primary",
+        "label": "5/approaching/open/warm/1.0"
+      }
+    ],
+    "failure_count": 8602,
+    "failures_by_field": {
+      "direct_distance_bits": 7872,
+      "direct_primary": 57,
+      "direct_query_angle_bits": 656,
+      "full_primary": 16,
+      "native_equal_distance_cases": 1
+    },
+    "omitted_primary_names": 0,
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual Simulation facing and resource5/kind1 + resource4/kind2 constructor/living/hover/view/source rerouting. Original full shooting-direction/AngPos/AngleNormalize and C2/source/movement bodies; supplied stdmap lexical slots and float64 atan/backend callbacks. Other special/resource/Freeze/owner/backend/GPU identity remains open."
+  },
+  "before_failure_interpretation": {
+    "observed_primary_name_differences": 73,
+    "direct_names": 57,
+    "actor_names": 16,
+    "missing_numerical_helper_observability_and_tie_checks": 8529,
+    "raw_total_failures": 8602
+  },
+  "preserved_first_actor_port": {
+    "actor_cases": 24,
+    "checks": 80422,
+    "direct_cases": 656,
+    "direction_differences": [],
+    "equal_minimum_distance_cases": 21,
+    "examples": [
+      {
+        "actual": "RunDownRight",
+        "expected": "RunDown",
+        "field": "full_primary",
+        "label": "5/approaching/open/warm/1.0"
+      }
+    ],
+    "failure_count": 16,
+    "failures_by_field": {
+      "full_primary": 16
+    },
+    "omitted_primary_names": 0,
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "5/approaching/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "4/approaching/current/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual Simulation facing and resource5/kind1 + resource4/kind2 constructor/living/hover/view/source rerouting. Original full shooting-direction/AngPos/AngleNormalize and C2/source/movement bodies; supplied stdmap lexical slots and float64 atan/backend callbacks. Other special/resource/Freeze/owner/backend/GPU identity remains open."
+  },
+  "restored_runtime": {
+    "byte_identical_after_before_comparison": true,
+    "sha256": {
+      "simulation.gd": "30fa734bb75fc1abd2e65c43b47b181c4afc01cbb3a450863a5a03f6bc92e724",
+      "creep_view.gd": "75a4e5ad913d648697dbe5210494b37c37b5c36c5bdaf57f46e8b617b7a1e00e"
+    }
+  },
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 112.999269542,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "private_recovery": {
+    "verified_at": "2026-10-17T12:06:06.637956+00:00",
+    "private": true,
+    "draft": true,
+    "release_id": 415781149,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-2f773a275a2ad5763ef5",
+    "archive": {
+      "name": "r183-shooting-facing-candidate.tar.gz",
+      "bytes": 6865276,
+      "sha256": "686c4db1a3c16ca23fb4a067b7e64ccc1803e497722c1f4da49fc37980fc2ec4"
+    },
+    "local_restore": {
+      "members_verified": 193,
+      "archive_bytes": 6865276,
+      "source_files_verified": 725,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r172_package_and_all_four_saves_unchanged": true
+    },
+    "actual_remote_restore": {
+      "members_verified": 193,
+      "archive_bytes": 6865276,
+      "source_files_verified": 725,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r172_package_and_all_four_saves_unchanged": true
+    },
+    "first_four_assets_actual_download_hash_size_verified": true,
+    "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "source_signing_pending": true,
+    "source_build": {
+      "exit_code": 0,
+      "elapsed_seconds": 112.999269542,
+      "exact_r172_package_unchanged": true,
+      "all_four_saves_unchanged": true,
+      "no_game_processes": true,
+      "candidate_exported": false
+    },
+    "offline_complete": false,
+    "assets": [
+      {
+        "name": "r183-shooting-facing-candidate.tar.gz",
+        "bytes": 6865276,
+        "sha256": "686c4db1a3c16ca23fb4a067b7e64ccc1803e497722c1f4da49fc37980fc2ec4"
+      },
+      {
+        "name": "EVIDENCE-MANIFEST.json",
+        "bytes": 37932,
+        "sha256": "f9f282d440fc540435b19c4bca214b843d0258ae0671f346781d6c011e9b3dea"
+      },
+      {
+        "name": "SOURCE-STATUS.json",
+        "bytes": 145083,
+        "sha256": "19f7e61732c4fb1a7920b2e08645a12f8c14ef90954ecd9903d3d9f5ed5bbbad"
+      },
+      {
+        "name": "RESTORE.md",
+        "bytes": 1128,
+        "sha256": "c4188ffffe8c70416364f5ec6448bc23400a64d590899b6234e9c85327db0cb8"
+      },
+      {
+        "name": "RESTORE-PROOF.json",
+        "bytes": 1511,
+        "sha256": "c17a003763c8184364a8aa6152211948ea99be43c3e5cf385bcbbc504da600af"
+      }
+    ],
+    "all_remote_assets_actual_hash_size_verified": true,
+    "no_game_processes": true
+  },
+  "normal_signing": {
+    "exit_code": -15,
+    "timed_out": true,
+    "elapsed_seconds": 60.012335875,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "native_package": "Exact R172 unchanged; new coherent export, added native normal/air/facing poses, full-resolution review/comparison and unchanged performance/functional gates remain next. Accepted R137 guide stays frozen.",
+  "scope_limits": [
+    "Original stdmap/key/container, float64 atan and resource/room/graph/player/animation/audio/particle backend callbacks are explicit supplied replacements.",
+    "No original Apple libm or GPU/whole-game identity claim.",
+    "Four native nonfinite visual/aim poses retain eight separately reported finite-fallback assertions.",
+    "New normal resource5/kind1 and resource4/kind2 joins do not establish special/bomber/Float/Freeze/other-resource/owner/attacker lifecycle identity.",
+    "R18071/R18224 omitted-shooting primary names remain outside those immutable old oracles; new fixture independently covers bounded full shooting names.",
+    "Eight required presentation groups, performance and campaign/progression fidelity remain incomplete. No multiplayer or expansion."
+  ],
+  "log_scan": {
+    "source_build_logs": 98,
+    "existing_logs": 98,
+    "errors_or_leaks": [],
+    "logs": [
+      "builds/air-pass-verification.log",
+      "builds/animator-verification.log",
+      "builds/bolt-appearance-verification.log",
+      "builds/bolt-clock-verification.log",
+      "builds/bolt-construct-verification.log",
+      "builds/bolt-order-verification.log",
+      "builds/bolt-ribbon-verification.log",
+      "builds/build-hex-verification.log",
+      "builds/creep-air-path-verification.log",
+      "builds/creep-animation-verification.log",
+      "builds/creep-approach-verification.log",
+      "builds/creep-death-burst-verification.log",
+      "builds/creep-death-verification.log",
+      "builds/creep-depth-verification.log",
+      "builds/creep-disco-actor-verification.log",
+      "builds/creep-disco-admission-verification.log",
+      "builds/creep-disco-timer-verification.log",
+      "builds/creep-fields-verification.log",
+      "builds/creep-health-offset-verification.log",
+      "builds/creep-health-verification.log",
+      "builds/creep-hit-verification.log",
+      "builds/creep-hover-verification.log",
+      "builds/creep-initial-path-verification.log",
+      "builds/creep-light-verification.log",
+      "builds/creep-missile-verification.log",
+      "builds/creep-owner-verification.log",
+      "builds/creep-particle-birth-verification.log",
+      "builds/creep-particle-migration-verification.log",
+      "builds/creep-portal-verification.log",
+      "builds/creep-replan-verification.log",
+      "builds/creep-retained-verification.log",
+      "builds/creep-reward-verification.log",
+      "builds/creep-shooting-r183-source-build-final.log",
+      "builds/creep-shooting-verification.log",
+      "builds/creep-source-replan-verification.log",
+      "builds/creep-spawn-path-verification.log",
+      "builds/creep-state-verification.log",
+      "builds/creep-status-verification.log",
+      "builds/decal-verification.log",
+      "builds/editor-import.log",
+      "builds/frame-lookup-verification.log",
+      "builds/hud-plate-verification.log",
+      "builds/hud-wallet-verification.log",
+      "builds/input-profile-verification.log",
+      "builds/magic-depth-verification.log",
+      "builds/magic-panel-verification.log",
+      "builds/magic-view-verification.log",
+      "builds/main-menu-verification.log",
+      "builds/map-animation-verification.log",
+      "builds/map-depth-verification.log",
+      "builds/menu-bubble-verification.log",
+      "builds/menu-float-verification.log",
+      "builds/menu-motion-verification.log",
+      "builds/menu-navigation-verification.log",
+      "builds/menu-ui-verification.log",
+      "builds/message-verification.log",
+      "builds/mode-effect-verification.log",
+      "builds/mode-item-verification.log",
+      "builds/mode-text-derivation.log",
+      "builds/native-build.log",
+      "builds/particle-child-binding-verification.log",
+      "builds/particle-child-verification.log",
+      "builds/particle-defaults-verification.log",
+      "builds/particle-keys-verification.log",
+      "builds/particle-life-verification.log",
+      "builds/particle-local-clock-verification.log",
+      "builds/particle-owned-benchmark.log",
+      "builds/particle-owned-draw-benchmark.log",
+      "builds/particle-owned-keys-verification.log",
+      "builds/particle-owned-live-verification.log",
+      "builds/particle-owned-verification.log",
+      "builds/particle-state-verification.log",
+      "builds/portal-lifecycle-verification.log",
+      "builds/portrait-verification.log",
+      "builds/promotion-verification.log",
+      "builds/result-lifecycle-verification.log",
+      "builds/reward-clock-verification.log",
+      "builds/reward-geometry-verification.log",
+      "builds/reward-spice-verification.log",
+      "builds/runtime-scripts-verification.log",
+      "builds/selection-verification.log",
+      "builds/story-verification.log",
+      "builds/tower-preview-verification.log",
+      "builds/transition-verification.log",
+      "builds/tutorial-arrow-verification.log",
+      "builds/tutorial-fade-verification.log",
+      "builds/tutorial-layout-verification.log",
+      "builds/ui-verification.log",
+      "builds/upgrade-verification.log",
+      "builds/verification.log",
+      "builds/water-verification.log",
+      "builds/wave-collapse-verification.log",
+      "builds/wave-verification.log",
+      "builds/world-blade-verification.log",
+      "builds/world-camera-verification.log",
+      "builds/world-cloud-verification.log",
+      "builds/xp-chronology-verification.log",
+      "builds/xp-verification.log"
+    ]
+  },
+  "verified_source_hashes": {
+    "game/scripts/simulation.gd": "30fa734bb75fc1abd2e65c43b47b181c4afc01cbb3a450863a5a03f6bc92e724",
+    "game/scripts/creep_view.gd": "75a4e5ad913d648697dbe5210494b37c37b5c36c5bdaf57f46e8b617b7a1e00e",
+    "tools/build_macos.sh": "92b7748a04c7a132dc7e411ac53c62c72e3425f72af6e8062cbeb0e1277d6c4e",
+    "tools/creep_shooting_ui_verify.gd": "e513766bd727fb34067682c7a5fd436b53471ea65a8e34df1cfe91d0f019aad2",
+    "tools/native_creep_shooting_reference.py": "117ff13bea4eb4557c38d3665f63fdfb763df02e6768f5e528f66038a0c32ff2",
+    "tests/fixtures/native-creep-shooting-reference.json": "30790afa94ea428d648fba8e82d749b189d8a5cc8bb7e99edc8f3e4c9a13ae54"
+  },
+  "all_prior_fixtures_unchanged": 139,
+  "simulation_checks": 41544,
+  "original_hashes": 4035,
+  "runtime_scripts": 82,
+  "publication_docs_outside_frozen_source": true
+}

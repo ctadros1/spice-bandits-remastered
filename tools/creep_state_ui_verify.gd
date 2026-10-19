@@ -45,7 +45,9 @@ func run() -> void:
 		check(int(actor.get("hover_when_idle",-1))==int(row.hover348),"constructor shouldHoverWhenIdle flag")
 		check(int(actor.get("hover_while_moving",-1))==int(row.hover349),"constructor shouldHoverWhileMoving flag")
 		check(int(actor.get("hover_active",-1))==int(row.hover34a),"constructor initial hover state")
+		check(bits(float(actor.smoke_work_interval))==int(row.smoke_work_interval_bits),"actual spawn retains original constructor working smoke interval")
+		check(bits(float(actor.smoke_idle_multiplier))==int(row.smoke_idle_multiplier_bits),"actual spawn retains original state smoke multiplier")
 		s.particle_state.destroy_creep(actor)
-	var report={"checks":checks,"failure_count":failure_count,"failures":failures,"original_cases":fixture.cases.size(),"constructor_records":fixture.constructors.size(),"scope":"Actual Disco transition: full original SetState/hover selection and float32 working interval on supplied records; nine populated resources plus explicit unused creep7 through a private catalog/spawn path. Original movement/hover tail, sound backend and constructor smoke interval correction remain separate."}
+	var report={"checks":checks,"failure_count":failure_count,"failures":failures,"original_cases":fixture.cases.size(),"constructor_records":fixture.constructors.size(),"scope":"Actual Disco transition: full original SetState/hover selection and float32 working interval on supplied records; nine populated resources plus explicit unused creep7 through a private catalog/spawn path. Includes actual spawn working smoke interval/idle multiplier; full movement callers and sound backend remain separate."}
 	var suffix="postport" if "--postport" in OS.get_cmdline_user_args() else "preport"
 	var f=FileAccess.open("res://../builds/creep-state-r165-"+suffix+".json",FileAccess.WRITE);f.store_string(JSON.stringify(report,"\t"));f.close();print("CREEP_STATE ",JSON.stringify(report));quit(1 if failure_count else 0)

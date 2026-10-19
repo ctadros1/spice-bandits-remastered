@@ -31,6 +31,8 @@ Raw benchmark data, gate summaries and immutable-report digests are in [r170-par
 
 The first pool-reuse setup hit the original disable-after gate because Restart only pools parents; it does not reset the clock. The corrected case explicitly supplies a new emission window. A later new boundary case incorrectly looked for explosion roots at ordinary spawn. The corrected setup invokes the existing death-burst creation before supplying one parent and a retained child. Neither failure required a runtime behavior change, fixture rewrite or relaxed threshold. Their exact test sources/logs/reports are retained for recovery.
 
-## Remaining work
+## Remaining work as of R170
+
+Later R172 ports the hover tail and R173 disproves the claimed constructor working-smoke discrepancy; see docs/mechanics/CREEP_STATE.md. The historical paragraph below records the earlier view, not the current state.
 
 Actual hover motion, its independent Freeze update and unscaled body-offset rendering remain unported. Original sound ownership, Fly/portal/growth/status joins, the constructor working-smoke field and broader UI/campaign/progression fidelity remain open. No expansion content or multiplayer was added. A passing preservation test does not prove complete reconstruction.

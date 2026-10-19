@@ -1,0 +1,109 @@
+{
+  "revision": "R184",
+  "offline_complete": false,
+  "source_smoke": {
+    "checks": 185,
+    "failures": [],
+    "poses": 13,
+    "gpu_readback": false,
+    "actual_Main_Simulation_fields": true,
+    "report": "builds/normal-r184-smoke-final.json"
+  },
+  "preserved_setup_failures": [
+    "builds/normal-r184-first.log: static test subclass loaded before autoloads; owned failed Godot process49920 terminated/reaped.",
+    "builds/normal-r184-second.log: direct teleport lacked caller-created portal_pose; script errors invalidate exit0/check159 result.",
+    "builds/normal-r184-third.log: assumed cell remains exit across stationary boundary; actual path endpoint is consumed while logical position stays at exit. Assertion corrected against actual boundary semantics."
+  ],
+  "derived_qa_data": {
+    "bytes": 41327,
+    "sha256": "f9348ccb4dd850aa18a3053ec3ae867337ae95dbf6dd4b9310057af5c890247c",
+    "ten_original_input_sequences": true,
+    "deterministic_tool_and_build_derivation": true,
+    "source_oracles": [
+      "native-creep-shooting-reference.json:30790afa94ea428d648fba8e82d749b189d8a5cc8bb7e99edc8f3e4c9a13ae54",
+      "native-creep-air-path-reference.json:c1773610b3e72e1ffb4741a1a01e0352e2693c91fad344beeee612ca954004e4"
+    ]
+  },
+  "limits": [
+    "Native presentation764checks/235PNG pass; bounded actualMain captures do not establish originalGPU/whole-game identity.",
+    "Fixed16x16 supplied graph is displayed over preserved Training artwork as explicit QA backdrop, not original map/equivalent-input identity.",
+    "Expected state fields are never injected; actual construction/living/hover/view/source rerouting drive the actors. HP50/100 is supplied afterward only to expose the raw health anchor.",
+    "Owned frame held for facing/geometry captures; existing animator-clock suites retain their separate timing scope.",
+    "Portal ability placement/admission/queue/transfer uses actual runtime; exact original full constructor-plus-portal join remains unproven beyond the independent R178 supplied-actor initializer oracle.",
+    "All eight required presentation groups and full gameplay/sound/campaign/progression fidelity remain incomplete. Performance limit remains33.34ms."
+  ],
+  "build": {
+    "exit_code": 0,
+    "elapsed_seconds": 133.3916465,
+    "r172_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "2adb6f081fa88886728b9969a4a4576d2a2a953c5a1b930d63980c1af058b874",
+      "executable_sha256": "ebf3c508bd3091721a2af6a48808a51af31f537b00dcef723152ba673aa48206",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "4a02d8bdac5b5f8581c9cd26702103616b32266d7ed296cc52dd32efc0d1773c"
+      }
+    },
+    "candidate_exported": true,
+    "offline_complete": false
+  },
+  "native_suites": {
+    "presentation": {
+      "passed": true,
+      "checks": 764,
+      "captures": 235
+    },
+    "performance": {
+      "passed": false,
+      "median_ms": [
+        49.069,
+        49.77,
+        52.443
+      ],
+      "p95_ms": [
+        64.219,
+        100.364,
+        64.701
+      ],
+      "world_ms": [
+        12.275,
+        16.771
+      ],
+      "unchanged_limit_ms": 33.34,
+      "stalls": 0,
+      "errors": 0,
+      "exact_RGBA_pairs": 15,
+      "exact_geometry_comparisons": 12,
+      "coverage_audit_gap": "creep-layer usage compared against all retained enemies, including dying unrendered actors. Actual1x200/200,2x151/153,4x71/103. Needs independent eligible drawn actor IDs/count; preserve exact-pixel and numeric limits."
+    },
+    "functional_passed": [
+      "menus184/55",
+      "tutorial88/20",
+      "audio73/23WAV",
+      "projectiles4",
+      "towers1",
+      "desert1",
+      "campaign148"
+    ],
+    "functional_failed": {
+      "turns": "4 expected native corner animations absent in synthetic5pose fixture; new retained move_progress/move_target/normal_position_written/boundary state not reset by legacy fixture. Actual normal native movement poses pass. Fix supplied fixture inputs next; retain failure."
+    },
+    "all_ten_accepted": false,
+    "reports": [
+      "builds/normal-r184-corrected-native-suites.json",
+      "builds/normal-r184-corrected-functional-followup.json",
+      "builds/normal-r184-tail-functional.json"
+    ],
+    "first_native_audit_failure": "Obsolete222count rejected actual235captures despite runtime764checks pass. Only external run_packaged_qa.py changed; exact app unchanged. Negative missing-pose/one-bit-position tests reject."
+  },
+  "private_recovery": "pending",
+  "visual_review": "builds/normal-r184-changed-presentation.json",
+  "guards": {
+    "all_four_saves_unchanged": true,
+    "package_source_and_signature_unchanged_during_batches": true,
+    "no_game_processes": true,
+    "accepted_R137_guide_105_files_unchanged": true
+  },
+  "next": "R185 coherent synthetic turn inputs; independently count eligible renderer coverage; profile/improve actual creep movement hotpath before rerunning unchanged33.34ms gate. Continue all8requiredUIgroups and full offline fidelity."
+}

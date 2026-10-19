@@ -1,0 +1,110 @@
+{
+  "signed_base_commit": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+  "source_signing_pending": true,
+  "new_source_signed_and_pushed": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "presentation_checks": 566,
+  "presentation_captures": 222,
+  "median_ms": [
+    34.288,
+    37.886,
+    44.832
+  ],
+  "p95_ms": [
+    37.981,
+    42.544,
+    55.185
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "functional_suites_passed": 8,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_restore": {
+    "members": 2272,
+    "bytes": 1579248994,
+    "sha256": "04f4528e000c05f931515ae332e98f1447f6b1a95451a7020cedae6247bcd1c6",
+    "sources": [
+      {
+        "source": "creep-hover-r172-corrected-candidate",
+        "files": 662,
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "creep-hover-r172-first-native-failure",
+        "files": 662,
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 663,
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "verified_at": "2026-10-17T07:50:11.519271+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 415659424,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-ae76cb4fbf5a79a6586e",
+  "assets": [
+    {
+      "name": "r172-original-hover-failure.tar.gz",
+      "bytes": 1579248994,
+      "sha256": "04f4528e000c05f931515ae332e98f1447f6b1a95451a7020cedae6247bcd1c6"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 199,
+      "sha256": "2eeeba2134ee18d4c1cb75af40dc153caaea1f49b647acdd937c746c39786c23"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 515211,
+      "sha256": "3d3063df2e331d1a9345f46b2fbef1e11380e4e45e5518701a768aebd23c4063"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1277,
+      "sha256": "dd3b98acf2fc0cac6ffac547a181cb6cdf7591ae33ac5b97469f881cc27bf57d"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 730,
+      "sha256": "470d289f9da3e71150d5bdf2e02c5790f2410e0740bca0da9061ec1a761a8755"
+    },
+    {
+      "name": "r172-restore-proof.zip",
+      "bytes": 3044698,
+      "sha256": "b17227055ea0d54f8ce8c8e9b446e6eadf2015f60012c1f1bcdf304f2eab6fa0"
+    }
+  ],
+  "all_remote_assets_actual_hash_size_verified": true,
+  "actual_remote_full_restore": {
+    "members": 2272,
+    "bytes": 1579248994,
+    "sha256": "04f4528e000c05f931515ae332e98f1447f6b1a95451a7020cedae6247bcd1c6",
+    "sources": [
+      {
+        "source": "creep-hover-r172-corrected-candidate",
+        "files": 662,
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "creep-hover-r172-first-native-failure",
+        "files": 662,
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 663,
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "no_remaining_game_processes": true
+}

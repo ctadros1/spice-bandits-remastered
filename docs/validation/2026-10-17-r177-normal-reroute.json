@@ -1,0 +1,86 @@
+{
+  "candidate": "R177 unexported normal rerouting and turns",
+  "offline_complete": false,
+  "original_fixtures": [
+    {
+      "path": "tests/fixtures/native-creep-replan-reference.json",
+      "bytes": 902527,
+      "sha256": "4ed4ef2bd03bed624c3d5ecc97a1e60dc14a0060bb287a78bcce4a746923b949",
+      "two_independent_original_runs_identical": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-replan-direction-reference.json",
+      "bytes": 1061227,
+      "sha256": "dbaae956c5506eebfe13c269d3a753f826b92f0017e47fd24cf560b4c2535b6a",
+      "two_independent_original_runs_identical": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-replan-long-reference.json",
+      "bytes": 6443512,
+      "sha256": "acba77c443be60db43da8e72beed8c06480e3de273bb6fe86b949439b44f35ce",
+      "two_independent_original_runs_identical": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-slot-lifetime-reference.json",
+      "bytes": 131314,
+      "sha256": "bc0069afda41d305385a7f7681902051b513bdc7d79c0c1c3f2f58bf9d7e611e",
+      "two_independent_original_runs_identical": true
+    }
+  ],
+  "actual_game_comparison": {
+    "checks": 81494,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "original_cases": 96,
+    "scope": "Actual Simulation set_enemy_path then living/hover/visual phases against full original normal UpdateShortestPath/FindPathToBase/A*/smoothing/base/walkability/state/displacement/movement. Identical supplied16x16graph, valid owner/base records and selected constructor fields; both basic raw direction0 and full direction-helper flag1 joins. Nonaligned walking compares animator names/rotation/alpha. Full graph/resource producers, external math/animation/audio/GPU and faction/target-loss/special cases remain separate."
+  },
+  "original_replan_cases": 96,
+  "original_movement_frames": 4032,
+  "slot_lifetime_sequences": 12,
+  "slot_lifetime_calls": 252,
+  "source_build": {
+    "exit_code": 0,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "original_or_immutable_baselines_changed": false,
+  "initial_r175_preport_failure_count": 4044,
+  "initial_r177_expanded_failure_count": 2061,
+  "r177_failure_fields": {
+    "path": 927,
+    "position_bits": 52,
+    "walking_animator": 1082
+  },
+  "preserved_evidence": [
+    "R175 first instruction-budget and wrong SetInitPosition-address probe failures",
+    "R175 basic replan36retained-position failures",
+    "R176 first36secondary-name and following6boundary-primary-name failures",
+    "R177 complete initial failure and path-fixed trace plus original192-frame extra-field diagnostic",
+    "Targeting fixture failure: queued tower validation restored state0; visual-only fixture correction insufficient; explicit stationary pose after manual relocation restores original unchanged targeting assertion"
+  ],
+  "remaining_before_export": [
+    "Full normal spawn/portal UpdatePosition overload0x7aaac with actual GetFirst pop/peek rather than supplied old initializer callback",
+    "Normal kill-reward cached remaining-count and initial route-length fields, avoiding static-prefix counting drift",
+    "Retained aim offset/pre-hover producer and target-loss/faction joins",
+    "Full original graph/resource/owner production and special Fly/Float/growth/portal/bomber/kamikaze/laser/audio joins",
+    "New native wait/turn/align/reroute poses, visual review, exact frozen app/performance/functional verification"
+  ],
+  "exact_package_remains": "R172",
+  "current_package": {
+    "pck_sha256": "e5c23e8389259a1546383cfb12cba28d61407850e16052b776665c955c76e1d7",
+    "executable_sha256": "ab50466c2d9142f48a31d6313a7ddb84be8737598ea9c22aae1dbb4a46293ad1",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "54610a3fc3e6c359843ffdaa13517c32584095dd1c4d9ccb29a0f7641240a3cf"
+    },
+    "protected_saves": {
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json": "9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json.bak": "56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json": "c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json.bak": "ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb"
+    },
+    "candidate_exported": false
+  }
+}

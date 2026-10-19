@@ -65,11 +65,14 @@ static func corner_end(target: Vector2, future: Vector2, progress: float) -> Vec
 static func position(logical: Vector2, start: Vector2, end: Vector2, progress: float) -> Vector2:
 	if progress > 0.25 and progress < 0.75: return logical
 	var delta = end-start
-	var length = f32(delta.length())
+	# Position projection divides by a double-precision square root;
+	# Vector2Normalize separately multiplies by a float32 reciprocal.
+	var length=sqrt(f32(f32(delta.x*delta.x)+f32(delta.y*delta.y)))
 	# The original divides by zero for a degenerate reverse corner. Retain
 	# the finite logical position so a reconstructed replay cannot become NaN.
 	if length == 0: return logical
-	var direction = Vector2(f32(delta.x/length), f32(delta.y/length))
+	var inverse=f32(1.0/f32(length))
+	var direction = Vector2(f32(delta.x*inverse),f32(delta.y*inverse))
 	var projected = 0.0
 	if progress >= 0.75:
 		var offset = logical-start
@@ -115,6 +118,7 @@ static func prepare(sim, e: Dictionary) -> void:
 	if p > 0.25 and p < 0.75 and e.has("corner"): e.corner.enabled = false
 	if e.attacking: return
 	var future_at=int(e.path_at)+1
+	if p>=0.5 and sim.normal_creep_movement(e):e.path_remaining=maxi(0,e.path.size()-future_at)
 	if future_at>=e.path.size():
 		if p>=0.5 and e.has("semi"):e.semi.enabled=false
 		return
@@ -128,35 +132,79 @@ static func prepare(sim, e: Dictionary) -> void:
 	var incoming = signed(target-e.get("move_start", sim.center(e.cell.x, e.cell.y)))
 	var outgoing = signed(future-target)
 	var enabled = can_round(incoming, outgoing)
-	if p >= 0.5 and int(e.get("semi_key", -1)) != key:
+	if p >= 0.5 and (not e.has("semi_key") if sim.normal_creep_movement(e) else int(e.get("semi_key", -1)) != key):
 		e.semi_key = key
 		e.semi = {"enabled": enabled, "direction": signed(corner_end(target, future, p)-e.pos), "incoming": incoming, "outgoing": outgoing}
-	if p >= 0.75 and int(e.get("corner_key", -1)) != key:
+	if p >= 0.75 and (not e.has("corner_key") if sim.normal_creep_movement(e) else int(e.get("corner_key", -1)) != key):
 		e.corner_key = key
 		e.corner = {"enabled": enabled, "start": e.pos, "end": corner_end(target, future, p)}
 
+static func finish_walk(e:Dictionary) -> void:
+	# Original flag invalidation follows the progress increment, while new
+	# corner/semicorner preparation precedes it. Retain the previous geometry
+	# for the first-quarter corner even after its future-half flag clears.
+	var p=float(e.move_progress)
+	if p>0.25 and p<0.75:
+		if e.has("corner"):e.corner.enabled=false
+		e.erase("corner_key")
+	if p>0 and p<0.5:
+		if e.has("semi"):e.semi.enabled=false
+		e.erase("semi_key")
+
+static func body_position(sim,e:Dictionary) -> Vector2:
+	var corner=e.get("corner",{})
+	var point=position(e.pos,corner.start,corner.end,progress(sim,e)) if not e.attacking and corner.get("enabled",false) else e.pos
+	if int(e.get("state",0))==0:point+=e.get("body_jitter",Vector2.ZERO)
+	return point
+
 static func update(sim, e: Dictionary) -> void:
+	if int(e.get("state",0)) in [0,1,4] and not e.get("normal_position_written",true) and e.has("visual_layers"):
+		return
 	var p = progress(sim, e)
 	var corner = e.get("corner", {})
-	e.visual_pos = position(e.pos, corner.start, corner.end, p) if not e.attacking and corner.get("enabled", false) else e.pos
+	var boundary=bool(e.get("normal_boundary",false))
+	# Original waiting/already-aligned movement paths do not write primary
+	# animator position. A preceding reroute can change logical position only.
+	if not (int(e.get("state",0)) in [0,1,4] and not e.get("normal_position_written",true)):
+		e.visual_pos = body_position(sim,e)
+		if e.has("aim_offset_before_hover"):e.visual_aim=e.visual_pos+e.aim_offset_before_hover
 	var normal = sim.creep_animation(e)
 	var values = {"rotation": 0.0, "alpha": 1.0, "blend_rotation": 0.0, "blend_alpha": 0.0}
 	var primary = normal
-	var secondary = normal
+	# The original secondary processor keeps its last animation until a
+	# specific blending-direction/semicorner call changes it. Constructor
+	# PlayAnimation requests RunDownRight for both processors.
+	var retained_secondary=e.has("normal_position_written")
+	# Alignment calls UpdateDirection even on the boundary that entered
+	# state4. Only an ordinary walking boundary retains the old primary.
+	if retained_secondary and not e.attacking and ((boundary and int(e.get("state",0))!=4) or not e.get("normal_position_written",true)):
+		primary=str(e.get("primary_animation","RunDownRight"))
+	var secondary = str(e.get("secondary_animation","RunDownRight")) if retained_secondary else normal
+	if e.attacking and not retained_secondary:secondary=normal
 	var semi = e.get("semi", {})
 	var physical = int(e.def.traits.get("dir_interpolation", 1 if bool(e.native_air) else 0)) == 1
-	if physical and not e.attacking and semi.get("enabled", false):
+	var previous_layers:Array=e.get("visual_layers",[])
+	var previous_secondary_rotation=float(previous_layers[1].rotation) if previous_layers.size()==2 else 0.0
+	if physical and not boundary and not e.attacking and (semi.get("enabled", false) or (p>0 and p<0.25 and corner.get("enabled",false) and not semi.is_empty())):
 		var index = SEMI_DIRECTIONS.find(semi.direction)
 		if index >= 0:
 			if p >= 0.5 and p < 0.75:
 				values = turn_values(p, semi.direction, semi.incoming)
 				if p < 0.625: secondary = SEMI_NAMES[index]
-				else: primary = SEMI_NAMES[index]
-			elif p >= 0.75: primary = SEMI_NAMES[index]
+				else:
+					primary = SEMI_NAMES[index]
+					values.blend_rotation=previous_secondary_rotation
+			elif p >= 0.75:
+				primary = SEMI_NAMES[index]
+				if not corner.get("enabled",false):
+					values=turn_values(p,semi.direction,semi.incoming)
+					values.blend_rotation=previous_secondary_rotation
 			elif p > 0 and p < 0.25 and corner.get("enabled", false):
 				values = turn_values(p, semi.direction, semi.outgoing)
-				if p < 0.125: primary = SEMI_NAMES[index]
+				if p < 0.125:primary = SEMI_NAMES[index];secondary=normal
+				else:values.blend_rotation=previous_secondary_rotation
 	var states = [primary, secondary]
+	if retained_secondary:e.primary_animation=primary;e.secondary_animation=secondary
 	var ages = e.get("anim_age", [{"state": "", "born": sim.clock_ms}, {"state": "", "born": sim.clock_ms}])
 	for i in range(2):
 		if ages[i].state != states[i]: ages[i] = {"state": states[i], "born": sim.clock_ms}

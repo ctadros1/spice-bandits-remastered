@@ -1,0 +1,159 @@
+{
+  "revision": "R181",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "gate": {
+    "cases": 64,
+    "checks": 6871,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "local_wallet_cases": 4,
+    "scope": "Actual Simulation constructor/normal movement/source refresh/reroute then lethal damage and repeated damage. Full original C2/source/path/movement/DoDamage/SetDie on supplied graph/resource5/player1/normal-room records and explicit callbacks. Compared HP/state/previous state/cached remaining/source caches/local score-wallet credit/kill count and once-only event. Additional4cases execute nonnull local-player currency credit and compare that original field directly. Original resource/room/player producers, other attacker ownership/modes, death sprite/particle/backend/audio/GPU identity and full owner chronology remain separate."
+  },
+  "preserved_same_fixture_before": {
+    "cases": 64,
+    "checks": 6871,
+    "examples": [
+      {
+        "actual": 18,
+        "expected": 21,
+        "field": "score",
+        "label": "local-wallet/17.0/1.0/37.0/damage"
+      },
+      {
+        "actual": 18,
+        "expected": 21,
+        "field": "event_reward",
+        "label": "local-wallet/17.0/1.0/37.0/damage"
+      }
+    ],
+    "failure_count": 410,
+    "failures_by_field": {
+      "damage_score": 102,
+      "exact_score_float": 102,
+      "exact_wallet_credit": 102,
+      "kill_event_reward": 102,
+      "native_local_wallet_credit": 2
+    },
+    "local_wallet_cases": 4,
+    "scope": "Actual Simulation constructor/normal movement/source refresh/reroute then lethal damage and repeated damage. Full original C2/source/path/movement/DoDamage/SetDie on supplied graph/resource5/player1/normal-room records and explicit callbacks. Compared HP/state/previous state/cached remaining/source caches/local score-wallet credit/kill count and once-only event. Additional4cases execute nonnull local-player currency credit and compare that original field directly. Original resource/room/player producers, other attacker ownership/modes, death sprite/particle/backend/audio/GPU identity and full owner chronology remain separate."
+  },
+  "original_reproduction": {
+    "independent_runs": [
+      "builds/creep-reward-r181-original-0.json",
+      "builds/creep-reward-r181-original-1.json"
+    ],
+    "byte_identical": true,
+    "cases": 64,
+    "bytes": 902980,
+    "sha256": "886227ec3d84da8e9916455edcbcc4091d75ef3ef624e54a3267ce857e512030",
+    "pose_audit": {
+      "actual_constructor_movement_poses_validated": 64,
+      "warmup_frames": 1296,
+      "no_forced_state_or_pending_count": true
+    }
+  },
+  "local_wallet_reproduction": {
+    "independent_runs": [
+      "builds/creep-reward-r181-wallet-original-0.json",
+      "builds/creep-reward-r181-wallet-original-1.json"
+    ],
+    "cases": 4,
+    "byte_identical": true,
+    "bytes": 40117,
+    "sha256": "d359a2bafd70e69a8d91bda58f18b4c1cceef0a79d36f95f56639e247069e96c",
+    "full_original_local_currency_credit_executed": true
+  },
+  "first_core_only_gate": {
+    "cases": 64,
+    "checks": 6642,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "scope": "Actual Simulation constructor/normal movement/source refresh/reroute then lethal damage and repeated damage. Full original C2/source/path/movement/DoDamage/SetDie on supplied graph/resource5/player1/normal-room records and explicit callbacks. Compared HP/state/previous state/cached remaining/source caches/local score-wallet credit/kill count and once-only event. Original resource/room/player producers, other attacker ownership/modes, death sprite/particle/backend/audio/GPU identity and full owner chronology remain separate."
+  },
+  "first_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 114.862323,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "full_source_build_pending": false,
+  "source_signing_pending": true,
+  "private_backup_pending": false,
+  "preserved_failures": [
+    "First full DoDamage/SetDie join lacked supplied std::map owner-tree successor and fetched0. Second trace preserves that failure; original instructions unchanged.",
+    "Third probe reached reward and failed its formatting-stub setup because original format is+%d. Fourth probe supplies the actual format and succeeds.",
+    "Core-only same-fixture previous implementation fails400assertions; final wallet-expanded comparison fails410. Every original fixture/hash/expected value is unchanged."
+  ],
+  "remaining_gaps": [
+    "Nonlocal attackers/reward-disabled calls/special modes and complete incoming damage ownership; full original room/player/resource/graph producers.",
+    "Real air/special movement and cached remaining producers; actors without path_remaining retain an explicitly unproven legacy count fallback.",
+    "Original plane4/rawkind2 C2 has9pending air points/state0 across a ground wall; actual Simulation has empty ground path/state1. Exploratory evidence retained in builds/creep-air-r182-first-probe.json and first-actual.json. Fix before export.",
+    "Full shooting-direction/AngPos/AngleNormalize preliminary8directions independently repeat with explicit std::map container/float64 math.atan callbacks. Two exploratory full-actor poses run; no new runtime port or complete original library/backend/GPU identity.",
+    "Death sprites/particle Emit/audio/Objective-C/indicator/backend and full owner chronology remain explicit callbacks/unresolved.",
+    "New app export/native pose review/comparison/unchanged performance/functional gates and complete UI/campaign/progression remain open. ExactR172app/R137guide/all4saves preserved."
+  ],
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 111.844974625,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "source_log_scan": {
+    "source_build_logs": 96,
+    "existing_logs": 96,
+    "errors_or_leaks": []
+  },
+  "simulation_checks": 41544,
+  "original_hashes": 4035,
+  "runtime_scripts": 82,
+  "runtime_restored_after_before_comparison": {
+    "byte_identical_after_valid_before_comparison": true,
+    "sha256": "48514f456169b4601ca0c12e4f2e584cecc6184680f0b30338037e8c5552ca0e"
+  },
+  "unchanged_source_replan_checks": 98951,
+  "unchanged_spawn_path_checks": 109627,
+  "unchanged_segment_portal_checks": 28390,
+  "unchanged_replan_checks": 81494,
+  "normal_signing_attempt": {
+    "exit_code": -15,
+    "timed_out": true,
+    "elapsed_seconds": 60.012557375,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "normal_signer_error": "No output before60-second timeout; owned Git/signing process group terminated/reaped; no commit or signer/key/settings change.",
+  "air_probe_argument_audit": {
+    "original": "builds/creep-air-r182-argument-probe.json",
+    "actual": "builds/creep-air-r182-argument-actual.json",
+    "constructor_integer_arguments": [
+      4,
+      9001
+    ],
+    "raw_resource_kind": 2,
+    "routing_mismatch_preserved": true,
+    "initial_setup_failure": "Earlier exploratory raw+0x13c assertion incorrectly treated the duplicate identifier as type. The missing-result diagnostic was terminated only for its owned process and reaped; its logs and the corrected original/actual argument-audited probes remain preserved."
+  },
+  "verified_private_backup": {
+    "release_id": 415761396,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-dabd1ea7f86c853cb174",
+    "archive": {
+      "name": "r181-reward-candidate.tar.gz",
+      "bytes": 5915741,
+      "sha256": "2c5596642e89cd73912ebdfcf9f593ca4e09b8c49dc097ac4978de0ed3881fcb"
+    },
+    "assets": 5,
+    "actual_downloaded_bytes": 6129892,
+    "source_files_restored": 713,
+    "members_verified": 329,
+    "all_hashes_modes_crc_and_pinned_signature_exact": true,
+    "note": "Publication receipt/later documentation are outside the713-file frozen source. Actual remote RESTORE-PROOF preserves the full recovery result."
+  }
+}

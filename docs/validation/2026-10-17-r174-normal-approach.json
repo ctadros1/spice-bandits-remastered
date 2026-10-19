@@ -1,0 +1,78 @@
+{
+  "candidate": "R174 unexported normal approach development",
+  "offline_complete": false,
+  "source_verification": {
+    "exit_code": 0,
+    "original_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "actual_game_approach_comparison": {
+    "checks": 74373,
+    "examples": [],
+    "failure_count": 0,
+    "failures": [],
+    "failures_by_field": {},
+    "original_cases": 288,
+    "scope": "Actual Simulation living update plus existing hover/visual owner phases against full original normal movement joined to original route-head/map-slot/distance/position/state helpers on identical supplied map/path/base fields. Non-kamikaze/non-bomber/non-laser supplied raw flags, no shots, direction/animation names and external sinf/floorf remain explicit stubs; full path builder/target-loss/Fly/portal/audio/GPU remain separate. Variable-time extension covers selected speeds, carry, progress and two geometry heights."
+  },
+  "corrected_preport_failure_count": 27164,
+  "original_fixtures": [
+    {
+      "path": "tests/fixtures/native-creep-distance-reference.json",
+      "bytes": 870372,
+      "sha256": "043b85677475e2d309dbb0c684f0eff096bacf711a8def78c8cf87ab1e39b585",
+      "independently_repeated_identically": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-hex-reference.json",
+      "bytes": 2108755,
+      "sha256": "9deef1f845fd3c57ba2a11b164b9b008619d8230d0d884a203f601b3320322a1",
+      "independently_repeated_identically": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-approach-reference.json",
+      "bytes": 4504678,
+      "sha256": "3336158da0e8596587a0a4684e92f351b3b735a02cdbdf511b01ecc50c708938",
+      "independently_repeated_identically": true
+    },
+    {
+      "path": "tests/fixtures/native-creep-approach-variable-reference.json",
+      "bytes": 2104106,
+      "sha256": "522859de1f89ec1e233785f26775171fae105749d9c0890f8ffb6a1313bf2d65",
+      "independently_repeated_identically": true
+    }
+  ],
+  "existing_gates": {
+    "simulation_checks": 41542,
+    "r151_particle_checks": 7003,
+    "r151_rows": 1000,
+    "hover_checks": 62743,
+    "runtime_scripts": 82,
+    "original_hashes": 4035,
+    "all_passed": true,
+    "immutable_baselines_changed": false
+  },
+  "preserved_setup_failures": [
+    "JSON double/integer container equality in early checker",
+    "supplied zero raw bomber/laser flags explicitly matched by final actual-game fixture",
+    "manual targeting stationary actor states and aligned reload state corrected without assertion changes",
+    "first replan stub left vector cleared; corrected explicit callback supplies pending route"
+  ],
+  "current_package": {
+    "pck_sha256": "e5c23e8389259a1546383cfb12cba28d61407850e16052b776665c955c76e1d7",
+    "executable_sha256": "ab50466c2d9142f48a31d6313a7ddb84be8737598ea9c22aae1dbb4a46293ad1",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "54610a3fc3e6c359843ffdaa13517c32584095dd1c4d9ccb29a0f7641240a3cf"
+    },
+    "protected_saves": {
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json": "9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json.bak": "56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json": "c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json.bak": "ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb"
+    },
+    "candidate_exported": false
+  },
+  "required_before_export": "Integrate and compare original normal rerouting state producer, pending vector count, current segment and aligned slot lifetime; then add/review actual native poses and frozen package/performance/functional verification. Full target loss, shooting, special movement and sound/GPU remain open."
+}

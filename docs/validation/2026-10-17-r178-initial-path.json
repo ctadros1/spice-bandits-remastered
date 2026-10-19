@@ -1,0 +1,99 @@
+{
+  "revision": "R178",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "original_executable_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "fixture": {
+    "path": "tests/fixtures/native-creep-initial-path-reference.json",
+    "bytes": 3340578,
+    "sha256": "50e3d9c5216fc14033eac9e473bcee59b001c996844eb18c7e30296dcd38abdf",
+    "independent_runs_byte_identical": true,
+    "initializer_cases": 48,
+    "portal_cases": 12,
+    "movement_frames": 1152,
+    "full_original_bodies": {
+      "CCreep_UpdatePosition_iiiif": {
+        "address": "0x7aaac",
+        "bytes": 512
+      },
+      "CPortalGates_TeleportCreep": {
+        "address": "0x9c2c8",
+        "bytes": 308
+      }
+    }
+  },
+  "actual_game_comparison": {
+    "checks": 28390,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "initializer_cases": 48,
+    "scope": "Actual Simulation segment initializer, teleport and living/hover/visual phases against full original TeleportCreep and segment initializer with real original A*. Supplied actor/base/16x16 graph, not the complete original fresh-spawn/room constructor or GPU.",
+    "teleport_cases": 12
+  },
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 104.617929667,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "source_logs_scanned": 93,
+  "source_log_errors_or_leaks": 0,
+  "original_file_hash_checks": 4035,
+  "runtime_scripts": 82,
+  "replan_checks_unchanged": 81494,
+  "preserved_failures": {
+    "first_portal_preport": {
+      "path": "builds/creep-initial-path-r178-preport.json",
+      "failures": 777
+    },
+    "extended_first_port": {
+      "path": "builds/creep-initial-path-r178-full-initializer-first.json",
+      "failures": 18,
+      "scope": "Nine drawn-position and nine aim single-bit float32 mismatches; fixed original double projection/float32 reciprocal normalization."
+    },
+    "exploratory_label_correction": "raw+0x2b0 is a hit flag, not an initial route count; first exploratory label remains preserved. Original reward denominator reads the source cached ground/air vector size. No reward change."
+  },
+  "runtime_changes": [
+    "Port full supplied normal segment initializer with state4 early-return semantics and retained alignment/reload/slot fields.",
+    "Normal portal exit pop/peek and stationary boundary now use the actual reroute path. Special paths retain their existing implementation.",
+    "Retain pre-hover aim offset without calculating body projection twice; waiting/aligned/Freeze retain aim. Compare exact stored aim across the supplied original sequences.",
+    "Retain raw pending-route count separately from the static path representation. Reward consumer remains unchanged pending original source-cache/kill caller join.",
+    "Use double square-root projection versus float32 reciprocal normalization exactly; all original fixtures/tolerances remain unchanged."
+  ],
+  "remaining_evidence_gaps": [
+    "Complete original AddCreep/CCreep constructor with SetInitPosition and source cached ground/air paths, rather than inferring fresh spawn from the iiiif segment initializer.",
+    "Original CSource.UpdateShortestPath 0xdbbe8, full graph/resource production, faction/base selection, target loss and special Fly/Float/bomber/kamikaze/laser/growth joins.",
+    "Original reward uses cached remaining count and source cached route length; join actual source-vector production and complete kill/reward caller before changing reward behavior.",
+    "Broader aim consumers, Freeze/owner chronology and audio/renderer/GPU parity outside supplied records.",
+    "Export/native wait/turn/align/reroute/portal poses, full-resolution visual review, comparison refresh, unchanged native performance limit and functional suites. Current package remains exact R172; accepted R137 guide stays frozen."
+  ],
+  "source_signing_pending": true,
+  "private_backup_pending": false,
+  "normal_signing_attempt": {
+    "exit_code": 128,
+    "timed_out": false,
+    "elapsed_seconds": 32.154677375,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "normal_signer_error": "1Password: agent returned an error",
+  "verified_private_backup": {
+    "release_id": 415706060,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-60b1846f95898c9ecbdd",
+    "archive": {
+      "name": "r178-initial-path-candidate.tar.gz",
+      "bytes": 5197998,
+      "sha256": "600b1b3530873f9b766ab2f76c74090d33ac484b81ba61ab32922324d9e81446"
+    },
+    "assets": 5,
+    "actual_downloaded_bytes": 5368483,
+    "source_files_restored": 693,
+    "members_verified": 147,
+    "all_hashes_modes_crc_pinned_signature_exact": true,
+    "note": "This publication update and the new receipt are outside the frozen source. Remote RESTORE-PROOF is the actual archived recovery result."
+  }
+}

@@ -3346,7 +3346,8 @@ func creep_body_tint(e:Dictionary,alpha:float=1) -> Color:
 func creep_animator_position(e:Dictionary) -> Vector2:
 	var position:Vector2=e.get("visual_pos",e.pos)
 	var offset=e.def.traits.get("offset",[0,0])
-	return position+Vector2(offset[0],offset[1])+Vector2(0,-30 if sim.clock_ms<e.float_until else 0)
+	var retained:Vector2=e.get("animator_offset",Vector2(offset[0],offset[1]))
+	return position+retained+Vector2(0,-30 if sim.clock_ms<e.float_until else 0)
 
 func creep_health_layout(e:Dictionary) -> Dictionary:
 	# Original Creep.Render reads the primary animator position only. Body

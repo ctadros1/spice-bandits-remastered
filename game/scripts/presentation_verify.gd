@@ -119,6 +119,12 @@ func snapshot(name:String,settle_portrait:bool=true,already_rendered:bool=false)
 			record.creep_clocks.append({"phase_bits":PackedFloat32Array([state.phase]).to_byte_array().decode_u32(0),"frame":state.frame,"stopped":state.stopped,"name":state.name})
 		record.creep_freeze={"remaining":creep.freeze_remaining,"attached":creep.freeze_attached,"room_active":app.sim.freeze_state.room_active,"divisor":creep.animation_divisor,"multiplier":creep.animation_multiplier}
 		record.limit="Controlled fixed-position Marine, actual imported12-frame17FPS art and owned render clocks. Real isolated simulation slow/freeze/expiry bridge; supplied direction/attack inputs and delta. Full callers/culling/room clock producer/original GPU remain open."
+	if name.begins_with("creep-hover-"):
+		var creep=app.sim.enemies[0];var authored=creep.def.traits.get("offset",[0,0])
+		var offset:Vector2=creep.get("animator_offset",Vector2(authored[0],authored[1]))
+		var body:Vector2=app.creep_animator_position(creep);var health:Vector2=app.creep_health_layout(creep).origin
+		record.creep_hover={"resource":str(creep.def.filename),"phase_bits":splash_bits(float(creep.get("hover_phase",0))),"offset_bits":[splash_bits(offset.x),splash_bits(offset.y)],"body_bits":[splash_bits(body.x),splash_bits(body.y)],"raw_position":[creep.visual_pos.x,creep.visual_pos.y],"health_bits":[splash_bits(health.x),splash_bits(health.y)],"multiplier_bits":splash_bits(creep.animation_multiplier),"freeze_attached":creep.freeze_attached,"freeze_remaining":creep.freeze_remaining,"paused":app.sim.paused}
+		record.limit="Real Light Tank resource flags/authored offset and owner hover/Freeze/pause updates on a supplied fixed position. Exact original constructor-derived tail phase/offset bits; unscaled body anchor and raw health anchor. Animation frame held for visual comparison; full original movement/state callers/Fly/portal/audio/GPU remain open."
 	if name.begins_with("creep-status"):
 		record.status=app.sim.enemies.map(func(e):return {"id":e.id,"state":e.state,"light":e.draw_light,"freeze_remaining":app.sim.freeze_until-app.sim.clock_ms,"slow_pending":e.slow_pending,"coefficient":app.CreepStatus.coefficient(e.draw_light),"active":app.CreepStatus.active(e.state,app.sim.freeze_until-app.sim.clock_ms,e.slow_pending),"layers":app.CreepStatus.layers(e.visual_layers).size()})
 		record.limit="Supplied status states and original direct-frame screen pass. Full lifecycle/additive hit/GPU equivalence remain open."
@@ -1096,6 +1102,40 @@ func run() -> void:
 		await snapshot("creep-clock-"+str(action.name))
 		if action.name=="freeze-expiry":check(animated_creep.animation_multiplier==0 and animated_creep.freeze_remaining==0 and not animated_creep.freeze_attached,"native expiry frame holds animator before releasing the freeze pointer")
 		if action.name=="resume":check(animated_creep.animation_multiplier==1 and not app.sim.freeze_state.room_active,"native following frame resumes the owned animator")
+	await verify_normal_poses()
+	app.sim.paused=false
+	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.sim.tutorial_finished=false;app.refresh_controls()
+	app.sim.enemies.clear();app.animation_delta_ms=0
+	var hovering=app.sim.spawn_enemy(5,0,"",944,false)
+	hovering.pos=creep_anchor;hovering.visual_pos=creep_anchor;hovering.path=[];hovering.base=-1
+	hovering.hp=50;hovering.max_hp=100;hovering.grow_ms=400;hovering.speed=1000
+	app.sim.abilities.m_freeze=1
+	for action in [{"name":"000","steps":0},{"name":"moving","steps":7},{"name":"frozen","steps":7},{"name":"paused","steps":1},{"name":"expiry","steps":1},{"name":"resume","steps":1}]:
+		app.sim.paused=action.name=="paused"
+		if action.name=="frozen":check(app.sim.use_ability("m_freeze").is_empty(),"native hover fixture attaches real Freeze ability")
+		if action.name=="expiry":app.sim.freeze_state.remaining=1
+		for step in int(action.steps):app.sim.advance_frame(100)
+		hovering.pos=creep_anchor;hovering.visual_pos=creep_anchor
+		hovering.visual_layers=[{"state":"RunDown","rotation":0.0,"alpha":1.0,"born":0}]
+		app.animation_epoch+=1
+		check(app.creep_health_layout(hovering).origin==creep_anchor+Vector2(-16,16),"native hovering body retains raw health anchor")
+		await snapshot("creep-hover-"+str(action.name))
+		if action.name=="frozen":
+			check(hovering.animation_multiplier==0 and hovering.freeze_remaining>0,"native frozen hover retains stopped body animator")
+		if action.name=="paused":
+			# Compare like paused compositions. The pause overlay deliberately
+			# darkens the earlier unpaused frozen image.
+			var paused_image=get_viewport().get_texture().get_image()
+			app.sim.advance_frame(100)
+			app.queue_redraw();app.battle_overlay.queue_redraw();app.bolt_renderer.prepare()
+			await get_tree().process_frame
+			await get_tree().process_frame
+			RenderingServer.force_draw(true)
+			var exact=paused_image.get_region(depth_rect).get_data()==get_viewport().get_texture().get_image().get_region(depth_rect).get_data()
+			captures[-1].paused_battle_rgba_exact=exact
+			check(exact,"two native paused hover renders retain exact battle RGBA")
+		if action.name=="expiry":check(hovering.animation_multiplier==0 and not hovering.freeze_attached,"native hover expiry preserves one-frame animator hold")
+		if action.name=="resume":check(hovering.animation_multiplier==1,"native hover animator resumes on following frame")
 	app.sim.paused=false
 	app.start_mission("1",true,false);app.tutorial=null;app.sim.spawn_hold=true;app.refresh_controls()
 	app.sim.enemies.clear();app.animation_delta_ms=0
@@ -1285,3 +1325,108 @@ func run() -> void:
 	f.store_string(JSON.stringify({"checks":checks,"failures":failures,"captures":captures,"core_blend_samples":core_blend_samples,"ordered_blend_samples":ordered_blend_samples,"window_restoration":window_restoration,"fixture":"Isolated presentation states and actual viewport drag events, forced result XP, synthetic native GPU blend texels; no earned rewards or original whole-game equivalence."},"\t"));f.close()
 	print("PRESENTATION_VERIFICATION ",JSON.stringify({"checks":checks,"failures":failures}))
 	finished=true;completed.emit(0 if failures.is_empty() else 1)
+
+func normal_bits(v:Vector2) -> Array:return [splash_bits(v.x),splash_bits(v.y)]
+func normal_f(word) -> float:
+	var bytes=PackedByteArray();bytes.resize(4);bytes.encode_u32(0,int(word));return bytes.decode_float(0)
+func normal_vec(words:Array) -> Vector2:return Vector2(normal_f(words[0]),normal_f(words[1]))
+func normal_integer(value:Variant) -> Variant:
+	if value is float:return int(value)
+	if value is Array:return value.map(normal_integer)
+	if value is Dictionary:
+		var result={}
+		for key in value:result[key]=normal_integer(value[key])
+		return result
+	return value
+
+func normal_qa_actor(input:Dictionary) -> Dictionary:
+	app.start_mission("1",true,false,false);app.tutorial=null
+	var config=Content.mission("8").duplicate(true);config.waves=[];config.settings={"tutorial":0,"build_around_base":1}
+	config.sources=[{"x":int(input.source_cell[0]),"y":int(input.source_cell[1]),"neutrality":int(input.source_owner),"target":int(input.source_target)}];config.bases=[]
+	for base in input.bases:config.bases.append({"x":int(base.cell[0]),"y":int(base.cell[1]),"hp":0 if base.inactive else 1000,"hpmax":1000,"type":1,"player":int(base.owner),"neutrality":int(base.owner)})
+	var map=Content.maps["1"].duplicate(true)
+	map.hex_width=16;map.hex_height=16;map.hex_base=44;map.hex_side=22;map.hex_h=64;map.hex_offset_x=0;map.hex_offset_y=0;map.cells=[];map.foreground=[]
+	for i in 256:map.cells.append({"w":1,"l":1})
+	var data=Content.catalog.duplicate(true);var def=data.tower_creeps[int(input.creep_number)]
+	def.hp=100;def.speed=int(input.get("speed",1000));def.rof=1000000;def.base_distance=2;def.damage=0;def.price=0
+	app.sim=preload("res://scripts/simulation.gd").new();app.sim.setup(data,map,config,Profile.fresh(),114,Content.animations)
+	app.sim.live_updates=false;app.sim.spawn_hold=true;app.sim.tutorial_finished=false
+	app.camera=Vector2(512,384);app.zoom=1;app.animation_delta_ms=0;app.animation_epoch+=1
+	app.refresh_controls();app.map_underlay.prepare()
+	var actor=app.sim.spawn_enemy(int(input.creep_number),0,"",9001,false)
+	app.sim.CreepView.update(app.sim,actor)
+	return actor
+
+func normal_qa_step(actor:Dictionary,dt:float) -> void:
+	app.sim.tick_ms=dt;app.sim.clock_ms+=int(dt)
+	app.sim.update_living_enemy(actor);app.sim.advance_creep_hover(actor,dt);app.sim.CreepView.update(app.sim,actor)
+	if actor.has("portal_pose"):app.sim.CreepPortal.advance(actor.portal_pose,dt,app.sim.creep_portal_base(actor),actor.draw_light,float(actor.def.traits.get("shadow_scale_factor",1)))
+
+func normal_qa_fields(actor:Dictionary) -> Dictionary:
+	var path=[]
+	for cell in actor.path.slice(int(actor.path_at)+1):path.append([cell.x,cell.y])
+	return {"state":int(actor.state),"cell":[actor.cell.x,actor.cell.y],"next_cell":[actor.next_cell.x,actor.next_cell.y],"aligned":int(actor.attacking),"base_index":int(actor.base),"position_bits":normal_bits(actor.visual_pos),"logical_bits":normal_bits(actor.pos),"offset_bits":normal_bits(actor.animator_offset),"phase_bits":splash_bits(actor.hover_phase),"progress_bits":splash_bits(actor.move_progress),"remaining_count":int(actor.path_remaining),"path":path,"primary":str(actor.primary_animation),"secondary":str(actor.secondary_animation)}
+
+func normal_qa_render_record(actor:Dictionary) -> Dictionary:
+	var authored=actor.def.traits.get("scale",[1,1]);var pose=app.creep_render_pose(actor);var health=app.creep_health_layout(actor)
+	return {"actual":normal_qa_fields(actor),"body_bits":normal_bits(app.creep_animator_position(actor)),"health_bits":normal_bits(health.origin),"native_scale_bits":normal_bits(pose.native_scale),"authored_scale_bits":normal_bits(Vector2(authored[0],authored[1])),"layers":actor.visual_layers.map(func(layer):return {"name":layer.state,"alpha_bits":splash_bits(layer.alpha),"rotation_bits":splash_bits(layer.rotation)}),"rendered_frames":pose.body_clocks.map(func(clock):return {"name":clock.get("name",""),"frame":clock.get("frame",0),"stopped":clock.get("stopped",false)}),"map_scale":app.map_scale(),"viewport_body":[(app.map_origin()+app.creep_animator_position(actor)*app.map_scale()).x,(app.map_origin()+app.creep_animator_position(actor)*app.map_scale()).y]}
+
+func verify_normal_poses() -> void:
+	var prior_gallery=app.qa_gallery;app.qa_gallery=true
+	var fixture=JSON.parse_string(FileAccess.get_file_as_string("res://data/qa-normal-poses.json"))
+	check(fixture.poses.size()==10,"native normal poses retain ten immutable-oracle inputs")
+	for row in fixture.poses:
+		var actor=normal_qa_actor(row.input)
+		for dt in row.warmup_deltas:normal_qa_step(actor,float(dt))
+		if row.change!=null:
+			for cell in row.change.blocked:app.sim.map.cells[int(cell[1])*16+int(cell[0])].w=0
+			for i in row.change.get("inactive_base_indices",[]):app.sim.bases[int(i)].hp=0
+			app.sim.path_cache.clear();app.sim.route_cost_cache.clear();app.sim.update_source_paths();app.sim.set_enemy_path(actor)
+		for dt in row.after_deltas:normal_qa_step(actor,float(dt))
+		var actual=normal_qa_fields(actor)
+		for key in actual:
+			if key=="primary" and not row.primary_name_verified:continue
+			check(actual[key]==normal_integer(row.expected[key]),"native normal "+row.name+" original "+key)
+		# Supplied health input only makes the original raw health anchor visible.
+		# It never supplies position/state/path/animation expected values.
+		actor.hp=50
+		var record=normal_qa_render_record(actor)
+		check(record.body_bits==normal_bits(normal_vec(row.expected.position_bits)+normal_vec(row.expected.offset_bits)),"native normal "+row.name+" unscaled original body offset")
+		check(record.health_bits==normal_bits(normal_vec(row.expected.position_bits)+Vector2(-16,16)),"native normal "+row.name+" raw health anchor")
+		check(record.native_scale_bits==record.authored_scale_bits,"native normal "+row.name+" authored asset proportions")
+		app.animation_epoch+=1;app.animation_delta_ms=0
+		await snapshot("creep-normal-"+str(row.name))
+		var stretch=get_viewport().get_stretch_transform();check(stretch.x.x==stretch.y.y,"native normal "+row.name+" equal-axis canvas")
+		captures[-1].normal_pose=record;captures[-1].normal_pose.original_fixture=row.original_fixture;captures[-1].normal_pose.original_sha256=row.original_sha256;captures[-1].limit=fixture.limit
+	# Functional actual-constructor/portal join. R178 remains the separate
+	# immutable supplied-actor original initializer oracle, without claiming
+	# it executed this exact constructor-plus-portal sequence.
+	var actor=normal_qa_actor(fixture.poses[0].input);var exit_cell=Vector2i(6,4)
+	for i in 20:
+		if actor.move_progress>=0.5 and actor.move_progress<1:break
+		normal_qa_step(actor,100)
+	var entry:Vector2i=actor.next_cell
+	app.sim.abilities.m_portal=1
+	check(app.sim.use_ability("m_portal",app.sim.center(entry.x,entry.y))=="Choose the portal exit.","native actual constructor places portal entry through ability")
+	check(app.sim.use_ability("m_portal",app.sim.center(exit_cell.x,exit_cell.y)).is_empty(),"native actual constructor connects portal through ability")
+	var pair=app.sim.portals[0].presentation
+	app.sim.check_portal_transfers(pair,entry,exit_cell)
+	check(actor.has("portal_pose") and actor.portal_pose.state==1 and pair.queue.has(actor.id),"native actual constructor enters portal queue through real admission")
+	actor.hp=50
+	await snapshot("creep-normal-portal-enter")
+	captures[-1].normal_pose=normal_qa_render_record(actor);captures[-1].limit=fixture.limit
+	for i in 20:
+		if actor.portal_pose.state==2:break
+		normal_qa_step(actor,100);app.sim.check_portal_transfers(pair,entry,exit_cell)
+	var exit_point=app.sim.center(exit_cell.x,exit_cell.y)
+	check(actor.portal_pose.state==2 and actor.portal_pose.clock==0 and pair.queue.is_empty(),"native actual constructor portal transfers from queue into exit stage")
+	check(actor.pos==exit_point and actor.move_progress==1,"native actual constructor portal initializes exit and stationary boundary")
+	await snapshot("creep-normal-portal-exit")
+	captures[-1].normal_pose=normal_qa_render_record(actor);captures[-1].limit=fixture.limit
+	var boundary_target:Vector2i=actor.next_cell
+	normal_qa_step(actor,0)
+	check(actor.cell==boundary_target and actor.pos==exit_point,"native actual constructor portal consumes stationary boundary without a jump")
+	await snapshot("creep-normal-portal-boundary")
+	captures[-1].normal_pose=normal_qa_render_record(actor);captures[-1].limit=fixture.limit
+
+	app.qa_gallery=prior_gallery

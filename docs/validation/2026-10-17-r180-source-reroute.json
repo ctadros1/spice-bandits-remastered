@@ -1,0 +1,492 @@
+{
+  "revision": "R180",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "gate": {
+    "cases": 56,
+    "checks": 98951,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/next/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/next/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/both/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/both/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual constructor/warmup/source refresh/actor reroute and normal movement phases against unchanged original source-linked actor execution on supplied graph/resources/records. Selected map/base-active/target-loss changes; backend/math callbacks remain explicit. Primary animation names after omitted shooting-direction calls are explicitly unverified; secondary names and rotation/alpha remain asserted. Original zero-length projection NaNs use separately reported existing finite logical-position/previous-offset fallback; no original visual identity is claimed for those fields. Full original production, other resources, animation clocks/audio/GPU and reward consumers remain separate.",
+    "shooting_dependent_primary_names_unverified": 71
+  },
+  "new_fixture": {
+    "path": "tests/fixtures/native-creep-source-replan-reference.json",
+    "sha256": "0270e2ea85362820760a5d2c79063902c2ab672d5505f18a350cf85e35f14c61",
+    "bytes": 10839792,
+    "cases": 56,
+    "warmup_frames": 2254,
+    "after_change_frames": 1344,
+    "branch_coverage": {
+      "0x7b1b0": 12,
+      "0x7b0ce": 25,
+      "0x7b24c": 6
+    }
+  },
+  "independent_repeat_pending": false,
+  "full_source_build_pending": false,
+  "source_signing_pending": true,
+  "private_backup_pending": false,
+  "preserved_failures": {
+    "prototype_before": 1646,
+    "corrected_pose_before_first_scope": 2090,
+    "first_runtime_port": 135,
+    "second_runtime_port": 71,
+    "third_runtime_port": 4,
+    "corrected_pose_nonfinite_visual": 12,
+    "old_fixture_owner_source_inputs": {
+      "R177": 43133,
+      "R178": 7725
+    },
+    "valid_final_same_fixture_before": 2078
+  },
+  "fixture_input_correction": "R177/R178 original actors raw owner0,target0,source pointer0 confirmed directly. Actual-script setup now explicitly supplies owner0,target0,source=-1 instead of retaining isolation-only source owner2/target1. Every original fixture/hash/expected assertion unchanged. Gates retain81494/28390 checks and pass.",
+  "limits": [
+    "71 primary animation names after omitted shooting-direction callback remain unverified; secondary names and rotation/alpha remain compared. Four observed dependent-name mismatches preserved; no runtime primary name forced to match the callback.",
+    "Six original zero-length projection poses yield NaN visual position/aim (12 fields). Existing finite protection is separately asserted against original logical position and pre-hover offset, not claimed original identity. Raw12failed fields preserved.",
+    "Source cache reuse/fallback/ownership/selected target loss tested with supplied16x16 graph/resource5/source/base records. Full room/graph/resource producers, reward consumer, later source/actor lifecycle and other resource/special states remain open.",
+    "Original libm/random/animation/texture/sound/backend callbacks and GPU identity remain separate. Full normal shooting direction and animation clocks require further joins.",
+    "No new app/native/guide/performance acceptance. ExactR172app and acceptedR137guide remain frozen; all PLAN requirements remain active."
+  ],
+  "valid_same_fixture_before": {
+    "cases": 56,
+    "checks": 98951,
+    "examples": [
+      {
+        "actual": [
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "expected": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "field": "path",
+        "label": "fresh/open/replan"
+      },
+      {
+        "actual": 9,
+        "expected": 8,
+        "field": "remaining_count",
+        "label": "fresh/open/replan"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1136328704,
+          1134559232
+        ],
+        "field": "target_bits",
+        "label": "fresh/open/after/0.0"
+      },
+      {
+        "actual": [
+          4,
+          4
+        ],
+        "expected": [
+          5,
+          4
+        ],
+        "field": "next_cell",
+        "label": "fresh/open/after/0.0"
+      },
+      {
+        "actual": 0,
+        "expected": 1020686313,
+        "field": "progress_bits",
+        "label": "fresh/open/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1134222628,
+          1133538105
+        ],
+        "field": "position_bits",
+        "label": "fresh/open/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1134222628,
+          1133538105
+        ],
+        "field": "logical_bits",
+        "label": "fresh/open/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133346816
+        ],
+        "expected": [
+          1134222628,
+          1133374265
+        ],
+        "field": "aim_bits",
+        "label": "fresh/open/after/1.0"
+      },
+      {
+        "actual": 0,
+        "expected": 1035121304,
+        "field": "carry_bits",
+        "label": "fresh/open/after/18.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1136328704,
+          1134559232
+        ],
+        "field": "start_bits",
+        "label": "fresh/open/after/19.0"
+      },
+      {
+        "actual": [
+          4,
+          4
+        ],
+        "expected": [
+          5,
+          4
+        ],
+        "field": "cell",
+        "label": "fresh/open/after/19.0"
+      },
+      {
+        "actual": {
+          "alpha_bits": 1065353216,
+          "primary": "RunDownRight",
+          "rotation_bits": 0,
+          "secondary": "TurnDownRight",
+          "secondary_alpha_bits": 0,
+          "secondary_rotation_bits": 0
+        },
+        "expected": {
+          "alpha_bits": 1065353216,
+          "primary": "TurnDownRight",
+          "rotation_bits": 3218694416,
+          "secondary": "TurnDownRight",
+          "secondary_alpha_bits": 0,
+          "secondary_rotation_bits": 3249872256
+        },
+        "field": "walking_animator",
+        "label": "walking/open/after/0.0"
+      },
+      {
+        "actual": 0,
+        "expected": 4,
+        "field": "state",
+        "label": "approaching/open/replan"
+      },
+      {
+        "actual": [
+          1134166016,
+          1134209707
+        ],
+        "expected": [
+          1134865067,
+          1134209707
+        ],
+        "field": "attack_point_bits",
+        "label": "approaching/open/replan"
+      },
+      {
+        "actual": {
+          "4,4": [
+            -1,
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "expected": {
+          "4,4": [
+            -1,
+            -1,
+            -1,
+            9001,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "field": "displacement_owners",
+        "label": "approaching/open/replan"
+      },
+      {
+        "actual": 1035489765,
+        "expected": 1042109358,
+        "field": "alignment_bits",
+        "label": "approaching/open/after/1.0"
+      },
+      {
+        "actual": 0,
+        "expected": 1,
+        "field": "aligned",
+        "label": "approaching/open/after/7.0"
+      },
+      {
+        "actual": 1232348160,
+        "expected": 0,
+        "field": "reload_bits",
+        "label": "approaching/open/after/7.0"
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "field": "base_index",
+        "label": "two-bases-walking/wall/replan"
+      },
+      {
+        "actual": "RunDown",
+        "expected": "RunDownRight",
+        "field": "walking_secondary",
+        "label": "two-bases-aligned/kill-selected/after/0.0"
+      },
+      {
+        "actual": 0,
+        "expected": 4,
+        "field": "previous_state",
+        "label": "owned-aligned/kill-selected/replan"
+      }
+    ],
+    "failure_count": 2078,
+    "failures_by_field": {
+      "aim_bits": 181,
+      "aligned": 67,
+      "alignment_bits": 46,
+      "attack_point_bits": 105,
+      "base_index": 100,
+      "carry_bits": 13,
+      "cell": 22,
+      "displacement_owners": 129,
+      "logical_bits": 161,
+      "next_cell": 59,
+      "path": 204,
+      "position_bits": 161,
+      "previous_state": 25,
+      "progress_bits": 161,
+      "reload_bits": 57,
+      "remaining_count": 179,
+      "start_bits": 85,
+      "state": 87,
+      "target_bits": 101,
+      "walking_animator": 64,
+      "walking_secondary": 71
+    },
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "approaching/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/next/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/next/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/both/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/both/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual constructor/warmup/source refresh/actor reroute and normal movement phases against unchanged original source-linked actor execution on supplied graph/resources/records. Selected map/base-active/target-loss changes; backend/math callbacks remain explicit. Primary animation names after omitted shooting-direction calls are explicitly unverified; secondary names and rotation/alpha remain asserted. Original zero-length projection NaNs use separately reported existing finite logical-position/previous-offset fallback; no original visual identity is claimed for those fields. Full original production, other resources, animation clocks/audio/GPU and reward consumers remain separate.",
+    "shooting_dependent_primary_names_unverified": 71
+  },
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 113.786264,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "source_log_scan": {
+    "source_build_logs": 95,
+    "existing_logs": 95,
+    "errors_or_leaks": []
+  },
+  "simulation_checks": 41544,
+  "original_hashes": 4035,
+  "runtime_scripts": 82,
+  "unchanged_replan_checks": 81494,
+  "unchanged_initial_path_checks": 28390,
+  "unchanged_spawn_source_checks": 109627,
+  "verified_runtime_restored_after_before_comparison": {
+    "game/scripts/simulation.gd": true,
+    "game/scripts/creep_view.gd": true
+  },
+  "reproduction": {
+    "independent_runs": [
+      "builds/creep-source-replan-r180-original-1.json",
+      "builds/creep-source-replan-r180-original-2.json"
+    ],
+    "frozen_fixture": "tests/fixtures/native-creep-source-replan-reference.json",
+    "byte_identical": true,
+    "bytes": 10839792,
+    "sha256": "0270e2ea85362820760a5d2c79063902c2ab672d5505f18a350cf85e35f14c61",
+    "cases": 56,
+    "warmup_frames": 2254,
+    "after_change_frames": 1344,
+    "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+    "explicit_callbacks": "R179 supplied graph/resource5/source/base records; Play/resource groups/name/texture/registry/random/zero AngPos/float32 math/shooting/audio/zero base-damage callbacks. Full source update and actor reroute/A*/movement bodies unchanged. Full room/resource/graph producer/backend/GPU remain outside this join."
+  },
+  "normal_signing_attempt": {
+    "exit_code": -15,
+    "timed_out": true,
+    "elapsed_seconds": 60.008157417,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "normal_signer_error": "No signer output; normal commit exceeded60seconds and was terminated. No key/settings/bypass changes.",
+  "verified_private_backup": {
+    "release_id": 415748937,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-6c6779f2f69169b650d4",
+    "archive": {
+      "name": "r180-source-replan-candidate.tar.gz",
+      "bytes": 6919611,
+      "sha256": "8ea18f67a30014cdc70d8430e002c792cccf9cc6d153b07bd18573d44657b797"
+    },
+    "assets": 5,
+    "actual_downloaded_bytes": 7102806,
+    "source_files_restored": 705,
+    "members_verified": 198,
+    "all_hashes_modes_crc_and_pinned_signature_exact": true,
+    "note": "Later publication docs and receipt are outside the705-file frozen source. Actual remote RESTORE-PROOF preserves the complete restore result."
+  }
+}

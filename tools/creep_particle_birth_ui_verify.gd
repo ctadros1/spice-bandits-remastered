@@ -158,6 +158,10 @@ func run() -> void:
 			s.particle_state.initialize_creep(e,int(c.map_field8))
 		var roots:Array=e.get("particle_roots",[])
 		check(roots.size()==c.roots.size(),"supplied constructor root count "+str(c.resource))
+		for pair in [["smoke_work_interval","smoke_work_interval_bits"],["smoke_base_interval","smoke_base_interval_bits"],["smoke_max_multiplier","smoke_max_multiplier_bits"]]:
+			check(bits(float(e[pair[0]]))==int(c.owner_fields[pair[1]]),"original constructor owner field "+str(c.resource)+"/"+str(pair[0]))
+		check(int(e.smoke_rate)==int(c.owner_fields.smoke_rate),"original constructor owner smoke rate")
+		check(int(e.smoke_color_flag)==int(c.owner_fields.smoke_color_flag),"original constructor owner smoke color selector")
 		for x in c.roots:
 			var matching=roots.filter(func(r):return str(r.creep_alias)==str(x.alias))
 			check(matching.size()==1,"mapped owner alias "+str(c.resource)+"/"+str(x.alias))

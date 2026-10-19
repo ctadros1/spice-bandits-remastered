@@ -1,0 +1,112 @@
+{
+  "revision": "R179",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "gate": {
+    "checks": 109627,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "scope": "Actual Simulation source cache and fresh resource5 spawn/living/hover/view phases. Original full C2/SetInitPosition/source path/A* join on supplied graph/resources/records; explicit shooting/math/backend callbacks. Full resource/graph/room/manager/GPU and other creature/special types remain separate.",
+    "source_cases": 162,
+    "spawn_cases": 72
+  },
+  "source_reproduction": {
+    "independent_runs": [
+      "builds/source-path-r179-expanded-original-0.json",
+      "builds/source-path-r179-expanded-original-1.json"
+    ],
+    "byte_identical": true,
+    "cases": 162,
+    "bytes": 350847,
+    "sha256": "b41d2564456de96607831bcb8066e6777abf963807d733dcfb121f013ff35447"
+  },
+  "spawn_reproduction": {
+    "independent_runs": [
+      "builds/creep-spawn-path-r179-full-original-1.json",
+      "builds/creep-spawn-path-r179-full-original-2.json"
+    ],
+    "byte_identical": true,
+    "cases": 72,
+    "frames": 4608,
+    "bytes": 12135752,
+    "sha256": "623e65e9938a27b35c3ecbd25832bb07acf51df4a8e282eac232d29a1f96115d",
+    "explicit_callbacks": "Base.DoDamage records supplied damage0 without room/backend mutation; shooting Process, sound loading, texture/registry/random and animation Play remain recorded/supplied stubs. AngPos zero heading, sinf/floorf float32 math callbacks. Full Animator.Init now executes to set actual alpha defaults."
+  },
+  "legacy_default_constructor_reproduction": {
+    "default_original_reference_unchanged": true,
+    "cases": 4608,
+    "constructors": 40,
+    "bytes": 1898453,
+    "sha256": "e90885520e9cd6c11606f62ce53daa1a9ccfdc2f08eb0381f454ee910984fb37",
+    "optional_constructor_join_hook_does_not_change_existing_probe": true
+  },
+  "preserved_valid_before_failures": 24964,
+  "preserved_initial_alpha_port_failures": 32,
+  "test_setup_failures": [
+    "Initial exploratory actor/source inputs had both owner and target nonzero and used a stubbed Animator.Init. They are retained as unaccepted exploration, not a full-game mismatch oracle.",
+    "Copying the previous Simulation with its global class_name produced a duplicate-class parse error; only the owned failed QA process was terminated. A separate anonymous copy removes that single declaration, and hashes/proof preserve all unchanged method bodies. The final valid-before comparison fails24964 against exactly the same original fixture.",
+    "Source/constructor/movement joins exposed missing std::string-vector sound records and external sound/math/base-damage callbacks; failures remain preserved. Final inputs supply actual preserved sound names; random/heading/texture/registry/shooting/sound/base-damage remain explicit callbacks."
+  ],
+  "first_build_failure": {
+    "exit_code": 1,
+    "elapsed_seconds": 39.182746707999996,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "first_build_fixes": [
+    "Chemical fixture now supplies coherent retained aim after directly moving its drawn anchor, and retains its later manual logical displacement. Numeric cloud lifetime/damage assertions are unchanged.",
+    "Original full constructor charges reload from resource ROF. The tank fixture now requires an immediate first aligned hit, then the same1980ms wait and next30ms authored second hit; damage/cooldown checks are strengthened."
+  ],
+  "simulation_checks": 41544,
+  "source_build_pending": false,
+  "source_signing_pending": true,
+  "private_backup_pending": false,
+  "remaining_gaps": [
+    "Original source-aware UpdateShortestPath with nonnull source pointer and updated cached routes; R177 used supplied source-null actors.",
+    "Kill/reward caller uses cached remaining count and source vector size; consumers remain unchanged pending the joined original caller.",
+    "Further resource types, faction/target loss, Fly/Float/bomber/kamikaze/laser/growth/Freeze/owner chronology.",
+    "Full graph/resource/room/manager production, global RNG/libm, animation/texture/audio backend and original GPU identity.",
+    "Export/native poses/full-resolution review/comparison refresh/unchanged native performance and functional verification. Exact app remains R172 and accepted R137 guide stays frozen."
+  ],
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 107.805364,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "source_logs_scanned": 94,
+  "source_log_errors_or_leaks": 0,
+  "original_hashes": 4035,
+  "runtime_scripts": 82,
+  "unchanged_replan_checks": 81494,
+  "unchanged_segment_portal_checks": 28390,
+  "normal_signing_attempt": {
+    "exit_code": 128,
+    "timed_out": false,
+    "elapsed_seconds": 32.149434584,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "normal_signer_error": "1Password: agent returned an error",
+  "verified_private_backup": {
+    "release_id": 415729973,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-0b870efaf3b04347d348",
+    "archive": {
+      "name": "r179-spawn-path-candidate.tar.gz",
+      "bytes": 5960360,
+      "sha256": "f81f70db32d3a9136365f4078cd944528f7d7360b2b500d6f50b78482564b3f1"
+    },
+    "assets": 5,
+    "actual_downloaded_bytes": 6139552,
+    "source_files_restored": 700,
+    "members_verified": 183,
+    "all_hashes_modes_crc_and_pinned_signature_exact": true,
+    "note": "This publication update and receipt are outside the frozen source. Actual remote RESTORE-PROOF is the archived recovery result."
+  }
+}

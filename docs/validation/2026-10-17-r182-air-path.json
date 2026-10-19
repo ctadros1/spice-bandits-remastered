@@ -1,0 +1,672 @@
+{
+  "revision": "R182",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "gate": {
+    "cases": 52,
+    "checks": 74242,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/next/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/next/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual Simulation ordinary plane constructor, normal movement/hover/view, source refresh/actor reroute, local kill reward and repeated damage. Original full resource4/kind2 C2/source paths/movement/reroute/DoDamage/SetDie on supplied graph/resources/room/player and explicit callbacks. Plane variants4/22/23/24 use supplied integer arguments and authored speeds in constructor cases. Omitted shooting primary-name dependencies and existing nonfinite visual fallbacks remain separately reported. Full resource/room/graph/player/owner/special/bomber/missile/particle/audio/GPU identity and complete native fidelity remain open.",
+    "shooting_dependent_primary_names_unverified": 24
+  },
+  "preserved_same_fixture_before": {
+    "cases": 52,
+    "checks": 74242,
+    "examples": [
+      {
+        "actual": 0,
+        "expected": 1232348160,
+        "field": "reload_bits",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "expected": [
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "field": "path",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": {
+          "alpha_bits": 1065353216,
+          "primary": "TurnRight",
+          "rotation_bits": 0,
+          "secondary": "TurnRight",
+          "secondary_alpha_bits": 0,
+          "secondary_rotation_bits": 0
+        },
+        "expected": {
+          "alpha_bits": 1065353216,
+          "primary": "RunDownRight",
+          "rotation_bits": 0,
+          "secondary": "RunDownRight",
+          "secondary_alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0
+        },
+        "field": "walking_animator",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": 8,
+        "expected": 9,
+        "field": "remaining_count",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "field": "state",
+        "label": "fresh/4.0/open/wall/replan"
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "field": "hover",
+        "label": "fresh/4.0/open/wall/replan"
+      },
+      {
+        "actual": [
+          1134865067,
+          1134209707
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "field": "attack_point_bits",
+        "label": "fresh/4.0/open/wall/replan"
+      },
+      {
+        "actual": {
+          "4,4": [
+            -1,
+            -1,
+            -1,
+            9001,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "expected": {},
+        "field": "displacement_owners",
+        "label": "fresh/4.0/open/wall/replan"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1136328704,
+          1134559232
+        ],
+        "field": "target_bits",
+        "label": "fresh/4.0/open/wall/after/0.0"
+      },
+      {
+        "actual": [
+          4,
+          4
+        ],
+        "expected": [
+          5,
+          4
+        ],
+        "field": "next_cell",
+        "label": "fresh/4.0/open/wall/after/0.0"
+      },
+      {
+        "actual": 0,
+        "expected": 1020686313,
+        "field": "progress_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1134222628,
+          1133538105
+        ],
+        "field": "position_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1134222628,
+          1133538105
+        ],
+        "field": "logical_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": [
+          0,
+          3259469913
+        ],
+        "expected": [
+          0,
+          3259498496
+        ],
+        "field": "offset_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": 1029663502,
+        "expected": 0,
+        "field": "phase_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1131282432
+        ],
+        "expected": [
+          1134222628,
+          1131337330
+        ],
+        "field": "aim_bits",
+        "label": "fresh/4.0/open/wall/after/1.0"
+      },
+      {
+        "actual": 0,
+        "expected": 1035121304,
+        "field": "carry_bits",
+        "label": "fresh/4.0/open/wall/after/18.0"
+      },
+      {
+        "actual": [
+          1134166016,
+          1133510656
+        ],
+        "expected": [
+          1136328704,
+          1134559232
+        ],
+        "field": "start_bits",
+        "label": "fresh/4.0/open/wall/after/19.0"
+      },
+      {
+        "actual": [
+          4,
+          4
+        ],
+        "expected": [
+          5,
+          4
+        ],
+        "field": "cell",
+        "label": "fresh/4.0/open/wall/after/19.0"
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "field": "previous_state",
+        "label": "fresh/4.0/open/wall/damage"
+      },
+      {
+        "actual": 8,
+        "expected": 4,
+        "field": "score",
+        "label": "fresh/4.0/open/wall/damage"
+      },
+      {
+        "actual": 0,
+        "expected": 7,
+        "field": "remaining_count",
+        "label": "fresh/4.0/open/wall/damage"
+      },
+      {
+        "actual": 8,
+        "expected": 4,
+        "field": "event_reward",
+        "label": "fresh/4.0/open/wall/damage"
+      },
+      {
+        "actual": 1046034717,
+        "expected": 0,
+        "field": "alignment_bits",
+        "label": "owned-aligned/4.0/open/open/warm/54.0"
+      },
+      {
+        "actual": 1,
+        "expected": 0,
+        "field": "aligned",
+        "label": "owned-aligned/4.0/open/open/warm/60.0"
+      }
+    ],
+    "failure_count": 13246,
+    "failures_by_field": {
+      "aim_bits": 1507,
+      "aligned": 27,
+      "alignment_bits": 61,
+      "attack_point_bits": 210,
+      "carry_bits": 93,
+      "cell": 127,
+      "damage_previous_state": 14,
+      "damage_remaining_count": 26,
+      "damage_score": 22,
+      "displacement_owners": 225,
+      "exact_score_float": 22,
+      "exact_wallet_credit": 22,
+      "hover": 228,
+      "kill_event_reward": 22,
+      "logical_bits": 1161,
+      "native_local_wallet_credit": 22,
+      "next_cell": 242,
+      "offset_bits": 563,
+      "path": 860,
+      "phase_bits": 563,
+      "position_bits": 1175,
+      "progress_bits": 1448,
+      "reload_bits": 2708,
+      "remaining_count": 863,
+      "start_bits": 153,
+      "state": 228,
+      "target_bits": 260,
+      "walking_animator": 394
+    },
+    "original_nonfinite_visual_fallbacks": [
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/current/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/current/after/6.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/next/after/5.0",
+        "position": true
+      },
+      {
+        "aim": true,
+        "label": "approaching/4.0/open/next/after/6.0",
+        "position": true
+      }
+    ],
+    "scope": "Actual Simulation ordinary plane constructor, normal movement/hover/view, source refresh/actor reroute, local kill reward and repeated damage. Original full resource4/kind2 C2/source paths/movement/reroute/DoDamage/SetDie on supplied graph/resources/room/player and explicit callbacks. Plane variants4/22/23/24 use supplied integer arguments and authored speeds in constructor cases. Omitted shooting primary-name dependencies and existing nonfinite visual fallbacks remain separately reported. Full resource/room/graph/player/owner/special/bomber/missile/particle/audio/GPU identity and complete native fidelity remain open.",
+    "shooting_dependent_primary_names_unverified": 24
+  },
+  "original_reproduction": {
+    "independent_runs": [
+      "builds/creep-air-r182-original-0.json",
+      "builds/creep-air-r182-original-1.json"
+    ],
+    "byte_identical": true,
+    "cases": 52,
+    "warmup_frames": 1356,
+    "after_change_frames": 1248,
+    "bytes": 8034957,
+    "sha256": "c1773610b3e72e1ffb4741a1a01e0352e2693c91fad344beeee612ca954004e4"
+  },
+  "pilot_before": {
+    "cases": 3,
+    "checks": 2239,
+    "examples": [
+      {
+        "actual": 0,
+        "expected": 1232348160,
+        "field": "reload_bits",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": [
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "expected": [
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "field": "path",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": {
+          "alpha_bits": 1065353216,
+          "primary": "TurnRight",
+          "rotation_bits": 0,
+          "secondary": "TurnRight",
+          "secondary_alpha_bits": 0,
+          "secondary_rotation_bits": 0
+        },
+        "expected": {
+          "alpha_bits": 1065353216,
+          "primary": "RunDownRight",
+          "rotation_bits": 0,
+          "secondary": "RunDownRight",
+          "secondary_alpha_bits": 1065353216,
+          "secondary_rotation_bits": 0
+        },
+        "field": "walking_animator",
+        "label": "fresh/4.0/open/open/construct"
+      },
+      {
+        "actual": 8,
+        "expected": 9,
+        "field": "remaining_count",
+        "label": "fresh/4.0/open/open/construct"
+      }
+    ],
+    "failure_count": 87,
+    "failures_by_field": {
+      "path": 3,
+      "reload_bits": 78,
+      "remaining_count": 3,
+      "walking_animator": 3
+    },
+    "original_nonfinite_visual_fallbacks": [],
+    "scope": "Actual Simulation ordinary plane constructor, normal movement/hover/view, source refresh/actor reroute, local kill reward and repeated damage. Original full resource4/kind2 C2/source paths/movement/reroute/DoDamage/SetDie on supplied graph/resources/room/player and explicit callbacks. Plane variants4/22/23/24 use supplied integer arguments and authored speeds in constructor cases. Omitted shooting primary-name dependencies and existing nonfinite visual fallbacks remain separately reported. Full resource/room/graph/player/owner/special/bomber/missile/particle/audio/GPU identity and complete native fidelity remain open.",
+    "shooting_dependent_primary_names_unverified": 0
+  },
+  "pilot_after": {
+    "cases": 3,
+    "checks": 2239,
+    "examples": [],
+    "failure_count": 0,
+    "failures_by_field": {},
+    "original_nonfinite_visual_fallbacks": [],
+    "scope": "Actual Simulation ordinary plane constructor, normal movement/hover/view, source refresh/actor reroute, local kill reward and repeated damage. Original full resource4/kind2 C2/source paths/movement/reroute/DoDamage/SetDie on supplied graph/resources/room/player and explicit callbacks. Plane variants4/22/23/24 use supplied integer arguments and authored speeds in constructor cases. Omitted shooting primary-name dependencies and existing nonfinite visual fallbacks remain separately reported. Full resource/room/graph/player/owner/special/bomber/missile/particle/audio/GPU identity and complete native fidelity remain open.",
+    "shooting_dependent_primary_names_unverified": 0
+  },
+  "full_source_build_pending": false,
+  "source_signing_pending": true,
+  "private_backup_pending": true,
+  "remaining_gaps": [
+    "Four original NaN visual/aim poses use8separately reported existing finite-fallback assertions;24shooting-stub-dependent primary names unverified.",
+    "Full incoming ownership/room/resource/graph/player producers, bomber/special/Float/Freeze/owner/death chronology, missile/particle/audio/GPU remain separate.",
+    "R183368direct headings independently repeat;19actual primary-name differences(4zero-vector,15near-positiveY) and full literal-vector/angle trace retained. Original minus90/candidate-minus360 arithmetic requires next full-function/actor port.",
+    "No new app export/native/full-resolution review/comparison/performance/functional acceptance. ExactR172app/all4saves/R137guide unchanged; full offline objective remains active."
+  ],
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 112.445028541,
+    "exact_r172_package_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "candidate_exported": false
+  },
+  "source_log_scan": {
+    "source_build_logs": 97,
+    "existing_logs": 97,
+    "errors_or_leaks": []
+  },
+  "simulation_checks": 41544,
+  "original_hashes": 4035,
+  "runtime_scripts": 82,
+  "unchanged_replan_checks": 81494,
+  "unchanged_initial_path_checks": 28390,
+  "unchanged_spawn_source_checks": 109627,
+  "unchanged_source_replan_checks": 98951,
+  "unchanged_reward_checks": 6871,
+  "runtime_restored_after_valid_before": {
+    "byte_identical_after_valid_before_comparison": true,
+    "sha256": "10b463c4d6fe09db76849a21b2e6154d20778b1ae1a3556fb52850d897b8f467"
+  },
+  "normal_signing_attempt": {
+    "exit_code": -15,
+    "timed_out": true,
+    "elapsed_seconds": 60.005956291,
+    "head": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "signing_configuration_unchanged": true,
+    "development_continues": true
+  },
+  "normal_signer_error": "No output before60-second timeout; owned Git/signing process group terminated/reaped; no commit, key/settings or bypass change.",
+  "verified_source_hashes": {
+    "game/scripts/simulation.gd": "10b463c4d6fe09db76849a21b2e6154d20778b1ae1a3556fb52850d897b8f467",
+    "tools/build_macos.sh": "99c69ae4613645efdd09ee15a4db801b534f7c4d20cee3e2d5b386214eb3caec",
+    "tools/creep_air_path_ui_verify.gd": "f3d47c6a914b8796160cc7d16afbd458a2fc19c10d4b8ed6b6ccce26d9d1df67",
+    "tools/native_creep_air_path_reference.py": "526f54c7cf284c384894e14ade6c9e628f901e3a661d7b5f29c2a91b85a7023d",
+    "tests/fixtures/native-creep-air-path-reference.json": "c1773610b3e72e1ffb4741a1a01e0352e2693c91fad344beeee612ca954004e4"
+  },
+  "r183_facing_research": {
+    "independent_cases": 368,
+    "byte_identical": true,
+    "sha256": "aa1b9451c031b9dce76a614fcfe9d25a1919bf1035ef16c7f8c3f89a41d680b5",
+    "actual_differences": 19,
+    "scope": "Four zero-vector forms and15near-positiveY primary names; actual full-function authored-table/angle diagnostic verifies constants and one-sided candidate-minus360 comparison. Explicit map/float64atan/backend callbacks remain; no runtime port or full owner/GPU identity."
+  },
+  "private_recovery": {
+    "verified_at": "2026-10-17T11:47:28.135421+00:00",
+    "private": true,
+    "draft": true,
+    "release_id": 415773235,
+    "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-8eae1536efdee36d5e5b",
+    "archive": {
+      "name": "r182-air-path-candidate.tar.gz",
+      "bytes": 6620471,
+      "sha256": "364c1f3224776bf2ea638093dfee953e47d375c9f927d2ed0f220530c9421385"
+    },
+    "local_restore": {
+      "members_verified": 215,
+      "archive_bytes": 6620471,
+      "source_files_verified": 719,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r172_package_and_all_four_saves_unchanged": true
+    },
+    "actual_remote_restore": {
+      "members_verified": 215,
+      "archive_bytes": 6620471,
+      "source_files_verified": 719,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r172_package_and_all_four_saves_unchanged": true
+    },
+    "first_four_assets_actual_download_hash_size_verified": true,
+    "signed_base": "e6a5d69247a20c09ec04daac38f03f39135d9bf4",
+    "source_signing_pending": true,
+    "source_build": {
+      "exit_code": 0,
+      "elapsed_seconds": 112.445028541,
+      "exact_r172_package_unchanged": true,
+      "all_four_saves_unchanged": true,
+      "no_game_processes": true,
+      "candidate_exported": false
+    },
+    "offline_complete": false,
+    "assets": [
+      {
+        "name": "r182-air-path-candidate.tar.gz",
+        "bytes": 6620471,
+        "sha256": "364c1f3224776bf2ea638093dfee953e47d375c9f927d2ed0f220530c9421385"
+      },
+      {
+        "name": "EVIDENCE-MANIFEST.json",
+        "bytes": 41932,
+        "sha256": "5a5acb63338f098bef3abcb2364c2cce174a909e8ab2f89acf4aa35d6ecf2a29"
+      },
+      {
+        "name": "SOURCE-STATUS.json",
+        "bytes": 143847,
+        "sha256": "431c9ecfd6ce0d2e2f842e504eb0430dfc12efe6905a29b5c447297b10342298"
+      },
+      {
+        "name": "RESTORE.md",
+        "bytes": 1087,
+        "sha256": "8ab330de4943641eafde5b307045bec842a93350f4e5764a2c8b2eded85a2015"
+      },
+      {
+        "name": "RESTORE-PROOF.json",
+        "bytes": 1504,
+        "sha256": "d5e3920c309ce95fe0d3ddb6299a7ecd33dfc6238c9bbdd294e880eefaa19e2a"
+      }
+    ],
+    "all_remote_assets_actual_hash_size_verified": true,
+    "no_game_processes": true
+  },
+  "publication_docs_outside_frozen_source": true
+}
