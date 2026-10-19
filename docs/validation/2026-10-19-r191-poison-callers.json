@@ -366,7 +366,30 @@
     "Original resource/room flag producers and real damage/death/reward joins are outside these selected recording callbacks.",
     "All8UI fidelity groups and full offline reconstruction remain incomplete."
   ],
-  "signed_source": "pending",
-  "private_recovery": "pending",
+  "signed_source": {
+    "source_and_UID_commit": "582aa9471c23f1b9cbd5bd1f0f8b7537fe564209",
+    "actual_GitHub_source_clone_bytes_modes_pinned_signature_exact": 785
+  },
+  "private_recovery": {
+    "receipt": "docs/backups/2026-10-19-r191-creep-poison-candidate.json",
+    "release_id": 417847870,
+    "all_five_assets_actual_download_verified": true,
+    "asset_bytes": 37194890,
+    "archive": {
+      "name": "r191-creep-poison-candidate.tar.gz",
+      "bytes": 36982631,
+      "sha256": "35a51de6a8ef38b3ea424bbfa3e9a375f1a10c1d981ed5485dc995f3d47ba33f"
+    },
+    "actual_remote_restore": {
+      "members_verified": 253,
+      "archive_bytes": 36982631,
+      "source_files_verified": 785,
+      "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+      "all_member_hashes_modes_and_gzip_crc_verified": true,
+      "candidate_exported": false,
+      "r187_package_and_all_four_saves_unchanged": true
+    },
+    "publication_outside_frozen_source": true
+  },
   "next": "Preserve signed source and actual private evidence recovery; recover original CPoison.Update/UpdateParticles/constructor parent/deleted/tail chronology before coherent package/visual/performance review."
 }
