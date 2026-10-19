@@ -325,5 +325,26 @@
     "all_ten_accepted": false
   },
   "remaining": "First synthetic turn550 is captured before terrain/HUD are visible; same issue present in R184firstpose. Add explicit first-frame scene readiness and a background pixel assertion. Performance still exceeds33.34ms; helper ABBA gain does not establish native whole-app gain. All8requiredpresentationgroups/fullgameplay/sound/progression/backend identity remain open.",
-  "private_recovery": "pending"
+  "private_recovery": {
+    "audit": "docs/backups/2026-10-19-r185-native-normal-candidate.json",
+    "release_id": 417783079,
+    "archive": {
+      "name": "r185-native-normal-candidate.tar.gz",
+      "bytes": 1097207298,
+      "sha256": "119c43e9cb0e11ac1a1ad201cd03ae0ee23cccf824296726e35fe2be0350fc5d",
+      "streamed_without_local_joined_archive": true
+    },
+    "all_15_actual_remote_assets_verified": true,
+    "ordered_parts": 9,
+    "actual_restored_app_and_two_sources_verified": true,
+    "later_publication_docs_outside_frozen_source": true
+  },
+  "source_publication": {
+    "signed_commit": "212b5e94a39e5f9c07ff448f3124fa7d16583ce3",
+    "remote_private_main_exact": true,
+    "actual_GitHub_empty_clone_bytes_executable_modes_exact": 731,
+    "pinned_signature_verified": true,
+    "all_ten_accepted": false,
+    "offline_complete": false
+  }
 }

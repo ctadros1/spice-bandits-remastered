@@ -2607,6 +2607,11 @@ func qa_turn_actor(i:int,progress:float) -> Dictionary:
 	Simulation.CreepView.update(sim, e)
 	return e
 
+func qa_turn_probe_colors(image:Image,points:Array) -> Array:
+	return points.map(func(point):
+		var rgba=image.get_pixelv(point).to_rgba32()
+		return [(rgba>>24)&255,(rgba>>16)&255,(rgba>>8)&255,rgba&255])
+
 func render_turn_gallery() -> void:
 	start_mission("8", true, false)
 	Profile.data.settings.music = false
@@ -2619,7 +2624,19 @@ func render_turn_gallery() -> void:
 	DirAccess.make_dir_recursive_absolute(directory)
 	camera = sim.center(14, 8)
 	zoom = 1.0
+	# Child terrain/HUD redraws must settle before the first supplied pose.
+	# qa_gallery freezes Simulation; this only warms native draw scheduling.
+	var warm_clock=sim.clock_ms
+	map_underlay.prepare();hud_layer.queue_redraw();queue_redraw()
+	for frame in range(3):
+		await get_tree().process_frame
+		RenderingServer.force_draw(true)
+	var background=get_viewport().get_texture().get_image()
+	var probe_points=[Vector2i(background.get_width()/5,background.get_height()*35/48),Vector2i(background.get_width()*9/10,background.get_height()/50)]
+	var background_rgba=qa_turn_probe_colors(background,probe_points)
 	var manifest = {"fixture": "Synthetic authored aircraft/tank poses along a vertical-to-diagonal corner; native projection and rotation/alpha math have separate isolated ARM checks.", "captures": [], "failures": []}
+	manifest.scene_readiness={"warmup_draws":3,"initial_clock":warm_clock,"ready_clock":sim.clock_ms,"probe_points":probe_points.map(func(point):return [point.x,point.y]),"rgba8":background_rgba}
+	if sim.clock_ms!=warm_clock or background_rgba.any(func(color):return int(color[0])+int(color[1])+int(color[2])<32):manifest.failures.append("Terrain/HUD native readiness must be visible without advancing Simulation.")
 	for progress in [0.55, 0.7, 0.8, 0.05, 0.2]:
 		for e in sim.enemies:sim.particle_state.destroy_creep(e)
 		sim.enemies.clear()
@@ -2628,9 +2645,12 @@ func render_turn_gallery() -> void:
 		await get_tree().process_frame
 		RenderingServer.force_draw(true)
 		var filename = "turn-%03d.png" % int(progress*1000)
-		var error = get_viewport().get_texture().get_image().save_png(directory.path_join(filename))
+		var capture_image=get_viewport().get_texture().get_image()
+		var error = capture_image.save_png(directory.path_join(filename))
+		var frame_rgba=qa_turn_probe_colors(capture_image,probe_points)
+		if frame_rgba!=background_rgba:manifest.failures.append("Turn capture lacks the settled terrain/HUD background.")
 		var poses = sim.enemies.map(func(e): return {"type": e.type, "logical": [e.pos.x, e.pos.y], "drawn": [e.visual_pos.x, e.visual_pos.y], "layers": e.visual_layers})
-		manifest.captures.append({"path": filename, "error": error, "progress": progress, "poses": poses})
+		manifest.captures.append({"path": filename, "error": error, "progress": progress, "poses": poses,"scene_probe_rgba8":frame_rgba})
 		if progress in [0.55, 0.05] and sim.enemies.any(func(e): return float(e.visual_layers[1].alpha) <= 0): manifest.failures.append("Expected native blending layers are absent.")
 		if progress in [0.8, 0.05, 0.2] and sim.enemies.any(func(e): return e.visual_pos.is_equal_approx(e.pos)): manifest.failures.append("Expected projected corner position is absent.")
 		var expected = "RunDown" if progress == 0.55 else "RunDownRight" if progress == 0.2 else "TurnDownRight"

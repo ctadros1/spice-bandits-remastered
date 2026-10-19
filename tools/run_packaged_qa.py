@@ -2,10 +2,12 @@
 """Run isolated QA and bind its evidence to the exact packaged resources."""
 import argparse
 import hashlib
+import importlib.util
 import json
 import platform
 import re
 import struct
+import sys
 import subprocess
 import time
 from datetime import datetime, timezone
@@ -61,6 +63,28 @@ def creep_layer_coverage_valid(comparison):
         if len(set(actual)) != len(actual) or set(actual) != eligible or usage.get(path, 0) < len(eligible):
             return False
     return True
+
+
+def turn_scene_readiness_valid(manifest, directory):
+    """Reject the preserved first-pose black scene using independently decoded PNGs."""
+    state = manifest.get('scene_readiness', {})
+    captures = manifest.get('captures', [])
+    points, colors = state.get('probe_points'), state.get('rgba8')
+    if state.get('warmup_draws', 0) < 2 or 'initial_clock' not in state or 'ready_clock' not in state or state['initial_clock'] != state['ready_clock']:
+        return False
+    if not isinstance(points, list) or len(points) != 2 or not isinstance(colors, list) or len(colors) != 2 or len(captures) != 5:
+        return False
+    if any(len(color) != 4 or sum(color[:3]) < 32 for color in colors):
+        return False
+    python = sys.executable if importlib.util.find_spec('PIL') else str(Path.home()/'.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3')
+    result = subprocess.run([python, str(ROOT/'tools/png_probe_verify.py')], input=json.dumps({'paths': [str(directory/row['path']) for row in captures], 'points': points}), capture_output=True, text=True, timeout=30)
+    if result.returncode != 0:
+        return False
+    decoded = json.loads(result.stdout)
+    width, height = decoded[0]['size']
+    if points != [[width//5, height*35//48], [width*9//10, height//50]]:
+        return False
+    return len(decoded) == 5 and all(row['size'] == [width, height] and row['rgba8'] == colors and record.get('scene_probe_rgba8') == colors for row, record in zip(decoded, captures))
 
 
 def main():
@@ -274,6 +298,9 @@ def main():
                     path=directory/comparison[key]
                     fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns
                     if path.exists():comparison[key+'_sha256']=digest(path)
+        if args.turns:
+            record['native_scene_readiness_verified'] = turn_scene_readiness_valid(manifest, directory)
+            fresh = fresh and record['native_scene_readiness_verified']
         if args.menus:
             posed=[c for c in manifest['captures'] if c['name'].startswith('main-menu-')]
             record['main_menu_distinct_pose_images']=len({c['sha256'] for c in posed})

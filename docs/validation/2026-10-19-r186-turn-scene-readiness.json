@@ -1,0 +1,99 @@
+{
+  "revision": "R186",
+  "offline_complete": false,
+  "source_native": {
+    "source_native_passed": true,
+    "captures": 5,
+    "elapsed_seconds": 4.692287209,
+    "native_scene_readiness": {
+      "initial_clock": 0,
+      "probe_points": [
+        [
+          256,
+          700
+        ],
+        [
+          1152,
+          19
+        ]
+      ],
+      "ready_clock": 0,
+      "rgba8": [
+        [
+          239,
+          183,
+          80,
+          255
+        ],
+        [
+          0,
+          176,
+          224,
+          255
+        ]
+      ],
+      "warmup_draws": 3
+    },
+    "independent_actual_PNG_probes_verified": true,
+    "old_R185_black_first_capture_rejected_despite_valid_metadata": true,
+    "additional_corrupt_cases_rejected": [
+      "missing_clock",
+      "clock_advanced",
+      "black_expected",
+      "missing_capture",
+      "wrong_probe_coordinate"
+    ],
+    "only_QA_capture_routines_changed_in_Main": true,
+    "all_four_saves_and_existing_R185_app_unchanged": true,
+    "no_game_processes": true,
+    "packaged_export": false,
+    "scope": "Native pinned source engine actual Main captures. Existing packaged R185 failure remains untouched; new package/performance/full offline acceptance not claimed.",
+    "only_first_actual_PNG_replaced_with_preserved_black_frame_rejected": true,
+    "PNG_hashes": {
+      "turn-550.png": "f2c060be03fd8dc12dd80d8e11c17099699dccde6bec2ffbfbd20ec3a61e1939",
+      "turn-700.png": "800b4c544197ccad95bae62b0f191dd8ff36880828255b54678dd0f9918fe1fa",
+      "turn-800.png": "351e22a058e1970a82b58a8460f327d311b51b6b12811ea56e18749852f8dccd",
+      "turn-050.png": "aa7676654541e3f3822a0c276b702117154f1015deed2ef46b3d14838095835d",
+      "turn-200.png": "d286f1a3759fad0cdeccf4ed8ca771b9321033d05773fe38c41e83ca3194a25b"
+    },
+    "exact_vs_R185": [],
+    "all25_actor_pose_records_exact_R185": true,
+    "reviewed_full_resolution": [
+      "turn-550.png",
+      "turn-700.png",
+      "turn-800.png",
+      "turn-050.png",
+      "turn-200.png"
+    ],
+    "image_size": [
+      1280,
+      960
+    ],
+    "comparison_limit": "QA fresh profile changes XP header from8/55 to0/10; no whole-frame equality. All25actual actor records are exact; 5native captures reviewed with scene probes. Right-side off-map black is intentional synthetic camera framing, not a missing-background regression."
+  },
+  "package_exported": false,
+  "prior_R185_performance_failure_and_app_preserved": true,
+  "private_recovery": "pending",
+  "next": "Verify source script/original guards, normal signing and private source/evidence recovery, then profile bounded nonboundary normal walking CPU fields before next coherent app export. No unchanged performance rerun.",
+  "source_guards": {
+    "checks": [
+      {
+        "check": "originals",
+        "passed": true
+      },
+      {
+        "check": "scripts",
+        "passed": true
+      },
+      {
+        "check": "turns",
+        "passed": true
+      }
+    ],
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true
+  },
+  "original_files_checked": 4035,
+  "runtime_scripts_checked": 82,
+  "turn_pose_checks": 175
+}
