@@ -147,7 +147,7 @@ void SpiceNative::owned_particle_emit(Dictionary system,int64_t count,Callable m
         p[k.rgba]=rgba;particles.push_front(p);system[k.first_release]=false;
     }
 }
-void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Callable make_particle,Callable make_child,double interval_scale,bool prepared) {
+void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Callable make_particle,Callable make_child,double interval_scale,bool prepared,bool copy_active) {
     const auto &k=owned_update_keys();
     const float dt=f32(input_dt);system[k.advance_calls]=int64_t(system.get(k.advance_calls,0))+1;
     const double delay=system[k.delay_seconds];
@@ -174,7 +174,12 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
         return ParticleCoefficients(d);
     }();
     coefficients.wind_enabled=bool(system[k.wind_enabled]);
-    const float life=f32(double(d.get(k.life_cycle,1)));const Array color=d.get(k.color,owned_white_color());Array live,pool=system[k.pool];
+    const float life=f32(double(d.get(k.life_cycle,1)));const Array color=d.get(k.color,owned_white_color());
+    // Keep a fresh active array and the same shared particle dictionaries.
+    // Duplicating once avoids a bindings call for each survivor when no
+    // compaction is needed. Typed input retains the old untyped output path.
+    const bool copied=copy_active&&!particles.is_typed();
+    Array live=copied?particles.duplicate(false):Array(),pool=system[k.pool];int64_t live_count=0;
     const bool limited=system.get(k.motion_limited,false);const double motion=system.get(k.motion_seconds,0);
     // Imported definitions are immutable. Reuse only within this update call.
     const bool real_alpha=d.get(k.real_alpha,false);const float amplitude=f32(double(d.get(k.amplifyX_withSin_by,0)));
@@ -189,10 +194,10 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
         if(real_alpha)for(int j=0;j<3;++j)rgba[j]=double(f32(double(color_values[j])*opacity));
         rgba[3]=double(f32(double(color_values[3])*opacity));
         if(active) {
-            live.append(p);
+            if(copied) {if(live_count!=i)live[live_count]=p;++live_count;}else live.append(p);
             if(p.has(k.child)) {
                 Dictionary child=p[k.child];
-                if(moving&&!child.is_empty()) {child[k.pos]=p[k.pos];owned_particle_advance(child,dt,make_particle,make_child,interval_scale,prepared);}
+                if(moving&&!child.is_empty()) {child[k.pos]=p[k.pos];owned_particle_advance(child,dt,make_particle,make_child,interval_scale,prepared,copy_active);}
             }
         } else pool.push_front(p);
         if(amplitude!=0) {
@@ -200,6 +205,7 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
             Vector2 position=p[k.pos];position.x=f32(double(position.x)+f32(double(f32(std::sin(double(phase))-std::sin(old)))*amplitude));p[k.pos]=position;
         }
     }
+    if(copied&&live_count!=particles.size())live.resize(live_count);
     system[k.particles]=live;
     const float interval=f32(double(f32(double(system.get(k.interval_seconds,d.get(k.release_interval,1)))))*f32(interval_scale));
     if(interval<f32(double(clock)-double(system[k.release_seconds]))&&dt<life)owned_particle_emit(system,int64_t(system[k.rate]),make_particle,make_child);
@@ -238,7 +244,7 @@ void SpiceNative::update_creep_particle_fields(Dictionary actor,Vector2 aim,Vect
         sys[k.emitting]=int64_t(tree[rate_key])!=0;
     }
 }
-bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared,bool defer_child_binding) {
+bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_ms,Callable make_particle,Callable make_child,bool prepared,bool defer_child_binding,bool copy_active) {
     // Only retained creep roots use this bridge. Validate before mutation;
     // other system adapters retain their existing script/lifetime path.
     static const StringName owned_tree("owned_tree"),retained("retain_for_owner"),death_burst("death_burst");
@@ -258,7 +264,7 @@ bool SpiceNative::advance_creep_particles(Array roots,double clock_ms,double dt_
         Callable bound_child;
         if(!defer_child_binding||int64_t(tree["rate"])>0||!Array(tree[k.particles]).is_empty())
             bound_child=make_child.bindv(Array::make(sys[k.texture],sys[k.variation]));
-        owned_particle_advance(tree,double(dt),make_particle,bound_child,1.0,prepared);
+        owned_particle_advance(tree,double(dt),make_particle,bound_child,1.0,prepared,copy_active);
         sys[k.particles]=tree[k.particles];sys[k.phase]=double(tree.get(k.phase,0));
         const double seconds=tree["clock_seconds"];sys[k.view_clock_ms]=seconds*1000.0;
         if(sys.has(k.local_clock_seconds))sys[k.local_clock_seconds]=seconds;

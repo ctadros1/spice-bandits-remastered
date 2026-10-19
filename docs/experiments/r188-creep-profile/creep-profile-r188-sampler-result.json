@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "owned_game_pid": 66649,
+  "output": "Sampling process 66649 for 5 seconds with 1 millisecond of run time between samples\nSampling completed, processing symbols...\nSample analysis of process 66649 written to file /Users/christian/Projects/Spice Bandits - Remastered/builds/creep-profile-r188-native-live-cpu-sample.txt\n"
+}

@@ -138,8 +138,8 @@ void SpiceNative::_bind_methods() {
     ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_batches","systems","premultiplied","clock_ms","origin","zoom","mesh_color_quantization","reference_keys","coalesce_owned"),&SpiceNative::particle_batches,DEFVAL(false),DEFVAL(false),DEFVAL(true));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("particle_spawn_fields","system","index","random"),&SpiceNative::particle_spawn_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_emit","system","count","make_particle","make_child"),&SpiceNative::owned_particle_emit);
-    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_advance","system","dt","make_particle","make_child","interval_scale","prepared"),&SpiceNative::owned_particle_advance,DEFVAL(1.0),DEFVAL(true));
-    ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_particles","roots","clock_ms","dt_ms","make_particle","make_child","prepared","defer_child_binding"),&SpiceNative::advance_creep_particles,DEFVAL(true));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_advance","system","dt","make_particle","make_child","interval_scale","prepared","copy_active"),&SpiceNative::owned_particle_advance,DEFVAL(1.0),DEFVAL(true),DEFVAL(true));
+    ClassDB::bind_static_method("SpiceNative",D_METHOD("advance_creep_particles","roots","clock_ms","dt_ms","make_particle","make_child","prepared","defer_child_binding","copy_active"),&SpiceNative::advance_creep_particles,DEFVAL(true),DEFVAL(true));
     ClassDB::bind_static_method("SpiceNative",D_METHOD("update_creep_particle_fields","actor","aim","direction","heavy"),&SpiceNative::update_creep_particle_fields);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_restart","system"),&SpiceNative::owned_particle_restart);
     ClassDB::bind_static_method("SpiceNative",D_METHOD("owned_particle_destroy","system","deleted"),&SpiceNative::owned_particle_destroy);

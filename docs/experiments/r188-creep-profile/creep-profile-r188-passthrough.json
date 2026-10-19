@@ -1,0 +1,5 @@
+{
+	"checks": 48,
+	"failures": [],
+	"scope": "Diagnostic subclasses call retained super methods only;48advancing states compare full normalized actor/particle/room events,RNG and serials to base Simulation. Resource handles normalize to class/path and callable object identities to method name. Native frame-time is not benchmark acceptance."
+}

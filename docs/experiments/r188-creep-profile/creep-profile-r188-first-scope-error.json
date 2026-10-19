@@ -1,0 +1,6 @@
+{
+  "fixed_state_passthrough_48_checks_valid": true,
+  "first_source_native_probe_excluded_from_live_diagnosis": true,
+  "cause": "Missing --qa-live-runtime and replacement Simulation did not copy live_updates. Main intentionally defaults ordinary QA to fixed30ms steps; first trace speed1/2/4 advanced1890/2670/3810ms over2s observation windows. No numeric performance limit was evaluated.",
+  "correction": "Run with --qa-live-runtime,copy baseline live_updates,assert initial combat digest equality and live mode; record active advancing frames."
+}

@@ -1,0 +1,64 @@
+{
+  "revision": "R188",
+  "offline_complete": false,
+  "product_source_changed": false,
+  "diagnostic_only": true,
+  "numeric_performance_acceptance_rerun": false,
+  "base_source_commit": "46c223e54cc9c792f97e5e8b1637534fc1b22390",
+  "passthrough_full_state_checks": 48,
+  "live_probe_guards": {
+    "exit_code": 0,
+    "seconds": 11.075386667,
+    "clean_log": true,
+    "all_four_saves_exact": true,
+    "no_game_processes": true
+  },
+  "stages": [
+    {
+      "speed": 1,
+      "observed_frames": 52,
+      "advancing_observations": 52,
+      "stalled_observations": 0,
+      "simulation_ms_advanced": 1979,
+      "creep_ms_per_frame": 12.954115384615385,
+      "particle_advance_ms_per_frame": 5.7996923076923075,
+      "particle_factories_nested_ms_per_frame": 0.9462692307692309
+    },
+    {
+      "speed": 2,
+      "observed_frames": 46,
+      "advancing_observations": 46,
+      "stalled_observations": 0,
+      "simulation_ms_advanced": 4040,
+      "creep_ms_per_frame": 15.453456521739131,
+      "particle_advance_ms_per_frame": 7.380739130434783,
+      "particle_factories_nested_ms_per_frame": 1.8404782608695653
+    },
+    {
+      "speed": 4,
+      "observed_frames": 43,
+      "advancing_observations": 43,
+      "stalled_observations": 0,
+      "simulation_ms_advanced": 8042,
+      "creep_ms_per_frame": 11.365465116279069,
+      "particle_advance_ms_per_frame": 5.854813953488372,
+      "particle_factories_nested_ms_per_frame": 1.5671860465116279
+    }
+  ],
+  "sample": {
+    "report": "builds/creep-profile-r188-native-live-cpu-sample.txt",
+    "sha256": "1badaae0a85fcb2b82d43a80eb161feebec8762f6ac29b8fc6b64483e46a2652",
+    "seconds": 5,
+    "interval_ms": 1,
+    "useful_native_function_symbols": false,
+    "does_not_establish_deeper_native_cost_attribution": true
+  },
+  "limitations": [
+    "Source-native timed subclasses add overhead; this is not packaged frame-time acceptance.",
+    "Real-time sample trajectories and host activity vary; no isolated interbuild speedup.",
+    "Nested factory and animation measurements overlap their parent phases.",
+    "First timing attempt used ordinary fixed-step QA and is excluded from live diagnosis.",
+    "First attempted live launcher omitted flag, rejected startup assertion and timed out; owned process terminated/reaped. Logs retained."
+  ],
+  "next": "Controlled same-code particle-array allocation experiment, retaining original scalar math and callback order; reject if state or alias differs or gain is insignificant."
+}

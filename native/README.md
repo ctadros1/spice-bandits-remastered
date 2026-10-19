@@ -1,6 +1,6 @@
 # Measured hot paths
 
-The original creep float32 top/key helper is supported by3,880 original/source checks. Current r100 reuses prepared script rendering data and passes all ten native suites, including the unchanged33.34ms live median gate. Earlier performance values below retain their historical workloads and scope; [validation](../docs/VALIDATION.md) binds the latest package.
+Current source candidate R189 changes active particle array allocation with a retained comparison path and 315,806 exact preservation checks. It is unexported. Current packaged R187 passes presentation and eight functional suites but fails the unchanged 33.34 ms performance gate; full original fidelity remains incomplete. See [R189 scope](../docs/experiments/R189_PARTICLE_ACTIVE_ARRAY.md) and [current handoff](../HANDOFF.md). Performance results below describe historical bounded workloads and do not establish current acceptance.
 
 The game remains a Godot project. This small GDExtension accelerates the original elliptical range test, ordered single/area target filtering, segment movement, and particle integration/emitter updates. Tower state machines, damage/rewards, navigation, progression and UI remain in GDScript. It contains manually reconstructed routines, not original source or a linked copy of the preserved executable.
 

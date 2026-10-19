@@ -1,0 +1,4 @@
+{
+  "diagnostic_valid": false,
+  "reason": "Launcher lacked --qa-live-runtime; live-mode startup assertion rejected it. Bounded wrapper timed out after 90 seconds and terminated/reaped its owned test. Current process preflight is empty. No numeric acceptance was run."
+}

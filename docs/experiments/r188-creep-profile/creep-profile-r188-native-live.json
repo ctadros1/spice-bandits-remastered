@@ -1,0 +1,247 @@
+{
+	"diagnostic_only": true,
+	"performance_limit_evaluated": false,
+	"scope": "Separate advancing live-frame source-native battle with R187 dense geometry/actor fixture inputs with muted audio; diagnostic subclasses time super methods. Timers/virtual wrappers add overhead and alter real-time trajectories. Nested animation/factory measurements overlap parent sections. These are phase observations, not another numeric performance acceptance or isolated interbuild comparison.",
+	"stages": [
+		{
+			"Main_timings": {},
+			"actor_states": {
+				"0": 199,
+				"5": 1
+			},
+			"advancing_observations": 52,
+			"final_sim_ms": 2952,
+			"initial_sim_ms": 973,
+			"live_updates": true,
+			"observed_frames": 52,
+			"observed_median_ms": 38.43,
+			"particle_detail": {
+				"factory_particle_nested": {
+					"calls": 10366,
+					"us": 49206
+				},
+				"particle_advance": {
+					"calls": 10400,
+					"us": 301584
+				},
+				"particle_fields": {
+					"calls": 10400,
+					"us": 34915
+				},
+				"refresh": {
+					"calls": 10400,
+					"us": 52632
+				}
+			},
+			"simulation_detail": {
+				"animation_selector": {
+					"calls": 10400,
+					"us": 19576
+				},
+				"hover": {
+					"calls": 10400,
+					"us": 25634
+				},
+				"living": {
+					"calls": 10400,
+					"us": 130604
+				}
+			},
+			"simulation_sections": {
+				"cleanup": {
+					"calls": 52,
+					"total_usec": 605
+				},
+				"creep_movement": {
+					"calls": 52,
+					"total_usec": 673614
+				},
+				"decals": {
+					"calls": 52,
+					"total_usec": 111
+				},
+				"projectiles_clouds": {
+					"calls": 52,
+					"total_usec": 33292
+				},
+				"spawn_paths": {
+					"calls": 52,
+					"total_usec": 1724
+				},
+				"towers": {
+					"calls": 52,
+					"total_usec": 259841
+				}
+			},
+			"speed": 1,
+			"stalled_observations": 0
+		},
+		{
+			"Main_timings": {},
+			"actor_states": {
+				"0": 124,
+				"3": 9,
+				"4": 25,
+				"5": 4
+			},
+			"advancing_observations": 46,
+			"final_sim_ms": 9032,
+			"initial_sim_ms": 4992,
+			"live_updates": true,
+			"observed_frames": 46,
+			"observed_median_ms": 42.184,
+			"particle_detail": {
+				"death_stop_smoke": {
+					"calls": 770,
+					"us": 3110
+				},
+				"factory_child_nested": {
+					"calls": 310,
+					"us": 1349
+				},
+				"factory_particle_nested": {
+					"calls": 17445,
+					"us": 84662
+				},
+				"particle_advance": {
+					"calls": 8258,
+					"us": 339514
+				},
+				"particle_fields": {
+					"calls": 8258,
+					"us": 29369
+				},
+				"refresh": {
+					"calls": 7466,
+					"us": 37749
+				}
+			},
+			"simulation_detail": {
+				"animation_selector": {
+					"calls": 7056,
+					"us": 13865
+				},
+				"hover": {
+					"calls": 7466,
+					"us": 17737
+				},
+				"living": {
+					"calls": 7488,
+					"us": 170705
+				}
+			},
+			"simulation_sections": {
+				"cleanup": {
+					"calls": 46,
+					"total_usec": 14270
+				},
+				"creep_movement": {
+					"calls": 46,
+					"total_usec": 710859
+				},
+				"decals": {
+					"calls": 46,
+					"total_usec": 375
+				},
+				"projectiles_clouds": {
+					"calls": 46,
+					"total_usec": 35702
+				},
+				"spawn_paths": {
+					"calls": 46,
+					"total_usec": 1618
+				},
+				"towers": {
+					"calls": 46,
+					"total_usec": 185881
+				}
+			},
+			"speed": 2,
+			"stalled_observations": 0
+		},
+		{
+			"Main_timings": {},
+			"actor_states": {
+				"0": 84,
+				"2": 1,
+				"3": 11,
+				"4": 46,
+				"5": 6
+			},
+			"advancing_observations": 43,
+			"final_sim_ms": 21060,
+			"initial_sim_ms": 13018,
+			"live_updates": true,
+			"observed_frames": 43,
+			"observed_median_ms": 46.645,
+			"particle_detail": {
+				"death_stop_smoke": {
+					"calls": 121,
+					"us": 563
+				},
+				"factory_child_nested": {
+					"calls": 212,
+					"us": 1009
+				},
+				"factory_particle_nested": {
+					"calls": 13179,
+					"us": 67389
+				},
+				"particle_advance": {
+					"calls": 6455,
+					"us": 251757
+				},
+				"particle_fields": {
+					"calls": 6455,
+					"us": 23373
+				},
+				"refresh": {
+					"calls": 6323,
+					"us": 32726
+				}
+			},
+			"simulation_detail": {
+				"animation_selector": {
+					"calls": 4870,
+					"us": 9971
+				},
+				"hover": {
+					"calls": 6323,
+					"us": 15207
+				},
+				"living": {
+					"calls": 6334,
+					"us": 88598
+				}
+			},
+			"simulation_sections": {
+				"cleanup": {
+					"calls": 43,
+					"total_usec": 11242
+				},
+				"creep_movement": {
+					"calls": 43,
+					"total_usec": 488715
+				},
+				"decals": {
+					"calls": 43,
+					"total_usec": 207
+				},
+				"projectiles_clouds": {
+					"calls": 43,
+					"total_usec": 38745
+				},
+				"spawn_paths": {
+					"calls": 43,
+					"total_usec": 1511
+				},
+				"towers": {
+					"calls": 43,
+					"total_usec": 175737
+				}
+			},
+			"speed": 4,
+			"stalled_observations": 0
+		}
+	]
+}

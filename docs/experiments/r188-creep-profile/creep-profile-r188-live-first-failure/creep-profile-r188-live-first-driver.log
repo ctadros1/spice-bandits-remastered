@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/christian/Projects/Spice Bandits - Remastered/builds/run_creep_profile_r188_live.py", line 17, in <module>
+    run('creep_profile_native_r188_live.gd','creep-profile-r188-native-live-first',False)
+  File "/Users/christian/Projects/Spice Bandits - Remastered/builds/run_creep_profile_r188_live.py", line 13, in run
+    try:code=p.wait(timeout=90)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1189, in wait
+    return self._wait(timeout=timeout)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 1909, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/christian/Projects/Spice Bandits - Remastered/work/toolchain/Godot.app/Contents/MacOS/Godot', '--path', 'game', '--script', '/Users/christian/Projects/Spice Bandits - Remastered/builds/creep_profile_native_r188_live.gd', '--', '--qa']' timed out after 90 seconds

@@ -1,0 +1,10 @@
+[
+  "/Users/christian/Projects/Spice Bandits - Remastered/work/toolchain/Godot.app/Contents/MacOS/Godot",
+  "--path",
+  "game",
+  "--script",
+  "/Users/christian/Projects/Spice Bandits - Remastered/builds/creep_profile_native_r188_live.gd",
+  "--",
+  "--qa",
+  "--qa-live-runtime"
+]
