@@ -44,7 +44,42 @@
   },
   "original_gates_full_build_native_suites": "Full source/original and presentation/eight functional suites pass; unchanged33.34ms performance fails. No isolated interbuild whole-app speedup attribution.",
   "package_exported": true,
-  "private_recovery": "pending",
+  "private_recovery": {
+    "receipt": "docs/backups/2026-10-19-r187-native-normal-candidate.json",
+    "draft_release_id": 417810550,
+    "actual_downloaded_assets": 15,
+    "asset_bytes": 1101957607,
+    "archive": {
+      "name": "r187-native-normal-candidate.tar.gz",
+      "bytes": 1098561604,
+      "sha256": "c9c5e18f10cb9c7cd2ff1cf014cc70bd47b85423ea04914c38d9af6c63659eb8",
+      "streamed_without_local_joined_archive": true
+    },
+    "actual_remote_full_restore": {
+      "members": 1607,
+      "bytes": 1098561604,
+      "sha256": "c9c5e18f10cb9c7cd2ff1cf014cc70bd47b85423ea04914c38d9af6c63659eb8",
+      "sources": [
+        {
+          "source": "normal-r187-candidate",
+          "files": 738,
+          "signed_base": "e6bd56e9fbbccae5bd8e8e0416701878b62e7d09",
+          "all_bytes_modes_pinned_signature_exact": true
+        },
+        {
+          "source": "current-source",
+          "files": 738,
+          "signed_base": "17e9dd131455f6d16e8b383d2d6bfafe9e58d7ef",
+          "all_bytes_modes_pinned_signature_exact": true
+        }
+      ],
+      "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+      "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+    },
+    "signed_pushed_source": "17e9dd131455f6d16e8b383d2d6bfafe9e58d7ef",
+    "actual_GitHub_source_clone_verified": true,
+    "later_publication_outside_frozen_source": true
+  },
   "unchanged_performance_limit_ms": 33.34,
   "full_source_build": {
     "exit_code": 0,

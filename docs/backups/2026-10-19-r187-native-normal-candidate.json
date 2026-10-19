@@ -1,0 +1,206 @@
+{
+  "signed_base_commit": "17e9dd131455f6d16e8b383d2d6bfafe9e58d7ef",
+  "source_signed_and_pushed": true,
+  "actual_GitHub_source_clone_verified": true,
+  "source_signing_pending": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "presentation_checks": 764,
+  "presentation_captures": 235,
+  "functional_suites_passed": 8,
+  "functional_suites_failed": [],
+  "independent_turn_first_capture_readiness_passed": true,
+  "performance_gate_failed": true,
+  "median_ms": [
+    35.532,
+    35.998,
+    36.78
+  ],
+  "p95_ms": [
+    38.615,
+    40.72,
+    46.118
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_restore": {
+    "members": 1607,
+    "bytes": 1098561604,
+    "sha256": "c9c5e18f10cb9c7cd2ff1cf014cc70bd47b85423ea04914c38d9af6c63659eb8",
+    "sources": [
+      {
+        "source": "normal-r187-candidate",
+        "files": 738,
+        "signed_base": "e6bd56e9fbbccae5bd8e8e0416701878b62e7d09",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 738,
+        "signed_base": "17e9dd131455f6d16e8b383d2d6bfafe9e58d7ef",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "verified_at": "2026-10-19T22:20:17.765822+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 417810550,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-fd4d8087246ff1facfbb",
+  "assets": [
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part001",
+      "bytes": 134217728,
+      "sha256": "efc73bbfbd055be8f9d8e8542755bb1da962146419b45ac70e3aa22a322279c2"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part002",
+      "bytes": 134217728,
+      "sha256": "9d5e13f94edcfd4d0eef17f5aa9e15b0350062adb6f00915ed7f7948f14a1a06"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part003",
+      "bytes": 134217728,
+      "sha256": "274dc4b2cf968c98ea7c29cbae73060d4830dfe0bdcdbca69a3836815d0ad516"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part004",
+      "bytes": 134217728,
+      "sha256": "0ed9181c95e7385fe79e358ff536b329e8fed6a365bf4395450379bdb43e6de3"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part005",
+      "bytes": 134217728,
+      "sha256": "1b58fe2a387eb23207276242a140009a0f075eb6dca89d5a6973c7ac6d667678"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part006",
+      "bytes": 134217728,
+      "sha256": "e29cf0013bbc8036ce4b7d15a2d9e356f45118cd35fa2e2b9f984dede97a128c"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part007",
+      "bytes": 134217728,
+      "sha256": "6aedf4f37ac1d46d7f22684106cd730cd0385b160f2214f285ad9281da383122"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part008",
+      "bytes": 134217728,
+      "sha256": "71a58ef602dfe9becfc37c99551698feda0f403691de87ad7db303ab1d31c524"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part009",
+      "bytes": 24819780,
+      "sha256": "f0f7d892ef74dee2390a5daa050eb19540a309882229e66b59d9b2696ed9c925"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 204,
+      "sha256": "a587897b10358e12e1cf2ddb9d7b2201ee408e8696d2692713bc57467f7ae955"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 344828,
+      "sha256": "6fb72fb00b6900cfea3b3f9eb62aa0164c10bd810baae8097311fc6ec273b78e"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1423,
+      "sha256": "1d0a6453679e910592d5eaf8169cb803db1ae4cd129408fac1803ff7d23354cd"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 853,
+      "sha256": "7bb4dc369ebf9d08613469d189b7f0c88ed1fa5967e691352d9ba715d08e4a46"
+    },
+    {
+      "name": "PARTS.json",
+      "bytes": 1993,
+      "sha256": "9af71db199d6fcb56813333fd32622cbfd3b22e11490c05b38598a042ebbb603"
+    },
+    {
+      "name": "r187-restore-proof.zip",
+      "bytes": 3046702,
+      "sha256": "e24e9a9d5245b8950bbd5023aa78b069f9f88cf2c65df13606fe74a494b27abd"
+    }
+  ],
+  "archive": {
+    "name": "r187-native-normal-candidate.tar.gz",
+    "bytes": 1098561604,
+    "sha256": "c9c5e18f10cb9c7cd2ff1cf014cc70bd47b85423ea04914c38d9af6c63659eb8",
+    "streamed_without_local_joined_archive": true
+  },
+  "ordered_parts": [
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part001",
+      "bytes": 134217728,
+      "sha256": "efc73bbfbd055be8f9d8e8542755bb1da962146419b45ac70e3aa22a322279c2"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part002",
+      "bytes": 134217728,
+      "sha256": "9d5e13f94edcfd4d0eef17f5aa9e15b0350062adb6f00915ed7f7948f14a1a06"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part003",
+      "bytes": 134217728,
+      "sha256": "274dc4b2cf968c98ea7c29cbae73060d4830dfe0bdcdbca69a3836815d0ad516"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part004",
+      "bytes": 134217728,
+      "sha256": "0ed9181c95e7385fe79e358ff536b329e8fed6a365bf4395450379bdb43e6de3"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part005",
+      "bytes": 134217728,
+      "sha256": "1b58fe2a387eb23207276242a140009a0f075eb6dca89d5a6973c7ac6d667678"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part006",
+      "bytes": 134217728,
+      "sha256": "e29cf0013bbc8036ce4b7d15a2d9e356f45118cd35fa2e2b9f984dede97a128c"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part007",
+      "bytes": 134217728,
+      "sha256": "6aedf4f37ac1d46d7f22684106cd730cd0385b160f2214f285ad9281da383122"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part008",
+      "bytes": 134217728,
+      "sha256": "71a58ef602dfe9becfc37c99551698feda0f403691de87ad7db303ab1d31c524"
+    },
+    {
+      "name": "r187-native-normal-candidate.tar.gz.part009",
+      "bytes": 24819780,
+      "sha256": "f0f7d892ef74dee2390a5daa050eb19540a309882229e66b59d9b2696ed9c925"
+    }
+  ],
+  "all_remote_assets_actual_hash_size_verified": true,
+  "actual_remote_full_restore": {
+    "members": 1607,
+    "bytes": 1098561604,
+    "sha256": "c9c5e18f10cb9c7cd2ff1cf014cc70bd47b85423ea04914c38d9af6c63659eb8",
+    "sources": [
+      {
+        "source": "normal-r187-candidate",
+        "files": 738,
+        "signed_base": "e6bd56e9fbbccae5bd8e8e0416701878b62e7d09",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 738,
+        "signed_base": "17e9dd131455f6d16e8b383d2d6bfafe9e58d7ef",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "no_remaining_game_processes": true
+}
