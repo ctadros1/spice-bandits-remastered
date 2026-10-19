@@ -1,0 +1,65 @@
+{
+  "revision": "R190",
+  "method": "Two separate Python/Unicorn processes, identical whole report bytes; full selected original bodies checked after every call. Recording damage callback and explicit ldexpf/memmove stubs; no whole cloud/room/resource/GPU execution.",
+  "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+  "fixture": "tests/fixtures/native-creep-poison-callers-reference.json",
+  "bytes": 1666046,
+  "sha256": "315cf5fa2e3b87903ec8247d358b36ea87b9d6e5fa844cf879f1b6822826bae6",
+  "direct_cases": 4608,
+  "sequences": 143,
+  "frames": 334,
+  "bodies": {
+    "0x7bc88": {
+      "bytes": 60,
+      "sha256": "441b4378c0543c16a8540c80d5d25d1db52286cf5e8f6b00fe8e8381bce47cf9"
+    },
+    "0x7bcc4": {
+      "bytes": 32,
+      "sha256": "9bc3603221c0b356daa64811737fd11d2d1bb8ef763b98db15af6e13bd163834"
+    },
+    "0xe17c0": {
+      "bytes": 396,
+      "sha256": "cc9e388861259f24d81dfe13478772d01af76ba0f56c88902c5aa2b66fc3b442"
+    },
+    "0xe16bc": {
+      "bytes": 260,
+      "sha256": "347fc5ba6380787525fd992708e810b1e774db245f1b7776c9d92415d8bed2b1"
+    },
+    "0xe1a8c": {
+      "bytes": 60,
+      "sha256": "6a16f73a9433be0bcb047e9d65e982b3f28288abb7901c7ad7a6c9f7c29c00e3"
+    },
+    "0xe11ac": {
+      "bytes": 48,
+      "sha256": "95a5e90423c700b7fc8b89ff3474f4d37ceebcec1349f0abd15fa7c568e5c5c1"
+    },
+    "0xe1afc": {
+      "bytes": 40,
+      "sha256": "faa1f9c65eecaf98a0e5cb94beb037b2a0db9a03c4f9a1d51b969fd68f2d8d8a"
+    },
+    "0x7a904": {
+      "bytes": 32,
+      "sha256": "eff1d657810d10dca4d2699e0cfc13bca6e2c00843501e05e7a5ebc7d7d6f94b"
+    }
+  },
+  "independent_reproductions_byte_exact": true,
+  "runtime_changed": false,
+  "candidate_exported": false,
+  "all_four_saves_unchanged": true,
+  "current_source_native_gap": {
+    "report": "builds/poison-bridge-r190-diagnostic.json",
+    "chemical_zone_types_7_target_poison_rate": 0,
+    "radiation_zone_types_5_target_radiation_rate": 0,
+    "both_have_positive_damage_exposure": true,
+    "goo_then_chemical_poison_count": 2,
+    "original_selected_callers_expected_poison_count": 1,
+    "expected_difference_assertions": 4
+  },
+  "unresolved": [
+    "Full CPoison constructor/resource normalization and Update expiry/parent/particle-tail timing.",
+    "Real Creep.DoDamage/SetDie/reward/audio effects remain outside recording callback scope.",
+    "Original global actor registry order and resource-kind producer mapping beyond supplied/catalog bridge.",
+    "Whole cloud particles/decals, original RNG, device raster and supplied video identity."
+  ],
+  "next": "Port selected Emit/Stop and ordered cloud apply/counter/list methods, compare all original rows, integrate through actual Simulation. Remove aggregate poison/radiation rate override; keep broader lifetime gaps explicit. Do not weaken old fixtures or performance limit."
+}
