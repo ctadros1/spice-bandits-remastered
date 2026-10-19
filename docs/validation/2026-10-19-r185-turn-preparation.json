@@ -1,0 +1,329 @@
+{
+  "revision": "R185",
+  "offline_complete": false,
+  "optimization": "CreepView.prepare skips pure unused turn geometry below0.5 and when retained semi/corner keys need no new geometry. Original invalidation, path-remaining update and movement-allowed checks retain order; no numeric formula, fixture or tolerance changes.",
+  "full_serialized_comparisons": {
+    "ABBA": [
+      {
+        "actors": 13,
+        "median_us_per_call": 7.72295673076923,
+        "reference": true
+      },
+      {
+        "actors": 13,
+        "median_us_per_call": 2.35637019230769,
+        "reference": false
+      },
+      {
+        "actors": 13,
+        "median_us_per_call": 2.328125,
+        "reference": false
+      },
+      {
+        "actors": 13,
+        "median_us_per_call": 7.68930288461539,
+        "reference": true
+      }
+    ],
+    "checks": 4992,
+    "failures": [],
+    "scope": "Full serialized actor-state comparison against preserved exact R184 prepare function over supplied threshold/retention/normal/special/short-path inputs. Controlled CPU timing only, not native frame-rate or whole original identity."
+  },
+  "synthetic_turns": {
+    "actors": 25,
+    "checks": 175,
+    "failures": [],
+    "scope": "Actual Main synthetic mid-corner input setup and cached/reference actor-ID instrumentation; no GPU draw or original-device equivalence."
+  },
+  "coverage_protocol": {
+    "coherent_living_and_dying_snapshot_accepted": true,
+    "rejected": [
+      "missing_live",
+      "dead_drawn",
+      "unknown_drawn",
+      "duplicate_drawn",
+      "low_count",
+      "missing_snapshot",
+      "duplicate_actor",
+      "missing_path"
+    ],
+    "unchanged_performance_limit_ms": 33.34,
+    "scope": "Protocol unit check only; new native draw coverage remains required."
+  },
+  "source_run_guards": [
+    {
+      "script": "tools/turn_pose_ui_verify.gd",
+      "passed": true,
+      "exit_code": 0,
+      "preflight": [],
+      "no_remaining_game_processes": true,
+      "all_four_saves_exact": true
+    },
+    {
+      "script": "builds/creep_prepare_r185.gd",
+      "passed": true,
+      "exit_code": 0,
+      "preflight": [],
+      "no_remaining_game_processes": true,
+      "all_four_saves_exact": true
+    }
+  ],
+  "diagnostic_before": {
+    "actors": 200,
+    "calls": {
+      "hover": 24000,
+      "living": 24000,
+      "particle_advance": 24000,
+      "particle_fields": 24000,
+      "refresh": 24000,
+      "view": 24000
+    },
+    "final_states": {
+      "0": 200
+    },
+    "frames": 120,
+    "scope": "Headless actual constructed200actor diagnostic; manual existing living/hover/view/owner order. No GPU/frame-rate or isolated native performance claim.",
+    "sections_us": {
+      "hover": 67064,
+      "living": 511625,
+      "particle_advance": 619838,
+      "particle_fields": 113430,
+      "refresh": 160640,
+      "view": 250892
+    }
+  },
+  "diagnostic_after": {
+    "actors": 200,
+    "calls": {
+      "hover": 24000,
+      "living": 24000,
+      "particle_advance": 24000,
+      "particle_fields": 24000,
+      "refresh": 24000,
+      "view": 24000
+    },
+    "final_states": {
+      "0": 200
+    },
+    "frames": 120,
+    "scope": "Headless actual constructed200actor diagnostic; manual existing living/hover/view/owner order. No GPU/frame-rate or isolated native performance claim.",
+    "sections_us": {
+      "hover": 62630,
+      "living": 371060,
+      "particle_advance": 577714,
+      "particle_fields": 100847,
+      "refresh": 150712,
+      "view": 229366
+    }
+  },
+  "preserved_launch_alert": "builds/turn-pose-r185-first-launch-alert.json: first shell did not stop after failed preflight. Final sequential bounded wrapper records empty preflight and all4save guards.",
+  "native_build_and_suites": {
+    "presentation_checks": 764,
+    "presentation_captures": 235,
+    "all_eight_functional_suites_passed": true,
+    "suite_reports": [
+      "builds/normal-r185-native-suites.json",
+      "builds/normal-r185-functional-followup.json"
+    ],
+    "performance_failed": true,
+    "medians_ms": [
+      51.816,
+      55.255,
+      52.257
+    ],
+    "p95_ms": [
+      58.774,
+      106.499,
+      62.967
+    ],
+    "world_ms": [
+      11.084,
+      14.226
+    ],
+    "fresh_complete_capture_set": true,
+    "all_three_actual_actor_ID_sets_exact": true,
+    "actor_totals": [
+      200,
+      153,
+      116
+    ],
+    "actual_drawn_counts": [
+      200,
+      151,
+      74
+    ],
+    "exact_RGBA_pairs": 15,
+    "exact_geometry_comparisons": 12,
+    "errors": [],
+    "all_four_saves_and_package_source_guards": true,
+    "no_game_processes": true,
+    "all_ten_accepted": false
+  },
+  "unchanged_performance_limit_ms": 33.34,
+  "build": {
+    "exit_code": 0,
+    "elapsed_seconds": 147.459327042,
+    "r184_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "bf0fbb7ea4dc4e4f5d8790216d729f9f50ea472eb844236ba969fa5aed2eeec6",
+      "executable_sha256": "40080fa70159eb02f06468e4984d6d7a8adfa914500823bc915e9b7dea4c1f0c",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "0b3489f2f1441055d7c510bbe0d10fea4b1a757d6a1b2e169424691d3fdb9273"
+      }
+    },
+    "candidate_exported": true,
+    "offline_complete": false
+  },
+  "build_scan": {
+    "logs": 96,
+    "bad": {},
+    "unchanged_R184_immutable_fixtures": 140,
+    "preserved_historical_R130_failed_log_excluded_by_current_build_time": true
+  },
+  "full_fresh_build_logs": 100,
+  "visual_review": {
+    "R184_count": 235,
+    "R185_count": 235,
+    "changed": [
+      "hud-money-flash-red.png",
+      "portal-lifecycle-pending.png",
+      "transition-cover-010.png",
+      "transition-cover-025.png",
+      "transition-reveal-010.png",
+      "transition-reveal-035.png"
+    ],
+    "same": 229,
+    "all13normal_poses_exact": true,
+    "changed_pixel_bounds": [
+      {
+        "name": "hud-money-flash-red.png",
+        "bounds": [
+          558,
+          136,
+          1159,
+          750
+        ]
+      },
+      {
+        "name": "portal-lifecycle-pending.png",
+        "bounds": [
+          482,
+          495,
+          483,
+          497
+        ]
+      },
+      {
+        "name": "transition-cover-010.png",
+        "bounds": [
+          0,
+          0,
+          917,
+          818
+        ]
+      },
+      {
+        "name": "transition-cover-025.png",
+        "bounds": [
+          0,
+          0,
+          1280,
+          960
+        ]
+      },
+      {
+        "name": "transition-reveal-010.png",
+        "bounds": [
+          0,
+          0,
+          417,
+          789
+        ]
+      },
+      {
+        "name": "transition-reveal-035.png",
+        "bounds": [
+          0,
+          0,
+          896,
+          960
+        ]
+      }
+    ],
+    "reviewed_changed_full_resolution": [
+      "hud-money-flash-red.png",
+      "portal-lifecycle-pending.png",
+      "transition-cover-010.png",
+      "transition-cover-025.png",
+      "transition-reveal-010.png",
+      "transition-reveal-035.png"
+    ],
+    "reviewed_turns_full_resolution": [
+      "turn-550.png",
+      "turn-700.png",
+      "turn-800.png",
+      "turn-050.png",
+      "turn-200.png"
+    ],
+    "visual_failure": "First synthetic turn550 lacks terrain/HUD despite all pose assertions passing. Remaining4showterrain/HUD, with intended off-map black at right. Must prewarm scene and independently assert background readiness; no full-composition acceptance.",
+    "turn_background_probe": {
+      "turn-550.png": [
+        0,
+        0,
+        0
+      ],
+      "turn-700.png": [
+        239,
+        183,
+        80
+      ],
+      "turn-800.png": [
+        239,
+        183,
+        80
+      ],
+      "turn-050.png": [
+        239,
+        183,
+        80
+      ],
+      "turn-200.png": [
+        239,
+        183,
+        80
+      ]
+    },
+    "prior_R184_turn550_background_probe": [
+      0,
+      0,
+      0
+    ],
+    "scope": "All13normal poses byte exact R184;229/235presentation PNG exact. Six changedPNG and five native turns viewed full1280x960. All8functional assertions pass; performance/first-turn fullscene review fail. No wholeoriginal/GPU identity."
+  },
+  "comparison": {
+    "review_only": true,
+    "pairs": 45,
+    "additional_native_poses": 13,
+    "changed_pairs_vs_R184": [],
+    "byte_identical_sheets_vs_reviewed_R184": [
+      "comparison-01.png",
+      "comparison-02.png",
+      "comparison-03.png",
+      "comparison-04.png",
+      "comparison-05.png",
+      "comparison-06.png",
+      "comparison-07.png",
+      "comparison-08.png",
+      "comparison-09.png",
+      "comparison-10.png",
+      "comparison-11.png",
+      "comparison-12.png"
+    ],
+    "accepted_guide_105_files_unchanged": true,
+    "all_ten_accepted": false
+  },
+  "remaining": "First synthetic turn550 is captured before terrain/HUD are visible; same issue present in R184firstpose. Add explicit first-frame scene readiness and a background pixel assertion. Performance still exceeds33.34ms; helper ABBA gain does not establish native whole-app gain. All8requiredpresentationgroups/fullgameplay/sound/progression/backend identity remain open.",
+  "private_recovery": "pending"
+}

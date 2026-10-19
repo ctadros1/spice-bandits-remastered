@@ -41,6 +41,7 @@ fi
 "$godot_bin" --headless --path game --script "$task_root/tools/bolt_order_ui_verify.gd" -- --qa > builds/bolt-order-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/map_depth_ui_verify.gd" -- --qa > builds/map-depth-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_depth_ui_verify.gd" -- --qa > builds/creep-depth-verification.log 2>&1
+"$godot_bin" --headless --path game --script "$task_root/tools/turn_pose_ui_verify.gd" -- --qa > builds/turn-pose-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/runtime_scripts_ui_verify.gd" -- --qa > builds/runtime-scripts-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/animator_ui_verify.gd" -- --qa > builds/animator-verification.log 2>&1
 "$godot_bin" --headless --path game --script "$task_root/tools/creep_animation_ui_verify.gd" -- --qa > builds/creep-animation-verification.log 2>&1

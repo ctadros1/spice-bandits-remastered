@@ -50,6 +50,7 @@ var creep_depth_cache:Dictionary={}
 var reference_creep_layers=false
 var probe_creep_layers=false
 var creep_layer_usage={"cached":0,"reference":0}
+var creep_layer_actor_ids={"cached":{},"reference":{}}
 var probe_placement_order=false
 var placement_draw_trace:Array=[]
 const TUTORIAL_CELLS = [Vector2i(7, 4), Vector2i(8, 6), Vector2i(6, 7), Vector2i(11, 3)]
@@ -2570,6 +2571,42 @@ func render_projectile_gallery() -> void:
 	file.store_string(JSON.stringify(manifest, "\t")); file.close()
 	get_tree().quit(0 if manifest.failures.is_empty() else 1)
 
+func qa_turn_actor(i:int,progress:float) -> Dictionary:
+	var e = sim.spawn_enemy([2, 3, 4, 5, 6][i], 0, "", 900+i, false)
+	# Supplied mid-walk fixture inputs must replace retained constructor state.
+	e.state=0;e.attacking=false;e.normal_position_written=true;e.normal_boundary=false
+	e.move_carry=0.0
+	for key in ["corner","corner_key","semi","semi_key"]:e.erase(key)
+	var a = Vector2i(8+i*3, 6)
+	var b = a+Vector2i(0, 2)
+	var c = b+Vector2i(1, 1)
+	e.path = [a, b, c, c+Vector2i(1, 1), c+Vector2i(2, 2), c+Vector2i(3, 3)]
+	e.path_at = 1
+	e.cell = a
+	e.next_cell = b
+	e.move_start = sim.center(a.x, a.y)
+	var target = sim.center(b.x, b.y)
+	e.move_target=target;e.move_progress=0.5
+	e.dir = (target-e.move_start).normalized()
+	e.pos = sim.vector_interpolate(e.move_start, target, 0.5)
+	Simulation.CreepView.prepare(sim, e)
+	if progress >= 0.75 or progress < 0.25:
+		e.move_progress=0.75
+		e.pos = sim.vector_interpolate(e.move_start, target, 0.75)
+		Simulation.CreepView.prepare(sim, e)
+	if progress < 0.25:
+		e.path_at = 2
+		e.cell = b
+		e.next_cell = c
+		e.move_start = target
+		target = sim.center(c.x, c.y)
+		e.move_target=target
+		e.dir = (target-e.move_start).normalized()
+	e.move_progress=progress
+	e.pos = sim.vector_interpolate(e.move_start, target, progress)
+	Simulation.CreepView.update(sim, e)
+	return e
+
 func render_turn_gallery() -> void:
 	start_mission("8", true, false)
 	Profile.data.settings.music = false
@@ -2583,35 +2620,10 @@ func render_turn_gallery() -> void:
 	camera = sim.center(14, 8)
 	zoom = 1.0
 	var manifest = {"fixture": "Synthetic authored aircraft/tank poses along a vertical-to-diagonal corner; native projection and rotation/alpha math have separate isolated ARM checks.", "captures": [], "failures": []}
-	var view = Simulation.CreepView
 	for progress in [0.55, 0.7, 0.8, 0.05, 0.2]:
+		for e in sim.enemies:sim.particle_state.destroy_creep(e)
 		sim.enemies.clear()
-		for i in range(5):
-			var e = sim.spawn_enemy([2, 3, 4, 5, 6][i], 0, "", 900+i, false)
-			var a = Vector2i(8+i*3, 6)
-			var b = a+Vector2i(0, 2)
-			var c = b+Vector2i(1, 1)
-			e.path = [a, b, c, c+Vector2i(1, 1), c+Vector2i(2, 2), c+Vector2i(3, 3)]
-			e.path_at = 1
-			e.cell = a
-			e.next_cell = b
-			e.move_start = sim.center(a.x, a.y)
-			var target = sim.center(b.x, b.y)
-			e.dir = (target-e.move_start).normalized()
-			e.pos = sim.vector_interpolate(e.move_start, target, 0.5)
-			view.prepare(sim, e)
-			if progress >= 0.75 or progress < 0.25:
-				e.pos = sim.vector_interpolate(e.move_start, target, 0.75)
-				view.prepare(sim, e)
-			if progress < 0.25:
-				e.path_at = 2
-				e.cell = b
-				e.next_cell = c
-				e.move_start = target
-				target = sim.center(c.x, c.y)
-				e.dir = (target-e.move_start).normalized()
-			e.pos = sim.vector_interpolate(e.move_start, target, progress)
-			view.update(sim, e)
+		for i in range(5):qa_turn_actor(i,progress)
 		queue_redraw()
 		await get_tree().process_frame
 		RenderingServer.force_draw(true)
@@ -3333,9 +3345,11 @@ func draw_placement_phase() -> void:
 
 func creep_layers(e:Dictionary,states:Dictionary) -> Array:
 	if not reference_creep_layers and e.has("visual_layers"):
-		if probe_creep_layers:creep_layer_usage.cached+=1
+		if probe_creep_layers:
+			creep_layer_usage.cached+=1;creep_layer_actor_ids.cached[int(e.id)]=true
 		return e.visual_layers
-	if probe_creep_layers:creep_layer_usage.reference+=1
+	if probe_creep_layers:
+		creep_layer_usage.reference+=1;creep_layer_actor_ids.reference[int(e.id)]=true
 	var state=sim.creep_animation(e)
 	if not states.has(state):state="Idle" if states.has("Idle") else str(states.keys()[0])
 	return e.get("visual_layers",[{"state":state,"rotation":0.0,"alpha":1.0,"born":e.born_ms}])

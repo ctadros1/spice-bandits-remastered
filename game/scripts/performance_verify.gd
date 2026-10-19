@@ -195,7 +195,8 @@ func run() -> void:
 		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
 		# Use the same frozen actors to verify that the former eager fallback
 		# and prepared layer path both actually draw and retain exact pixels.
-		app.probe_creep_layers=true;app.creep_layer_usage={"cached":0,"reference":0}
+		app.probe_creep_layers=true;app.creep_layer_usage={"cached":0,"reference":0};app.creep_layer_actor_ids={"cached":{},"reference":{}}
+		var actor_states=app.sim.enemies.map(func(e):return {"id":int(e.id),"state":int(e.get("state",0))})
 		app.reference_creep_layers=true;app.sim.reference_spawn_presentation=true;app.queue_redraw()
 		await get_tree().process_frame;await get_tree().process_frame;RenderingServer.force_draw(true)
 		var legacy_creeps=get_tree().root.get_texture().get_image()
@@ -208,7 +209,7 @@ func run() -> void:
 		var prepared_error=prepared_creeps.save_png(output.path_join(prepared_name))
 		var usage=app.creep_layer_usage.duplicate(true)
 		var exact_creeps=legacy_creeps.get_data()==prepared_creeps.get_data()
-		creep_layer_comparisons.append({"speed":rate,"legacy":legacy_name,"prepared":prepared_name,"legacy_error":legacy_error,"prepared_error":prepared_error,"exact_rgba":exact_creeps,"usage":usage,"enemies":app.sim.enemies.size(),"sim_ms":app.sim.clock_ms})
+		creep_layer_comparisons.append({"speed":rate,"legacy":legacy_name,"prepared":prepared_name,"legacy_error":legacy_error,"prepared_error":prepared_error,"exact_rgba":exact_creeps,"usage":usage,"enemies":app.sim.enemies.size(),"actor_states":actor_states,"drawn_actor_ids":{"cached":app.creep_layer_actor_ids.cached.keys(),"reference":app.creep_layer_actor_ids.reference.keys()},"sim_ms":app.sim.clock_ms})
 		if not exact_creeps or legacy_error!=OK or prepared_error!=OK or int(usage.cached)<1 or int(usage.reference)<1:failures.append("Prepared creep layers did not render both paths with exact frozen RGBA.")
 		app.probe_creep_layers=false
 		Content.probe_frame_lookup=true;Content.frame_lookup_usage={"cached":0,"reference":0}

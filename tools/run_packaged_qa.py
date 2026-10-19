@@ -39,6 +39,30 @@ def app_processes():
     return rows
 
 
+def creep_layer_coverage_valid(comparison):
+    """Bind both drawn paths to independent frozen actor states, excluding death bodies."""
+    actors = comparison.get('actor_states', [])
+    if not actors or len(actors) != comparison.get('enemies'):
+        return False
+    if any(type(row.get('id')) is not int or type(row.get('state')) is not int for row in actors):
+        return False
+    identities = [row['id'] for row in actors]
+    if len(set(identities)) != len(identities):
+        return False
+    eligible = {row['id'] for row in actors if row['state'] not in (2, 3)}
+    if not eligible:
+        return False
+    drawn = comparison.get('drawn_actor_ids', {})
+    usage = comparison.get('usage', {})
+    for path in ('cached', 'reference'):
+        actual = drawn.get(path, [])
+        if any(type(identity) is not int for identity in actual):
+            return False
+        if len(set(actual)) != len(actual) or set(actual) != eligible or usage.get(path, 0) < len(eligible):
+            return False
+    return True
+
+
 def main():
     parser = argparse.ArgumentParser()
     mode = parser.add_mutually_exclusive_group(required=True)
@@ -245,7 +269,7 @@ def main():
             for comparison in comparisons:
                 usage=comparison.get('usage',{})
                 fresh=fresh and comparison.get('exact_rgba',False) and comparison.get('legacy_error')==0 and comparison.get('prepared_error')==0
-                fresh=fresh and min(usage.get('cached',0),usage.get('reference',0))>=max(1,comparison.get('enemies',0))
+                fresh=fresh and creep_layer_coverage_valid(comparison)
                 for key in ['legacy','prepared']:
                     path=directory/comparison[key]
                     fresh=fresh and path.exists() and path.stat().st_mtime_ns>=started_ns

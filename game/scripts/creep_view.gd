@@ -117,8 +117,11 @@ static func prepare(sim, e: Dictionary) -> void:
 	var p = progress(sim, e)
 	if p > 0.25 and p < 0.75 and e.has("corner"): e.corner.enabled = false
 	if e.attacking: return
+	# Before the half-segment threshold only corner invalidation above writes.
+	if p<0.5:return
+	var normal=sim.normal_creep_movement(e)
 	var future_at=int(e.path_at)+1
-	if p>=0.5 and sim.normal_creep_movement(e):e.path_remaining=maxi(0,e.path.size()-future_at)
+	if normal:e.path_remaining=maxi(0,e.path.size()-future_at)
 	if future_at>=e.path.size():
 		if p>=0.5 and e.has("semi"):e.semi.enabled=false
 		return
@@ -127,15 +130,19 @@ static func prepare(sim, e: Dictionary) -> void:
 		if p >= 0.5 and e.has("semi"): e.semi.enabled = false
 		return
 	var key = int(e.path_at)
+	var needs_semi=not e.has("semi_key") if normal else int(e.get("semi_key",-1))!=key
+	var needs_corner=p>=0.75 and (not e.has("corner_key") if normal else int(e.get("corner_key",-1))!=key)
+	# Retained geometry is immutable until its original flag/key invalidation.
+	if not needs_semi and not needs_corner:return
 	var target = sim.center(e.path[key].x, e.path[key].y)
 	var future = sim.center(e.path[key+1].x, e.path[key+1].y)
 	var incoming = signed(target-e.get("move_start", sim.center(e.cell.x, e.cell.y)))
 	var outgoing = signed(future-target)
 	var enabled = can_round(incoming, outgoing)
-	if p >= 0.5 and (not e.has("semi_key") if sim.normal_creep_movement(e) else int(e.get("semi_key", -1)) != key):
+	if needs_semi:
 		e.semi_key = key
 		e.semi = {"enabled": enabled, "direction": signed(corner_end(target, future, p)-e.pos), "incoming": incoming, "outgoing": outgoing}
-	if p >= 0.75 and (not e.has("corner_key") if sim.normal_creep_movement(e) else int(e.get("corner_key", -1)) != key):
+	if needs_corner:
 		e.corner_key = key
 		e.corner = {"enabled": enabled, "start": e.pos, "end": corner_end(target, future, p)}
 
