@@ -1,0 +1,740 @@
+{
+  "scope": "R200 packaged normal bubble candidate; functional/presentation checks pass, visual/performance acceptance FAILS",
+  "package": {
+    "pck_sha256": "3424f7f38bf0ae6e07426e3e0fa78cf0b926ccb2d608e6f11294eaa9c8158009",
+    "executable_sha256": "8d30def47abcce3b50a99bf8d259135fb2417eb74bfb9a6a9319ae46905d93be",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "5fe940c9d0f1b0fd5bcc134a2b8c66a5dda7af9348e790ba91437bf51e547585"
+    }
+  },
+  "frozen_source_base": "44f9887e2a14a52d0eca66f18f62f4741623143a",
+  "frozen_source_files": 832,
+  "suites": [
+    {
+      "suite": "menus",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:55:52.295668+00:00",
+      "checks": 184,
+      "captures": 55,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/menus-package-audit.json",
+      "seconds": 25.859006708
+    },
+    {
+      "suite": "presentation",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:56:19.127168+00:00",
+      "checks": 764,
+      "captures": 235,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/presentation-package-audit.json",
+      "seconds": 95.084722833
+    },
+    {
+      "suite": "performance",
+      "passed": false,
+      "exit_code": 1,
+      "started_utc": "2026-10-20T01:57:55.062413+00:00",
+      "checks": null,
+      "captures": 4,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/performance-package-audit.json",
+      "seconds": 35.97451874999999
+    },
+    {
+      "suite": "tutorial",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:58:31.873045+00:00",
+      "checks": 88,
+      "captures": 20,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/tutorial-package-audit.json",
+      "seconds": 9.194021541000012
+    },
+    {
+      "suite": "audio",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:58:41.748576+00:00",
+      "checks": 73,
+      "captures": 23,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/audio-package-audit.json",
+      "seconds": 15.681459958000005
+    },
+    {
+      "suite": "projectiles",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:58:58.459797+00:00",
+      "checks": null,
+      "captures": 4,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/projectiles-package-audit.json",
+      "seconds": 3.9893055830000037
+    },
+    {
+      "suite": "turns",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:59:03.210333+00:00",
+      "checks": null,
+      "captures": 5,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/turns-package-audit.json",
+      "seconds": 4.108253542
+    },
+    {
+      "suite": "towers",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:59:08.121684+00:00",
+      "checks": null,
+      "captures": 1,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/towers-package-audit.json",
+      "seconds": 5.009181459000018
+    },
+    {
+      "suite": "desert",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:59:13.915417+00:00",
+      "checks": null,
+      "captures": 1,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/desert-package-audit.json",
+      "seconds": 6.107256542000016
+    },
+    {
+      "suite": "campaign",
+      "passed": true,
+      "exit_code": 0,
+      "started_utc": "2026-10-20T01:59:20.802876+00:00",
+      "checks": null,
+      "captures": 148,
+      "preverified_same_identity_before_batch": false,
+      "audit": "/Users/christian/Projects/Spice Bandits - Remastered/builds/bubble-runtime-r200-candidate/campaign-package-audit.json",
+      "seconds": 54.06901349999998
+    }
+  ],
+  "functional_suites_passed": 8,
+  "all_ten_accepted": false,
+  "offline_complete": false,
+  "performance": {
+    "median_ms": [
+      41.381,
+      42.848,
+      41.979
+    ],
+    "p95_ms": [
+      54.427,
+      48.698,
+      49.978
+    ],
+    "unchanged_median_limit_ms": 33.34,
+    "world_median_ms": 5.469,
+    "world_p95_ms": 14.741,
+    "advancing_frames": [
+      70,
+      68,
+      72
+    ],
+    "zero_stalls_errors": true,
+    "isolated_speedup_claim": false
+  },
+  "visual_review": {
+    "PCK": "3424f7f38bf0ae6e07426e3e0fa78cf0b926ccb2d608e6f11294eaa9c8158009",
+    "presentation_captures": 235,
+    "byte_exact_R196": 231,
+    "same": [
+      "water-training-000.png",
+      "water-training-200.png",
+      "water-814-000.png",
+      "water-814-200.png",
+      "tutorial-tray.png",
+      "hud-wide-wallet.png",
+      "hud-money-flash-red.png",
+      "hud-money-flash-expired.png",
+      "tutorial-fade-020.png",
+      "portrait-opening-025.png",
+      "portrait-closing-025.png",
+      "drag-preview.png",
+      "drag-preview-045.png",
+      "drag-placed.png",
+      "mine-preview.png",
+      "mine-arming-000.png",
+      "mine-arming-250.png",
+      "mine-armed.png",
+      "portal-preview-entry.png",
+      "portal-preview-exit.png",
+      "portal-lifecycle-pending.png",
+      "portal-lifecycle-connected-000.png",
+      "portal-lifecycle-open-250.png",
+      "portal-lifecycle-open-500.png",
+      "portal-lifecycle-closing-250.png",
+      "portal-lifecycle-closing-750.png",
+      "portal-lifecycle-hidden-1000.png",
+      "portal-lifecycle-removed.png",
+      "portal-creep-normal.png",
+      "portal-creep-enter-075.png",
+      "portal-creep-enter-150.png",
+      "portal-creep-enter-300.png",
+      "portal-creep-exit-075.png",
+      "portal-creep-exit-150.png",
+      "portal-creep-exit-300.png",
+      "loading-025.png",
+      "loading-100.png",
+      "loading-250.png",
+      "departure-025.png",
+      "departure-100.png",
+      "departure-250.png",
+      "result-050.png",
+      "result-200.png",
+      "result-400.png",
+      "result-spice-entering.png",
+      "result-spice-growing.png",
+      "result-spice-555.png",
+      "result-medal-growing.png",
+      "result-medal-first.png",
+      "result-medals.png",
+      "result-medal-description.png",
+      "result-fractional-xp.png",
+      "result-room-050.png",
+      "result-room-072.png",
+      "result-room-090.png",
+      "result-room-150.png",
+      "result-room-240.png",
+      "result-room-300.png",
+      "result-room-360.png",
+      "result-room-420.png",
+      "result-room-480.png",
+      "result-room-540.png",
+      "result-room-600.png",
+      "world-scenery-000.png",
+      "world-scenery-moving.png",
+      "world-windmills-000.png",
+      "world-windmills-025.png",
+      "world-clouds-000.png",
+      "world-clouds-200.png",
+      "world-clouds-800.png",
+      "world-clouds-wide.png",
+      "world-xp-footer.png",
+      "world-camera-minimum.png",
+      "tutorial-modes.png",
+      "desert-modes.png",
+      "desert-modes-completed.png",
+      "mode-opening-015.png",
+      "mode-text-035.png",
+      "mode-pulse-071.png",
+      "mode-closing-015.png",
+      "desert-story.png",
+      "desert-story-050.png",
+      "desert-story-125.png",
+      "selected-tower.png",
+      "magic-opening-025.png",
+      "magic-inventory.png",
+      "magic-refilled.png",
+      "magic-closing-025.png",
+      "electricity.png",
+      "electricity-fading.png",
+      "electricity-gateway.png",
+      "electricity-gateway-reenter.png",
+      "electricity-tower10_2.png",
+      "electricity-tower10_3.png",
+      "electricity-tower12_2.png",
+      "electricity-tower12_3.png",
+      "active-defense.png",
+      "electricity-drawn-aim.png",
+      "electricity-overlap.png",
+      "electricity-overlap-reversed.png",
+      "electricity-window-wide.png",
+      "electricity-window-tall.png",
+      "electricity-window-restored.png",
+      "tower-depth-overlap.png",
+      "tower-depth-reversed-input.png",
+      "base-depth-overlap.png",
+      "base-depth-reversed-input.png",
+      "base-depth-damaged.png",
+      "air-depth-overlap.png",
+      "air-depth-reversed-input.png",
+      "air-depth-lifted-ground.png",
+      "selection-range-ground.png",
+      "selection-range-fading.png",
+      "creep-depth-overlap.png",
+      "creep-depth-reversed-input.png",
+      "air-missile-background.png",
+      "air-missile-body-only.png",
+      "air-missile-projectiles-only.png",
+      "air-missile-under-body.png",
+      "air-missile-owner-body.png",
+      "air-missile-owner-cleared.png",
+      "placement-phase-background.png",
+      "placement-phase-preview-only.png",
+      "placement-phase-air-only.png",
+      "placement-phase-air-preview.png",
+      "placement-phase-air-preview-grid.png",
+      "magic-depth-background.png",
+      "magic-depth-tower-only.png",
+      "magic-depth-mine-only.png",
+      "magic-depth-mine-front.png",
+      "magic-depth-mine-back.png",
+      "magic-depth-mine-preview.png",
+      "magic-depth-portal-preview.png",
+      "creep-light-ground-030.png",
+      "creep-light-ground-100.png",
+      "creep-status-blend-plate.png",
+      "creep-status-background.png",
+      "creep-status-normal-030.png",
+      "creep-status-freeze-030.png",
+      "creep-status-freeze-100.png",
+      "creep-status-slow-030.png",
+      "creep-status-zero-primary.png",
+      "creep-status-secondary.png",
+      "creep-status-tower-cover.png",
+      "creep-status-tower-only.png",
+      "creep-light-air-030.png",
+      "creep-light-air-100.png",
+      "creep-health-ground-025.png",
+      "creep-health-empty.png",
+      "creep-health-full.png",
+      "creep-health-lifted-025.png",
+      "creep-health-growing-025.png",
+      "creep-health-air-050.png",
+      "animator-mine-000.png",
+      "animator-mine-025.png",
+      "animator-mine-050.png",
+      "animator-mine-075.png",
+      "animator-mine-100.png",
+      "animator-mine-loop.png",
+      "animator-portal-stopped.png",
+      "animator-portal-025.png",
+      "animator-portal-loop.png",
+      "animator-nuke-000.png",
+      "animator-nuke-025.png",
+      "animator-nuke-075.png",
+      "creep-clock-000.png",
+      "creep-clock-walk.png",
+      "creep-clock-turn.png",
+      "creep-clock-slow.png",
+      "creep-clock-paused.png",
+      "creep-clock-frozen.png",
+      "creep-clock-freeze-expiry.png",
+      "creep-clock-resume.png",
+      "creep-clock-attack.png",
+      "creep-clock-attack-resume.png",
+      "creep-clock-loop.png",
+      "creep-clock-secondary.png",
+      "creep-normal-5-walking-open.png",
+      "creep-normal-5-approaching-open.png",
+      "creep-normal-5-aligned-open.png",
+      "creep-normal-5-owned-aligned-open.png",
+      "creep-normal-4-walking-open.png",
+      "creep-normal-4-aligned-open.png",
+      "creep-normal-4-owned-aligned-open.png",
+      "creep-normal-4-owned-aligned-current.png",
+      "creep-normal-4-fresh-wall.png",
+      "creep-normal-4-fresh-kill-all.png",
+      "creep-normal-portal-enter.png",
+      "creep-normal-portal-exit.png",
+      "creep-normal-portal-boundary.png",
+      "creep-hover-000.png",
+      "creep-hover-moving.png",
+      "creep-hover-frozen.png",
+      "creep-hover-paused.png",
+      "creep-hover-expiry.png",
+      "creep-hover-resume.png",
+      "creep-hit-normal.png",
+      "creep-hit-000.png",
+      "creep-hit-060.png",
+      "creep-hit-paused.png",
+      "creep-hit-expired.png",
+      "creep-hit-poison-first.png",
+      "creep-hit-poison-suppressed.png",
+      "creep-hit-secondary.png",
+      "creep-hit-status.png",
+      "creep-hit-tower-cover.png",
+      "creep-hit-air.png",
+      "creep-hit-air-status.png",
+      "decal-background.png",
+      "decal-tower-only.png",
+      "decal-ground-000.png",
+      "decal-ground-tower-cover.png",
+      "decal-ground-large.png",
+      "decal-ground-density.png",
+      "decal-ground-density-next.png",
+      "decal-ground-hold.png",
+      "decal-ground-fade.png",
+      "decal-ground-expired.png",
+      "death-burst-0000.png",
+      "death-burst-0150.png",
+      "death-burst-0300.png",
+      "death-burst-0600.png",
+      "death-burst-paused.png",
+      "death-burst-0930.png",
+      "death-burst-1350.png",
+      "death-burst-1380-removed.png",
+      "wave-scroll-050.png",
+      "wave-launch-000.png",
+      "wave-launch-050.png",
+      "wave-early-015.png",
+      "wave-early-045.png"
+    ],
+    "changed": [
+      {
+        "name": "transition-cover-010",
+        "path": "transition-cover-010.png",
+        "old_sha256": "eee7c170b5e3e8fd6311e6f5aeb2727c9d53914c73e7c7b851f5417de41473c9",
+        "new_sha256": "c84161befddd459b24378c26b6995c59b91159a4ce23403f6c9db8d6fee3fb75",
+        "RGBA_exact": false,
+        "RGB_bounds": [
+          0,
+          0,
+          715,
+          931
+        ]
+      },
+      {
+        "name": "transition-cover-025",
+        "path": "transition-cover-025.png",
+        "old_sha256": "6b63e64e05dc17c6073f371a620c4665f4b78a05d8fa45f6b88d7c86bdbad0a9",
+        "new_sha256": "7f3c0dba9d28757e908bf46da66deabaec27424e60ed9dd5d0157ce453dc3672",
+        "RGBA_exact": false,
+        "RGB_bounds": [
+          0,
+          0,
+          1280,
+          960
+        ]
+      },
+      {
+        "name": "transition-reveal-010",
+        "path": "transition-reveal-010.png",
+        "old_sha256": "ff3d46456eb25b51f7f0018596da0d761e98ea1bbe371be42a5bf214d37284ef",
+        "new_sha256": "7654abc2d215013b0565d3d6f7b336e48532900be40a137eab1982538547538f",
+        "RGBA_exact": false,
+        "RGB_bounds": [
+          0,
+          0,
+          121,
+          46
+        ]
+      },
+      {
+        "name": "transition-reveal-035",
+        "path": "transition-reveal-035.png",
+        "old_sha256": "6c1b7dca385766c64abfac4eb7f6666cc8fb548059217d02d19edca1b11e3a1d",
+        "new_sha256": "7865b5b12082fdde3ade2f4cf2ac09e7efcc27138bfd4714a500160889c52de4",
+        "RGBA_exact": false,
+        "RGB_bounds": [
+          0,
+          0,
+          1280,
+          960
+        ]
+      }
+    ],
+    "normal_13_byte_exact_R196": true,
+    "independent_actual_RGBA_pairs": [
+      {
+        "kind": "rendering_comparisons",
+        "speed": 1,
+        "left": "batch-1x.png",
+        "right": "mesh-reference-1x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "rendering_comparisons",
+        "speed": 2,
+        "left": "batch-2x.png",
+        "right": "mesh-reference-2x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "rendering_comparisons",
+        "speed": 4,
+        "left": "batch-4x.png",
+        "right": "mesh-reference-4x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "creep_layer_comparisons",
+        "speed": 1,
+        "left": "legacy-creeps-1x.png",
+        "right": "prepared-creeps-1x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "creep_layer_comparisons",
+        "speed": 2,
+        "left": "legacy-creeps-2x.png",
+        "right": "prepared-creeps-2x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "creep_layer_comparisons",
+        "speed": 4,
+        "left": "legacy-creeps-4x.png",
+        "right": "prepared-creeps-4x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "decal_render_comparisons",
+        "speed": 1,
+        "left": "reference-decals-1x.png",
+        "right": "prepared-decals-1x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "decal_render_comparisons",
+        "speed": 2,
+        "left": "reference-decals-2x.png",
+        "right": "prepared-decals-2x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "decal_render_comparisons",
+        "speed": 4,
+        "left": "reference-decals-4x.png",
+        "right": "prepared-decals-4x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "frame_lookup_comparisons",
+        "speed": 1,
+        "left": "reference-frames-1x.png",
+        "right": "prepared-frames-1x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "frame_lookup_comparisons",
+        "speed": 2,
+        "left": "reference-frames-2x.png",
+        "right": "prepared-frames-2x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "frame_lookup_comparisons",
+        "speed": 4,
+        "left": "reference-frames-4x.png",
+        "right": "prepared-frames-4x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "owned_group_comparisons",
+        "speed": 1,
+        "left": "unmerged-owned-1x.png",
+        "right": "coalesced-owned-1x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "owned_group_comparisons",
+        "speed": 2,
+        "left": "unmerged-owned-2x.png",
+        "right": "coalesced-owned-2x.png",
+        "actual_RGBA_exact": true
+      },
+      {
+        "kind": "owned_group_comparisons",
+        "speed": 4,
+        "left": "unmerged-owned-4x.png",
+        "right": "coalesced-owned-4x.png",
+        "actual_RGBA_exact": true
+      }
+    ],
+    "native_geometry_byte_comparisons": 12,
+    "actual_actor_ID_coverage_passed": true,
+    "turns": [
+      {
+        "path": "turn-550.png",
+        "all_actual_pose_fields_exact_R196": true
+      },
+      {
+        "path": "turn-700.png",
+        "all_actual_pose_fields_exact_R196": true
+      },
+      {
+        "path": "turn-800.png",
+        "all_actual_pose_fields_exact_R196": true
+      },
+      {
+        "path": "turn-050.png",
+        "all_actual_pose_fields_exact_R196": true
+      },
+      {
+        "path": "turn-200.png",
+        "all_actual_pose_fields_exact_R196": true
+      }
+    ],
+    "all25_actual_turn_actor_pose_fields_exact_R196": true,
+    "independent_turn_PNG_scene_readiness_passed": true,
+    "packaged_projectile_review": [
+      {
+        "path": "projectiles-300.png",
+        "old_sha256": "31b992e4b42f5cff69fae0e612a6b09c22c6778f893cae01a342d8229490331c",
+        "new_sha256": "d6c1b809685280c51f77aab1b07cba66d55c89a28d829d258755957d98ad7dc7",
+        "RGBA_exact_R196": false,
+        "RGB_bounds": [
+          482,
+          283,
+          857,
+          626
+        ],
+        "packaged_normal_shot_capture": true
+      },
+      {
+        "path": "projectiles-720.png",
+        "old_sha256": "bfd257238c53c721d4a45f2a9959c5fe3a53957a3ee19ac8d40c231e1eeb805a",
+        "new_sha256": "0e71f08813a0c7beb759e1f3945cfbd2a4acf968fa91bfd3f66a34ace30da95b",
+        "RGBA_exact_R196": false,
+        "RGB_bounds": [
+          476,
+          249,
+          876,
+          655
+        ],
+        "packaged_normal_shot_capture": true
+      },
+      {
+        "path": "projectiles-3000.png",
+        "old_sha256": "46b64d4ff56b774f2aecba3b153748706d2939229f6f557eec3e03aa28edad39",
+        "new_sha256": "622e4ebd09efb4bb5310a09351e35fd46f25f1b0418b452e236a9fd78d343b1d",
+        "RGBA_exact_R196": false,
+        "RGB_bounds": [
+          491,
+          200,
+          889,
+          796
+        ],
+        "packaged_normal_shot_capture": true
+      },
+      {
+        "path": "projectiles-4440.png",
+        "old_sha256": "49d1444b2ab21aa836bb93f01a5d3540b35d1c4e5098f37855fc2689710466e9",
+        "new_sha256": "202ba33b02fdf9328a8e177b3dff63d05b0a986faadab45cd0805424aa45359b",
+        "RGBA_exact_R196": false,
+        "RGB_bounds": [
+          506,
+          186,
+          889,
+          880
+        ],
+        "packaged_normal_shot_capture": true
+      }
+    ],
+    "full_resolution_review_changed": [
+      "transition-cover-010.png",
+      "transition-cover-025.png",
+      "transition-reveal-010.png",
+      "transition-reveal-035.png"
+    ],
+    "all_ten_accepted": false,
+    "offline_complete": false,
+    "scope": "Independent decoded PNG comparison and bounded reconstructed renderer/geometry preservation. Not original GPU/video/equivalent-input/full-game identity.",
+    "full_resolution_packaged_projectiles_reviewed": [
+      "projectiles-300.png",
+      "projectiles-720.png",
+      "projectiles-3000.png",
+      "projectiles-4440.png"
+    ],
+    "packaged_projectile_first_capture_readiness_passed": false,
+    "visual_review_failure": "projectiles-300.png lacks terrain and HUD; same earlier R196 capture also black at independent probes. Later captures have rendered terrain/HUD. Existing functional suite lacks readiness guard. Original runtime cause vs capture harness awaits bounded proof.",
+    "all_five_turn_PNG_byte_exact_R196": true
+  },
+  "projectile_readiness_failure": {
+    "scope": "Independent visual readiness failure; existing functional suite did not check saved terrain/HUD pixels",
+    "current_PCK": "3424f7f38bf0ae6e07426e3e0fa78cf0b926ccb2d608e6f11294eaa9c8158009",
+    "path": "projectiles-300.png",
+    "probe_points": [
+      [
+        400,
+        800
+      ],
+      [
+        1152,
+        19
+      ]
+    ],
+    "current_saved_RGBA": [
+      [
+        0,
+        0,
+        0,
+        255
+      ],
+      [
+        0,
+        0,
+        0,
+        255
+      ]
+    ],
+    "later720_saved_RGBA": [
+      [
+        126,
+        169,
+        135,
+        255
+      ],
+      [
+        0,
+        176,
+        224,
+        255
+      ]
+    ],
+    "same_earlier_R196_first_capture_also_black": true,
+    "new_runtime_regression_established": false,
+    "first_capture_review_accepted": false,
+    "correction_pending": "Bounded projectile capture warmup/readiness plus independent saved-PNG rejection, preserving this exact app/gallery/source."
+  },
+  "comparison_refresh": {
+    "review_only": true,
+    "pairs": 45,
+    "frozen_reference_and_package_frames_hashed": 90,
+    "additional_packaged_normal_poses": 13,
+    "additional_packaged_projectiles": 4,
+    "additional_source_native_bubble_poses": 18,
+    "changed_pairs_vs_R196": [],
+    "byte_identical_sheets_vs_reviewed_R196": [
+      "comparison-01.png",
+      "comparison-02.png",
+      "comparison-03.png",
+      "comparison-04.png",
+      "comparison-05.png",
+      "comparison-06.png",
+      "comparison-07.png",
+      "comparison-08.png",
+      "comparison-09.png",
+      "comparison-10.png",
+      "comparison-11.png",
+      "comparison-12.png"
+    ],
+    "accepted_guide_105_files_unchanged": true,
+    "all_ten_accepted": false,
+    "performance_gate_failed": true,
+    "packaged_projectile_first_capture_readiness_failed": true,
+    "original_GPU_video_or_whole_game_identity": false,
+    "extra_frame_copies_byte_exact_COW": true,
+    "HTTP_200_exact_HTML_verified": true,
+    "local_comparison_url": "http://127.0.0.1:52878/comparison.html"
+  },
+  "guards": {
+    "protected_after": {
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json": "9529b9a6adff84f71fe1ec02a0dc1438fb4c9119408e4ebcbe006fbd5daeb9f3",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/profile.json.bak": "56312e4722ba92d158a2d3e19b23ed8ec122d414ab3778d00385345686bb94fd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json": "c782a6802e2aec82f79edd0b36a4f0bac703038e1aa352e6f599844b480cc4bd",
+      "/Users/christian/Library/Application Support/Godot/app_userdata/Spice Bandits Remastered/verification/fresh-campaign-profile.json.bak": "ec7513e50cae9b6c2d40dd4d6751151b0408a9ecf8082e21c57f455b2392e6bb"
+    },
+    "protected_unchanged": true,
+    "package_unchanged": true,
+    "source_unchanged": true,
+    "no_remaining_game_processes": true
+  },
+  "actual_app_backup": "pending",
+  "source_checkpoint_release_id": 417921367,
+  "next": "Back up exact R200 app/evidence with both failures; R201 bounded projectile capture readiness correction, then coherent corrected packaged review. No unchanged performance repeat just to seek a pass."
+}
