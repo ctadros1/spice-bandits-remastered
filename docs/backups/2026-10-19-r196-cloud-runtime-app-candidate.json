@@ -1,0 +1,206 @@
+{
+  "signed_base_commit": "ae1e9025f210be4edf11c60d03195eb2f7c9aad9",
+  "source_signed_and_pushed": true,
+  "actual_GitHub_source_clone_verified": true,
+  "source_signing_pending": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "presentation_checks": 764,
+  "presentation_captures": 235,
+  "functional_suites_passed": 8,
+  "functional_suites_failed": [],
+  "independent_turn_first_capture_readiness_passed": true,
+  "performance_gate_failed": true,
+  "median_ms": [
+    41.485,
+    41.672,
+    39.136
+  ],
+  "p95_ms": [
+    45.967,
+    46.768,
+    48.459
+  ],
+  "unchanged_median_limit_ms": 33.34,
+  "all_four_saves_unchanged": true,
+  "normal_external_saves_excluded": true,
+  "local_restore": {
+    "members": 1901,
+    "bytes": 1150503858,
+    "sha256": "8bdb79291c51827c4359300b6d1877068c323d74a65dc302b4b97c17f5e05499",
+    "sources": [
+      {
+        "source": "cloud-runtime-r196-candidate",
+        "files": 813,
+        "signed_base": "333d4aa15a06929e01477db7dec2546fd3adcc7f",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 814,
+        "signed_base": "ae1e9025f210be4edf11c60d03195eb2f7c9aad9",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "verified_at": "2026-10-20T01:12:14.618127+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 417901195,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-c7dd45b753cd8b7e3c12",
+  "assets": [
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part001",
+      "bytes": 134217728,
+      "sha256": "1ffb5e75d81e9af226beb352d88c88f1a4e4da8ded532f87afa748c118546fcf"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part002",
+      "bytes": 134217728,
+      "sha256": "125aeac9e5a808e077f15b27697694a20c861199a7899f7989be4ecaa0bdb2fb"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part003",
+      "bytes": 134217728,
+      "sha256": "b772e9bcd96294ba7edf3254752c0f48f5d3e7570cebccdc22d06f279c378c44"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part004",
+      "bytes": 134217728,
+      "sha256": "24b94ac1eb33ed8acd86868f1d2e7620f38d8059f998ec24d19e00a714c993c7"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part005",
+      "bytes": 134217728,
+      "sha256": "77954ecbfca2074b8fddf274561679876f502363b4e11f927998ee378ce254f3"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part006",
+      "bytes": 134217728,
+      "sha256": "3fb853bf912410942ed7690212c5d5377ec61dda31c20b1b66331e9b022c2b0c"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part007",
+      "bytes": 134217728,
+      "sha256": "b3063f021d13ef772927d919a33891789496196f4805ec6f19df1b57d8d64a2a"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part008",
+      "bytes": 134217728,
+      "sha256": "0e5862e2a951a4d4d01dfd6d4b443f5755dc9c7b74adc212f199a757c4a60148"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part009",
+      "bytes": 76762034,
+      "sha256": "a0b8d42c1e2adb3fe6c90abe8eca53982bf39d61c491cc81d82430a9cb6d9d19"
+    },
+    {
+      "name": "EVIDENCE-ARCHIVE.json",
+      "bytes": 204,
+      "sha256": "33902632787751b512d38973c86ced0e364f55ead9d0728559594b0546bef131"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 418137,
+      "sha256": "5796792d86929bec5ad62ff1fbf3c887d56f64b9229c21ba7833245501753cd3"
+    },
+    {
+      "name": "RECOVERY.json",
+      "bytes": 1432,
+      "sha256": "2e95cb288d5dc43383d26e61fe336849afb83275ec666892be0bb5dd716cc5e4"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 855,
+      "sha256": "a85af60693d5b7729d19a1d0d08cd0007983b648cf801daf2e238d79361eba7a"
+    },
+    {
+      "name": "PARTS.json",
+      "bytes": 1993,
+      "sha256": "3241e3d998d8c12f577bb016c3f22074a4605afa5758cab4980f421869df41bf"
+    },
+    {
+      "name": "r196-restore-proof.zip",
+      "bytes": 3059912,
+      "sha256": "1835cbfa9f32c93e3c2b4b6416c185f444e5f261bd8d7d85ca692f439d951438"
+    }
+  ],
+  "archive": {
+    "name": "r196-cloud-runtime-candidate.tar.gz",
+    "bytes": 1150503858,
+    "sha256": "8bdb79291c51827c4359300b6d1877068c323d74a65dc302b4b97c17f5e05499",
+    "streamed_without_local_joined_archive": true
+  },
+  "ordered_parts": [
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part001",
+      "bytes": 134217728,
+      "sha256": "1ffb5e75d81e9af226beb352d88c88f1a4e4da8ded532f87afa748c118546fcf"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part002",
+      "bytes": 134217728,
+      "sha256": "125aeac9e5a808e077f15b27697694a20c861199a7899f7989be4ecaa0bdb2fb"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part003",
+      "bytes": 134217728,
+      "sha256": "b772e9bcd96294ba7edf3254752c0f48f5d3e7570cebccdc22d06f279c378c44"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part004",
+      "bytes": 134217728,
+      "sha256": "24b94ac1eb33ed8acd86868f1d2e7620f38d8059f998ec24d19e00a714c993c7"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part005",
+      "bytes": 134217728,
+      "sha256": "77954ecbfca2074b8fddf274561679876f502363b4e11f927998ee378ce254f3"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part006",
+      "bytes": 134217728,
+      "sha256": "3fb853bf912410942ed7690212c5d5377ec61dda31c20b1b66331e9b022c2b0c"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part007",
+      "bytes": 134217728,
+      "sha256": "b3063f021d13ef772927d919a33891789496196f4805ec6f19df1b57d8d64a2a"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part008",
+      "bytes": 134217728,
+      "sha256": "0e5862e2a951a4d4d01dfd6d4b443f5755dc9c7b74adc212f199a757c4a60148"
+    },
+    {
+      "name": "r196-cloud-runtime-candidate.tar.gz.part009",
+      "bytes": 76762034,
+      "sha256": "a0b8d42c1e2adb3fe6c90abe8eca53982bf39d61c491cc81d82430a9cb6d9d19"
+    }
+  ],
+  "all_remote_assets_actual_hash_size_verified": true,
+  "actual_remote_full_restore": {
+    "members": 1901,
+    "bytes": 1150503858,
+    "sha256": "8bdb79291c51827c4359300b6d1877068c323d74a65dc302b4b97c17f5e05499",
+    "sources": [
+      {
+        "source": "cloud-runtime-r196-candidate",
+        "files": 813,
+        "signed_base": "333d4aa15a06929e01477db7dec2546fd3adcc7f",
+        "all_bytes_modes_pinned_signature_exact": true
+      },
+      {
+        "source": "current-source",
+        "files": 814,
+        "signed_base": "ae1e9025f210be4edf11c60d03195eb2f7c9aad9",
+        "all_bytes_modes_pinned_signature_exact": true
+      }
+    ],
+    "gzip_crc_safe_paths_all_hashes_modes_exact": true,
+    "actual_restored_app_strict_signature_native_empty_cwd_qa_and_all_four_save_guards": true
+  },
+  "no_remaining_game_processes": true
+}
