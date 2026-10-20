@@ -318,6 +318,10 @@ func replace_systems(value:Array[Dictionary]) -> void:
 	# QA held-render restoration replaces full mutable trees. Rebind owners to
 	# those restored dictionaries so the next live step cannot update ghosts.
 	systems=value
+	# Deep held snapshots copy these arrays independently. Restore the renderer
+	# alias immediately, before any subsequent particle update.
+	for sys in systems:
+		if sys.has("owned_tree"):sys.particles=sys.owned_tree.particles
 	var restored_clouds={}
 	for sys in systems:
 		if sys.get("cloud_managed",false):restored_clouds[int(sys.id)]=sys

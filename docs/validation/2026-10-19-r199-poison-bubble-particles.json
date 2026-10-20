@@ -1,0 +1,294 @@
+{
+  "scope": "Pure original bubble controller with actual authored retained particles/native-reference trees; Simulation/Main normal joins not yet connected",
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 167.04417858300002,
+    "r196_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "5f6ec2748b5c31c52ba7dcf204402ef57d46647e6c970e172c7f8471fee9ccdd",
+      "executable_sha256": "4606d8bb1bc64ba03d3729b71864f4aea54ed2199e5d6afded61ab266ec6edc5",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "cb36733b5d9504b767891a2d9635fed65e772c146872994ff51b4042c0859932"
+      }
+    },
+    "candidate_exported": false,
+    "offline_complete": false
+  },
+  "simulation_checks": 41544,
+  "preserved_original_checks": 4035,
+  "game_scripts_parsed": 87,
+  "fresh_clean_build_logs": [
+    "builds/air-pass-verification.log",
+    "builds/animator-verification.log",
+    "builds/bolt-appearance-verification.log",
+    "builds/bolt-clock-verification.log",
+    "builds/bolt-construct-verification.log",
+    "builds/bolt-order-verification.log",
+    "builds/bolt-ribbon-verification.log",
+    "builds/build-hex-verification.log",
+    "builds/cloud-lifecycle-verification.log",
+    "builds/cloud-owner-verification.log",
+    "builds/cloud-particles-verification.log",
+    "builds/cloud-runtime-verification.log",
+    "builds/creep-air-path-verification.log",
+    "builds/creep-animation-verification.log",
+    "builds/creep-approach-verification.log",
+    "builds/creep-death-burst-verification.log",
+    "builds/creep-death-verification.log",
+    "builds/creep-depth-verification.log",
+    "builds/creep-disco-actor-verification.log",
+    "builds/creep-disco-admission-verification.log",
+    "builds/creep-disco-timer-verification.log",
+    "builds/creep-fields-verification.log",
+    "builds/creep-health-offset-verification.log",
+    "builds/creep-health-verification.log",
+    "builds/creep-hit-verification.log",
+    "builds/creep-hover-verification.log",
+    "builds/creep-initial-path-verification.log",
+    "builds/creep-light-verification.log",
+    "builds/creep-missile-verification.log",
+    "builds/creep-owner-verification.log",
+    "builds/creep-particle-birth-verification.log",
+    "builds/creep-particle-migration-verification.log",
+    "builds/creep-poison-verification.log",
+    "builds/creep-portal-verification.log",
+    "builds/creep-replan-verification.log",
+    "builds/creep-retained-verification.log",
+    "builds/creep-reward-verification.log",
+    "builds/creep-shooting-verification.log",
+    "builds/creep-source-replan-verification.log",
+    "builds/creep-spawn-path-verification.log",
+    "builds/creep-state-verification.log",
+    "builds/creep-status-verification.log",
+    "builds/decal-verification.log",
+    "builds/editor-import.log",
+    "builds/frame-lookup-verification.log",
+    "builds/hud-plate-verification.log",
+    "builds/hud-wallet-verification.log",
+    "builds/input-profile-verification.log",
+    "builds/magic-depth-verification.log",
+    "builds/magic-panel-verification.log",
+    "builds/magic-view-verification.log",
+    "builds/main-menu-verification.log",
+    "builds/map-animation-verification.log",
+    "builds/map-depth-verification.log",
+    "builds/menu-bubble-verification.log",
+    "builds/menu-float-verification.log",
+    "builds/menu-motion-verification.log",
+    "builds/menu-navigation-verification.log",
+    "builds/menu-ui-verification.log",
+    "builds/message-verification.log",
+    "builds/mode-effect-verification.log",
+    "builds/mode-item-verification.log",
+    "builds/mode-text-derivation.log",
+    "builds/native-build.log",
+    "builds/normal-walk-verification.log",
+    "builds/particle-active-copy-verification.log",
+    "builds/particle-child-binding-verification.log",
+    "builds/particle-child-verification.log",
+    "builds/particle-defaults-verification.log",
+    "builds/particle-disable-verification.log",
+    "builds/particle-keys-verification.log",
+    "builds/particle-life-verification.log",
+    "builds/particle-local-clock-verification.log",
+    "builds/particle-owned-benchmark.log",
+    "builds/particle-owned-draw-benchmark.log",
+    "builds/particle-owned-keys-verification.log",
+    "builds/particle-owned-live-verification.log",
+    "builds/particle-owned-verification.log",
+    "builds/particle-state-verification.log",
+    "builds/portal-lifecycle-verification.log",
+    "builds/portrait-verification.log",
+    "builds/promotion-verification.log",
+    "builds/result-lifecycle-verification.log",
+    "builds/reward-clock-verification.log",
+    "builds/reward-geometry-verification.log",
+    "builds/reward-spice-verification.log",
+    "builds/runtime-scripts-verification.log",
+    "builds/selection-verification.log",
+    "builds/story-verification.log",
+    "builds/tower-preview-verification.log",
+    "builds/transition-verification.log",
+    "builds/turn-pose-verification.log",
+    "builds/tutorial-arrow-verification.log",
+    "builds/tutorial-fade-verification.log",
+    "builds/tutorial-layout-verification.log",
+    "builds/ui-verification.log",
+    "builds/upgrade-verification.log",
+    "builds/verification.log",
+    "builds/water-verification.log",
+    "builds/wave-collapse-verification.log",
+    "builds/wave-verification.log",
+    "builds/world-blade-verification.log",
+    "builds/world-camera-verification.log",
+    "builds/world-cloud-verification.log",
+    "builds/xp-chronology-verification.log",
+    "builds/xp-verification.log",
+    "builds/poison-bubble-verification.log",
+    "builds/poison-bubble-particles-verification.log"
+  ],
+  "prior_fixture_reference_JSONs_unchanged": 153,
+  "prior_game_scripts_unchanged_except_particle_state_restore": 86,
+  "source_helper_unchanged": true,
+  "real_particle_gate": {
+    "checks": 17993,
+    "contexts": [
+      {
+        "actual_inactive_tail_observed": true,
+        "actual_particles_observed": true,
+        "dormant_disable_zero_roots_retained": true,
+        "follow_target": 0,
+        "frames": 150,
+        "inactive_at_ms": 886.671,
+        "maximum_roots": 4,
+        "remaining": [
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "PoisonBubbleTrail",
+            "rate": 0
+          },
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "PoisonBubbleStars",
+            "rate": 0
+          }
+        ],
+        "slow": false
+      },
+      {
+        "actual_inactive_tail_observed": true,
+        "actual_particles_observed": true,
+        "dormant_disable_zero_roots_retained": true,
+        "follow_target": 1,
+        "frames": 150,
+        "inactive_at_ms": 886.671,
+        "maximum_roots": 4,
+        "remaining": [
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "PoisonBubbleTrail",
+            "rate": 0
+          },
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "PoisonBubbleStars",
+            "rate": 0
+          }
+        ],
+        "slow": false
+      },
+      {
+        "actual_inactive_tail_observed": true,
+        "actual_particles_observed": true,
+        "dormant_disable_zero_roots_retained": true,
+        "follow_target": 0,
+        "frames": 150,
+        "inactive_at_ms": 886.671,
+        "maximum_roots": 4,
+        "remaining": [
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "GooBubbleTrail",
+            "rate": 0
+          },
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "GooBubbleStars",
+            "rate": 0
+          }
+        ],
+        "slow": true
+      },
+      {
+        "actual_inactive_tail_observed": true,
+        "actual_particles_observed": true,
+        "dormant_disable_zero_roots_retained": true,
+        "follow_target": 1,
+        "frames": 150,
+        "inactive_at_ms": 886.671,
+        "maximum_roots": 4,
+        "remaining": [
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "GooBubbleTrail",
+            "rate": 0
+          },
+          {
+            "active_count": 0,
+            "disable_after_seconds": 0.0,
+            "name": "GooBubbleStars",
+            "rate": 0
+          }
+        ],
+        "slow": true
+      }
+    ],
+    "failures": [],
+    "full_state_frame_pairs": 600,
+    "key_representation_checks": 7034656,
+    "passed": true,
+    "scope": "Pure bubble controller using real authored retained particles/native-reference trees/status and isolated RNG; no Simulation/Main or original factory/parser/global RNG/GPU/audio identity claim"
+  },
+  "real_particle_gate_path": "builds/poison-bubble-particles-gate.77YNiJ/verification.json",
+  "original_pure_gate_checks": 720050,
+  "first_failed_held_restore_aliases": 16,
+  "first_failure_snapshot": "builds/poison-bubble-r199-first-held-alias-failure",
+  "fix": "Rebind each restored owned system renderer particles array to its restored owned_tree.particles immediately. No serialized value, physics, header, lifetime or shared definition change.",
+  "additional_held_tests": "Actual mixed owned/creep/disco and legacy flat-array restoration; serialized values unchanged",
+  "original_static_manager_calls": {
+    "original_sha256": "e3d230b954e1fb04e7120a20ed71df2cafaf4cd59cae73d1bf975427de7f6048",
+    "scope": "Static Thumb BL joins; each candidate needs disassembly confirmation, not executed caller chronology",
+    "calls": [
+      {
+        "call": "0xe5490",
+        "target": "0xe6e00",
+        "caller": "__ZN6CTower6UpdateEfb",
+        "function_start": "0xe53b4",
+        "function_size": 6296
+      },
+      {
+        "call": "0xe549e",
+        "target": "0xe75dc",
+        "caller": "__ZN6CTower6UpdateEfb",
+        "function_start": "0xe53b4",
+        "function_size": 6296
+      },
+      {
+        "call": "0xe6a04",
+        "target": "0xe6e00",
+        "caller": "__ZN6CTower6UpdateEfb",
+        "function_start": "0xe53b4",
+        "function_size": 6296
+      },
+      {
+        "call": "0xe6a12",
+        "target": "0xe75dc",
+        "caller": "__ZN6CTower6UpdateEfb",
+        "function_start": "0xe53b4",
+        "function_size": 6296
+      }
+    ]
+  },
+  "new_original_scope": "Static PS constructor/Info/factory/Update disassembly only; complete original factory/parser not executed",
+  "dormant_root_scope": "Imported authored zero-disable trails/stars remain after visible particles exhaust, following selected original bubble status rule. No guessed lifetime/cleanup; original factory/parser full header join remains open.",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "current_app": "Exact R196, verified app recovery417901195 with unchanged performance failure",
+  "remaining": [
+    "Normal Simulation/owner traversal and Main draw integration",
+    "Full per-tower/room chronology and actual original resource/header producer joins",
+    "Original global RNG/factory/parser/particle trajectory/GPU/audio/video identity",
+    "Actual native source image/particle/geometry review after integration",
+    "Coherent export/native suites/unchanged performance/comparison/actual app recovery"
+  ]
+}
