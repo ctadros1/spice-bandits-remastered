@@ -1,0 +1,47 @@
+{
+  "revision": "R196",
+  "export": {
+    "exit_code": 0,
+    "seconds": 12.79624625,
+    "clean_log": true,
+    "strict_deep_signature_passed": true,
+    "signature_output": "",
+    "architectures": "x86_64 arm64",
+    "identity": {
+      "pck_sha256": "5f6ec2748b5c31c52ba7dcf204402ef57d46647e6c970e172c7f8471fee9ccdd",
+      "executable_sha256": "4606d8bb1bc64ba03d3729b71864f4aea54ed2199e5d6afded61ab266ec6edc5",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "cb36733b5d9504b767891a2d9635fed65e772c146872994ff51b4042c0859932"
+      }
+    },
+    "frozen_R187_PCK_unchanged": true,
+    "all_four_saves_unchanged": true,
+    "all_game_export_inputs_unchanged": 3378,
+    "source_head": "ce068d8ec339d5187496818aa6ef2a936afde32d",
+    "full_source_build_checked_before_export": true,
+    "no_remaining_game_processes": true,
+    "candidate_exported": true,
+    "packaged_native_verification": "pending",
+    "all_ten_accepted": false,
+    "offline_complete": false
+  },
+  "packaged_native_verification": "pending",
+  "external_visual_harness_failure": {
+    "attempt": "Actual exported executable from empty external cwd, --script absolute gallery -- --qa",
+    "result": "Owned180secondtimeout, terminated/reaped; no capture directory and empty console output. One-second sample shows an active normal native OpenGL render loop. Root cause of external harness non-execution not established.",
+    "sample": "builds/cloud-runtime-r196-package-launch-sample.txt",
+    "all_four_saves_and_exact_new_package_unchanged": true,
+    "no_remaining_game_processes": true,
+    "next": "Use existing built-in packaged verification entry points; preserve this failed attempt."
+  },
+  "current_app": "R196 exported, not accepted",
+  "R187_frozen_app_preserved": true,
+  "offline_complete": false,
+  "initial_builtin_menu_verification": {
+    "passed": true,
+    "checks": 184,
+    "captures": 55,
+    "identity_bound": true,
+    "proof": "builds/cloud-runtime-r196-preverified-menus.json"
+  }
+}
