@@ -1,0 +1,45 @@
+{
+  "revision": "R195",
+  "Simulation_integration": false,
+  "candidate_exported": false,
+  "original_reference": {
+    "path": "tests/fixtures/native-cloud-owner-reference.json",
+    "sha256": "38ccc53d7ece3dd801acee26841e6f46a85d6cfbe5bf3ff94eb9927d592b3eb4",
+    "bytes": 1082489,
+    "body_bytes": 464,
+    "body_sha256": "21b55e32a1283161cad6580a3ee5d4ab8fe0749747f0a473243c82b83f4dadbb",
+    "sequences": 412,
+    "frames": 828,
+    "independent_pair_exact": true,
+    "full_body_and_original_executable_unchanged": true,
+    "scope": "R195 full original CTower.UpdatePoisons manager traversal on supplied records.\nCloud/bubble Update/D1 are explicit ordered recording/status callbacks, not\nexecuted cloud damage, particle physics, bubble flight or destructors. Supplied\nreserved vectors, parent pointers and status schedules exercise pre-update\nremoval/compaction, cloud-before-bubble order and parent-pointer detach behavior.\nMemmove/delete/exception helpers are host stubs. Original bodies/files unchanged.\n"
+  },
+  "selected_manager_gate": {
+    "checks": 20307,
+    "failures": [],
+    "frames": 828,
+    "scope": "Full selected original CTower.UpdatePoisons464bytes on supplied reserved vectors with explicit recording/status Update/D1/delete/memmove/exception callbacks. Complete before/after state/order/parent detach/raw argument comparisons include empty vectors, bit0 polarity, pre-update deletion/compaction, changed-status next-pass removal and first-non-null detach without pointer identity comparison. No actual cloud/bubble physics/destructor/room scheduling or Simulation integration acceptance.",
+    "sequences": 412
+  },
+  "runtime_script_parse_only": {
+    "checked": 86,
+    "failures": [],
+    "scope": "Parse and instantiate-eligibility check only. No runtime behavior or original-game equivalence."
+  },
+  "all_151_prior_fixture_reference_JSON_and_85_prior_game_scripts_exact": true,
+  "source_helper_unchanged": "8fac02fe27f7fedc7208c55fa2e96eedd3958ca84db6f768dc10a43bd1fb57bb",
+  "full_source_build_after_R195": "Not run; latest full build is R194. New pure manager is unconnected and targeted full-row gate plus all-script parse pass. Complete full build required after actual Simulation integration.",
+  "static_producer_evidence": [
+    "builds/cloud-parent-r195-production-calls.json",
+    "builds/cloud-parent-r195-tower-bubble-join.txt",
+    "builds/cloud-parent-r195-tower-missile-join.txt"
+  ],
+  "observed_edge": "Original manager detaches first non-null remaining cloud parent before deleting an inactive empty bubble; it does not compare the pointer with that bubble. Last supplied case reproduces detaching a different active bubble pointer. No correction or pointer-identity filter added.",
+  "limits": [
+    "Cloud/bubble Update/D1/status are explicit callbacks; only manager464bytebody executes.",
+    "Actual destructors, bubble particle-tail ownership, full tower/room ordering and full original gameplay remain separate.",
+    "Nuke constructor call observed statically; its live creation timing remains to verify.",
+    "No renderer/audio/video/performance/app acceptance; R187 packaged performance failure remains."
+  ],
+  "next": "Connect selected cloud/manager and real retained-particle bridge to Simulation with explicit remaining bubble/room evidence limits, then full source/native/package review."
+}
