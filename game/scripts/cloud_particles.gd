@@ -5,7 +5,10 @@ const Math=preload("res://scripts/particle_math.gd")
 const Owned=preload("res://scripts/particle_owned_view.gd")
 const Reference=preload("res://scripts/particle_child_view.gd")
 var state
-func _init(particle_state) -> void:state=particle_state
+var managed_kind="cloud"
+func _init(particle_state,kind:String="cloud") -> void:
+	assert(kind in ["cloud","bubble"])
+	state=particle_state;managed_kind=kind
 
 func factory(name:String,owner:int=-1) -> Dictionary:
 	var definition:Dictionary=state.content.particles.systems.get(name,{}).duplicate(true)
@@ -14,11 +17,13 @@ func factory(name:String,owner:int=-1) -> Dictionary:
 	assert(texture!=null,"Missing original cloud particle texture: "+name)
 	state.emit_definition(name,definition,texture,Vector2.ZERO,"","",-1,Vector2.ZERO,owner,true,false)
 	var system:Dictionary=state.systems[-1]
-	system.cloud_managed=true
+	if managed_kind=="cloud":system.cloud_managed=true
+	else:system.bubble_managed=true
 	system.view_clock_ms=0.0
 	var tree:Dictionary=system.owned_tree
 	var root={"system":system,"rate":int(tree.rate),"interval":Math.f32(float(definition.release_interval)),"disable_after_seconds":Math.f32(float(definition.get("disable_after",0))/1000.0),"pos":Vector2.ZERO,"alpha":Math.f32(float(definition.color[3])),"active_count":0,"first_release":bool(tree.first_release)}
-	state.cloud_roots[int(system.id)]=root
+	if managed_kind=="cloud":state.cloud_roots[int(system.id)]=root
+	else:state.bubble_roots[int(system.id)]=root
 	return root
 
 func advance(root:Dictionary,seconds:float) -> void:
@@ -41,4 +46,5 @@ func destroy(root:Dictionary) -> void:
 	var system:Dictionary=root.system
 	Owned.destroy(system.owned_tree,[])
 	state.systems.erase(system)
-	state.cloud_roots.erase(int(system.id))
+	if managed_kind=="cloud":state.cloud_roots.erase(int(system.id))
+	else:state.bubble_roots.erase(int(system.id))

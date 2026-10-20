@@ -10,6 +10,7 @@ const CreepDisco=preload("res://scripts/creep_disco_view.gd")
 const CreepPoison=preload("res://scripts/creep_poison.gd")
 const CloudLifecycle=preload("res://scripts/cloud_lifecycle.gd")
 const CloudParticles=preload("res://scripts/cloud_particles.gd")
+const BubbleLifecycle=preload("res://scripts/bubble_lifecycle.gd")
 const CloudOwner=preload("res://scripts/cloud_owner.gd")
 const CreepState=preload("res://scripts/creep_state_view.gd")
 const Death=preload("res://scripts/creep_death_view.gd")
@@ -17,6 +18,7 @@ const ParticleState=preload("res://scripts/particle_state.gd")
 const MapTheme=preload("res://scripts/map_theme.gd")
 var particle_state=ParticleState.new()
 var cloud_particles=CloudParticles.new(particle_state)
+var bubble_particles=CloudParticles.new(particle_state,"bubble")
 var reference_normal_walk=false
 var reference_spawn_presentation=false
 var creep_aim_angles:Dictionary={}
@@ -534,6 +536,8 @@ func sell(id: int) -> String:
 	for zone in zones:
 		if int(zone.owner)==id:destroy_cloud(zone)
 	zones = zones.filter(func(z): return int(z.owner) != id)
+	for bubble in bubbles:
+		if int(bubble.owner)==id and bubble.get("managed_bubble",false):destroy_bubble(bubble)
 	bubbles = bubbles.filter(func(b): return int(b.owner) != id)
 	pending_towers.erase(id)
 	path_cache.clear()
@@ -1173,10 +1177,7 @@ func shoot(t: Dictionary, e: Dictionary, boost: Dictionary) -> void:
 		var origin = t.pos+Vector2(0, -7)
 		var height = float(animations.get("towers/"+str(d.filename), {}).get("params", {}).get("tower_height", 50))
 		var destination = enemy_visual_aim_point(e)
-		var bubble = {"pos": origin, "destination": destination, "start_y": origin.y-height,
-			"end_y": origin.y-height-60.0, "shadow": origin, "shadow_start": origin,
-			"age": 0.0, "progress": 0.0, "flying": false, "active": true,
-			"alpha": 0.4, "size": 16, "type": t.type, "def": d, "owner": t.id}
+		var bubble=new_bubble(d,origin,int(e.id),int(t.type),int(t.id),int(height))
 		bubbles.append(bubble)
 		var cloud=new_cloud(d,destination,int(t.id),int(t.type),int(t.level),f32(float(d.get("damage",0))*f32(float(boost.damage)-1.0)))
 		cloud.bubble=bubble;cloud.parent30={"byte44":1};cloud.until=-1
@@ -1239,7 +1240,52 @@ func process_nuke(t: Dictionary, radius: float, boost: Dictionary) -> void:
 		state.id = -1
 		emit("nuke_launch", {"pos": t.pos, "to": state.destination})
 
+func bubble_target(id:int):
+	var actor=find_enemy(id)
+	return null if actor.is_empty() else enemy_visual_aim_point(actor)
+func bubble_texture(name:String,crop:Vector2i,size:Vector2i,slot:int) -> Dictionary:
+	return {"name":name,"crop":crop,"size":size,"slot":slot}
+func bubble_texture_destroy(_texture:Dictionary) -> void:pass
+func bubble_adapters(b:Dictionary) -> Dictionary:
+	return {"lookup":bubble_target,"factory":bubble_particles.factory.bind(int(b.owner)),"advance":bubble_particles.advance,"destroy":bubble_particles.destroy,"texture_destroy":bubble_texture_destroy}
+func new_bubble(resource:Dictionary,point:Vector2,target_id:int,type:int,owner:int,height:int) -> Dictionary:
+	# Both selected ordinary tower creators pass follow_target=false. The
+	# existing tower point/resource producer remains separately bounded.
+	var adapters={"parameter":func(_name):return height,"lookup":bubble_target,"texture":bubble_texture,"factory":bubble_particles.factory.bind(owner)}
+	var bubble=BubbleLifecycle.construct(resource,point,target_id,0,type==8,adapters)
+	bubble.managed_bubble=true;bubble.owner=owner;bubble.type=type
+	sync_bubble_view(bubble)
+	return bubble
+func sync_bubble_view(b:Dictionary) -> void:
+	b.flying=(int(b.lifted)&1)!=0;b.size=int(b.main.size.x);b.destination=b.target;b.start_y=b.launch.y;b.end_y=b.lift_target.y;b.shadow_start=b.shadow_origin
+func update_managed_bubble(b:Dictionary,dt_ms:float,argument_b:bool) -> void:
+	var was_active=(int(b.active)&1)!=0
+	BubbleLifecycle.update(b,dt_ms,bubble_adapters(b),argument_b)
+	sync_bubble_view(b)
+	if was_active and (int(b.active)&1)==0:emit("bubble_impact",{"pos":b.pos,"type":b.type})
+func destroy_bubble(b:Dictionary) -> void:
+	BubbleLifecycle.destroy(b,bubble_adapters(b));b.manager_removed=true
+func update_owned_clouds_and_bubbles() -> void:
+	# Group only live owners without changing their vector order. Original
+	# UpdatePoisons is per tower; complete room scheduling remains separate.
+	var groups={};var order=[]
+	for object in zones+bubbles:
+		if not object.get("managed_cloud",false) and not object.get("managed_bubble",false):continue
+		var owner=int(object.owner)
+		if not groups.has(owner):groups[owner]={"clouds":[],"bubbles":[]};order.append(owner)
+		if object.get("managed_cloud",false):groups[owner].clouds.append(object)
+		else:groups[owner].bubbles.append(object)
+	var tower_order=[]
+	for tower in towers:
+		if groups.has(int(tower.id)):tower_order.append(int(tower.id))
+	for owner in order:
+		if not owner in tower_order:tower_order.append(owner)
+	var adapters={"cloud_update":update_cloud,"cloud_destroy":destroy_cloud,"bubble_update":update_managed_bubble,"bubble_destroy":destroy_bubble,"bubble_particles":func(b):return b.roots.size()}
+	for owner in tower_order:CloudOwner.update(groups[owner].clouds,groups[owner].bubbles,tick_ms,false,adapters)
+	zones=zones.filter(func(z):return not z.get("manager_removed",false));bubbles=bubbles.filter(func(b):return not b.get("manager_removed",false))
+
 func update_bubble(b: Dictionary) -> void:
+	if b.get("managed_bubble",false):update_managed_bubble(b,tick_ms,false);return
 	if not b.active: return
 	if not b.flying:
 		b.age = f32(float(b.age)+f32(float(tick_ms)/500.0))
@@ -1568,7 +1614,7 @@ func cloud_sound(_name:String,point:Vector2,_argument:int,type:int) -> void:
 	emit("cloud_active",{"pos":point,"type":type})
 
 func update_cloud(zone:Dictionary,dt_ms:float,argument_b:bool) -> void:
-	if zone.has("bubble") and not zone.parent30.is_empty():zone.parent30.byte44=1 if zone.bubble.active else 0
+	if zone.has("bubble") and not zone.parent30.is_empty():zone.parent30.byte44=int(zone.bubble.active)
 	var adapters={"factory":cloud_particles.factory.bind(int(zone.owner)),"advance":cloud_particles.advance,"destroy":cloud_particles.destroy,"rand":cloud_random_integer,"random":cloud_random_integer,"vector":cloud_random_vector,"modulo":cloud_signed_modulo,"decals":cloud_decals,"sound":cloud_sound.bind(int(zone.type)),"damage":cloud_damage}
 	CloudLifecycle.update(zone,enemies,float(map.hex_h),dt_ms,adapters,argument_b)
 	if zone.has("bubble") and zone.ready:
@@ -1704,11 +1750,7 @@ func step() -> void:
 		if update_missile(p):
 			impact(p)
 			missiles.erase(p)
-	# Selected original cloud pre-update removal/traversal now owns actual
-	# retained systems. Full per-tower/room and bubble-tail scheduling is separate.
-	var managed_clouds=zones.filter(func(z):return z.get("managed_cloud",false))
-	CloudOwner.update(managed_clouds,[],tick_ms,false,{"cloud_update":update_cloud,"cloud_destroy":destroy_cloud})
-	zones=zones.filter(func(z):return not z.get("manager_removed",false))
+	update_owned_clouds_and_bubbles()
 	# Older synthetic QA poses still provide deadline-only zone records.
 	for z in zones.duplicate():
 		if z.get("managed_cloud",false):continue
@@ -1730,6 +1772,7 @@ func step() -> void:
 	# UpdatePoisons0xe75dc updates clouds before bubbles: arrivals become damaging
 	# on the following tick and their lifetime does not run while in flight.
 	for b in bubbles.duplicate():
+		if b.get("managed_bubble",false):continue
 		if not b.active: bubbles.erase(b)
 		else: update_bubble(b)
 	if profile_hotpaths: timed = timed_section("projectiles_clouds", timed)

@@ -7,6 +7,7 @@ var app
 var content
 var owners:Dictionary={}
 var cloud_roots:Dictionary={}
+var bubble_roots:Dictionary={}
 var systems:Array[Dictionary]=[]
 var clock_ms=0.0
 var clock_seconds=0.0
@@ -25,9 +26,14 @@ func _init() -> void:
 func reset() -> void:
 	for sys in systems:
 		if sys.has("owned_tree"):Owned.destroy(sys.owned_tree,[])
+	var restored_bubbles={}
+	for sys in systems:
+		if sys.get("bubble_managed",false):restored_bubbles[int(sys.id)]=sys
+	for id in bubble_roots:
+		if restored_bubbles.has(id):bubble_roots[id].system=restored_bubbles[id]
 	for e in owners.values():e.particle_roots=[];e.disco_root={}
 	owners.clear()
-	cloud_roots.clear()
+	cloud_roots.clear();bubble_roots.clear()
 	owned_serial=0;systems.clear();clock_ms=0.0;clock_seconds=0.0;serial=0;random.seed=114
 
 func emit_system(name: String, point: Vector2, variation: String = "", owner: String = "", duration_ms: int = 0, direction: Vector2 = Vector2.ZERO, object_owner: int = -1) -> void:
@@ -307,12 +313,12 @@ func advance_unowned(dt:float) -> void:
 	# The remaining existing effects keep their separate presentation adapter.
 	var active:Array[Dictionary]=[]
 	for sys in systems:
-		if not sys.has("creep_owner") and not sys.get("cloud_managed",false):active.append(sys)
+		if not sys.has("creep_owner") and not sys.get("cloud_managed",false) and not sys.get("bubble_managed",false):active.append(sys)
 	var before_serial=serial
 	SpiceNative.advance_systems(active,clock_ms,emit_system,emit_batch,random,dt)
 	var live={}
 	for sys in active:live[int(sys.id)]=true
-	systems=systems.filter(func(sys):return sys.has("creep_owner") or sys.get("cloud_managed",false) or live.has(int(sys.id)) or int(sys.id)>before_serial)
+	systems=systems.filter(func(sys):return sys.has("creep_owner") or sys.get("cloud_managed",false) or sys.get("bubble_managed",false) or live.has(int(sys.id)) or int(sys.id)>before_serial)
 
 func replace_systems(value:Array[Dictionary]) -> void:
 	# QA held-render restoration replaces full mutable trees. Rebind owners to
@@ -327,6 +333,11 @@ func replace_systems(value:Array[Dictionary]) -> void:
 		if sys.get("cloud_managed",false):restored_clouds[int(sys.id)]=sys
 	for id in cloud_roots:
 		if restored_clouds.has(id):cloud_roots[id].system=restored_clouds[id]
+	var restored_bubbles={}
+	for sys in systems:
+		if sys.get("bubble_managed",false):restored_bubbles[int(sys.id)]=sys
+	for id in bubble_roots:
+		if restored_bubbles.has(id):bubble_roots[id].system=restored_bubbles[id]
 	for e in owners.values():e.particle_roots=[]
 	for sys in systems:
 		var id=int(sys.get("creep_owner",-1))

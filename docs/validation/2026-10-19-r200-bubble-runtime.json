@@ -1,0 +1,589 @@
+{
+  "source_inputs_unchanged_during_build": 87,
+  "old_fixture_reference_JSONs_exact": 153,
+  "fresh_clean_build_logs": [
+    "builds/air-pass-verification.log",
+    "builds/animator-verification.log",
+    "builds/bolt-appearance-verification.log",
+    "builds/bolt-clock-verification.log",
+    "builds/bolt-construct-verification.log",
+    "builds/bolt-order-verification.log",
+    "builds/bolt-ribbon-verification.log",
+    "builds/build-hex-verification.log",
+    "builds/cloud-lifecycle-verification.log",
+    "builds/cloud-owner-verification.log",
+    "builds/cloud-particles-verification.log",
+    "builds/cloud-runtime-verification.log",
+    "builds/creep-air-path-verification.log",
+    "builds/creep-animation-verification.log",
+    "builds/creep-approach-verification.log",
+    "builds/creep-death-burst-verification.log",
+    "builds/creep-death-verification.log",
+    "builds/creep-depth-verification.log",
+    "builds/creep-disco-actor-verification.log",
+    "builds/creep-disco-admission-verification.log",
+    "builds/creep-disco-timer-verification.log",
+    "builds/creep-fields-verification.log",
+    "builds/creep-health-offset-verification.log",
+    "builds/creep-health-verification.log",
+    "builds/creep-hit-verification.log",
+    "builds/creep-hover-verification.log",
+    "builds/creep-initial-path-verification.log",
+    "builds/creep-light-verification.log",
+    "builds/creep-missile-verification.log",
+    "builds/creep-owner-verification.log",
+    "builds/creep-particle-birth-verification.log",
+    "builds/creep-particle-migration-verification.log",
+    "builds/creep-poison-verification.log",
+    "builds/creep-portal-verification.log",
+    "builds/creep-replan-verification.log",
+    "builds/creep-retained-verification.log",
+    "builds/creep-reward-verification.log",
+    "builds/creep-shooting-verification.log",
+    "builds/creep-source-replan-verification.log",
+    "builds/creep-spawn-path-verification.log",
+    "builds/creep-state-verification.log",
+    "builds/creep-status-verification.log",
+    "builds/decal-verification.log",
+    "builds/editor-import.log",
+    "builds/frame-lookup-verification.log",
+    "builds/hud-plate-verification.log",
+    "builds/hud-wallet-verification.log",
+    "builds/input-profile-verification.log",
+    "builds/magic-depth-verification.log",
+    "builds/magic-panel-verification.log",
+    "builds/magic-view-verification.log",
+    "builds/main-menu-verification.log",
+    "builds/map-animation-verification.log",
+    "builds/map-depth-verification.log",
+    "builds/menu-bubble-verification.log",
+    "builds/menu-float-verification.log",
+    "builds/menu-motion-verification.log",
+    "builds/menu-navigation-verification.log",
+    "builds/menu-ui-verification.log",
+    "builds/message-verification.log",
+    "builds/mode-effect-verification.log",
+    "builds/mode-item-verification.log",
+    "builds/mode-text-derivation.log",
+    "builds/native-build.log",
+    "builds/normal-walk-verification.log",
+    "builds/particle-active-copy-verification.log",
+    "builds/particle-child-binding-verification.log",
+    "builds/particle-child-verification.log",
+    "builds/particle-defaults-verification.log",
+    "builds/particle-disable-verification.log",
+    "builds/particle-keys-verification.log",
+    "builds/particle-life-verification.log",
+    "builds/particle-local-clock-verification.log",
+    "builds/particle-owned-benchmark.log",
+    "builds/particle-owned-draw-benchmark.log",
+    "builds/particle-owned-keys-verification.log",
+    "builds/particle-owned-live-verification.log",
+    "builds/particle-owned-verification.log",
+    "builds/particle-state-verification.log",
+    "builds/portal-lifecycle-verification.log",
+    "builds/portrait-verification.log",
+    "builds/promotion-verification.log",
+    "builds/result-lifecycle-verification.log",
+    "builds/reward-clock-verification.log",
+    "builds/reward-geometry-verification.log",
+    "builds/reward-spice-verification.log",
+    "builds/runtime-scripts-verification.log",
+    "builds/selection-verification.log",
+    "builds/story-verification.log",
+    "builds/tower-preview-verification.log",
+    "builds/transition-verification.log",
+    "builds/turn-pose-verification.log",
+    "builds/tutorial-arrow-verification.log",
+    "builds/tutorial-fade-verification.log",
+    "builds/tutorial-layout-verification.log",
+    "builds/ui-verification.log",
+    "builds/upgrade-verification.log",
+    "builds/verification.log",
+    "builds/water-verification.log",
+    "builds/wave-collapse-verification.log",
+    "builds/wave-verification.log",
+    "builds/world-blade-verification.log",
+    "builds/world-camera-verification.log",
+    "builds/world-cloud-verification.log",
+    "builds/xp-chronology-verification.log",
+    "builds/xp-verification.log",
+    "builds/poison-bubble-verification.log",
+    "builds/poison-bubble-particles-verification.log",
+    "builds/bubble-runtime-verification.log"
+  ],
+  "new_gate": {
+    "checks": 38663,
+    "contexts": [
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5520,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 1,
+        "type": 7
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5820,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 2,
+        "type": 7
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 6270,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 3,
+        "type": 7
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5520,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 1,
+        "type": 8
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5520,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 2,
+        "type": 8
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5520,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 3,
+        "type": 8
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 5520,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 1,
+        "type": 9
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 6270,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 2,
+        "type": 9
+      },
+      {
+        "actual_inactive_tail": true,
+        "dormant_ms": 6270,
+        "held_restore": true,
+        "inactive_ms": 840,
+        "stars_observed": true,
+        "tier": 3,
+        "type": 9
+      }
+    ],
+    "failures": [],
+    "passed": true,
+    "scope": "Actual normal Simulation creation/manager/owned bubble particles/Main body-shadow poses, retained inactive tails/dormant roots/held state/pause/no duplicate FX/actual sale. Supplied tower placement/actor; original resource factory/global RNG/GPU/audio/room/video identity not claimed."
+  },
+  "full_source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 166.666967917,
+    "r196_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "5f6ec2748b5c31c52ba7dcf204402ef57d46647e6c970e172c7f8471fee9ccdd",
+      "executable_sha256": "4606d8bb1bc64ba03d3729b71864f4aea54ed2199e5d6afded61ab266ec6edc5",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "cb36733b5d9504b767891a2d9635fed65e772c146872994ff51b4042c0859932"
+      }
+    },
+    "candidate_exported": false,
+    "offline_complete": false
+  },
+  "native_source_review": "pending",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "scope": "Actual normal chemical/Goo/FART bubble/manager/real-particle/Main integration; full offline recreation incomplete",
+  "new_gate_checks": 38663,
+  "normal_three_tier_contexts": 9,
+  "source_native_review": {
+    "source_native_only": true,
+    "packaged_export": false,
+    "actual_native_captures": 18,
+    "readiness_PNG_sha256": "ce1476d5a2f8df8565b690d0cab8a69fc9237e52199bbc9865717e15a26c248c",
+    "all19_PNG_viewed_full1280x960": true,
+    "all_captures": [
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-constructor.png",
+        "sha256": "9b267a849bae76da9c20e7f7c8f4adc9736824005fcbadb90f530c1a3852b20c",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-lift-030.png",
+        "sha256": "bb7a8e9f87a92a4ff1c5100ff5d13211ee47c1e27862f78a58cfeed07aba00cc",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-lift-300.png",
+        "sha256": "aab99370d89180535af93e7d1e5dd34e789669242874c94bc1a8dcb425e8b251",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-particles-hidden-same-state.png",
+        "sha256": "89228176486ef0cec0771053aecbec26da05a7473d80003f9f0550b3f1177498",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-lift-300-restored.png",
+        "sha256": "aab99370d89180535af93e7d1e5dd34e789669242874c94bc1a8dcb425e8b251",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-lift-complete.png",
+        "sha256": "c9d60984ab21da10fe3aa0ff48fc9fb7bad974dfe0d5d639d3996db882f8a540",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-dive-early.png",
+        "sha256": "1cc8474b312cf10d1dfb2532a7290d68a653ce73a6bde2776cdadfa738ab46e0",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-arrival.png",
+        "sha256": "2c969cddcfd37ef239db570624b28ad1715889600ab1e67a89ae89a3e55da4da",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-inactive-tail-300.png",
+        "sha256": "bac18de144704a4f5d8e12d11d85903970872cc1520f4076e5771b2b2851826d",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/poison-dormant.png",
+        "sha256": "2dc86a75fd1cd9be07cbdbec50453d8163606c8299ecc0c4f3929eb632d76dd1",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-constructor.png",
+        "sha256": "2c8716b9c4cd4f530669423282e9fb8621bb02cd38a56a3bfee3a35daa9c84ce",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-lift-030.png",
+        "sha256": "d331c343263842bf87e487d1f58424944a4311b58c9771c78479f57b9a3f5faf",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-lift-300.png",
+        "sha256": "79ee68861f37fb50dd80dc0c9c7b6d38f0cf321c8b016ccb08ba474d8261eebc",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-lift-complete.png",
+        "sha256": "22dde82e4dd5ae6725b7864cadc29d7d5bfac17ee320402911f32dc0041bec13",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-dive-early.png",
+        "sha256": "d9a5cf60a1b72c79e765a0365cf54cb678b4b41f8e842b64adbc7e64e71708c1",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-arrival.png",
+        "sha256": "6a4d5d625af00d3823327d07d7383bd2fbb0f0b284b24f90e02c08f785f3d9af",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-inactive-tail-300.png",
+        "sha256": "762455254130552e3c63c0b7d3db97704dd9d44dd11ef5dcb2470f2bf8e8b966",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      },
+      {
+        "path": "builds/bubble-runtime-r200-source-gallery/goo-dormant.png",
+        "sha256": "8a1b56b136902cda6905847dd39221fa425ff964db97a88bbb2658b22181c8fe",
+        "size": [
+          1280,
+          960
+        ],
+        "actor_observation_and_independent_readiness": true,
+        "equal_axis_original_proportions": true,
+        "actual_build_upgrade_shoot_source_scene": true
+      }
+    ],
+    "independent_Saved_PNG_terrain_HUD_actor_geometry_checked": true,
+    "body_rects": [
+      {
+        "name": "poison-constructor",
+        "body_rect": [
+          326.25,
+          538.75,
+          20.0,
+          20.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-lift-030",
+        "body_rect": [
+          325.0,
+          470.500564575195,
+          22.5,
+          22.5
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-lift-300",
+        "body_rect": [
+          308.75,
+          413.779678344727,
+          55.0,
+          55.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-particles-hidden-same-state",
+        "body_rect": [
+          308.75,
+          413.779678344727,
+          55.0,
+          55.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-lift-300-restored",
+        "body_rect": [
+          308.75,
+          413.779678344727,
+          55.0,
+          55.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-lift-complete",
+        "body_rect": [
+          296.25,
+          371.25,
+          80.0,
+          80.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "poison-dive-early",
+        "body_rect": [
+          272.921867370605,
+          390.035934448242,
+          80.0,
+          80.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "goo-constructor",
+        "body_rect": [
+          326.25,
+          538.75,
+          20.0,
+          20.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "goo-lift-030",
+        "body_rect": [
+          325.0,
+          470.500564575195,
+          22.5,
+          22.5
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "goo-lift-300",
+        "body_rect": [
+          308.75,
+          413.779678344727,
+          55.0,
+          55.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "goo-lift-complete",
+        "body_rect": [
+          296.25,
+          371.25,
+          80.0,
+          80.0
+        ],
+        "body_rect_in_viewport": true
+      },
+      {
+        "name": "goo-dive-early",
+        "body_rect": [
+          272.921867370605,
+          390.035934448242,
+          80.0,
+          80.0
+        ],
+        "body_rect_in_viewport": true
+      }
+    ],
+    "particle_only_causal_pair": {
+      "changed_pixels": 842,
+      "bounds": [
+        325,
+        431,
+        349,
+        485
+      ],
+      "full_restored_RGBA_exact": true,
+      "restored_Simulation_digest_exact": true
+    },
+    "all_four_saves_exact": true,
+    "scope": "Actual Main/mission13/Marine original walking into camera, then supplied stationary highHP actor and isolated QA wallet/unlocks. Actual normal build/upgrade APIs construct visible tower; manual actual shoot with automatic reload held. Real bubble/cloud/retained particle pipeline, body-before-shadow order, moving shadow, original proportions/fixed4:3, actual actor observation and independent terrain/HUD readiness. Particle-only hidden/restored causal pair. No original whole GPU/video/audio/factory/globalRNG/room/campaign identity or packaged acceptance.",
+    "original_device_GPU_video_whole_game_identity": false,
+    "numeric_performance_acceptance": false,
+    "offline_complete": false
+  },
+  "source_native_captures": 18,
+  "source_native_PNGs": 19,
+  "four_saves_package_and_source_helper_exact": true,
+  "actual_packaged_app": "R196 unchanged; actual recovery417901195, performance failure preserved",
+  "all_ten_accepted": false,
+  "preserved_failures": [
+    "builds/bubble-runtime-r200-first-void-append-failure",
+    "builds/bubble-runtime-r200-first-main-preload-failure"
+  ],
+  "new_gate_scope": "All original comparisons remain unchanged. New actual Simulation gate checks owner/PS tags/registries, constructor stars/trails, real inactive/dormant phases, Main body-shadow poses, pause/held/no duplicate FX/actual sale.",
+  "producer_limit": "Original tower+70/resource/room/GPU ordering and whole factory/parser/global RNG/texture/particle trajectory/audio/video/campaign identities remain bounded/open. Actual9normal resource heights are50; existing tower point/parameter producer retained.",
+  "remaining": [
+    "Signed source push and verified private source/evidence checkpoint",
+    "Coherent R200 export, actual packaged native suites, unchanged33.34msperformance gate",
+    "Packaged visual/video comparison refresh and verified actual app recovery",
+    "Original full tower/room/factory/globalRNG/GPU/audio/video/campaign/progression and all8UIgroups"
+  ]
+}

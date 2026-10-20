@@ -109,6 +109,7 @@ func refresh_owners(sim) -> void:
 			sys.pos=missile.pos;found=true
 		if not found:emit_system("MissileNukeRail" if int(missile.type)==5 else "MissileRail",missile.pos,"",owner,-1,Vector2.ZERO,int(missile.owner))
 	for bubble in sim.bubbles:
+		if bubble.get("managed_bubble",false):continue
 		if not bubble.active:continue
 		var owner="tower:%d:bubble" % int(bubble.owner)
 		owners[owner]=true

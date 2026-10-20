@@ -1,5 +1,6 @@
 extends Node2D
 
+const BubbleLifecycle=preload("res://scripts/bubble_lifecycle.gd")
 const Simulation = preload("res://scripts/simulation.gd")
 const Startup = preload("res://scripts/startup.gd")
 const TutorialFlow = preload("res://scripts/tutorial.gd")
@@ -3285,10 +3286,27 @@ func draw_game_middle(enemy_projectiles:Dictionary,scale:float) -> void:
 	if probe_placement_order:placement_draw_trace.append("air-manager")
 	for missile in enemy_projectiles.before_air:draw_enemy_missile(missile,scale)
 
+func bubble_draw_pose(bubble:Dictionary) -> Dictionary:
+	var pose={"color":Color.WHITE,"quads":[]}
+	# Original premultiplied alpha modulation maps to straight-alpha white
+	# tint for the existing decoded assets, as with the health/animator views.
+	var adapters={"blend":func(_s,_d):pass,"color":func(alpha):pose.color=Color(1,1,1,alpha),"quad":func(texture,pos):pose.quads.append({"texture":texture,"pos":pos}),"particle_render":func(_root):pass}
+	BubbleLifecycle.render(bubble,adapters)
+	return pose
+func draw_managed_bubble(bubble:Dictionary) -> void:
+	var pose=bubble_draw_pose(bubble)
+	for quad in pose.quads:
+		var frame:Dictionary=quad.texture
+		var crop=Vector2(64,64) if int(frame.slot)==0x4c else Vector2(20,16)
+		battle_draw_target.draw_texture_rect_region(Content.tex("assets/"+str(frame.name)),Rect2(quad.pos,Vector2(frame.size)),Rect2(Vector2(frame.crop),crop),pose.color)
+	# Real retained systems are submitted by the existing particle layer;
+	# full owner/map/alpha-pass interleaving remains a separate evidence gap.
+
 func draw_game_tail(depth_bases:Array,enemy_projectiles:Dictionary,scale:float) -> void:
 	# CBase::RenderAfter0x76c48 paints health after the sorted body pass.
 	# Full map/owner/air interleaving remains separately unresolved.
 	for bubble in sim.bubbles:
+		if bubble.get("managed_bubble",false):draw_managed_bubble(bubble);continue
 		if not bubble.active: continue
 		var texture = Content.tex("assets/sfx/goo_bubble.png" if int(bubble.type) == 8 else "assets/sfx/poison_bubble.png")
 		var size = float(bubble.size)
