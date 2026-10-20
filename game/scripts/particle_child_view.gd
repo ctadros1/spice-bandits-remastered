@@ -10,6 +10,12 @@ static func initialize(definition:Dictionary,texture_present:bool,texture_homoge
 static func bits(value:float) -> int:
 	return PackedFloat32Array([value]).to_byte_array().decode_u32(0)
 
+static func neon_float(value:float) -> float:
+	var rounded=Math.f32(value)
+	var word=bits(rounded)
+	if (word&0x7fffffff)<0x00800000:return PackedInt32Array([word&0x80000000]).to_byte_array().decode_float(0)
+	return rounded
+
 static func packed_channel(value:float) -> int:
 	# The original VCVT.S32 followed by a byte store is not RGBA8 clamping.
 	var scaled=Math.f32(Math.f32(value)*255.0)
@@ -95,8 +101,12 @@ static func advance(system:Dictionary,dt:float,make_particle:Callable,make_child
 	if system.delay_seconds>0:
 		system.delay_seconds=Math.f32(float(system.delay_seconds)-dt);return
 	var d:Dictionary=system.definition
-	system.clock_seconds=Math.f32(float(system.clock_seconds)+Math.f32(Math.f32(float(d.get("time_scale",1)))*dt))
-	var disable=Math.f32(float(d.get("disable_after",0))/1000.0)
+	# Original clock operations are NEON, which flushes subnormal inputs/results.
+	var scaled_dt=neon_float(neon_float(float(d.get("time_scale",1)))*neon_float(dt))
+	system.clock_seconds=neon_float(neon_float(float(system.clock_seconds))+scaled_dt)
+	# An original caller can replace the raw seconds header without mutating
+	# the imported resource's millisecond metadata or rounding the product again.
+	var disable=Math.f32(float(system.disable_after_seconds)) if system.has("disable_after_seconds") else Math.f32(float(d.get("disable_after",0))/1000.0)
 	if disable>0 and disable<=float(system.clock_seconds) and not system.first_release:system.rate=0
 	var live=[]
 	var physics=d.duplicate();physics.wind_enabled=system.wind_enabled

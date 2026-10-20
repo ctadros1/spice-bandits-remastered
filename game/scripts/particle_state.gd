@@ -305,12 +305,12 @@ func advance_unowned(dt:float) -> void:
 	# The remaining existing effects keep their separate presentation adapter.
 	var active:Array[Dictionary]=[]
 	for sys in systems:
-		if not sys.has("creep_owner"):active.append(sys)
+		if not sys.has("creep_owner") and not sys.get("cloud_managed",false):active.append(sys)
 	var before_serial=serial
 	SpiceNative.advance_systems(active,clock_ms,emit_system,emit_batch,random,dt)
 	var live={}
 	for sys in active:live[int(sys.id)]=true
-	systems=systems.filter(func(sys):return sys.has("creep_owner") or live.has(int(sys.id)) or int(sys.id)>before_serial)
+	systems=systems.filter(func(sys):return sys.has("creep_owner") or sys.get("cloud_managed",false) or live.has(int(sys.id)) or int(sys.id)>before_serial)
 
 func replace_systems(value:Array[Dictionary]) -> void:
 	# QA held-render restoration replaces full mutable trees. Rebind owners to

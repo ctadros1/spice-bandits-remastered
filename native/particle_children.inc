@@ -99,6 +99,7 @@ struct OwnedUpdateKeys {
     const Variant definition{String("definition")};
     const Variant delay_seconds{String("delay_seconds")};
     const Variant disable_after{String("disable_after")};
+    const Variant disable_after_seconds{String("disable_after_seconds")};
     const Variant fade_in_time{String("fade_in_time")};
     const Variant first_release{String("first_release")};
     const Variant interval_seconds{String("interval_seconds")};
@@ -123,6 +124,12 @@ struct OwnedUpdateKeys {
 };
 const OwnedUpdateKeys &owned_update_keys() {static const OwnedUpdateKeys value;return value;}
 const Array &owned_white_color() {static const Array value=Array::make(1,1,1,1);return value;}
+// Original Update uses NEON arithmetic for its clock: subnormal operands and
+// results flush to signed zero independently of the host floating-point mode.
+float owned_neon_float(double input) {
+    const float value=f32(input);
+    return std::fpclassify(value)==FP_SUBNORMAL?std::copysign(0.0f,value):value;
+}
 }
 void SpiceNative::owned_particle_emit(Dictionary system,int64_t count,Callable make_particle,Callable make_child) {
     const auto &k=owned_update_keys();
@@ -153,8 +160,11 @@ void SpiceNative::owned_particle_advance(Dictionary system,double input_dt,Calla
     const double delay=system[k.delay_seconds];
     if(delay>0) {system[k.delay_seconds]=double(f32(delay-dt));return;}
     const Dictionary d=system[k.definition];
-    const float clock=f32(double(system[k.clock_seconds])+f32(double(f32(double(d.get(k.time_scale,1))))*dt));system[k.clock_seconds]=double(clock);
-    const float disable=f32(double(d.get(k.disable_after,0))/1000.0);
+    const float scaled_dt=owned_neon_float(double(owned_neon_float(double(d.get(k.time_scale,1))))*owned_neon_float(dt));
+    const float clock=owned_neon_float(double(owned_neon_float(double(system[k.clock_seconds])))+scaled_dt);system[k.clock_seconds]=double(clock);
+    // Caller-written raw headers already contain seconds. Do not round-trip
+    // a cloud's f32(duration_ms * f32(.001)) through imported millisecond data.
+    const float disable=system.has(k.disable_after_seconds)?f32(double(system[k.disable_after_seconds])):f32(double(d.get(k.disable_after,0))/1000.0);
     if(disable>0 && disable<=clock && !bool(system[k.first_release]))system[k.rate]=0;
     // Empty owned roots still run their clock and Emit(0) release phases.
     // They have no particle physics, color, child or phase work to perform.
