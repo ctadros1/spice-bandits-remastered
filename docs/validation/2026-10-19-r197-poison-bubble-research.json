@@ -1,0 +1,114 @@
+{
+  "scope": "Supplied contexts/callbacks incl texture headers from original requested dimensions; original Render records ordered draw calls, not pixels/GPU. No game or runtime change.",
+  "fixture": "tests/fixtures/native-poison-bubble-reference.json",
+  "sha256": "176cf6a340d2ca932b6201b9ecc02c967ecc58779bf0f3645802a6dc35a4142b",
+  "bytes": 11804171,
+  "sequences": 216,
+  "frames": 3824,
+  "independent_original_runs_byte_exact": true,
+  "original_file_and_full_selected_bodies_unchanged": true,
+  "selected_bubble_math_reserved_push_body_bytes": 2812,
+  "inherited_body_guards_total_bytes": 5592,
+  "checked_methods": {
+    "0x7bc88": {
+      "bytes": 60,
+      "sha256": "441b4378c0543c16a8540c80d5d25d1db52286cf5e8f6b00fe8e8381bce47cf9"
+    },
+    "0x7bcc4": {
+      "bytes": 32,
+      "sha256": "9bc3603221c0b356daa64811737fd11d2d1bb8ef763b98db15af6e13bd163834"
+    },
+    "0xe17c0": {
+      "bytes": 396,
+      "sha256": "cc9e388861259f24d81dfe13478772d01af76ba0f56c88902c5aa2b66fc3b442"
+    },
+    "0xe16bc": {
+      "bytes": 260,
+      "sha256": "347fc5ba6380787525fd992708e810b1e774db245f1b7776c9d92415d8bed2b1"
+    },
+    "0xe1a8c": {
+      "bytes": 60,
+      "sha256": "6a16f73a9433be0bcb047e9d65e982b3f28288abb7901c7ad7a6c9f7c29c00e3"
+    },
+    "0xe11ac": {
+      "bytes": 48,
+      "sha256": "95a5e90423c700b7fc8b89ff3474f4d37ceebcec1349f0abd15fa7c568e5c5c1"
+    },
+    "0xe1afc": {
+      "bytes": 40,
+      "sha256": "faa1f9c65eecaf98a0e5cb94beb037b2a0db9a03c4f9a1d51b969fd68f2d8d8a"
+    },
+    "0x7a904": {
+      "bytes": 32,
+      "sha256": "eff1d657810d10dca4d2699e0cfc13bca6e2c00843501e05e7a5ebc7d7d6f94b"
+    },
+    "0xe0eb4": {
+      "bytes": 424,
+      "sha256": "538b93a83e34a56c7797c48131588a7df61a8fbf2553e46637d4ad9e1dcd1ada"
+    },
+    "0xe1268": {
+      "bytes": 1108,
+      "sha256": "a9616e56cfe7373dc977fc9c261f9cf12e4c4282a6dcb0497cd8e7edb58b910e"
+    },
+    "0xe194c": {
+      "bytes": 320,
+      "sha256": "b1a87c843bfbe953cc25cfb2cb294c901a6ed39274472d9e5882b30bf39cc4b4"
+    },
+    "0x81bb0": {
+      "bytes": 40,
+      "sha256": "faa1f9c65eecaf98a0e5cb94beb037b2a0db9a03c4f9a1d51b969fd68f2d8d8a"
+    },
+    "0xe1c24": {
+      "bytes": 816,
+      "sha256": "5b67c06ba6827c830dbde9eb5b8eb6761e7e3fd0f8b1ec3884bcb08983310a7a"
+    },
+    "0xe1f54": {
+      "bytes": 16,
+      "sha256": "b93bfa730cb2e0761c832d42086c8d350e2fe46acc075e40ca2a48b913d25de2"
+    },
+    "0xe1f64": {
+      "bytes": 340,
+      "sha256": "4e6a67d2cb5eed65f2c4ffa4ea9c6d31d7bdba3a88361e2538f3e0a7a864f482"
+    },
+    "0xe21d0": {
+      "bytes": 1068,
+      "sha256": "be018f2f884e5e3b26aca91cc519a161f97fc069fd8cd157a17f986efa8112e4"
+    },
+    "0xe20b8": {
+      "bytes": 280,
+      "sha256": "5ec13aa1d490447d8851ae43d81a6f382cede6ec15a329715c36d796ed76ff06"
+    },
+    "0x1105e4": {
+      "bytes": 92,
+      "sha256": "c5847bd4068880086538f73f2bfaac8e7856ba23e6603ae4d749423158a3a594"
+    },
+    "0x1107e8": {
+      "bytes": 112,
+      "sha256": "6e5641ac24ea45a7251a512510d92a2518fa7e75403a71bcafcdb57e1bc2164a"
+    },
+    "0x1104b0": {
+      "bytes": 48,
+      "sha256": "3ff4f56218eb86575456b8d5b69b60a3987c49258b5010371afeae45f1477242"
+    }
+  },
+  "independent_float32_motion_checks": 68832,
+  "motion_check_failures": 0,
+  "prior_fixtures_exact": 152,
+  "prior_game_scripts_exact": 86,
+  "R196_app_and_four_saves_unchanged": true,
+  "Godot_runtime_changed": false,
+  "latest_full_source_build": "R196 167.81s/41544simulation/4035originals/86scripts/106freshlogs",
+  "current_packaged_app": "R196 PCK5f6ec274, verified app recovery417901195; unchanged performance failure",
+  "candidate_exported": false,
+  "offline_complete": false,
+  "all_ten_accepted": false,
+  "preserved_callback_model": "Initial and extended captures supplied64x64 shadow header; final texture callback supplies original requested20x16. All earlier scripts/runs preserved.",
+  "limits": [
+    "All object/actor/resource records supplied; missing constructor target leaves supplied initial zero words, not a proven original fallback.",
+    "Texture factory copies requested crop/dimensions into supplied header; no original texture parser executed.",
+    "Particle factory/update/status/Render/D1 are explicit callbacks; no original retained particle physics or GPU pixels in this oracle.",
+    "Draw/blend/color are recording callbacks.",
+    "Allocator/reserved vector/memmove/exception callbacks are supplied.",
+    "Original tower creator follow flag/point/target producer, full per-tower/room order, real particle adapter and Main draw integration still require joins."
+  ]
+}
