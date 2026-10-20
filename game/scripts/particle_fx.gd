@@ -120,6 +120,7 @@ func refresh_owners(sim) -> void:
 	# debris every60ms. Visual randomness is isolated from combat randomness.
 	var live_timers={}
 	for zone in sim.zones:
+		if zone.get("managed_cloud",false):continue
 		if zone.has("bubble"):continue
 		var key="cloud:%d:%d:%s:%d" % [zone.owner,zone.type,str(zone.pos),zone.until]
 		live_timers[key]=true

@@ -17,7 +17,9 @@ func factory(name:String,owner:int=-1) -> Dictionary:
 	system.cloud_managed=true
 	system.view_clock_ms=0.0
 	var tree:Dictionary=system.owned_tree
-	return {"system":system,"rate":int(tree.rate),"interval":Math.f32(float(definition.release_interval)),"disable_after_seconds":Math.f32(float(definition.get("disable_after",0))/1000.0),"pos":Vector2.ZERO,"alpha":Math.f32(float(definition.color[3])),"active_count":0,"first_release":bool(tree.first_release)}
+	var root={"system":system,"rate":int(tree.rate),"interval":Math.f32(float(definition.release_interval)),"disable_after_seconds":Math.f32(float(definition.get("disable_after",0))/1000.0),"pos":Vector2.ZERO,"alpha":Math.f32(float(definition.color[3])),"active_count":0,"first_release":bool(tree.first_release)}
+	state.cloud_roots[int(system.id)]=root
+	return root
 
 func advance(root:Dictionary,seconds:float) -> void:
 	var system:Dictionary=root.system
@@ -39,3 +41,4 @@ func destroy(root:Dictionary) -> void:
 	var system:Dictionary=root.system
 	Owned.destroy(system.owned_tree,[])
 	state.systems.erase(system)
+	state.cloud_roots.erase(int(system.id))

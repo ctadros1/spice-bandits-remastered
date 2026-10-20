@@ -6,6 +6,7 @@ const OwnedReference=preload("res://scripts/particle_child_view.gd")
 var app
 var content
 var owners:Dictionary={}
+var cloud_roots:Dictionary={}
 var systems:Array[Dictionary]=[]
 var clock_ms=0.0
 var clock_seconds=0.0
@@ -26,6 +27,7 @@ func reset() -> void:
 		if sys.has("owned_tree"):Owned.destroy(sys.owned_tree,[])
 	for e in owners.values():e.particle_roots=[];e.disco_root={}
 	owners.clear()
+	cloud_roots.clear()
 	owned_serial=0;systems.clear();clock_ms=0.0;clock_seconds=0.0;serial=0;random.seed=114
 
 func emit_system(name: String, point: Vector2, variation: String = "", owner: String = "", duration_ms: int = 0, direction: Vector2 = Vector2.ZERO, object_owner: int = -1) -> void:
@@ -316,6 +318,11 @@ func replace_systems(value:Array[Dictionary]) -> void:
 	# QA held-render restoration replaces full mutable trees. Rebind owners to
 	# those restored dictionaries so the next live step cannot update ghosts.
 	systems=value
+	var restored_clouds={}
+	for sys in systems:
+		if sys.get("cloud_managed",false):restored_clouds[int(sys.id)]=sys
+	for id in cloud_roots:
+		if restored_clouds.has(id):cloud_roots[id].system=restored_clouds[id]
 	for e in owners.values():e.particle_roots=[]
 	for sys in systems:
 		var id=int(sys.get("creep_owner",-1))

@@ -1,0 +1,788 @@
+{
+  "revision": "R196",
+  "Simulation_managed_cloud_integration": true,
+  "candidate_exported": false,
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 167.806838,
+    "r187_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "98f0d2ed9aad33dc7b763d250ce411333aa13a3f6de6ca54a8b5afb1e24e3efa",
+      "executable_sha256": "8efefb7ae277263b48ac4618dd57164119bffae64f3e30366bc6a7b95ff4541b",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "8982ee58078b522c9ed608dae32a21359e5cab19c41c13d3bbd158f7b89da17d"
+      }
+    },
+    "candidate_exported": false,
+    "offline_complete": false
+  },
+  "source_guards": {
+    "fresh_build_logs": [
+      "builds/air-pass-verification.log",
+      "builds/animator-verification.log",
+      "builds/bolt-appearance-verification.log",
+      "builds/bolt-clock-verification.log",
+      "builds/bolt-construct-verification.log",
+      "builds/bolt-order-verification.log",
+      "builds/bolt-ribbon-verification.log",
+      "builds/build-hex-verification.log",
+      "builds/cloud-lifecycle-verification.log",
+      "builds/cloud-owner-verification.log",
+      "builds/cloud-particles-verification.log",
+      "builds/cloud-runtime-verification.log",
+      "builds/creep-air-path-verification.log",
+      "builds/creep-animation-verification.log",
+      "builds/creep-approach-verification.log",
+      "builds/creep-death-burst-verification.log",
+      "builds/creep-death-verification.log",
+      "builds/creep-depth-verification.log",
+      "builds/creep-disco-actor-verification.log",
+      "builds/creep-disco-admission-verification.log",
+      "builds/creep-disco-timer-verification.log",
+      "builds/creep-fields-verification.log",
+      "builds/creep-health-offset-verification.log",
+      "builds/creep-health-verification.log",
+      "builds/creep-hit-verification.log",
+      "builds/creep-hover-verification.log",
+      "builds/creep-initial-path-verification.log",
+      "builds/creep-light-verification.log",
+      "builds/creep-missile-verification.log",
+      "builds/creep-owner-verification.log",
+      "builds/creep-particle-birth-verification.log",
+      "builds/creep-particle-migration-verification.log",
+      "builds/creep-poison-verification.log",
+      "builds/creep-portal-verification.log",
+      "builds/creep-replan-verification.log",
+      "builds/creep-retained-verification.log",
+      "builds/creep-reward-verification.log",
+      "builds/creep-shooting-verification.log",
+      "builds/creep-source-replan-verification.log",
+      "builds/creep-spawn-path-verification.log",
+      "builds/creep-state-verification.log",
+      "builds/creep-status-verification.log",
+      "builds/decal-verification.log",
+      "builds/editor-import.log",
+      "builds/frame-lookup-verification.log",
+      "builds/hud-plate-verification.log",
+      "builds/hud-wallet-verification.log",
+      "builds/input-profile-verification.log",
+      "builds/magic-depth-verification.log",
+      "builds/magic-panel-verification.log",
+      "builds/magic-view-verification.log",
+      "builds/main-menu-verification.log",
+      "builds/map-animation-verification.log",
+      "builds/map-depth-verification.log",
+      "builds/menu-bubble-verification.log",
+      "builds/menu-float-verification.log",
+      "builds/menu-motion-verification.log",
+      "builds/menu-navigation-verification.log",
+      "builds/menu-ui-verification.log",
+      "builds/message-verification.log",
+      "builds/mode-effect-verification.log",
+      "builds/mode-item-verification.log",
+      "builds/mode-text-derivation.log",
+      "builds/native-build.log",
+      "builds/normal-walk-verification.log",
+      "builds/particle-active-copy-verification.log",
+      "builds/particle-child-binding-verification.log",
+      "builds/particle-child-verification.log",
+      "builds/particle-defaults-verification.log",
+      "builds/particle-disable-verification.log",
+      "builds/particle-keys-verification.log",
+      "builds/particle-life-verification.log",
+      "builds/particle-local-clock-verification.log",
+      "builds/particle-owned-benchmark.log",
+      "builds/particle-owned-draw-benchmark.log",
+      "builds/particle-owned-keys-verification.log",
+      "builds/particle-owned-live-verification.log",
+      "builds/particle-owned-verification.log",
+      "builds/particle-state-verification.log",
+      "builds/portal-lifecycle-verification.log",
+      "builds/portrait-verification.log",
+      "builds/promotion-verification.log",
+      "builds/result-lifecycle-verification.log",
+      "builds/reward-clock-verification.log",
+      "builds/reward-geometry-verification.log",
+      "builds/reward-spice-verification.log",
+      "builds/runtime-scripts-verification.log",
+      "builds/selection-verification.log",
+      "builds/story-verification.log",
+      "builds/tower-preview-verification.log",
+      "builds/transition-verification.log",
+      "builds/turn-pose-verification.log",
+      "builds/tutorial-arrow-verification.log",
+      "builds/tutorial-fade-verification.log",
+      "builds/tutorial-layout-verification.log",
+      "builds/ui-verification.log",
+      "builds/upgrade-verification.log",
+      "builds/verification.log",
+      "builds/water-verification.log",
+      "builds/wave-collapse-verification.log",
+      "builds/wave-verification.log",
+      "builds/world-blade-verification.log",
+      "builds/world-camera-verification.log",
+      "builds/world-cloud-verification.log",
+      "builds/xp-chronology-verification.log",
+      "builds/xp-verification.log"
+    ],
+    "preserved_full_logs": "builds/cloud-runtime-r196-source-logs",
+    "all_logs_clean": true,
+    "all_existing_fixture_reference_JSON_files_exact": 152,
+    "all_executed_game_scripts_exact_at_completion": 86,
+    "native_source_helper_sha256": "8fac02fe27f7fedc7208c55fa2e96eedd3958ca84db6f768dc10a43bd1fb57bb",
+    "R187_package_and_all_four_saves_unchanged": true,
+    "no_remaining_game_processes": true,
+    "candidate_exported": false,
+    "old_reference_fixtures_or_numeric_thresholds_modified": false
+  },
+  "gates": {
+    "cloud-runtime": {
+      "path": "builds/cloud-runtime-gate.dixpLm/verification.json",
+      "result": {
+        "checks": 4194,
+        "contexts": [
+          {
+            "damage_deleted_ms": 2850,
+            "held_restore_verified": true,
+            "manager_removed_ms": 4470,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 1,
+            "type": 7
+          },
+          {
+            "damage_deleted_ms": 3360,
+            "held_restore_verified": true,
+            "manager_removed_ms": 5820,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 2,
+            "type": 7
+          },
+          {
+            "damage_deleted_ms": 2850,
+            "held_restore_verified": true,
+            "manager_removed_ms": 4470,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 1,
+            "type": 8
+          },
+          {
+            "damage_deleted_ms": 2850,
+            "held_restore_verified": true,
+            "manager_removed_ms": 4470,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 2,
+            "type": 8
+          },
+          {
+            "damage_deleted_ms": 3840,
+            "held_restore_verified": true,
+            "manager_removed_ms": 5460,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 1,
+            "type": 9
+          },
+          {
+            "damage_deleted_ms": 3840,
+            "held_restore_verified": true,
+            "manager_removed_ms": 6270,
+            "ready_ms": 870,
+            "tail_observed": true,
+            "tier": 2,
+            "type": 9
+          },
+          {
+            "damage_deleted_ms": 10290,
+            "held_restore_verified": true,
+            "manager_removed_ms": 12720,
+            "ready_ms": 4320,
+            "tail_observed": true,
+            "tier": 1,
+            "type": 5
+          },
+          {
+            "damage_deleted_ms": 10290,
+            "held_restore_verified": true,
+            "manager_removed_ms": 12720,
+            "ready_ms": 4320,
+            "tail_observed": true,
+            "tier": 2,
+            "type": 5
+          }
+        ],
+        "failures": [],
+        "scope": "Actual Simulation shoot/bubble/nuke/managed-cloud/retained particles across chemical, Goo, FART and radiation tiers. Parent pause/arrival-next-tick, damage expiry, real particle tails, next-pass removal, pause, held-system restoration aliases, global Stop, cleanup and definition preservation. Existing bubble flight, projectile resource/support and per-room scheduling remain adapters; no original complete bubble ownership/nuke current-resource/global RNG/GPU/audio/video/performance acceptance."
+      }
+    },
+    "cloud-owner": {
+      "path": "builds/cloud-owner-gate.dICJeO/verification.json",
+      "result": {
+        "checks": 20307,
+        "failures": [],
+        "frames": 828,
+        "scope": "Full selected original CTower.UpdatePoisons464bytes on supplied reserved vectors with explicit recording/status Update/D1/delete/memmove/exception callbacks. Complete before/after state/order/parent detach/raw argument comparisons include empty vectors, bit0 polarity, pre-update deletion/compaction, changed-status next-pass removal and first-non-null detach without pointer identity comparison. No actual cloud/bubble physics/destructor/room scheduling or Simulation integration acceptance.",
+        "sequences": 412
+      }
+    },
+    "cloud-particles": {
+      "path": "builds/cloud-particles-gate.SayC4k/verification.json",
+      "result": {
+        "checks": 177378,
+        "contexts": [
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 41,
+            "inactive_at_ms": 1826.674,
+            "kind": 7,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 163,
+            "inactive_at_ms": 7560.027,
+            "kind": 7,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 24,
+            "inactive_at_ms": 1120.004,
+            "kind": 7,
+            "tier": 2
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 253,
+            "inactive_at_ms": 11760.042,
+            "kind": 7,
+            "tier": 2
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 41,
+            "inactive_at_ms": 1826.674,
+            "kind": 8,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 163,
+            "inactive_at_ms": 7560.027,
+            "kind": 8,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 24,
+            "inactive_at_ms": 1120.004,
+            "kind": 8,
+            "tier": 2
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 253,
+            "inactive_at_ms": 11760.042,
+            "kind": 8,
+            "tier": 2
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 55,
+            "inactive_at_ms": 2520.009,
+            "kind": 5,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 179,
+            "inactive_at_ms": 8266.697,
+            "kind": 5,
+            "tier": 1
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 280.001,
+            "duration_ms": 200.0,
+            "frames": 55,
+            "inactive_at_ms": 2520.009,
+            "kind": 5,
+            "tier": 2
+          },
+          {
+            "actual_particles_observed": true,
+            "actual_tail_observed": true,
+            "deleted_at_ms": 6026.689,
+            "duration_ms": 6000.0,
+            "frames": 179,
+            "inactive_at_ms": 8266.697,
+            "kind": 5,
+            "tier": 2
+          }
+        ],
+        "failures": [],
+        "full_state_frame_pairs": 1430,
+        "key_representation_checks": 25974032,
+        "scope": "Actual retained authored PoisonCloud/GooCloud/RadiationDebris and recursive children execute through selected cloud controller, with native/reference complete state/RNG comparisons (only String/StringName key representation canonicalized; text/order/value types/bits preserved), original warmup/header writes, real status-derived tails/deletion, renderer aliases and unowned-phase exclusion. Caller random/vector supplied; particle spawn uses existing isolated RNG. Not yet called by Simulation, no original global RNG/resource/parent/room/GPU/audio/video or complete lifecycle identity acceptance."
+      }
+    },
+    "particle-disable": {
+      "path": "builds/particle-disable-gate.O0FiOu/verification.json",
+      "result": {
+        "checks": 75170,
+        "failures": [],
+        "metadata_context_pairs": 5184,
+        "original_cases": 2592,
+        "scope": "Unchanged original PS.Update912 bytes on supplied empty roots, no Emit/child/resource/room/physics/GPU/audio. Exact raw seconds header, clock, rate, delay, first-release, release clock and active count compare across one-bit boundaries, supplied delays/time scales/deltas and zero/subnormal contexts. Native/reference and prepared/reconstructed complete tree bytes match; independent raw header never mutates imported metadata. Full retained cloud/Simulation integration remains separate."
+      }
+    },
+    "cloud-lifecycle": {
+      "path": "builds/cloud-lifecycle-gate.LtrqeQ/verification.json",
+      "result": {
+        "checks": 522878,
+        "emission_header_cases": 900,
+        "failures": [],
+        "frames": 2791,
+        "particle_status_cases": 61,
+        "scope": "Selected original cloud constructor, parent gating, float32 age/emission timers, emission header raw words, ordered apply/Emit/Stop callbacks, warmup, pre-update status/removal/compaction and post-tail global Stop. Factory/physics/status/random/vector/decal/sound/damage adapters explicitly supplied. Synthetic finite-tail callback confined to verifier. Not yet bound to Simulation; no actual particle physics/GPU/audio/full-game acceptance.",
+        "sequences": 73
+      }
+    },
+    "creep-poison": {
+      "path": "builds/creep-poison-gate.VBWaxh/verification.json",
+      "result": {
+        "checks": 54867,
+        "direct_cases": 4608,
+        "distance_cases": 1152,
+        "failures": [],
+        "scope": "Selected original Emit/Stop and ordered cloud apply/list/counter/callback raw values, plus complete direct supplied actor/root dictionary bytes. Actual Simulation constructed chemical/radiation/Goo mixtures, owned emission through resets, independent aliases, ordered overlapping clouds and owner cleanup also checked. Full original cloud constructor/Update/lifetime and real damage/GPU/audio remain separate.",
+        "sequences": 143
+      }
+    }
+  },
+  "native_source_visual_review": {
+    "source_native_only": true,
+    "candidate_exported": false,
+    "all_nine_images_independently_decoded_and_hashed": true,
+    "all_actor_IDs_and_uniform_original_proportions_verified": true,
+    "native_renderer": "Apple M3 Pro/OpenGL4.1 Metal Compatibility, actual Main",
+    "source_gate_scope": "106 clean full-source logs / 152 prior referenceJSONs unchanged",
+    "same_state_cloud_visibility_pair": {
+      "active_restored_full_RGBA_exact": true,
+      "changed_pixels_when_cloud_hidden": 22760,
+      "changed_RGB_bounds": [
+        141,
+        339,
+        348,
+        601
+      ],
+      "full_Simulation_digest_roundtrip": true
+    },
+    "independent_readiness_PNG": {
+      "path": "builds/cloud-runtime-r196-source-gallery-interior/readiness.png",
+      "sha256": "1fb6a574277370a9fcb24dd60a3f0e2c7547507807354ecd5638c3ab289a0d63",
+      "probe_RGBA": [
+        [
+          170,
+          189,
+          24,
+          255
+        ],
+        [
+          0,
+          176,
+          224,
+          255
+        ]
+      ]
+    },
+    "actual_authored_walk_steps": 181,
+    "captures": [
+      {
+        "name": "poison-active",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-active.png",
+        "bytes": 1768462,
+        "sha256": "97dd76fde4780dc28a5bea47ac9ab111377348356916fde08e7f7ca44d650c55",
+        "rgba_sha256": "a03b89c413275235d69533a764a4c84decbfb223db477bb551a249b02e8074fb",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "47e59b549a613603a0d176ac5ce86c5fa1c68c5684837b526bd92438bfe6f97d",
+        "actual_cloud_systems": 15,
+        "actual_cloud_particles": 12
+      },
+      {
+        "name": "poison-cloud-hidden-same-state",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-cloud-hidden-same-state.png",
+        "bytes": 1768653,
+        "sha256": "d96b5799c55e88ae1e0f5460565bd82e1b96ad79471aee73e170f14c8b06637a",
+        "rgba_sha256": "4934ec623f922c3211170477bf7ac4b7896937996e9ce72d5e586d864d371c38",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "46fc594718bfa5dc1a27c2d9266b5873692260dffb88e468c10f7ada84a20ada",
+        "actual_cloud_systems": 15,
+        "actual_cloud_particles": 12
+      },
+      {
+        "name": "poison-active-restored",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-active-restored.png",
+        "bytes": 1768462,
+        "sha256": "97dd76fde4780dc28a5bea47ac9ab111377348356916fde08e7f7ca44d650c55",
+        "rgba_sha256": "a03b89c413275235d69533a764a4c84decbfb223db477bb551a249b02e8074fb",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "47e59b549a613603a0d176ac5ce86c5fa1c68c5684837b526bd92438bfe6f97d",
+        "actual_cloud_systems": 15,
+        "actual_cloud_particles": 12
+      },
+      {
+        "name": "damage-ended-cloud-tail",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/damage-ended-cloud-tail.png",
+        "bytes": 1768246,
+        "sha256": "497bb9d62cf80ce35d52bdbb481d184ed31f3ca10ecc91d01f6530469d05ba5c",
+        "rgba_sha256": "50366a56dce0bc6eb3c89456e21bb4f1d8cd53703a4c69d0286d3e174546d82e",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "cd1d6ab7d542cb1b76bce8260b98c921e8f2ea183c08b5632b809af332ae1c1a",
+        "actual_cloud_systems": 18,
+        "actual_cloud_particles": 15
+      },
+      {
+        "name": "cloud-cleared-creep-tail",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/cloud-cleared-creep-tail.png",
+        "bytes": 1770021,
+        "sha256": "db0bfa97c36400d7f4084b4f48011264de62c7004b33437ddea6beb06d069666",
+        "rgba_sha256": "3cc368e2ce0154a8efe8227cef2d2eb765ed77ac782ae8c84819a04b97c46321",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "18f3e99eeac9fcb80989ef02cc816d6195cf1ca70ec1147ceb4f9384c92d8e50",
+        "actual_cloud_systems": 0,
+        "actual_cloud_particles": 0
+      },
+      {
+        "name": "radiation-active",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/radiation-active.png",
+        "bytes": 1766528,
+        "sha256": "46f444348bf95f6e6f804a58bd2a4799e565007c1e8e850c11660f27d2e31eab",
+        "rgba_sha256": "65756197e51390dbaafbf0db5efde5cba132f6078daad015a90c57d47c655214",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "2b13522924a0b1d007ba8ac28504764f44b7376ba3d58f4994bb3554f167b6dc",
+        "actual_cloud_systems": 23,
+        "actual_cloud_particles": 1
+      },
+      {
+        "name": "poison-radiation-active",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-radiation-active.png",
+        "bytes": 1765299,
+        "sha256": "cda39d4401fd38f1dab7bc3c45b941dcff2f80bd54954963c73a44664a4945b3",
+        "rgba_sha256": "2f42478194a37d33a5dfa9686a97b8e18ec7b2ecb0c9550d1d0a0d1ae0214e18",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "c7e5c9450414d5405b63ea4481586dc40226e4e86c155e2b4cb97abddce72c0e",
+        "actual_cloud_systems": 38,
+        "actual_cloud_particles": 13
+      },
+      {
+        "name": "poison-goo-active",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-goo-active.png",
+        "bytes": 1769541,
+        "sha256": "c854e09d011778717fd8ce8f42f5e9b60ea04d2a80cd740761a4e30bdbe8c7d3",
+        "rgba_sha256": "ddec5153365b8d288375c85c6494d927f861c98ef03ebb3ea6663addcac45ee8",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "3c92881aaf4f0ce8f58d1009e2812a3d7601d6d62486c584afda4720380c5ae5",
+        "actual_cloud_systems": 30,
+        "actual_cloud_particles": 24
+      },
+      {
+        "name": "poison-last-cloud-outside",
+        "path": "builds/cloud-runtime-r196-source-gallery-interior/poison-last-cloud-outside.png",
+        "bytes": 1767494,
+        "sha256": "edd66997841b69d8ffb8d6bf7a79bfba176e57f7064b181dcce682cfbe83856c",
+        "rgba_sha256": "5d76b6f066a407c414d9f6cd4a0243aa049a8367b488def0b329e3140c97e248",
+        "actual_independent_probe_rgba8": [
+          [
+            170,
+            189,
+            24,
+            255
+          ],
+          [
+            0,
+            176,
+            224,
+            255
+          ]
+        ],
+        "actor_region": [
+          150,
+          360,
+          350,
+          560
+        ],
+        "actor_region_rgba_sha256": "b82d0e2c602fb63bd4d4b88a9c44845d9b8f78e459b296d16e6c363c4254a7ab",
+        "actual_cloud_systems": 30,
+        "actual_cloud_particles": 24
+      }
+    ],
+    "full_resolution_visual_review": "All10PNG1280x960 viewed: independent readiness plus all9capture states. Chemical/Goo cloud quads and owned creature poison/freeze/radiation effects, damage-ended cloud tail, cleanup creep tail, and same-state hidden/restored context reviewed. Interior actor uses181actual authored walk ticks before supplied zero speed/high HP. Cloud-only changed bounds141,339..348,601 stay inside viewport; no shape clipping in this control pair. Source QA evidence, not original-device/video/GPU parity.",
+    "first_wrong_scene_probe_error": "builds/cloud-runtime-r196-first-png-probe-error.json",
+    "limits": "Actual held QA source scenes, not packaged/video/original GPU/global RNG/audio identity. Existing bubble, nuke current-resource, room and decal joins remain open."
+  },
+  "prior_edge_gallery": "builds/cloud-runtime-r196-source-native-review.json",
+  "actual_mutated_game_files": [
+    "game/scripts/simulation.gd",
+    "game/scripts/particle_state.gd",
+    "game/scripts/cloud_particles.gd",
+    "game/scripts/particle_fx.gd"
+  ],
+  "source_helper_unchanged_from_R194": "8fac02fe27f7fedc7208c55fa2e96eedd3958ca84db6f768dc10a43bd1fb57bb",
+  "preserved_failed_checks": [
+    "builds/cloud-runtime-r196-first-png-probe-error.json",
+    "builds/cloud-runtime-r196-first-interior-preparation-error.json"
+  ],
+  "remaining": {
+    "existing_deadline_only_QA_poses": "Retain legacy synthetic adapter; normal new_cloud/shoot/impact create managed original-controlled records. Existing immutable gates untouched.",
+    "bubble_owner_manager": "Only selected cloud traversal is wired; actual bubble flight/tail ownership and full bubble manager remain separate.",
+    "room_order": "Existing global cloud phase retained; full original per-tower/room scheduling still open.",
+    "nuke_producer": "Existing projectile resource/support bridge retained; original current-tower-resource and complete creation joins remain to verify.",
+    "decals_sound": "Nonradiation parent-release sound reaches existing cloud_active event; radiation constructor/decal and original full audio ownership/mixing still separate.",
+    "RNG_GPU_video": "Existing isolated visual RNG retained; original global RNG/GPU and guide timing/fidelity not accepted.",
+    "packaged_review": "Export/native suites/unchanged performance/comparison refresh/actual private app recovery still required."
+  },
+  "offline_complete": false,
+  "additional_third_tier_actual_Simulation_check": {
+    "result": {
+      "checks": 2238,
+      "contexts": [
+        {
+          "damage_deleted_ms": 3840,
+          "held_restore_verified": true,
+          "manager_removed_ms": 6270,
+          "ready_ms": 870,
+          "tail_observed": true,
+          "tier": 3,
+          "type": 7
+        },
+        {
+          "damage_deleted_ms": 2850,
+          "held_restore_verified": true,
+          "manager_removed_ms": 4470,
+          "ready_ms": 870,
+          "tail_observed": true,
+          "tier": 3,
+          "type": 8
+        },
+        {
+          "damage_deleted_ms": 3840,
+          "held_restore_verified": true,
+          "manager_removed_ms": 6270,
+          "ready_ms": 870,
+          "tail_observed": true,
+          "tier": 3,
+          "type": 9
+        },
+        {
+          "damage_deleted_ms": 10290,
+          "held_restore_verified": true,
+          "manager_removed_ms": 12720,
+          "ready_ms": 4320,
+          "tail_observed": true,
+          "tier": 3,
+          "type": 5
+        }
+      ],
+      "failures": [],
+      "scope": "Actual Simulation shoot/bubble/nuke/managed-cloud/retained particles across chemical, Goo, FART and radiation tiers. Parent pause/arrival-next-tick, damage expiry, real particle tails, next-pass removal, pause, held-system restoration aliases, global Stop, cleanup and definition preservation. Existing bubble flight, projectile resource/support and per-room scheduling remain adapters; no original complete bubble ownership/nuke current-resource/global RNG/GPU/audio/video/performance acceptance."
+    },
+    "run": {
+      "exit_code": 0,
+      "seconds": 1.3328149170000003,
+      "clean_log": true,
+      "all_four_saves_package_helper_and_old_fixtures_exact": true,
+      "old_fixtures": 145,
+      "no_game_processes": true
+    },
+    "scope": "Supplement after complete source build; exact same product code. Four additional actual third-tier shot/bubble/nuke/cloud contexts, using preserved verifier copy with tier list changed only. Mandatory full-build gate retains its two-tier coverage."
+  }
+}

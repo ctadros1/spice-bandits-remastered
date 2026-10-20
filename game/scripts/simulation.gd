@@ -8,11 +8,15 @@ const DecalView=preload("res://scripts/decal_view.gd")
 const CreepFreeze=preload("res://scripts/creep_freeze_view.gd")
 const CreepDisco=preload("res://scripts/creep_disco_view.gd")
 const CreepPoison=preload("res://scripts/creep_poison.gd")
+const CloudLifecycle=preload("res://scripts/cloud_lifecycle.gd")
+const CloudParticles=preload("res://scripts/cloud_particles.gd")
+const CloudOwner=preload("res://scripts/cloud_owner.gd")
 const CreepState=preload("res://scripts/creep_state_view.gd")
 const Death=preload("res://scripts/creep_death_view.gd")
 const ParticleState=preload("res://scripts/particle_state.gd")
 const MapTheme=preload("res://scripts/map_theme.gd")
 var particle_state=ParticleState.new()
+var cloud_particles=CloudParticles.new(particle_state)
 var reference_normal_walk=false
 var reference_spawn_presentation=false
 var creep_aim_angles:Dictionary={}
@@ -528,7 +532,7 @@ func sell(id: int) -> String:
 	# CTower destructor0xe3134 destroys its owned missiles, clouds and bubbles.
 	missiles = missiles.filter(func(p): return int(p.owner) != id)
 	for zone in zones:
-		if int(zone.owner)==id:CreepPoison.clear(zone)
+		if int(zone.owner)==id:destroy_cloud(zone)
 	zones = zones.filter(func(z): return int(z.owner) != id)
 	bubbles = bubbles.filter(func(b): return int(b.owner) != id)
 	pending_towers.erase(id)
@@ -1174,8 +1178,8 @@ func shoot(t: Dictionary, e: Dictionary, boost: Dictionary) -> void:
 			"age": 0.0, "progress": 0.0, "flying": false, "active": true,
 			"alpha": 0.4, "size": 16, "type": t.type, "def": d, "owner": t.id}
 		bubbles.append(bubble)
-		zones.append({"pos": destination, "def": d, "until": -1, "owner": t.id, "type": t.type, "bubble": bubble,
-			"damage_bonus": f32(float(d.get("damage", 0))*f32(float(boost.damage)-1.0)), "creeps_in_range": []})
+		var cloud=new_cloud(d,destination,int(t.id),int(t.type),int(t.level),f32(float(d.get("damage",0))*f32(float(boost.damage)-1.0)))
+		cloud.bubble=bubble;cloud.parent30={"byte44":1};cloud.until=-1
 	elif t.type == 11:
 		e.float_until = clock_ms + int(d.get("float_time", 3000))
 		e.state = 5
@@ -1345,8 +1349,12 @@ func impact(p: Dictionary) -> void:
 		var falloff = f32(1.0-f32(distance/per_missile)) if distance > 0 and per_missile > 0 else 1.0
 		damage(e, f32(per_missile*falloff), p.owner)
 	if p.type == 5:
-		zones.append({"pos": destination, "def": p.def, "until": clock_ms + int(p.def.get("poison_duration", 6000)), "owner": p.owner, "type": 5,
-			"damage_bonus": f32(float(p.def.get("damage", 0))*f32(float(p.boost)-1.0)), "creeps_in_range": []})
+		# Existing projectile resource/support producer is retained here. Full
+		# original tower-current-resource and nuke creation joins stay separate.
+		var tier=1
+		for i in catalog.tower_towers[5].levels.size():
+			if str(catalog.tower_towers[5].levels[i].filename)==str(p.def.filename):tier=i+1;break
+		new_cloud(p.def,destination,int(p.owner),5,tier,f32(float(p.def.get("damage",0))*f32(float(p.boost)-1.0)))
 	emit("explosion", {"pos": destination, "type": p.type, "filename": p.def.filename, "radius": maxf(0.4, radius)})
 
 func duration(key: String, upgrade_key: String = "") -> int:
@@ -1531,6 +1539,42 @@ func check_portal_transfers(presentation:Dictionary,entry:Vector2i,exit_cell:Vec
 # The existing offline bridge supplies argument_b=false (credit enabled).
 # The selected helper preserves both bool inputs at its callback boundary;
 # full original room-flag production and reward/SetDie joins remain separate.
+func new_cloud(resource:Dictionary,point:Vector2,owner:int,type:int,tier:int,bonus:float) -> Dictionary:
+	var zone=CloudLifecycle.construct(resource,point,owner,bonus,type==5,tier,resource.has("slowdown"))
+	zone.type=type;zone.managed_cloud=true
+	# Retained for existing QA/debug callers; the original float32 age controls
+	# damage expiry, and actual retained particles control final removal.
+	zone.until=clock_ms+int(resource.get("poison_duration",0))
+	zones.append(zone)
+	return zone
+
+func destroy_cloud(zone:Dictionary) -> void:
+	if zone.get("managed_cloud",false):
+		for root_system in zone.roots:cloud_particles.destroy(root_system)
+		zone.roots.clear()
+	CreepPoison.clear(zone)
+	zone.manager_removed=true
+
+func cloud_random_integer() -> int:return int(particle_state.random.randi()&0x7fffffff)
+func cloud_random_vector() -> Vector2:
+	# Existing isolated visual RNG, not recovered original shared rand state.
+	return Vector2.from_angle(particle_state.random.randf()*TAU)
+func cloud_signed_modulo(left:int,right:int) -> int:return left%right if right else 0
+func cloud_decals(_zone:Dictionary) -> void:
+	# The non-radiation constructor has no owned decal. Radiation constructor
+	# decal/resource joins remain with the existing impact adapter for now.
+	pass
+func cloud_sound(_name:String,point:Vector2,_argument:int,type:int) -> void:
+	emit("cloud_active",{"pos":point,"type":type})
+
+func update_cloud(zone:Dictionary,dt_ms:float,argument_b:bool) -> void:
+	if zone.has("bubble") and not zone.parent30.is_empty():zone.parent30.byte44=1 if zone.bubble.active else 0
+	var adapters={"factory":cloud_particles.factory.bind(int(zone.owner)),"advance":cloud_particles.advance,"destroy":cloud_particles.destroy,"rand":cloud_random_integer,"random":cloud_random_integer,"vector":cloud_random_vector,"modulo":cloud_signed_modulo,"decals":cloud_decals,"sound":cloud_sound.bind(int(zone.type)),"damage":cloud_damage}
+	CloudLifecycle.update(zone,enemies,float(map.hex_h),dt_ms,adapters,argument_b)
+	if zone.has("bubble") and zone.ready:
+		zone.erase("bubble")
+		zone.until=clock_ms+int(zone.def.get("poison_duration",0))-int(dt_ms)
+
 func cloud_damage(e:Dictionary,owner:int,amount:float,_credit:bool,kind:int) -> void:
 	damage(e,amount,owner,kind)
 
@@ -1660,7 +1704,14 @@ func step() -> void:
 		if update_missile(p):
 			impact(p)
 			missiles.erase(p)
+	# Selected original cloud pre-update removal/traversal now owns actual
+	# retained systems. Full per-tower/room and bubble-tail scheduling is separate.
+	var managed_clouds=zones.filter(func(z):return z.get("managed_cloud",false))
+	CloudOwner.update(managed_clouds,[],tick_ms,false,{"cloud_update":update_cloud,"cloud_destroy":destroy_cloud})
+	zones=zones.filter(func(z):return not z.get("manager_removed",false))
+	# Older synthetic QA poses still provide deadline-only zone records.
 	for z in zones.duplicate():
+		if z.get("managed_cloud",false):continue
 		if z.has("bubble"):
 			if z.bubble.active: continue
 			z.erase("bubble")
