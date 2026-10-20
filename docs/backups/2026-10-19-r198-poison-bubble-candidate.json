@@ -1,0 +1,79 @@
+{
+  "verified_at": "2026-10-20T01:24:13.753470+00:00",
+  "private": true,
+  "draft": true,
+  "release_id": 417908623,
+  "release_url": "https://github.com/ctadros1/spice-bandits-remastered/releases/tag/untagged-f44e3602f04f421c3bec",
+  "archive": {
+    "name": "r198-poison-bubble-controller.tar.gz",
+    "bytes": 6084915,
+    "sha256": "a9bb305253ebde7dcdd1c959ddbe190bc9487d6ab00926fc306eb7d5965693bc"
+  },
+  "local_restore": {
+    "members_verified": 148,
+    "archive_bytes": 6084915,
+    "source_files_verified": 824,
+    "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+    "all_member_hashes_modes_and_gzip_crc_verified": true,
+    "candidate_exported": false,
+    "r196_package_and_all_four_saves_unchanged": true
+  },
+  "actual_remote_restore": {
+    "members_verified": 148,
+    "archive_bytes": 6084915,
+    "source_files_verified": 824,
+    "all_source_bytes_executable_modes_and_pinned_signature_exact": true,
+    "all_member_hashes_modes_and_gzip_crc_verified": true,
+    "candidate_exported": false,
+    "r196_package_and_all_four_saves_unchanged": true
+  },
+  "first_four_assets_actual_download_hash_size_verified": true,
+  "signed_base": "f31eb8097a930f386e44c20029bdbae02cad800a",
+  "source_signing_pending": false,
+  "source_build": {
+    "exit_code": 0,
+    "elapsed_seconds": 161.85588883399998,
+    "r196_frozen_preserved": true,
+    "all_four_saves_unchanged": true,
+    "no_game_processes": true,
+    "identity": {
+      "pck_sha256": "5f6ec2748b5c31c52ba7dcf204402ef57d46647e6c970e172c7f8471fee9ccdd",
+      "executable_sha256": "4606d8bb1bc64ba03d3729b71864f4aea54ed2199e5d6afded61ab266ec6edc5",
+      "native_libraries_sha256": {
+        "Contents/Frameworks/libspice_hotpaths.dylib": "cb36733b5d9504b767891a2d9635fed65e772c146872994ff51b4042c0859932"
+      }
+    },
+    "candidate_exported": false,
+    "offline_complete": false
+  },
+  "offline_complete": false,
+  "assets": [
+    {
+      "name": "r198-poison-bubble-controller.tar.gz",
+      "bytes": 6084915,
+      "sha256": "a9bb305253ebde7dcdd1c959ddbe190bc9487d6ab00926fc306eb7d5965693bc"
+    },
+    {
+      "name": "EVIDENCE-MANIFEST.json",
+      "bytes": 30572,
+      "sha256": "d000234951ad1b68c63504b168281a1472382892bf4b9e906053d3b58db290b1"
+    },
+    {
+      "name": "SOURCE-STATUS.json",
+      "bytes": 166970,
+      "sha256": "f2456ef4e5d47c93d101a53e3a66a4aac28246ec77c04a93b33f4d47c5aa89d8"
+    },
+    {
+      "name": "RESTORE.md",
+      "bytes": 694,
+      "sha256": "a764895dfe617a9799eb1068a2dc2424732878c23b3ad8d9474618e4944e7dde"
+    },
+    {
+      "name": "RESTORE-PROOF.json",
+      "bytes": 1913,
+      "sha256": "9f72e768dbca27929080b6383080ca04f5d72532e00e0a36f07552847be984b5"
+    }
+  ],
+  "all_remote_assets_actual_hash_size_verified": true,
+  "no_game_processes": true
+}
