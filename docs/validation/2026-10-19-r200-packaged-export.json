@@ -1,0 +1,25 @@
+{
+  "exit_code": 0,
+  "seconds": 10.107811,
+  "clean_log": true,
+  "strict_deep_signature_passed": true,
+  "signature_output": "",
+  "architectures": "x86_64 arm64",
+  "identity": {
+    "pck_sha256": "3424f7f38bf0ae6e07426e3e0fa78cf0b926ccb2d608e6f11294eaa9c8158009",
+    "executable_sha256": "8d30def47abcce3b50a99bf8d259135fb2417eb74bfb9a6a9319ae46905d93be",
+    "native_libraries_sha256": {
+      "Contents/Frameworks/libspice_hotpaths.dylib": "5fe940c9d0f1b0fd5bcc134a2b8c66a5dda7af9348e790ba91437bf51e547585"
+    }
+  },
+  "frozen_R196_PCK_unchanged": true,
+  "all_four_saves_unchanged": true,
+  "all_game_export_inputs_unchanged": 3380,
+  "source_head": "095a0a59aea5fa3cfdad1cb328d9b3c82f865f3c",
+  "full_source_build_checked_before_export": true,
+  "no_remaining_game_processes": true,
+  "candidate_exported": true,
+  "packaged_native_verification": "pending",
+  "all_ten_accepted": false,
+  "offline_complete": false
+}
